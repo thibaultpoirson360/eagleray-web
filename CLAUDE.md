@@ -75,8 +75,14 @@ Répartition des rôles :
 - `/public/assets` = sortie de production. Un dérivé, pas une archive : il se
   régénère depuis les originaux, on ne l'utilise pas pour ranger.
 
-Une photo sans ligne Airtable n'existe pas pour ERE. Ne jamais introduire dans le
-repo un visuel qui n'y figure pas.
+Une photo n'existe pour ERE que si elle a une ligne Airtable. Tant qu'elle est un
+`WhatsApp_Image_...` posé dans un dossier, elle n'existe pas.
+
+Règle de publication : une photo est publiable si `Rights` vaut `ERE Owned` ou
+`Icon - Accord direct`, ou si `Cleared_By_Thibault` est coché (override manuel avec
+justification dans `Rights_Note`). Si aucune des deux conditions n'est vraie
+(`Rights = Kit chantier - non verifie` ou `A confirmer`, et `Cleared_By_Thibault` non
+coché), ne pas publier — laisser le trou visible, ne pas générer de placeholder.
 
 Emplacement : `/public/assets/{hero,secciones,barcos}/` Chaque image existe en
 `.jpg` + `.webp`. Servir le WebP avec fallback JPEG.
@@ -129,9 +135,9 @@ Exceptions actuelles :
       Olivier / kit presse Fountaine Pajot). En attendant : carrousel à 2 slides.
 - [ ] FAQ question 2 (politique d'acompte) — en attente des CGV ERE. Omettre si
       absente.
-- [ ] Droits — 5 visuels sont en `Kit chantier - non verifie` dans Airtable (3 Bali,
-      2 Astréa). Ne pas publier tant qu'ils ne sont pas passés en `A confirmer`
-      résolu ou `ERE Owned`. Filtrer la table sur ce statut pour les retrouver.
+- [x] Droits Bali/Astréa — Thibault a tranché le 10/08/2026 : usage standard de
+      matériel promo partenaire, publiable sans vérification formelle. Tracé dans
+      Airtable via `Cleared_By_Thibault` + `Rights_Note` sur les 5 lignes concernées.
 - [ ] Résolution — le hero est en `Original requis` : il plafonne à 1206 px de
       large, insuffisant pour du full-bleed desktop retina. Demander l'original à
       Olivier. Voir `assets/RESOLUTION.md` pour le détail par fichier.

@@ -58,18 +58,25 @@ const BOAT_OPTIONS: readonly BoatOption[] = [
     id: "bali",
     name: "Gran catamarán",
     spec: "Bali · 5–6 cabinas · hasta 12 personas",
-    // Airtable: Rights = "Kit chantier - non verifie" on all 3 Bali photos.
-    // Not publishable until confirmed — see CLAUDE.md. Empty slides renders
-    // the honest "imagen pendiente de derechos" placeholder.
-    slides: [],
+    // Rights still "Kit chantier - non verifie" in Airtable, but
+    // Cleared_By_Thibault is now checked on all 3 rows (decision 10/08/2026,
+    // see Rights_Note) — publishable per the updated CLAUDE.md rule.
+    slides: [
+      { src: "/assets/barcos/bali-1-exterior.jpg", label: "Exterior" },
+      { src: "/assets/barcos/bali-2-cubierta.jpg", label: "Cubierta" },
+      { src: "/assets/barcos/bali-3-interior.jpg", label: "Interior" },
+    ],
   },
   {
     id: "astrea",
     name: "Catamarán compacto",
     spec: "Astréa 42 · 3–4 cabinas · 6–8 personas",
-    // Airtable: Rights = "Kit chantier - non verifie" on both Astrea photos —
-    // same block as Bali, even though a photo was shared directly in chat.
-    slides: [],
+    // Same Cleared_By_Thibault override as Bali. Only 2 slides exist —
+    // astrea-3-camarote is still genuinely missing, not a rights issue.
+    slides: [
+      { src: "/assets/barcos/astrea-1-exterior.jpg", label: "Exterior" },
+      { src: "/assets/barcos/astrea-2-cubierta.jpg", label: "Cubierta" },
+    ],
   },
 ];
 
