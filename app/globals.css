@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/**
+ * Eagle Ray palette — three colours only, per the brand guide:
+ * white ground, deep navy ink, off-white surface. No orange, no cyan.
+ * These mirror the tokens in public/styles.css so the VIP portal and the
+ * marketing site stay visually identical as the migration proceeds.
+ */
+@theme {
+  --color-paper: #ffffff;
+  --color-surface: #f7f6f1;
+  --color-ink: #0e1b2b;
+  --color-ink-soft: rgba(14, 27, 43, 0.74);
+  --color-ink-mute: rgba(14, 27, 43, 0.52);
+  --color-hairline: rgba(14, 27, 43, 0.14);
+  --color-hairline-strong: rgba(14, 27, 43, 0.26);
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Editorial, not bubbly — matches the softened radii on the marketing site. */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink-soft);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}

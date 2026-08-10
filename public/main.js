@@ -224,11 +224,11 @@
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(major ? 16 : 8, y);
-        ctx.strokeStyle = major ? "rgba(245,239,225,0.22)" : "rgba(245,239,225,0.09)";
+        ctx.strokeStyle = major ? "rgba(14,27,43,0.55)" : "rgba(14,27,43,0.22)";
         ctx.lineWidth = 1;
         ctx.stroke();
         if (major) {
-          ctx.fillStyle = "rgba(143,168,159,0.55)";
+          ctx.fillStyle = "rgba(14,27,43,0.75)";
           ctx.fillText(d + "", 20, y + 3);
         }
       }
@@ -240,7 +240,7 @@
         if (yy === 0) ctx.moveTo(x, yy); else ctx.lineTo(x, yy);
       }
       ctx.lineTo(w, h); ctx.lineTo(w, 0); ctx.closePath();
-      ctx.fillStyle = "rgba(111,208,192,0.07)";
+      ctx.fillStyle = "rgba(14,27,43,0.08)";
       ctx.fill();
       ctx.beginPath();
       for (var y2 = 0; y2 <= h; y2 += 4) {
@@ -248,14 +248,14 @@
         var x2 = w - 6 - bed(d2) * (w * 0.42);
         if (y2 === 0) ctx.moveTo(x2, y2); else ctx.lineTo(x2, y2);
       }
-      ctx.strokeStyle = "rgba(111,208,192,0.5)";
+      ctx.strokeStyle = "rgba(14,27,43,0.6)";
       ctx.lineWidth = 1;
       ctx.stroke();
 
       var mid = h / 2;
       ctx.beginPath();
       ctx.moveTo(0, mid); ctx.lineTo(w, mid);
-      ctx.strokeStyle = "rgba(224,134,63,0.75)";
+      ctx.strokeStyle = "rgba(14,27,43,1)";
       ctx.stroke();
 
       if (out) out.textContent = Math.round(shown);
@@ -340,41 +340,7 @@
     activate(0);
   }
 
-  /* =========================================================
-     DAY IN THE LIFE — interactive catamaran deck plan
-     ========================================================= */
-  var DAY_ORDER = ["sail", "activity", "lunch", "explore", "sunset", "dinner"];
-  var dayActive = "sail";
-  function renderDayCaption() {
-    var capN = $("[data-day-caption-n]");
-    var capT = $("[data-day-caption-t]");
-    if (!capT) return;
-    var idx = DAY_ORDER.indexOf(dayActive);
-    var title = t("showcase.cards." + idx + ".t");
-    if (capN) capN.textContent = (idx + 1 < 10 ? "0" : "") + (idx + 1);
-    if (title != null) capT.innerHTML = title;
-  }
-  function initDayBoat() {
-    var items = $$(".day-item");
-    var imgs = $$("[data-day-img]");
-    if (!items.length) return;
-
-    function select(day) {
-      dayActive = day;
-      items.forEach(function (it) { it.classList.toggle("is-active", it.getAttribute("data-day") === day); });
-      imgs.forEach(function (im) { im.classList.toggle("is-active", im.getAttribute("data-day-img") === day); });
-      renderDayCaption();
-    }
-    items.forEach(function (it) {
-      it.addEventListener("click", function () { select(it.getAttribute("data-day")); });
-      if (fineHover) {
-        it.addEventListener("mouseenter", function () { select(it.getAttribute("data-day")); });
-      }
-    });
-    renderDayCaption();
-  }
-
-  /* =========================================================
+    /* =========================================================
      ACTIVITIES — ship's manifest (click to mark, live counter)
      ========================================================= */
   function renderManifestCount() {
@@ -412,61 +378,9 @@
   /* =========================================================
      BOAT GALLERIES — per-card photo carousel (touch + arrows)
      ========================================================= */
-  function initBoatGalleries() {
-    $$("[data-gallery]").forEach(function (gal) {
-      var track = $("[data-gallery-track]", gal);
-      var prevBtn = $("[data-gallery-prev]", gal);
-      var nextBtn = $("[data-gallery-next]", gal);
-      var dotsWrap = $("[data-gallery-dots]", gal);
-      if (!track) return;
-      var slides = $$("img", track);
-      if (!slides.length) return;
-
-      if (dotsWrap && !dotsWrap.children.length) {
-        dotsWrap.innerHTML = slides.map(function () { return "<span></span>"; }).join("");
-      }
-      var dots = dotsWrap ? $$("span", dotsWrap) : [];
-
-      function step() { return track.clientWidth; }
-      function update() {
-        var maxScroll = track.scrollWidth - track.clientWidth - 2;
-        if (prevBtn) prevBtn.disabled = track.scrollLeft <= 2;
-        if (nextBtn) nextBtn.disabled = track.scrollLeft >= maxScroll;
-        if (dots.length) {
-          var idx = Math.round(track.scrollLeft / step());
-          idx = Math.max(0, Math.min(dots.length - 1, idx));
-          dots.forEach(function (d, i) { d.classList.toggle("is-active", i === idx); });
-        }
-      }
-      if (prevBtn) prevBtn.addEventListener("click", function () { track.scrollBy({ left: -step(), behavior: reduced ? "auto" : "smooth" }); });
-      if (nextBtn) nextBtn.addEventListener("click", function () { track.scrollBy({ left: step(), behavior: reduced ? "auto" : "smooth" }); });
-      if (dots.length) {
-        dots.forEach(function (dot, i) {
-          dot.addEventListener("click", function () { track.scrollTo({ left: i * step(), behavior: reduced ? "auto" : "smooth" }); });
-        });
-      }
-      var raf = null;
-      track.addEventListener("scroll", function () {
-        if (raf) return;
-        raf = requestAnimationFrame(function () { update(); raf = null; });
-      }, { passive: true });
-      window.addEventListener("resize", update);
-      update();
-    });
-  }
-
   /* =========================================================
      CREW — tap/click to flip a Polaroid and read the bio line
      ========================================================= */
-  function initCrewFlip() {
-    $$(".polaroid").forEach(function (card) {
-      card.addEventListener("click", function () { card.classList.toggle("is-flipped"); });
-      card.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); card.classList.toggle("is-flipped"); }
-      });
-    });
-  }
-
   /* =========================================================
      FAQ — one-at-a-time accordion over native <details>
      ========================================================= */
@@ -819,7 +733,6 @@
     try { window.localStorage.setItem("ere_lang", lang); } catch (e) {}
 
     renderFaunaCaption();
-    renderDayCaption();
     renderManifestCount();
     if (typeof window.__ERE_FUNNEL_REFRESH__ === "function") window.__ERE_FUNNEL_REFRESH__();
   }
@@ -843,10 +756,7 @@
     safe(initSounder, "initSounder");
     safe(initFauna, "initFauna");
     safe(initRutas, "initRutas");
-    safe(initDayBoat, "initDayBoat");
     safe(initManifest, "initManifest");
-    safe(initBoatGalleries, "initBoatGalleries");
-    safe(initCrewFlip, "initCrewFlip");
     safe(initFaq, "initFaq");
     safe(initFunnel, "initFunnel");
     safe(initContact, "initContact");

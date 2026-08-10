@@ -16,13 +16,12 @@
       ogDescription: "Sailing, diving and wildlife encounters in the Sea of Cortez. Private expeditions for small groups out of La Paz, BCS.",
       ogLocale: "en_US"
     },
-    nav: { difference: "Difference", wildlife: "Wildlife", routes: "Routes", boats: "Boats", crew: "Crew", faq: "FAQ", customize: "Go Sailing Now!" },
+    nav: { difference: "Difference", wildlife: "Wildlife", routes: "Routes", boats: "Boats", crew: "Crew", faq: "FAQ", customize: "Go Sailing" },
     navm: { difference: "Difference", wildlife: "Where we sail", routes: "Three routes", day: "A day aboard", boats: "The boats", crew: "The crew", faq: "FAQ", customize: "Customize your expedition" },
     hero: {
-      title: "We run sailing expeditions where<br>the ocean does most of the planning.",
-      sub: "Private catamaran routes across the Sea of Cortez, built for exploration and redrawn by weather, tide, and whoever's on board for the week.",
-      ctaPrimary: "Customize your first Baja expedition",
-      ctaSecondary: "See what makes us different",
+      sub: "Small groups. Real crew. Private catamaran. No fixed schedule.",
+      ctaPrimary: "Customize your expedition",
+      ctaSecondary: "What makes us unique",
       factDeparture: "Departure", factDepartureV: "Marina de La Paz",
       factGroup: "Group", factGroupV: "2 to 10 guests",
       factDuration: "Duration", factDurationV: "3 to 8 days",
@@ -33,9 +32,9 @@
       title: "We don't sell charter trips.<br><em>We design ocean experiences.</em>",
       lede: "Eagle Ray Expeditions designs and leads small-group ocean expeditions combining sailing, diving, and wildlife encounters in Baja California Sur. Built for people who want more than a boat.",
       vsThemTitle: "Charter trips",
-      vsThem: ["Boat-first, comfort-driven.", "Neutral crew, hired by the week.", "Fixed routes, printed before you meet them.", "The water is scenery — watched from the cockpit.", "You write to an office and a form answers back."],
+      vsThem: ["Boat-first, comfort-driven.", "Neutral crew, hired by the week.", "Fixed routes, printed before you meet them.", "The water is scenery — watched from the cockpit."],
       vsUsTitle: "Eagle Ray Expeditions",
-      vsUs: ["Experience-first, exploration-driven.", "The same crew, who know the channel by memory.", "Adaptive routes, redrawn by weather and tide.", "The water is the plan — dive, snorkel, kayak, every day.", "You write to the founder, and the founder answers."],
+      vsUs: ["Experience-first, exploration-driven.", "The same crew, who know the channel by memory.", "Adaptive routes, redrawn by weather and tide.", "The water is the plan — dive, snorkel, kayak, every day."],
       quoteKicker: "They sell trips.<br>We design human expeditions.",
       quote: "I didn't want to sell boats. I wanted to build the kind of trip I'd actually want to be on — with people who know the ocean, not just how to hand you a set of keys.",
       quoteCite: "— Thibault Poirson De Cardon, Founder"
@@ -44,6 +43,7 @@
       kicker: "Where we sail",
       title: "The aquarium<br><em>of the world.</em>",
       lede: "Cousteau's name for the Sea of Cortez. A narrow gulf that concentrates what other oceans spread across thousands of miles — cold upwellings, deserted islands, and a density of life that still surprises people who've sailed it for years. We work the stretch between La Paz, Espíritu Santo, and Cerralvo.",
+      disclaimer: "Sightings are never guaranteed. These are wild animals in open water — what we can offer is the season, the place, and the odds.",
       note: "Espíritu Santo is a protected national park and part of the UNESCO World Heritage Site \"Islands and Protected Areas of the Gulf of California.\" We anchor only at authorized buoys, and sightings follow the distances and timing set by regulation. Wildlife isn't guaranteed — it's wildlife."
     },
     fauna: {
@@ -57,7 +57,7 @@
     routes: {
       kicker: "Three real routes",
       title: "Starting points,<br><em>not itineraries.</em>",
-      lede: "Not packages — the three directions we tend to sail out of La Paz, with a rough four-day itinerary. All of it reshuffles if the north wind picks up, or if someone wants one more day in a cove.",
+      lede: "Not packages — the three directions we tend to sail out of La Paz. All of it reshuffles if the north wind picks up, or if someone wants one more day in a cove.",
       note: "These routes are a starting point — every expedition adapts to weather, sea conditions, and what your group wants.",
       espirituSanto: {
         name: "Espíritu Santo Focus",
@@ -113,7 +113,7 @@
     activities: {
       kicker: "What you might do",
       title: "Not an itinerary.<br><em>A world full of options.</em>",
-      lede: "Tell us what appeals to you before you arrive — the rest gets decided onboard, day by day, by what the sea allows.",
+      lede: "Tell us what appeals to you before you arrive — we will prepare a proposal and the rest will get decided onboard, day by day, by what the sea and your mood allows.",
       note: "Espíritu Santo is a protected national park (UNESCO Biosphere Reserve). Eagle Ray operates in full respect of regulated zones.",
       list: ["Scuba diving", "Freediving", "Spearfishing", "Kitesurfing", "Wingfoil", "Snorkeling", "Cliff jumping", "Sea plunges", "Night swimming", "Sunrise swims", "Island hopping", "Cave exploring", "Whale spotting", "Wildlife encounters", "Foraging", "Fire cooking", "Surfing", "Yoga", "Stretching sessions", "Breathwork", "Card games", "Music sessions", "Stargazing"],
       markedOf: "{n} of {total} marked",
@@ -135,34 +135,26 @@
     },
     crew: {
       kicker: "Who you sail with",
-      title: "Far more than service staff —<br><em>they sail, dive, and move with you.</em>",
+      title: "Far more than service staff —<br><em>we sail, dive, and move with you.</em>",
       founderLabel: "Founder",
-      founderBody: "Ocean entrepreneur with 10+ years in Mexico, building the Baja network of captains, chefs, and expedition leaders from the ground up. He's the one who answers your WhatsApp — before, during, and after your trip.",
       founderSign: "Direct line, no call center · +52 55 6809 0942",
-      pilotKicker: "The Baja pilot crew",
       members: {
-        denise: { role: "Captain", line: "Years spent navigating the Sea of Cortez and some of the world's most demanding private yachts.", body: "Years spent navigating the Sea of Cortez and some of the world's most demanding private yachts. Safety, navigation, and making sure everyone fully enjoys the experience. Speaks Spanish, English, Portuguese." },
-        benjamin: { role: "Skipper", line: "An engineer by training with years exploring the Gulf of California.", body: "An engineer by training with years exploring the Gulf of California. Methodical navigation with a real passion for adventure — every expedition stays safe, smooth, and adapted to the sea." },
-        adly: { role: "Expedition Leader", line: "Between the wind of La Ventana and the waters of the Sea of Cortez, the ocean is home.", body: "Between the wind of La Ventana and the waters of the Sea of Cortez, the ocean is home. Diving and kite instructor sharing a real passion for Baja's authentic exploration. Speaks Spanish, English, Arabic." },
-        antoine: { role: "Gold Chef", line: "A background in luxury hospitality, restaurants, and entrepreneurship.", body: "A background in luxury hospitality, restaurants, and entrepreneurship. Turns every meal into a shared moment, inspired by local products and the spirit of the journey." },
-        ana: { role: "Silver Chef", line: "Entrepreneur and founder of her own pastry business.", body: "Entrepreneur and founder of her own pastry business. Generous, convivial cooking that brings guests together — plus signature cocktails and a real passion for fishing and seafood." }
+        thibault: { role: "Founder &amp; Expedition Host", bio: "I have spent more than ten years building things around the ocean in Mexico, and Eagle Ray is the one I care about most. I built the Baja network myself — the captains, the chefs, the expedition leaders — one conversation at a time. I am the one who answers your WhatsApp, before, during and after your trip, because I would rather you talk to the person who is accountable for the trip than to an office." },
+        denise: { role: "Captain", bio: "I have spent years navigating the Sea of Cortez, and before that some of the most demanding private yachts in the world. I know this water in every season — where the wind bends around the islands, which anchorage holds when the north wind comes through, and how a week reshapes itself when the sea decides otherwise." },
+        benjamin: { role: "Skipper", bio: "I trained as an engineer, and I think that is still how I read a boat and a forecast. I have spent years exploring the Gulf of California, and the part I never tire of is that the plan you draw in the morning is rarely the day you actually get." },
+        adly: { role: "Expedition Leader", bio: "Between the wind of La Ventana and the water of the Sea of Cortez, this is home for me. I lead the days on the water and I read the group before the group reads itself — when to push for one more dive, and when the best call is to anchor and do nothing at all." },
+        antoine: { role: "Gold Chef", bio: "I come from luxury hospitality, restaurants and running my own business. On board that turns into something simpler: cooking what the day actually gave us, and making the table the moment everyone comes back to." },
+        ana: { role: "Silver Chef", bio: "I am an entrepreneur and I founded my own pastry business. I cook on board the way I built that: from scratch, with attention, and with the small extra thing nobody asked for but everybody remembers." }
       },
-      dreamCoupleKicker: "The ERE Dream Couple · Q4 2026",
       joiningTag: "Joining Q4 2026",
-      javier: { role: "Captain &amp; Filmmaker", line: "Yacht Master 200GT, PADI Dive Instructor, IKO Kitesurf Instructor, freediving &amp; spearfishing guide, drone pilot.", body: "Yacht Master 200GT, PADI Dive Instructor, IKO Kitesurf Instructor, freediving &amp; spearfishing guide, drone pilot. Currently commanding a 51ft catamaran on crewed charters in Greece; joining Baja for Q4 2026." },
-      flavia: { role: "Stewardess, Chef &amp; Filmmaker", line: "Cook, deckhand, personal trainer, and filmmaker.", body: "Cook, deckhand, personal trainer, and filmmaker. Culinary arts trained. Together with Javier, the model for Eagle Ray's Captain-Filmmaker &amp; Chef-Stew pairing." },
-      rolesKicker: "The three roles of the Expedition Leader",
+      javier: { role: "Captain &amp; Filmmaker", bio: "I am a Yacht Master 200GT, PADI Dive Instructor, IKO Kitesurf Instructor, freediving and spearfishing guide, and a drone pilot. It means I can take you under the water, across it, and film the part you will want to keep." },
+      flavia: { role: "Stewardess, Chef &amp; Filmmaker", bio: "I cook, I work the deck, I train people, and I film. On a small boat that mix is the point — the same person who plans dinner is the one who gets you moving in the morning and captures the day as it happens." },
+      rolesKicker: "The roles of the Expedition Leader",
       roles: [
-        { t: "Guide &amp; Expert", d: "At the center of every trip: a captain or first officer who knows the ocean well — diver, freediver, kite/wingfoil instructor." },
-        { t: "Host &amp; Energy Creator", d: "They design the rhythm, the moments, the group dynamic. Not a skipper, not a tour guide. Something new." },
-        { t: "Storyteller &amp; Brand", d: "They create the content and the memory that make the experience compound long after the trip ends." }
+        { t: "Guides &amp; Experts", d: "At the center of every trip: a captain or first officer who has spent years reading this ocean, its wind, its currents, what changes month to month. Someone who was diving and freediving this water long before it was a job." },
+        { t: "Hosts &amp; Energy Creators", d: "Eagle Ray's expedition leaders know how to read the group before the group reads itself — when to push, when to disappear, when to plan nothing at all. And they notice the moments that actually stay with people: the dive nobody expected to do, a conversation at 2am, the morning the wind never came." }
       ],
-      trustLine: "Flexible by nature. Safety always comes first. And a direct line to Thibault — no call center, no chatbot.",
-      trust: [
-        { t: "Flexible by nature", d: "Routes adapt to weather, tide, and your group — nothing about your expedition is fixed in stone." },
-        { t: "Safety always comes first", d: "Your skipper has final say on the water. If conditions aren't right, the plan changes — never the other way around." },
-        { t: "A direct line to Thibault", d: "No call center, no chatbot. You're talking to the person actually building your expedition." }
-      ]
+      trustLine: "Flexible by nature. Safety always comes first. And a direct line to Thibault — no call center, no chatbot."
     },
     faq: {
       kicker: "Questions",
@@ -178,13 +170,7 @@
         { q: "Do you sail outside Baja?", a: "Today, every expedition sails out of La Paz, Baja California Sur. It's where our boats, crew, and permits are based." }
       ],
       footText: "Still have a question?",
-      footLink: "WhatsApp Thibault directly →"
-    },
-    live: {
-      kicker: "Already sailing",
-      title: "First private expeditions<br><em>already sailing out of La Paz.</em>",
-      lede: "This isn't a project on paper. This season's departures are already operating out of the La Paz marina, and the photos you see on Instagram are from last week, not a stock library.",
-      igLabel: "Follow on Instagram →"
+      footLink: "Contact us directly →"
     },
     funnel: {
       kicker: "Build your expedition",
@@ -236,8 +222,8 @@
     },
     finalCta: {
       kicker: "Baja California Sur",
-      title: "Your Baja expedition starts with<br><em>a conversation, not a booking form.</em>",
-      cta: "Customize your first Baja expedition"
+      title: "Your Baja expedition starts with a conversation.<br><em>You bring the idea. We turn it into an expedition.</em>",
+      cta: "Customize your expedition"
     },
     footer: {
       claim: "The Sea of Cortez<br><em>isn't visited. It's sailed.</em>",
@@ -276,13 +262,12 @@
       ogDescription: "Vela, buceo y encuentros con fauna marina en el Mar de Cortés. Expediciones privadas para grupos pequeños desde La Paz, BCS.",
       ogLocale: "es_MX"
     },
-    nav: { difference: "Diferencia", wildlife: "Fauna", routes: "Rutas", boats: "Barcos", crew: "Tripulación", faq: "Preguntas", customize: "Personalizar" },
+    nav: { difference: "Diferencia", wildlife: "Fauna", routes: "Rutas", boats: "Barcos", crew: "Tripulación", faq: "Preguntas", customize: "Go Sailing" },
     navm: { difference: "Diferencia", wildlife: "Dónde navegamos", routes: "Tres rutas", day: "Un día a bordo", boats: "Los barcos", crew: "La tripulación", faq: "Preguntas", customize: "Personaliza tu expedición" },
     hero: {
-      title: "Diseñamos expediciones en vela donde<br>el mar decide casi todo el itinerario.",
-      sub: "Rutas privadas en catamarán por el Mar de Cortés, pensadas para explorar y redibujadas por el viento, la marea y quien esté a bordo esa semana.",
-      ctaPrimary: "Personaliza tu primera expedición en Baja",
-      ctaSecondary: "Descubre qué nos hace diferentes",
+      sub: "Grupos pequeños. Tripulación de verdad. Catamarán privado. Sin horarios fijos.",
+      ctaPrimary: "Personaliza tu expedición",
+      ctaSecondary: "Qué nos hace únicos",
       factDeparture: "Salida", factDepartureV: "Marina de La Paz",
       factGroup: "Grupo", factGroupV: "De 2 a 10 personas",
       factDuration: "Duración", factDurationV: "De 3 a 8 días",
@@ -293,9 +278,9 @@
       title: "No vendemos charters.<br><em>Diseñamos experiencias en el mar.</em>",
       lede: "Eagle Ray Expeditions diseña y guía expediciones marítimas para grupos pequeños que combinan vela, buceo y encuentros con fauna en Baja California Sur. Pensado para quienes quieren algo más que un barco.",
       vsThemTitle: "Charters tradicionales",
-      vsThem: ["El barco es lo primero, todo gira en torno a la comodidad.", "Tripulación neutral, contratada por semana.", "Rutas fijas, definidas antes de conocerte.", "El agua es paisaje — se mira desde la cabina.", "Le escribes a una oficina y te responde un formulario."],
+      vsThem: ["El barco es lo primero, todo gira en torno a la comodidad.", "Tripulación neutral, contratada por semana.", "Rutas fijas, definidas antes de conocerte.", "El agua es paisaje — se mira desde la cabina."],
       vsUsTitle: "Eagle Ray Expeditions",
-      vsUs: ["La experiencia es lo primero, todo gira en torno a explorar.", "Siempre la misma tripulación, que conoce el canal de memoria.", "Rutas que se adaptan, redibujadas por el viento y la marea.", "El agua es el plan — buceo, snorkel, kayak, todos los días.", "Le escribes al fundador, y el fundador te responde."],
+      vsUs: ["La experiencia es lo primero, todo gira en torno a explorar.", "Siempre la misma tripulación, que conoce el canal de memoria.", "Rutas que se adaptan, redibujadas por el viento y la marea.", "El agua es el plan — buceo, snorkel, kayak, todos los días."],
       quoteKicker: "Ellos venden viajes.<br>Nosotros diseñamos expediciones humanas.",
       quote: "No quería vender barcos. Quería construir el tipo de viaje en el que yo mismo querría estar — con gente que conoce el mar de verdad, no solo cómo entregarte unas llaves.",
       quoteCite: "— Thibault Poirson De Cardon, Fundador"
@@ -304,6 +289,7 @@
       kicker: "Dónde navegamos",
       title: "El acuario<br><em>del mundo.</em>",
       lede: "Así llamó Cousteau al Mar de Cortés. Un golfo angosto que concentra en pocas millas lo que otros océanos reparten en miles — corrientes frías que suben del fondo, islas desiertas y una densidad de vida que sigue sorprendiendo a quien lleva años navegándolo. Trabajamos el tramo entre La Paz, Espíritu Santo y Cerralvo.",
+      disclaimer: "Los avistamientos nunca están garantizados. Son animales salvajes en mar abierto — lo que sí podemos darte es la temporada, el lugar y la probabilidad.",
       note: "Espíritu Santo es un parque nacional protegido y parte del sitio Patrimonio Mundial de la UNESCO \"Islas y Áreas Protegidas del Golfo de California\". Fondeamos solo en boyas autorizadas, y los avistamientos siguen las distancias y horarios que marca la normativa. La fauna no está garantizada: es fauna silvestre."
     },
     fauna: {
@@ -317,7 +303,7 @@
     routes: {
       kicker: "Tres rutas reales",
       title: "Puntos de partida,<br><em>no itinerarios cerrados.</em>",
-      lede: "No son paquetes — son las tres direcciones en las que solemos zarpar desde La Paz, con un itinerario aproximado de cuatro días. Todo se reordena si se levanta el viento del norte, o si alguien quiere quedarse un día más en una ensenada.",
+      lede: "No son paquetes — son las tres direcciones en las que solemos zarpar desde La Paz. Todo se reordena si se levanta el viento del norte, o si alguien quiere quedarse un día más en una ensenada.",
       note: "Estas rutas son un punto de partida — cada expedición se adapta al clima, al estado del mar y a lo que tu grupo quiera.",
       espirituSanto: {
         name: "Enfoque Espíritu Santo",
@@ -373,7 +359,7 @@
     activities: {
       kicker: "Lo que puedes hacer",
       title: "No es un itinerario.<br><em>Es un mundo de opciones.</em>",
-      lede: "Cuéntanos qué te llama la atención antes de llegar — el resto se decide a bordo, día a día, según lo que permita el mar.",
+      lede: "Cuéntanos qué te llama la atención antes de llegar — prepararemos una propuesta y el resto se decidirá a bordo, día a día, según lo que permitan el mar y tus ganas.",
       note: "Espíritu Santo es un parque nacional protegido (Reserva de la Biósfera UNESCO). Eagle Ray opera respetando por completo las zonas reguladas.",
       list: ["Buceo con botella", "Apnea", "Pesca submarina", "Kitesurf", "Wingfoil", "Snorkel", "Saltos desde rocas", "Chapuzones en altamar", "Nado nocturno", "Nado al amanecer", "Recorrido de islas", "Exploración de cuevas", "Avistamiento de ballenas", "Encuentros con fauna", "Recolecta silvestre", "Cocina al fuego", "Surf", "Yoga", "Sesiones de estiramiento", "Trabajo de respiración", "Juegos de cartas", "Sesiones de música", "Observación de estrellas"],
       markedOf: "{n} de {total} marcadas",
@@ -395,34 +381,26 @@
     },
     crew: {
       kicker: "Con quién navegas",
-      title: "Mucho más que personal de servicio —<br><em>navegan, bucean y se mueven contigo.</em>",
+      title: "Mucho más que personal de servicio —<br><em>navegamos, buceamos y nos movemos contigo.</em>",
       founderLabel: "Fundador",
-      founderBody: "Empresario del mar con más de 10 años en México, construyendo desde cero la red de capitanes, chefs y líderes de expedición de Baja. Es quien contesta tu WhatsApp — antes, durante y después de tu viaje.",
       founderSign: "Línea directa, sin call center · +52 55 6809 0942",
-      pilotKicker: "La tripulación piloto de Baja",
       members: {
-        denise: { role: "Capitana", line: "Años navegando el Mar de Cortés y algunos de los yates privados más exigentes del mundo.", body: "Años navegando el Mar de Cortés y algunos de los yates privados más exigentes del mundo. Seguridad, navegación y asegurarse de que todos disfruten al máximo. Habla español, inglés y portugués." },
-        benjamin: { role: "Patrón", line: "Ingeniero de formación con años explorando el Golfo de California.", body: "Ingeniero de formación con años explorando el Golfo de California. Navegación metódica con una pasión real por la aventura — cada expedición se mantiene segura, tranquila y adaptada al mar." },
-        adly: { role: "Líder de expedición", line: "Entre el viento de La Ventana y las aguas del Mar de Cortés, el mar es su casa.", body: "Entre el viento de La Ventana y las aguas del Mar de Cortés, el mar es su casa. Instructor de buceo y kite que comparte una pasión real por la exploración auténtica de Baja. Habla español, inglés y árabe." },
-        antoine: { role: "Chef Oro", line: "Formación en hospitalidad de lujo, restaurantes y emprendimiento.", body: "Formación en hospitalidad de lujo, restaurantes y emprendimiento. Convierte cada comida en un momento compartido, inspirado en productos locales y el espíritu del viaje." },
-        ana: { role: "Chef Plata", line: "Emprendedora y fundadora de su propio negocio de repostería.", body: "Emprendedora y fundadora de su propio negocio de repostería. Cocina generosa y convivial que reúne a los invitados — más cocteles de autor y una verdadera pasión por la pesca y los mariscos." }
+        thibault: { role: "Fundador y anfitrión de expediciones", bio: "Llevo más de diez años construyendo proyectos alrededor del mar en México, y Eagle Ray es el que más me importa. La red de Baja la armé yo mismo — los capitanes, los chefs, los líderes de expedición — conversación a conversación. Soy quien responde tu WhatsApp, antes, durante y después del viaje, porque prefiero que hables con la persona que responde del viaje y no con una oficina." },
+        denise: { role: "Capitana", bio: "Llevo años navegando el Mar de Cortés, y antes de eso algunos de los yates privados más exigentes del mundo. Conozco esta agua en todas sus temporadas — dónde se quiebra el viento entre las islas, qué fondeadero aguanta cuando entra el norte, y cómo se reordena una semana entera cuando el mar decide otra cosa." },
+        benjamin: { role: "Patrón", bio: "Me formé como ingeniero, y creo que sigo leyendo un barco y un parte meteorológico igual. Llevo años explorando el Golfo de California, y lo que no me cansa nunca es que el plan que dibujas por la mañana rara vez es el día que acabas teniendo." },
+        adly: { role: "Líder de expedición", bio: "Entre el viento de La Ventana y el agua del Mar de Cortés, esto es mi casa. Dirijo los días en el agua y leo al grupo antes de que el grupo se lea a sí mismo — cuándo empujar para una inmersión más, y cuándo lo mejor es fondear y no hacer absolutamente nada." },
+        antoine: { role: "Chef Gold", bio: "Vengo de la hostelería de lujo, de los restaurantes y de montar mi propio negocio. A bordo eso se convierte en algo más simple: cocinar lo que el día nos dio de verdad, y hacer de la mesa el momento al que todos vuelven." },
+        ana: { role: "Chef Silver", bio: "Soy emprendedora y fundé mi propio negocio de repostería. Cocino a bordo como construí aquello: desde cero, con atención, y con ese detalle de más que nadie pidió pero todos recuerdan." }
       },
-      dreamCoupleKicker: "La pareja soñada de ERE · Q4 2026",
-      joiningTag: "Se unen en Q4 2026",
-      javier: { role: "Capitán y cineasta", line: "Yacht Master 200GT, instructor de buceo PADI, instructor de kitesurf IKO, guía de apnea y pesca submarina, piloto de drones.", body: "Yacht Master 200GT, instructor de buceo PADI, instructor de kitesurf IKO, guía de apnea y pesca submarina, piloto de drones. Actualmente al mando de un catamarán de 51 pies en charters con tripulación en Grecia; se suma a Baja para el Q4 2026." },
-      flavia: { role: "Sobrecargo, chef y cineasta", line: "Cocinera, marinera, entrenadora personal y cineasta.", body: "Cocinera, marinera, entrenadora personal y cineasta. Formación en artes culinarias. Junto con Javier, el modelo de la dupla Capitán-Cineasta y Chef-Sobrecargo de Eagle Ray." },
-      rolesKicker: "Los tres papeles del líder de expedición",
+      joiningTag: "Se incorporan en Q4 2026",
+      javier: { role: "Capitán y realizador", bio: "Soy Yacht Master 200GT, instructor de buceo PADI, instructor de kitesurf IKO, guía de apnea y pesca submarina, y piloto de dron. Significa que puedo llevarte bajo el agua, sobre ella, y filmar la parte que vas a querer guardar." },
+      flavia: { role: "Azafata, chef y realizadora", bio: "Cocino, trabajo en cubierta, entreno a la gente y filmo. En un barco pequeño esa mezcla es justo el punto — la misma persona que planea la cena es la que te pone en marcha por la mañana y captura el día mientras pasa." },
+      rolesKicker: "Los roles del líder de expedición",
       roles: [
-        { t: "Guía y experto", d: "En el centro de cada viaje: un capitán o primer oficial que conoce bien el mar — buzo, apneísta, instructor de kite/wingfoil." },
-        { t: "Anfitrión y generador de energía", d: "Diseñan el ritmo, los momentos, la dinámica del grupo. No es un patrón, ni un guía de tour. Es algo nuevo." },
-        { t: "Narrador y marca", d: "Crean el contenido y el recuerdo que hacen que la experiencia siga creciendo mucho después del viaje." }
+        { t: "Guías y expertos", d: "En el centro de cada viaje: un capitán o primer oficial que lleva años leyendo este mar, su viento, sus corrientes, lo que cambia de un mes a otro. Alguien que buceaba y hacía apnea en esta agua mucho antes de que fuera un trabajo." },
+        { t: "Anfitriones y creadores de energía", d: "Los líderes de expedición de Eagle Ray saben leer al grupo antes de que el grupo se lea a sí mismo — cuándo empujar, cuándo desaparecer, cuándo no planear nada. Y detectan los momentos que de verdad se quedan con la gente: la inmersión que nadie esperaba hacer, una conversación a las 2 de la mañana, la mañana en que el viento no llegó nunca." }
       ],
-      trustLine: "Flexibles por naturaleza. La seguridad va primero. Y una línea directa con Thibault — sin call center, sin chatbot.",
-      trust: [
-        { t: "Flexibles por naturaleza", d: "Las rutas se adaptan al clima, la marea y tu grupo — nada en tu expedición está escrito en piedra." },
-        { t: "La seguridad va primero", d: "Tu patrón tiene la última palabra en el agua. Si las condiciones no son las correctas, cambia el plan — nunca al revés." },
-        { t: "Línea directa con Thibault", d: "Sin call center, sin chatbot. Hablas con la persona que de verdad está construyendo tu expedición." }
-      ]
+      trustLine: "Flexibles por naturaleza. La seguridad siempre va primero. Y línea directa con Thibault — sin call center, sin chatbot."
     },
     faq: {
       kicker: "Preguntas",
@@ -438,13 +416,7 @@
         { q: "¿Navegan fuera de Baja?", a: "Por ahora, todas las expediciones zarpan desde La Paz, Baja California Sur. Ahí están nuestros barcos, tripulación y permisos." }
       ],
       footText: "¿Todavía tienes una pregunta?",
-      footLink: "Escríbele a Thibault directo por WhatsApp →"
-    },
-    live: {
-      kicker: "Ya estamos navegando",
-      title: "Las primeras expediciones privadas<br><em>ya navegan desde La Paz.</em>",
-      lede: "Esto no es un proyecto en papel. Las salidas de esta temporada ya están operando desde la marina de La Paz, y las fotos que ves en Instagram son de la semana pasada, no de un banco de imágenes.",
-      igLabel: "Síguenos en Instagram →"
+      footLink: "Contáctanos directamente →"
     },
     funnel: {
       kicker: "Arma tu expedición",
@@ -496,8 +468,8 @@
     },
     finalCta: {
       kicker: "Baja California Sur",
-      title: "Tu expedición en Baja empieza con<br><em>una conversación, no un formulario de reserva.</em>",
-      cta: "Personaliza tu primera expedición en Baja"
+      title: "Tu expedición en Baja empieza con una conversación.<br><em>Tú traes la idea. Nosotros la convertimos en expedición.</em>",
+      cta: "Personaliza tu expedición"
     },
     footer: {
       claim: "El Mar de Cortés<br><em>no se visita. Se navega.</em>",
@@ -536,13 +508,12 @@
       ogDescription: "Voile, plongée et rencontres avec la faune marine dans la mer de Cortez. Expéditions privées pour petits groupes au départ de La Paz, BCS.",
       ogLocale: "fr_FR"
     },
-    nav: { difference: "Différence", wildlife: "Faune", routes: "Itinéraires", boats: "Bateaux", crew: "Équipage", faq: "FAQ", customize: "Personnaliser" },
+    nav: { difference: "Différence", wildlife: "Faune", routes: "Itinéraires", boats: "Bateaux", crew: "Équipage", faq: "FAQ", customize: "Go Sailing" },
     navm: { difference: "Différence", wildlife: "Où nous naviguons", routes: "Trois itinéraires", day: "Une journée à bord", boats: "Les bateaux", crew: "L'équipage", faq: "FAQ", customize: "Personnalisez votre expédition" },
     hero: {
-      title: "Nous menons des expéditions à la voile où<br>c'est la mer qui dessine l'itinéraire.",
-      sub: "Des itinéraires privés en catamaran dans la mer de Cortez, pensés pour l'exploration et redessinés selon le vent, la marée et les invités de la semaine.",
-      ctaPrimary: "Personnalisez votre première expédition en Basse-Californie",
-      ctaSecondary: "Découvrez ce qui nous distingue",
+      sub: "Petits groupes. Un vrai équipage. Catamaran privé. Aucun horaire fixe.",
+      ctaPrimary: "Personnalisez votre expédition",
+      ctaSecondary: "Ce qui nous rend uniques",
       factDeparture: "Départ", factDepartureV: "Marina de La Paz",
       factGroup: "Groupe", factGroupV: "2 à 10 invités",
       factDuration: "Durée", factDurationV: "3 à 8 jours",
@@ -553,9 +524,9 @@
       title: "Nous ne vendons pas des locations de bateau.<br><em>Nous concevons des expériences en mer.</em>",
       lede: "Eagle Ray Expeditions conçoit et encadre des expéditions maritimes en petit groupe, mêlant voile, plongée et rencontres avec la faune en Basse-Californie du Sud. Pensé pour ceux qui veulent bien plus qu'un bateau.",
       vsThemTitle: "Location classique",
-      vsThem: ["Le bateau d'abord, tout tourne autour du confort.", "Équipage neutre, engagé à la semaine.", "Itinéraires fixes, imprimés avant même de vous connaître.", "L'eau n'est qu'un décor — observée depuis le cockpit.", "Vous écrivez à un bureau, un formulaire vous répond."],
+      vsThem: ["Le bateau d'abord, tout tourne autour du confort.", "Équipage neutre, engagé à la semaine.", "Itinéraires fixes, imprimés avant même de vous connaître.", "L'eau n'est qu'un décor — observée depuis le cockpit."],
       vsUsTitle: "Eagle Ray Expeditions",
-      vsUs: ["L'expérience d'abord, tout tourne autour de l'exploration.", "Toujours le même équipage, qui connaît le chenal par cœur.", "Itinéraires adaptables, redessinés selon le vent et la marée.", "L'eau est le programme — plongée, snorkeling, kayak, chaque jour.", "Vous écrivez au fondateur, et c'est le fondateur qui répond."],
+      vsUs: ["L'expérience d'abord, tout tourne autour de l'exploration.", "Toujours le même équipage, qui connaît le chenal par cœur.", "Itinéraires adaptables, redessinés selon le vent et la marée.", "L'eau est le programme — plongée, snorkeling, kayak, chaque jour."],
       quoteKicker: "Ils vendent des voyages.<br>Nous concevons des expéditions humaines.",
       quote: "Je ne voulais pas vendre des bateaux. Je voulais construire le genre de voyage où j'aurais moi-même aimé être invité — avec des gens qui connaissent vraiment la mer, pas seulement comment vous remettre un trousseau de clés.",
       quoteCite: "— Thibault Poirson De Cardon, Fondateur"
@@ -564,6 +535,7 @@
       kicker: "Où nous naviguons",
       title: "L'aquarium<br><em>du monde.</em>",
       lede: "C'est ainsi que Cousteau surnommait la mer de Cortez. Un golfe étroit qui concentre sur quelques milles ce que d'autres océans dispersent sur des milliers — remontées d'eaux froides, îles désertes et une densité de vie qui surprend encore ceux qui la naviguent depuis des années. Nous travaillons la zone entre La Paz, Espíritu Santo et Cerralvo.",
+      disclaimer: "Les observations ne sont jamais garanties. Ce sont des animaux sauvages en pleine mer — ce que nous pouvons vous donner, c'est la saison, le lieu et la probabilité.",
       note: "Espíritu Santo est un parc national protégé et fait partie du site du patrimoine mondial de l'UNESCO « Îles et aires protégées du golfe de Californie ». Nous mouillons uniquement sur des bouées autorisées, et les observations respectent les distances et horaires fixés par la réglementation. La faune n'est jamais garantie — c'est de la vie sauvage."
     },
     fauna: {
@@ -577,7 +549,7 @@
     routes: {
       kicker: "Trois itinéraires bien réels",
       title: "Des points de départ,<br><em>pas des itinéraires figés.</em>",
-      lede: "Ce ne sont pas des forfaits — ce sont les trois directions que nous prenons habituellement au départ de La Paz, avec un itinéraire indicatif de quatre jours. Tout se réorganise si le vent du nord se lève, ou si quelqu'un veut rester un jour de plus dans une crique.",
+      lede: "Ce ne sont pas des forfaits — ce sont les trois directions que nous prenons habituellement au départ de La Paz. Tout se réorganise si le vent du nord se lève, ou si quelqu'un veut rester un jour de plus dans une crique.",
       note: "Ces itinéraires sont un point de départ — chaque expédition s'adapte à la météo, à l'état de la mer et aux envies de votre groupe.",
       espirituSanto: {
         name: "Itinéraire Espíritu Santo",
@@ -633,7 +605,7 @@
     activities: {
       kicker: "Ce que vous pourriez faire",
       title: "Ce n'est pas un itinéraire.<br><em>C'est un monde de possibilités.</em>",
-      lede: "Dites-nous ce qui vous tente avant votre arrivée — le reste se décide à bord, jour après jour, selon ce que la mer permet.",
+      lede: "Dites-nous ce qui vous tente avant votre arrivée — nous préparerons une proposition, et le reste se décidera à bord, jour après jour, selon ce que la mer et votre humeur permettent.",
       note: "Espíritu Santo est un parc national protégé (réserve de biosphère UNESCO). Eagle Ray opère dans le plein respect des zones réglementées.",
       list: ["Plongée bouteille", "Apnée", "Pêche sous-marine", "Kitesurf", "Wingfoil", "Snorkeling", "Saut de falaise", "Baignades en pleine mer", "Baignade nocturne", "Baignade au lever du soleil", "Îles en chapelet", "Exploration de grottes", "Observation des baleines", "Rencontres avec la faune", "Cueillette sauvage", "Cuisine au feu de bois", "Surf", "Yoga", "Séances d'étirement", "Travail respiratoire", "Jeux de cartes", "Sessions musicales", "Observation des étoiles"],
       markedOf: "{n} sur {total} cochées",
@@ -655,34 +627,26 @@
     },
     crew: {
       kicker: "Avec qui vous naviguez",
-      title: "Bien plus que du personnel de service —<br><em>ils naviguent, plongent et vivent l'expédition avec vous.</em>",
+      title: "Bien plus qu'un personnel de service —<br><em>nous naviguons, plongeons et bougeons avec vous.</em>",
       founderLabel: "Fondateur",
-      founderBody: "Entrepreneur de la mer avec plus de 10 ans d'expérience au Mexique, bâtissant depuis le début le réseau de capitaines, chefs et chefs d'expédition de Basse-Californie. C'est lui qui répond à votre WhatsApp — avant, pendant et après votre voyage.",
-      founderSign: "Ligne directe, sans centre d'appels · +52 55 6809 0942",
-      pilotKicker: "L'équipage pilote de Basse-Californie",
+      founderSign: "Ligne directe, sans call center · +52 55 6809 0942",
       members: {
-        denise: { role: "Capitaine", line: "Des années à naviguer dans la mer de Cortez et sur certains des yachts privés les plus exigeants au monde.", body: "Des années à naviguer dans la mer de Cortez et sur certains des yachts privés les plus exigeants au monde. Sécurité, navigation, et l'assurance que chacun profite pleinement de l'expérience. Parle espagnol, anglais, portugais." },
-        benjamin: { role: "Skipper", line: "Ingénieur de formation, avec des années passées à explorer le golfe de Californie.", body: "Ingénieur de formation, avec des années passées à explorer le golfe de Californie. Une navigation méthodique et une vraie passion pour l'aventure — chaque expédition reste sûre, fluide et adaptée à la mer." },
-        adly: { role: "Chef d'expédition", line: "Entre le vent de La Ventana et les eaux de la mer de Cortez, la mer est chez lui.", body: "Entre le vent de La Ventana et les eaux de la mer de Cortez, la mer est chez lui. Instructeur de plongée et de kite, il partage une vraie passion pour l'exploration authentique de la Basse-Californie. Parle espagnol, anglais, arabe." },
-        antoine: { role: "Chef étoilé", line: "Une formation dans l'hôtellerie de luxe, la restauration et l'entrepreneuriat.", body: "Une formation dans l'hôtellerie de luxe, la restauration et l'entrepreneuriat. Il transforme chaque repas en un moment partagé, inspiré des produits locaux et de l'esprit du voyage." },
-        ana: { role: "Chef pâtissière", line: "Entrepreneuse et fondatrice de sa propre pâtisserie.", body: "Entrepreneuse et fondatrice de sa propre pâtisserie. Une cuisine généreuse et conviviale qui rassemble les invités — accompagnée de cocktails signature et d'une vraie passion pour la pêche et les fruits de mer." }
+        thibault: { role: "Fondateur et hôte d'expédition", bio: "Cela fait plus de dix ans que je construis des projets autour de l'océan au Mexique, et Eagle Ray est celui qui compte le plus pour moi. J'ai bâti le réseau de Basse-Californie moi-même — les capitaines, les chefs, les leaders d'expédition — une conversation à la fois. C'est moi qui réponds à votre WhatsApp, avant, pendant et après votre voyage, parce que je préfère que vous parliez à la personne responsable du voyage plutôt qu'à un bureau." },
+        denise: { role: "Capitaine", bio: "J'ai passé des années à naviguer la mer de Cortez, et avant cela sur certains des yachts privés les plus exigeants au monde. Je connais cette eau à chaque saison — où le vent se plie autour des îles, quel mouillage tient quand le vent du nord se lève, et comment une semaine entière se réorganise quand la mer en décide autrement." },
+        benjamin: { role: "Skipper", bio: "J'ai une formation d'ingénieur, et je crois que je lis encore un bateau et un bulletin météo de cette façon. J'explore le golfe de Californie depuis des années, et ce dont je ne me lasse pas, c'est que le plan tracé le matin est rarement la journée qu'on obtient vraiment." },
+        adly: { role: "Leader d'expédition", bio: "Entre le vent de La Ventana et l'eau de la mer de Cortez, je suis chez moi. Je mène les journées sur l'eau et je lis le groupe avant que le groupe ne se lise lui-même — quand pousser pour une plongée de plus, et quand le meilleur choix est de mouiller et de ne rien faire du tout." },
+        antoine: { role: "Chef Gold", bio: "Je viens de l'hôtellerie de luxe, de la restauration et de l'entrepreneuriat. À bord, cela devient plus simple : cuisiner ce que la journée nous a réellement donné, et faire de la table le moment où tout le monde se retrouve." },
+        ana: { role: "Chef Silver", bio: "Je suis entrepreneuse et j'ai fondé ma propre pâtisserie. Je cuisine à bord comme je l'ai construite : à partir de rien, avec attention, et avec ce petit supplément que personne n'a demandé mais dont tout le monde se souvient." }
       },
-      dreamCoupleKicker: "Le duo de rêve ERE · T4 2026",
-      joiningTag: "Nous rejoint au T4 2026",
-      javier: { role: "Capitaine et réalisateur", line: "Yacht Master 200GT, instructeur de plongée PADI, instructeur de kitesurf IKO, guide d'apnée et de pêche sous-marine, télépilote de drone.", body: "Yacht Master 200GT, instructeur de plongée PADI, instructeur de kitesurf IKO, guide d'apnée et de pêche sous-marine, télépilote de drone. Commande actuellement un catamaran de 51 pieds en charter avec équipage en Grèce ; rejoint la Basse-Californie au T4 2026." },
-      flavia: { role: "Hôtesse, chef et réalisatrice", line: "Cuisinière, matelot, coach personnelle et réalisatrice.", body: "Cuisinière, matelot, coach personnelle et réalisatrice. Formée aux arts culinaires. Avec Javier, elle incarne le modèle du duo Capitaine-Réalisateur et Chef-Hôtesse d'Eagle Ray." },
-      rolesKicker: "Les trois rôles du chef d'expédition",
+      joiningTag: "Rejoignent l'équipe au Q4 2026",
+      javier: { role: "Capitaine et réalisateur", bio: "Je suis Yacht Master 200GT, moniteur de plongée PADI, moniteur de kitesurf IKO, guide d'apnée et de chasse sous-marine, et pilote de drone. Cela veut dire que je peux vous emmener sous l'eau, dessus, et filmer la partie que vous voudrez garder." },
+      flavia: { role: "Hôtesse, chef et réalisatrice", bio: "Je cuisine, je travaille sur le pont, j'entraîne les gens et je filme. Sur un petit bateau, ce mélange est précisément l'intérêt — la même personne qui prépare le dîner est celle qui vous met en mouvement le matin et capte la journée telle qu'elle se déroule." },
+      rolesKicker: "Les rôles du leader d'expédition",
       roles: [
-        { t: "Guide et expert", d: "Au cœur de chaque voyage : un capitaine ou second qui connaît bien la mer — plongeur, apnéiste, instructeur de kite/wingfoil." },
-        { t: "Hôte et créateur d'énergie", d: "Il façonne le rythme, les moments, la dynamique du groupe. Ni skipper, ni guide touristique. Quelque chose de nouveau." },
-        { t: "Conteur et image de marque", d: "Il crée le contenu et les souvenirs qui font vivre l'expérience bien après la fin du voyage." }
+        { t: "Guides et experts", d: "Au cœur de chaque voyage : un capitaine ou un second qui a passé des années à lire cet océan, son vent, ses courants, ce qui change d'un mois à l'autre. Quelqu'un qui plongeait et faisait de l'apnée dans cette eau bien avant que ce soit un métier." },
+        { t: "Hôtes et créateurs d'énergie", d: "Les leaders d'expédition d'Eagle Ray savent lire le groupe avant que le groupe ne se lise lui-même — quand pousser, quand s'effacer, quand ne rien prévoir du tout. Et ils repèrent les moments qui restent vraiment : la plongée que personne n'avait prévue, une conversation à 2h du matin, le matin où le vent n'est jamais venu." }
       ],
-      trustLine: "Flexibles par nature. La sécurité avant tout. Et une ligne directe avec Thibault — pas de centre d'appels, pas de chatbot.",
-      trust: [
-        { t: "Flexibles par nature", d: "Les itinéraires s'adaptent à la météo, à la marée et à votre groupe — rien dans votre expédition n'est gravé dans le marbre." },
-        { t: "La sécurité avant tout", d: "Votre skipper a le dernier mot en mer. Si les conditions ne sont pas réunies, c'est le programme qui change — jamais l'inverse." },
-        { t: "Une ligne directe avec Thibault", d: "Pas de centre d'appels, pas de chatbot. Vous parlez à la personne qui construit réellement votre expédition." }
-      ]
+      trustLine: "Flexibles par nature. La sécurité passe toujours en premier. Et une ligne directe avec Thibault — sans call center, sans chatbot."
     },
     faq: {
       kicker: "Questions",
@@ -698,13 +662,7 @@
         { q: "Naviguez-vous en dehors de la Basse-Californie ?", a: "Aujourd'hui, toutes les expéditions partent de La Paz, en Basse-Californie du Sud. C'est là que se trouvent nos bateaux, notre équipage et nos permis." }
       ],
       footText: "Une question reste sans réponse ?",
-      footLink: "Écrivez directement à Thibault sur WhatsApp →"
-    },
-    live: {
-      kicker: "Déjà en mer",
-      title: "Les premières expéditions privées<br><em>naviguent déjà au départ de La Paz.</em>",
-      lede: "Ce n'est pas un projet sur papier. Les départs de cette saison sont déjà en cours depuis la marina de La Paz, et les photos que vous voyez sur Instagram datent de la semaine dernière, pas d'une banque d'images.",
-      igLabel: "Suivez-nous sur Instagram →"
+      footLink: "Contactez-nous directement →"
     },
     funnel: {
       kicker: "Construisez votre expédition",
@@ -756,8 +714,8 @@
     },
     finalCta: {
       kicker: "Basse-Californie du Sud",
-      title: "Votre expédition en Basse-Californie commence par<br><em>une conversation, pas un formulaire de réservation.</em>",
-      cta: "Personnalisez votre première expédition en Basse-Californie"
+      title: "Votre expédition en Basse-Californie commence par une conversation.<br><em>Vous apportez l'idée. Nous en faisons une expédition.</em>",
+      cta: "Personnalisez votre expédition"
     },
     footer: {
       claim: "La mer de Cortez<br><em>ne se visite pas. Elle se navigue.</em>",
