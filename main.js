@@ -14,7 +14,7 @@
   // here so the funnel's lead capture (partial + complete) actually reaches an inbox.
   // Until this is a real endpoint, the WhatsApp handoff still works, but no lead is
   // ever recorded server-side if a visitor doesn't finish or open WhatsApp.
-  var FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+  var FORMSPREE_ENDPOINT = "https://formspree.io/f/xwlearnw";
   var FUNNEL_DRAFT_KEY = "eagleRayFunnelDraft";
 
   var I18N = window.__I18N__ || {};
