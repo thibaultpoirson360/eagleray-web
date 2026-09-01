@@ -4,7 +4,7 @@ import Image from "next/image";
 import { getSiteUrl, WHATSAPP_NUMBER } from "@/lib/site";
 
 import FaqAccordion from "./faq-accordion";
-import IntakeForm from "./intake-form";
+import TallyEmbed from "./tally-embed";
 
 /* -------------------------------------------------------------------------- */
 /* Metadata                                                                   */
@@ -23,7 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     url: `${getSiteUrl()}/friends-family`,
     siteName: "Eagle Ray Expeditions",
-    images: [{ url: `${getSiteUrl()}/assets/img/hero-premium.webp` }],
+    // El preview de WhatsApp es el primer contacto visual — usa el mismo hero
+    // que ve el visitante al abrir la página, no una imagen genérica del sitio.
+    images: [{ url: `${getSiteUrl()}/assets/hero/hero-baydreamer-desktop.jpg` }],
   },
   twitter: {
     card: "summary_large_image",
@@ -67,21 +69,35 @@ function Section({
   );
 }
 
+/**
+ * Las 3 tarjetas comparten un 4:3 fijo — la retícula se lee como una sola fila,
+ * y una altura distinta por tarjeta la rompe. Como los originales no vienen en
+ * 4:3, `position` mueve el encuadre dentro del recorte en lugar de aceptar el
+ * centro por defecto.
+ */
 function DreamCard({
   src,
   alt,
   title,
+  position = "object-center",
   children,
 }: {
   src: string;
   alt: string;
   title: string;
+  position?: string;
   children: React.ReactNode;
 }) {
   return (
     <article className="rounded-md border border-hairline bg-surface p-5 sm:p-6">
       <div className="relative mb-5 aspect-4/3 overflow-hidden rounded-sm bg-paper">
-        <Image src={src} alt={alt} fill sizes="(max-width: 860px) 100vw, 33vw" className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 860px) 100vw, 33vw"
+          className={`object-cover ${position}`}
+        />
       </div>
       <h3 className="mb-2 text-[1.25rem]">{title}</h3>
       <p className="text-[0.95rem] leading-relaxed text-ink-soft">{children}</p>
@@ -132,15 +148,32 @@ export default function FriendsFamilyPage() {
             </a>
           </div>
 
-          <div className="relative mx-auto mt-14 aspect-4/3 w-full max-w-5xl overflow-hidden rounded-md bg-surface sm:aspect-21/9">
-            <Image
-              src="/assets/hero/hero-baydreamer-desktop.jpg"
-              alt="Bay Dreamer fondeado frente a los acantilados de Isla Espíritu Santo"
-              fill
-              sizes="(max-width: 1024px) 100vw, 1024px"
-              className="object-cover"
-              priority
-            />
+          {/* Dos archivos, dos encuadres. Ojo: ocultar una variante con
+              `display:none` no evita su descarga — Chrome baja igual la imagen
+              lazy sin caja de layout, así que hoy el móvil se trae también el
+              hero de escritorio. Solo `<picture>` con `media` descarga una sola;
+              está anotado como TODO en CLAUDE.md. Mientras tanto `priority` vive
+              en la variante móvil, que es el canal real (WhatsApp). */}
+          <div className="relative mx-auto mt-14 w-full max-w-5xl overflow-hidden rounded-md bg-surface">
+            <div className="relative aspect-3/4 sm:hidden">
+              <Image
+                src="/assets/hero/hero-baydreamer-mobile.jpg"
+                alt="Mesa a bordo del Bay Dreamer, vista al mar turquesa"
+                fill
+                sizes="100vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="relative hidden aspect-16/9 sm:block">
+              <Image
+                src="/assets/hero/hero-baydreamer-desktop.jpg"
+                alt="Mesa a bordo del Bay Dreamer, vista al mar turquesa"
+                fill
+                sizes="1024px"
+                className="object-cover"
+              />
+            </div>
           </div>
         </header>
 
@@ -164,7 +197,9 @@ export default function FriendsFamilyPage() {
                 Tú traes al grupo. Nosotros resolvemos todo lo demás.
               </p>
             </div>
-            <div className="relative order-first aspect-4/5 overflow-hidden rounded-md bg-surface md:order-none">
+            {/* Original 9:16: en 4:5 se recortaba el 30% de la vertical. En 2:3
+                (ratio de sección) se pierde la mitad, y entran velero y acantilado. */}
+            <div className="relative order-first aspect-2/3 overflow-hidden rounded-md bg-surface md:order-none">
               <Image
                 src="/assets/secciones/sistema-aerea.jpg"
                 alt="Vista aérea de un velero fondeado en una bahía turquesa de Baja"
@@ -183,7 +218,14 @@ export default function FriendsFamilyPage() {
             Lo que realmente estás comprando
           </h2>
           <div className="grid gap-5 sm:grid-cols-3">
-            <DreamCard src="/assets/secciones/sueno-tu.jpg" alt="Entrando al agua turquesa junto a las rocas de Baja" title="Tú">
+            {/* Original 3:4 vertical: el centro por defecto se come el horizonte
+                y deja agua vacía abajo. Subimos el encuadre. */}
+            <DreamCard
+              src="/assets/secciones/sueno-tu.jpg"
+              alt="Entrando al agua turquesa junto a las rocas de Baja"
+              title="Tú"
+              position="object-[50%_40%]"
+            >
               Tu cuerpo en el agua fría, la mente en blanco. Bucear, nadar, no hacer nada.
               El mar no te pide nada — tú decides qué tanto quieres de él.
             </DreamCard>
@@ -216,13 +258,16 @@ export default function FriendsFamilyPage() {
               </li>
             ))}
           </ol>
-          <div className="relative aspect-21/9 overflow-hidden rounded-md bg-surface">
+          {/* El original es 3:2 y el tema es la mesa puesta, abajo. En 21/9 se
+              cortaba justo eso y sobraba techo. Anclando el recorte abajo, el
+              16:9 conserva la mesa entera y solo pierde plafón. */}
+          <div className="relative aspect-16/9 overflow-hidden rounded-md bg-surface">
             <Image
               src="/assets/secciones/como-funciona-salon.jpg"
               alt="Salón interior de un catamarán ICON"
               fill
               sizes="(max-width: 1024px) 100vw, 1024px"
-              className="object-cover"
+              className="object-cover object-bottom"
             />
           </div>
         </Section>
@@ -279,7 +324,7 @@ export default function FriendsFamilyPage() {
             7 preguntas. Menos de 2 minutos. Todo lo que necesito para armar tu propuesta.
           </p>
 
-          <IntakeForm whatsappNumber={WHATSAPP_NUMBER} />
+          <TallyEmbed />
         </Section>
 
         {/* ============ CIERRE ============ */}
@@ -303,13 +348,17 @@ export default function FriendsFamilyPage() {
           </div>
 
           <div className="flex items-center gap-4 border-t border-hairline pt-8">
-            <div className="relative h-14 w-14 flex-none overflow-hidden rounded-full bg-surface">
+            {/* Plano general 2:3 al timón. El recorte cuadrado baja al 72% para
+                soltar cielo muerto arriba, pero la cara sigue ocupando ~15% del
+                encuadre: a este tamaño se lee el barco, no la persona. Pendiente
+                un recorte cuadrado dedicado — ver TODO en CLAUDE.md. */}
+            <div className="relative h-16 w-16 flex-none overflow-hidden rounded-full bg-surface">
               <Image
                 src="/assets/secciones/cierre-thibault.jpg"
                 alt="Thibault Poirson"
                 fill
-                sizes="56px"
-                className="object-cover"
+                sizes="64px"
+                className="object-cover object-[50%_72%]"
               />
             </div>
             <div>

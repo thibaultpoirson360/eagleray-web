@@ -143,3 +143,17 @@ Exceptions actuelles :
       Olivier. Voir `assets/RESOLUTION.md` pour le détail par fichier.
 - [ ] 13 photos du catalogue sont en `Resolution: Non verifie` — à mesurer lors du
       prochain passage.
+- [ ] Hero `/friends-family` : les deux variantes (mobile + desktop) sont rendues en
+      parallèle et masquées en CSS. Chrome télécharge quand même celle qui est en
+      `display:none` — vérifié le 10/08/2026 (`naturalWidth` non nul sur la variante
+      cachée). Le mobile paie donc les deux fichiers. Seul `<picture>` + `<source
+      media>` n'en télécharge qu'un — mais on perd l'optimisation de `next/image`, à
+      compenser en générant les `.webp` en amont.
+- [ ] `.webp` manquants : `hero/`, `secciones/` et `barcos/` ne contiennent que des
+      `.jpg`. La règle « chaque image existe en `.jpg` + `.webp` » n'est aujourd'hui
+      satisfaite qu'indirectement, via la conversion à la volée de `next/image`.
+- [ ] `cierre-thibault.jpg` est un plan général au timón : dans l'avatar rond du
+      closing, le visage occupe ~15 % du cadre et on lit le bateau, pas la personne.
+      Il faut un recadrage carré dédié depuis l'original.
+- [ ] Vérifier le `alt` de `como-funciona-salon.jpg` : il annonce « catamarán ICON »
+      alors que l'intérieur ressemble à un monocoque. À confirmer avec Airtable.
