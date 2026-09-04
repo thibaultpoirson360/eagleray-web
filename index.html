@@ -1,785 +1,1273 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title data-i18n="meta.title">Eagle Ray Expeditions — Private sailing expeditions · La Paz, Baja California Sur</title>
-<meta name="description" data-i18n-content="meta.description" content="Private catamaran expeditions across the Sea of Cortez — small groups, adaptive routes built around wind and tide, diving, and wildlife. Sailing out of La Paz, Baja California Sur.">
-<meta name="theme-color" content="#071a16">
-<meta property="og:title" data-i18n-content="meta.ogTitle" content="Eagle Ray Expeditions — The aquarium of the world, in private">
-<meta property="og:description" data-i18n-content="meta.ogDescription" content="Sailing, diving and wildlife encounters in the Sea of Cortez. Private expeditions for small groups out of La Paz, BCS.">
-<meta property="og:type" content="website">
-<meta property="og:locale" data-i18n-content="meta.ogLocale" content="en_US">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title data-i18n="meta.title">Eagle Ray Expeditions — Private sailing expeditions · La Paz, Baja California Sur
+  </title>
+  <meta name="description" data-i18n-content="meta.description"
+    content="Private catamaran expeditions across the Sea of Cortez — small groups, adaptive routes built around wind and tide, diving, and wildlife. Sailing out of La Paz, Baja California Sur.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" data-i18n-content="meta.ogTitle"
+    content="Eagle Ray Expeditions — The aquarium of the world, in private">
+  <meta property="og:description" data-i18n-content="meta.ogDescription"
+    content="Sailing, diving and wildlife encounters in the Sea of Cortez. Private expeditions for small groups out of La Paz, BCS.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" data-i18n-content="meta.ogLocale" content="en_US">
 
-<link rel="preload" as="image" href="assets/img/hero-premium.webp" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css?v=20260724c">
-<link rel="icon" href="assets/img/logo-mark-navy.png" type="image/png">
-<script>document.documentElement.className += " js";</script>
+  <link rel="preload" as="image" href="assets/img/hero-premium.webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css?v=20260724c">
+  <link rel="icon" href="assets/img/logo-mark-navy.png" type="image/png">
+  <script>document.documentElement.className += " js";</script>
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="splash" data-splash aria-hidden="true">
-  <div class="splash-inner">
-    <img class="splash-icon" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
-    <img class="splash-wordmark" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions" width="1064" height="351">
-    <span class="splash-line"></span>
-  </div>
-</div>
-
-<!-- SOUNDER — signature depth-gauge rail -->
-<aside class="sounder" aria-hidden="true">
-  <canvas class="sounder-canvas" width="120" height="900"></canvas>
-  <div class="sounder-read">
-    <span class="sounder-depth" data-depth>0</span><span class="sounder-unit">m</span>
-    <span class="sounder-label" data-sounder-label>Surface</span>
-  </div>
-</aside>
-
-<nav class="nav" data-nav aria-label="Main">
-  <a class="nav-brand" href="#top">
-    <img class="nav-mark" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
-    <img class="nav-wordmark" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions" width="1064" height="351">
-  </a>
-  <div class="lang-switch" data-lang-switch aria-label="Language">
-    <button type="button" data-lang="en" class="lang-btn">EN</button>
-    <button type="button" data-lang="es" class="lang-btn">ES</button>
-    <button type="button" data-lang="fr" class="lang-btn">FR</button>
-  </div>
-  <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-mobile" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="nav-links">
-    <a class="nav-link" href="#difference" data-i18n="nav.difference">Difference</a>
-    <a class="nav-link" href="#wildlife" data-i18n="nav.wildlife">Wildlife</a>
-    <a class="nav-link" href="#routes" data-i18n="nav.routes">Routes</a>
-    <a class="nav-link" href="#boats" data-i18n="nav.boats">Boats</a>
-    <a class="nav-link" href="#crew" data-i18n="nav.crew">Crew</a>
-    <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
-  </div>
-  <a class="nav-cta" href="#customize" data-i18n="nav.customize">Go Sailing Now!</a>
-</nav>
-
-<div class="nav-mobile" id="nav-mobile" data-nav-mobile aria-hidden="true">
-  <div class="nav-mobile-brand">
-    <img class="nav-mobile-mark" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
-    <img class="nav-mobile-wordmark" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions" width="1064" height="351">
-  </div>
-  <div class="lang-switch lang-switch-mobile" data-lang-switch aria-label="Language">
-    <button type="button" data-lang="en" class="lang-btn">EN</button>
-    <button type="button" data-lang="es" class="lang-btn">ES</button>
-    <button type="button" data-lang="fr" class="lang-btn">FR</button>
-  </div>
-  <a href="#difference"><i>01</i> <span data-i18n="navm.difference">Difference</span></a>
-  <a href="#wildlife"><i>02</i> <span data-i18n="navm.wildlife">Where we sail</span></a>
-  <a href="#routes"><i>03</i> <span data-i18n="navm.routes">Three routes</span></a>
-  <a href="#day-in-life"><i>04</i> <span data-i18n="navm.day">A day aboard</span></a>
-  <a href="#boats"><i>05</i> <span data-i18n="navm.boats">The boats</span></a>
-  <a href="#crew"><i>06</i> <span data-i18n="navm.crew">The crew</span></a>
-  <a href="#faq"><i>07</i> <span data-i18n="navm.faq">FAQ</span></a>
-  <a href="#customize" class="nav-cta" data-i18n="navm.customize">Customize your expedition</a>
-  <p class="nav-mobile-foot">24°12′37.6″ N · LA PAZ · B.C.S.</p>
-</div>
-
-<main id="main">
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-bg">
-      <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-premium.webp" aria-hidden="true">
-        <source src="assets/video/hero-loop.mp4" type="video/mp4">
-      </video>
-      <img src="assets/img/hero-premium.webp" alt="Sailing catamaran anchored at golden hour off Baja California Sur" fetchpriority="high" loading="eager" decoding="sync">
-      <div class="hero-bg-tint"></div>
+  <div class="splash" data-splash aria-hidden="true">
+    <div class="splash-inner">
+      <img class="splash-icon" src="assets/img/logo-mark-navy.png" alt="" width="1030" height="646">
+      <img class="splash-wordmark" src="assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" width="1064"
+        height="351">
+      <span class="splash-line"></span>
     </div>
-    <div class="hero-mesh" aria-hidden="true"></div>
-    <div class="hero-grain" aria-hidden="true"></div>
-    <div class="hero-inner">
-      <p class="hero-meta"><span class="dot" aria-hidden="true"></span>24°12′37.6″ N · LA PAZ · B.C.S.</p>
-      <h1 class="hero-title" data-i18n="hero.title">We run sailing expeditions where<br>the ocean does most of the planning.</h1>
-      <p class="hero-sub" data-i18n="hero.sub">Private catamaran routes across the Sea of Cortez, built for exploration and redrawn by weather, tide, and whoever's on board for the week.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" data-magnetic href="#customize" data-i18n="hero.ctaPrimary">Customize your first Baja expedition</a>
-        <a class="btn btn-ghost" href="#difference" data-i18n="hero.ctaSecondary">See what makes us different</a>
+  </div>
+
+  <!-- SOUNDER — signature depth-gauge rail -->
+  <aside class="sounder" aria-hidden="true">
+    <canvas class="sounder-canvas" width="120" height="900"></canvas>
+    <div class="sounder-read">
+      <span class="sounder-depth" data-depth>0</span><span class="sounder-unit">m</span>
+      <span class="sounder-label" data-sounder-label>Surface</span>
+    </div>
+  </aside>
+
+  <nav class="nav" data-nav aria-label="Main">
+    <a class="nav-brand" href="#top">
+      <img class="nav-mark nav-logo-light" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
+      <img class="nav-wordmark nav-logo-light" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions"
+        width="1064" height="351">
+      <img class="nav-mark nav-logo-ink" src="assets/img/logo-mark-navy.png" alt="" width="1030" height="646">
+      <img class="nav-wordmark nav-logo-ink" src="assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions"
+        width="1064" height="351">
+    </a>
+    <div class="lang-switch" data-lang-switch aria-label="Language">
+      <button type="button" data-lang="en" class="lang-btn">EN</button>
+      <button type="button" data-lang="es" class="lang-btn">ES</button>
+      <button type="button" data-lang="fr" class="lang-btn">FR</button>
+    </div>
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-mobile"
+      aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a class="nav-link" href="#difference" data-i18n="nav.difference">Difference</a>
+      <a class="nav-link" href="#crew" data-i18n="nav.crew">Crew</a>
+      <a class="nav-link" href="#wildlife" data-i18n="nav.wildlife">Wildlife</a>
+      <a class="nav-link" href="#routes" data-i18n="nav.routes">Routes</a>
+      <a class="nav-link" href="#boats" data-i18n="nav.boats">Boats</a>
+      <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="#customize" data-i18n="nav.customize">Go Sailing</a>
+  </nav>
+
+  <div class="nav-mobile" id="nav-mobile" data-nav-mobile aria-hidden="true">
+    <div class="nav-mobile-brand">
+      <img class="nav-mobile-mark" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
+      <img class="nav-mobile-wordmark" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions" width="1064"
+        height="351">
+    </div>
+    <div class="lang-switch lang-switch-mobile" data-lang-switch aria-label="Language">
+      <button type="button" data-lang="en" class="lang-btn">EN</button>
+      <button type="button" data-lang="es" class="lang-btn">ES</button>
+      <button type="button" data-lang="fr" class="lang-btn">FR</button>
+    </div>
+    <a href="#difference"><i>01</i> <span data-i18n="navm.difference">Difference</span></a>
+    <a href="#crew"><i>02</i> <span data-i18n="navm.crew">The crew</span></a>
+    <a href="#wildlife"><i>03</i> <span data-i18n="navm.wildlife">Where we sail</span></a>
+    <a href="#routes"><i>04</i> <span data-i18n="navm.routes">Three routes</span></a>
+    <a href="#day-in-life"><i>05</i> <span data-i18n="navm.day">A day aboard</span></a>
+    <a href="#boats"><i>06</i> <span data-i18n="navm.boats">The boats</span></a>
+    <a href="#faq"><i>07</i> <span data-i18n="navm.faq">FAQ</span></a>
+    <a href="#customize" class="nav-cta" data-i18n="navm.customize">Customize your expedition</a>
+    <p class="nav-mobile-foot">24°12′37.6″ N · LA PAZ · B.C.S.</p>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-bg">
+        <!-- TODO: replace with DJI_20260704205544_0006_D.MP4 (sunset with boats) once the file is provided. -->
+        <video autoplay muted loop playsinline preload="auto" poster="assets/img/hero-premium.webp" aria-hidden="true">
+          <source src="assets/video/hero-loop.mp4" type="video/mp4">
+        </video>
+        <img src="assets/img/hero-premium.webp" alt="Sailing catamaran anchored at golden hour off Baja California Sur"
+          fetchpriority="high" loading="eager" decoding="sync">
+        <div class="hero-bg-tint"></div>
       </div>
-      <dl class="hero-facts">
-        <div><dt data-i18n="hero.factDeparture">Departure</dt><dd data-i18n="hero.factDepartureV">Marina de La Paz</dd></div>
-        <div><dt data-i18n="hero.factGroup">Group</dt><dd data-i18n="hero.factGroupV">2 to 10 guests</dd></div>
-        <div><dt data-i18n="hero.factDuration">Duration</dt><dd data-i18n="hero.factDurationV">3 to 8 days</dd></div>
-        <div><dt data-i18n="hero.factItinerary">Itinerary</dt><dd data-i18n="hero.factItineraryV">Open</dd></div>
-      </dl>
-    </div>
-    <a class="scroll-cue" href="#difference" aria-label="Scroll to next section"><span></span></a>
-  </section>
-
-  <!-- DIFFERENCE -->
-  <section class="section" id="difference" data-depth-stop="12" data-depth-name="Anchorage">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">01</span> <span data-i18n="difference.kicker">What we do</span></p>
-      <h2 class="h2" data-reveal data-i18n="difference.title">We don't sell charter trips.<br><em>We design ocean experiences.</em></h2>
-      <p class="lede" data-reveal data-i18n="difference.lede">Eagle Ray Expeditions designs and leads small-group ocean expeditions combining sailing, diving, and wildlife encounters in Baja California Sur. Built for people who want more than a boat.</p>
-    </div>
-
-    <div class="vs">
-      <article class="vs-col vs-them reveal">
-        <h3 class="vs-title" data-i18n="difference.vsThemTitle">Charter trips</h3>
-        <ol class="vs-list">
-          <li data-i18n="difference.vsThem.0">Boat-first, comfort-driven.</li>
-          <li data-i18n="difference.vsThem.1">Neutral crew, hired by the week.</li>
-          <li data-i18n="difference.vsThem.2">Fixed routes, printed before you meet them.</li>
-          <li data-i18n="difference.vsThem.3">The water is scenery — watched from the cockpit.</li>
-          <li data-i18n="difference.vsThem.4">You write to an office and a form answers back.</li>
-        </ol>
-      </article>
-      <div class="vs-axis" aria-hidden="true"><span>vs</span></div>
-      <article class="vs-col vs-us reveal">
-        <h3 class="vs-title" data-i18n="difference.vsUsTitle">Eagle Ray Expeditions</h3>
-        <ol class="vs-list">
-          <li data-i18n="difference.vsUs.0">Experience-first, exploration-driven.</li>
-          <li data-i18n="difference.vsUs.1">The same crew, who know the channel by memory.</li>
-          <li data-i18n="difference.vsUs.2">Adaptive routes, redrawn by weather and tide.</li>
-          <li data-i18n="difference.vsUs.3">The water is the plan — dive, snorkel, kayak, every day.</li>
-          <li data-i18n="difference.vsUs.4">You write to the founder, and the founder answers.</li>
-        </ol>
-      </article>
-    </div>
-
-    <div class="founder-quote reveal">
-      <p class="founder-quote-kicker" data-i18n="difference.quoteKicker">They sell trips.<br>We design human expeditions.</p>
-      <p class="founder-quote-mark" aria-hidden="true">"</p>
-      <blockquote>
-        <p data-i18n="difference.quote">I didn't want to sell boats. I wanted to build the kind of trip I'd actually want to be on — with people who know the ocean, not just how to hand you a set of keys.</p>
-        <cite data-i18n="difference.quoteCite">— Thibault Poirson De Cardon, Founder</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- WILDLIFE — interactive fauna selector -->
-  <section class="section" id="wildlife" data-depth-stop="26" data-depth-name="San Lorenzo Channel">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">02</span> <span data-i18n="wildlife.kicker">Where we sail</span></p>
-      <h2 class="h2" data-reveal data-i18n="wildlife.title">The aquarium<br><em>of the world.</em></h2>
-      <p class="lede" data-reveal data-i18n="wildlife.lede">Cousteau's name for the Sea of Cortez. A narrow gulf that concentrates what other oceans spread across thousands of miles — cold upwellings, deserted islands, and a density of life that still surprises people who've sailed it for years. We work the stretch between La Paz, Espíritu Santo, and Cerralvo.</p>
-    </div>
-
-    <div class="fauna reveal">
-      <div class="fauna-stage" data-fauna-stage>
-        <img src="assets/img/whale-shark.webp" alt="Whale shark swimming alongside snorkelers" data-art="whale-shark" class="is-active" loading="lazy" decoding="async">
-        <img src="assets/img/mobula-ray.webp" alt="Mobula ray gliding underwater" data-art="mobula" loading="lazy" decoding="async">
-        <img src="assets/img/sea-lions.webp" alt="Sea lion resting near Los Islotes" data-art="sea-lions" loading="lazy" decoding="async">
-        <img src="assets/img/dolphins.webp" alt="Pod of dolphins swimming in turquoise water" data-art="dolphins" loading="lazy" decoding="async">
-        <img src="assets/img/manta-ray.webp" alt="Manta ray gliding over a reef" data-art="manta" loading="lazy" decoding="async">
-        <img src="assets/img/humpback-whale.webp" alt="Humpback whale tail during migration season" data-art="humpback" loading="lazy" decoding="async">
-        <p class="fauna-caption" data-fauna-caption>Whale sharks<span class="mono">Oct – Apr · Bahía de La Paz</span></p>
-      </div>
-      <ul class="fauna-list" data-fauna-list>
-        <li><button type="button" class="fauna-item is-active" data-species="whale-shark">
-          <span class="f-name" data-i18n="fauna.whale-shark.name">Whale sharks</span><span class="f-meta mono" data-i18n="fauna.whale-shark.season">Oct — Apr</span>
-          <span class="f-note" data-i18n="fauna.whale-shark.note">Juveniles feeding right in the bay. You snorkel alongside them, no scuba gear needed.</span>
-        </button></li>
-        <li><button type="button" class="fauna-item" data-species="mobula">
-          <span class="f-name" data-i18n="fauna.mobula.name">Mobula rays</span><span class="f-meta mono" data-i18n="fauna.mobula.season">May — Jul</span>
-          <span class="f-note" data-i18n="fauna.mobula.note">Schools of hundreds leaping clear of the water. You hear them before you see them.</span>
-        </button></li>
-        <li><button type="button" class="fauna-item" data-species="sea-lions">
-          <span class="f-name" data-i18n="fauna.sea-lions.name">Sea lions — Los Islotes</span><span class="f-meta mono" data-i18n="fauna.sea-lions.season">Year-round</span>
-          <span class="f-note" data-i18n="fauna.sea-lions.note">A permanent colony. The juveniles dive with you, not the other way around.</span>
-        </button></li>
-        <li><button type="button" class="fauna-item" data-species="dolphins">
-          <span class="f-name" data-i18n="fauna.dolphins.name">Dolphins</span><span class="f-meta mono" data-i18n="fauna.dolphins.season">Year-round</span>
-          <span class="f-note" data-i18n="fauna.dolphins.note">They show up at the bow while under sail. We don't look for them — they find us.</span>
-        </button></li>
-        <li><button type="button" class="fauna-item" data-species="manta">
-          <span class="f-name" data-i18n="fauna.manta.name">Manta rays</span><span class="f-meta mono" data-i18n="fauna.manta.season">May — Sep</span>
-          <span class="f-note" data-i18n="fauna.manta.note">Over reef pinnacles and sandy bottoms, usually during the morning dive.</span>
-        </button></li>
-        <li><button type="button" class="fauna-item" data-species="humpback">
-          <span class="f-name" data-i18n="fauna.humpback.name">Humpback whales</span><span class="f-meta mono" data-i18n="fauna.humpback.season">Jan — Mar</span>
-          <span class="f-note" data-i18n="fauna.humpback.note">Seasonal migration, observed from the boat at the distance regulation requires.</span>
-        </button></li>
-      </ul>
-    </div>
-
-    <p class="note reveal" data-i18n="wildlife.note">Espíritu Santo is a protected national park and part of the UNESCO World Heritage Site "Islands and Protected Areas of the Gulf of California." We anchor only at authorized buoys, and sightings follow the distances and timing set by regulation. Wildlife isn't guaranteed — it's wildlife.</p>
-  </section>
-
-  <!-- ROUTES — tabs -->
-  <section class="section" id="routes" data-depth-stop="41" data-depth-name="Espíritu Santo">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">03</span> <span data-i18n="routes.kicker">Three real routes</span></p>
-      <h2 class="h2" data-reveal data-i18n="routes.title">Starting points,<br><em>not itineraries.</em></h2>
-      <p class="lede" data-reveal data-i18n="routes.lede">Not packages — the three directions we tend to sail out of La Paz, with a rough four-day itinerary. All of it reshuffles if the north wind picks up, or if someone wants one more day in a cove.</p>
-    </div>
-
-    <div class="rutas" data-rutas>
-      <div class="rutas-tabs" role="tablist" aria-label="Routes">
-        <button role="tab" id="tab-r1" aria-controls="panel-r1" aria-selected="true" class="ruta-tab is-active" type="button"><span class="mono">R—01</span> Espíritu Santo</button>
-        <button role="tab" id="tab-r2" aria-controls="panel-r2" aria-selected="false" class="ruta-tab" type="button"><span class="mono">R—02</span> La Ventana</button>
-        <button role="tab" id="tab-r3" aria-controls="panel-r3" aria-selected="false" class="ruta-tab" type="button"><span class="mono">R—03</span> Balandra</button>
-      </div>
-
-      <article class="ruta-panel is-active" id="panel-r1" role="tabpanel" aria-labelledby="tab-r1" tabindex="0">
-        <header class="ruta-head">
-          <div class="ruta-photo"><img src="assets/img/sea-lion-beach.webp" alt="Espíritu Santo route — sea lion in its natural habitat" loading="lazy" decoding="async"></div>
-          <h3 class="ruta-name" data-i18n="routes.espirituSanto.name">Espíritu Santo Focus</h3>
-          <p class="ruta-claim" data-i18n="routes.espirituSanto.claim">Wildlife-first: sea lions, mangroves, and the white-sand coves that make this the route most people underestimate.</p>
-          <ul class="ruta-meta mono"><li data-i18n="routes.espirituSanto.meta.0">4 days</li><li data-i18n="routes.espirituSanto.meta.1">Any level</li><li data-i18n="routes.espirituSanto.meta.2">No long crossings</li></ul>
-        </header>
-        <div class="ruta-body">
-          <ol class="dias">
-            <li><span class="dia-n mono">Day 01</span><h4 data-i18n="routes.espirituSanto.days.0.t">Sail to Espíritu Santo</h4><p data-i18n="routes.espirituSanto.days.0.d">Late-morning departure with the thermal breeze, a few hours of sailing to the first anchorage, and a reconnaissance snorkel before lunch.</p></li>
-            <li><span class="dia-n mono">Day 02</span><h4 data-i18n="routes.espirituSanto.days.1.t">Snorkel with sea lions</h4><p data-i18n="routes.espirituSanto.days.1.d">Two sessions with the Los Islotes colony. Juveniles come within inches of your mask and stay for the whole dive.</p></li>
-            <li><span class="dia-n mono">Day 03</span><h4 data-i18n="routes.espirituSanto.days.2.t">Kayak through mangroves &amp; wild beaches</h4><p data-i18n="routes.espirituSanto.days.2.d">Mangrove channels by kayak in the morning, an empty-beach landing in the afternoon, dinner on deck with the island behind you.</p></li>
-            <li><span class="dia-n mono">Day 04</span><h4 data-i18n="routes.espirituSanto.days.3.t">Return to La Paz</h4><p data-i18n="routes.espirituSanto.days.3.d">Downwind sail back, one last swim stop at Playa Bonanza, marina arrival mid-afternoon.</p></li>
-          </ol>
-          <figure class="quote-crew"><blockquote><p data-i18n="routes.espirituSanto.quote">"Los Islotes never gets old — swimming with the sea lion colony is the moment every guest remembers first."</p></blockquote><figcaption class="mono" data-i18n="routes.espirituSanto.cite">— Adly, Expedition Leader</figcaption></figure>
+      <div class="hero-inner">
+        <p class="hero-meta"><span class="dot" aria-hidden="true"></span>24°12′37.6″ N · LA PAZ · B.C.S.</p>
+        <h1 class="hero-title">Ocean adventures powered by passionate sea people</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Small groups. Real crew. Private catamaran. No fixed schedule.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-magnetic href="#customize" data-i18n="hero.ctaPrimary">Customize your
+            expedition</a>
+          <!-- <a class="btn btn-ghost" href="#difference" data-i18n="hero.ctaSecondary">What makes us unique</a> -->
         </div>
-      </article>
-
-      <article class="ruta-panel" id="panel-r2" role="tabpanel" aria-labelledby="tab-r2" tabindex="0" hidden>
-        <header class="ruta-head">
-          <div class="ruta-photo"><img src="assets/img/kitesurf-action.webp" alt="La Ventana route — kitesurfer jumping" loading="lazy" decoding="async"></div>
-          <h3 class="ruta-name" data-i18n="routes.laVentana.name">La Ventana Focus</h3>
-          <p class="ruta-claim" data-i18n="routes.laVentana.claim">Wind-first: kite and wingfoil sessions built around the thermal that gives La Ventana its name.</p>
-          <ul class="ruta-meta mono"><li data-i18n="routes.laVentana.meta.0">4 days</li><li data-i18n="routes.laVentana.meta.1">Kite / wingfoil level</li><li data-i18n="routes.laVentana.meta.2">Seasonal wind window</li></ul>
-        </header>
-        <div class="ruta-body">
-          <ol class="dias">
-            <li><span class="dia-n mono">Day 01</span><h4 data-i18n="routes.laVentana.days.0.t">Sail to La Ventana</h4><p data-i18n="routes.laVentana.days.0.d">Morning sail down the channel, gear rigged on deck before the afternoon thermal fills in.</p></li>
-            <li><span class="dia-n mono">Day 02</span><h4 data-i18n="routes.laVentana.days.1.t">Kite or wingfoil session</h4><p data-i18n="routes.laVentana.days.1.d">A full day on the water — the crew includes a kite and wingfoil instructor, so beginners and experienced riders both have a plan.</p></li>
-            <li><span class="dia-n mono">Day 03</span><h4 data-i18n="routes.laVentana.days.2.t">Sunset &amp; dinner at anchor</h4><p data-i18n="routes.laVentana.days.2.d">Wind eases by late afternoon; the boat swings to a quiet anchorage for a slow dinner on deck.</p></li>
-            <li><span class="dia-n mono">Day 04</span><h4 data-i18n="routes.laVentana.days.3.t">Return to La Paz</h4><p data-i18n="routes.laVentana.days.3.d">Early departure to beat the building breeze, back in the marina before midday.</p></li>
-          </ol>
-          <figure class="quote-crew"><blockquote><p data-i18n="routes.laVentana.quote">"When the wind picks up in La Ventana, everything else stops mattering."</p></blockquote><figcaption class="mono" data-i18n="routes.laVentana.cite">— Adly, Expedition Leader</figcaption></figure>
-        </div>
-      </article>
-
-      <article class="ruta-panel" id="panel-r3" role="tabpanel" aria-labelledby="tab-r3" tabindex="0" hidden>
-        <header class="ruta-head">
-          <div class="ruta-photo"><img src="assets/img/beach-cove.webp" alt="Balandra route — turquoise cove" loading="lazy" decoding="async"></div>
-          <h3 class="ruta-name" data-i18n="routes.balandra.name">Balandra Focus</h3>
-          <p class="ruta-claim" data-i18n="routes.balandra.claim">Reef and paddle-first: shallow turquoise water, easy snorkeling, and a slower pace than the other two routes.</p>
-          <ul class="ruta-meta mono"><li data-i18n="routes.balandra.meta.0">4 days</li><li data-i18n="routes.balandra.meta.1">Any level</li><li data-i18n="routes.balandra.meta.2">Calm, protected water</li></ul>
-        </header>
-        <div class="ruta-body">
-          <ol class="dias">
-            <li><span class="dia-n mono">Day 01</span><h4 data-i18n="routes.balandra.days.0.t">Sail to Balandra</h4><p data-i18n="routes.balandra.days.0.d">A short sail to one of the most photographed bays on the gulf, usually empty by early evening.</p></li>
-            <li><span class="dia-n mono">Day 02</span><h4 data-i18n="routes.balandra.days.1.t">Reef snorkeling</h4><p data-i18n="routes.balandra.days.1.d">Shallow reef, warm water, and a pace built for kids, grandparents, and everyone in between.</p></li>
-            <li><span class="dia-n mono">Day 03</span><h4 data-i18n="routes.balandra.days.2.t">Paddleboard &amp; exploration</h4><p data-i18n="routes.balandra.days.2.d">Paddleboards out at sunrise, a walk to a lookout point, and an afternoon with no plan at all.</p></li>
-            <li><span class="dia-n mono">Day 04</span><h4 data-i18n="routes.balandra.days.3.t">Return to La Paz</h4><p data-i18n="routes.balandra.days.3.d">Easy sail back with the afternoon breeze, marina arrival by early evening.</p></li>
-          </ol>
-          <figure class="quote-crew"><blockquote><p data-i18n="routes.balandra.quote">"Balandra's water color still surprises me, and I've sailed the Sea of Cortez for years."</p></blockquote><figcaption class="mono" data-i18n="routes.balandra.cite">— Denise, Captain</figcaption></figure>
-        </div>
-      </article>
-    </div>
-    <p class="routes-note reveal" data-i18n="routes.note">These routes are a starting point. Every expedition adapts to weather, sea conditions, and what your group wants.</p>
-  </section>
-
-  <!-- DAY IN THE LIFE — interactive catamaran deck plan -->
-  <section class="section" id="day-in-life" data-depth-stop="58" data-depth-name="A day aboard">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">04</span> 24°12′37.6″ N</p>
-      <h2 class="h2" data-reveal data-i18n="showcase.title">A day in<br><em>Eagle Ray.</em></h2>
-    </div>
-
-    <div class="dayboat reveal">
-      <div class="dayboat-stage">
-        <img src="assets/img/catamaran-deck.webp" alt="Sailing toward the day's objective" data-day-img="sail" class="is-active" loading="lazy" decoding="async">
-        <img src="assets/img/kitesurf.webp" alt="Kitesurfing activity" data-day-img="activity" loading="lazy" decoding="async">
-        <img src="assets/img/crew-antoine.webp" alt="Lunch prepared onboard" data-day-img="lunch" loading="lazy" decoding="async">
-        <img src="assets/img/mangrove-kayak.webp" alt="Exploring the mangroves" data-day-img="explore" loading="lazy" decoding="async">
-        <img src="assets/img/sunset-onboard.webp" alt="Sunset over the water" data-day-img="sunset" loading="lazy" decoding="async">
-        <img src="assets/img/crew-ana.webp" alt="Dinner back onboard" data-day-img="dinner" loading="lazy" decoding="async">
-        <div class="dayboat-caption">
-          <span class="dayboat-n mono" data-day-caption-n>01</span>
-          <h3 data-day-caption-t>Sail</h3>
-        </div>
-      </div>
-
-      <ul class="day-list" data-day-list>
-        <li><button type="button" class="day-item is-active" data-day="sail">
-          <span class="day-name" data-i18n="showcase.cards.0.t">Sail</span><span class="day-meta mono">01</span>
-          <span class="day-note" data-i18n="showcase.cards.0.d">Sail towards our objective of the day, coffee in hand while the anchor comes up.</span>
-        </button></li>
-        <li><button type="button" class="day-item" data-day="activity">
-          <span class="day-name" data-i18n="showcase.cards.1.t">Activity</span><span class="day-meta mono">02</span>
-          <span class="day-note" data-i18n="showcase.cards.1.d">Diving, kiting, swimming — whatever the crew is drawn to that morning.</span>
-        </button></li>
-        <li><button type="button" class="day-item" data-day="lunch">
-          <span class="day-name" data-i18n="showcase.cards.2.t">Lunch</span><span class="day-meta mono">03</span>
-          <span class="day-note" data-i18n="showcase.cards.2.d">The catch of the day, cooked and shared in the cockpit shade.</span>
-        </button></li>
-        <li><button type="button" class="day-item" data-day="explore">
-          <span class="day-name" data-i18n="showcase.cards.3.t">Explore</span><span class="day-meta mono">04</span>
-          <span class="day-note" data-i18n="showcase.cards.3.d">Shorelines, cliffs, water, unknown spots worth a slow paddle.</span>
-        </button></li>
-        <li><button type="button" class="day-item" data-day="sunset">
-          <span class="day-name" data-i18n="showcase.cards.4.t">Sunset</span><span class="day-meta mono">05</span>
-          <span class="day-note" data-i18n="showcase.cards.4.d">A pause to take it in — swim, surf, or just drift.</span>
-        </button></li>
-        <li><button type="button" class="day-item" data-day="dinner">
-          <span class="day-name" data-i18n="showcase.cards.5.t">Dinner</span><span class="day-meta mono">06</span>
-          <span class="day-note" data-i18n="showcase.cards.5.d">Back onboard. Stories, salt, and a reset before the next day.</span>
-        </button></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ACTIVITIES -->
-  <section class="section" data-depth-stop="70" data-depth-name="À la carte">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">05</span> <span data-i18n="activities.kicker">What you might do</span></p>
-      <h2 class="h2" data-reveal data-i18n="activities.title">Not an itinerary.<br><em>A world full of options.</em></h2>
-      <p class="lede" data-reveal data-i18n="activities.lede">Tell us what appeals to you before you arrive — the rest gets decided onboard, day by day, by what the sea allows.</p>
-    </div>
-    <ul class="manifest reveal" data-manifest>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">01</span><span class="manifest-name" data-i18n="activities.list.0">Scuba diving</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">02</span><span class="manifest-name" data-i18n="activities.list.1">Freediving</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">03</span><span class="manifest-name" data-i18n="activities.list.2">Spearfishing</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">04</span><span class="manifest-name" data-i18n="activities.list.3">Kitesurfing</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">05</span><span class="manifest-name" data-i18n="activities.list.4">Wingfoil</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">06</span><span class="manifest-name" data-i18n="activities.list.5">Snorkeling</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">07</span><span class="manifest-name" data-i18n="activities.list.6">Cliff jumping</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">08</span><span class="manifest-name" data-i18n="activities.list.7">Sea plunges</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">09</span><span class="manifest-name" data-i18n="activities.list.8">Night swimming</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">10</span><span class="manifest-name" data-i18n="activities.list.9">Sunrise swims</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">11</span><span class="manifest-name" data-i18n="activities.list.10">Island hopping</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">12</span><span class="manifest-name" data-i18n="activities.list.11">Cave exploring</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">13</span><span class="manifest-name" data-i18n="activities.list.12">Whale spotting</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">14</span><span class="manifest-name" data-i18n="activities.list.13">Wildlife encounters</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">15</span><span class="manifest-name" data-i18n="activities.list.14">Foraging</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">16</span><span class="manifest-name" data-i18n="activities.list.15">Fire cooking</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">17</span><span class="manifest-name" data-i18n="activities.list.16">Surfing</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">18</span><span class="manifest-name" data-i18n="activities.list.17">Yoga</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">19</span><span class="manifest-name" data-i18n="activities.list.18">Stretching sessions</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">20</span><span class="manifest-name" data-i18n="activities.list.19">Breathwork</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">21</span><span class="manifest-name" data-i18n="activities.list.20">Card games</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">22</span><span class="manifest-name" data-i18n="activities.list.21">Music sessions</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-      <li><button type="button" class="manifest-item"><span class="manifest-n mono">23</span><span class="manifest-name" data-i18n="activities.list.22">Stargazing</span><span class="manifest-check" aria-hidden="true">✓</span></button></li>
-    </ul>
-    <div class="manifest-foot">
-      <p class="manifest-count mono" data-manifest-count></p>
-      <a class="btn btn-primary" href="#customize" data-manifest-cta data-i18n="boats.customizeBtn">Customize my expedition</a>
-    </div>
-    <p class="note reveal" data-i18n="activities.note">Espíritu Santo is a protected national park (UNESCO Biosphere Reserve). Eagle Ray operates in full respect of regulated zones.</p>
-  </section>
-
-  <!-- BOATS -->
-  <section class="section" id="boats" data-depth-stop="83" data-depth-name="The boats">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">06</span> <span data-i18n="boats.kicker">Your expedition</span></p>
-      <h2 class="h2" data-reveal data-i18n="boats.title">Two boats. One standard:<br><em>fully private, fully yours.</em></h2>
-    </div>
-    <div class="boats-grid">
-      <article class="boat-card has-tilt reveal">
-        <div class="boat-gallery" data-gallery>
-          <div class="boat-gallery-track" data-gallery-track>
-            <img src="assets/img/boat-bali-exterior.webp" alt="Bali 4.4 — catamaran exterior at the marina" loading="lazy" decoding="async">
-            <img src="assets/img/catamaran-deck.webp" alt="Bali 4.4 — life on deck" loading="lazy" decoding="async">
-            <img src="assets/img/boat-bali-cockpit.webp" alt="Bali 4.4 — helm and cockpit at sunset" loading="lazy" decoding="async">
+        <dl class="hero-facts">
+          <div>
+            <dt data-i18n="hero.factDeparture">Departure</dt>
+            <dd data-i18n="hero.factDepartureV">Marina de La Paz</dd>
           </div>
-          <button type="button" class="boat-gallery-arrow boat-gallery-prev" data-gallery-prev aria-label="Previous photo">←</button>
-          <button type="button" class="boat-gallery-arrow boat-gallery-next" data-gallery-next aria-label="Next photo">→</button>
-          <div class="boat-gallery-dots" data-gallery-dots aria-hidden="true"></div>
-        </div>
-        <h3 data-i18n="boats.bali.name">Bali 4.4</h3>
-        <p class="boat-tagline" data-i18n="boats.bali.tagline">Your home on water</p>
-        <p data-i18n="boats.bali.desc">4 double cabins, 4 private bathrooms, spacious indoor/outdoor living, 2024 model. Ideal for families and groups who want maximum space to spread out.</p>
-        <dl class="boat-specs mono">
-          <div><dt data-i18n="boats.specLength">Length</dt><dd data-i18n="boats.bali.length">13.90 m</dd></div>
-          <div><dt data-i18n="boats.specCabins">Cabins</dt><dd data-i18n="boats.bali.cabins">4 double</dd></div>
-          <div><dt data-i18n="boats.specBathrooms">Bathrooms</dt><dd data-i18n="boats.bali.bathrooms">4 private</dd></div>
-          <div><dt data-i18n="boats.specGuests">Guests</dt><dd data-i18n="boats.bali.guests">up to 10</dd></div>
-        </dl>
-      </article>
-      <article class="boat-card has-tilt reveal">
-        <div class="boat-gallery" data-gallery>
-          <div class="boat-gallery-track" data-gallery-track>
-            <img src="assets/img/catamaran-sailing.webp" alt="Fountaine Pajot Astrea 42 — sailing" loading="lazy" decoding="async">
-            <img src="assets/img/boat-astrea-sailing.webp" alt="Fountaine Pajot Astrea 42 — under sail" loading="lazy" decoding="async">
-            <img src="assets/img/boat-astrea-salon.webp" alt="Fountaine Pajot Astrea 42 — interior salon" loading="lazy" decoding="async">
+          <div>
+            <dt data-i18n="hero.factGroup">Group</dt>
+            <dd data-i18n="hero.factGroupV">2 to 10 guests</dd>
           </div>
-          <button type="button" class="boat-gallery-arrow boat-gallery-prev" data-gallery-prev aria-label="Previous photo">←</button>
-          <button type="button" class="boat-gallery-arrow boat-gallery-next" data-gallery-next aria-label="Next photo">→</button>
-          <div class="boat-gallery-dots" data-gallery-dots aria-hidden="true"></div>
-        </div>
-        <h3 data-i18n="boats.astrea.name">Fountaine Pajot Astrea 42</h3>
-        <p class="boat-tagline" data-i18n="boats.astrea.tagline">Elegance at sea</p>
-        <p data-i18n="boats.astrea.desc">4 double cabins with private bathrooms, spacious cockpit and sun deck, refined finishes, smooth sailing performance. Ideal for a more design-forward feel.</p>
-        <dl class="boat-specs mono">
-          <div><dt data-i18n="boats.specLength">Length</dt><dd data-i18n="boats.astrea.length">12.80 m</dd></div>
-          <div><dt data-i18n="boats.specCabins">Cabins</dt><dd data-i18n="boats.astrea.cabins">4 double</dd></div>
-          <div><dt data-i18n="boats.specBathrooms">Bathrooms</dt><dd data-i18n="boats.astrea.bathrooms">4 private</dd></div>
-          <div><dt data-i18n="boats.specGuests">Guests</dt><dd data-i18n="boats.astrea.guests">up to 8</dd></div>
+          <div>
+            <dt data-i18n="hero.factDuration">Duration</dt>
+            <dd data-i18n="hero.factDurationV">3 to 8 days</dd>
+          </div>
+          <div>
+            <dt data-i18n="hero.factItinerary">Itinerary</dt>
+            <dd data-i18n="hero.factItineraryV">Open</dd>
+          </div>
         </dl>
-      </article>
-    </div>
+      </div>
+      <a class="scroll-cue" href="#difference" aria-label="Scroll to next section"><span></span></a>
+    </section>
 
-    <div class="included-grid reveal">
-      <div class="included-col">
-        <p class="compare-heading" data-i18n="boats.includedHeading">Always included</p>
-        <ul class="included-list">
-          <li data-i18n="boats.included.0">Private catamaran, prepared for life aboard</li>
-          <li data-i18n="boats.included.1">Professional skipper</li>
-          <li data-i18n="boats.included.2">Dinghy with motor</li>
-          <li data-i18n="boats.included.3">Snorkeling gear onboard</li>
-          <li data-i18n="boats.included.4">Permits / access bracelets for protected areas</li>
-          <li data-i18n="boats.included.5">Boat prep &amp; cleaning</li>
-          <li data-i18n="boats.included.6">ERE coordination before and during your trip</li>
-          <li data-i18n="boats.included.7">Flexible itinerary, adapted to weather and your group</li>
+    <!-- DIFFERENCE -->
+    <section class="section" id="difference" data-depth-stop="12" data-depth-name="Anchorage">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">01</span> <span data-i18n="difference.kicker">What we
+            do</span></p>
+        <h2 class="h2" data-reveal data-i18n="difference.title">We don't sell charter trips.<br><em>We design ocean
+            experiences.</em></h2>
+        <p class="lede" data-reveal data-i18n="difference.lede">Eagle Ray Expeditions designs and leads small-group
+          ocean expeditions combining sailing, diving, and wildlife encounters in Baja California Sur. Built for people
+          who want more than a boat.</p>
+      </div>
+
+      <div class="vs">
+        <article class="vs-col vs-them reveal">
+          <h3 class="vs-title" data-i18n="difference.vsThemTitle">Charter trips</h3>
+          <ol class="vs-list">
+            <li data-i18n="difference.vsThem.0">Boat-first, comfort-driven.</li>
+            <li data-i18n="difference.vsThem.1">Neutral crew, hired by the week.</li>
+            <li data-i18n="difference.vsThem.2">Fixed routes, printed before you meet them.</li>
+            <li data-i18n="difference.vsThem.3">The water is scenery — watched from the cockpit.</li>
+          </ol>
+        </article>
+        <div class="vs-axis" aria-hidden="true"><span>vs</span></div>
+        <article class="vs-col vs-us reveal">
+          <h3 class="vs-title" data-i18n="difference.vsUsTitle">Eagle Ray Expeditions</h3>
+          <ol class="vs-list">
+            <li data-i18n="difference.vsUs.0">Experience-first, exploration-driven.</li>
+            <li data-i18n="difference.vsUs.1">The same crew, who know the channel by memory.</li>
+            <li data-i18n="difference.vsUs.2">Adaptive routes, redrawn by weather and tide.</li>
+            <li data-i18n="difference.vsUs.3">The water is the plan — dive, snorkel, kayak, every day.</li>
+          </ol>
+        </article>
+      </div>
+
+      <div class="founder-quote reveal">
+        <p class="founder-quote-kicker" data-i18n="difference.quoteKicker">They sell trips.<br>We design human
+          expeditions.</p>
+        <p class="founder-quote-mark" aria-hidden="true">"</p>
+        <blockquote>
+          <p data-i18n="difference.quote">I didn't want to sell boats. I wanted to build the kind of trip I'd actually
+            want to be on — with people who know the ocean, not just how to hand you a set of keys.</p>
+          <cite data-i18n="difference.quoteCite">— Thibault Poirson De Cardon, Founder</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CREW -->
+    <section class="section" id="crew" data-depth-stop="26" data-depth-name="Aboard">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">02</span> <span data-i18n="crew.kicker">Who you sail
+            with</span></p>
+        <h2 class="h2" data-reveal data-i18n="crew.title">Far more than service staff —<br><em>we sail, dive, and move
+            with you.</em></h2>
+      </div>
+
+      <!-- TODO: bios below are a first pass in first person — pending review by each crew member. -->
+      <div class="crew-slider reveal" data-crew-slider>
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/founder-thibault.webp?v=2"
+              alt="Thibault Poirson De Cardon, Founder of Eagle Ray Expeditions" loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <p class="crew-card-label mono" data-i18n="crew.founderLabel">Founder</p>
+            <h3>Thibault</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.thibault.role">Founder &amp; Expedition Host</p>
+            <p class="crew-card-bio" data-i18n="crew.members.thibault.bio">I have spent more than ten years building
+              things around the ocean in Mexico, and Eagle Ray is the one I care about most. I built the Baja network
+              myself — the captains, the chefs, the expedition leaders — one conversation at a time. I am the one who
+              answers your WhatsApp, before, during and after your trip, because I would rather you talk to the person
+              who is accountable for the trip than to an office.</p>
+            <span class="crew-card-sign mono" data-i18n="crew.founderSign">Direct line, no call center · +52 55 6809
+              0942</span>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-alexis.jpeg" alt="Alexis, Expedition Leader — Scuba"
+              loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Alexis</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.alexis.role">Expedition Leader — Scuba</p>
+            <p class="crew-card-bio" data-i18n="crew.members.alexis.bio">I spent years running guest experience at the
+              Ritz-Carlton and the Mandarin Oriental before I became a dive instructor and a surfer. I bring that
+              five-star, guest-first instinct to every dive briefing — the one who turns a boat full of strangers into a
+              crew within a day.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-denise.webp" alt="Denise, Captain" loading="lazy"
+              decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Denise</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.denise.role">Captain</p>
+            <p class="crew-card-bio" data-i18n="crew.members.denise.bio">I have spent years navigating the Sea of
+              Cortez, and before that some of the most demanding private yachts in the world. I know this water in every
+              season — where the wind bends around the islands, which anchorage holds when the north wind comes through,
+              and how a week reshapes itself when the sea decides otherwise.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-benji.jpeg" alt="Benji, Captain" loading="lazy"
+              decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Benji</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.benji.role">Captain</p>
+            <p class="crew-card-bio" data-i18n="crew.members.benji.bio">I'm a civil engineer who became a freelance
+              captain, splitting my time between La Paz and Mexico City. Eight years running industrial and energy
+              operations before I moved to the helm — I'm the one who reads the weather routing and keeps the boat
+              itself ready, trip after trip.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-adly.webp" alt="Adly, Expedition Leader" loading="lazy"
+              decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Adly</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.adly.role">Expedition Leader</p>
+            <p class="crew-card-bio" data-i18n="crew.members.adly.bio">Between the wind of La Ventana and the water of
+              the Sea of Cortez, this is home for me. I lead the days on the water and I read the group before the group
+              reads itself — when to push for one more dive, and when the best call is to anchor and do nothing at all.
+            </p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-antoine.webp" alt="Antoine, Gold Chef" loading="lazy"
+              decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Antoine</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.antoine.role">Gold Chef</p>
+            <p class="crew-card-bio" data-i18n="crew.members.antoine.bio">I've spent 15+ years cooking aboard boats and
+              superyachts, including private-chef work for senior executives. Tested and confirmed on the July Baja
+              pilot — restaurant technique, in a galley kitchen.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-ana.webp" alt="Ana, Silver Chef" loading="lazy"
+              decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Ana</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.ana.role">Silver Chef</p>
+            <p class="crew-card-bio" data-i18n="crew.members.ana.bio">I am an entrepreneur and I founded my own pastry
+              business. I cook on board the way I built that: from scratch, with attention, and with the small extra
+              thing nobody asked for but everybody remembers.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-monique.png" alt="Monique, Expedition Leader"
+              loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Monique</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.monique.role">Expedition Leader</p>
+            <p class="crew-card-bio" data-i18n="crew.members.monique.bio">I'm a Brazilian dive instructor with six years
+              in Baja California. Before this I worked in corporate marketing, which turned out to be the perfect
+              training for reading a boat full of guests. Tested and confirmed on the July Baja pilot.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-juancarlos.png" alt="Juan Carlos, Expedition Leader"
+              loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Juan Carlos</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.juancarlos.role">Expedition Leader</p>
+            <p class="crew-card-bio" data-i18n="crew.members.juancarlos.bio">I've been a dive instructor since I was 20,
+              with liveaboard crew experience in the Revillagigedo Islands. I once delivered a sailboat solo from Loreto
+              to La Paz — 30 hours, no autopilot, no sleep. I split my time between La Paz and Los Cabos.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <div class="crew-card-photo"><img src="assets/img/crew-lou.jpeg" alt="Lou, Captain &amp; Expedition Leader"
+              loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Lou</h3>
+            <p class="crew-card-role mono" data-i18n="crew.members.lou.role">Captain &amp; Expedition Leader</p>
+            <p class="crew-card-bio" data-i18n="crew.members.lou.bio">I'm a captain and expedition leader who
+              specializes in kite and freediving, based in Baja California. I bring a calm, grounded presence on board —
+              even the most wound-up first-timer settles down within a day at sea with me.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <span class="crew-card-tag mono" data-i18n="crew.joiningTag">Joining Q4 2026</span>
+          <div class="crew-card-photo"><img src="assets/img/crew-javier.webp"
+              alt="Javier Sánchez Darder, Captain &amp; Filmmaker" loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Javier</h3>
+            <p class="crew-card-role mono" data-i18n="crew.javier.role">Captain &amp; Filmmaker</p>
+            <p class="crew-card-bio" data-i18n="crew.javier.bio">I am a Yacht Master 200GT, PADI Dive Instructor, IKO
+              Kitesurf Instructor, freediving and spearfishing guide, and a drone pilot. It means I can take you under
+              the water, across it, and film the part you will want to keep.</p>
+          </div>
+        </article>
+
+        <article class="crew-card">
+          <span class="crew-card-tag mono" data-i18n="crew.joiningTag">Joining Q4 2026</span>
+          <div class="crew-card-photo"><img src="assets/img/crew-flavia.webp"
+              alt="Flavia Elin Conradi, Stewardess, Chef &amp; Filmmaker" loading="lazy" decoding="async"></div>
+          <div class="crew-card-body">
+            <h3>Flavia</h3>
+            <p class="crew-card-role mono" data-i18n="crew.flavia.role">Stewardess, Chef &amp; Filmmaker</p>
+            <p class="crew-card-bio" data-i18n="crew.flavia.bio">I cook, I work the deck, I train people, and I film. On
+              a small boat that mix is the point — the same person who plans dinner is the one who gets you moving in
+              the morning and captures the day as it happens.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="roles reveal">
+        <p class="kicker" data-i18n="crew.rolesKicker">The roles of the Expedition Leader</p>
+        <ul class="roles-strip">
+          <li>
+            <svg class="roles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M15 9l-2 5-5 2 2-5 5-2Z" />
+            </svg>
+            <h4 data-i18n="crew.roles.0.t">Guides &amp; Experts</h4>
+            <p data-i18n="crew.roles.0.d">At the center of every trip: a captain or first officer who has spent years
+              reading this ocean, its wind, its currents, what changes month to month. Someone who was diving and
+              freediving this water long before it was a job.</p>
+          </li>
+          <li>
+            <svg class="roles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"
+              aria-hidden="true">
+              <path
+                d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8" />
+            </svg>
+            <h4 data-i18n="crew.roles.1.t">Hosts &amp; Energy Creators</h4>
+            <p data-i18n="crew.roles.1.d">Eagle Ray's expedition leaders know how to read the group before the group
+              reads itself — when to push, when to disappear, when to plan nothing at all. And they notice the moments
+              that actually stay with people: the dive nobody expected to do, a conversation at 2am, the morning the
+              wind never came.</p>
+          </li>
         </ul>
       </div>
-      <div class="included-col included-col-muted">
-        <p class="compare-heading" data-i18n="boats.notIncludedHeading">À la carte / not included</p>
-        <ul class="included-list">
-          <li data-i18n="boats.notIncluded.0">Food &amp; drinks</li>
-          <li data-i18n="boats.notIncluded.1">Skipper tip</li>
-          <li data-i18n="boats.notIncluded.2">WiFi / Starlink</li>
-          <li data-i18n="boats.notIncluded.3">Extra gear (kayak, paddle, fishing)</li>
-          <li data-i18n="boats.notIncluded.4">Fuel consumed during the trip</li>
-          <li data-i18n="boats.notIncluded.5">Diving, kite &amp; wingfoil, guided activities</li>
-          <li data-i18n="boats.notIncluded.6">Personal travel insurance</li>
+
+      <p class="trust-line reveal" data-i18n="crew.trustLine">Flexible by nature. Safety always comes first. And a
+        direct line to Thibault — no call center, no chatbot.</p>
+    </section>
+
+    <!-- WILDLIFE — interactive fauna selector -->
+    <section class="section" id="wildlife" data-depth-stop="41" data-depth-name="San Lorenzo Channel">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">03</span> <span data-i18n="wildlife.kicker">Where we
+            sail</span></p>
+        <h2 class="h2" data-reveal data-i18n="wildlife.title">The aquarium<br><em>of the world.</em></h2>
+        <p class="lede" data-reveal data-i18n="wildlife.lede">Cousteau's name for the Sea of Cortez. A narrow gulf that
+          concentrates what other oceans spread across thousands of miles — cold upwellings, deserted islands, and a
+          density of life that still surprises people who've sailed it for years. We work the stretch between La Paz,
+          Espíritu Santo, and Cerralvo.</p>
+      </div>
+
+      <div class="fauna reveal">
+        <div class="fauna-stage" data-fauna-stage>
+          <img src="assets/img/whale-shark.webp" alt="Whale shark swimming alongside snorkelers" data-art="whale-shark"
+            class="is-active" loading="lazy" decoding="async">
+          <img src="assets/img/mobula-ray.webp" alt="Mobula ray gliding underwater" data-art="mobula" loading="lazy"
+            decoding="async">
+          <img src="assets/img/sea-lions.webp" alt="Sea lion resting near Los Islotes" data-art="sea-lions"
+            loading="lazy" decoding="async">
+          <img src="assets/img/dolphins.webp" alt="Pod of dolphins swimming in turquoise water" data-art="dolphins"
+            loading="lazy" decoding="async">
+          <img src="assets/img/manta-ray.webp" alt="Manta ray gliding over a reef" data-art="manta" loading="lazy"
+            decoding="async">
+          <img src="assets/img/humpback-whale.webp" alt="Humpback whale tail during migration season"
+            data-art="humpback" loading="lazy" decoding="async">
+          <p class="fauna-caption" data-fauna-caption>Whale sharks<span class="mono">Oct – Apr · Bahía de La Paz</span>
+          </p>
+        </div>
+        <ul class="fauna-list" data-fauna-list>
+          <li><button type="button" class="fauna-item is-active" data-species="whale-shark">
+              <span class="f-name" data-i18n="fauna.whale-shark.name">Whale sharks</span><span class="f-meta mono"
+                data-i18n="fauna.whale-shark.season">Oct — Apr</span>
+              <span class="f-note" data-i18n="fauna.whale-shark.note">Juveniles feeding right in the bay. You snorkel
+                alongside them, no scuba gear needed.</span>
+            </button></li>
+          <li><button type="button" class="fauna-item" data-species="mobula">
+              <span class="f-name" data-i18n="fauna.mobula.name">Mobula rays</span><span class="f-meta mono"
+                data-i18n="fauna.mobula.season">May — Jul</span>
+              <span class="f-note" data-i18n="fauna.mobula.note">Schools of hundreds leaping clear of the water. You
+                hear them before you see them.</span>
+            </button></li>
+          <li><button type="button" class="fauna-item" data-species="sea-lions">
+              <span class="f-name" data-i18n="fauna.sea-lions.name">Sea lions — Los Islotes</span><span
+                class="f-meta mono" data-i18n="fauna.sea-lions.season">Year-round</span>
+              <span class="f-note" data-i18n="fauna.sea-lions.note">A permanent colony. The juveniles dive with you, not
+                the other way around.</span>
+            </button></li>
+          <li><button type="button" class="fauna-item" data-species="dolphins">
+              <span class="f-name" data-i18n="fauna.dolphins.name">Dolphins</span><span class="f-meta mono"
+                data-i18n="fauna.dolphins.season">Year-round</span>
+              <span class="f-note" data-i18n="fauna.dolphins.note">They show up at the bow while under sail. We don't
+                look for them — they find us.</span>
+            </button></li>
+          <li><button type="button" class="fauna-item" data-species="manta">
+              <span class="f-name" data-i18n="fauna.manta.name">Manta rays</span><span class="f-meta mono"
+                data-i18n="fauna.manta.season">May — Sep</span>
+              <span class="f-note" data-i18n="fauna.manta.note">Over reef pinnacles and sandy bottoms, usually during
+                the morning dive.</span>
+            </button></li>
+          <li><button type="button" class="fauna-item" data-species="humpback">
+              <span class="f-name" data-i18n="fauna.humpback.name">Humpback whales</span><span class="f-meta mono"
+                data-i18n="fauna.humpback.season">Jan — Mar</span>
+              <span class="f-note" data-i18n="fauna.humpback.note">Seasonal migration, observed from the boat at the
+                distance regulation requires.</span>
+            </button></li>
         </ul>
       </div>
-    </div>
-    <p class="container" style="text-align:center; margin-top:2.5rem; padding-left: var(--pad);" data-reveal>
-      <a class="btn btn-primary" href="#customize" data-i18n="boats.customizeBtn">Customize my expedition</a>
-    </p>
-  </section>
 
-  <!-- CREW -->
-  <section class="section" id="crew" data-depth-stop="96" data-depth-name="Aboard">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">07</span> <span data-i18n="crew.kicker">Who you sail with</span></p>
-      <h2 class="h2" data-reveal data-i18n="crew.title">Far more than service staff —<br><em>they sail, dive, and move with you.</em></h2>
-    </div>
+      <p class="fauna-disclaimer reveal" data-i18n="wildlife.disclaimer">Sightings are never guaranteed. These are wild
+        animals in open water — what we can offer is the season, the place, and the odds.</p>
 
-    <div class="founder-card reveal">
-      <div class="founder-card-img has-tilt"><img src="assets/img/founder-thibault.webp?v=2" alt="Thibault Poirson De Cardon, Founder of Eagle Ray Expeditions" loading="lazy" decoding="async"></div>
+      <p class="note reveal" data-i18n="wildlife.note">Espíritu Santo is a protected national park and part of the
+        UNESCO World Heritage Site "Islands and Protected Areas of the Gulf of California." We anchor only at authorized
+        buoys, and sightings follow the distances and timing set by regulation. Wildlife isn't guaranteed — it's
+        wildlife.</p>
+    </section>
+
+    <!-- ROUTES — tabs -->
+    <section class="section" id="routes" data-depth-stop="58" data-depth-name="Espíritu Santo">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">04</span> <span data-i18n="routes.kicker">Three real
+            routes</span></p>
+        <h2 class="h2" data-reveal data-i18n="routes.title">Starting points,<br><em>not itineraries.</em></h2>
+        <p class="lede" data-reveal data-i18n="routes.lede">Not packages — the three directions we tend to sail out of
+          La Paz, with a rough four-day itinerary. All of it reshuffles if the north wind picks up, or if someone wants
+          one more day in a cove.</p>
+      </div>
+
+      <div class="rutas" data-rutas>
+        <div class="rutas-tabs" role="tablist" aria-label="Routes">
+          <button role="tab" id="tab-r1" aria-controls="panel-r1" aria-selected="true" class="ruta-tab is-active"
+            type="button"><span class="mono">R—01</span> Espíritu Santo</button>
+          <button role="tab" id="tab-r2" aria-controls="panel-r2" aria-selected="false" class="ruta-tab"
+            type="button"><span class="mono">R—02</span> La Ventana</button>
+          <button role="tab" id="tab-r3" aria-controls="panel-r3" aria-selected="false" class="ruta-tab"
+            type="button"><span class="mono">R—03</span> Balandra</button>
+        </div>
+
+        <article class="ruta-panel is-active" id="panel-r1" role="tabpanel" aria-labelledby="tab-r1" tabindex="0">
+          <header class="ruta-head">
+            <div class="ruta-photo"><img src="assets/img/sea-lion-beach.webp"
+                alt="Espíritu Santo route — sea lion in its natural habitat" loading="lazy" decoding="async"></div>
+            <h3 class="ruta-name" data-i18n="routes.espirituSanto.name">Espíritu Santo Focus</h3>
+            <p class="ruta-claim" data-i18n="routes.espirituSanto.claim">Wildlife-first: sea lions, mangroves, and the
+              white-sand coves that make this the route most people underestimate.</p>
+            <ul class="ruta-meta mono">
+              <li data-i18n="routes.espirituSanto.meta.0">4 days</li>
+              <li data-i18n="routes.espirituSanto.meta.1">Any level</li>
+              <li data-i18n="routes.espirituSanto.meta.2">No long crossings</li>
+            </ul>
+          </header>
+          <div class="ruta-body">
+            <ul class="dias">
+              <li>
+                <h4 data-i18n="routes.espirituSanto.days.0.t">Sail to Espíritu Santo</h4>
+                <p data-i18n="routes.espirituSanto.days.0.d">Late-morning departure with the thermal breeze, a few hours
+                  of sailing to the first anchorage, and a reconnaissance snorkel before lunch.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.espirituSanto.days.1.t">Snorkel with sea lions</h4>
+                <p data-i18n="routes.espirituSanto.days.1.d">Two sessions with the Los Islotes colony. Juveniles come
+                  within inches of your mask and stay for the whole dive.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.espirituSanto.days.2.t">Kayak through mangroves &amp; wild beaches</h4>
+                <p data-i18n="routes.espirituSanto.days.2.d">Mangrove channels by kayak in the morning, an empty-beach
+                  landing in the afternoon, dinner on deck with the island behind you.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.espirituSanto.days.3.t">Return to La Paz</h4>
+                <p data-i18n="routes.espirituSanto.days.3.d">Downwind sail back, one last swim stop at Playa Bonanza,
+                  marina arrival mid-afternoon.</p>
+              </li>
+            </ul>
+            <figure class="quote-crew">
+              <blockquote>
+                <p data-i18n="routes.espirituSanto.quote">"Los Islotes never gets old — swimming with the sea lion
+                  colony is the moment every guest remembers first."</p>
+              </blockquote>
+              <figcaption class="mono" data-i18n="routes.espirituSanto.cite">— Adly, Expedition Leader</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="ruta-panel" id="panel-r2" role="tabpanel" aria-labelledby="tab-r2" tabindex="0" hidden>
+          <header class="ruta-head">
+            <div class="ruta-photo"><img src="assets/img/kitesurf-action.webp"
+                alt="La Ventana route — kitesurfer jumping" loading="lazy" decoding="async"></div>
+            <h3 class="ruta-name" data-i18n="routes.laVentana.name">La Ventana Focus</h3>
+            <p class="ruta-claim" data-i18n="routes.laVentana.claim">Wind-first: kite and wingfoil sessions built around
+              the thermal that gives La Ventana its name.</p>
+            <ul class="ruta-meta mono">
+              <li data-i18n="routes.laVentana.meta.0">4 days</li>
+              <li data-i18n="routes.laVentana.meta.1">Kite / wingfoil level</li>
+              <li data-i18n="routes.laVentana.meta.2">Seasonal wind window</li>
+            </ul>
+          </header>
+          <div class="ruta-body">
+            <ul class="dias">
+              <li>
+                <h4 data-i18n="routes.laVentana.days.0.t">Sail to La Ventana</h4>
+                <p data-i18n="routes.laVentana.days.0.d">Morning sail down the channel, gear rigged on deck before the
+                  afternoon thermal fills in.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.laVentana.days.1.t">Kite or wingfoil session</h4>
+                <p data-i18n="routes.laVentana.days.1.d">A full day on the water — the crew includes a kite and wingfoil
+                  instructor, so beginners and experienced riders both have a plan.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.laVentana.days.2.t">Sunset &amp; dinner at anchor</h4>
+                <p data-i18n="routes.laVentana.days.2.d">Wind eases by late afternoon; the boat swings to a quiet
+                  anchorage for a slow dinner on deck.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.laVentana.days.3.t">Return to La Paz</h4>
+                <p data-i18n="routes.laVentana.days.3.d">Early departure to beat the building breeze, back in the marina
+                  before midday.</p>
+              </li>
+            </ul>
+            <figure class="quote-crew">
+              <blockquote>
+                <p data-i18n="routes.laVentana.quote">"When the wind picks up in La Ventana, everything else stops
+                  mattering."</p>
+              </blockquote>
+              <figcaption class="mono" data-i18n="routes.laVentana.cite">— Adly, Expedition Leader</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="ruta-panel" id="panel-r3" role="tabpanel" aria-labelledby="tab-r3" tabindex="0" hidden>
+          <header class="ruta-head">
+            <div class="ruta-photo"><img src="assets/img/beach-cove.webp" alt="Balandra route — turquoise cove"
+                loading="lazy" decoding="async"></div>
+            <h3 class="ruta-name" data-i18n="routes.balandra.name">Balandra Focus</h3>
+            <p class="ruta-claim" data-i18n="routes.balandra.claim">Reef and paddle-first: shallow turquoise water, easy
+              snorkeling, and a slower pace than the other two routes.</p>
+            <ul class="ruta-meta mono">
+              <li data-i18n="routes.balandra.meta.0">4 days</li>
+              <li data-i18n="routes.balandra.meta.1">Any level</li>
+              <li data-i18n="routes.balandra.meta.2">Calm, protected water</li>
+            </ul>
+          </header>
+          <div class="ruta-body">
+            <ul class="dias">
+              <li>
+                <h4 data-i18n="routes.balandra.days.0.t">Sail to Balandra</h4>
+                <p data-i18n="routes.balandra.days.0.d">A short sail to one of the most photographed bays on the gulf,
+                  usually empty by early evening.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.balandra.days.1.t">Reef snorkeling</h4>
+                <p data-i18n="routes.balandra.days.1.d">Shallow reef, warm water, and a pace built for kids,
+                  grandparents, and everyone in between.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.balandra.days.2.t">Paddleboard &amp; exploration</h4>
+                <p data-i18n="routes.balandra.days.2.d">Paddleboards out at sunrise, a walk to a lookout point, and an
+                  afternoon with no plan at all.</p>
+              </li>
+              <li>
+                <h4 data-i18n="routes.balandra.days.3.t">Return to La Paz</h4>
+                <p data-i18n="routes.balandra.days.3.d">Easy sail back with the afternoon breeze, marina arrival by
+                  early evening.</p>
+              </li>
+            </ul>
+            <figure class="quote-crew">
+              <blockquote>
+                <p data-i18n="routes.balandra.quote">"Balandra's water color still surprises me, and I've sailed the Sea
+                  of Cortez for years."</p>
+              </blockquote>
+              <figcaption class="mono" data-i18n="routes.balandra.cite">— Denise, Captain</figcaption>
+            </figure>
+          </div>
+        </article>
+      </div>
+      <p class="routes-note reveal" data-i18n="routes.note">These routes are a starting point. Every expedition adapts
+        to weather, sea conditions, and what your group wants.</p>
+    </section>
+
+    <!-- DAY IN THE LIFE — interactive catamaran deck plan -->
+    <section class="section" id="day-in-life" data-depth-stop="70" data-depth-name="A day aboard">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">05</span> 24°12′37.6″ N</p>
+        <h2 class="h2" data-reveal data-i18n="showcase.title">A day in<br><em>Eagle Ray.</em></h2>
+      </div>
+
+      <!-- TODO: stock photography removed here — reinstate a gallery once in-house shots are available. -->
+      <ul class="day-grid reveal">
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.0.t">Sail</h3>
+          <p data-i18n="showcase.cards.0.d">Sail towards our objective of the day, coffee in hand while the anchor comes
+            up.</p>
+        </li>
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.1.t">Activity</h3>
+          <p data-i18n="showcase.cards.1.d">Diving, kiting, swimming — whatever the crew is drawn to that morning.</p>
+        </li>
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.2.t">Lunch</h3>
+          <p data-i18n="showcase.cards.2.d">The catch of the day, cooked and shared in the cockpit shade.</p>
+        </li>
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.3.t">Explore</h3>
+          <p data-i18n="showcase.cards.3.d">Shorelines, cliffs, water, unknown spots worth a slow paddle.</p>
+        </li>
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.4.t">Sunset</h3>
+          <p data-i18n="showcase.cards.4.d">A pause to take it in — swim, surf, or just drift.</p>
+        </li>
+        <li class="day-card">
+          <h3 data-i18n="showcase.cards.5.t">Dinner</h3>
+          <p data-i18n="showcase.cards.5.d">Back onboard. Stories, salt, and a reset before the next day.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section class="section" data-depth-stop="83" data-depth-name="À la carte">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">06</span> <span data-i18n="activities.kicker">What you
+            might do</span></p>
+        <h2 class="h2" data-reveal data-i18n="activities.title">Not an itinerary.<br><em>A world full of options.</em>
+        </h2>
+        <p class="lede" data-reveal data-i18n="activities.lede">Tell us what appeals to you before you arrive — we will
+          prepare a proposal and the rest will get decided onboard, day by day, by what the sea and your mood allows.
+        </p>
+      </div>
+      <ul class="manifest reveal" data-manifest>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">01</span><span
+              class="manifest-name" data-i18n="activities.list.0">Scuba diving</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">02</span><span
+              class="manifest-name" data-i18n="activities.list.1">Freediving</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">03</span><span
+              class="manifest-name" data-i18n="activities.list.2">Spearfishing</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">04</span><span
+              class="manifest-name" data-i18n="activities.list.3">Kitesurfing</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">05</span><span
+              class="manifest-name" data-i18n="activities.list.4">Wingfoil</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">06</span><span
+              class="manifest-name" data-i18n="activities.list.5">Snorkeling</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">07</span><span
+              class="manifest-name" data-i18n="activities.list.6">Cliff jumping</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">08</span><span
+              class="manifest-name" data-i18n="activities.list.7">Sea plunges</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">09</span><span
+              class="manifest-name" data-i18n="activities.list.8">Night swimming</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">10</span><span
+              class="manifest-name" data-i18n="activities.list.9">Sunrise swims</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">11</span><span
+              class="manifest-name" data-i18n="activities.list.10">Island hopping</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">12</span><span
+              class="manifest-name" data-i18n="activities.list.11">Cave exploring</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">13</span><span
+              class="manifest-name" data-i18n="activities.list.12">Whale spotting</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">14</span><span
+              class="manifest-name" data-i18n="activities.list.13">Wildlife encounters</span><span
+              class="manifest-check" aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">15</span><span
+              class="manifest-name" data-i18n="activities.list.14">Foraging</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">16</span><span
+              class="manifest-name" data-i18n="activities.list.15">Fire cooking</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">17</span><span
+              class="manifest-name" data-i18n="activities.list.16">Surfing</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">18</span><span
+              class="manifest-name" data-i18n="activities.list.17">Yoga</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">19</span><span
+              class="manifest-name" data-i18n="activities.list.18">Stretching sessions</span><span
+              class="manifest-check" aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">20</span><span
+              class="manifest-name" data-i18n="activities.list.19">Breathwork</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">21</span><span
+              class="manifest-name" data-i18n="activities.list.20">Card games</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">22</span><span
+              class="manifest-name" data-i18n="activities.list.21">Music sessions</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+        <li><button type="button" class="manifest-item"><span class="manifest-n mono">23</span><span
+              class="manifest-name" data-i18n="activities.list.22">Stargazing</span><span class="manifest-check"
+              aria-hidden="true">✓</span></button></li>
+      </ul>
+      <div class="manifest-foot">
+        <p class="manifest-count mono" data-manifest-count></p>
+        <a class="btn btn-primary" href="#customize" data-manifest-cta data-i18n="boats.customizeBtn">Customize my
+          expedition</a>
+      </div>
+      <p class="note reveal" data-i18n="activities.note">Espíritu Santo is a protected national park (UNESCO Biosphere
+        Reserve). Eagle Ray operates in full respect of regulated zones.</p>
+    </section>
+
+    <!-- BOATS -->
+    <section class="section" id="boats" data-depth-stop="96" data-depth-name="The boats">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">07</span> <span data-i18n="boats.kicker">Your
+            expedition</span></p>
+        <h2 class="h2" data-reveal data-i18n="boats.title">Our fleet. One standard:<br><em>fully private, fully
+            yours.</em></h2>
+      </div>
+      <div class="boats-grid">
+        <article class="boat-card has-tilt reveal">
+          <div class="boat-photo boat-slider" data-boat-slider>
+            <div class="boat-slider-track">
+              <img src="assets/img/boat-baydreamer-exterior.webp" alt="Bay Dreamer — catamaran exterior at anchor"
+                class="is-active" loading="lazy" decoding="async">
+              <img src="assets/img/boat-baydreamer-1.jpeg" alt="Bay Dreamer — cockpit lounge and dining area"
+                loading="lazy" decoding="async">
+              <img src="assets/img/boat-baydreamer-2.jpg" alt="Bay Dreamer — aft deck view over the water"
+                loading="lazy" decoding="async">
+              <img src="assets/img/boat-baydreamer-3.jpg" alt="Bay Dreamer — galley kitchen" loading="lazy"
+                decoding="async">
+            </div>
+            <button type="button" class="boat-slider-arrow boat-slider-prev" data-boat-prev
+              aria-label="Previous photo">‹</button>
+            <button type="button" class="boat-slider-arrow boat-slider-next" data-boat-next
+              aria-label="Next photo">›</button>
+            <div class="boat-slider-dots" data-boat-dots></div>
+          </div>
+          <h3 data-i18n="boats.baydreamer.name">Bay Dreamer</h3>
+          <p class="boat-tagline" data-i18n="boats.baydreamer.tagline">Icon Charter — Lagoon 450F</p>
+          <p data-i18n="boats.baydreamer.desc">4 cabins, 8 berths, 4 heads. Flybridge, Starlink, watermaker — built for
+            groups who want space and comfort in equal measure.</p>
+          <dl class="boat-specs mono">
+            <div>
+              <dt data-i18n="boats.specLength">Length</dt>
+              <dd data-i18n="boats.baydreamer.length">13.72 m</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specCabins">Cabins</dt>
+              <dd data-i18n="boats.baydreamer.cabins">4 double</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specBathrooms">Bathrooms</dt>
+              <dd data-i18n="boats.baydreamer.bathrooms">4 private</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specGuests">Guests</dt>
+              <dd data-i18n="boats.baydreamer.guests">up to 8</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="boat-card has-tilt reveal">
+          <div class="boat-photo"><img src="assets/img/boat-goodmedicine-exterior.webp"
+              alt="Good Medicine — catamaran exterior at anchor" loading="lazy" decoding="async"></div>
+          <h3 data-i18n="boats.goodmedicine.name">Good Medicine</h3>
+          <p class="boat-tagline" data-i18n="boats.goodmedicine.tagline">Good Medicine La Paz — Lagoon 42</p>
+          <p data-i18n="boats.goodmedicine.desc">3 cabins, 6 berths, 3 heads. Owner's suite, solar power, onboard chef
+            service. A boutique feel for smaller groups.</p>
+          <dl class="boat-specs mono">
+            <div>
+              <dt data-i18n="boats.specLength">Length</dt>
+              <dd data-i18n="boats.goodmedicine.length">12.80 m</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specCabins">Cabins</dt>
+              <dd data-i18n="boats.goodmedicine.cabins">3 double</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specBathrooms">Bathrooms</dt>
+              <dd data-i18n="boats.goodmedicine.bathrooms">3 private</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specGuests">Guests</dt>
+              <dd data-i18n="boats.goodmedicine.guests">up to 6</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="boat-card has-tilt reveal">
+          <!-- TODO: replace with real Baja hull photo once available -->
+          <div class="boat-photo boat-slider" data-boat-slider>
+            <div class="boat-slider-track">
+              <!-- <img src="assets/img/boat-starofbaja-exterior.webp"
+                alt="Star of Baja — Fountaine Pajot Astrea 42, builder photo" class="is-active" loading="lazy"
+                decoding="async"> -->
+              <img src="assets/img/boat-starofbaja-1.jpeg" alt="Star of Baja — cockpit lounge at anchor" loading="lazy"
+                class="is-active" decoding="async">
+              <img src="assets/img/boat-starofbaja-2.jpg" alt="Star of Baja — aerial view of the flybridge"
+                loading="lazy" decoding="async">
+              <img src="assets/img/boat-starofbaja-3.jpg" alt="Star of Baja — foredeck lounging under sail"
+                loading="lazy" decoding="async">
+            </div>
+            <button type="button" class="boat-slider-arrow boat-slider-prev" data-boat-prev
+              aria-label="Previous photo">‹</button>
+            <button type="button" class="boat-slider-arrow boat-slider-next" data-boat-next
+              aria-label="Next photo">›</button>
+            <div class="boat-slider-dots" data-boat-dots></div>
+          </div>
+          <h3 data-i18n="boats.starofbaja.name">Star of Baja</h3>
+          <p class="boat-tagline" data-i18n="boats.starofbaja.tagline">West Coast Multihulls — Fountaine Pajot Astrea 42
+          </p>
+          <p data-i18n="boats.starofbaja.desc">4 cabins, 8 berths, 4 heads. Elevated helm station, double sun pad —
+            refined design for a design-forward feel.</p>
+          <dl class="boat-specs mono">
+            <div>
+              <dt data-i18n="boats.specLength">Length</dt>
+              <dd data-i18n="boats.starofbaja.length">12.80 m</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specCabins">Cabins</dt>
+              <dd data-i18n="boats.starofbaja.cabins">4 double</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specBathrooms">Bathrooms</dt>
+              <dd data-i18n="boats.starofbaja.bathrooms">4 private</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specGuests">Guests</dt>
+              <dd data-i18n="boats.starofbaja.guests">up to 8</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="boat-card has-tilt reveal">
+          <!-- TODO: brand marketing photo (The Moorings) — replace with a real Baja hull photo once available -->
+          <div class="boat-photo"><img src="assets/img/boat-moorings4500l-exterior.webp"
+              alt="Moorings 4500L — Leopard 45 sail catamaran, builder photo" loading="lazy" decoding="async"></div>
+          <h3 data-i18n="boats.moorings4500l.name">Moorings 4500L</h3>
+          <p class="boat-tagline" data-i18n="boats.moorings4500l.tagline">The Moorings — Leopard 45, sail catamaran</p>
+          <p data-i18n="boats.moorings4500l.desc">4 cabins, 8 berths, 4 heads. Flybridge lounge, solar power, watermaker
+            — built for groups who want a classic sailing feel with room to spread out.</p>
+          <dl class="boat-specs mono">
+            <div>
+              <dt data-i18n="boats.specLength">Length</dt>
+              <dd data-i18n="boats.moorings4500l.length">13.72 m</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specCabins">Cabins</dt>
+              <dd data-i18n="boats.moorings4500l.cabins">4 double</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specBathrooms">Bathrooms</dt>
+              <dd data-i18n="boats.moorings4500l.bathrooms">4 private</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specGuests">Guests</dt>
+              <dd data-i18n="boats.moorings4500l.guests">up to 10</dd>
+            </div>
+          </dl>
+        </article>
+        <article class="boat-card has-tilt reveal">
+          <!-- TODO: brand marketing photo (The Moorings) — replace with a real Baja hull photo once available -->
+          <div class="boat-photo"><img src="assets/img/boat-moorings464pc-exterior.webp"
+              alt="Moorings 464PC — Leopard 46 power catamaran, builder photo" loading="lazy" decoding="async"></div>
+          <h3 data-i18n="boats.moorings464pc.name">Moorings 464PC</h3>
+          <p class="boat-tagline" data-i18n="boats.moorings464pc.tagline">The Moorings — Leopard 46, power catamaran</p>
+          <p data-i18n="boats.moorings464pc.desc">4 cabins, 8 berths, 4 heads. Flybridge helm and wet bar, underwater
+            lights — for groups who want to cover more ground without giving up comfort.</p>
+          <dl class="boat-specs mono">
+            <div>
+              <dt data-i18n="boats.specLength">Length</dt>
+              <dd data-i18n="boats.moorings464pc.length">14.02 m</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specCabins">Cabins</dt>
+              <dd data-i18n="boats.moorings464pc.cabins">4 double</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specBathrooms">Bathrooms</dt>
+              <dd data-i18n="boats.moorings464pc.bathrooms">4 private</dd>
+            </div>
+            <div>
+              <dt data-i18n="boats.specGuests">Guests</dt>
+              <dd data-i18n="boats.moorings464pc.guests">up to 10</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="included-grid reveal">
+        <div class="included-col">
+          <p class="compare-heading" data-i18n="boats.includedHeading">Always included</p>
+          <ul class="included-list">
+            <li data-i18n="boats.included.0">Private catamaran, prepared for life aboard</li>
+            <li data-i18n="boats.included.1">Professional skipper</li>
+            <li data-i18n="boats.included.2">Dinghy with motor</li>
+            <li data-i18n="boats.included.3">Snorkeling gear onboard</li>
+            <li data-i18n="boats.included.4">Permits / access bracelets for protected areas</li>
+            <li data-i18n="boats.included.5">Boat prep &amp; cleaning</li>
+            <li data-i18n="boats.included.6">ERE coordination before and during your trip</li>
+            <li data-i18n="boats.included.7">Flexible itinerary, adapted to weather and your group</li>
+          </ul>
+        </div>
+        <div class="included-col included-col-muted">
+          <p class="compare-heading" data-i18n="boats.notIncludedHeading">À la carte / not included</p>
+          <ul class="included-list">
+            <li data-i18n="boats.notIncluded.0">Food &amp; drinks</li>
+            <li data-i18n="boats.notIncluded.1">Skipper tip</li>
+            <li data-i18n="boats.notIncluded.2">WiFi / Starlink</li>
+            <li data-i18n="boats.notIncluded.3">Extra gear (kayak, paddle, fishing)</li>
+            <li data-i18n="boats.notIncluded.4">Fuel consumed during the trip</li>
+            <li data-i18n="boats.notIncluded.5">Diving, kite &amp; wingfoil, guided activities</li>
+            <li data-i18n="boats.notIncluded.6">Personal travel insurance</li>
+          </ul>
+        </div>
+      </div>
+      <p class="container" style="text-align:center; margin-top:2.5rem; padding-left: var(--pad);" data-reveal>
+        <a class="btn btn-primary" href="#customize" data-i18n="boats.customizeBtn">Customize my expedition</a>
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" data-depth-stop="108" data-depth-name="Before you book">
+      <div class="section-head">
+        <p class="kicker" data-reveal><span class="mono num">08</span> <span data-i18n="faq.kicker">Questions</span></p>
+        <h2 class="h2" data-reveal data-i18n="faq.title">Before you<br><em>reach out.</em></h2>
+      </div>
+      <!-- TODO: replace the 8 Q&As below wholesale with Thibault's updated FAQ list. -->
+      <div class="faq" data-faq>
+        <details class="faq-item" open>
+          <summary><span data-i18n="faq.items.0.q">How many people can join an expedition?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.0.a">From an intimate group of friends to a full family reunion — expeditions
+              typically run from a handful of guests up to larger groups, fully private. It's your boat, your crew, your
+              pace.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.1.q">Is this suitable for kids or grandparents?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.1.a">Yes. Routes and activity pace adapt to whoever's on board — a family with young
+              kids and grandparents sails very differently from a group of divers, and we plan for that from the first
+              conversation.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.2.q">Who's responsible for the kids onboard?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.2.a">Parents remain responsible for their children at all times. Our crew keeps a
+              close eye during activities and briefs every family on boat safety before departure.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.3.q">What's the weather/safety policy?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.3.a">Your skipper has final say on the water. Routes, anchorages, and activities
+              adjust to wind, swell, and visibility — safety always outranks the original plan.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.4.q">What's included in an expedition?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.4.a">Your private catamaran, professional skipper, dinghy with motor, snorkeling
+              gear, park permits, boat prep, and full coordination from Thibault before and during your trip. Food,
+              drinks, guided diving/kite activities, and travel insurance are booked à la carte.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.5.q">How far in advance should I book?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.5.a">We recommend reaching out 6–8 weeks ahead for the best boat and date
+              availability, though we do our best to accommodate shorter notice.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.6.q">Will photos from my trip be used anywhere?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.6.a">Only with your permission. If you're comfortable being featured, our
+              storytelling crew may ask to share a few moments — otherwise, your trip stays entirely private.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary><span data-i18n="faq.items.7.q">Do you sail outside Baja?</span></summary>
+          <div class="faq-body">
+            <p data-i18n="faq.items.7.a">Today, every expedition sails out of La Paz, Baja California Sur. It's where
+              our boats, crew, and permits are based.</p>
+          </div>
+        </details>
+      </div>
+      <p class="faq-foot reveal"><span data-i18n="faq.footText">Still have a question?</span> <a class="link-arrow"
+          href="https://wa.me/525568090942?text=Hi%20Thibault%2C%20I%20have%20a%20question%20about%20Eagle%20Ray%20expeditions"
+          target="_blank" rel="noopener" data-i18n="faq.footLink">Contact us directly →</a></p>
+    </section>
+
+    <!-- CUSTOMIZE FUNNEL -->
+    <section class="section section-funnel" id="customize" data-depth-stop="130" data-depth-name="Charting your route">
+      <div class="customize-inner">
+        <div class="customize-head" data-reveal>
+          <p class="kicker" style="justify-content:center"><span class="mono num">09</span> <span
+              data-i18n="funnel.kicker">Build your expedition</span></p>
+          <h2 class="h2" data-i18n="funnel.title">Customize your first<br><em>Baja expedition.</em></h2>
+          <p class="lede" data-i18n="funnel.lede">4 quick questions. At the end, WhatsApp opens with your expedition
+            already drafted — Thibault gets the full picture and replies with a real proposal within 48 hours, not a
+            "thanks for your interest."</p>
+        </div>
+
+        <a class="funnel-escape" href="https://wa.me/525568090942" target="_blank" rel="noopener"
+          data-i18n="funnel.escapeText">Prefer to skip this? Message us directly on WhatsApp →</a>
+
+        <form class="funnel" data-funnel novalidate>
+          <div class="funnel-bar" aria-hidden="true"><span class="funnel-fill" data-funnel-fill></span></div>
+          <p class="funnel-count mono js-only"><span data-funnel-count>Step 1 of 4</span> <span class="funnel-autosave"
+              data-autosave-badge hidden></span></p>
+
+          <fieldset class="fstep is-active" data-step="1">
+            <legend><span class="mono">01</span> <span data-i18n="funnel.steps.s1.legend">Trip basics</span></legend>
+            <p class="funnel-q" data-i18n="funnel.steps.s1.q1">How many days are you thinking?</p>
+            <div class="opts opts-row">
+              <label class="opt"><input type="radio" name="dias" value="3–4 days" checked><span
+                  data-i18n="funnel.steps.s1.opts.0">3 – 4 days</span></label>
+              <label class="opt"><input type="radio" name="dias" value="5–6 days"><span
+                  data-i18n="funnel.steps.s1.opts.1">5 – 6 days</span></label>
+              <label class="opt"><input type="radio" name="dias" value="7–8 days"><span
+                  data-i18n="funnel.steps.s1.opts.2">7 – 8 days</span></label>
+              <label class="opt"><input type="radio" name="dias" value="10 days or more"><span
+                  data-i18n="funnel.steps.s1.opts.3">10 or more</span></label>
+            </div>
+
+            <p class="funnel-q" data-i18n="funnel.steps.s1.q2">Who's this expedition for?</p>
+            <div class="opts opts-row">
+              <label class="opt"><input type="radio" name="quien" value="Family" checked><span
+                  data-i18n="funnel.steps.s1.whoOpts.0">Family</span></label>
+              <label class="opt"><input type="radio" name="quien" value="Couple"><span
+                  data-i18n="funnel.steps.s1.whoOpts.1">Couple</span></label>
+              <label class="opt"><input type="radio" name="quien" value="Friends group"><span
+                  data-i18n="funnel.steps.s1.whoOpts.2">Friends group</span></label>
+              <label class="opt"><input type="radio" name="quien" value="Corporate / team"><span
+                  data-i18n="funnel.steps.s1.whoOpts.3">Corporate / team</span></label>
+            </div>
+
+            <p class="funnel-q" data-i18n="funnel.steps.s1.q3">How many of you will be aboard?</p>
+            <div class="stepper">
+              <button class="step-btn js-only" type="button" data-count="-1" aria-label="Fewer guests"
+                data-i18n-aria-label="funnel.steps.s1.fewer">−</button>
+              <input class="step-input" type="number" name="invitados" min="2" max="10" value="4" inputmode="numeric">
+              <button class="step-btn js-only" type="button" data-count="1" aria-label="More guests"
+                data-i18n-aria-label="funnel.steps.s1.more">+</button>
+            </div>
+            <p class="fhint" data-i18n="funnel.steps.s1.hint">Up to 10 guests on the Bali 4.4, up to 8 on the Astrea 42.
+              More than that, and we sail with both boats.</p>
+          </fieldset>
+
+          <fieldset class="fstep" data-step="2">
+            <legend><span class="mono">02</span> <span data-i18n="funnel.steps.s2.legend">Route &amp; priorities</span>
+            </legend>
+            <p class="funnel-q" data-i18n="funnel.steps.s2.q1">Which focus calls to you most?</p>
+            <div class="opts opts-row">
+              <label class="opt"><input type="radio" name="foco" value="Espíritu Santo — wildlife" checked><span
+                  data-i18n="funnel.steps.s2.opts.0">Espíritu Santo — wildlife</span></label>
+              <label class="opt"><input type="radio" name="foco" value="La Ventana — kite &amp; wingfoil"><span
+                  data-i18n="funnel.steps.s2.opts.1">La Ventana — kite &amp; wingfoil</span></label>
+              <label class="opt"><input type="radio" name="foco" value="Balandra — reef &amp; paddle"><span
+                  data-i18n="funnel.steps.s2.opts.2">Balandra — reef &amp; paddle</span></label>
+              <label class="opt"><input type="radio" name="foco" value="Not sure yet"><span
+                  data-i18n="funnel.steps.s2.opts.3">Not sure yet</span></label>
+            </div>
+
+            <p class="funnel-q" data-i18n="funnel.steps.s2.q2">If you could ask for just one thing?</p>
+            <div class="opts opts-row">
+              <label class="opt"><input type="radio" name="prioridad" value="Wildlife &amp; snorkeling" checked><span
+                  data-i18n="funnel.steps.s2.priorityOpts.0">Wildlife &amp; snorkeling</span></label>
+              <label class="opt"><input type="radio" name="prioridad" value="Kite &amp; wingfoil"><span
+                  data-i18n="funnel.steps.s2.priorityOpts.1">Kite &amp; wingfoil</span></label>
+              <label class="opt"><input type="radio" name="prioridad" value="Slow pace &amp; relaxation"><span
+                  data-i18n="funnel.steps.s2.priorityOpts.2">Slow pace &amp; relaxation</span></label>
+              <label class="opt"><input type="radio" name="prioridad" value="A bit of everything"><span
+                  data-i18n="funnel.steps.s2.priorityOpts.3">A bit of everything</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fstep" data-step="3">
+            <legend><span class="mono">03</span> <span data-i18n="funnel.steps.s3.legend">Dates &amp; boat</span>
+            </legend>
+            <div class="fields">
+              <label class="field"><span data-i18n="funnel.steps.s3.from">From</span><input type="date"
+                  name="desde"></label>
+              <label class="field"><span data-i18n="funnel.steps.s3.to">To</span><input type="date"
+                  name="hasta"></label>
+            </div>
+            <label class="field field-full"><span data-i18n="funnel.steps.s3.orWrite">Or write it your way</span><input
+                type="text" name="fechas_libres" placeholder="e.g. Late October 2026, or flexible"
+                data-i18n-placeholder="funnel.steps.s3.placeholder"></label>
+
+            <p class="funnel-q" data-i18n="funnel.steps.s3.q1">Any boat preference?</p>
+            <div class="opts opts-row">
+              <label class="opt"><input type="radio" name="barco" value="Bali 4.4"><span
+                  data-i18n="funnel.steps.s3.opts.0">Bali 4.4</span></label>
+              <label class="opt"><input type="radio" name="barco" value="Fountaine Pajot Astrea 42"><span
+                  data-i18n="funnel.steps.s3.opts.1">Fountaine Pajot Astrea 42</span></label>
+              <label class="opt"><input type="radio" name="barco" value="No preference" checked><span
+                  data-i18n="funnel.steps.s3.opts.2">No preference</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="fstep" data-step="4">
+            <legend><span class="mono">04</span> <span data-i18n="funnel.steps.s4.legend">Who does Thibault talk
+                to?</span></legend>
+            <div class="funnel-recap" data-funnel-recap></div>
+            <div class="fields">
+              <label class="field"><span data-i18n="funnel.steps.s4.name">Name</span><input class="field-input"
+                  type="text" name="nombre" data-required autocomplete="name" placeholder="First name"
+                  data-i18n-placeholder="funnel.steps.s4.namePh"></label>
+              <label class="field"><span data-i18n="funnel.steps.s4.email">Email</span><input class="field-input"
+                  type="email" name="email" data-required autocomplete="email" placeholder="you@email.com"
+                  data-i18n-placeholder="funnel.steps.s4.emailPh"></label>
+            </div>
+            <p class="field-error" data-error-for="nombre" hidden data-i18n="funnel.nameError">Please tell us your name.
+            </p>
+            <p class="field-error" data-error-for="email" hidden data-i18n="funnel.emailError">Please enter a valid
+              email.</p>
+
+            <label class="field field-full"><span data-i18n="funnel.steps.s4.contact">WhatsApp number</span> <span
+                class="field-optional" data-i18n="funnel.steps.s4.contactOptional">(optional, for a faster
+                reply)</span><input type="tel" name="contacto" inputmode="tel" autocomplete="tel"
+                placeholder="+52 55 0000 0000" data-i18n-placeholder="funnel.steps.s4.contactPh"></label>
+            <label class="field field-full"><span data-i18n="funnel.steps.s4.extra">Anything we should know
+                (optional)</span><textarea name="extra" rows="3"
+                placeholder="Allergies, diving level, celebrating something, seasickness…"
+                data-i18n-placeholder="funnel.steps.s4.extraPh"></textarea></label>
+
+            <p class="funnel-privacy" data-i18n="funnel.steps.s4.privacy">🔒 We only use this to prepare your proposal.
+              No spam, ever.</p>
+          </fieldset>
+
+          <div class="funnel-nav">
+            <button class="btn btn-ghost js-only" type="button" data-prev disabled data-i18n="funnel.back">←
+              Back</button>
+            <button class="btn btn-primary js-only" type="button" data-next data-i18n="funnel.cont">Continue →</button>
+            <button class="btn btn-primary" type="submit" data-funnel-submit hidden>
+              <span data-submit-label data-i18n="funnel.submit">Send my expedition request</span>
+              <span class="funnel-spinner" data-submit-spinner hidden></span>
+            </button>
+          </div>
+          <p class="funnel-submit-error" data-submit-error hidden data-i18n="funnel.submitError">Something went wrong
+            sending your request — please try again, or use the WhatsApp link above.</p>
+
+          <div class="funnel-success" data-funnel-success hidden>
+            <div class="funnel-success-check" aria-hidden="true"><svg viewBox="0 0 24 24">
+                <path d="M4 12.5l5 5L20 6" pathLength="1" />
+              </svg></div>
+            <h3><span data-i18n="funnel.successTitle">Received — thank you</span><span data-success-name></span>.</h3>
+            <p data-i18n="funnel.successBody">Thibault will review your expedition and reply within 48 hours.</p>
+            <a class="btn btn-primary btn-wide" data-success-whatsapp href="#" target="_blank" rel="noopener"
+              data-i18n="funnel.successWaBtn">Continue the conversation on WhatsApp</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section final-cta">
+      <div class="reveal">
+        <p class="kicker" style="justify-content:center" data-i18n="finalCta.kicker">Baja California Sur</p>
+        <h2 class="h2" data-i18n="finalCta.title">Your Baja expedition starts with a conversation.<br><em>You bring the
+            idea. We turn it into an expedition.</em></h2>
+        <a class="btn btn-primary" href="#customize" data-i18n="finalCta.cta">Customize your expedition</a>
+        <p class="final-cta-meta">24°12′37.6″ N · LA PAZ · B.C.S.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
       <div>
-        <p class="compare-heading" data-i18n="crew.founderLabel">Founder</p>
-        <h3>Thibault Poirson De Cardon</h3>
-        <p data-i18n="crew.founderBody">Ocean entrepreneur with 10+ years in Mexico, building the Baja network of captains, chefs, and expedition leaders from the ground up. He's the one who answers your WhatsApp — before, during, and after your trip.</p>
-        <span class="founder-sign mono" data-i18n="crew.founderSign">Direct line, no call center · +52 55 6809 0942</span>
+        <div class="footer-brand">
+          <img class="footer-mark" src="assets/img/logo-mark-navy.png" alt="" width="1030" height="646">
+          <img class="footer-wordmark" src="assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" width="1064"
+            height="351">
+        </div>
+        <p class="footer-claim" data-i18n="footer.claim">The Sea of Cortez<br><em>isn't visited. It's sailed.</em></p>
+      </div>
+      <div class="footer-contact">
+        <a class="footer-big" href="https://wa.me/525568090942" target="_blank" rel="noopener">+52 55 6809 0942</a>
+        <a class="footer-big" href="mailto:hello@eagleray.expedition">hello@eagleray.expedition</a>
       </div>
     </div>
-
-    <p class="kicker reveal" style="margin-top:3rem;" data-i18n="crew.pilotKicker">The Baja pilot crew</p>
-    <div class="crew-wall reveal">
-      <figure class="polaroid" style="--rot:-3deg" tabindex="0">
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-denise.webp" alt="Denise, Captain" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Denise</span><span class="polaroid-role mono" data-i18n="crew.members.denise.role">Captain</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.members.denise.line">Years spent navigating the Sea of Cortez and some of the world's most demanding private yachts.</p>
-          </div>
-        </div>
-      </figure>
-      <figure class="polaroid" style="--rot:2deg" tabindex="0">
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/catamaran-sailing.webp" alt="Benjamin, Skipper" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Benjamin</span><span class="polaroid-role mono" data-i18n="crew.members.benjamin.role">Skipper</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.members.benjamin.line">An engineer by training with years exploring the Gulf of California.</p>
-          </div>
-        </div>
-      </figure>
-      <figure class="polaroid" style="--rot:-1.5deg" tabindex="0">
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-adly.webp" alt="Adly, Expedition Leader" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Adly</span><span class="polaroid-role mono" data-i18n="crew.members.adly.role">Expedition Leader</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.members.adly.line">Between the wind of La Ventana and the waters of the Sea of Cortez, the ocean is home.</p>
-          </div>
-        </div>
-      </figure>
-      <figure class="polaroid" style="--rot:3deg" tabindex="0">
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-antoine.webp" alt="Antoine, Gold Chef" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Antoine</span><span class="polaroid-role mono" data-i18n="crew.members.antoine.role">Gold Chef</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.members.antoine.line">A background in luxury hospitality, restaurants, and entrepreneurship.</p>
-          </div>
-        </div>
-      </figure>
-      <figure class="polaroid" style="--rot:-2deg" tabindex="0">
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-ana.webp" alt="Ana, Silver Chef" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Ana</span><span class="polaroid-role mono" data-i18n="crew.members.ana.role">Silver Chef</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.members.ana.line">Entrepreneur and founder of her own pastry business.</p>
-          </div>
-        </div>
-      </figure>
-    </div>
-
-    <div class="crew-joining reveal">
-      <figure class="polaroid" style="--rot:1.5deg" tabindex="0">
-        <span class="polaroid-tag mono" data-i18n="crew.joiningTag">Joining Q4 2026</span>
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-javier.webp" alt="Javier Sánchez Darder, Captain &amp; Filmmaker" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Javier</span><span class="polaroid-role mono" data-i18n="crew.javier.role">Captain &amp; Filmmaker</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.javier.line">Yacht Master 200GT, PADI Dive Instructor, IKO Kitesurf Instructor, freediving &amp; spearfishing guide, drone pilot.</p>
-          </div>
-        </div>
-      </figure>
-      <figure class="polaroid" style="--rot:-2.5deg" tabindex="0">
-        <span class="polaroid-tag mono" data-i18n="crew.joiningTag">Joining Q4 2026</span>
-        <div class="polaroid-inner">
-          <div class="polaroid-face polaroid-front">
-            <div class="polaroid-photo"><img src="assets/img/crew-flavia.webp" alt="Flavia Elin Conradi, Stewardess, Chef &amp; Filmmaker" loading="lazy" decoding="async"></div>
-            <figcaption><span class="polaroid-name">Flavia</span><span class="polaroid-role mono" data-i18n="crew.flavia.role">Stewardess, Chef &amp; Filmmaker</span></figcaption>
-          </div>
-          <div class="polaroid-face polaroid-back">
-            <p class="polaroid-line" data-i18n="crew.flavia.line">Cook, deckhand, personal trainer, and filmmaker.</p>
-          </div>
-        </div>
-      </figure>
-    </div>
-
-    <div class="roles reveal">
-      <p class="kicker" data-i18n="crew.rolesKicker">The three roles of the Expedition Leader</p>
-      <ul class="roles-strip">
-        <li>
-          <svg class="roles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>
-          <h4 data-i18n="crew.roles.0.t">Guide &amp; Expert</h4><p data-i18n="crew.roles.0.d">At the center of every trip: a captain or first officer who knows the ocean well — diver, freediver, kite/wingfoil instructor.</p>
-        </li>
-        <li>
-          <svg class="roles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"/></svg>
-          <h4 data-i18n="crew.roles.1.t">Host &amp; Energy Creator</h4><p data-i18n="crew.roles.1.d">They design the rhythm, the moments, the group dynamic. Not a skipper, not a tour guide. Something new.</p>
-        </li>
-        <li>
-          <svg class="roles-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><rect x="3" y="7" width="14" height="11" rx="2"/><path d="M17 10l4-2v9l-4-2"/></svg>
-          <h4 data-i18n="crew.roles.2.t">Storyteller &amp; Brand</h4><p data-i18n="crew.roles.2.d">They create the content and the memory that make the experience compound long after the trip ends.</p>
-        </li>
-      </ul>
-    </div>
-
-    <p class="trust-line reveal" data-i18n="crew.trustLine">Flexible by nature. Safety always comes first. And a direct line to Thibault — no call center, no chatbot.</p>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq" data-depth-stop="108" data-depth-name="Before you book">
-    <div class="section-head">
-      <p class="kicker" data-reveal><span class="mono num">08</span> <span data-i18n="faq.kicker">Questions</span></p>
-      <h2 class="h2" data-reveal data-i18n="faq.title">Before you<br><em>reach out.</em></h2>
-    </div>
-    <div class="faq" data-faq>
-      <details class="faq-item" open>
-        <summary><span data-i18n="faq.items.0.q">How many people can join an expedition?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.0.a">From an intimate group of friends to a full family reunion — expeditions typically run from a handful of guests up to larger groups, fully private. It's your boat, your crew, your pace.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.1.q">Is this suitable for kids or grandparents?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.1.a">Yes. Routes and activity pace adapt to whoever's on board — a family with young kids and grandparents sails very differently from a group of divers, and we plan for that from the first conversation.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.2.q">Who's responsible for the kids onboard?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.2.a">Parents remain responsible for their children at all times. Our crew keeps a close eye during activities and briefs every family on boat safety before departure.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.3.q">What's the weather/safety policy?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.3.a">Your skipper has final say on the water. Routes, anchorages, and activities adjust to wind, swell, and visibility — safety always outranks the original plan.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.4.q">What's included in an expedition?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.4.a">Your private catamaran, professional skipper, dinghy with motor, snorkeling gear, park permits, boat prep, and full coordination from Thibault before and during your trip. Food, drinks, guided diving/kite activities, and travel insurance are booked à la carte.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.5.q">How far in advance should I book?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.5.a">We recommend reaching out 6–8 weeks ahead for the best boat and date availability, though we do our best to accommodate shorter notice.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.6.q">Will photos from my trip be used anywhere?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.6.a">Only with your permission. If you're comfortable being featured, our storytelling crew may ask to share a few moments — otherwise, your trip stays entirely private.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary><span data-i18n="faq.items.7.q">Do you sail outside Baja?</span></summary>
-        <div class="faq-body"><p data-i18n="faq.items.7.a">Today, every expedition sails out of La Paz, Baja California Sur. It's where our boats, crew, and permits are based.</p></div>
-      </details>
-    </div>
-    <p class="faq-foot reveal"><span data-i18n="faq.footText">Still have a question?</span> <a class="link-arrow" href="https://wa.me/525568090942?text=Hi%20Thibault%2C%20I%20have%20a%20question%20about%20Eagle%20Ray%20expeditions" target="_blank" rel="noopener" data-i18n="faq.footLink">WhatsApp Thibault directly →</a></p>
-  </section>
-
-  <!-- ALREADY SAILING -->
-  <section class="section" data-depth-stop="118" data-depth-name="Already at sea">
-    <div class="live-inner reveal">
-      <p class="kicker"><span class="dot" aria-hidden="true"></span> <span data-i18n="live.kicker">Already sailing</span></p>
-      <h2 class="h2 live-title" data-i18n="live.title">First private expeditions<br><em>already sailing out of La Paz.</em></h2>
-      <p class="lede" data-i18n="live.lede">This isn't a project on paper. This season's departures are already operating out of the La Paz marina, and the photos you see on Instagram are from last week, not a stock library.</p>
-      <a class="btn btn-ghost" href="https://instagram.com" target="_blank" rel="noopener" data-i18n="live.igLabel">Follow on Instagram →</a>
-    </div>
-  </section>
-
-  <!-- CUSTOMIZE FUNNEL -->
-  <section class="section section-funnel" id="customize" data-depth-stop="130" data-depth-name="Charting your route">
-    <div class="customize-inner">
-      <div class="customize-head" data-reveal>
-        <p class="kicker" style="justify-content:center"><span class="mono num">09</span> <span data-i18n="funnel.kicker">Build your expedition</span></p>
-        <h2 class="h2" data-i18n="funnel.title">Customize your first<br><em>Baja expedition.</em></h2>
-        <p class="lede" data-i18n="funnel.lede">4 quick questions. At the end, WhatsApp opens with your expedition already drafted — Thibault gets the full picture and replies with a real proposal within 48 hours, not a "thanks for your interest."</p>
+    <div class="footer-grid">
+      <div>
+        <h4 data-i18n="footer.base">Base</h4>
+        <p data-i18n="footer.baseBody">Marina de La Paz<br>La Paz, Baja California Sur<br>Mexico</p>
       </div>
-
-      <a class="funnel-escape" href="https://wa.me/525568090942" target="_blank" rel="noopener" data-i18n="funnel.escapeText">Prefer to skip this? Message us directly on WhatsApp →</a>
-
-      <form class="funnel" data-funnel novalidate>
-        <div class="funnel-bar" aria-hidden="true"><span class="funnel-fill" data-funnel-fill></span></div>
-        <p class="funnel-count mono js-only"><span data-funnel-count>Step 1 of 4</span> <span class="funnel-autosave" data-autosave-badge hidden></span></p>
-
-        <fieldset class="fstep is-active" data-step="1">
-          <legend><span class="mono">01</span> <span data-i18n="funnel.steps.s1.legend">Trip basics</span></legend>
-          <p class="funnel-q" data-i18n="funnel.steps.s1.q1">How many days are you thinking?</p>
-          <div class="opts opts-row">
-            <label class="opt"><input type="radio" name="dias" value="3–4 days" checked><span data-i18n="funnel.steps.s1.opts.0">3 – 4 days</span></label>
-            <label class="opt"><input type="radio" name="dias" value="5–6 days"><span data-i18n="funnel.steps.s1.opts.1">5 – 6 days</span></label>
-            <label class="opt"><input type="radio" name="dias" value="7–8 days"><span data-i18n="funnel.steps.s1.opts.2">7 – 8 days</span></label>
-            <label class="opt"><input type="radio" name="dias" value="10 days or more"><span data-i18n="funnel.steps.s1.opts.3">10 or more</span></label>
-          </div>
-
-          <p class="funnel-q" data-i18n="funnel.steps.s1.q2">Who's this expedition for?</p>
-          <div class="opts opts-row">
-            <label class="opt"><input type="radio" name="quien" value="Family" checked><span data-i18n="funnel.steps.s1.whoOpts.0">Family</span></label>
-            <label class="opt"><input type="radio" name="quien" value="Couple"><span data-i18n="funnel.steps.s1.whoOpts.1">Couple</span></label>
-            <label class="opt"><input type="radio" name="quien" value="Friends group"><span data-i18n="funnel.steps.s1.whoOpts.2">Friends group</span></label>
-            <label class="opt"><input type="radio" name="quien" value="Corporate / team"><span data-i18n="funnel.steps.s1.whoOpts.3">Corporate / team</span></label>
-          </div>
-
-          <p class="funnel-q" data-i18n="funnel.steps.s1.q3">How many of you will be aboard?</p>
-          <div class="stepper">
-            <button class="step-btn js-only" type="button" data-count="-1" aria-label="Fewer guests" data-i18n-aria-label="funnel.steps.s1.fewer">−</button>
-            <input class="step-input" type="number" name="invitados" min="2" max="10" value="4" inputmode="numeric">
-            <button class="step-btn js-only" type="button" data-count="1" aria-label="More guests" data-i18n-aria-label="funnel.steps.s1.more">+</button>
-          </div>
-          <p class="fhint" data-i18n="funnel.steps.s1.hint">Up to 10 guests on the Bali 4.4, up to 8 on the Astrea 42. More than that, and we sail with both boats.</p>
-        </fieldset>
-
-        <fieldset class="fstep" data-step="2">
-          <legend><span class="mono">02</span> <span data-i18n="funnel.steps.s2.legend">Route &amp; priorities</span></legend>
-          <p class="funnel-q" data-i18n="funnel.steps.s2.q1">Which focus calls to you most?</p>
-          <div class="opts opts-row">
-            <label class="opt"><input type="radio" name="foco" value="Espíritu Santo — wildlife" checked><span data-i18n="funnel.steps.s2.opts.0">Espíritu Santo — wildlife</span></label>
-            <label class="opt"><input type="radio" name="foco" value="La Ventana — kite &amp; wingfoil"><span data-i18n="funnel.steps.s2.opts.1">La Ventana — kite &amp; wingfoil</span></label>
-            <label class="opt"><input type="radio" name="foco" value="Balandra — reef &amp; paddle"><span data-i18n="funnel.steps.s2.opts.2">Balandra — reef &amp; paddle</span></label>
-            <label class="opt"><input type="radio" name="foco" value="Not sure yet"><span data-i18n="funnel.steps.s2.opts.3">Not sure yet</span></label>
-          </div>
-
-          <p class="funnel-q" data-i18n="funnel.steps.s2.q2">If you could ask for just one thing?</p>
-          <div class="opts opts-row">
-            <label class="opt"><input type="radio" name="prioridad" value="Wildlife &amp; snorkeling" checked><span data-i18n="funnel.steps.s2.priorityOpts.0">Wildlife &amp; snorkeling</span></label>
-            <label class="opt"><input type="radio" name="prioridad" value="Kite &amp; wingfoil"><span data-i18n="funnel.steps.s2.priorityOpts.1">Kite &amp; wingfoil</span></label>
-            <label class="opt"><input type="radio" name="prioridad" value="Slow pace &amp; relaxation"><span data-i18n="funnel.steps.s2.priorityOpts.2">Slow pace &amp; relaxation</span></label>
-            <label class="opt"><input type="radio" name="prioridad" value="A bit of everything"><span data-i18n="funnel.steps.s2.priorityOpts.3">A bit of everything</span></label>
-          </div>
-        </fieldset>
-
-        <fieldset class="fstep" data-step="3">
-          <legend><span class="mono">03</span> <span data-i18n="funnel.steps.s3.legend">Dates &amp; boat</span></legend>
-          <div class="fields">
-            <label class="field"><span data-i18n="funnel.steps.s3.from">From</span><input type="date" name="desde"></label>
-            <label class="field"><span data-i18n="funnel.steps.s3.to">To</span><input type="date" name="hasta"></label>
-          </div>
-          <label class="field field-full"><span data-i18n="funnel.steps.s3.orWrite">Or write it your way</span><input type="text" name="fechas_libres" placeholder="e.g. Late October 2026, or flexible" data-i18n-placeholder="funnel.steps.s3.placeholder"></label>
-
-          <p class="funnel-q" data-i18n="funnel.steps.s3.q1">Any boat preference?</p>
-          <div class="opts opts-row">
-            <label class="opt"><input type="radio" name="barco" value="Bali 4.4"><span data-i18n="funnel.steps.s3.opts.0">Bali 4.4</span></label>
-            <label class="opt"><input type="radio" name="barco" value="Fountaine Pajot Astrea 42"><span data-i18n="funnel.steps.s3.opts.1">Fountaine Pajot Astrea 42</span></label>
-            <label class="opt"><input type="radio" name="barco" value="No preference" checked><span data-i18n="funnel.steps.s3.opts.2">No preference</span></label>
-          </div>
-        </fieldset>
-
-        <fieldset class="fstep" data-step="4">
-          <legend><span class="mono">04</span> <span data-i18n="funnel.steps.s4.legend">Who does Thibault talk to?</span></legend>
-          <div class="funnel-recap" data-funnel-recap></div>
-          <div class="fields">
-            <label class="field"><span data-i18n="funnel.steps.s4.name">Name</span><input class="field-input" type="text" name="nombre" data-required autocomplete="name" placeholder="First name" data-i18n-placeholder="funnel.steps.s4.namePh"></label>
-            <label class="field"><span data-i18n="funnel.steps.s4.email">Email</span><input class="field-input" type="email" name="email" data-required autocomplete="email" placeholder="you@email.com" data-i18n-placeholder="funnel.steps.s4.emailPh"></label>
-          </div>
-          <p class="field-error" data-error-for="nombre" hidden data-i18n="funnel.nameError">Please tell us your name.</p>
-          <p class="field-error" data-error-for="email" hidden data-i18n="funnel.emailError">Please enter a valid email.</p>
-
-          <label class="field field-full"><span data-i18n="funnel.steps.s4.contact">WhatsApp number</span> <span class="field-optional" data-i18n="funnel.steps.s4.contactOptional">(optional, for a faster reply)</span><input type="tel" name="contacto" inputmode="tel" autocomplete="tel" placeholder="+52 55 0000 0000" data-i18n-placeholder="funnel.steps.s4.contactPh"></label>
-          <label class="field field-full"><span data-i18n="funnel.steps.s4.extra">Anything we should know (optional)</span><textarea name="extra" rows="3" placeholder="Allergies, diving level, celebrating something, seasickness…" data-i18n-placeholder="funnel.steps.s4.extraPh"></textarea></label>
-
-          <p class="funnel-privacy" data-i18n="funnel.steps.s4.privacy">🔒 We only use this to prepare your proposal. No spam, ever.</p>
-        </fieldset>
-
-        <div class="funnel-nav">
-          <button class="btn btn-ghost js-only" type="button" data-prev disabled data-i18n="funnel.back">← Back</button>
-          <button class="btn btn-primary js-only" type="button" data-next data-i18n="funnel.cont">Continue →</button>
-          <button class="btn btn-primary" type="submit" data-funnel-submit hidden>
-            <span data-submit-label data-i18n="funnel.submit">Send my expedition request</span>
-            <span class="funnel-spinner" data-submit-spinner hidden></span>
-          </button>
-        </div>
-        <p class="funnel-submit-error" data-submit-error hidden data-i18n="funnel.submitError">Something went wrong sending your request — please try again, or use the WhatsApp link above.</p>
-
-        <div class="funnel-success" data-funnel-success hidden>
-          <div class="funnel-success-check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6" pathLength="1" /></svg></div>
-          <h3><span data-i18n="funnel.successTitle">Received — thank you</span><span data-success-name></span>.</h3>
-          <p data-i18n="funnel.successBody">Thibault will review your expedition and reply within 48 hours.</p>
-          <a class="btn btn-primary btn-wide" data-success-whatsapp href="#" target="_blank" rel="noopener" data-i18n="funnel.successWaBtn">Continue the conversation on WhatsApp</a>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="section final-cta">
-    <div class="reveal">
-      <p class="kicker" style="justify-content:center" data-i18n="finalCta.kicker">Baja California Sur</p>
-      <h2 class="h2" data-i18n="finalCta.title">Your Baja expedition starts with<br><em>a conversation, not a booking form.</em></h2>
-      <a class="btn btn-primary" href="#customize" data-i18n="finalCta.cta">Customize your first Baja expedition</a>
-      <p class="final-cta-meta">24°12′37.6″ N · LA PAZ · B.C.S.</p>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer-top">
-    <div>
-      <div class="footer-brand">
-        <img class="footer-mark" src="assets/img/logo-mark-cream.png" alt="" width="1030" height="646">
-        <img class="footer-wordmark" src="assets/img/logo-wordmark-cream.png" alt="Eagle Ray Expeditions" width="1064" height="351">
+      <div>
+        <h4 data-i18n="footer.coords">Coordinates</h4>
+        <p class="mono">24°12′37.6″ N<br>110°19′ W</p>
       </div>
-      <p class="footer-claim" data-i18n="footer.claim">The Sea of Cortez<br><em>isn't visited. It's sailed.</em></p>
+      <div>
+        <h4 data-i18n="footer.alsoIn">Also based in</h4>
+        <p data-i18n="footer.alsoInBody">London · Barcelona · Lisbon</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.follow">Follow</h4>
+        <ul>
+          <!-- TODO: point to the real Eagle Ray Instagram account once it exists (currently the generic instagram.com). -->
+          <li><a href="https://instagram.com" target="_blank" rel="noopener"
+              data-i18n="footer.followInstagram">Instagram</a></li>
+          <li><a href="https://wa.me/525568090942" target="_blank" rel="noopener"
+              data-i18n="footer.followWhatsapp">WhatsApp</a></li>
+          <li><a href="mailto:hello@eagleray.expedition" data-i18n="footer.followEmail">Email</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-contact">
-      <a class="footer-big" href="https://wa.me/525568090942" target="_blank" rel="noopener">+52 55 6809 0942</a>
-      <a class="footer-big" href="mailto:hello@eagleray.expedition">hello@eagleray.expedition</a>
+    <div class="footer-legal">
+      <p>© <span data-year>2026</span> Eagle Ray Expeditions · <span data-i18n="footer.rights">All rights
+          reserved</span></p>
+      <p><span data-i18n="footer.creditsText">Photography under Creative Commons.</span> <a href="creditos.html"
+          data-i18n="footer.creditsLink">Photo credits →</a> · <a href="terms.html" data-i18n="footer.termsLink">Terms
+          &amp; Conditions</a> · <a href="privacy.html" data-i18n="footer.privacyLink">Privacy Policy</a></p>
     </div>
-  </div>
-  <div class="footer-grid">
-    <div><h4 data-i18n="footer.base">Base</h4><p data-i18n="footer.baseBody">Marina de La Paz<br>La Paz, Baja California Sur<br>Mexico</p></div>
-    <div><h4 data-i18n="footer.coords">Coordinates</h4><p class="mono">24°12′37.6″ N<br>110°19′ W</p></div>
-    <div><h4 data-i18n="footer.alsoIn">Also based in</h4><p data-i18n="footer.alsoInBody">London · Barcelona · Lisbon</p></div>
-    <div><h4 data-i18n="footer.follow">Follow</h4><ul><li><a href="https://instagram.com" target="_blank" rel="noopener" data-i18n="footer.followInstagram">Instagram</a></li><li><a href="https://wa.me/525568090942" target="_blank" rel="noopener" data-i18n="footer.followWhatsapp">WhatsApp</a></li><li><a href="mailto:hello@eagleray.expedition" data-i18n="footer.followEmail">Email</a></li></ul></div>
-  </div>
-  <div class="footer-legal">
-    <p>© <span data-year>2026</span> Eagle Ray Expeditions · <span data-i18n="footer.rights">All rights reserved</span></p>
-    <p><span data-i18n="footer.creditsText">Photography under Creative Commons.</span> <a href="creditos.html" data-i18n="footer.creditsLink">Photo credits →</a> · <a href="terms.html" data-i18n="footer.termsLink">Terms &amp; Conditions</a> · <a href="privacy.html" data-i18n="footer.privacyLink">Privacy Policy</a></p>
-  </div>
-</footer>
+  </footer>
 
-<script defer src="lib/manifest.js?v=20260722"></script>
-<script defer src="lib/i18n.js?v=20260724b"></script>
-<script defer src="main.js?v=20260724b"></script>
+  <script defer src="lib/manifest.js?v=20260722"></script>
+  <script defer src="lib/i18n.js?v=20260724b"></script>
+  <script defer src="main.js?v=20260724b"></script>
 </body>
+
 </html>
