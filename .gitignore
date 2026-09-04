@@ -1,4 +1,18 @@
 .DS_Store
+
+# dependencies
 node_modules/
-dist/
-build/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# env — never commit the Airtable key
+.env
+.env.local
+.env*.local
+
+# vercel
+.vercel
