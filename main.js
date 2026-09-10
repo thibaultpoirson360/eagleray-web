@@ -378,44 +378,6 @@
   /* =========================================================
      BOAT GALLERIES — per-card photo carousel (touch + arrows)
      ========================================================= */
-  function initBoatSliders() {
-    $$("[data-boat-slider]").forEach(function (slider) {
-      var imgs = $$("img", slider);
-      if (imgs.length < 2) return;
-      var dotsWrap = $("[data-boat-dots]", slider);
-      var prevBtn = $("[data-boat-prev]", slider);
-      var nextBtn = $("[data-boat-next]", slider);
-      var idx = 0;
-
-      var dots = imgs.map(function (_, i) {
-        var d = document.createElement("button");
-        d.type = "button";
-        d.className = "boat-slider-dot" + (i === 0 ? " is-active" : "");
-        d.setAttribute("aria-label", "Photo " + (i + 1));
-        d.addEventListener("click", function () { show(i); });
-        dotsWrap.appendChild(d);
-        return d;
-      });
-
-      function show(i) {
-        idx = (i + imgs.length) % imgs.length;
-        imgs.forEach(function (img, n) { img.classList.toggle("is-active", n === idx); });
-        dots.forEach(function (d, n) { d.classList.toggle("is-active", n === idx); });
-      }
-
-      if (prevBtn) prevBtn.addEventListener("click", function (e) { e.preventDefault(); show(idx - 1); });
-      if (nextBtn) nextBtn.addEventListener("click", function (e) { e.preventDefault(); show(idx + 1); });
-
-      var touchX = null;
-      slider.addEventListener("touchstart", function (e) { touchX = e.touches[0].clientX; }, { passive: true });
-      slider.addEventListener("touchend", function (e) {
-        if (touchX === null) return;
-        var dx = e.changedTouches[0].clientX - touchX;
-        if (Math.abs(dx) > 40) show(idx + (dx < 0 ? 1 : -1));
-        touchX = null;
-      }, { passive: true });
-    });
-  }
   /* =========================================================
      CREW — tap/click to flip a Polaroid and read the bio line
      ========================================================= */
@@ -795,7 +757,6 @@
     safe(initFauna, "initFauna");
     safe(initRutas, "initRutas");
     safe(initManifest, "initManifest");
-    safe(initBoatSliders, "initBoatSliders");
     safe(initFaq, "initFaq");
     safe(initFunnel, "initFunnel");
     safe(initContact, "initContact");
