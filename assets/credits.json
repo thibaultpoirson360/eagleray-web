@@ -109,27 +109,10 @@
     "foreign_landing_url": "https://stocksnap.io/photo/sea-ocean-NL85HFFPLX",
     "source": "stocksnap"
   },
-  "crew-denise": {
-    "src": "assets/img/crew-denise.webp",
-    "title": "Mary Steers the Boat",
-    "creator": "Jason Pratt",
-    "creator_url": "https://www.flickr.com/photos/84108876@N00",
-    "license": "by",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/84108876@N00/3690648111",
-    "source": "flickr"
-  },
   "crew-ana": {
     "src": "assets/img/crew-ana.webp",
-    "title": "Chevre cheesecake at Troquet",
-    "creator": "dalecruse",
-    "creator_url": "https://www.flickr.com/photos/91873384@N04",
-    "license": "by",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/91873384@N04/8550792097",
-    "source": "flickr"
+    "title": "Ana — Sea People photo (provided directly, not stock)",
+    "source": "ere"
   },
   "beach-cove": {
     "src": "assets/img/beach-cove.webp",
@@ -144,25 +127,13 @@
   },
   "crew-adly": {
     "src": "assets/img/crew-adly.webp",
-    "title": "Slide away. It's an oasis.",
-    "creator": "amira_a",
-    "creator_url": "https://www.flickr.com/photos/46646401@N06",
-    "license": "by",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/46646401@N06/8700052828",
-    "source": "flickr"
+    "title": "Adly — Sea People photo (provided directly, not stock)",
+    "source": "ere"
   },
   "crew-antoine": {
     "src": "assets/img/crew-antoine.webp",
-    "title": "Top Chef with Stefan... if you can't stand the heat",
-    "creator": "geishaboy500",
-    "creator_url": "https://www.flickr.com/photos/49503154413@N01",
-    "license": "by",
-    "license_version": "2.0",
-    "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/49503154413@N01/4113008850",
-    "source": "flickr"
+    "title": "Antoine — Sea People photo (provided directly, not stock)",
+    "source": "ere"
   },
   "manta-ray": {
     "src": "assets/img/manta-ray.webp",
