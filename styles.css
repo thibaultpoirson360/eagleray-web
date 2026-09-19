@@ -1716,29 +1716,37 @@ padding-top: .2rem;
 
 /* ============ 14. BOATS ============ */
 .boats-grid {
-  display: grid;
-  gap: 2.4rem;
+  display: flex;
+  gap: 2rem;
   margin-top: 3.4rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+  margin-inline: calc(var(--pad) * -1);
+  padding-inline: var(--pad);
 }
 
-@media (min-width: 720px) {
-  .boats-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.boats-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .boat-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: min(100vw, 550px);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
   padding: 1.8rem;
-  transition: border-color .5s var(--ease-out), transform .6s var(--ease-out);
+  /* transition: border-color .5s var(--ease-out), transform .6s var(--ease-out); */
 }
 
-.boat-card:hover {
+/* .boat-card:hover {
   border-color: var(--line-strong);
   transform: translateY(-3px);
-}
+} */
 
 .boat-card h3 {
   font-family: var(--display);
@@ -1749,7 +1757,7 @@ padding-top: .2rem;
   margin: -1.8rem -1.8rem 1.8rem;
   border-radius: var(--r-lg) var(--r-lg) 0 0;
   overflow: hidden;
-  aspect-ratio: 4/3;
+  aspect-ratio: 4/5;
   background: var(--bg);
 }
 
@@ -1757,6 +1765,7 @@ padding-top: .2rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .boat-tagline {
@@ -1770,6 +1779,33 @@ padding-top: .2rem;
 
 .boat-card p:last-of-type {
   color: var(--ink-2);
+}
+
+.boats-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.6rem;
+}
+
+.boats-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  padding: .3rem;
+  /* background-clip: content-box; */
+  transition: background-color .3s var(--ease-out), transform .3s var(--ease-out);
+}
+
+.boats-dot:hover {
+  background-color: var(--mute);
+}
+
+.boats-dot.is-active {
+  background-color: var(--ink);
+  transform: scale(1.2);
 }
 
 .boat-specs {
@@ -1848,8 +1884,9 @@ padding-top: .2rem;
   position: relative;
   flex: 0 0 auto;
   scroll-snap-align: start;
-  width: min(88vw, 620px);
-  display: grid;
+  width: min(100vw, 620px);
+  display: flex;
+  flex-direction: column;
   gap: 1.4rem;
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
@@ -1859,27 +1896,42 @@ padding-top: .2rem;
 
 @media (min-width: 640px) {
   .crew-card {
-    grid-template-columns: 210px 1fr;
+    flex-direction: row;
     gap: 1.8rem;
     padding: 1.8rem;
   }
+
+  .crew-card-photo {
+    flex: 0 0 210px;
+  }
+
+  .crew-card-body {
+    flex: 1;
+  }
 }
+
 
 .crew-card-photo {
   border-radius: var(--r);
   overflow: hidden;
-  aspect-ratio: 4/5;
   background: var(--bg);
+}
+
+@media (max-width: 639px) {
+  .crew-card-photo {
+    aspect-ratio: 4/5;
+  }
 }
 
 .crew-card-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .crew-card-body {
-  align-self: center;
+  align-self: top;
 }
 
 .crew-card-label {
@@ -2708,10 +2760,10 @@ padding-top: .2rem;
   transition: transform .55s var(--ease-soft), box-shadow .4s;
 }
 
-.has-tilt:hover {
+/* .has-tilt:hover {
   transition-duration: .15s;
   box-shadow: 0 22px 44px -22px rgba(14, 27, 43, .28);
-}
+} */
 
 /* ============ 22. CREDITS PAGE ============ */
 .page-credits {

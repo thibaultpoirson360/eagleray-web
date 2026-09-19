@@ -384,6 +384,55 @@
   /* =========================================================
      FAQ : one-at-a-time accordion over native <details>
      ========================================================= */
+  /* ---------- Horizontal slider dots (boats, crew…) ---------- */
+  function initSliderDots(sliderSel, dotsSel, itemSel, dotClass, label) {
+    var slider = $(sliderSel);
+    var dots = $(dotsSel);
+    if (!slider || !dots) return;
+    var cards = $$(itemSel, slider);
+    if (!cards.length) return;
+
+    cards.forEach(function (card, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = dotClass;
+      dot.setAttribute("aria-label", label + " " + (i + 1));
+      dot.addEventListener("click", function () {
+        slider.scrollTo({ left: card.offsetLeft - slider.offsetLeft, behavior: reduced ? "auto" : "smooth" });
+      });
+      dots.appendChild(dot);
+    });
+    var dotEls = $$("." + dotClass, dots);
+
+    var setActive = function () {
+      var mid = slider.scrollLeft + slider.clientWidth / 2;
+      var closest = 0;
+      var closestDist = Infinity;
+      cards.forEach(function (card, i) {
+        var dist = Math.abs((card.offsetLeft - slider.offsetLeft + card.offsetWidth / 2) - mid);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+      dotEls.forEach(function (d, i) { d.classList.toggle("is-active", i === closest); });
+    };
+
+    var ticking = false;
+    slider.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { setActive(); ticking = false; });
+    });
+    window.addEventListener("resize", setActive);
+    setActive();
+  }
+
+  function initBoatsDots() {
+    initSliderDots("[data-boats-slider]", "[data-boats-dots]", ".boat-card", "boats-dot", "Go to boat");
+  }
+
+  function initCrewDots() {
+    initSliderDots("[data-crew-slider]", "[data-crew-dots]", ".crew-card", "boats-dot", "Go to crew member");
+  }
+
   function initFaq() {
     var wrap = $("[data-faq]");
     if (!wrap) return;
@@ -757,6 +806,8 @@
     safe(initFauna, "initFauna");
     safe(initRutas, "initRutas");
     safe(initManifest, "initManifest");
+    safe(initBoatsDots, "initBoatsDots");
+    safe(initCrewDots, "initCrewDots");
     safe(initFaq, "initFaq");
     safe(initFunnel, "initFunnel");
     safe(initContact, "initContact");
