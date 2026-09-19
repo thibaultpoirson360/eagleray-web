@@ -1,5 +1,5 @@
 /* =============================================================
-   EAGLE RAY EXPEDITIONS — v3 — main.js
+   EAGLE RAY EXPEDITIONS : v3 : main.js
    Vanilla JS, single IIFE, no build step, no external dependency.
    ============================================================= */
 (function () {
@@ -175,7 +175,7 @@
   }
 
   /* =========================================================
-     SOUNDER — signature depth-gauge rail
+     SOUNDER : signature depth-gauge rail
      ========================================================= */
   function initSounder() {
     var rail = $(".sounder");
@@ -267,7 +267,7 @@
   }
 
   /* =========================================================
-     FAUNA — interactive species selector (real photo stage)
+     FAUNA : interactive species selector (real photo stage)
      ========================================================= */
   var faunaActiveSpecies = "whale-shark";
   function renderFaunaCaption() {
@@ -307,7 +307,7 @@
   }
 
   /* =========================================================
-     RUTAS / ROUTES — accessible tabs
+     RUTAS / ROUTES : accessible tabs
      ========================================================= */
   function initRutas() {
     var wrap = $("[data-rutas]");
@@ -341,7 +341,7 @@
   }
 
     /* =========================================================
-     ACTIVITIES — ship's manifest (click to mark, live counter)
+     ACTIVITIES : ship's manifest (click to mark, live counter)
      ========================================================= */
   function renderManifestCount() {
     var out = $("[data-manifest-count]");
@@ -376,13 +376,13 @@
   }
 
   /* =========================================================
-     BOAT GALLERIES — per-card photo carousel (touch + arrows)
+     BOAT GALLERIES : per-card photo carousel (touch + arrows)
      ========================================================= */
   /* =========================================================
-     CREW — tap/click to flip a Polaroid and read the bio line
+     CREW : tap/click to flip a Polaroid and read the bio line
      ========================================================= */
   /* =========================================================
-     FAQ — one-at-a-time accordion over native <details>
+     FAQ : one-at-a-time accordion over native <details>
      ========================================================= */
   function initFaq() {
     var wrap = $("[data-faq]");
@@ -397,7 +397,7 @@
   }
 
   /* =========================================================
-     FUNNEL — 4 steps → captures the lead (Formspree) and hands
+     FUNNEL : 4 steps → captures the lead (Formspree) and hands
      off to a pre-drafted WhatsApp message. Autosaves as you go.
      ========================================================= */
   function initFunnel() {
@@ -450,16 +450,16 @@
       var L = [];
       L.push(t("funnel.msgIntro") || "Hi Thibault! I'd like to customize an Eagle Ray expedition.");
       L.push("");
-      L.push("• " + (t("funnel.msgDuration") || "Duration") + ": " + (val("dias") || "—"));
-      L.push("• " + (t("funnel.msgFor") || "For") + ": " + (val("quien") || "—"));
-      L.push("• " + (t("funnel.msgGuests") || "Guests") + ": " + (val("invitados") || "—"));
-      L.push("• " + (t("funnel.msgRoute") || "Route focus") + ": " + (val("foco") || "—"));
-      L.push("• " + (t("funnel.msgPriority") || "Top priority") + ": " + (val("prioridad") || "—"));
+      L.push("• " + (t("funnel.msgDuration") || "Duration") + ": " + (val("dias") || ":"));
+      L.push("• " + (t("funnel.msgFor") || "For") + ": " + (val("quien") || ":"));
+      L.push("• " + (t("funnel.msgGuests") || "Guests") + ": " + (val("invitados") || ":"));
+      L.push("• " + (t("funnel.msgRoute") || "Route focus") + ": " + (val("foco") || ":"));
+      L.push("• " + (t("funnel.msgPriority") || "Top priority") + ": " + (val("prioridad") || ":"));
       L.push("• " + (t("funnel.msgDates") || "Dates") + ": " + fechas());
-      L.push("• " + (t("funnel.msgBoat") || "Boat") + ": " + (val("barco") || "—"));
+      L.push("• " + (t("funnel.msgBoat") || "Boat") + ": " + (val("barco") || ":"));
       L.push("");
-      L.push("• " + (t("funnel.msgName") || "Name") + ": " + (val("nombre") || "—"));
-      L.push("• " + (t("funnel.msgEmail") || "Email") + ": " + (val("email") || "—"));
+      L.push("• " + (t("funnel.msgName") || "Name") + ": " + (val("nombre") || ":"));
+      L.push("• " + (t("funnel.msgEmail") || "Email") + ": " + (val("email") || ":"));
       var contacto = val("contacto");
       if (contacto) L.push("• " + (t("funnel.msgContact") || "WhatsApp") + ": " + contacto);
       var extra = val("extra");
@@ -500,7 +500,7 @@
           clearTimeout(saveDraft._t);
           saveDraft._t = setTimeout(function () { autosaveBadge.classList.remove("is-visible"); }, 1800);
         }
-      } catch (e) { /* storage unavailable — fail silently */ }
+      } catch (e) { /* storage unavailable : fail silently */ }
     }
 
     function clearDraft() { try { localStorage.removeItem(FUNNEL_DRAFT_KEY); } catch (e) {} }
@@ -582,13 +582,13 @@
     }
 
     /* ---------- Partial capture: fires once, silently, the moment a valid
-       email is entered — so a lead is captured even if the visitor never
+       email is entered : so a lead is captured even if the visitor never
        reaches the final submit. Does not touch the UI. ---------- */
     function maybeSendPartial() {
       if (partialSent) return;
       if (!isValidEmail(val("email"))) return;
       partialSent = true;
-      var payload = Object.assign({}, payloadAnswers(), { _status: "partial — reached contact step, did not submit" });
+      var payload = Object.assign({}, payloadAnswers(), { _status: "partial : reached contact step, did not submit" });
       fetch(FORMSPREE_ENDPOINT, {
         method: "POST", headers: { "Accept": "application/json", "Content-Type": "application/json" }, body: JSON.stringify(payload)
       }).catch(function () { partialSent = false; });
@@ -598,7 +598,7 @@
       if (document.visibilityState !== "hidden") return;
       if (partialSent || !isValidEmail(val("email"))) return;
       partialSent = true;
-      var payload = Object.assign({}, payloadAnswers(), { _status: "partial — tab closed after entering email" });
+      var payload = Object.assign({}, payloadAnswers(), { _status: "partial : tab closed after entering email" });
       try {
         navigator.sendBeacon(FORMSPREE_ENDPOINT, new Blob([JSON.stringify(payload)], { type: "application/json" }));
       } catch (e) { partialSent = false; }
@@ -694,7 +694,7 @@
   }
 
   /* =========================================================
-     I18N — apply translations + language switcher
+     I18N : apply translations + language switcher
      ========================================================= */
   function detectLang() {
     try {
