@@ -1,0 +1,80 @@
+/* Design tokens verified in docs/tailwind-migration-audit.md §1g. Tailwind v4, CSS-first: no tailwind.config.js. */
+@import "tailwindcss";
+
+/* Only needed if the JS state hooks are used as variants (see §3, X-list) */
+@custom-variant js (.js &);
+@custom-variant no-js (html:not(.js) &);
+
+@theme {
+  /* ---- colours (namespace --color-*) ---- */
+  --color-ink: #0e1b2b;
+  --color-ink-hover: #1b2f47;   /* only outlier: btn-primary hover */
+  --color-surface: #f7f6f1;
+  /* white = built-in --color-white (#fff). Old --ink-2/--mute/--line* = ink/74, /52, /14, /8, /26 */
+
+  /* ---- fonts (namespace --font-*) ---- */
+  --font-display: "TASA Explorer", "Fraunces", Georgia, serif;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* ---- radius (namespace --radius-*) ---- */
+  --radius-sm: 3px;
+  --radius: 6px;        /* REQUIRED: bare `rounded` reads --radius; Tailwind default is 0.25rem (4px) */
+  --radius-md: 6px;     /* explicit alias of the same 6px, safer than bare `rounded` */
+  --radius-lg: 10px;
+
+  /* ---- easing (namespace --ease-*) ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* NOTE: overrides Tailwind's built-in ease-out (0,0,.2,1) */
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1); /* locked in CLAUDE.md; currently unreferenced (audit §1d) */
+
+  /* ---- layout (spacing / container namespaces) ---- */
+  --spacing-pad: clamp(1.25rem, 5vw, 3.5rem);     /* px-pad, -mx-pad, pl-pad */
+  --spacing-nav: 84px;                            /* h-nav; solid state = 72px */
+  --spacing-section: clamp(4.5rem, 10vw, 7.5rem); /* py-section */
+  --spacing-section-head: clamp(2.6rem, 6vw, 4.5rem);
+  --spacing-hero-b: clamp(4rem, 10vw, 6rem);
+  --spacing-quote: clamp(3rem, 8vw, 5rem);
+  --spacing-funnel: clamp(1.6rem, 4vw, 2.8rem);
+  --spacing-footer-t: clamp(4rem, 10vh, 6rem);
+  --container-site: 80rem;                        /* max-w-site = 1280px */
+  --container-form: 780px;                        /* .customize-inner */
+
+  /* ---- fluid type (namespace --text-*) ---- */
+  --text-h2: clamp(2.1rem, 4.8vw, 3.7rem);
+  --text-hero: clamp(2.2rem, 5.6vw, 4.6rem);
+  --text-lede: clamp(1.04rem, 1.6vw, 1.24rem);
+  --text-hero-sub: clamp(1rem, 1.6vw, 1.2rem);
+  --text-quote-lead: clamp(1.4rem, 3vw, 2rem);    /* founder kicker */
+  --text-quote: clamp(1.3rem, 3vw, 2rem);
+  --text-legend: clamp(1.3rem, 3.2vw, 1.9rem);
+  --text-footer-claim: clamp(1.4rem, 2.8vw, 2rem);
+  --text-footer-big: clamp(1.3rem, 3vw, 1.8rem);
+  --text-nav-mobile: clamp(1.5rem, 7vw, 2rem);
+
+  /* ---- animations (namespace --animate-*; keyframes inside @theme) ---- */
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+  --animate-scroll-cue: scroll-cue 1.8s ease-in-out infinite;
+  --animate-step-in: step-in 0.5s var(--ease-soft) both;
+  --animate-draw-check: draw-check 0.6s var(--ease-out) 0.1s forwards;
+  --animate-hero-zoom: hero-zoom 34s ease-in-out infinite;
+  --animate-spin-fast: spin 0.8s linear infinite;   /* reuses Tailwind's built-in `spin` keyframes */
+
+  @keyframes pulse-dot { 0%,100% { opacity: .4 } 50% { opacity: 1 } }
+  @keyframes scroll-cue {
+    0% { transform: translateY(0); opacity: 1 }
+    70% { opacity: 0 }
+    100% { transform: translateY(14px); opacity: 0 }
+  }
+  @keyframes step-in { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+  @keyframes draw-check { to { stroke-dashoffset: 0 } }
+  @keyframes hero-zoom {
+    0%,100% { transform: scale(1.04) translate3d(0,0,0) }
+    50% { transform: scale(1.13) translate3d(-1%,-1%,0) }
+  }
+}
+
+/* Non-theme runtime vars (JS/media driven, so kept out of @theme) */
+:root { --rail: 0px; }
+@media (min-width: 64rem) { :root { --rail: 84px; } }  /* was 1280px; see §5. Consider gating on .js */

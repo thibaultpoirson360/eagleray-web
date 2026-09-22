@@ -16,3 +16,12 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# tinacms (self-hosted): generated at build time by `tinacms build|dev`
+tina/__generated__/
+public/admin/
+.tina/
+
+# astro
+dist/
+.astro/

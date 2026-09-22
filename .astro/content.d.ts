@@ -1,15 +1,4 @@
 declare module 'astro:content' {
-	interface Render {
-		'.mdx': Promise<{
-			Content: import('astro').MDXContent;
-			headings: import('astro').MarkdownHeading[];
-			remarkPluginFrontmatter: Record<string, any>;
-			components: import('astro').MDXInstance<{}>['components'];
-		}>;
-	}
-}
-
-declare module 'astro:content' {
 	export interface RenderResult {
 		Content: import('astro/runtime/server/index.js').AstroComponentFactory;
 		headings: import('astro').MarkdownHeading[];
@@ -135,79 +124,7 @@ declare module 'astro:content' {
 		: any;
 
 	type DataEntryMap = {
-		"boats": Record<string, {
-  id: string;
-  body?: string;
-  collection: "boats";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"crew": Record<string, {
-  id: string;
-  body?: string;
-  collection: "crew";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"dayInLife": Record<string, {
-  id: string;
-  body?: string;
-  collection: "dayInLife";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"faq": Record<string, {
-  id: string;
-  body?: string;
-  collection: "faq";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"landingPages": Record<string, {
-  id: string;
-  body?: string;
-  collection: "landingPages";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"legalPages": Record<string, {
-  id: string;
-  body?: string;
-  collection: "legalPages";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"routes": Record<string, {
-  id: string;
-  body?: string;
-  collection: "routes";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-"wildlife": Record<string, {
-  id: string;
-  body?: string;
-  collection: "wildlife";
-  data: any;
-  rendered?: RenderedContent;
-  filePath?: string;
-  digest?: string | number;
-}>;
-
+		
 	};
 
 	type ExtractLoaderTypes<T> = T extends import('astro/loaders').LiveLoader<

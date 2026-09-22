@@ -1,0 +1,18 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "src/**/*", "api/**/*", "tina/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".vercel",
+    "public/admin",
+    "tina/__generated__",
+    "tina/collections",
+    "tina/shared",
+    "tina/config.ts"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  }
+}

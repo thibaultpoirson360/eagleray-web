@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/api/tina/:path*", "destination": "/api/tina/backend" }
+  ]
+}
