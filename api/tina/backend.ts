@@ -9,6 +9,6 @@
  * @astrojs/vercel adapter. First deploy MUST run the smoke test in
  * docs/tina-setup.md section 2 before anything else is trusted.
  */
-import handler from "../../tina/backend";
+import handler from "../../tina/backend.js";
 
 export default handler;

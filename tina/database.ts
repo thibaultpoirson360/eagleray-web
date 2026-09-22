@@ -14,7 +14,7 @@
  */
 import { createDatabase, createLocalDatabase } from "@tinacms/datalayer";
 import { RedisLevel } from "upstash-redis-level";
-import { AttributedGitHubProvider } from "./git-provider";
+import { AttributedGitHubProvider } from "./git-provider.js";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
