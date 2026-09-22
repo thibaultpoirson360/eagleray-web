@@ -13,8 +13,17 @@
  * Deployed: GitHub PAT + Upstash Redis (REST). See docs/tina-setup.md.
  */
 import { createDatabase, createLocalDatabase } from "@tinacms/datalayer";
-import { RedisLevel } from "upstash-redis-level";
+// upstash-redis-level ships a UMD-wrapped CJS build: its `exports.RedisLevel =`
+// assignment happens inside a nested factory function, not at the module's
+// top level. Node's real ESM loader (confirmed in production:
+// "does not provide an export named 'RedisLevel'") statically scans only the
+// top level for named CJS exports to synthesize as ESM bindings, so it can't
+// see this one and only produces a `default` pointing at the whole
+// `module.exports` object. Import the default and destructure instead.
+import UpstashRedisLevel from "upstash-redis-level";
 import { AttributedGitHubProvider } from "./git-provider.js";
+
+const { RedisLevel } = UpstashRedisLevel;
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
