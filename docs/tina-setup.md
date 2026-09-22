@@ -26,7 +26,7 @@ next-auth 4.24.15. Checked 2026-09-19.
 
 ## 1. What self-hosted Tina requires today
 
-Docs (`tina.io/docs/reference/self-hosted/overview` and sub-pages): four pieces, none optional.
+Docs (`tina.io/docs/reference/self-hosted/overview` and sub-pages): four pieces, none optional
 
 | Piece | Job | What we use |
 |---|---|---|
