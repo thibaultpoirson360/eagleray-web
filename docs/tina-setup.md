@@ -16,12 +16,13 @@ next-auth 4.24.15. Checked 2026-09-19.
 | Sample docs for hero / crew / navPages / funnel round-trip through GraphQL; `_sys.breadcrumbs[0]` is the locale (temp files, removed) | VERIFIED |
 | Editor allowlist: `authorize` returns the user for an allowlisted email, `null` for a stranger (local DB) | VERIFIED |
 | Backend handler bundles with esbuild; unauthenticated `POST /api/tina/gql` gives 401; Auth.js answers under `/api/tina/auth/*`; Google sign-in URL is built with `redirect_uri=.../api/tina/auth/callback/google` (dummy client id, local Node harness) | VERIFIED |
-| Real Google sign-in, session -> allowlist -> 200 on `/gql` | UNVERIFIED (needs Google OAuth client) |
-| Commit-author attribution to the signed-in editor | UNVERIFIED (needs GitHub PAT + repo) |
-| Upstash Redis index, `tinacms build` indexing on Vercel | UNVERIFIED (needs Upstash DB) |
-| `api/tina/backend.ts` + `vercel.json` rewrite actually deployed by Vercel alongside `@astrojs/vercel` | **UNVERIFIED and at risk — see section 2** |
-| `astro dev` / `astro build` | Not runnable yet: `redirectToDefaultLocale` needs `src/pages/index.astro` (section 6) |
-| Click-to-edit on the Astro site | Not testable yet (no pages); mechanism verified from package source, section 6 |
+| Real Google sign-in, session -> allowlist -> 200 on `/gql` | **VERIFIED on production** (`ere.kbdreams.com`, 2026-09-23): `curl /api/tina/auth/providers` returns the real Google provider JSON, and a live Google sign-in through `/admin/index.html` completed successfully |
+| `tinacms-authjs`'s "Catch-all api route ... with specified Auth.js provider ['Google'] not supported" warning (section 2) | **RESOLVED — confirmed harmless.** It's a non-fatal `console.warn`; a real end-to-end Google sign-in against the deployed catch-all route worked. No routing restructure needed |
+| `api/tina/backend.ts` + `vercel.json` rewrite actually deployed by Vercel alongside `@astrojs/vercel` | **VERIFIED on production** — the function is reached and invoked correctly (see section 2 for the two runtime bugs that had to be fixed first) |
+| Commit-author attribution to the signed-in editor | Still UNVERIFIED — needs an actual content edit + a look at `git log` on the content repo to confirm the `Edited-by:` trailer and author appear as expected |
+| Upstash Redis index, `tinacms build` indexing on Vercel | **VERIFIED on production** (the deploy that returned working `/gql`/`/auth` responses indexed successfully) |
+| `astro dev` / `astro build` | Runs; a placeholder `/en/` page exists (`src/pages/en/index.astro`) satisfying `redirectToDefaultLocale`. No real homepage components yet |
+| Click-to-edit on the Astro site | Still not testable — no page components use `<TinaIsland>` yet; mechanism verified from package source only, section 6 |
 | Vercel Edit Mode / Content Link with Tina on Astro | UNVERIFIED and probably unsupported — section 7 |
 
 ## 1. What self-hosted Tina requires today
@@ -55,8 +56,48 @@ deploy, so the Redis instance is disposable. It is one more service to provision
   confirm that a root `api/` folder is merged into it.
 
 So the client's decision ("Vercel Functions alongside Astro") is honoured, but the exact
-mechanism (root `api/` + rewrite) is **the single riskiest unverified item**. Two
-docs disagree and I cannot deploy from here.
+mechanism (root `api/` + rewrite) was **the single riskiest unverified item** at write
+time. Two docs disagree, and it could not be confirmed without a real deploy.
+
+**Update, 2026-09-23 — confirmed working on production** (`ere.kbdreams.com`). Root
+`api/` + the `vercel.json` rewrite IS reached and invoked correctly alongside
+`@astrojs/vercel`; none of the fallbacks below were needed. Getting there required
+fixing three separate runtime bugs, in order, each only visible from real Vercel
+function logs (never from a local build or from `tsc`):
+
+1. **`ERR_MODULE_NOT_FOUND: Cannot find module '/var/task/tina/backend'`** — exactly
+   the risk flagged below under "Other deploy notes." `package.json` is `"type":
+   "module"`, so Vercel runs these functions under real Node ESM, which requires an
+   explicit extension on every relative import — including one inside
+   `tina/__generated__/databaseClient.ts` (`import database from "../database"`),
+   which `tinacms build` regenerates on every build. Fixed by adding `.js` to every
+   relative import reachable from the backend, plus a small post-build patch script
+   (`scripts/patch-tina-generated.mjs`, wired into `npm run build`/`tina:build`) that
+   fixes the generated file's import after every regeneration, since hand-editing a
+   gitignored generated file doesn't survive the next build.
+2. **`SyntaxError: The requested module 'upstash-redis-level' does not provide an
+   export named 'RedisLevel'`** — that package is UMD-wrapped CJS; its
+   `exports.RedisLevel =` assignment happens inside a nested factory function, which
+   Node's static top-level-only CJS/ESM interop scan can't see. Fixed by importing
+   the default export and destructuring `RedisLevel` off it (`tina/database.ts`).
+3. **Not yet hit in production, caught locally first**: next-auth's Google provider
+   is Babel-style CJS (`exports.default = Google; exports.__esModule = true;`). Real
+   Node ESM's CJS interop binds a default import to the *whole* `module.exports`
+   object even when it already has its own `.default` property, giving
+   `{ default: Google }` instead of `Google` — a genuine runtime behaviour
+   TypeScript's `esModuleInterop` doesn't reproduce, so this type-checked fine and
+   would have thrown "is not a function" only at actual sign-in. Caught by
+   transpiling the real backend entry to `.js` and executing the import graph under
+   genuine Node ESM with dummy credentials — the closest local reproduction of the
+   Vercel runtime, and worth doing before every deploy of this backend rather than
+   trusting `tsc` alone. Fixed with `createRequire` (`tina/auth.ts`), which sidesteps
+   the ESM loader's interop and gets the plain single-wrapped shape a CJS `require()`
+   always has.
+
+None of these three would have been caught by `astro build`, `tsc`, or a local
+`tinacms build` alone — all three only manifest under real Node ESM module
+resolution/interop, which nothing short of an actual Vercel deploy (or the
+transpile-and-execute simulation in bug 3) exercises.
 
 **Smoke test — run on the very first Vercel deploy, before anything else:**
 
@@ -88,8 +129,10 @@ Other deploy notes for `api/`:
   peer dependency of `tinacms-authjs`, kept in devDependencies. Watch the function size on
   first deploy.
 - `tinacms-authjs` logs "Catch-all api route ... with specified Auth.js provider ['Google']
-  not supported" on cold start. It is a `console.warn` from its `initialize()`; the local
-  harness confirmed the Google flow is served regardless. Expect it in the logs.
+  not supported" on cold start. It is a `console.warn` from its `initialize()` — confirmed
+  harmless both locally and on production: a real end-to-end Google sign-in against the
+  deployed catch-all route completed successfully on 2026-09-23. Expect it in the logs;
+  it does not indicate a problem.
 
 ## 3. Auth: Auth.js + Google, and how it is mounted
 
