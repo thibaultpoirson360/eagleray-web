@@ -4,7 +4,7 @@ Copy-paste the relevant block into Claude Code at the start of each session.
 `CLAUDE.md` and everything in `.claude/agents/` should already be in the repo
 before Session 1 starts.
 
-## Session 1 — Foundation
+## Session 1 — Foundation.
 
 ```
 Set up the foundation for the Eagle Ray Expeditions Astro migration, per CLAUDE.md.
