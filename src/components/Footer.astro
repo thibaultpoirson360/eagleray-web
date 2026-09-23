@@ -1,0 +1,197 @@
+---
+/**
+ * Footer — `<footer class="footer">` in the source index.html
+ * (lines 607-654), CSS at styles.css "20. FOOTER" (L2609-2752). Page
+ * chrome, not a homepage section — lives in BaseLayout like Nav, shown
+ * on every page.
+ *
+ * New schema (tina/collections/footer.ts) — see that file's own comment
+ * for the reasoning, especially why the "Follow" links' hrefs (and the
+ * two big contact links' hrefs) come from siteSettings.contact instead
+ * of duplicating that data here: this replaces main.js's initContact(),
+ * which patched wa.me/instagram/mailto hrefs at runtime from
+ * window.__BRAND__. Doing it at build time from the same Tina data is
+ * strictly better — no flash of a placeholder number, works with no JS.
+ *
+ * The copyright year is the one piece of initContact() actually kept
+ * (as initYear() in src/scripts/chrome.ts) rather than replaced: a
+ * build-time year would silently go stale for a copyright notice on a
+ * site that isn't rebuilt every January.
+ *
+ * `<section class="section final-cta">` sits between `</main>` and this
+ * footer in source (a 7th homepage section the audit flagged, §2a.2) —
+ * not built, not part of this component, not decided yet. Flagged again
+ * here since Footer is now the thing right after it.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { FooterQuery, SiteSettingsQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  footer: FooterQuery["footer"];
+  siteSettings: SiteSettingsQuery["siteSettings"];
+}
+
+const { footer, siteSettings } = Astro.props;
+const { contactDisplay, base, coords, legal } = footer;
+const contact = siteSettings.contact;
+const waHref = contact?.whatsapp ? `https://wa.me/${contact.whatsapp}` : undefined;
+const mailHref = contact?.email ? `mailto:${contact.email}` : undefined;
+---
+
+<footer class="footer mx-auto max-w-site border-t border-ink/14 pt-footer-t pr-pad pb-[2.4rem] pl-[calc(var(--spacing-pad)+var(--rail))]">
+  <div class="footer-top grid gap-[2.2rem] lg:grid-cols-[1.4fr_1fr] lg:items-end">
+    <div>
+      <div class="footer-brand mb-6 flex items-center gap-[.9rem] max-md:justify-center">
+        <img class="footer-mark h-10.5 w-auto opacity-[.95]" src="/assets/img/logo-mark-navy.png" alt="" width="1030" height="646" />
+        <img
+          class="footer-wordmark h-7.5 w-auto opacity-[.95]"
+          src="/assets/img/logo-wordmark-navy.png"
+          alt="Eagle Ray Expeditions"
+          width="1064"
+          height="351"
+        />
+      </div>
+      {
+        footer.claim && (
+          <p class="footer-claim font-display text-footer-claim max-md:text-center" data-tina-field={tinaField(footer, "claim")}>
+            {footer.claim}
+            {footer.claimEmphasis && (
+              <>
+                <br />
+                <em class="text-ink" data-tina-field={tinaField(footer, "claimEmphasis")}>
+                  {footer.claimEmphasis}
+                </em>
+              </>
+            )}
+          </p>
+        )
+      }
+    </div>
+    <div class="footer-contact grid gap-2 max-md:justify-items-center max-md:text-center">
+      {waHref && contactDisplay?.phone && (
+        <a
+          class="footer-big inline-block font-display text-footer-big text-ink transition-transform duration-500 ease-out hover:translate-x-1.5"
+          href={waHref}
+          target="_blank"
+          rel="noopener"
+          data-tina-field={tinaField(contactDisplay, "phone")}
+        >
+          {contactDisplay.phone}
+        </a>
+      )}
+      {mailHref && contactDisplay?.email && (
+        <a
+          class="footer-big inline-block font-display text-footer-big text-ink transition-transform duration-500 ease-out hover:translate-x-1.5"
+          href={mailHref}
+          data-tina-field={tinaField(contactDisplay, "email")}
+        >
+          {contactDisplay.email}
+        </a>
+      )}
+    </div>
+  </div>
+
+  <div class="footer-grid mt-14 grid gap-[2.2rem] border-t border-ink/8 pt-[2.2rem] max-md:text-center max-md:justify-items-center md:grid-cols-4">
+    {base && (
+      <div>
+        {base.heading && (
+          <h4 class="mb-[.8rem] font-mono text-[.62rem] tracking-[.16em] text-ink uppercase not-italic" data-tina-field={tinaField(base, "heading")}>
+            {base.heading}
+          </h4>
+        )}
+        <p class="text-[.88rem] text-ink/52 leading-[1.9]">
+          {base.lines?.map((line, i) => (
+            <>
+              {i > 0 && <br />}
+              {line}
+            </>
+          ))}
+        </p>
+      </div>
+    )}
+    {coords && (
+      <div>
+        {coords.heading && (
+          <h4 class="mb-[.8rem] font-mono text-[.62rem] tracking-[.16em] text-ink uppercase not-italic" data-tina-field={tinaField(coords, "heading")}>
+            {coords.heading}
+          </h4>
+        )}
+        <p class="font-mono text-[.88rem] text-ink/52 leading-[1.9]">
+          {coords.lines?.map((line, i) => (
+            <>
+              {i > 0 && <br />}
+              {line}
+            </>
+          ))}
+        </p>
+      </div>
+    )}
+    <div>
+      {footer.followHeading && (
+        <h4 class="mb-[.8rem] font-mono text-[.62rem] tracking-[.16em] text-ink uppercase not-italic" data-tina-field={tinaField(footer, "followHeading")}>
+          {footer.followHeading}
+        </h4>
+      )}
+      <ul class="text-[.88rem] text-ink/52 leading-[1.9]">
+        {contact?.instagram && (
+          <li>
+            <a class="hover:text-ink hover:underline" href={contact.instagram} target="_blank" rel="noopener">
+              Instagram
+            </a>
+          </li>
+        )}
+        {waHref && (
+          <li>
+            <a class="hover:text-ink hover:underline" href={waHref} target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </li>
+        )}
+        {mailHref && (
+          <li>
+            <a class="hover:text-ink hover:underline" href={mailHref}>
+              Email
+            </a>
+          </li>
+        )}
+      </ul>
+    </div>
+  </div>
+
+  {legal && (
+    <div class="footer-legal mt-[2.6rem] flex flex-wrap justify-between gap-[.6rem_2rem] border-t border-ink/8 pt-6 font-mono text-[.72rem] text-ink/52 opacity-[.8] max-md:flex-col max-md:items-center max-md:text-center">
+      <p>
+        © <span data-year>{new Date().getFullYear()}</span> Eagle Ray Expeditions
+        {legal.rights && (
+          <>
+            {' '}· <span data-tina-field={tinaField(legal, "rights")}>{legal.rights}</span>
+          </>
+        )}
+      </p>
+      <p>
+        {legal.creditsText && <span data-tina-field={tinaField(legal, "creditsText")}>{legal.creditsText}</span>}{' '}
+        {legal.creditsLabel && (
+          <a class="underline" href="/creditos.html" data-tina-field={tinaField(legal, "creditsLabel")}>
+            {legal.creditsLabel}
+          </a>
+        )}
+        {legal.termsLabel && (
+          <>
+            {' '}·{' '}
+            <a class="underline" href="/terms.html" data-tina-field={tinaField(legal, "termsLabel")}>
+              {legal.termsLabel}
+            </a>
+          </>
+        )}
+        {legal.privacyLabel && (
+          <>
+            {' '}·{' '}
+            <a class="underline" href="/privacy.html" data-tina-field={tinaField(legal, "privacyLabel")}>
+              {legal.privacyLabel}
+            </a>
+          </>
+        )}
+      </p>
+    </div>
+  )}
+</footer>

@@ -1,0 +1,173 @@
+---
+/**
+ * Nav — `<nav class="nav">` + the mobile overlay `<div class="nav-mobile">`
+ * in the source index.html (lines 44-84), CSS at styles.css "3. NAV"
+ * (L437-717). Page chrome, not a homepage section — shown on every page,
+ * so it lives in BaseLayout, not src/pages/en/index.astro.
+ *
+ * The scroll-solidify color swap (.is-solid) and the mobile-menu open
+ * state are both JS-toggled and can't be resolved once at Astro render
+ * time — those live as real CSS in global.css (see the comment there),
+ * referenced here via Tailwind's CSS-var arbitrary syntax
+ * (text-(--nav-fg) etc.) so every nav-scoped color is one class toggle
+ * instead of being duplicated per state. Neither initNav() (the scroll
+ * listener + toggle click handler) nor initReveals()/initTilt()/
+ * initMagnetic() run yet without src/scripts/chrome.ts wired into
+ * BaseLayout — see that file and the layout diff in the same change.
+ *
+ * New schema (tina/collections/navigation.ts) — see that file's own
+ * comment for why: not anticipated by the original 6-section schema
+ * pass, added because CLAUDE.md's "every component must be editable"
+ * rule applies to Nav too.
+ *
+ * Known, unresolved risk (audit §5, not something I can verify without
+ * a real browser): 7 nav links at the lg (1024px) breakpoint may crowd
+ * or wrap between ~1024-1150px. Flagging again now that it's built —
+ * worth a visual check before launch.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { NavigationQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  navigation: NavigationQuery["navigation"];
+}
+
+const { navigation } = Astro.props;
+const { brand, links, cta } = navigation;
+---
+
+<nav
+  class="nav fixed inset-x-0 top-0 z-[100] flex h-nav items-center justify-between gap-6 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] transition-[background-color,backdrop-filter,box-shadow,height] duration-[450ms] ease-out"
+  data-nav
+  aria-label="Main"
+>
+  <a class="nav-brand flex items-center gap-[.8rem] text-(--nav-fg)" href="#top">
+    {
+      brand?.markLight && (
+        <img
+          class="nav-logo-light block h-11 w-auto flex-none [.is-solid_&]:hidden"
+          src={brand.markLight}
+          alt=""
+          width="1030"
+          height="646"
+          data-tina-field={tinaField(brand, "markLight")}
+        />
+      )
+    }
+    {
+      brand?.wordmarkLight && (
+        <img
+          class="nav-logo-light block h-[30px] w-auto flex-none [.is-solid_&]:hidden"
+          src={brand.wordmarkLight}
+          alt={brand.wordmarkAlt ?? ""}
+          width="1064"
+          height="351"
+          data-tina-field={tinaField(brand, "wordmarkLight")}
+        />
+      )
+    }
+    {
+      brand?.markDark && (
+        <img
+          class="nav-logo-ink hidden h-11 w-auto flex-none [.is-solid_&]:block"
+          src={brand.markDark}
+          alt=""
+          width="1030"
+          height="646"
+          data-tina-field={tinaField(brand, "markDark")}
+        />
+      )
+    }
+    {
+      brand?.wordmarkDark && (
+        <img
+          class="nav-logo-ink hidden h-[30px] w-auto flex-none [.is-solid_&]:block"
+          src={brand.wordmarkDark}
+          alt={brand.wordmarkAlt ?? ""}
+          width="1064"
+          height="351"
+          data-tina-field={tinaField(brand, "wordmarkDark")}
+        />
+      )
+    }
+  </a>
+
+  <div class="lang-switch flex items-center gap-[.3rem]" data-lang-switch aria-label="Language">
+    <a
+      href="/en/"
+      class="lang-btn is-active rounded-sm border border-(--nav-line) px-[.55rem] py-[.35rem] font-mono text-[.66rem] tracking-[.06em] text-(--nav-fg) transition-colors duration-300 ease-out"
+    >
+      EN
+    </a>
+  </div>
+
+  <button
+    class="nav-toggle z-[101] ml-auto flex flex-col gap-[5px] p-2 lg:hidden"
+    data-nav-toggle
+    aria-expanded="false"
+    aria-controls="nav-mobile"
+    aria-label={navigation.toggleLabel ?? "Toggle menu"}
+  >
+    <span class="h-[1.5px] w-[22px] bg-(--nav-fg) transition-[translate,rotate,opacity,background-color] duration-300 ease-out" />
+    <span class="h-[1.5px] w-[22px] bg-(--nav-fg) transition-[translate,rotate,opacity,background-color] duration-300 ease-out" />
+    <span class="h-[1.5px] w-[22px] bg-(--nav-fg) transition-[translate,rotate,opacity,background-color] duration-300 ease-out" />
+  </button>
+
+  <div class="nav-links ml-auto hidden items-center gap-8 lg:flex">
+    {
+      links?.map(
+        (link, i) =>
+          link && (
+            <a
+              class="nav-link relative py-1 text-[.84rem] tracking-[.04em] text-(--nav-fg-mute) transition-colors duration-[400ms] ease-out after:absolute after:inset-x-0 after:bottom-[-3px] after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[450ms] after:ease-out after:content-[''] hover:text-(--nav-fg) hover:after:origin-left hover:after:scale-x-100"
+              href={link.href}
+              data-tina-field={tinaField(navigation, "links", i)}
+            >
+              {link.label}
+            </a>
+          )
+      )
+    }
+  </div>
+
+  {
+    cta && (
+      <a
+        class="nav-cta hidden rounded border border-(--nav-line) px-[1.2rem] py-[.55rem] text-[.82rem] text-(--nav-fg) transition-colors duration-300 ease-out hover:border-(--nav-fg) hover:bg-(--nav-fg) hover:text-(--nav-hover-fg) lg:inline-flex"
+        href={cta.href}
+        data-tina-field={tinaField(navigation, "cta")}
+      >
+        {cta.label}
+      </a>
+    )
+  }
+</nav>
+
+<div
+  class="nav-mobile fixed inset-0 z-[99] flex flex-col justify-center gap-[1.4rem] bg-ink px-pad pt-24 pb-12 text-white [clip-path:inset(0_0_100%_0)] transition-[clip-path] duration-[650ms] ease-soft"
+  id="nav-mobile"
+  data-nav-mobile
+  aria-hidden="true"
+>
+  {
+    links?.map(
+      (link, i) =>
+        link && (
+          <a class="flex items-baseline gap-4 font-display text-nav-mobile italic" href={link.href}>
+            <i class="font-mono text-[.62rem] tracking-widest text-white/60 not-italic">
+              {String(i + 1).padStart(2, "0")}
+            </i>
+            <span>{link.label}</span>
+          </a>
+        )
+    )
+  }
+  {
+    cta && (
+      <a class="nav-cta mt-[.8rem] inline-flex rounded border border-white/35 px-[1.4rem] py-[.7rem] text-base text-white" href={cta.href}>
+        {cta.mobileLabel}
+      </a>
+    )
+  }
+  {navigation.mobileFoot && <p class="nav-mobile-foot mt-auto font-mono text-[.68rem] tracking-widest">{navigation.mobileFoot}</p>}
+</div>

@@ -25,8 +25,6 @@ independently of what those agents already worked out.
    - Chrome-level effects (splash, nav, reveals, tilt, magnetic buttons, the
      sounder canvas gauge, contact-info injection) — port as vanilla JS,
      scoped appropriately in Astro, not rebuilt as components.
-   - Fauna selector, route tabs, FAQ accordion, activity manifest — Alpine.js
-     `x-data` directly in the component markup.
    - The 4-step funnel — a Preact island (`client:load`). Preserve every
      behavior from the original: draft autosave/restore, partial-lead capture
      on blur AND on tab-close via `sendBeacon`, full validation, the computed

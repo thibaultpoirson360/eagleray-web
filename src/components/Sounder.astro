@@ -1,0 +1,53 @@
+---
+/**
+ * Sounder — `<aside class="sounder">` in the source index.html
+ * (lines 36-42), CSS at styles.css "7. SOUNDER" (L784-850). Page chrome,
+ * not a homepage section — same as Nav/Footer, lives in BaseLayout.
+ *
+ * CLAUDE.md names this explicitly as vanilla-JS chrome ("the canvas
+ * depth-gauge ('sounder')"), not Preact — the painting logic lives in
+ * src/scripts/chrome.ts, ported from main.js's initSounder().
+ *
+ * Visibility is staged exactly as source: hidden entirely without JS
+ * (a blank white column would be pointless — it's a canvas the JS
+ * paints, there's nothing to show without it) and only from `lg`
+ * (1024px) up, matching CLAUDE.md's explicit instruction ("the sounder
+ * gauge was desktop-only above a custom 1280px threshold — it now shows
+ * at lg:"). `--rail` (global.css) already tracks this same breakpoint.
+ *
+ * MAX_DEPTH/surfaceLabel come from siteSettings.sounder — main.js read
+ * these off `window.__BRAND__`; chrome.ts is a plain script with no
+ * access to Astro/Tina data, so they're passed via data attributes
+ * instead of reviving a global-object pattern.
+ *
+ * currentLabel() (chrome.ts) reads the live data-depth-name attribute
+ * each section already renders (Difference/Crew/Wildlife/Boats), not a
+ * separate i18n.depth.stops array like source did — those sections'
+ * depth names are already the real, Tina-editable source of truth.
+ */
+import type { SiteSettingsQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  siteSettings: SiteSettingsQuery["siteSettings"];
+}
+
+const { siteSettings } = Astro.props;
+const maxDepth = siteSettings.sounder?.maxDepth ?? 140;
+const surfaceLabel = siteSettings.sounder?.surfaceLabel ?? "Surface";
+---
+
+<aside
+  class="sounder pointer-events-none fixed inset-y-0 left-0 z-40 hidden w-21 border-r border-ink/14 bg-white lg:in-[.js]:block"
+  aria-hidden="true"
+  data-max-depth={maxDepth}
+  data-surface-label={surfaceLabel}
+>
+  <canvas class="sounder-canvas h-full w-21" width="120" height="900"></canvas>
+  <div class="sounder-read absolute inset-x-0 top-1/2 -translate-y-1/2 bg-white py-2 text-center font-mono">
+    <span class="sounder-depth text-[1.4rem] tracking-[-.02em] text-ink" data-depth>0</span><span
+      class="sounder-unit text-[.78rem] text-ink opacity-70">m</span>
+    <span class="sounder-label mt-2 block px-[.4rem] text-[.58rem] leading-[1.4] tracking-[.13em] text-ink/52 uppercase" data-sounder-label>
+      {surfaceLabel}
+    </span>
+  </div>
+</aside>

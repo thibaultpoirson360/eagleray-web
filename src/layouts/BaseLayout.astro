@@ -1,6 +1,11 @@
 ---
 import '../styles/global.css';
 import { defaultLocale, liveLocales, ogLocale, type Locale } from '../i18n/config';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Sounder from '../components/Sounder.astro';
+import { loadNavigation, loadFooter, loadSiteSettings } from '../lib/content';
 
 interface Props {
   title: string;
@@ -13,6 +18,11 @@ interface Props {
 const { title, description, locale = defaultLocale, path = '' } = Astro.props;
 const site = Astro.site ?? new URL(Astro.url.origin);
 const urlFor = (l: Locale) => new URL(`/${l}/${path}`, site).href;
+
+// Page chrome, not page content — fetched here (not per-page) so every
+// page that uses this layout gets Nav/Footer for free.
+const navigationResult = await loadNavigation();
+const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(), loadSiteSettings()]);
 ---
 
 <!doctype html>
@@ -27,8 +37,34 @@ const urlFor = (l: Locale) => new URL(`/${l}/${path}`, site).href;
     <link rel="alternate" hreflang="x-default" href={urlFor(defaultLocale)} />
     <meta property="og:locale" content={ogLocale[locale]} />
     {liveLocales.filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={ogLocale[l]} />)}
+    <!--
+      Source index.html <head>: `document.documentElement.className += " js"`.
+      Synchronous and inline so it runs before first paint — every
+      `html.js` / `html:not(.js)` progressive-enhancement rule (reveal's
+      no-JS fallback being the first one built) depends on this marker
+      existing before CSS paints, not after.
+    -->
+    <script is:inline>document.documentElement.className += ' js';</script>
   </head>
   <body class="bg-white font-sans text-ink">
+    <!--
+      Not wrapped in a <TinaIsland>: unlike Nav/Footer this isn't really
+      content (no copy of its own, no data-tina-field markers) — it's a
+      technical readout of siteSettings.sounder.maxDepth/surfaceLabel,
+      which is already editable through that collection's own global
+      Tina admin entry (ui.global: true), same as every other
+      siteSettings field this page reads without its own island.
+    -->
+    <Sounder siteSettings={siteSettingsResult.data.siteSettings} />
+    <TinaIsland name="navigation" wrapper={{ tag: 'div' }}>
+      <Nav navigation={navigationResult.data.navigation} />
+    </TinaIsland>
     <slot />
+    <TinaIsland name="footer" wrapper={{ tag: 'div' }}>
+      <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
+    <script>
+      import '../scripts/chrome.ts';
+    </script>
   </body>
 </html>

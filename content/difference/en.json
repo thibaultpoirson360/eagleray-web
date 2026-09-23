@@ -1,0 +1,30 @@
+{
+  "depth": { "meters": 12, "name": "Anchorage" },
+  "kickerNumber": "01",
+  "kicker": "What we do",
+  "title": "We don't sell charter trips.",
+  "titleEmphasis": "We design ocean experiences.",
+  "lede": "Eagle Ray Expeditions designs and leads small-group ocean expeditions combining sailing, diving, and wildlife encounters in Baja California Sur. Built for people who want more than a boat.",
+  "comparison": {
+    "usTitle": "Eagle Ray Expeditions",
+    "usPoints": [
+      "Experience-first, exploration-driven.",
+      "The same crew, who know the channel by memory.",
+      "Adaptive routes, redrawn by weather and tide.",
+      "The water is the plan — dive, snorkel, kayak, every day."
+    ],
+    "axisLabel": "vs",
+    "themTitle": "Charter trips",
+    "themPoints": [
+      "Boat-first, comfort-driven.",
+      "Neutral crew, hired by the week.",
+      "Fixed routes, printed before you meet them.",
+      "The water is scenery — watched from the cockpit."
+    ]
+  },
+  "founderQuote": {
+    "kicker": "They sell trips.\nWe design human expeditions.",
+    "quote": "I didn't want to sell boats. I wanted to build the kind of trip I'd actually want to be on — with people who know the ocean, not just how to hand you a set of keys.",
+    "cite": "— Thibault Poirson De Cardon, Founder"
+  }
+}

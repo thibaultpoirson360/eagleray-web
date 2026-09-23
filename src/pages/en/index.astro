@@ -1,11 +1,59 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import Hero from "../../components/Hero.astro";
+import Difference from "../../components/Difference.astro";
+import Crew from "../../components/Crew.astro";
+import Wildlife from "../../components/Wildlife.astro";
+import Boats from "../../components/Boats.astro";
+import Funnel from "../../components/Funnel.astro";
+import {
+  loadHero,
+  loadDifference,
+  loadCrewSection,
+  loadCrew,
+  loadWildlife,
+  loadBoatsSection,
+  loadBoats,
+  loadFunnel,
+  loadSiteSettings,
+} from "../../lib/content";
+
+const heroResult = await loadHero("en", { priority: "primary" });
+const differenceResult = await loadDifference("en");
+const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection("en"), loadCrew("en")]);
+const wildlifeResult = await loadWildlife("en");
+const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection("en"), loadBoats("en")]);
+const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel("en"), loadSiteSettings()]);
 ---
 
 <BaseLayout title="Eagle Ray Expeditions" locale="en">
-  <main class="p-8">
-    <h1 class="font-display text-h2">Eagle Ray Expeditions</h1>
-    <p class="mt-4 text-ink/74">Scaffold placeholder. Homepage components arrive one at a time per CLAUDE.md.</p>
-    <a class="mt-6 inline-flex rounded bg-ink px-7 py-4 text-sm text-white transition duration-500 ease-soft hover:-translate-y-0.5 hover:bg-ink-hover" href="/admin/index.html">Tina admin</a>
+  <main id="main">
+    <!--
+      Neutral <div> wrapper for the bridge's DOM-patching target, not
+      <section class="hero"> itself — TinaIsland's wrapper prop only
+      supports {tag, className}, no id, and the real section needs
+      id="top" for the nav's #top anchor. Hero.astro renders that
+      section; this wrapper must match the island route's `wrapper`
+      config exactly (src/pages/tina-island/[name].ts).
+    -->
+    <TinaIsland name="hero" wrapper={{ tag: "div" }} params={{ locale: "en" }} primary>
+      <Hero hero={heroResult.data.hero} />
+    </TinaIsland>
+    <TinaIsland name="difference" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <Difference difference={differenceResult.data.difference} />
+    </TinaIsland>
+    <TinaIsland name="crew" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <Crew crewSection={crewSectionResult.data.crewSection} members={crewResult.members} />
+    </TinaIsland>
+    <TinaIsland name="wildlife" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <Wildlife wildlife={wildlifeResult.data.wildlife} />
+    </TinaIsland>
+    <TinaIsland name="boats" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <Boats boatsSection={boatsSectionResult.data.boatsSection} boats={boatsResult.boats} />
+    </TinaIsland>
+    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
   </main>
 </BaseLayout>

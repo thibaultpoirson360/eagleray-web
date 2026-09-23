@@ -15,6 +15,8 @@ import wildlife from "./collections/wildlife";
 import { boatsSection, boats } from "./collections/boats";
 import funnel from "./collections/funnel";
 import navPages from "./collections/navPages";
+import navigation from "./collections/navigation";
+import footer from "./collections/footer";
 import editors from "./collections/editors";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
@@ -70,6 +72,8 @@ export default defineConfig({
       funnel,
       // pages + globals
       navPages,
+      navigation,
+      footer,
       siteSettings,
       // access list for Google sign-in
       editors,

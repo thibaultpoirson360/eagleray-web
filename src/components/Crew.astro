@@ -1,0 +1,174 @@
+---
+/**
+ * Crew — `<section class="section" id="crew">` in the source index.html
+ * (lines 158-336), CSS at styles.css "15. CREW" (L1865-1987) plus the
+ * shared boats-dots rules (L1784-1809, reused verbatim by the boats
+ * slider too — see SliderDots.tsx) and the shared `.section`/
+ * `.section-head` shell from Difference.
+ *
+ * The slider's card row is plain CSS scroll-snap (works with zero JS,
+ * same as the source); only the dot-navigation control is Preact, per
+ * CLAUDE.md's "sliders (boats, crew)... Preact." See SliderDots.tsx.
+ *
+ * Two small, deliberate deviations from source, both flagged in chat:
+ *  - `.crew-card-body { align-self: top }` is invalid CSS (does
+ *    nothing) — not ported.
+ *  - The CTA's wrapper used `.container`, which combined with `--rail`
+ *    renders off-centre (audit §2c.6) — using a plain centred block
+ *    instead, matching audit §6 item 13's suggested resolution.
+ * Source content typos (missing spaces, a doubled period) in `intro`/
+ * `rolesIntro` are preserved as-is, not silently corrected — see chat.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import SliderDots from "./SliderDots.tsx";
+import type { CrewSectionQuery, CrewConnectionQuery } from "../../tina/__generated__/types";
+
+type CrewMember = NonNullable<
+  NonNullable<CrewConnectionQuery["crewConnection"]["edges"]>[number]
+>["node"];
+
+interface Props {
+  crewSection: CrewSectionQuery["crewSection"];
+  members: NonNullable<CrewMember>[];
+}
+
+const { crewSection, members } = Astro.props;
+const { cta } = crewSection;
+---
+
+<section
+  class="section relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="crew"
+  data-depth-stop={crewSection.depth?.meters ?? undefined}
+  data-depth-name={crewSection.depth?.name ?? undefined}
+>
+  <div class="section-head mb-section-head">
+    <p
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase"
+      data-reveal
+    >
+      {
+        crewSection.kickerNumber && (
+          <span class="text-ink" data-tina-field={tinaField(crewSection, "kickerNumber")}>
+            {crewSection.kickerNumber}
+          </span>
+        )
+      }
+      <span data-tina-field={tinaField(crewSection, "kicker")}>{crewSection.kicker}</span>
+    </p>
+    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(crewSection, "title")}>
+      {crewSection.title}
+      {
+        crewSection.titleEmphasis && (
+          <>
+            <br />
+            <em class="not-italic text-ink" data-tina-field={tinaField(crewSection, "titleEmphasis")}>
+              {crewSection.titleEmphasis}
+            </em>
+          </>
+        )
+      }
+    </h2>
+    {
+      crewSection.intro && (
+        <p
+          class="section-intro mt-[1.2rem] text-ink/74 opacity-[.92]"
+          data-tina-field={tinaField(crewSection, "intro")}
+        >
+          {crewSection.intro}
+        </p>
+      )
+    }
+  </div>
+
+  <div
+    class="crew-slider reveal -mx-pad mt-[3.4rem] flex snap-x snap-mandatory gap-[1.6rem] overflow-x-auto px-pad pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    data-crew-slider
+  >
+    {
+      members.map((member) => (
+        <article class="crew-card relative flex w-[min(100vw,600px)] flex-none snap-start flex-col gap-[1.4rem] rounded-lg border border-ink/14 bg-surface p-[1.6rem] sm:flex-row sm:gap-[1.8rem] sm:p-[1.8rem]">
+          {member.joiningTag && (
+            <span
+              class="crew-card-tag absolute top-4 right-4 z-[2] rounded-sm bg-ink px-[.7rem] py-[.35rem] font-mono text-[.58rem] tracking-[.1em] text-white uppercase"
+              data-tina-field={tinaField(member, "joiningTag")}
+            >
+              {member.joiningTag}
+            </span>
+          )}
+          <div class="crew-card-photo aspect-[4/5] overflow-hidden rounded bg-white sm:aspect-auto sm:flex-none sm:basis-[210px]">
+            {member.photo && (
+              <img
+                src={member.photo}
+                alt={member.photoAlt ?? ""}
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover object-center"
+                data-tina-field={tinaField(member, "photo")}
+              />
+            )}
+          </div>
+          <div class="crew-card-body sm:flex-1">
+            {member.cardLabel && (
+              <p
+                class="crew-card-label mb-2 text-[.62rem] tracking-[.16em] text-ink/52 uppercase"
+                data-tina-field={tinaField(member, "cardLabel")}
+              >
+                {member.cardLabel}
+              </p>
+            )}
+            <h3 class="mb-[.3rem] font-display text-[1.6rem]" data-tina-field={tinaField(member, "name")}>
+              {member.name}
+            </h3>
+            {member.role && (
+              <p
+                class="crew-card-role mb-4 text-[.66rem] tracking-[.12em] text-ink/52 uppercase"
+                data-tina-field={tinaField(member, "role")}
+              >
+                {member.role}
+              </p>
+            )}
+            {member.bio && (
+              <p
+                class="crew-card-bio text-[.92rem] text-ink/74 leading-[1.7]"
+                data-tina-field={tinaField(member, "bio")}
+              >
+                {member.bio}
+              </p>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <SliderDots
+    client:visible
+    sliderSelector="[data-crew-slider]"
+    cardSelector=".crew-card"
+    count={members.length}
+    labelPrefix="Go to crew member"
+  />
+
+  {
+    crewSection.rolesIntro && (
+      <p
+        class="section-intro mt-[1.2rem] text-ink/74 opacity-[.92]"
+        data-tina-field={tinaField(crewSection, "rolesIntro")}
+      >
+        {crewSection.rolesIntro}
+      </p>
+    )
+  }
+
+  {
+    cta && (
+      <p class="mt-10 text-center" data-reveal>
+        <Button href={cta.href} variant="primary" context="default" data-tina-field={tinaField(crewSection, "cta")}>
+          {cta.label}
+        </Button>
+      </p>
+    )
+  }
+</section>

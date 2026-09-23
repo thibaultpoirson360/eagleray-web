@@ -1,0 +1,117 @@
+---
+/**
+ * Wildlife — `<section class="section" id="wildlife">` in the source
+ * index.html (lines 339-367), CSS at styles.css "new additions" block
+ * (L2917-2935) plus the shared `.section`/`.section-head` shell.
+ *
+ * CLAUDE.md is explicit that this page's gallery is placeholder — the
+ * same whale-shark.jpg three times with generic alt text — not real
+ * content, so it's ported structurally as exactly that: three identical
+ * placeholder items, real photos/copy to come later from the client's
+ * content mapping.
+ *
+ * `.wildlife-gallery-item` is fixed 3-across at every width (audit §6
+ * item 4 — flagged as needing a human decision, not something I'm
+ * resolving here): on a phone this renders as ~100px-wide slivers. I've
+ * ported the layout exactly as source has it rather than guess at a
+ * responsive redesign nobody asked for, especially since the real
+ * design may change once real wildlife content replaces the placeholder.
+ *
+ * One small, consistent deviation: source's gallery links are `href=""`
+ * (a dead self-link — arguably worse than no link, since it presents as
+ * clickable to keyboard/screen-reader users and does nothing). Same
+ * "don't render a broken affordance" rule I've applied to every other
+ * empty-optional-CTA case: an item without an href renders as a plain
+ * div instead of an anchor.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import type { WildlifeQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  wildlife: WildlifeQuery["wildlife"];
+}
+
+const { wildlife } = Astro.props;
+const { cta, gallery } = wildlife;
+const itemClass =
+  "wildlife-gallery-item flex-[1_1_calc(33.333%-1rem)] max-w-[calc(33.333%-1rem)]";
+const imgClass = "block h-[300px] w-full rounded object-cover";
+---
+
+<section
+  class="section relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="wildlife"
+  data-depth-stop={wildlife.depth?.meters ?? undefined}
+  data-depth-name={wildlife.depth?.name ?? undefined}
+>
+  <div class="section-head mb-section-head">
+    <p
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase"
+      data-reveal
+    >
+      {
+        wildlife.kickerNumber && (
+          <span class="text-ink" data-tina-field={tinaField(wildlife, "kickerNumber")}>
+            {wildlife.kickerNumber}
+          </span>
+        )
+      }
+      <span data-tina-field={tinaField(wildlife, "kicker")}>{wildlife.kicker}</span>
+    </p>
+    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(wildlife, "title")}>
+      {wildlife.title}
+      {
+        wildlife.titleEmphasis && (
+          <>
+            <br />
+            <em class="not-italic text-ink" data-tina-field={tinaField(wildlife, "titleEmphasis")}>
+              {wildlife.titleEmphasis}
+            </em>
+          </>
+        )
+      }
+    </h2>
+    {
+      wildlife.lede && (
+        <p
+          class="lede mt-[1.2rem] max-w-[58ch] text-lede text-ink/74 opacity-[.92]"
+          data-reveal
+          data-tina-field={tinaField(wildlife, "lede")}
+        >
+          {wildlife.lede}
+        </p>
+      )
+    }
+  </div>
+
+  {
+    gallery && gallery.length > 0 && (
+      <div class="wildlife-gallery flex flex-wrap justify-center gap-4">
+        {gallery.map(
+          (item, i) =>
+            item &&
+            (item.href ? (
+              <a href={item.href} class={itemClass} data-tina-field={tinaField(wildlife, "gallery", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </a>
+            ) : (
+              <div class={itemClass} data-tina-field={tinaField(wildlife, "gallery", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </div>
+            ))
+        )}
+      </div>
+    )
+  }
+
+  {
+    cta && (
+      <p class="mt-10 text-center" data-reveal>
+        <Button href={cta.href} variant="primary" context="default" data-tina-field={tinaField(wildlife, "cta")}>
+          {cta.label}
+        </Button>
+      </p>
+    )
+  }
+</section>
