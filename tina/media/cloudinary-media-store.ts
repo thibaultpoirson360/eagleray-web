@@ -16,15 +16,20 @@
  * gated by the same editor-session check the Tina GraphQL backend itself
  * uses.
  *
- * `process.env.*` here (not `import.meta.env`) matches how the rest of
- * tina/config.ts reads env vars — TinaCMS's CLI (Vite under the hood)
- * statically replaces these at build time, the same way it already does
- * for TINA_PUBLIC_IS_LOCAL elsewhere in this config.
+ * The cloud name and upload preset name come from that same endpoint
+ * (action: "config"), fetched once and cached, NOT read via
+ * `process.env` in this file. TinaCMS's admin bundle only ever gets real
+ * values for two specific env vars (TINA_PUBLIC_IS_LOCAL, NODE_ENV —
+ * confirmed by inspecting the actual built bundle); every other
+ * `process.env.*` reference here silently resolves to undefined in the
+ * browser regardless of what's set in Vercel, regardless of where in this
+ * file (or tina/config.ts) it's read from. Neither value is secret — the
+ * cloud name is part of every public delivery URL, and an unsigned
+ * preset's name is meant to be client-visible — so fetching them at
+ * runtime costs nothing security-wise, just one small request before the
+ * first upload/list/delete.
  */
 import type { Media, MediaList, MediaListOptions, MediaStore, MediaUploadOptions } from "tinacms";
-
-const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME ?? "";
-const UPLOAD_PRESET = process.env.CLOUDINARY_UPLOAD_PRESET ?? "";
 
 // All uploads live under one folder in the Cloudinary account, separate
 // from anything else that might land in the same account later.
@@ -36,21 +41,43 @@ interface CloudinaryResource {
   folder?: string;
 }
 
-function deliveryUrl(publicId: string, format: string): string {
+interface CloudinaryConfig {
+  cloudName: string;
+  uploadPreset: string;
+}
+
+let configPromise: Promise<CloudinaryConfig> | null = null;
+
+async function getConfig(): Promise<CloudinaryConfig> {
+  configPromise ??= fetch("/api/media/cloudinary", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    credentials: "same-origin",
+    body: JSON.stringify({ action: "config" }),
+  }).then(async (response) => {
+    if (!response.ok) {
+      throw new Error(`Couldn't load Cloudinary config (HTTP ${response.status}).`);
+    }
+    return response.json();
+  });
+  return configPromise;
+}
+
+function deliveryUrl(cloudName: string, publicId: string, format: string): string {
   // f_auto/q_auto pick the best format (WebP/AVIF) and compression per
   // visitor at request time — deliberately not baked in at upload time,
   // since the "best" format differs per browser.
-  return `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/f_auto,q_auto/${publicId}.${format}`;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${publicId}.${format}`;
 }
 
-function toMedia(resource: CloudinaryResource): Media {
+function toMedia(cloudName: string, resource: CloudinaryResource): Media {
   const filename = resource.public_id.split("/").pop() ?? resource.public_id;
   return {
     type: "file",
     id: resource.public_id,
     filename: `${filename}.${resource.format}`,
     directory: resource.folder ?? "",
-    src: deliveryUrl(resource.public_id, resource.format),
+    src: deliveryUrl(cloudName, resource.public_id, resource.format),
   };
 }
 
@@ -61,31 +88,28 @@ export default class CloudinaryMediaStore implements MediaStore {
   maxSize = 10 * 1024 * 1024;
 
   async persist(files: MediaUploadOptions[]): Promise<Media[]> {
-    if (!CLOUD_NAME || !UPLOAD_PRESET) {
-      throw new Error(
-        "Cloudinary isn't configured on this deployment — see docs/tina-setup.md section 8."
-      );
-    }
+    const { cloudName, uploadPreset } = await getConfig();
     return Promise.all(
       files.map(async ({ directory, file }) => {
         const body = new FormData();
         body.append("file", file);
-        body.append("upload_preset", UPLOAD_PRESET);
+        body.append("upload_preset", uploadPreset);
         body.append("folder", directory ? `${ROOT_FOLDER}/${directory}` : ROOT_FOLDER);
 
-        const response = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
+        const response = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
           method: "POST",
           body,
         });
         if (!response.ok) {
           throw new Error(`Cloudinary upload failed (HTTP ${response.status}).`);
         }
-        return toMedia(await response.json());
+        return toMedia(cloudName, await response.json());
       })
     );
   }
 
   async list(options?: MediaListOptions): Promise<MediaList> {
+    const { cloudName } = await getConfig();
     const response = await fetch("/api/media/cloudinary", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -102,7 +126,7 @@ export default class CloudinaryMediaStore implements MediaStore {
     }
     const data = await response.json();
     const resources: CloudinaryResource[] = data.resources ?? [];
-    return { items: resources.map(toMedia), nextOffset: data.nextOffset };
+    return { items: resources.map((r) => toMedia(cloudName, r)), nextOffset: data.nextOffset };
   }
 
   async delete(media: Media): Promise<void> {
