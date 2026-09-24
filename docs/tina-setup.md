@@ -357,13 +357,38 @@ Limits and gotchas found:
 
 Tina's repo-media (`media.tina`) is a Tina Cloud feature. On a self-hosted backend the admin
 throws "Self-hosted TinaCMS can't serve media from your repo through TinaCloud" (message is
-in `tinacms` 3.13). The old branch's config would have broken every image field. Config now:
-`media.tina.static: true` in deployed builds = read-only picker over files already committed
-under `public/assets/` (matches the existing `/assets/img/...` URLs); uploads work only
-under `tinacms dev`. Image files reach production by being committed. If editors must upload
-from the admin, add an external store via `media.loadCustomStore` (Cloudinary, S3, Vercel
-Blob) — a decision/cost for the client. Videos (`hero.background.videoSrc`) are a plain
-path string.
+in `tinacms` 3.13). The old branch's config would have broken every image field.
+
+Local dev (`TINA_PUBLIC_IS_LOCAL=true`) still uses the simple git-backed `media.tina` picker,
+read-write, no cloud account needed. Deployed builds use Cloudinary via `media.loadCustomStore`
+(`tina/media/cloudinary-media-store.ts` + `tina/media/cloudinary-backend.ts`), so editors can
+upload their own photos from the admin instead of a developer committing them to
+`public/assets/`. Uploads go straight from the browser to Cloudinary through an **unsigned**
+preset (no API secret in the admin bundle); listing and deleting existing uploads need
+Cloudinary's authenticated Admin API, so those two go through `/api/media/cloudinary`
+(`api/media/cloudinary.ts`), gated by the same editor-session check the Tina GraphQL backend
+itself uses — nobody who isn't a signed-in editor can list or delete media, even though the
+endpoint has no route-specific auth of its own.
+
+Cloudinary setup (one-time, ~5 minutes):
+1. Sign up at cloudinary.com (free tier is comfortably enough for a small marketing site).
+2. Dashboard home shows **Cloud name**, **API key**, and **API secret** (click reveal) — copy
+   all three.
+3. Settings (gear icon) -> **Upload** -> **Upload presets** -> **Add upload preset**.
+   - Signing Mode: **Unsigned** (required — this is what lets the browser upload directly
+     without exposing the API secret).
+   - Under Upload Manipulations, set an incoming transformation that limits the max size, e.g.
+     `c_limit,w_2400,h_2400` with quality `auto` — this is what "formats the photo on upload"
+     in practice: nothing bigger than it needs to be, nothing uncompressed.
+   - Save, then copy the preset's **name** (not the cloud name again).
+4. Add all four as env vars — `.env.example` has the exact names
+   (`CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`,
+   `CLOUDINARY_UPLOAD_PRESET`) — to the Vercel project (Project Settings > Environment
+   Variables), then redeploy. Not needed in local `.env`: local dev doesn't use Cloudinary.
+
+Photos already committed under `public/assets/img/` keep working as-is (their src is a plain
+`/assets/...` path, untouched by this) — this only changes where a *new* upload goes.
+Videos (`hero.background.videoSrc`) are a plain path string, unaffected either way.
 
 ## 9. Local development
 

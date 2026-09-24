@@ -46,18 +46,22 @@ export default defineConfig({
     publicFolder: "public",
   },
 
-  // Self-hosted Tina has no repo-media API (that is a Tina Cloud service): the
-  // admin refuses `media.tina` uploads on a custom backend. `static: true` gives
-  // a read-only picker over files already committed under public/<mediaRoot>.
-  // Uploads work locally only; in production add images to git (or wire an
-  // external store with media.loadCustomStore — see docs/tina-setup.md).
-  media: {
-    tina: {
-      publicFolder: "public",
-      mediaRoot: "assets",
-      static: !isLocal,
-    },
-  },
+  // Self-hosted Tina has no repo-media API (that is a Tina Cloud service),
+  // so the two modes use genuinely different stores, not one config with a
+  // flag — see docs/tina-setup.md section 8.
+  //   local:    the simple git-backed picker, read-write (no cloud account
+  //             needed to develop).
+  //   deployed: Cloudinary via media.loadCustomStore, so editors can upload
+  //             their own photos from the admin (see
+  //             tina/media/cloudinary-media-store.ts for how and why).
+  media: isLocal
+    ? { tina: { publicFolder: "public", mediaRoot: "assets", static: false } }
+    : {
+        loadCustomStore: async () => {
+          const { default: CloudinaryMediaStore } = await import("./media/cloudinary-media-store");
+          return CloudinaryMediaStore;
+        },
+      },
 
   schema: {
     collections: [
