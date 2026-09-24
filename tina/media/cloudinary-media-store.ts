@@ -70,14 +70,36 @@ function deliveryUrl(cloudName: string, publicId: string, format: string): strin
   return `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${publicId}.${format}`;
 }
 
+// The media grid/preview UI reads these exact keys off `Media.thumbnails`
+// (confirmed in tinacms's own compiled source — CANONICAL_THUMBNAIL_SIZES,
+// read via item.thumbnails["75x75"] etc. in the grid, the picker preview,
+// and the field preview) — it does not fall back to `src` if they're
+// missing, which is why thumbnails were blank before this. Cloudinary can
+// crop/resize on the fly via the URL itself, so these cost nothing extra
+// to generate — no separate upload or pre-processing step.
+const THUMBNAIL_SIZES: { key: string; w: number; h: number }[] = [
+  { key: "75x75", w: 75, h: 75 },
+  { key: "400x400", w: 400, h: 400 },
+  { key: "1000x1000", w: 1000, h: 1000 },
+];
+
+function thumbnailUrl(cloudName: string, publicId: string, format: string, w: number, h: number): string {
+  return `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,w_${w},h_${h},f_auto,q_auto/${publicId}.${format}`;
+}
+
 function toMedia(cloudName: string, resource: CloudinaryResource): Media {
   const filename = resource.public_id.split("/").pop() ?? resource.public_id;
+  const thumbnails: Record<string, string> = {};
+  for (const size of THUMBNAIL_SIZES) {
+    thumbnails[size.key] = thumbnailUrl(cloudName, resource.public_id, resource.format, size.w, size.h);
+  }
   return {
     type: "file",
     id: resource.public_id,
     filename: `${filename}.${resource.format}`,
     directory: resource.folder ?? "",
     src: deliveryUrl(cloudName, resource.public_id, resource.format),
+    thumbnails,
   };
 }
 
