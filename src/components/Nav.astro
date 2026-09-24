@@ -24,24 +24,67 @@
  * a real browser): 7 nav links at the lg (1024px) breakpoint may crowd
  * or wrap between ~1024-1150px. Flagging again now that it's built —
  * worth a visual check before launch.
+ *
+ * Language switcher (LangSwitch.tsx) is a deliberate departure from
+ * source, which had a flat row of `.lang-btn` buttons (ES/FR commented
+ * out) — a dropdown, per explicit direction. See that file's own comment.
+ *
+ * Nav dropdowns (About Us, Sail with Us today): source had no such
+ * concept — every link was a plain href. New per explicit direction:
+ * `tina/collections/navigation.ts`'s `links` field is now a template
+ * union (plain "link" vs "dropdown" with its own sub-link list), and
+ * items using the "dropdown" template render as NavDesktopDropdown.tsx /
+ * NavMobileDropdown.tsx (Preact — open/close state, same category as
+ * LangSwitch) instead of a plain `<a>`. Both are independent per
+ * instance (no "close the other one" coordination) — see their own
+ * comments.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import type { NavigationQuery } from "../../tina/__generated__/types";
+import LangSwitch from "./LangSwitch.tsx";
+import NavDesktopDropdown from "./NavDesktopDropdown.tsx";
+import NavMobileDropdown from "./NavMobileDropdown.tsx";
+import { locales, liveLocales, localePath, localeLabel, type Locale } from "../i18n/config";
 
 interface Props {
   navigation: NavigationQuery["navigation"];
+  locale: Locale;
+  /** Path after the locale prefix, e.g. "" for the homepage — same shape BaseLayout uses. */
+  path: string;
+  /** See BaseLayout.astro's own prop comment — same meaning, passed straight through. */
+  transparentNav: boolean;
 }
 
-const { navigation } = Astro.props;
+const { navigation, locale, path, transparentNav } = Astro.props;
 const { brand, links, cta } = navigation;
+
+// Not Tina content — which locales exist and which have real pages is a
+// routing fact (src/i18n/config.ts), same category as the scroll-solidify
+// state or the mobile-menu toggle, not editorial copy. `localePath`
+// (root-relative), not `localeHref` (absolute against astro.config's
+// fixed `site` — right for BaseLayout's canonical/hreflang tags, wrong
+// here since it would send local dev clicks to the real production
+// domain instead of staying on localhost).
+// The logo's own link: home in the current locale, not "#top" (which is
+// only a valid anchor on the homepage itself — on every other page it's
+// dead, since there's no id="top" element there).
+const homeHref = localePath(locale, "");
+const langOptions = locales.map((l) => ({
+  locale: l,
+  label: l.toUpperCase(),
+  fullLabel: localeLabel[l],
+  href: localePath(l, path),
+  isLive: liveLocales.includes(l),
+}));
 ---
 
 <nav
-  class="nav fixed inset-x-0 top-0 z-[100] flex h-nav items-center justify-between gap-6 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] transition-[background-color,backdrop-filter,box-shadow,height] duration-[450ms] ease-out"
+  class={`nav fixed inset-x-0 top-0 z-[100] flex h-nav items-center justify-between gap-6 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] transition-[background-color,backdrop-filter,box-shadow,height] duration-[450ms] ease-out ${transparentNav ? "" : "is-solid"}`}
   data-nav
+  data-nav-transparent={transparentNav ? "true" : "false"}
   aria-label="Main"
 >
-  <a class="nav-brand flex items-center gap-[.8rem] text-(--nav-fg)" href="#top">
+  <a class="nav-brand flex items-center gap-[.8rem] text-(--nav-fg)" href={homeHref}>
     {
       brand?.markLight && (
         <img
@@ -92,14 +135,7 @@ const { brand, links, cta } = navigation;
     }
   </a>
 
-  <div class="lang-switch flex items-center gap-[.3rem]" data-lang-switch aria-label="Language">
-    <a
-      href="/en/"
-      class="lang-btn is-active rounded-sm border border-(--nav-line) px-[.55rem] py-[.35rem] font-mono text-[.66rem] tracking-[.06em] text-(--nav-fg) transition-colors duration-300 ease-out"
-    >
-      EN
-    </a>
-  </div>
+  <LangSwitch client:visible current={locale} options={langOptions} />
 
   <button
     class="nav-toggle z-[101] ml-auto flex flex-col gap-[5px] p-2 lg:hidden"
@@ -115,8 +151,17 @@ const { brand, links, cta } = navigation;
 
   <div class="nav-links ml-auto hidden items-center gap-8 lg:flex">
     {
-      links?.map(
-        (link, i) =>
+      links?.map((link, i) =>
+        link?.__typename === "NavigationLinksDropdown" ? (
+          <NavDesktopDropdown
+            client:visible
+            label={link.label}
+            tinaField={tinaField(navigation, "links", i)}
+            items={(link.items ?? [])
+              .filter((it): it is NonNullable<typeof it> => !!it)
+              .map((it, j) => ({ label: it.label, href: it.href, tinaField: tinaField(link, "items", j) }))}
+          />
+        ) : (
           link && (
             <a
               class="nav-link relative py-1 text-[.84rem] tracking-[.04em] text-(--nav-fg-mute) transition-colors duration-[400ms] ease-out after:absolute after:inset-x-0 after:bottom-[-3px] after:h-px after:origin-right after:scale-x-0 after:bg-current after:transition-transform after:duration-[450ms] after:ease-out after:content-[''] hover:text-(--nav-fg) hover:after:origin-left hover:after:scale-x-100"
@@ -126,6 +171,7 @@ const { brand, links, cta } = navigation;
               {link.label}
             </a>
           )
+        )
       )
     }
   </div>
@@ -150,8 +196,18 @@ const { brand, links, cta } = navigation;
   aria-hidden="true"
 >
   {
-    links?.map(
-      (link, i) =>
+    links?.map((link, i) =>
+      link?.__typename === "NavigationLinksDropdown" ? (
+        <NavMobileDropdown
+          client:visible
+          index={i}
+          label={link.label}
+          tinaField={tinaField(navigation, "links", i)}
+          items={(link.items ?? [])
+            .filter((it): it is NonNullable<typeof it> => !!it)
+            .map((it, j) => ({ label: it.label, href: it.href, tinaField: tinaField(link, "items", j) }))}
+        />
+      ) : (
         link && (
           <a class="flex items-baseline gap-4 font-display text-nav-mobile italic" href={link.href}>
             <i class="font-mono text-[.62rem] tracking-widest text-white/60 not-italic">
@@ -160,6 +216,7 @@ const { brand, links, cta } = navigation;
             <span>{link.label}</span>
           </a>
         )
+      )
     )
   }
   {

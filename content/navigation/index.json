@@ -7,13 +7,45 @@
     "wordmarkAlt": "Eagle Ray Expeditions"
   },
   "links": [
-    { "label": "About Us", "href": "" },
-    { "label": "Passionate Sea People", "href": "" },
-    { "label": "Sail with Us", "href": "" },
-    { "label": "La Paz", "href": "" },
-    { "label": "Boats", "href": "" },
-    { "label": "Blog", "href": "" },
-    { "label": "Contact", "href": "" }
+    {
+      "_template": "dropdown",
+      "label": "About Us",
+      "items": [
+        { "label": "Our Story", "href": "" },
+        { "label": "Passionate Sea People", "href": "" },
+        { "label": "The Eagle Ray Experience", "href": "" },
+        { "label": "Our Travelers Experience", "href": "" }
+      ]
+    },
+    {
+      "_template": "dropdown",
+      "label": "Sail with Us",
+      "items": [
+        { "label": "Recalibration Expedition", "href": "" },
+        { "label": "Active Expedition", "href": "" },
+        { "label": "Ad-hoc Expedition", "href": "" }
+      ]
+    },
+    {
+      "_template": "link",
+      "label": "Blog",
+      "href": ""
+    },
+    {
+      "_template": "link",
+      "label": "La Paz",
+      "href": ""
+    },
+    {
+      "_template": "link",
+      "label": "Boats",
+      "href": ""
+    },
+    {
+      "_template": "link",
+      "label": "Contact Us",
+      "href": "/en/contact/"
+    }
   ],
   "cta": {
     "href": "#customize",

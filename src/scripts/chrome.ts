@@ -88,7 +88,13 @@ function fitCanvas(cv: HTMLCanvasElement) {
 /* ---------- Nav: scroll-solidify + mobile menu ---------- */
 function initNav() {
   const nav = $("[data-nav]");
-  if (nav) {
+  // Solid pages (no hero to float over) render `is-solid` server-side
+  // (Nav.astro) so it's correct from first paint / with no JS at all —
+  // this only drives the scroll-to-solidify toggle for pages that
+  // actually start transparent (data-nav-transparent="true"). Leaving a
+  // solid page's class alone here also means the scroll listener never
+  // runs at all where it'd have nothing to do.
+  if (nav && nav.getAttribute("data-nav-transparent") === "true") {
     const onScroll = () => nav.classList.toggle("is-solid", window.scrollY > 50);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });

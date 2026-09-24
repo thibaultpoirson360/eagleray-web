@@ -115,3 +115,10 @@ export function loadFunnel(locale: Locale, options?: RequestOptions) {
     options
   );
 }
+
+export function loadContactPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.contactPage({ relativePath: `${locale}.json` }),
+    options
+  );
+}

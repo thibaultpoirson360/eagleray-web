@@ -25,6 +25,7 @@ import Boats from "../../components/Boats.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import Funnel from "../../components/Funnel.astro";
+import ContactPage from "../../components/ContactPage.astro";
 import {
   loadHero,
   loadDifference,
@@ -37,6 +38,7 @@ import {
   loadFooter,
   loadSiteSettings,
   loadFunnel,
+  loadContactPage,
 } from "../../lib/content";
 import { defaultLocale, locales, type Locale } from "../../i18n/config";
 
@@ -109,8 +111,15 @@ const route = createIslandRoute({
     fetch: async () => loadNavigation(),
     component: Nav,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => ({
+    // Navigation content itself isn't localized (one global doc), but Nav
+    // also renders the language switcher and the transparent/solid nav
+    // state, both of which need to know which page it's on — same
+    // locale/path/transparentNav params BaseLayout passes it normally.
+    propsFromData: (result: unknown, params: URLSearchParams) => ({
       navigation: (result as Awaited<ReturnType<typeof loadNavigation>>).data.navigation,
+      locale: localeFromParams(params),
+      path: params.get("path") ?? "",
+      transparentNav: params.get("transparentNav") !== "false",
     }),
   },
   footer: {
@@ -142,6 +151,22 @@ const route = createIslandRoute({
         siteSettings: Awaited<ReturnType<typeof loadSiteSettings>>;
       };
       return { funnel: funnel.data.funnel, siteSettings: siteSettings.data.siteSettings };
+    },
+  },
+  contactPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const [contactPage, siteSettings] = await Promise.all([loadContactPage(locale), loadSiteSettings()]);
+      return { contactPage, siteSettings };
+    },
+    component: ContactPage,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const { contactPage, siteSettings } = result as {
+        contactPage: Awaited<ReturnType<typeof loadContactPage>>;
+        siteSettings: Awaited<ReturnType<typeof loadSiteSettings>>;
+      };
+      return { contactPage: contactPage.data.contactPage, siteSettings: siteSettings.data.siteSettings };
     },
   },
 });

@@ -1,0 +1,34 @@
+---
+/**
+ * `/en/contact` — "Talk with us". Thin page wrapper, matching
+ * src/pages/en/index.astro's own pattern: load data, wrap the real
+ * component in a <TinaIsland> for visual editing. See ContactPage.astro
+ * for why the content lives in its own component instead of being
+ * inlined here.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import ContactPage from "../../components/ContactPage.astro";
+import { loadContactPage, loadSiteSettings } from "../../lib/content";
+
+const [contactPageResult, siteSettingsResult] = await Promise.all([
+  loadContactPage("en"),
+  loadSiteSettings(),
+]);
+---
+
+<BaseLayout
+  title={`${contactPageResult.data.contactPage.title} — Eagle Ray Expeditions`}
+  locale="en"
+  path="contact/"
+  transparentNav={false}
+>
+  <main id="main">
+    <TinaIsland name="contactPage" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+      <ContactPage
+        contactPage={contactPageResult.data.contactPage}
+        siteSettings={siteSettingsResult.data.siteSettings}
+      />
+    </TinaIsland>
+  </main>
+</BaseLayout>

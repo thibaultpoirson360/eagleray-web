@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { defaultLocale, liveLocales, ogLocale, type Locale } from '../i18n/config';
+import { defaultLocale, liveLocales, localeHref, ogLocale, type Locale } from '../i18n/config';
 import TinaIsland from '@tinacms/astro/TinaIsland.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
@@ -13,11 +13,20 @@ interface Props {
   locale?: Locale;
   /** Path after the locale prefix, e.g. "" for the homepage or "about-us/". */
   path?: string;
+  /**
+   * True (default) for a page whose top section is a dark hero the nav can
+   * float transparently over until scrolled (today: the homepage). False
+   * for a page with no such hero — a plain white section right at the top
+   * — where the nav must render solid (dark-on-light) from the very first
+   * paint instead of waiting for scroll, or its white-on-transparent
+   * default state is unreadable against the page's own white background.
+   */
+  transparentNav?: boolean;
 }
 
-const { title, description, locale = defaultLocale, path = '' } = Astro.props;
+const { title, description, locale = defaultLocale, path = '', transparentNav = true } = Astro.props;
 const site = Astro.site ?? new URL(Astro.url.origin);
-const urlFor = (l: Locale) => new URL(`/${l}/${path}`, site).href;
+const urlFor = (l: Locale) => localeHref(l, path, site);
 
 // Page chrome, not page content — fetched here (not per-page) so every
 // page that uses this layout gets Nav/Footer for free.
@@ -56,8 +65,12 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(), load
       siteSettings field this page reads without its own island.
     -->
     <Sounder siteSettings={siteSettingsResult.data.siteSettings} />
-    <TinaIsland name="navigation" wrapper={{ tag: 'div' }}>
-      <Nav navigation={navigationResult.data.navigation} />
+    <TinaIsland
+      name="navigation"
+      wrapper={{ tag: 'div' }}
+      params={{ locale, path, transparentNav: String(transparentNav) }}
+    >
+      <Nav navigation={navigationResult.data.navigation} locale={locale} path={path} transparentNav={transparentNav} />
     </TinaIsland>
     <slot />
     <TinaIsland name="footer" wrapper={{ tag: 'div' }}>

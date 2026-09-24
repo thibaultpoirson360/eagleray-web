@@ -1,0 +1,24 @@
+{
+  "title": "Talk with us",
+  "lede": "No call center, no chatbot forwarding you along. We read every message & reply within 48hrs.",
+  "photo": "/assets/img/founder-thibault.webp",
+  "photoAlt": "Eagle Ray Expeditions' founder working aboard the boat",
+  "form": {
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "howFoundPlaceholder": "How did you find us?",
+    "messagePlaceholder": "Message",
+    "submitLabel": "Send message",
+    "sendingLabel": "Sending…",
+    "successMessage": "Thanks — your message is in. We read every one ourselves and reply within 48 hours.",
+    "errorMessage": "Something went wrong sending your message — please try again, or use WhatsApp below."
+  },
+  "whatsappCard": {
+    "label": "Direct WhatsApp",
+    "description": "Prefer WhatsApp? We will forward your message to our founder for him to answer your enquiry personally."
+  },
+  "expeditionCard": {
+    "label": "Expedition Builder",
+    "description": "Already picturing a route? Skip ahead to the expedition builder form and receive a personalized quote."
+  }
+}

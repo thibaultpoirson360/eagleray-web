@@ -55,17 +55,51 @@ const navigation: Collection = {
       label: "Nav links",
       list: true,
       ui: {
-        itemProps: (item: Record<string, string>) => ({ label: item?.label || "Link" }),
-        defaultItem: { label: "New link", href: "" },
+        itemProps: (item: Record<string, any>) => ({ label: item?.label || "Link" }),
       },
-      fields: [
-        { type: "string", name: "label", label: "Label", required: true },
+      // Two shapes per item, not one field with an optional sub-list: a
+      // plain link and a dropdown are different enough (a dropdown's
+      // "link" has no href of its own, just a trigger label) that one
+      // shape with everything optional would let content exist that's
+      // neither a valid link nor a valid dropdown. Only About Us and
+      // Sail with Us are dropdowns today, per explicit direction.
+      templates: [
         {
-          type: "string",
-          name: "href",
-          label: "Link",
-          required: true,
-          description: 'e.g. "#customize", or "/en/about-us" once that page exists. Empty ("") for not-yet-built pages, matching the current site.',
+          name: "link",
+          label: "Simple link",
+          ui: { defaultItem: { label: "New link", href: "" } },
+          fields: [
+            { type: "string", name: "label", label: "Label", required: true },
+            {
+              type: "string",
+              name: "href",
+              label: "Link",
+              required: true,
+              description: 'e.g. "#customize", or "/en/about-us" once that page exists. Empty ("") for not-yet-built pages, matching the current site.',
+            },
+          ],
+        },
+        {
+          name: "dropdown",
+          label: "Dropdown (label + sub-links)",
+          ui: { defaultItem: { label: "New dropdown", items: [] } },
+          fields: [
+            { type: "string", name: "label", label: "Label shown in the nav bar", required: true },
+            {
+              type: "object",
+              name: "items",
+              label: "Sub-links",
+              list: true,
+              ui: {
+                itemProps: (item: Record<string, any>) => ({ label: item?.label || "Sub-link" }),
+                defaultItem: { label: "New link", href: "" },
+              },
+              fields: [
+                { type: "string", name: "label", label: "Label", required: true },
+                { type: "string", name: "href", label: "Link", required: true },
+              ],
+            },
+          ],
         },
       ],
     },
