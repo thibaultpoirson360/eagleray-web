@@ -26,6 +26,8 @@ import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import Funnel from "../../components/Funnel.astro";
 import ContactPage from "../../components/ContactPage.astro";
+import BlogListing from "../../components/BlogListing.astro";
+import BlogPostView from "../../components/BlogPostView.astro";
 import {
   loadHero,
   loadDifference,
@@ -39,6 +41,9 @@ import {
   loadSiteSettings,
   loadFunnel,
   loadContactPage,
+  loadBlogSection,
+  loadBlogPosts,
+  loadBlogPost,
 } from "../../lib/content";
 import { defaultLocale, locales, type Locale } from "../../i18n/config";
 
@@ -167,6 +172,45 @@ const route = createIslandRoute({
         siteSettings: Awaited<ReturnType<typeof loadSiteSettings>>;
       };
       return { contactPage: contactPage.data.contactPage, siteSettings: siteSettings.data.siteSettings };
+    },
+  },
+  blogSection: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const [blogSection, posts] = await Promise.all([loadBlogSection(locale), loadBlogPosts(locale)]);
+      return { blogSection, posts };
+    },
+    component: BlogListing,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const { blogSection, posts } = result as {
+        blogSection: Awaited<ReturnType<typeof loadBlogSection>>;
+        posts: Awaited<ReturnType<typeof loadBlogPosts>>;
+      };
+      return { blogSection: blogSection.data.blogSection, posts: posts.posts };
+    },
+  },
+  // Individual posts are separate pages (unlike every other island, which
+  // is one section on a shared page) — the on-demand refresh route still
+  // keys by a fixed island name, so which specific post to load comes from
+  // a `slug` param, same idea as navigation's locale/path params.
+  blogPost: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const slug = params.get("slug") ?? "";
+      const [post, allPosts] = await Promise.all([loadBlogPost(locale, slug), loadBlogPosts(locale)]);
+      return { post, allPosts, slug };
+    },
+    component: BlogPostView,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const { post, allPosts, slug } = result as {
+        post: Awaited<ReturnType<typeof loadBlogPost>>;
+        allPosts: Awaited<ReturnType<typeof loadBlogPosts>>;
+        slug: string;
+      };
+      const related = allPosts.posts.filter((p) => p._sys.filename !== slug).slice(0, 2);
+      return { post: post.data.blogPost, related };
     },
   },
 });

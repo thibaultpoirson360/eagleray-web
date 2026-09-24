@@ -122,3 +122,37 @@ export function loadContactPage(locale: Locale, options?: RequestOptions) {
     options
   );
 }
+
+export function loadBlogSection(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.blogSection({ relativePath: `${locale}.json` }),
+    options
+  );
+}
+
+/** Same shape as loadCrew/loadBoats — see loadCrew's comment for why the
+ *  filter/sort is done in JS. Newest first, matching a blog's natural order
+ *  (no manual `order` field needed the way crew/boats have one). */
+export async function loadBlogPosts(locale: Locale, options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.blogPostConnection(), options);
+  const posts = (result.data.blogPostConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return { ...result, posts };
+}
+
+/** The mockup always shows whichever post is first in an unordered array as
+ *  "featured" — no real editorial control. Here an editor can mark one via
+ *  `featured`; this falls back to the newest post (posts[0], already
+ *  sorted) if none is marked, or several are. */
+export function featuredPost<T extends { featured?: boolean | null }>(posts: T[]): T {
+  return posts.find((p) => p.featured) ?? posts[0];
+}
+
+export function loadBlogPost(locale: Locale, slug: string, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.blogPost({ relativePath: `${locale}/${slug}.json` }),
+    options
+  );
+}

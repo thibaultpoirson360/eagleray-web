@@ -1,0 +1,14 @@
+---
+/**
+ * Registered on TinaMarkdown's `p` override for a blog post body
+ * (BlogPostView.astro). An image-only paragraph (Tina wraps a
+ * markdown-standalone image in a <p>, confirmed by querying real content —
+ * see tina/collections/blog.ts's comment on why body is rich-text, not
+ * fixed fields) also passes through here, but text sizing/line-height has
+ * no visible effect on a <div>, so it's harmless.
+ */
+---
+
+<p class="mb-[22px] text-[17px] leading-[1.75] text-ink/78 last:mb-0">
+  <slot />
+</p>
