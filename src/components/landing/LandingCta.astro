@@ -1,0 +1,45 @@
+---
+/**
+ * `cta` landing block — centered heading + one <Button>, using the same
+ * ctaField() shape difference/wildlife/boats/crew already use for their
+ * own trailing button (tina/shared/fields.ts), but with its own heading:
+ * unlike those sections' cta, this block has no host section to borrow a
+ * heading from.
+ */
+import Button from "../ui/Button.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { CtaBlock, LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: CtaBlock;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section text-center"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>
+    {block.title}
+  </h2>
+  {
+    block.lede && (
+      <p class="mx-auto mt-4 max-w-[46ch] text-ink/74" data-tina-field={tinaField(block, "lede")}>
+        {block.lede}
+      </p>
+    )
+  }
+  {
+    block.cta && (
+      <div class="mt-8">
+        <Button href={block.cta.href} variant="primary" context="default" data-tina-field={tinaField(block, "cta")}>
+          {block.cta.label}
+        </Button>
+      </div>
+    )
+  }
+</section>

@@ -19,6 +19,7 @@ import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
 import { blogSection, blogPost } from "./collections/blog";
+import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
@@ -83,6 +84,7 @@ export default defineConfig({
       contactPage,
       blogSection,
       blogPost,
+      landingPage,
       siteSettings,
       // access list for Google sign-in
       editors,

@@ -1,0 +1,54 @@
+---
+/**
+ * Dispatches each `landingPage.blocks` item to its renderer by
+ * `__typename` — the same union-discrimination pattern Nav.astro uses for
+ * `NavigationLinksLink` vs `NavigationLinksDropdown` (tina/collections/
+ * navigation.ts). Tina names a stored block's generated GraphQL type
+ * `<Collection><Field><Template>` in PascalCase, so the five templates on
+ * landingPage.blocks (tina/collections/landingPage.ts) become:
+ *   hero          -> LandingPageBlocksHero
+ *   richText      -> LandingPageBlocksRichText
+ *   imageGallery  -> LandingPageBlocksImageGallery
+ *   cta           -> LandingPageBlocksCta
+ *   moguProposal  -> LandingPageBlocksMoguProposal
+ * Confirmed against the generated tina/__generated__/types.ts after
+ * `tinacms build` (see blockTypes.ts).
+ */
+import LandingHero from "./LandingHero.astro";
+import LandingRichText from "./LandingRichText.astro";
+import LandingImageGallery from "./LandingImageGallery.astro";
+import LandingCta from "./LandingCta.astro";
+import LandingMoguProposal from "./LandingMoguProposal.astro";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  landingPage: LandingPageBlocksParent;
+}
+
+const { landingPage } = Astro.props;
+---
+
+{
+  (landingPage.blocks ?? []).map(
+    (block, index) =>
+      block && (
+        <>
+          {block.__typename === "LandingPageBlocksHero" && (
+            <LandingHero block={block} landingPage={landingPage} index={index} />
+          )}
+          {block.__typename === "LandingPageBlocksRichText" && (
+            <LandingRichText block={block} landingPage={landingPage} index={index} />
+          )}
+          {block.__typename === "LandingPageBlocksImageGallery" && (
+            <LandingImageGallery block={block} landingPage={landingPage} index={index} />
+          )}
+          {block.__typename === "LandingPageBlocksCta" && (
+            <LandingCta block={block} landingPage={landingPage} index={index} />
+          )}
+          {block.__typename === "LandingPageBlocksMoguProposal" && (
+            <LandingMoguProposal block={block} landingPage={landingPage} index={index} />
+          )}
+        </>
+      )
+  )
+}

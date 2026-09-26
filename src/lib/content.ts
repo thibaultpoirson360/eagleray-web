@@ -156,3 +156,20 @@ export function loadBlogPost(locale: Locale, slug: string, options?: RequestOpti
     options
   );
 }
+
+/** Same shape as loadCrew/loadBoats/loadBlogPosts — see loadCrew's comment
+ *  for why the locale filter is done in JS, not in the generated query. */
+export async function loadLandingPages(locale: Locale, options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.landingPageConnection(), options);
+  const pages = (result.data.landingPageConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale);
+  return { ...result, pages };
+}
+
+export function loadLandingPage(locale: Locale, slug: string, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.landingPage({ relativePath: `${locale}/${slug}.json` }),
+    options
+  );
+}

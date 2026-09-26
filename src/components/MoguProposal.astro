@@ -1,0 +1,33 @@
+---
+/**
+ * Mogu Trips proposal embed. Standalone and reusable on its own (e.g. a
+ * future boat/route detail page) AND as the render target for the landing
+ * page's `moguProposal` block (tina/collections/landingPage.ts,
+ * src/components/landing/LandingMoguProposal.astro) — one component either
+ * way, not duplicated.
+ *
+ * Real embed pattern, confirmed directly (not guessed):
+ *   <iframe src="https://v2.app.moguplatform.com/trips/{tripSlug}?embed=true" width="100%" height="600" frameborder="0"></iframe>
+ * The `src` URL shape above is authoritative — don't change it. Tailwind's
+ * `border-0` replaces the legacy `frameborder="0"` attribute, and `w-full`
+ * replaces `width="100%"`; `height` stays a real attribute since Tailwind
+ * has no utility for an arbitrary, content-driven pixel height passed as a
+ * prop.
+ */
+interface Props {
+  /** Mogu trip identifier used in the embed URL, e.g. "baja-sailing-7-days". */
+  tripSlug: string;
+  /** Iframe height in px. Defaults to 600, matching the confirmed embed example. */
+  height?: number;
+}
+
+const { tripSlug, height = 600 } = Astro.props;
+---
+
+<iframe
+  src={`https://v2.app.moguplatform.com/trips/${tripSlug}?embed=true`}
+  height={height}
+  loading="lazy"
+  class="w-full border-0"
+  title="Trip proposal"
+></iframe>

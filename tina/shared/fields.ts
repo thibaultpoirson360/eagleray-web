@@ -97,3 +97,14 @@ export const optionsField = (name: string, label: string): TinaField => ({
 });
 
 export const textarea = { component: "textarea" } as const;
+
+/**
+ * Marks a field as a proper noun / non-editorial value that the translation
+ * Action (scripts/translate-content.mjs) must copy through untouched instead
+ * of sending to DeepL — crew names, boat model names, and anything else that
+ * reads the same in every language. Spread into a field's own `ui` object:
+ *   { type: "string", name: "name", ui: { ...doNotTranslate } }
+ * The translation script reads this the same way Tina does (real schema,
+ * not a hardcoded skip-list) via `field.ui?.translate === false`.
+ */
+export const doNotTranslate = { translate: false } as const;

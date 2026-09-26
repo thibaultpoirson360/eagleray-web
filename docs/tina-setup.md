@@ -443,3 +443,38 @@ Never commit real values: `.env` is gitignored, `.env.example` has placeholders 
   routes/dayInLife/FAQ/legal (out of scope now).
 - `tsconfig.json` excludes `tina/collections|shared|config.ts` from `astro check` (Tina's own
   guidance: its literal-typed field unions are noisy); `tinacms build` validates them.
+
+## 13. Translation automation (DeepL)
+
+`.github/workflows/translate-content.yml` drafts ES/FR translations of changed EN content
+and opens a PR — see `docs/translation-workflow.md` for the full trigger -> translate -> PR
+-> review -> merge flow and what gets sent to DeepL vs. skipped. This section is only the
+one-time setup: getting a DeepL key and adding it as a GitHub secret.
+
+1. **Sign up for DeepL API (free tier).** deepl.com/pro-api -> "Sign up for free" (this is a
+   *separate* signup from a regular DeepL Translate/consumer account, even if you already
+   have one — the API plan has its own dashboard). Free tier is ~500k characters/month, no
+   credit card required at signup for the free plan.
+2. **Get the API key.** Once signed in, account.deepl.com/summary (or the dashboard you land
+   on after signup) shows an **Authentication Key for DeepL API** — copy it. Free-tier keys
+   are recognizable by a `:fx` suffix (e.g. `a1b2c3d4-...:fx`); `scripts/lib/deepl.mjs` reads
+   that suffix itself to route requests to the free-tier API host automatically, so nothing
+   else needs to know which plan the key is on.
+3. **Add it as a GitHub Actions secret — not a Vercel env var.** This is the one credential in
+   this project that does NOT go through the usual `.env.example` -> Vercel Project Settings
+   path (see the comment in `.env.example`): the workflow that uses it runs entirely on
+   GitHub's runners, never on Vercel. github.com/&lt;owner&gt;/&lt;repo&gt; -> **Settings** ->
+   **Secrets and variables** -> **Actions** -> **New repository secret**.
+   - Name: `DEEPL_API_KEY` (must match exactly — `.github/workflows/translate-content.yml`
+     reads `secrets.DEEPL_API_KEY`).
+   - Value: the key from step 2. Paste it once; GitHub never displays it again after saving
+     (you can overwrite it with a new value later, but not view the old one).
+4. **Nothing else to configure.** The workflow needs no other secrets — it opens PRs with the
+   repo's own default `GITHUB_TOKEN` (see the `permissions:` block in the workflow file), not
+   a separate PAT.
+5. **Verify it's wired up**: push a change to any `content/<collection>/en.json` or
+   `content/<collection>/en/<slug>.json` file on `main` (or run the workflow manually via
+   **Actions** -> "Translate content (DeepL draft)" -> **Run workflow**) and confirm a PR
+   titled "Translate content to ES/FR (DeepL draft — needs review)" opens shortly after.
+   If the job fails with a DeepL 403, the key either wasn't saved correctly or wasn't from
+   the API (not consumer) signup — redo step 1/2.

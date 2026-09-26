@@ -1,0 +1,27 @@
+---
+/**
+ * `moguProposal` landing block — thin wrapper around the standalone
+ * src/components/MoguProposal.astro, adding the same section shell every
+ * other block uses plus the block-level `data-tina-field` marker.
+ */
+import MoguProposal from "../MoguProposal.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { MoguProposalBlock, LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: MoguProposalBlock;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div data-tina-field={tinaField(block, "tripSlug")}>
+    <MoguProposal tripSlug={block.tripSlug} height={block.height ?? undefined} />
+  </div>
+</section>

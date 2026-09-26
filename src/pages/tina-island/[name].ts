@@ -28,6 +28,7 @@ import Funnel from "../../components/Funnel.astro";
 import ContactPage from "../../components/ContactPage.astro";
 import BlogListing from "../../components/BlogListing.astro";
 import BlogPostView from "../../components/BlogPostView.astro";
+import LandingPageView from "../../components/LandingPageView.astro";
 import {
   loadHero,
   loadDifference,
@@ -44,6 +45,7 @@ import {
   loadBlogSection,
   loadBlogPosts,
   loadBlogPost,
+  loadLandingPage,
 } from "../../lib/content";
 import { defaultLocale, locales, type Locale } from "../../i18n/config";
 
@@ -212,6 +214,19 @@ const route = createIslandRoute({
       const related = allPosts.posts.filter((p) => p._sys.filename !== slug).slice(0, 2);
       return { post: post.data.blogPost, related };
     },
+  },
+  // Same "one page per document, slug in params" shape as blogPost above.
+  landingPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const slug = params.get("slug") ?? "";
+      return loadLandingPage(locale, slug);
+    },
+    component: LandingPageView,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => ({
+      landingPage: (result as Awaited<ReturnType<typeof loadLandingPage>>).data.landingPage,
+    }),
   },
 });
 

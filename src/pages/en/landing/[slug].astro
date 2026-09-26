@@ -1,0 +1,35 @@
+---
+/**
+ * `/en/landing/<slug>/` — one landing page, enumerated at build time
+ * (output: 'static', astro.config.mjs) via getStaticPaths, the same
+ * pattern as /en/blog/[slug].astro. See tina/collections/landingPage.ts's
+ * header comment for why this URL lives under its own /landing/ namespace
+ * rather than directly under /en/.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import LandingPageView from "../../../components/LandingPageView.astro";
+import { loadLandingPage, loadLandingPages } from "../../../lib/content";
+
+export async function getStaticPaths() {
+  const { pages } = await loadLandingPages("en");
+  return pages.map((page) => ({ params: { slug: page._sys.filename } }));
+}
+
+const { slug } = Astro.params;
+const result = await loadLandingPage("en", slug);
+const landingPage = result.data.landingPage;
+---
+
+<BaseLayout
+  title={`${landingPage.title} — Eagle Ray Expeditions`}
+  locale="en"
+  path={`landing/${slug}/`}
+  transparentNav={false}
+>
+  <main id="main">
+    <TinaIsland name="landingPage" wrapper={{ tag: "div" }} params={{ locale: "en", slug }}>
+      <LandingPageView landingPage={landingPage} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

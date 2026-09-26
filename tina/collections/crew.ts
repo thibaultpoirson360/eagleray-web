@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { ctaField, depthFields, localeRouter, sectionHeadFields, textarea } from "../shared/fields";
+import { ctaField, depthFields, doNotTranslate, localeRouter, sectionHeadFields, textarea } from "../shared/fields";
 
 /**
  * Homepage section 3 (`#crew`) is split in two collections:
@@ -41,7 +41,15 @@ export const crew: Collection = {
     filename: { slugify: (values) => (values?.name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-") },
   },
   fields: [
-    { type: "string", name: "name", label: "Name", required: true, isTitle: true },
+    {
+      type: "string",
+      name: "name",
+      label: "Name",
+      required: true,
+      isTitle: true,
+      ui: doNotTranslate,
+      description: "A proper noun — the translation Action copies this through untouched instead of sending it to DeepL.",
+    },
     { type: "string", name: "role", label: "Role", description: 'e.g. "Captain & Expedition Leader"' },
     { type: "string", name: "bio", label: "Bio", ui: textarea },
     { type: "image", name: "photo", label: "Photo" },

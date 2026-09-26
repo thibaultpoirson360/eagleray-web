@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { textarea } from "../shared/fields";
+import { doNotTranslate, textarea } from "../shared/fields";
 
 /**
  * `/en/blog` (listing) + `/en/blog/<slug>` (post). No source markup for
@@ -88,7 +88,14 @@ export const blogPost: Collection = {
       label: "Subtitle (shown under the title on the post page)",
       ui: textarea,
     },
-    { type: "string", name: "author", label: "Author name", required: true },
+    {
+      type: "string",
+      name: "author",
+      label: "Author name",
+      required: true,
+      ui: doNotTranslate,
+      description: "A proper noun — the translation Action copies this through untouched instead of sending it to DeepL.",
+    },
     { type: "string", name: "authorRole", label: "Author role", description: 'e.g. "Naturalist Guide"' },
     { type: "image", name: "authorAvatar", label: "Author photo" },
     { type: "rich-text", name: "body", label: "Body", required: true },
