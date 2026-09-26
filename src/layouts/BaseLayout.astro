@@ -22,9 +22,15 @@ interface Props {
    * default state is unreadable against the page's own white background.
    */
   transparentNav?: boolean;
+  /**
+   * For pages that must stay out of search results and off the language graph
+   * (the 404): emits `noindex` and drops the canonical/hreflang/og:locale
+   * tags, which would otherwise declare the error page to be the home page.
+   */
+  noindex?: boolean;
 }
 
-const { title, description, locale = defaultLocale, path = '', transparentNav = true } = Astro.props;
+const { title, description, locale = defaultLocale, path = '', transparentNav = true, noindex = false } = Astro.props;
 const site = Astro.site ?? new URL(Astro.url.origin);
 const urlFor = (l: Locale) => localeHref(l, path, site);
 
@@ -41,11 +47,25 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
-    <link rel="canonical" href={urlFor(locale)} />
-    {liveLocales.map((l) => <link rel="alternate" hreflang={l} href={urlFor(l)} />)}
-    <link rel="alternate" hreflang="x-default" href={urlFor(defaultLocale)} />
+    <!--
+      The four web fonts the design uses (--font-display/serif/sans/mono in
+      global.css), same families and weights as the original index.html
+      <head>. Nothing else loads them, so without this every heading, body
+      and mono label renders in a system fallback. One combined request
+      (families in alphabetical order) instead of the source's two.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=TASA+Explorer:wght@400..800&display=swap"
+    />
+    {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && <link rel="canonical" href={urlFor(locale)} />}
+    {!noindex && liveLocales.map((l) => <link rel="alternate" hreflang={l} href={urlFor(l)} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={urlFor(defaultLocale)} />}
     <meta property="og:locale" content={ogLocale[locale]} />
-    {liveLocales.filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={ogLocale[l]} />)}
+    {!noindex && liveLocales.filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={ogLocale[l]} />)}
     <!--
       Source index.html <head>: `document.documentElement.className += " js"`.
       Synchronous and inline so it runs before first paint — every
@@ -55,7 +75,7 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
     -->
     <script is:inline>document.documentElement.className += ' js';</script>
   </head>
-  <body class="bg-white font-sans text-ink">
+  <body class={`bg-white font-sans text-ink ${transparentNav ? '' : 'pt-nav-solid'}`}>
     <!--
       Not wrapped in a <TinaIsland>: unlike Nav/Footer this isn't really
       content (no copy of its own, no data-tina-field markers) — it's a

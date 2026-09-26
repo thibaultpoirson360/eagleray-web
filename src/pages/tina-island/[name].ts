@@ -20,6 +20,9 @@ import { createIslandRoute } from "../../lib/tina-island-route";
 import Hero from "../../components/Hero.astro";
 import Difference from "../../components/Difference.astro";
 import Crew from "../../components/Crew.astro";
+import CrewPage from "../../components/CrewPage.astro";
+import NavPageView from "../../components/NavPageView.astro";
+import NotFoundView from "../../components/NotFoundView.astro";
 import Wildlife from "../../components/Wildlife.astro";
 import Boats from "../../components/Boats.astro";
 import Nav from "../../components/Nav.astro";
@@ -34,6 +37,9 @@ import {
   loadDifference,
   loadCrewSection,
   loadCrew,
+  loadCrewPage,
+  loadNavPage,
+  loadNotFoundPage,
   loadWildlife,
   loadBoatsSection,
   loadBoats,
@@ -80,12 +86,31 @@ const route = createIslandRoute({
     },
     component: Crew,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => {
+    propsFromData: (result: unknown, params: URLSearchParams) => {
       const { section, crew } = result as {
         section: Awaited<ReturnType<typeof loadCrewSection>>;
         crew: Awaited<ReturnType<typeof loadCrew>>;
       };
-      return { crewSection: section.data.crewSection, members: crew.members };
+      return { crewSection: section.data.crewSection, members: crew.members, locale: localeFromParams(params) };
+    },
+  },
+  // The Passionate Sea People page: its own copy plus the same crew records
+  // and labels the home slider uses.
+  crewPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const [page, section, crew] = await Promise.all([loadCrewPage(locale), loadCrewSection(locale), loadCrew(locale)]);
+      return { page, section, crew };
+    },
+    component: CrewPage,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const { page, section, crew } = result as {
+        page: Awaited<ReturnType<typeof loadCrewPage>>;
+        section: Awaited<ReturnType<typeof loadCrewSection>>;
+        crew: Awaited<ReturnType<typeof loadCrew>>;
+      };
+      return { crewPage: page.data.crewPage, crewSection: section.data.crewSection, members: crew.members };
     },
   },
   wildlife: {
@@ -226,6 +251,26 @@ const route = createIslandRoute({
         locale: localeFromParams(params),
       };
     },
+  },
+  // The 404 page: a single document, no params.
+  notFound: {
+    fetch: async () => loadNotFoundPage(),
+    component: NotFoundView,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => ({
+      notFound: (result as Awaited<ReturnType<typeof loadNotFoundPage>>).data.notFoundPage,
+    }),
+  },
+  // Placeholder nav pages: one page per document, slug in params (as above).
+  navPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      return loadNavPage(localeFromParams(params), params.get("slug") ?? "");
+    },
+    component: NavPageView,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => ({
+      navPage: (result as Awaited<ReturnType<typeof loadNavPage>>).data.navPages,
+    }),
   },
   // Same "one page per document, slug in params" shape as blogPost above.
   landingPage: {

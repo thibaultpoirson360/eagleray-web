@@ -1,8 +1,41 @@
 {
-  "name": "Adly",
-  "role": "Expedition Leader — Kite & Scuba",
-  "bio": "Thibault met Adly while learning to kite in La Ventana, Mexico's legendary wind playground. Originally from Egypt, Adly soon invited him to return the favor on the Red Sea. An engineer by training, he is now an IKO kite instructor and PADI scuba instructor with 1,500+ dives, 80+ students and boat-crew experience across four continents. Adly reads wind, current and group energy in the same glance. He knows when to push for one more dive — and when doing absolutely nothing at anchor is exactly the adventure everyone needs.",
-  "photo": "/assets/img/crew-adly.webp",
-  "photoAlt": "Adly, Expedition Leader",
+  "name": "Mohamed “Adly”",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Diving",
+    "Kite",
+    "Snorkeling",
+    "Freediving",
+    "Kayaking"
+  ],
+  "languages": [
+    {
+      "language": "Arabic",
+      "level": "native",
+      "flag": "🇪🇬"
+    },
+    {
+      "language": "English",
+      "level": "fluent",
+      "flag": "🇬🇧"
+    },
+    {
+      "language": "Spanish",
+      "level": "intermediate",
+      "flag": "🇪🇸"
+    }
+  ],
+  "certificates": [
+    "IKO Instructor",
+    "PADI OWSI",
+    "STCW"
+  ],
+  "yearsOfExperience": 5,
+  "quote": "I might be the reason someone falls in love with the ocean.",
+  "about": "Thibault met Adly while learning to kite in La Ventana, Mexico's legendary wind playground. Originally from Egypt, Adly soon invited him to return the favor on the Red Sea. An engineer by training, he is now an IKO kite instructor and PADI scuba instructor with 1,500+ dives, 80+ students and boat-crew experience across four continents. Adly reads wind, current and group energy in the same glance. He knows when to push for one more dive — and when doing absolutely nothing at anchor is exactly the adventure everyone needs.",
+  "image": "/assets/img/crew-adly.webp",
+  "imageAlt": "Adly, Expedition Leader",
   "order": 4
 }

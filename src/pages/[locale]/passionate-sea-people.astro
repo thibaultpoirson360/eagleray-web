@@ -1,0 +1,40 @@
+---
+/**
+ * `/<locale>/passionate-sea-people/` — every crew member as a complete card.
+ * Thin page wrapper, matching contact.astro / blog/index.astro: load the
+ * data, wrap the real component (CrewPage.astro) in a <TinaIsland> so it is
+ * click-to-edit. Opens with a hero, so it keeps BaseLayout's transparent nav.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import CrewPage from "../../components/CrewPage.astro";
+import { loadCrewPage, loadCrewSection, loadCrew } from "../../lib/content";
+import { liveLocales, type Locale } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const [pageResult, sectionResult, crewResult] = await Promise.all([
+  loadCrewPage(locale),
+  loadCrewSection(locale),
+  loadCrew(locale),
+]);
+---
+
+<BaseLayout
+  title={`${pageResult.data.crewPage.hero?.title ?? "Passionate Sea People"} — Eagle Ray Expeditions`}
+  locale={locale}
+  path="passionate-sea-people/"
+>
+  <main id="main">
+    <TinaIsland name="crewPage" wrapper={{ tag: "div" }} params={{ locale }}>
+      <CrewPage
+        crewPage={pageResult.data.crewPage}
+        crewSection={sectionResult.data.crewSection}
+        members={crewResult.members}
+      />
+    </TinaIsland>
+  </main>
+</BaseLayout>

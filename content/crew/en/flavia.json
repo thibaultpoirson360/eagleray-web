@@ -1,9 +1,13 @@
 {
   "name": "Flavia",
-  "role": "Chef, Hostess & Stewardess",
-  "bio": "Flavia cooks, works the deck, trains people and films the day as it happens. On a small boat, that is not four jobs; it is one rare instinct for keeping life in motion. She knows what a hungry swimmer needs, how to lift the group at sunrise and when the camera should disappear. With Flavia aboard, everything flows.",
-  "photo": "/assets/img/crew-flavia.webp",
-  "photoAlt": "Flavia Elin Conradi, Stewardess, Chef & Filmmaker",
+  "roles": [
+    "Chef",
+    "Hostess",
+    "Stewardess"
+  ],
+  "about": "Flavia cooks, works the deck, trains people and films the day as it happens. On a small boat, that is not four jobs; it is one rare instinct for keeping life in motion. She knows what a hungry swimmer needs, how to lift the group at sunrise and when the camera should disappear. With Flavia aboard, everything flows.",
+  "image": "/assets/img/crew-flavia.webp",
+  "imageAlt": "Flavia Elin Conradi, Stewardess, Chef & Filmmaker",
   "joiningTag": "Joining Q4 2026",
   "order": 11
 }

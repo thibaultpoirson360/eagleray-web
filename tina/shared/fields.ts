@@ -98,6 +98,9 @@ export const optionsField = (name: string, label: string): TinaField => ({
 
 export const textarea = { component: "textarea" } as const;
 
+/** Tag-style input for a `list: true` string field (type a word, press Enter). */
+export const tags = { component: "tags" } as const;
+
 /**
  * Marks a field as a proper noun / non-editorial value that the translation
  * Action (scripts/translate-content.mjs) must copy through untouched instead

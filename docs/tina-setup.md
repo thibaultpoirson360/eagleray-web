@@ -257,15 +257,17 @@ is always the locale, which `ui.router` uses to open the right page in the edito
 |---|---|---|
 | `hero` | `content/hero/<loc>.json` | metaLine, title, subtitle, primaryCta{label,href}, secondaryCta{label,href}, background{videoSrc, image, imageAlt}, scrollCueLabel |
 | `difference` | `content/difference/<loc>.json` | depth{meters,name}, kickerNumber, kicker, title, titleEmphasis, lede, comparison{usTitle, usPoints[], axisLabel, themTitle, themPoints[]}, founderQuote{kicker, quote, cite} |
-| `crewSection` | `content/crewSection/<loc>.json` | depth, kickerNumber, kicker, title, titleEmphasis, intro, rolesIntro, cta |
-| `crew` | `content/crew/<loc>/<slug>.json` | name, role, bio, photo, photoAlt, cardLabel, joiningTag, order |
+| `crewSection` | `content/crewSection/<loc>.json` | depth, kickerNumber, kicker, title, titleEmphasis, intro, rolesIntro, cta, dotsLabel, and the crew cards' labels (meetLabel, closeLabel, yearsLabel, yearLabel, readMoreLabel, historyLabel, whyLabel) |
+| `crew` | `content/crew/<loc>/<slug>.json` | name, roles[] (tags), skills[] (tags), languages[]{language, level, flag}, certificates[] (tags), yearsOfExperience, quote, about, history, why, image, imageAlt, joiningTag, order. One complete record; the home slider shows a summary card (photo, quote, name, first role, "Meet …" button opening the complete card in a modal) and `/<loc>/passionate-sea-people/` shows the complete cards in a grid |
+| `crewPage` | `content/crewPage/<loc>.json` | hero{kicker, title, lede, image, imageAlt}, intro, gridTitle — the Passionate Sea People page's own copy (the cards come from `crew`) |
 | `wildlife` | `content/wildlife/<loc>.json` | depth, kickerNumber, kicker, title, titleEmphasis, lede, gallery[{image, alt, href}], cta |
 | `boatsSection` | `content/boatsSection/<loc>.json` | depth, kickerNumber, kicker, title, titleEmphasis, cta |
 | `boats` | `content/boats/<loc>/<slug>.json` | name, tagline, description, photo, photoAlt, order |
 | `funnel` | `content/funnel/<loc>.json` | depth, heading fields, lede, escapeText, step1{legend, tripDuration{question,options[{label,value}]}, travelingAs{...}, guestCount{question,min,max,defaultValue,hint,fewerLabel,moreLabel}}, step2{legend, routeFocus{...}, topPriority{...}}, step3{legend, dateFromLabel, dateToLabel, flexibleDates{label,placeholder}, boatPreference{...}}, step4{legend, fullName{label,placeholder,error}, email{...,error}, whatsappNumber{label,placeholder,optionalHint}, notes{label,placeholder}, privacy}, ui{stepCounter, autosaveRestored, autosaveSaved, back, continue, submit, sending, submitError, recapTitle}, success{title, body, whatsappButton}, whatsappMessage{intro, *Label per field, datesFrom, datesToBeConfirmed} |
-| `navPages` | `content/navPages/<loc>/<slug>.json` | title (7 files: about-us, passionate-sea-people, sail-with-us, la-paz, boats, blog, contact) |
+| `navPages` | `content/navPages/<loc>/<slug>.json` | title — title-only placeholder pages (an h1) served at `/<loc>/<slug>/` by `src/pages/[locale]/[slug].astro`: our-story, the-eagle-ray-experience, our-travelers-experience, recalibration-expedition, active-expedition, ad-hoc-expedition, la-paz, boats |
 | `navigation` | `content/navigation/<loc>.json` | brand{...}, links[link \| dropdown], cta, mobileFoot, toggleLabel, ariaLabel, languageLabel, surfaceLabel (depth gauge) |
 | `footer` | `content/footer/<loc>.json` | claim, claimEmphasis, contactDisplay, base, coords, followHeading, legal |
+| `notFoundPage` | `content/notFoundPage/index.json` (single document, not per locale) | title, buttonLabel, image, imageAlt — the 404 page (`src/pages/404.astro`, built to `/404.html`, English) |
 | `siteSettings` | `content/settings/index.json` (singleton, global) | name, base, coords, contact{whatsapp,email,instagram}, sounder{maxDepth}, funnelIntro, leadEndpoint |
 | `editors` | `content/editors/index.json` (auth allowlist) | users[]{email (uid), name} |
 

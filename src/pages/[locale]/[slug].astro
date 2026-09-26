@@ -1,0 +1,38 @@
+---
+/**
+ * `/<locale>/<slug>/` — the placeholder pages for navigation entries that
+ * have no real page yet (title only): our-story, la-paz, boats, the
+ * expeditions... Enumerated at build time from the `navPages` collection, so
+ * adding a document there adds a page. Static routes (contact,
+ * passionate-sea-people, blog/, landing/) take priority over this one, so a
+ * page that gets its own template wins automatically.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import NavPageView from "../../components/NavPageView.astro";
+import { loadNavPage, loadNavPages } from "../../lib/content";
+import { liveLocales, type Locale } from "../../i18n/config";
+
+export async function getStaticPaths() {
+  const perLocale = await Promise.all(
+    liveLocales.map(async (locale) => {
+      const { pages } = await loadNavPages(locale);
+      return pages.map((page) => ({ params: { locale, slug: page._sys.filename } }));
+    })
+  );
+  return perLocale.flat();
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const result = await loadNavPage(locale, slug);
+const navPage = result.data.navPages;
+---
+
+<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={false}>
+  <main id="main">
+    <TinaIsland name="navPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
+      <NavPageView navPage={navPage} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

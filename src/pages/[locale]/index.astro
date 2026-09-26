@@ -51,7 +51,7 @@ const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale)
       <Difference difference={differenceResult.data.difference} />
     </TinaIsland>
     <TinaIsland name="crew" wrapper={{ tag: "div" }} params={{ locale }}>
-      <Crew crewSection={crewSectionResult.data.crewSection} members={crewResult.members} />
+      <Crew crewSection={crewSectionResult.data.crewSection} members={crewResult.members} locale={locale} />
     </TinaIsland>
     <TinaIsland name="wildlife" wrapper={{ tag: "div" }} params={{ locale }}>
       <Wildlife wildlife={wildlifeResult.data.wildlife} />

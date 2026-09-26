@@ -10,6 +10,12 @@
  * same as the source); only the dot-navigation control is Preact, per
  * CLAUDE.md's "sliders (boats, crew)... Preact." See SliderDots.tsx.
  *
+ * The cards are now the summary card (CrewSummaryCard.astro: photo, quote,
+ * name, role, "Meet <name> →"), which opens the complete card in a modal —
+ * a deliberate redesign from the client's mockups, replacing the source's
+ * wide photo-plus-bio cards. The complete cards live on the Passionate Sea
+ * People page (CrewPage.astro).
+ *
  * Two small, deliberate deviations from source, both flagged in chat:
  *  - `.crew-card-body { align-self: top }` is invalid CSS (does
  *    nothing) — not ported.
@@ -22,18 +28,18 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import Button from "./ui/Button.astro";
 import SliderDots from "./SliderDots.tsx";
-import type { CrewSectionQuery, CrewConnectionQuery } from "../../tina/__generated__/types";
-
-type CrewMember = NonNullable<
-  NonNullable<CrewConnectionQuery["crewConnection"]["edges"]>[number]
->["node"];
+import CrewSummaryCard from "./CrewSummaryCard.astro";
+import type { Locale } from "../i18n/config";
+import type { CrewMember } from "../lib/crew";
+import type { CrewSectionQuery } from "../../tina/__generated__/types";
 
 interface Props {
   crewSection: CrewSectionQuery["crewSection"];
   members: NonNullable<CrewMember>[];
+  locale: Locale;
 }
 
-const { crewSection, members } = Astro.props;
+const { crewSection, members, locale } = Astro.props;
 const { cta } = crewSection;
 ---
 
@@ -87,59 +93,7 @@ const { cta } = crewSection;
     data-crew-slider
   >
     {
-      members.map((member) => (
-        <article class="crew-card relative flex w-[min(100vw,600px)] flex-none snap-start flex-col gap-[1.4rem] rounded-lg border border-ink/14 bg-surface p-[1.6rem] sm:flex-row sm:gap-[1.8rem] sm:p-[1.8rem]">
-          {member.joiningTag && (
-            <span
-              class="crew-card-tag absolute top-4 right-4 z-[2] rounded-sm bg-ink px-[.7rem] py-[.35rem] font-mono text-[.58rem] tracking-[.1em] text-white uppercase"
-              data-tina-field={tinaField(member, "joiningTag")}
-            >
-              {member.joiningTag}
-            </span>
-          )}
-          <div class="crew-card-photo aspect-[4/5] overflow-hidden rounded bg-white sm:aspect-auto sm:flex-none sm:basis-[210px]">
-            {member.photo && (
-              <img
-                src={member.photo}
-                alt={member.photoAlt ?? ""}
-                loading="lazy"
-                decoding="async"
-                class="h-full w-full object-cover object-center"
-                data-tina-field={tinaField(member, "photo")}
-              />
-            )}
-          </div>
-          <div class="crew-card-body sm:flex-1">
-            {member.cardLabel && (
-              <p
-                class="crew-card-label mb-2 text-[.62rem] tracking-[.16em] text-ink/52 uppercase"
-                data-tina-field={tinaField(member, "cardLabel")}
-              >
-                {member.cardLabel}
-              </p>
-            )}
-            <h3 class="mb-[.3rem] font-display text-[1.6rem]" data-tina-field={tinaField(member, "name")}>
-              {member.name}
-            </h3>
-            {member.role && (
-              <p
-                class="crew-card-role mb-4 text-[.66rem] tracking-[.12em] text-ink/52 uppercase"
-                data-tina-field={tinaField(member, "role")}
-              >
-                {member.role}
-              </p>
-            )}
-            {member.bio && (
-              <p
-                class="crew-card-bio text-[.92rem] text-ink/74 leading-[1.7]"
-                data-tina-field={tinaField(member, "bio")}
-              >
-                {member.bio}
-              </p>
-            )}
-          </div>
-        </article>
-      ))
+      members.map((member) => <CrewSummaryCard member={member} labels={crewSection} locale={locale} />)
     }
   </div>
 

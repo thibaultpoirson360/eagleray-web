@@ -11,19 +11,19 @@
       "_template": "dropdown",
       "label": "About Us",
       "items": [
-        { "label": "Our Story", "href": "" },
-        { "label": "Passionate Sea People", "href": "" },
-        { "label": "The Eagle Ray Experience", "href": "" },
-        { "label": "Our Travelers Experience", "href": "" }
+        { "label": "Our Story", "href": "/en/our-story/" },
+        { "label": "Passionate Sea People", "href": "/en/passionate-sea-people/" },
+        { "label": "The Eagle Ray Experience", "href": "/en/the-eagle-ray-experience/" },
+        { "label": "Our Travelers Experience", "href": "/en/our-travelers-experience/" }
       ]
     },
     {
       "_template": "dropdown",
       "label": "Sail with Us",
       "items": [
-        { "label": "Recalibration Expedition", "href": "" },
-        { "label": "Active Expedition", "href": "" },
-        { "label": "Ad-hoc Expedition", "href": "" }
+        { "label": "Recalibration Expedition", "href": "/en/recalibration-expedition/" },
+        { "label": "Active Expedition", "href": "/en/active-expedition/" },
+        { "label": "Ad-hoc Expedition", "href": "/en/ad-hoc-expedition/" }
       ]
     },
     {
@@ -34,12 +34,12 @@
     {
       "_template": "link",
       "label": "La Paz",
-      "href": ""
+      "href": "/en/la-paz/"
     },
     {
       "_template": "link",
       "label": "Boats",
-      "href": ""
+      "href": "/en/boats/"
     },
     {
       "_template": "link",

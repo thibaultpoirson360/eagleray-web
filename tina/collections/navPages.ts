@@ -1,20 +1,21 @@
 import type { Collection } from "tinacms";
 
 /**
- * The 7 blank navigation pages (CLAUDE.md "New pages"): About Us, Passionate
- * Sea People, Sail with Us, La Paz, Boats, Blog, Contact. Title only for now.
+ * Placeholder pages for the navigation entries that have no real page yet:
+ * a title (an <h1>) and nothing else. One document per locale and page,
+ * content/navPages/<locale>/<slug>.json, served by
+ * src/pages/[locale]/[slug].astro at /<locale>/<slug>/:
  *
- *   content/navPages/en/about-us.json                 -> /en/about-us
- *   content/navPages/en/passionate-sea-people.json    -> /en/passionate-sea-people
- *   content/navPages/en/sail-with-us.json             -> /en/sail-with-us
- *   content/navPages/en/la-paz.json                   -> /en/la-paz
- *   content/navPages/en/boats.json                    -> /en/boats
- *   content/navPages/en/blog.json                     -> /en/blog
- *   content/navPages/en/contact.json                  -> /en/contact
+ *   our-story, the-eagle-ray-experience, our-travelers-experience   (About Us)
+ *   recalibration-expedition, active-expedition, ad-hoc-expedition  (Sail with Us)
+ *   la-paz, boats
  *
- * The filename (slug) is the URL segment. `blog` is a placeholder page only —
- * a Blog content type is NOT modelled (out of scope, flagged for a scope
- * conversation).
+ * The filename (slug) is the URL segment, and it is what the nav links point
+ * at. Pages that became real (passionate-sea-people, blog, contact) have their
+ * own collection and route and are not listed here. When one of these grows
+ * into a real page, give it its own collection + route and delete its
+ * document here (a static route wins over [slug], but the placeholder would
+ * keep being built).
  */
 const navPages: Collection = {
   name: "navPages",
@@ -26,8 +27,10 @@ const navPages: Collection = {
       const [locale, slug] = document._sys.breadcrumbs;
       return `/${locale}/${slug}`;
     },
-    // Slugs are fixed by the nav; editors change titles, not URLs.
+    // Slugs are fixed by the nav; editors change titles, not URLs, and a new
+    // page needs a nav link and (eventually) its own template anyway.
     filename: { readonly: true },
+    allowedActions: { create: false, delete: false },
   },
   fields: [{ type: "string", name: "title", label: "Page title", required: true, isTitle: true }],
 };

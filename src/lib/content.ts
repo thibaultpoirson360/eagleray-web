@@ -117,6 +117,34 @@ export function loadFunnel(locale: Locale, options?: RequestOptions) {
   );
 }
 
+export function loadCrewPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.crewPage({ relativePath: `${locale}.json` }),
+    options
+  );
+}
+
+/** Every placeholder nav page in a locale — same shape as loadBlogPosts (see loadCrew for why the filter is in JS). */
+export async function loadNavPages(locale: Locale, options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.navPagesConnection(), options);
+  const pages = (result.data.navPagesConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale);
+  return { ...result, pages };
+}
+
+export function loadNavPage(locale: Locale, slug: string, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.navPages({ relativePath: `${locale}/${slug}.json` }),
+    options
+  );
+}
+
+/** The 404 page — a single document, not per locale (see tina/collections/notFoundPage.ts). */
+export function loadNotFoundPage(options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.notFoundPage({ relativePath: "index.json" }), options);
+}
+
 export function loadContactPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(
     databaseClient.queries.contactPage({ relativePath: `${locale}.json` }),

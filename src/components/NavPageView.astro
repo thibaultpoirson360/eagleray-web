@@ -1,0 +1,25 @@
+---
+/**
+ * A placeholder navigation page: the page title as an <h1>, nothing else.
+ * Content comes from the `navPages` collection (tina/collections/navPages.ts);
+ * the route is src/pages/[locale]/[slug].astro. Its own component (rather than
+ * inlined in the route) so the on-demand island-refresh route
+ * (src/pages/tina-island/[name].ts) can re-render it for click-to-edit, like
+ * every other page.
+ *
+ * No hero, so the page is rendered with the solid nav (BaseLayout
+ * `transparentNav={false}`).
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { NavPagesQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  navPage: NavPagesQuery["navPages"];
+}
+
+const { navPage } = Astro.props;
+---
+
+<section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+  <h1 class="text-h2" data-tina-field={tinaField(navPage, "title")}>{navPage.title}</h1>
+</section>

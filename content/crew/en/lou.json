@@ -1,8 +1,11 @@
 {
   "name": "Lou",
-  "role": "Captain & Expedition Leader",
-  "bio": "Lou is a captain, kite specialist and freediver who has made Baja her home. She does not take over a boat's atmosphere; she changes it. Shoulders drop, breathing slows and nervous first-timers begin to belong. Lou reads the sea and people with the same grounded instinct, knowing when to add energy and when to make space.",
-  "photo": "/assets/img/crew-lou.jpeg",
-  "photoAlt": "Lou, Captain & Expedition Leader",
+  "roles": [
+    "Captain",
+    "Expedition Leader"
+  ],
+  "about": "Lou is a captain, kite specialist and freediver who has made Baja her home. She does not take over a boat's atmosphere; she changes it. Shoulders drop, breathing slows and nervous first-timers begin to belong. Lou reads the sea and people with the same grounded instinct, knowing when to add energy and when to make space.",
+  "image": "/assets/img/crew-lou.jpeg",
+  "imageAlt": "Lou, Captain & Expedition Leader",
   "order": 9
 }

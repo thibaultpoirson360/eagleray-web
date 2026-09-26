@@ -11,6 +11,7 @@ import siteSettings from "./collections/siteSettings";
 import hero from "./collections/hero";
 import difference from "./collections/difference";
 import { crewSection, crew } from "./collections/crew";
+import crewPage from "./collections/crewPage";
 import wildlife from "./collections/wildlife";
 import { boatsSection, boats } from "./collections/boats";
 import funnel from "./collections/funnel";
@@ -18,6 +19,7 @@ import navPages from "./collections/navPages";
 import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
+import notFoundPage from "./collections/notFoundPage";
 import { blogSection, blogPost } from "./collections/blog";
 import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
@@ -82,6 +84,8 @@ export default defineConfig({
       navigation,
       footer,
       contactPage,
+      notFoundPage,
+      crewPage,
       blogSection,
       blogPost,
       landingPage,

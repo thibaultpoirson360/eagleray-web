@@ -1,0 +1,28 @@
+---
+/**
+ * The "Page not found" page. Astro builds this to /404.html, which the
+ * Vercel adapter serves (with a 404 status) for every URL that matches
+ * nothing. One static file for all URLs, so it can't know the visitor's
+ * language: it is built in the default locale (see
+ * tina/collections/notFoundPage.ts). `noindex` keeps it out of search
+ * results and off the canonical/hreflang graph — it is not the home page.
+ *
+ * Opens with a hero, so it keeps the transparent nav.
+ */
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import NotFoundView from "../components/NotFoundView.astro";
+import { loadNotFoundPage } from "../lib/content";
+import { defaultLocale } from "../i18n/config";
+
+const result = await loadNotFoundPage();
+const notFound = result.data.notFoundPage;
+---
+
+<BaseLayout title={`${notFound.title} — Eagle Ray Expeditions`} locale={defaultLocale} noindex>
+  <main id="main">
+    <TinaIsland name="notFound" wrapper={{ tag: "div" }}>
+      <NotFoundView notFound={notFound} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

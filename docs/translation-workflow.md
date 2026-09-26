@@ -28,8 +28,8 @@ assumed as `content/en/**` (locale is *inside* each collection's folder here,
 not a top-level split):
 
 - **One document per locale** (`hero`, `difference`, `crewSection`,
-  `wildlife`, `boatsSection`, `funnel`, `contactPage`, `blogSection`,
-  `navigation`, `footer`): `content/<collection>/en.json`.
+  `crewPage`, `wildlife`, `boatsSection`, `funnel`, `contactPage`,
+  `blogSection`, `navigation`, `footer`): `content/<collection>/en.json`.
 - **Multiple documents per locale** (`crew`, `boats`, `blogPost`,
   `landingPage`): `content/<collection>/en/<slug>.json`.
 

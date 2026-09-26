@@ -27,13 +27,21 @@ const { slug } = Astro.params;
 const locale = Astro.params.locale as Locale;
 const result = await loadLandingPage(locale, slug);
 const landingPage = result.data.landingPage;
+
+// The nav floats transparently (white text) only when the page opens with a
+// hero banner it can sit over; any other first block is on a white
+// background, where a transparent nav would be unreadable. Decided here from
+// the content rather than a per-page toggle, so it can't be set wrong. It is
+// rendered by the layout, outside the landing island, so it follows the
+// saved content — not a live edit of block order in the visual editor.
+const transparentNav = landingPage.blocks?.[0]?.__typename === "LandingPageBlocksHero";
 ---
 
 <BaseLayout
   title={`${landingPage.title} — Eagle Ray Expeditions`}
   locale={locale}
   path={`landing/${slug}/`}
-  transparentNav={false}
+  transparentNav={transparentNav}
 >
   <main id="main">
     <TinaIsland name="landingPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>

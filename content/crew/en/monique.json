@@ -1,8 +1,10 @@
 {
   "name": "Monique",
-  "role": "Expedition Leader",
-  "bio": "Before she learned to read a boat full of divers, Monique spent years reading rooms in corporate marketing. Then the Brazilian dive instructor traded the office for Baja, where she has spent six years learning its water and people. She catches the current, hesitation and group mood early — without ever making guests feel managed.",
-  "photo": "/assets/img/crew-monique.png",
-  "photoAlt": "Monique, Expedition Leader",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "about": "Before she learned to read a boat full of divers, Monique spent years reading rooms in corporate marketing. Then the Brazilian dive instructor traded the office for Baja, where she has spent six years learning its water and people. She catches the current, hesitation and group mood early — without ever making guests feel managed.",
+  "image": "/assets/img/crew-monique.png",
+  "imageAlt": "Monique, Expedition Leader",
   "order": 7
 }

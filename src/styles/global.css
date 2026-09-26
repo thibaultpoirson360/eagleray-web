@@ -35,34 +35,39 @@
   /* locked in CLAUDE.md; currently unreferenced (audit §1d) */
 
   /* ---- layout (spacing / container namespaces) ---- */
-  --spacing-pad: clamp(1.25rem, 5vw, 3.5rem);
+  /* Sizes below were trimmed ~12-20% so more fits on a normal screen; the
+     hero tokens (--spacing-hero-b, --text-hero, --text-hero-sub) were
+     deliberately left as they were. */
+  --spacing-pad: clamp(1.25rem, 4.4vw, 3.1rem);
   /* px-pad, -mx-pad, pl-pad */
-  --spacing-nav: 84px;
-  /* h-nav; solid state = 72px */
-  --spacing-section: clamp(4.5rem, 5vw, 7.5rem);
+  --spacing-nav: 76px;
+  /* h-nav; solid state = --spacing-nav-solid */
+  --spacing-nav-solid: calc(var(--spacing-nav) - 12px);
+  /* h of the scrolled/solid nav, and the pt-nav-solid clearance pages without a hero get below it */
+  --spacing-section: clamp(3.5rem, 4vw, 6rem);
   /* py-section */
-  --spacing-section-head: clamp(2.6rem, 6vw, 4.5rem);
+  --spacing-section-head: clamp(2.2rem, 5vw, 3.75rem);
   --spacing-hero-b: clamp(4rem, 10vw, 6rem);
-  --spacing-quote: clamp(3rem, 3vw, 5rem);
-  --spacing-funnel: clamp(1.6rem, 4vw, 2.8rem);
-  --spacing-footer-t: clamp(4rem, 10vh, 6rem);
+  --spacing-quote: clamp(2.5rem, 2.6vw, 4.25rem);
+  --spacing-funnel: clamp(1.4rem, 3.4vw, 2.4rem);
+  --spacing-footer-t: clamp(3.25rem, 8.5vh, 5rem);
   --container-site: 80rem;
   /* max-w-site = 1280px */
   --container-form: 780px;
   /* .customize-inner */
 
   /* ---- fluid type (namespace --text-*) ---- */
-  --text-h2: clamp(2.1rem, 4.8vw, 3.7rem);
+  --text-h2: clamp(1.8rem, 4vw, 3.1rem);
   --text-hero: clamp(2.2rem, 5.6vw, 4.6rem);
-  --text-lede: clamp(1.04rem, 1.6vw, 1.24rem);
+  --text-lede: clamp(.96rem, 1.4vw, 1.1rem);
   --text-hero-sub: clamp(1rem, 1.6vw, 1.2rem);
-  --text-quote-lead: clamp(1.4rem, 3vw, 2rem);
+  --text-quote-lead: clamp(1.25rem, 2.6vw, 1.7rem);
   /* founder kicker */
-  --text-quote: clamp(1.3rem, 3vw, 2rem);
-  --text-legend: clamp(1.3rem, 3.2vw, 1.9rem);
-  --text-footer-claim: clamp(1.4rem, 2.8vw, 2rem);
-  --text-footer-big: clamp(1.3rem, 3vw, 1.8rem);
-  --text-nav-mobile: clamp(1.5rem, 7vw, 2rem);
+  --text-quote: clamp(1.15rem, 2.6vw, 1.7rem);
+  --text-legend: clamp(1.15rem, 2.8vw, 1.6rem);
+  --text-footer-claim: clamp(1.25rem, 2.4vw, 1.7rem);
+  --text-footer-big: clamp(1.15rem, 2.6vw, 1.55rem);
+  --text-nav-mobile: clamp(1.35rem, 6vw, 1.75rem);
 
   /* ---- animations (namespace --animate-*; keyframes inside @theme) ---- */
   --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
@@ -129,6 +134,28 @@
     50% {
       transform: scale(1.13) translate3d(-1%, -1%, 0)
     }
+  }
+}
+
+/*
+ * Base heading rule from the original stylesheet (styles.css L141-151).
+ * Tailwind's preflight strips every heading's size, weight and line-height,
+ * so it has to be restated (docs/tailwind-migration-audit.md, "C / X (base
+ * layer)") — until it was, h1-h4 inherited the body's 1.5 line-height and
+ * sans font. Colour is inherited (body is ink). Lives in @layer base so any
+ * utility on a heading (font-mono, tracking-*, leading-*, text-white...)
+ * still wins.
+ */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
   }
 }
 
@@ -240,7 +267,7 @@ html:not(.js) .reveal {
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
   box-shadow: 0 1px 0 rgba(14, 27, 43, 0.14);
-  height: calc(var(--spacing-nav) - 12px);
+  height: var(--spacing-nav-solid);
 }
 
 @supports not (backdrop-filter: blur(4px)) {
