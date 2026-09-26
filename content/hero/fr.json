@@ -1,0 +1,19 @@
+{
+  "metaLine": "24°12′37,6″ N · LA PAZ · B.C.S.",
+  "title": "Des aventures en mer animées par des passionnés de la mer",
+  "subtitle": "Petits groupes. Une équipe à taille humaine. Un catamaran privé. Pas d'horaires fixes.",
+  "primaryCta": {
+    "label": "Personnalisez votre expédition",
+    "href": "#customize"
+  },
+  "secondaryCta": {
+    "label": "Ce qui nous rend uniques",
+    "href": "#difference"
+  },
+  "background": {
+    "videoSrc": "/assets/video/hero-loop.mp4",
+    "image": "/assets/img/hero-premium.webp",
+    "imageAlt": "Catamaran à voile ancré à l'heure dorée au large de la Basse-Californie du Sud"
+  },
+  "scrollCueLabel": "Faites défiler jusqu'à la section suivante"
+}

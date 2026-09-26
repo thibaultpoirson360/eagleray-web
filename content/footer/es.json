@@ -1,0 +1,31 @@
+{
+  "claim": "El mar de Cortés",
+  "claimEmphasis": "No se visita. Se recorre en barco.",
+  "contactDisplay": {
+    "phone": "+52 55 6809 0942",
+    "email": "thibault@eaglerayexpeditions.com"
+  },
+  "base": {
+    "heading": "Base",
+    "lines": [
+      "Marina de La Paz",
+      "La Paz, Baja California del Sur",
+      "México"
+    ]
+  },
+  "coords": {
+    "heading": "Coordenadas",
+    "lines": [
+      "24°12′37,6″ N",
+      "110°19′ O"
+    ]
+  },
+  "followHeading": "Seguir",
+  "legal": {
+    "rights": "Todos los derechos reservados",
+    "creditsText": "Fotografía bajo licencia Creative Commons.",
+    "creditsLabel": "Créditos fotográficos →",
+    "termsLabel": "Términos y condiciones",
+    "privacyLabel": "Política de privacidad"
+  }
+}

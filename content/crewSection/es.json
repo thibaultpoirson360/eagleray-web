@@ -1,0 +1,17 @@
+{
+  "depth": {
+    "meters": 26,
+    "name": "A bordo"
+  },
+  "kickerNumber": "02",
+  "kicker": "Con quién navegas",
+  "title": "Mucho más que personal de servicio —",
+  "titleEmphasis": "Navegamos, buceamos y nos movemos contigo.",
+  "intro": "Seleccionamos a la tripulación basándonos en dos aspectos: cómo manejan el barco y cómo hacen que la gente se sienta bienvenida a bordo. La mayoría de las empresas de alquiler contratan teniendo en cuenta solo uno de estos aspectos. Nosotros no. Lee sus perfiles y dinos a quién te gustaría tener a bordo; haremos todo lo posible por adaptarnos a su disponibilidad.",
+  "rolesIntro": "Seleccionamos a la tripulación basándonos en dos aspectos: cómo manejan el barco y cómo hacen que la gente se sienta bienvenida a bordo. La mayoría de las empresas de alquiler contratan en función de uno u otro criterio. Nosotros no. Lee sus perfiles y dinos a quién te gustaría tener a bordo. Haremos todo lo posible por adaptarnos a su disponibilidad, aunque no siempre podemos garantizarlo.",
+  "cta": {
+    "label": "Te presentamos a nuestra gente apasionada por el mar",
+    "href": "#"
+  },
+  "dotsLabel": "Ir a «Miembro de la tripulación»"
+}

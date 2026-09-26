@@ -1,0 +1,19 @@
+{
+  "metaLine": "24°12′37,6″ N · LA PAZ · B.C.S.",
+  "title": "Aventuras en el océano dirigidas por apasionados del mar",
+  "subtitle": "Grupos reducidos. Una tripulación de verdad. Catamarán privado. Sin horarios fijos.",
+  "primaryCta": {
+    "label": "Personaliza tu expedición",
+    "href": "#customize"
+  },
+  "secondaryCta": {
+    "label": "Lo que nos hace únicos",
+    "href": "#difference"
+  },
+  "background": {
+    "videoSrc": "/assets/video/hero-loop.mp4",
+    "image": "/assets/img/hero-premium.webp",
+    "imageAlt": "Catamarán a vela fondeado a la hora dorada frente a las costas de Baja California del Sur"
+  },
+  "scrollCueLabel": "Desplázate hasta la siguiente sección"
+}

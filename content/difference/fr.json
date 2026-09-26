@@ -1,0 +1,33 @@
+{
+  "depth": {
+    "meters": 12,
+    "name": "Anchorage"
+  },
+  "kickerNumber": "01",
+  "kicker": "Ce que nous faisons",
+  "title": "Nous ne proposons pas de sorties en charter.",
+  "titleEmphasis": "Nous concevons des expériences en mer.",
+  "lede": "Eagle Ray Expeditions conçoit et organise des expéditions en mer en petits groupes, alliant voile, plongée et rencontres avec la faune sauvage en Basse-Californie du Sud. Destinées à ceux qui recherchent bien plus qu’un simple bateau.",
+  "comparison": {
+    "usTitle": "Eagle Ray Expeditions",
+    "usPoints": [
+      "L'expérience avant tout, guidée par l'exploration.",
+      "Le même équipage, qui connaît le chenal par cœur.",
+      "Des itinéraires adaptatifs, redessinés en fonction de la météo et des marées.",
+      "Tout tourne autour de l'eau : plongée, snorkeling, kayak, tous les jours."
+    ],
+    "axisLabel": "contre",
+    "themTitle": "Croisières à la demande",
+    "themPoints": [
+      "Le bateau avant tout, le confort avant tout.",
+      "Équipage neutre, embauché à la semaine.",
+      "Des itinéraires fixes, imprimés avant votre rencontre.",
+      "L'eau fait partie du paysage — vue depuis le cockpit."
+    ]
+  },
+  "founderQuote": {
+    "kicker": "Ils vendent des voyages.\nNous concevons des expéditions humaines.",
+    "quote": "Je ne voulais pas vendre des bateaux. Je voulais organiser le genre de voyage auquel j'aurais moi-même envie de participer — avec des gens qui connaissent la mer, et pas seulement ceux qui se contentent de vous remettre un trousseau de clés.",
+    "cite": "— Thibault Poirson De Cardon, fondateur"
+  }
+}
