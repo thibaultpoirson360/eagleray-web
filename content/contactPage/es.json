@@ -1,0 +1,24 @@
+{
+  "title": "Habla con nosotros",
+  "lede": "Sin centro de atención telefónica ni chatbot que te redirija a otra persona. Leemos todos los mensajes y respondemos en un plazo de 48 horas.",
+  "photo": "/assets/img/founder-thibault.webp",
+  "photoAlt": "El fundador de Eagle Ray Expeditions trabajando a bordo del barco",
+  "form": {
+    "namePlaceholder": "Nombre",
+    "emailPlaceholder": "Correo electrónico",
+    "howFoundPlaceholder": "¿Cómo nos has encontrado?",
+    "messagePlaceholder": "Mensaje",
+    "submitLabel": "Enviar mensaje",
+    "sendingLabel": "Enviando…",
+    "successMessage": "Gracias, hemos recibido tu mensaje. Los leemos todos personalmente y respondemos en un plazo de 48 horas.",
+    "errorMessage": "Ha habido un error al enviar tu mensaje. Inténtalo de nuevo o utiliza WhatsApp a continuación."
+  },
+  "whatsappCard": {
+    "label": "WhatsApp directo",
+    "description": "¿Prefieres WhatsApp? Le reenviaremos tu mensaje a nuestro fundador para que te responda personalmente a tu consulta."
+  },
+  "expeditionCard": {
+    "label": "Creador de expediciones",
+    "description": "¿Ya tienes en mente una ruta? Ve directamente al formulario del planificador de expediciones y recibe un presupuesto personalizado."
+  }
+}

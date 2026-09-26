@@ -1,0 +1,192 @@
+{
+  "depth": {
+    "meters": 130,
+    "name": "Planifier votre itinéraire"
+  },
+  "kickerNumber": "09",
+  "kicker": "Organisez votre expédition",
+  "title": "Personnalisez votre premier",
+  "titleEmphasis": "Expédition en Basse-Californie.",
+  "lede": "4 questions rapides. À la fin, WhatsApp s'ouvre et votre projet est déjà rédigé : Thibault a une vue d'ensemble de la situation et vous répond avec une véritable proposition dans les 48 heures, et non pas par un simple « merci de votre intérêt ».",
+  "escapeText": "Vous préférez passer cette étape ? Envoyez-nous un message directement sur WhatsApp →",
+  "step1": {
+    "legend": "Informations pratiques sur le voyage",
+    "tripDuration": {
+      "question": "Combien de jours envisages-tu ?",
+      "options": [
+        {
+          "label": "3 à 4 jours",
+          "value": "3 à 4 jours"
+        },
+        {
+          "label": "5 à 6 jours",
+          "value": "5 à 6 jours"
+        },
+        {
+          "label": "7 à 8 jours",
+          "value": "7 à 8 jours"
+        },
+        {
+          "label": "10 ou plus",
+          "value": "10 jours ou plus"
+        }
+      ]
+    },
+    "travelingAs": {
+      "question": "À qui s'adresse cette expédition ?",
+      "options": [
+        {
+          "label": "Famille",
+          "value": "Famille"
+        },
+        {
+          "label": "Couple",
+          "value": "Couple"
+        },
+        {
+          "label": "Groupe d'amis",
+          "value": "Groupe d'amis"
+        },
+        {
+          "label": "Entreprise / équipe",
+          "value": "Entreprise / équipe"
+        }
+      ]
+    },
+    "guestCount": {
+      "question": "Vous serez combien à bord ?",
+      "min": 2,
+      "max": 10,
+      "defaultValue": 4,
+      "hint": "Jusqu'à 10 passagers sur le Bali 4.4, jusqu'à 8 sur l'Astrea 42. Au-delà de ce nombre, nous naviguons avec les deux bateaux.",
+      "fewerLabel": "Moins de clients",
+      "moreLabel": "D'autres invités"
+    }
+  },
+  "step2": {
+    "legend": "Itinéraire et priorités",
+    "routeFocus": {
+      "question": "Quel domaine vous intéresse le plus ?",
+      "options": [
+        {
+          "label": "Espíritu Santo — faune sauvage",
+          "value": "Espíritu Santo — faune sauvage"
+        },
+        {
+          "label": "La Ventana — kitesurf et wingfoil",
+          "value": "La Ventana — kite et wingfoil"
+        },
+        {
+          "label": "Balandra — récif et paddle",
+          "value": "Balandra — récif et paddle"
+        },
+        {
+          "label": "Je ne sais pas encore",
+          "value": "Je ne sais pas encore"
+        }
+      ]
+    },
+    "topPriority": {
+      "question": "Si tu pouvais ne demander qu'une seule chose ?",
+      "options": [
+        {
+          "label": "Faune sauvage et plongée libre",
+          "value": "Faune sauvage et plongée libre"
+        },
+        {
+          "label": "Kite & wingfoil",
+          "value": "Kite et wingfoil"
+        },
+        {
+          "label": "Rythme tranquille et détente",
+          "value": "Rythme tranquille et détente"
+        },
+        {
+          "label": "Un peu de tout",
+          "value": "Un peu de tout"
+        }
+      ]
+    }
+  },
+  "step3": {
+    "legend": "Dates et bateau",
+    "dateFromLabel": "De",
+    "dateToLabel": "À",
+    "flexibleDates": {
+      "label": "Ou écris-le à ta façon",
+      "placeholder": "par exemple : fin octobre 2026, ou à déterminer"
+    },
+    "boatPreference": {
+      "question": "Tu as une préférence pour un type de bateau en particulier ?",
+      "options": [
+        {
+          "label": "Bali 4.4",
+          "value": "Bali 4.4"
+        },
+        {
+          "label": "Fountaine Pajot Astrea 42",
+          "value": "Fountaine Pajot Astrea 42"
+        },
+        {
+          "label": "Aucune préférence",
+          "value": "Aucune préférence"
+        }
+      ]
+    }
+  },
+  "step4": {
+    "legend": "À qui Thibault s'adresse-t-il ?",
+    "fullName": {
+      "label": "Nom",
+      "placeholder": "Prénom",
+      "error": "Veuillez nous indiquer votre nom."
+    },
+    "email": {
+      "label": "E-mail",
+      "placeholder": "you@email.com",
+      "error": "Veuillez saisir une adresse e-mail valide."
+    },
+    "whatsappNumber": {
+      "label": "Numéro WhatsApp",
+      "placeholder": "+52 55 0000 0000",
+      "optionalHint": "(facultatif, pour obtenir une réponse plus rapide)"
+    },
+    "notes": {
+      "label": "Y a-t-il autre chose que nous devrions savoir ? (facultatif)",
+      "placeholder": "Allergies, profondeur de plongée, fête, mal de mer…"
+    },
+    "privacy": "🔒 Nous utilisons ces informations uniquement pour préparer votre devis. Pas de spam, jamais."
+  },
+  "ui": {
+    "stepCounter": "Étape {n} sur {total}",
+    "autosaveRestored": "✓ Reprendre là où vous vous êtes arrêté",
+    "autosaveSaved": "✓ Progrès enregistrés",
+    "back": "← Retour",
+    "continue": "Continuer →",
+    "submit": "Envoyer ma demande d'expédition",
+    "sending": "Envoi en cours…",
+    "submitError": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ou utiliser le lien WhatsApp ci-dessus.",
+    "recapTitle": "Le déroulement de votre expédition jusqu'à présent"
+  },
+  "success": {
+    "title": "Reçu — merci",
+    "body": "Thibault examinera votre projet d'expédition et vous répondra dans les 48 heures.",
+    "whatsappButton": "Poursuivez la conversation sur WhatsApp"
+  },
+  "whatsappMessage": {
+    "intro": "Salut Thibault ! J'aimerais personnaliser une expédition Eagle Ray.",
+    "tripDurationLabel": "Durée",
+    "travelingAsLabel": "Pour",
+    "guestCountLabel": "Invités",
+    "routeFocusLabel": "Axe routier",
+    "topPriorityLabel": "Priorité absolue",
+    "datesLabel": "Dates",
+    "datesFrom": "de",
+    "datesToBeConfirmed": "à confirmer",
+    "boatPreferenceLabel": "Bateau",
+    "fullNameLabel": "Nom",
+    "emailLabel": "E-mail",
+    "whatsappNumberLabel": "WhatsApp",
+    "notesLabel": "Remarques"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "claim": "La mer de Cortez",
+  "claimEmphasis": "On ne visite pas un lieu. On le parcourt en bateau.",
+  "contactDisplay": {
+    "phone": "+52 55 6809 0942",
+    "email": "thibault@eaglerayexpeditions.com"
+  },
+  "base": {
+    "heading": "Base",
+    "lines": [
+      "Marina de La Paz",
+      "La Paz, Basse-Californie du Sud",
+      "Mexique"
+    ]
+  },
+  "coords": {
+    "heading": "Coordonnées",
+    "lines": [
+      "24°12′37,6″ N",
+      "110°19′ O"
+    ]
+  },
+  "followHeading": "Suivre",
+  "legal": {
+    "rights": "Tous droits réservés",
+    "creditsText": "Photographie sous licence Creative Commons.",
+    "creditsLabel": "Crédits photos →",
+    "termsLabel": "Conditions générales",
+    "privacyLabel": "Politique de confidentialité"
+  }
+}

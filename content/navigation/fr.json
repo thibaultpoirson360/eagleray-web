@@ -1,0 +1,81 @@
+{
+  "brand": {
+    "markLight": "/assets/img/logo-mark-cream.png",
+    "wordmarkLight": "/assets/img/logo-wordmark-cream.png",
+    "markDark": "/assets/img/logo-mark-navy.png",
+    "wordmarkDark": "/assets/img/logo-wordmark-navy.png",
+    "wordmarkAlt": "Eagle Ray Expeditions"
+  },
+  "links": [
+    {
+      "_template": "dropdown",
+      "label": "À propos de nous",
+      "items": [
+        {
+          "label": "Notre histoire",
+          "href": ""
+        },
+        {
+          "label": "Des gens de la mer passionnés",
+          "href": ""
+        },
+        {
+          "label": "L'expérience Eagle Ray",
+          "href": ""
+        },
+        {
+          "label": "L'expérience de nos voyageurs",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "_template": "dropdown",
+      "label": "Venez naviguer avec nous",
+      "items": [
+        {
+          "label": "Expédition de recalibrage",
+          "href": ""
+        },
+        {
+          "label": "Expédition active",
+          "href": ""
+        },
+        {
+          "label": "Expédition ponctuelle",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "_template": "link",
+      "label": "Blog",
+      "href": "/fr/blog/"
+    },
+    {
+      "_template": "link",
+      "label": "La Paz",
+      "href": ""
+    },
+    {
+      "_template": "link",
+      "label": "Bateaux",
+      "href": ""
+    },
+    {
+      "_template": "link",
+      "label": "Nous contacter",
+      "href": "/fr/contact/"
+    }
+  ],
+  "cta": {
+    "href": "#customize",
+    "label": "Faites de la voile",
+    "mobileLabel": "Personnalisez votre expédition"
+  },
+  "mobileFoot": "24°12′37,6″ N · LA PAZ · B.C.S.",
+  "toggleLabel": "Afficher/masquer le menu",
+  "ariaLabel": "Accueil",
+  "languageLabel": "Langue",
+  "surfaceLabel": "Surface"
+}
