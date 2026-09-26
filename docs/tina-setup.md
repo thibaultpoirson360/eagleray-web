@@ -264,7 +264,9 @@ is always the locale, which `ui.router` uses to open the right page in the edito
 | `boats` | `content/boats/<loc>/<slug>.json` | name, tagline, description, photo, photoAlt, order |
 | `funnel` | `content/funnel/<loc>.json` | depth, heading fields, lede, escapeText, step1{legend, tripDuration{question,options[{label,value}]}, travelingAs{...}, guestCount{question,min,max,defaultValue,hint,fewerLabel,moreLabel}}, step2{legend, routeFocus{...}, topPriority{...}}, step3{legend, dateFromLabel, dateToLabel, flexibleDates{label,placeholder}, boatPreference{...}}, step4{legend, fullName{label,placeholder,error}, email{...,error}, whatsappNumber{label,placeholder,optionalHint}, notes{label,placeholder}, privacy}, ui{stepCounter, autosaveRestored, autosaveSaved, back, continue, submit, sending, submitError, recapTitle}, success{title, body, whatsappButton}, whatsappMessage{intro, *Label per field, datesFrom, datesToBeConfirmed} |
 | `navPages` | `content/navPages/<loc>/<slug>.json` | title (7 files: about-us, passionate-sea-people, sail-with-us, la-paz, boats, blog, contact) |
-| `siteSettings` | `content/settings/index.json` (singleton, global) | name, base, coords, contact{whatsapp,email,instagram}, sounder{maxDepth,surfaceLabel}, funnelIntro, leadEndpoint |
+| `navigation` | `content/navigation/<loc>.json` | brand{...}, links[link \| dropdown], cta, mobileFoot, toggleLabel, ariaLabel, languageLabel, surfaceLabel (depth gauge) |
+| `footer` | `content/footer/<loc>.json` | claim, claimEmphasis, contactDisplay, base, coords, followHeading, legal |
+| `siteSettings` | `content/settings/index.json` (singleton, global) | name, base, coords, contact{whatsapp,email,instagram}, sounder{maxDepth}, funnelIntro, leadEndpoint |
 | `editors` | `content/editors/index.json` (auth allowlist) | users[]{email (uid), name} |
 
 Modelling notes for content-migrator and component builders:

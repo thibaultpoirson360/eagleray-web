@@ -28,22 +28,31 @@ assumed as `content/en/**` (locale is *inside* each collection's folder here,
 not a top-level split):
 
 - **One document per locale** (`hero`, `difference`, `crewSection`,
-  `wildlife`, `boatsSection`, `funnel`, `contactPage`, `blogSection`):
-  `content/<collection>/en.json`.
+  `wildlife`, `boatsSection`, `funnel`, `contactPage`, `blogSection`,
+  `navigation`, `footer`): `content/<collection>/en.json`.
 - **Multiple documents per locale** (`crew`, `boats`, `blogPost`,
   `landingPage`): `content/<collection>/en/<slug>.json`.
 
-`navigation`, `footer`, `siteSettings`, and `editors` are **not** locale-routed
-at all (`ui.global: true`, a single `content/<folder>/index.json`) — they
-don't match either pattern and this workflow never touches them. That's a
-pre-existing property of the schema (brand facts, nav labels, the editor
-allowlist), not something this task changed; if any of those collections are
-ever converted to be per-locale, they'd need a schema change first, and this
-workflow's path filter would need updating to match.
+`siteSettings` and `editors` are **not** locale-routed (`ui.global: true`, a
+single `content/<folder>/index.json`) — they don't match either pattern and
+this workflow never touches them. That's deliberate: they hold brand facts
+(phone, WhatsApp, coordinates, the depth gauge's max depth) and the editor
+allowlist, nothing that is a translatable word. (`navigation` and `footer`
+used to be global too; they became one document per locale when ES/FR were
+enabled, because the nav labels, button text and accessible names are words.
+Any *word* that needs a translation must live in a per-locale collection.)
 
-`workflow_dispatch` is also wired up as a manual escape hatch (e.g. re-run
-after fixing a bad `DEEPL_API_KEY`, or to backfill translations once after
-this workflow is first added, since it only reacts to *future* pushes).
+`workflow_dispatch` is the manual trigger, with a **`scope`** input:
+
+| scope | What it translates | Use it for |
+|---|---|---|
+| `changed` | the EN files the last commit changed | re-running after fixing a bad `DEEPL_API_KEY` |
+| `missing` (default) | **every** EN document, but only the ES/FR files that **don't exist yet** — never touches an existing (possibly reviewed or hand-edited) translation | bringing the whole site to a language for the first time; filling gaps |
+| `all` | every EN document, **overwriting** every existing ES/FR file | deliberately redoing everything; discards reviewed edits |
+
+A push to `main` always uses `changed`; only a manual run can pick a wider
+scope. The workflow only reacts to *future* pushes, so the first time a
+language is enabled, run it once by hand with `missing`.
 
 ## 2. Translate
 
@@ -122,14 +131,19 @@ No hardcoded skip-list of field names lives in the Action. Per field, in order:
    (`![alt](url "title")`), the `url` is reconstructed untouched and only
    `alt`/`title` are translated.
 
-**Phone numbers and email addresses**: the brief calls these out explicitly,
-but as of this schema, no *locale-routed* collection (the only kind this
-workflow ever reads) has a field holding one — `siteSettings.contact.email` /
-`.whatsapp` and `footer.contactDisplay.phone` / `.email` all live in the
-global, non-localized collections this workflow never touches (see "Trigger"
-above). Nothing to skip today, by construction. If a phone/email field is
-ever added *inside* a locale-routed collection, mark it `ui: doNotTranslate`
-the same way as the proper-noun fields — that's the intended mechanism, not a
+**Internal links**: a field literally named `href` whose value is an internal
+path in the source language (`/en/blog/`) is rewritten to the target
+language's own page (`/es/blog/`) — deterministically, with no DeepL call — so
+a Spanish page links to Spanish pages. Anchors (`#customize`), external URLs
+and empty values are left alone.
+
+**Phone numbers and email addresses**: the brief calls these out explicitly.
+`siteSettings.contact.email` / `.whatsapp` live in the global collection this
+workflow never reads. `footer.contactDisplay.phone` / `.email` are inside a
+locale-routed collection, so they are marked `ui: doNotTranslate` — and so is
+`navigation.brand.wordmarkAlt`. If a phone/email field is ever added *inside*
+a locale-routed collection, mark it `ui: doNotTranslate` the same way as the
+proper-noun fields — that's the intended mechanism, not a
 name-based guess (a name guess is also actively unsafe here: e.g.
 `funnel.step4.whatsappNumber` is an *object* whose `label` field is the
 translatable UI copy "WhatsApp number" — a substring match on "whatsapp" or
@@ -228,6 +242,36 @@ check the PR, in increasing order of how much they let a reviewer actually do:
 A normal PR merge, by a human, once the reviewer is satisfied — same as any
 other change to `main`. No special-casing.
 
+## 6. Going live — enabling a language
+
+Whether a language is *published* is separate from whether its content
+exists. It's controlled by one build-time variable, `PUBLIC_LIVE_LOCALES`
+(`.env.example`, `src/i18n/config.ts`): the `[locale]` routes, hreflang and
+the language switcher only cover the locales listed there. Unset means
+English only, so merging translations or routes can never expose a
+half-finished language, and a build never tries to render a locale whose
+content doesn't exist yet.
+
+To bring the site to ES/FR the first time:
+
+1. **Vercel env var**, scope *Preview* (so the `staging` review site shows the
+   languages): `PUBLIC_LIVE_LOCALES=en,es,fr`. Leave *Production* unset.
+2. **Draft everything**: GitHub > Actions > *Translate content (DeepL draft)* >
+   *Run workflow* on `main`, scope `missing`. It opens the PR from `staging`
+   with every ES/FR document (about 42k characters for the whole site, under
+   10% of DeepL's free monthly allowance).
+3. **Review** on the staging alias with Tina (section 4) — home, contact, blog,
+   landing pages, and the nav/footer. Fix wording in place.
+4. **Merge** the PR. Production still shows English only.
+5. **Go live**: set *Production* `PUBLIC_LIVE_LOCALES=en,es,fr` and redeploy.
+   One language at a time works too (`en,es`). To roll back, remove the
+   variable and redeploy — the content stays in the repo.
+
+A locale listed in `PUBLIC_LIVE_LOCALES` needs a complete set of documents.
+After it is live, new EN content is drafted automatically on each push and
+reviewed through the same PR flow; until that PR is merged, the new page just
+doesn't exist in ES/FR yet.
+
 ## Keeping the DeepL key safe
 
 - Stored only as the GitHub Actions repo secret `DEEPL_API_KEY` (setup:
@@ -243,7 +287,8 @@ other change to `main`. No special-casing.
 ## Usage volume
 
 Free tier (~500K characters/month) is assumed sufficient at this project's
-volume — a small marketing site with infrequent content pushes, not a
+volume (translating the entire site into both languages once is roughly 42K
+characters; a normal content push is a small fraction of that) — a small marketing site with infrequent content pushes, not a
 high-frequency content pipeline. No usage-tracking or rate-limiting logic is
 built, deliberately: at this volume it would be speculative complexity with
 nothing to actually guard against yet. If usage ever approaches the free
