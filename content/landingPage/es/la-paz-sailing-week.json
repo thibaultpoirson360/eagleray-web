@@ -43,13 +43,14 @@
       "lede": "Un bloque con título y botón centrados, que utiliza el propio título de la plantilla `cta` (a diferencia del CTA que aparece al final de las secciones «diferencias», «fauna», «barcos» y «tripulación», este bloque no tiene una sección principal de la que tomar prestado un título).",
       "cta": {
         "label": "Habla con nosotros",
-        "href": "/en/contact/"
+        "href": "/es/contact/"
       }
     },
     {
       "_template": "moguProposal",
       "tripSlug": "la-paz-sailing-week-demo",
-      "height": 700
+      "height": 700,
+      "iframeTitle": "Propuesta de viaje"
     }
   ]
 }

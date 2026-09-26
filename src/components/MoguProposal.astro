@@ -19,9 +19,11 @@ interface Props {
   tripSlug: string;
   /** Iframe height in px. Defaults to 600, matching the confirmed embed example. */
   height?: number;
+  /** Accessible name for the iframe (screen readers). */
+  title?: string;
 }
 
-const { tripSlug, height = 600 } = Astro.props;
+const { tripSlug, height = 600, title = "Trip proposal" } = Astro.props;
 ---
 
 <iframe
@@ -29,5 +31,5 @@ const { tripSlug, height = 600 } = Astro.props;
   height={height}
   loading="lazy"
   class="w-full border-0"
-  title="Trip proposal"
+  title={title}
 ></iframe>

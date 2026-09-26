@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { textarea } from "../shared/fields";
+import { doNotTranslate, localeRouter, textarea } from "../shared/fields";
 
 /**
  * Page chrome, not a homepage section — `<footer class="footer">`
@@ -32,16 +32,18 @@ import { textarea } from "../shared/fields";
  * the *display* text can drift from the number they actually dial;
  * that's the same small, already-accepted tradeoff as Hero's metaLine /
  * Nav's mobileFoot duplicating (not deriving from) siteSettings.coords.
+ *
+ * One document per locale (content/footer/en.json, es.json, fr.json) —
+ * see the note on tina/collections/navigation.ts.
  */
 const footer: Collection = {
   name: "footer",
   label: "Site Footer",
   path: "content/footer",
   format: "json",
-  match: { include: "index" },
   ui: {
-    global: true,
-    allowedActions: { create: false, delete: false },
+    router: localeRouter(),
+    allowedActions: { delete: false },
   },
   fields: [
     { type: "string", name: "claim", label: "Claim", required: true },
@@ -57,8 +59,14 @@ const footer: Collection = {
       label: "Contact links (large, top of footer)",
       description: "Display text only — where these actually link to comes from Site Settings > Contact.",
       fields: [
-        { type: "string", name: "phone", label: "Phone, formatted for display", description: 'e.g. "+52 55 6809 0942".' },
-        { type: "string", name: "email", label: "Email, formatted for display" },
+        {
+          type: "string",
+          name: "phone",
+          label: "Phone, formatted for display",
+          description: 'e.g. "+52 55 6809 0942".',
+          ui: doNotTranslate,
+        },
+        { type: "string", name: "email", label: "Email, formatted for display", ui: doNotTranslate },
       ],
     },
     {

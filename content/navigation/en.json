@@ -53,5 +53,8 @@
     "mobileLabel": "Customize your expedition"
   },
   "mobileFoot": "24°12′37.6″ N · LA PAZ · B.C.S.",
-  "toggleLabel": "Toggle menu"
+  "toggleLabel": "Toggle menu",
+  "ariaLabel": "Main",
+  "languageLabel": "Language",
+  "surfaceLabel": "Surface"
 }

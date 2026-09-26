@@ -15,10 +15,11 @@
  * gauge was desktop-only above a custom 1280px threshold — it now shows
  * at lg:"). `--rail` (global.css) already tracks this same breakpoint.
  *
- * MAX_DEPTH/surfaceLabel come from siteSettings.sounder — main.js read
- * these off `window.__BRAND__`; chrome.ts is a plain script with no
- * access to Astro/Tina data, so they're passed via data attributes
- * instead of reviving a global-object pattern.
+ * MAX_DEPTH comes from siteSettings.sounder and surfaceLabel from the
+ * per-locale navigation document (it's a word, so it needs a version per
+ * language) — main.js read these off `window.__BRAND__`; chrome.ts is a
+ * plain script with no access to Astro/Tina data, so they're passed via
+ * data attributes instead of reviving a global-object pattern.
  *
  * currentLabel() (chrome.ts) reads the live data-depth-name attribute
  * each section already renders (Difference/Crew/Wildlife/Boats), not a
@@ -29,11 +30,12 @@ import type { SiteSettingsQuery } from "../../tina/__generated__/types";
 
 interface Props {
   siteSettings: SiteSettingsQuery["siteSettings"];
+  surfaceLabel?: string | null;
 }
 
 const { siteSettings } = Astro.props;
 const maxDepth = siteSettings.sounder?.maxDepth ?? 140;
-const surfaceLabel = siteSettings.sounder?.surfaceLabel ?? "Surface";
+const surfaceLabel = Astro.props.surfaceLabel ?? "Surface";
 ---
 
 <aside

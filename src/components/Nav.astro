@@ -3,7 +3,7 @@
  * Nav — `<nav class="nav">` + the mobile overlay `<div class="nav-mobile">`
  * in the source index.html (lines 44-84), CSS at styles.css "3. NAV"
  * (L437-717). Page chrome, not a homepage section — shown on every page,
- * so it lives in BaseLayout, not src/pages/en/index.astro.
+ * so it lives in BaseLayout, not src/pages/[locale]/index.astro.
  *
  * The scroll-solidify color swap (.is-solid) and the mobile-menu open
  * state are both JS-toggled and can't be resolved once at Astro render
@@ -82,7 +82,7 @@ const langOptions = locales.map((l) => ({
   class={`nav fixed inset-x-0 top-0 z-[100] flex h-nav items-center justify-between gap-6 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] transition-[background-color,backdrop-filter,box-shadow,height] duration-[450ms] ease-out ${transparentNav ? "" : "is-solid"}`}
   data-nav
   data-nav-transparent={transparentNav ? "true" : "false"}
-  aria-label="Main"
+  aria-label={navigation.ariaLabel ?? "Main"}
 >
   <a class="nav-brand flex items-center gap-[.8rem] text-(--nav-fg)" href={homeHref}>
     {
@@ -135,7 +135,7 @@ const langOptions = locales.map((l) => ({
     }
   </a>
 
-  <LangSwitch client:visible current={locale} options={langOptions} />
+  <LangSwitch client:visible current={locale} options={langOptions} label={navigation.languageLabel ?? undefined} />
 
   <button
     class="nav-toggle z-[101] ml-auto flex flex-col gap-[5px] p-2 lg:hidden"

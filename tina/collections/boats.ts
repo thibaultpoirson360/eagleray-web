@@ -16,7 +16,17 @@ export const boatsSection: Collection = {
     router: localeRouter("#boats"),
     allowedActions: { delete: false },
   },
-  fields: [...depthFields(), ...sectionHeadFields(), ctaField("cta", "Button below the cards")],
+  fields: [
+    ...depthFields(),
+    ...sectionHeadFields(),
+    ctaField("cta", "Button below the cards"),
+    {
+      type: "string",
+      name: "dotsLabel",
+      label: "Slider dots (accessible label, not visible text)",
+      description: 'Read out before each dot\'s number, e.g. "Go to boat" -> "Go to boat 2".',
+    },
+  ],
 };
 
 export const boats: Collection = {

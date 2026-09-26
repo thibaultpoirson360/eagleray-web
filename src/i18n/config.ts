@@ -2,10 +2,27 @@ export const locales = ['en', 'es', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
-// Locales that actually have content. hreflang only lists these, so search
-// engines are never pointed at a URL that doesn't exist. Add 'es' / 'fr' here
-// when their pages and Tina content ship.
-export const liveLocales: readonly Locale[] = ['en'];
+export function isLocale(value: unknown): value is Locale {
+  return (locales as readonly string[]).includes(value as string);
+}
+
+// Locales that actually have content. hreflang, the language switcher and
+// the `[locale]` routes' getStaticPaths only use these, so search engines
+// (and visitors) are never pointed at a URL that doesn't exist.
+//
+// Driven by PUBLIC_LIVE_LOCALES (comma-separated, e.g. "en,es,fr") rather
+// than a hardcoded list, so a locale can be reviewed on a Vercel preview
+// (the `staging` branch, where the translation PR lands — see
+// docs/translation-workflow.md) BEFORE it goes live on production: set the
+// variable per Vercel environment. Defaults to just the default locale so a
+// build with no variable can never try to render a locale that has no
+// content yet. The default locale is always live.
+function parseLiveLocales(raw: string | undefined): readonly Locale[] {
+  const requested = (raw ?? '').split(',').map((l) => l.trim()).filter(isLocale);
+  return locales.filter((l) => l === defaultLocale || requested.includes(l));
+}
+
+export const liveLocales: readonly Locale[] = parseLiveLocales(import.meta.env.PUBLIC_LIVE_LOCALES);
 
 export const ogLocale: Record<Locale, string> = { en: 'en_US', es: 'es_MX', fr: 'fr_FR' };
 

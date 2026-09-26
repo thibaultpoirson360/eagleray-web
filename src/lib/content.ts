@@ -17,14 +17,15 @@ import type { Locale } from "../i18n/config";
 
 /**
  * Page chrome, not a homepage section — fetched once from BaseLayout so
- * every page gets Nav regardless of which sections that page uses.
+ * every page gets Nav regardless of which sections that page uses. One
+ * document per locale (content/navigation/<locale>.json).
  */
-export function loadNavigation(options?: RequestOptions) {
-  return requestWithMetadata(databaseClient.queries.navigation({ relativePath: "index.json" }), options);
+export function loadNavigation(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.navigation({ relativePath: `${locale}.json` }), options);
 }
 
-export function loadFooter(options?: RequestOptions) {
-  return requestWithMetadata(databaseClient.queries.footer({ relativePath: "index.json" }), options);
+export function loadFooter(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.footer({ relativePath: `${locale}.json` }), options);
 }
 
 /**

@@ -30,8 +30,8 @@ const urlFor = (l: Locale) => localeHref(l, path, site);
 
 // Page chrome, not page content — fetched here (not per-page) so every
 // page that uses this layout gets Nav/Footer for free.
-const navigationResult = await loadNavigation();
-const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(), loadSiteSettings()]);
+const navigationResult = await loadNavigation(locale);
+const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale), loadSiteSettings()]);
 ---
 
 <!doctype html>
@@ -59,12 +59,12 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(), load
     <!--
       Not wrapped in a <TinaIsland>: unlike Nav/Footer this isn't really
       content (no copy of its own, no data-tina-field markers) — it's a
-      technical readout of siteSettings.sounder.maxDepth/surfaceLabel,
-      which is already editable through that collection's own global
-      Tina admin entry (ui.global: true), same as every other
-      siteSettings field this page reads without its own island.
+      technical readout of siteSettings.sounder.maxDepth and the
+      navigation's per-locale surfaceLabel — both editable in the Tina
+      admin (Site Settings / Navigation), just not click-to-edit on the
+      gauge itself.
     -->
-    <Sounder siteSettings={siteSettingsResult.data.siteSettings} />
+    <Sounder siteSettings={siteSettingsResult.data.siteSettings} surfaceLabel={navigationResult.data.navigation.surfaceLabel} />
     <TinaIsland
       name="navigation"
       wrapper={{ tag: 'div' }}
@@ -73,7 +73,7 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(), load
       <Nav navigation={navigationResult.data.navigation} locale={locale} path={path} transparentNav={transparentNav} />
     </TinaIsland>
     <slot />
-    <TinaIsland name="footer" wrapper={{ tag: 'div' }}>
+    <TinaIsland name="footer" wrapper={{ tag: 'div' }} params={{ locale }}>
       <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} />
     </TinaIsland>
     <script>

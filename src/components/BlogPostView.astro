@@ -1,6 +1,6 @@
 ---
 /**
- * `/en/blog/<slug>` — one Journal post. Built from the same mockup as
+ * `/<locale>/blog/<slug>` — one Journal post. Built from the same mockup as
  * BlogListing.astro — see that file's and tina/collections/blog.ts's
  * comments for the full context.
  *
@@ -14,28 +14,32 @@ import { tinaField } from "@tinacms/astro/tina-field";
 import BodyParagraph from "./richtext/BodyParagraph.astro";
 import BodyQuote from "./richtext/BodyQuote.astro";
 import BodyImage from "./richtext/BodyImage.astro";
-import type { BlogPostQuery, BlogPostConnectionQuery } from "../../tina/__generated__/types";
+import { localePath, type Locale } from "../i18n/config";
+import type { BlogPostQuery, BlogPostConnectionQuery, BlogSectionQuery } from "../../tina/__generated__/types";
 
 type Post = NonNullable<NonNullable<BlogPostConnectionQuery["blogPostConnection"]["edges"]>[number]>["node"];
 
 interface Props {
   post: BlogPostQuery["blogPost"];
   related: NonNullable<Post>[];
+  /** The listing's own labels ("← All Stories", "More from the Journal"…) — same per-locale document. */
+  blogSection: BlogSectionQuery["blogSection"];
+  locale: Locale;
 }
 
-const { post, related } = Astro.props;
+const { post, related, blogSection, locale } = Astro.props;
 
 function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  return new Date(iso).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" });
 }
 
 function postHref(p: { _sys: { filename: string } }): string {
-  return `/en/blog/${p._sys.filename}/`;
+  return localePath(locale, `blog/${p._sys.filename}/`);
 }
 ---
 
 <section class="relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
-  <a href="/en/blog/" class="mb-10 block text-[13px] tracking-[.04em] text-ink/52 hover:text-ink">← All Stories</a>
+  <a href={localePath(locale, "blog/")} class="mb-10 block text-[13px] tracking-[.04em] text-ink/52 hover:text-ink" data-tina-field={tinaField(blogSection, "backLabel")}>{blogSection.backLabel}</a>
 
   <div class="text-[.72rem] tracking-[.1em] text-ink/52 uppercase">
     <span class="text-ink" data-tina-field={tinaField(post, "category")}>
@@ -97,7 +101,10 @@ function postHref(p: { _sys: { filename: string } }): string {
       {post.authorAvatar && <img src={post.authorAvatar} alt={post.author} class="size-12 flex-none rounded-full object-cover" />}
       <div>
         <div class="font-display text-base text-ink">{post.author}</div>
-        <div class="text-[13px] text-ink/52">{post.authorRole} at Eagle Ray Expeditions</div>
+        <div class="text-[13px] text-ink/52">
+          <span data-tina-field={tinaField(post, "authorRole")}>{post.authorRole}</span>
+          {blogSection.authorSuffix && <span data-tina-field={tinaField(blogSection, "authorSuffix")}>{" "}{blogSection.authorSuffix}</span>}
+        </div>
       </div>
     </div>
   </div>
@@ -105,7 +112,7 @@ function postHref(p: { _sys: { filename: string } }): string {
   {
     related.length > 0 && (
       <div class="mt-[4.5rem]">
-        <h3 class="mb-7 text-[22px]">More from the Journal</h3>
+        <h3 class="mb-7 text-[22px]" data-tina-field={tinaField(blogSection, "relatedHeading")}>{blogSection.relatedHeading}</h3>
         <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(260px,1fr))]">
           {related.map((p) => (
             <a href={postHref(p)} class="block">

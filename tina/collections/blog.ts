@@ -41,6 +41,18 @@ export const blogSection: Collection = {
     },
     { type: "string", name: "title", label: "Heading", required: true },
     { type: "string", name: "lede", label: "Lede", ui: textarea },
+    // Small labels the listing and post pages print around the posts'
+    // own content. Per-locale like everything else in this collection.
+    { type: "string", name: "featuredLabel", label: 'Label before the featured story\'s category', description: 'e.g. "Featured"' },
+    { type: "string", name: "readMoreLabel", label: "Featured story button", description: 'e.g. "Read the story →"' },
+    { type: "string", name: "backLabel", label: "Link back to the listing (top of a post)", description: 'e.g. "← All Stories"' },
+    { type: "string", name: "relatedHeading", label: "Heading above the related posts", description: 'e.g. "More from the Journal"' },
+    {
+      type: "string",
+      name: "authorSuffix",
+      label: "Text after the author's role (end of a post)",
+      description: 'Printed as "<role> <text>", e.g. "at Eagle Ray Expeditions" -> "Naturalist Guide at Eagle Ray Expeditions".',
+    },
   ],
 };
 

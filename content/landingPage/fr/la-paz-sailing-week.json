@@ -43,13 +43,14 @@
       "lede": "Un bloc composé d'un titre centré et d'un bouton, utilisant le titre propre au modèle `cta` (contrairement au CTA figurant à la fin des sections « Différence », « Faune », « Bateaux » et « Équipage », ce bloc ne dispose pas de section hôte dont il pourrait emprunter le titre).",
       "cta": {
         "label": "Contactez-nous",
-        "href": "/en/contact/"
+        "href": "/fr/contact/"
       }
     },
     {
       "_template": "moguProposal",
       "tripSlug": "la-paz-sailing-week-demo",
-      "height": 700
+      "height": 700,
+      "iframeTitle": "Proposition de voyage"
     }
   ]
 }

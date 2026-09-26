@@ -28,6 +28,12 @@ export const crewSection: Collection = {
       ui: textarea,
     },
     ctaField("cta", "Button below the slider"),
+    {
+      type: "string",
+      name: "dotsLabel",
+      label: "Slider dots (accessible label, not visible text)",
+      description: 'Read out before each dot\'s number, e.g. "Go to crew member" -> "Go to crew member 2".',
+    },
   ],
 };
 

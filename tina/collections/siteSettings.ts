@@ -6,7 +6,9 @@ import { textarea } from "../shared/fields";
  * content/settings/index.json. Key names match __BRAND__ 1:1 so the eventual
  * `window.__BRAND__` builder in the Astro layout is a straight passthrough.
  *
- * Not localized (brand facts don't vary by language). `ui.global: true` makes
+ * Not localized (brand facts don't vary by language) — so nothing in here may
+ * be a translatable word; those live in the per-locale collections (e.g. the
+ * depth gauge's "Surface" label is in Navigation). `ui.global: true` makes
  * it available from the editor's global sidebar on every page; creating or
  * deleting it from the admin is disabled.
  */
@@ -45,7 +47,6 @@ const siteSettings: Collection = {
       label: "Depth gauge (sounder)",
       fields: [
         { type: "number", name: "maxDepth", label: "Max depth (m)" },
-        { type: "string", name: "surfaceLabel", label: "Label at the surface" },
       ],
     },
     {

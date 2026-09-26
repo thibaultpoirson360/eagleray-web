@@ -148,7 +148,7 @@ const { cta } = crewSection;
     sliderSelector="[data-crew-slider]"
     cardSelector=".crew-card"
     count={members.length}
-    labelPrefix="Go to crew member"
+    labelPrefix={crewSection.dotsLabel ?? "Go to crew member"}
   />
 
   {

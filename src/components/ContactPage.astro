@@ -1,10 +1,10 @@
 ---
 /**
- * `/en/contact` — "Talk with us". Built from a wireframe, not source —
+ * `/<locale>/contact` — "Talk with us". Built from a wireframe, not source —
  * index.html/styles.css/main.js have no contact-page markup or form logic
  * at all (see tina/collections/contactPage.ts's comment for what was
  * actually grepped for). Extracted into its own component (rather than
- * inlined in src/pages/en/contact.astro) for the same reason every
+ * inlined in src/pages/[locale]/contact.astro) for the same reason every
  * homepage section is: the on-demand island-refresh route
  * (src/pages/tina-island/[name].ts) needs a component reference to
  * re-render, matching Hero/Difference/etc.'s pattern exactly.
@@ -12,14 +12,16 @@
 import ContactForm from "./ContactForm.tsx";
 import Button from "./ui/Button.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
+import { localePath, type Locale } from "../i18n/config";
 import type { ContactPageQuery, SiteSettingsQuery } from "../../tina/__generated__/types";
 
 interface Props {
   contactPage: ContactPageQuery["contactPage"];
   siteSettings: SiteSettingsQuery["siteSettings"];
+  locale: Locale;
 }
 
-const { contactPage, siteSettings } = Astro.props;
+const { contactPage, siteSettings, locale } = Astro.props;
 const waHref = siteSettings.contact?.whatsapp ? `https://wa.me/${siteSettings.contact.whatsapp}` : undefined;
 ---
 
@@ -98,7 +100,7 @@ const waHref = siteSettings.contact?.whatsapp ? `https://wa.me/${siteSettings.co
           contactPage.expeditionCard && (
             <div class="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
               <Button
-                href="/en/#customize"
+                href={localePath(locale, "#customize")}
                 variant="primary"
                 context="default"
                 class="w-full flex-none text-center sm:w-auto"

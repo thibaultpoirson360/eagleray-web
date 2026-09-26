@@ -18,16 +18,23 @@ import {
   loadFunnel,
   loadSiteSettings,
 } from "../../lib/content";
+import { liveLocales, type Locale } from "../../i18n/config";
 
-const heroResult = await loadHero("en", { priority: "primary" });
-const differenceResult = await loadDifference("en");
-const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection("en"), loadCrew("en")]);
-const wildlifeResult = await loadWildlife("en");
-const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection("en"), loadBoats("en")]);
-const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel("en"), loadSiteSettings()]);
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+
+const heroResult = await loadHero(locale, { priority: "primary" });
+const differenceResult = await loadDifference(locale);
+const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection(locale), loadCrew(locale)]);
+const wildlifeResult = await loadWildlife(locale);
+const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection(locale), loadBoats(locale)]);
+const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
 ---
 
-<BaseLayout title="Eagle Ray Expeditions" locale="en">
+<BaseLayout title="Eagle Ray Expeditions" locale={locale}>
   <main id="main">
     <!--
       Neutral <div> wrapper for the bridge's DOM-patching target, not
@@ -37,22 +44,22 @@ const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel("en"), 
       section; this wrapper must match the island route's `wrapper`
       config exactly (src/pages/tina-island/[name].ts).
     -->
-    <TinaIsland name="hero" wrapper={{ tag: "div" }} params={{ locale: "en" }} primary>
+    <TinaIsland name="hero" wrapper={{ tag: "div" }} params={{ locale }} primary>
       <Hero hero={heroResult.data.hero} />
     </TinaIsland>
-    <TinaIsland name="difference" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+    <TinaIsland name="difference" wrapper={{ tag: "div" }} params={{ locale }}>
       <Difference difference={differenceResult.data.difference} />
     </TinaIsland>
-    <TinaIsland name="crew" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+    <TinaIsland name="crew" wrapper={{ tag: "div" }} params={{ locale }}>
       <Crew crewSection={crewSectionResult.data.crewSection} members={crewResult.members} />
     </TinaIsland>
-    <TinaIsland name="wildlife" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+    <TinaIsland name="wildlife" wrapper={{ tag: "div" }} params={{ locale }}>
       <Wildlife wildlife={wildlifeResult.data.wildlife} />
     </TinaIsland>
-    <TinaIsland name="boats" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+    <TinaIsland name="boats" wrapper={{ tag: "div" }} params={{ locale }}>
       <Boats boatsSection={boatsSectionResult.data.boatsSection} boats={boatsResult.boats} />
     </TinaIsland>
-    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale: "en" }}>
+    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale }}>
       <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
     </TinaIsland>
   </main>

@@ -47,13 +47,11 @@ import {
   loadBlogPost,
   loadLandingPage,
 } from "../../lib/content";
-import { defaultLocale, locales, type Locale } from "../../i18n/config";
+import { defaultLocale, isLocale, type Locale } from "../../i18n/config";
 
 function localeFromParams(params: URLSearchParams): Locale {
   const raw = params.get("locale");
-  return (locales as readonly string[]).includes(raw ?? "")
-    ? (raw as Locale)
-    : defaultLocale;
+  return isLocale(raw) ? raw : defaultLocale;
 }
 
 const route = createIslandRoute({
@@ -115,13 +113,13 @@ const route = createIslandRoute({
     },
   },
   navigation: {
-    fetch: async () => loadNavigation(),
+    fetch: async (_request: Request, params: URLSearchParams) => loadNavigation(localeFromParams(params)),
     component: Nav,
     wrapper: { tag: "div" },
-    // Navigation content itself isn't localized (one global doc), but Nav
-    // also renders the language switcher and the transparent/solid nav
+    // Nav also renders the language switcher and the transparent/solid nav
     // state, both of which need to know which page it's on — same
-    // locale/path/transparentNav params BaseLayout passes it normally.
+    // path/transparentNav params BaseLayout passes it normally (locale
+    // is also what picks the navigation document).
     propsFromData: (result: unknown, params: URLSearchParams) => ({
       navigation: (result as Awaited<ReturnType<typeof loadNavigation>>).data.navigation,
       locale: localeFromParams(params),
@@ -130,8 +128,8 @@ const route = createIslandRoute({
     }),
   },
   footer: {
-    fetch: async () => {
-      const [footer, siteSettings] = await Promise.all([loadFooter(), loadSiteSettings()]);
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const [footer, siteSettings] = await Promise.all([loadFooter(localeFromParams(params)), loadSiteSettings()]);
       return { footer, siteSettings };
     },
     component: Footer,
@@ -168,12 +166,16 @@ const route = createIslandRoute({
     },
     component: ContactPage,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => {
+    propsFromData: (result: unknown, params: URLSearchParams) => {
       const { contactPage, siteSettings } = result as {
         contactPage: Awaited<ReturnType<typeof loadContactPage>>;
         siteSettings: Awaited<ReturnType<typeof loadSiteSettings>>;
       };
-      return { contactPage: contactPage.data.contactPage, siteSettings: siteSettings.data.siteSettings };
+      return {
+        contactPage: contactPage.data.contactPage,
+        siteSettings: siteSettings.data.siteSettings,
+        locale: localeFromParams(params),
+      };
     },
   },
   blogSection: {
@@ -184,12 +186,12 @@ const route = createIslandRoute({
     },
     component: BlogListing,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => {
+    propsFromData: (result: unknown, params: URLSearchParams) => {
       const { blogSection, posts } = result as {
         blogSection: Awaited<ReturnType<typeof loadBlogSection>>;
         posts: Awaited<ReturnType<typeof loadBlogPosts>>;
       };
-      return { blogSection: blogSection.data.blogSection, posts: posts.posts };
+      return { blogSection: blogSection.data.blogSection, posts: posts.posts, locale: localeFromParams(params) };
     },
   },
   // Individual posts are separate pages (unlike every other island, which
@@ -200,19 +202,29 @@ const route = createIslandRoute({
     fetch: async (_request: Request, params: URLSearchParams) => {
       const locale = localeFromParams(params);
       const slug = params.get("slug") ?? "";
-      const [post, allPosts] = await Promise.all([loadBlogPost(locale, slug), loadBlogPosts(locale)]);
-      return { post, allPosts, slug };
+      const [post, allPosts, blogSection] = await Promise.all([
+        loadBlogPost(locale, slug),
+        loadBlogPosts(locale),
+        loadBlogSection(locale),
+      ]);
+      return { post, allPosts, blogSection, slug };
     },
     component: BlogPostView,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => {
-      const { post, allPosts, slug } = result as {
+    propsFromData: (result: unknown, params: URLSearchParams) => {
+      const { post, allPosts, blogSection, slug } = result as {
         post: Awaited<ReturnType<typeof loadBlogPost>>;
         allPosts: Awaited<ReturnType<typeof loadBlogPosts>>;
+        blogSection: Awaited<ReturnType<typeof loadBlogSection>>;
         slug: string;
       };
       const related = allPosts.posts.filter((p) => p._sys.filename !== slug).slice(0, 2);
-      return { post: post.data.blogPost, related };
+      return {
+        post: post.data.blogPost,
+        related,
+        blogSection: blogSection.data.blogSection,
+        locale: localeFromParams(params),
+      };
     },
   },
   // Same "one page per document, slug in params" shape as blogPost above.

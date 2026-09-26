@@ -1,4 +1,5 @@
 import type { Collection } from "tinacms";
+import { doNotTranslate, localeRouter } from "../shared/fields";
 
 /**
  * Page chrome, not a homepage section — the `<nav>` bar (styles.css
@@ -25,16 +26,23 @@ import type { Collection } from "tinacms";
  *     ("24°12′37.6″ N") + `base` ("La Paz, Baja California Sur"), which
  *     don't even share the same formatting (abbreviated "B.C.S." vs the
  *     spelled-out base).
+ *
+ * One document per locale (content/navigation/en.json, es.json, fr.json)
+ * like every other translated section — the labels, the CTA text and the
+ * accessible names all need translating, so a single global document no
+ * longer fits. The es/fr documents are drafted from en.json by the
+ * translation Action (docs/translation-workflow.md). Internal hrefs in the
+ * es/fr documents point at that locale's own pages (the Action rewrites the
+ * `/en/` prefix), so a link never bounces a Spanish reader to English.
  */
 const navigation: Collection = {
   name: "navigation",
   label: "Site Navigation",
   path: "content/navigation",
   format: "json",
-  match: { include: "index" },
   ui: {
-    global: true,
-    allowedActions: { create: false, delete: false },
+    router: localeRouter(),
+    allowedActions: { delete: false },
   },
   fields: [
     {
@@ -46,7 +54,7 @@ const navigation: Collection = {
         { type: "image", name: "wordmarkLight", label: "Wordmark — light" },
         { type: "image", name: "markDark", label: "Mark — dark (once the nav has scrolled solid)" },
         { type: "image", name: "wordmarkDark", label: "Wordmark — dark" },
-        { type: "string", name: "wordmarkAlt", label: "Wordmark alt text" },
+        { type: "string", name: "wordmarkAlt", label: "Wordmark alt text", ui: doNotTranslate },
       ],
     },
     {
@@ -124,6 +132,25 @@ const navigation: Collection = {
       name: "toggleLabel",
       label: "Menu button (accessible label, not visible text)",
       description: 'e.g. "Toggle menu".',
+    },
+    {
+      type: "string",
+      name: "ariaLabel",
+      label: "Navigation bar (accessible label, not visible text)",
+      description: 'Read by screen readers to name the nav landmark, e.g. "Main".',
+    },
+    {
+      type: "string",
+      name: "languageLabel",
+      label: "Language switcher (accessible label, not visible text)",
+      description: 'e.g. "Language".',
+    },
+    {
+      type: "string",
+      name: "surfaceLabel",
+      label: "Depth gauge — label shown at the surface",
+      description:
+        "The word the side depth gauge shows before the first section, e.g. \"Surface\". Lives here (not in Site Settings) because it is a word, so it needs a version per language.",
     },
   ],
 };

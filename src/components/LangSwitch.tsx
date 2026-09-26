@@ -29,9 +29,11 @@ interface LangOption {
 interface Props {
   current: string;
   options: LangOption[];
+  /** Accessible name for the control (Tina: Navigation > "Language switcher"). */
+  label?: string;
 }
 
-export default function LangSwitch({ current, options }: Props) {
+export default function LangSwitch({ current, options, label = "Language" }: Props) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -64,7 +66,7 @@ export default function LangSwitch({ current, options }: Props) {
         class="lang-btn is-active inline-flex items-center gap-[.35rem] rounded-sm border border-(--nav-line) px-[.55rem] py-[.35rem] font-mono text-[.66rem] tracking-[.06em] text-(--nav-fg) transition-colors duration-300 ease-out focus-visible:outline-2 focus-visible:outline-(--nav-fg) focus-visible:outline-offset-2"
         aria-haspopup="true"
         aria-expanded={open}
-        aria-label={`Language: ${currentOption.fullLabel}`}
+        aria-label={`${label}: ${currentOption.fullLabel}`}
         onClick={() => setOpen((v) => !v)}
       >
         {currentOption.label}
@@ -81,7 +83,7 @@ export default function LangSwitch({ current, options }: Props) {
       {open && (
         <div
           role="menu"
-          aria-label="Language"
+          aria-label={label}
           class="absolute top-[calc(100%+.5rem)] right-0 z-10 min-w-[8rem] overflow-hidden rounded border border-ink/14 bg-white py-1 text-ink shadow-lg"
         >
           {options.map((option) =>

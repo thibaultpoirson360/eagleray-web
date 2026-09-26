@@ -120,7 +120,7 @@ const { cta } = boatsSection;
     sliderSelector="[data-boats-slider]"
     cardSelector=".boat-card"
     count={boats.length}
-    labelPrefix="Go to boat"
+    labelPrefix={boatsSection.dotsLabel ?? "Go to boat"}
   />
 
   {

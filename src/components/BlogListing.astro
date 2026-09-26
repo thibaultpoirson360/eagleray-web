@@ -1,6 +1,6 @@
 ---
 /**
- * `/en/blog` — "Journal" listing. Built from a design mockup (Wayfarer
+ * `/<locale>/blog` — "Journal" listing. Built from a design mockup (Wayfarer
  * Journal.dc.html, pasted directly since /design-login couldn't run in
  * this session), not source — same situation as the Contact page. See
  * tina/collections/blog.ts for the schema decisions (rich-text body,
@@ -17,6 +17,7 @@
 import Button from "./ui/Button.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
 import { featuredPost } from "../lib/content";
+import { localePath, type Locale } from "../i18n/config";
 import type { BlogSectionQuery, BlogPostConnectionQuery } from "../../tina/__generated__/types";
 
 type Post = NonNullable<NonNullable<BlogPostConnectionQuery["blogPostConnection"]["edges"]>[number]>["node"];
@@ -24,18 +25,19 @@ type Post = NonNullable<NonNullable<BlogPostConnectionQuery["blogPostConnection"
 interface Props {
   blogSection: BlogSectionQuery["blogSection"];
   posts: NonNullable<Post>[];
+  locale: Locale;
 }
 
-const { blogSection, posts } = Astro.props;
+const { blogSection, posts, locale } = Astro.props;
 const featured = posts.length ? featuredPost(posts) : undefined;
 const grid = posts.filter((p) => p !== featured);
 
 function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+  return new Date(iso).toLocaleDateString(locale, { month: "short", day: "numeric", year: "numeric" });
 }
 
 function postHref(post: NonNullable<Post>): string {
-  return `/en/blog/${post._sys.filename}/`;
+  return localePath(locale, `blog/${post._sys.filename}/`);
 }
 ---
 
@@ -75,7 +77,7 @@ function postHref(post: NonNullable<Post>): string {
         </a>
         <div>
           <div class="mb-[14px] text-[.72rem] tracking-[.1em] text-ink/52 uppercase">
-            Featured · <span data-tina-field={tinaField(featured, "category")}>{featured.category}</span>
+            <span data-tina-field={tinaField(blogSection, "featuredLabel")}>{blogSection.featuredLabel}</span> · <span data-tina-field={tinaField(featured, "category")}>{featured.category}</span>
           </div>
           <h2 class="mb-[14px] text-[32px]">
             <a href={postHref(featured)} data-tina-field={tinaField(featured, "title")}>
@@ -92,8 +94,8 @@ function postHref(post: NonNullable<Post>): string {
           <div class="mb-[18px] text-[13px] text-ink/52">
             {featured.author} · {formatDate(featured.date)} · {featured.readTime}
           </div>
-          <Button href={postHref(featured)} variant="ghost" context="default">
-            Read the story →
+          <Button href={postHref(featured)} variant="ghost" context="default" data-tina-field={tinaField(blogSection, "readMoreLabel")}>
+            {blogSection.readMoreLabel}
           </Button>
         </div>
       </div>

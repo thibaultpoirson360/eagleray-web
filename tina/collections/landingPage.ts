@@ -143,6 +143,12 @@ const landingPage: Collection = {
               label: "Embed height (px)",
               description: "Defaults to 600 if left blank.",
             },
+            {
+              type: "string",
+              name: "iframeTitle",
+              label: "Embed name (accessible label, not visible text)",
+              description: 'Read by screen readers to name the embedded proposal. Defaults to "Trip proposal" if left blank.',
+            },
           ],
         },
       ],
