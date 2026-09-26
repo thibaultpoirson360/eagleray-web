@@ -17,6 +17,12 @@
  *   3. Otherwise, TYPE decides: `string` (and `rich-text`, handled
  *      specially — see below) are translatable; `image`, `boolean`,
  *      `number`, `date`, `datetime`, `reference` are not.
+ *   3b. Before rule 2 gets to skip it: a field literally named `href` whose
+ *      value is an internal path under the SOURCE locale ("/en/blog/") is
+ *      rewritten to the TARGET locale's own path ("/es/blog/") when a target
+ *      `locale` is given — deterministic, no DeepL call — so a Spanish page
+ *      links to Spanish pages. Anchors ("#customize"), external URLs and
+ *      empty strings pass through untouched.
  *   4. `_template` (Tina's discriminator key on polymorphic list items,
  *      e.g. navigation.links, landingPage.blocks) is never a declared
  *      schema field, so it's never visited here and always passes through
@@ -31,6 +37,18 @@
  */
 
 const TECHNICAL_NAME_SUBSTRINGS = ["href", "url", "slug", "filename", "videosrc", "endpoint", "path", "src"];
+
+const SOURCE_LOCALE = "en";
+const SOURCE_PREFIX_RE = new RegExp(`^/${SOURCE_LOCALE}(?=/|#|\\?|$)`);
+
+function isHrefField(field) {
+  return (field?.name ?? "").toLowerCase() === "href";
+}
+
+/** "/en/blog/" -> "/es/blog/"; anything not under the source locale is returned as-is. */
+export function localizeInternalHref(value, locale) {
+  return SOURCE_PREFIX_RE.test(value) ? value.replace(SOURCE_PREFIX_RE, `/${locale}`) : value;
+}
 
 function isSkippableField(field) {
   if (field?.ui?.translate === false) return true;
@@ -105,8 +123,10 @@ function renderMarkdown(blocks) {
  *
  * `doc` is walked and mutated directly — callers that want to keep the
  * original untouched should pass a deep clone (see `translateDocument`).
+ * `options.locale` is the target locale; it's only used to localize internal
+ * `href` fields (rule 3b) and may be omitted.
  */
-export function collectTranslationUnits(doc, fields) {
+export function collectTranslationUnits(doc, fields, { locale } = {}) {
   const units = [];
   const finalizers = [];
 
@@ -183,6 +203,10 @@ export function collectTranslationUnits(doc, fields) {
     }
 
     if (field.type === "string") {
+      if (locale && isHrefField(field) && typeof value === "string") {
+        parent[key] = localizeInternalHref(value, locale);
+        return;
+      }
       if (isSkippableField(field)) return;
       if (typeof value !== "string" || value === "") return;
       units.push({
@@ -219,9 +243,9 @@ export function collectTranslationUnits(doc, fields) {
  * swap for a fake in tests (this is exactly how this module was verified —
  * see docs/translation-workflow.md).
  */
-export async function translateDocument(doc, fields, translateFn) {
+export async function translateDocument(doc, fields, translateFn, options = {}) {
   const clone = structuredClone(doc);
-  const { units, finalize } = collectTranslationUnits(clone, fields);
+  const { units, finalize } = collectTranslationUnits(clone, fields, options);
 
   if (units.length > 0) {
     const originals = units.map((u) => u.get());

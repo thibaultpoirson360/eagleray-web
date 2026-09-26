@@ -8,6 +8,14 @@
  * Usage:
  *   node --experimental-strip-types scripts/translate-content.mjs [file...]
  *
+ * Scope (env `TRANSLATE_SCOPE`, only when no file arguments are given):
+ *   - `changed` (default) — only the EN files the triggering push changed.
+ *   - `missing` — every EN file, but only writes the locale files that don't
+ *     exist yet. Never touches an existing (possibly reviewed/hand-edited)
+ *     translation. This is what to use to bring a whole site to a new
+ *     language, or to fill gaps.
+ *   - `all` — every EN file, overwriting every existing translation.
+ *
  *   - With explicit file arguments: translates exactly those files (must be
  *     EN source paths, see EN_SOURCE below).
  *   - With no arguments: resolves changed files from
@@ -106,11 +114,13 @@ function fullRescan() {
  * git-diff resolution; deleted files (no longer on disk) are dropped rather
  * than erroring, since there's nothing left to translate.
  */
-export function resolveChangedEnFiles(explicitFiles = []) {
+export function resolveChangedEnFiles(explicitFiles = [], scope = "changed") {
   let candidates;
 
   if (explicitFiles.length > 0) {
     candidates = explicitFiles.map(toRepoRelative);
+  } else if (scope !== "changed") {
+    candidates = fullRescan();
   } else {
     const base = process.env.GIT_BASE_SHA || "HEAD^";
     const head = process.env.GIT_HEAD_SHA || "HEAD";
@@ -144,7 +154,7 @@ function outputPathFor(folder, slug, locale) {
  * — injected so tests can pass a fake translator instead of calling DeepL.
  * Returns the list of repo-relative paths written.
  */
-export async function translateFile(entry, schema, translateFnFactory) {
+export async function translateFile(entry, schema, translateFnFactory, { skipExisting = false } = {}) {
   const { file, folder, slug } = entry;
   const collection = schema.get(folder);
   if (!collection) {
@@ -156,9 +166,10 @@ export async function translateFile(entry, schema, translateFnFactory) {
   const written = [];
 
   for (const locale of TARGET_LOCALES) {
-    const translated = await translateDocument(doc, collection.fields, translateFnFactory(locale));
     const outRelative = outputPathFor(folder, slug, locale);
     const outAbsolute = path.join(REPO_ROOT, outRelative);
+    if (skipExisting && existsSync(outAbsolute)) continue;
+    const translated = await translateDocument(doc, collection.fields, translateFnFactory(locale), { locale });
     mkdirSync(path.dirname(outAbsolute), { recursive: true });
     // 2-space indent + trailing newline, matching every existing content/ file.
     writeFileSync(outAbsolute, `${JSON.stringify(translated, null, 2)}\n`);
@@ -179,12 +190,18 @@ function realTranslateFnFactory(apiKey) {
   return (locale) => (texts) => translateBatch(texts, locale.toUpperCase(), { apiKey });
 }
 
+const SCOPES = ["changed", "missing", "all"];
+
 export async function main() {
   const explicitFiles = process.argv.slice(2);
-  const entries = resolveChangedEnFiles(explicitFiles);
+  const scope = (process.env.TRANSLATE_SCOPE || "changed").trim();
+  if (!SCOPES.includes(scope)) {
+    throw new Error(`TRANSLATE_SCOPE must be one of ${SCOPES.join(", ")} (got "${scope}").`);
+  }
+  const entries = resolveChangedEnFiles(explicitFiles, scope);
 
   if (entries.length === 0) {
-    console.log("[translate-content] No changed source-language content files found — nothing to translate.");
+    console.log("[translate-content] No source-language content files found to translate — nothing to do.");
     setGithubOutput("files_changed", "false");
     setGithubOutput("file_list", "");
     return;
@@ -203,7 +220,7 @@ export async function main() {
   const allWritten = [];
   for (const entry of entries) {
     console.log(`[translate-content] Translating ${entry.file} -> ${TARGET_LOCALES.join(", ")}`);
-    const written = await translateFile(entry, schema, translateFnFactory);
+    const written = await translateFile(entry, schema, translateFnFactory, { skipExisting: scope === "missing" });
     allWritten.push(...written);
   }
 

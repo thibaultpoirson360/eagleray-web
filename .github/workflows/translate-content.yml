@@ -6,7 +6,8 @@ name: Translate content (DeepL draft)
 # e.g. crew, boats, blogPost) — see docs/translation-workflow.md for how
 # this path was confirmed against the actual Tina schema/content layout,
 # not assumed. workflow_dispatch is a manual escape hatch (e.g. to re-run
-# after adding/fixing the DEEPL_API_KEY secret).
+# after adding/fixing the DEEPL_API_KEY secret), and the way to bring a whole
+# site to a new language: run it with scope "missing" (see the input below).
 #
 # This workflow only ever OPENS a pull request with the drafted ES/FR
 # translations — nothing here merges anything. See docs/translation-workflow.md
@@ -17,7 +18,18 @@ on:
     paths:
       - "content/**/en.json"
       - "content/**/en/*.json"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: >-
+          What to translate. "changed" = only files changed by the last commit.
+          "missing" = every EN document, but ONLY the ES/FR files that don't
+          exist yet (never touches an existing/reviewed translation) — use
+          this to bring the whole site to a language. "all" = every EN
+          document, overwriting every existing ES/FR file.
+        type: choice
+        options: [changed, missing, all]
+        default: missing
 
 permissions:
   contents: write
@@ -64,6 +76,9 @@ jobs:
           # content rescan — see scripts/translate-content.mjs.
           GIT_BASE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
           GIT_HEAD_SHA: ${{ github.sha }}
+          # Only a manual run can pick a wider scope; a push always
+          # translates exactly what it changed.
+          TRANSLATE_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'changed' }}
         run: node --experimental-strip-types scripts/translate-content.mjs
 
       - name: Open pull request with the draft translations
