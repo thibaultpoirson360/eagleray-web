@@ -1,0 +1,55 @@
+{
+  "title": "Semana Náutica de La Paz — Ejemplo de página de destino",
+  "blocks": [
+    {
+      "_template": "hero",
+      "kicker": "Fechas limitadas · 2026",
+      "title": "Una semana, un barco, todo el mar de Cortés.",
+      "lede": "Un bloque de estructura básica que abarca todos los campos de esta plantilla; el texto real de la campaña se incorporará más adelante a partir del mapa de contenidos del cliente, siguiendo la misma regla de «estructura de marcadores de posición, no de contenido» que se aplica al diseño de la página de inicio.",
+      "image": "/assets/img/hero-premium.webp",
+      "imageAlt": "Imagen provisional — más adelante se incluirá la fotografía real de la campaña",
+      "cta": {
+        "label": "Comprobar disponibilidad",
+        "href": "#customize"
+      }
+    },
+    {
+      "_template": "richText",
+      "body": "Este párrafo muestra el formato de párrafo sin formato del bloque `richText`, reutilizando exactamente los mismos componentes de personalización de TinaMarkdown que el cuerpo de una entrada de blog.\n\n> Una cita destacada, generada mediante la personalización compartida «BodyQuote»; se aplica el mismo tratamiento que en el «Journal».\n\n![Espacio reservado — se incluirá una fotografía real en el centro de la página](/assets/img/hero-premium.webp \"Una imagen con pie de foto, generada mediante la personalización compartida de BodyImage.\")\n\nUn segundo párrafo, después de la imagen, para confirmar que el flujo normal del texto continúa correctamente alrededor de una imagen con pie de foto en línea."
+    },
+    {
+      "_template": "imageGallery",
+      "images": [
+        {
+          "image": "/assets/img/boat-baydreamer-exterior.webp",
+          "alt": "Espacio reservado para la galería 1",
+          "href": ""
+        },
+        {
+          "image": "/assets/img/boat-baydreamer-exterior.webp",
+          "alt": "Espacio reservado para la galería 2",
+          "href": ""
+        },
+        {
+          "image": "/assets/img/boat-baydreamer-exterior.webp",
+          "alt": "Espacio reservado para la galería 3",
+          "href": ""
+        }
+      ]
+    },
+    {
+      "_template": "cta",
+      "title": "¿Estás listo para ver la ruta?",
+      "lede": "Un bloque con título y botón centrados, que utiliza el propio título de la plantilla `cta` (a diferencia del CTA que aparece al final de las secciones «diferencias», «fauna», «barcos» y «tripulación», este bloque no tiene una sección principal de la que tomar prestado un título).",
+      "cta": {
+        "label": "Habla con nosotros",
+        "href": "/en/contact/"
+      }
+    },
+    {
+      "_template": "moguProposal",
+      "tripSlug": "la-paz-sailing-week-demo",
+      "height": 700
+    }
+  ]
+}
