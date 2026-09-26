@@ -13,19 +13,19 @@
       "items": [
         {
           "label": "Nuestra historia",
-          "href": ""
+          "href": "/es/our-story/"
         },
         {
           "label": "Gente del mar apasionada",
-          "href": ""
+          "href": "/es/passionate-sea-people/"
         },
         {
           "label": "La experiencia con la raya águila",
-          "href": ""
+          "href": "/es/the-eagle-ray-experience/"
         },
         {
           "label": "La experiencia de nuestros viajeros",
-          "href": ""
+          "href": "/es/our-travelers-experience/"
         }
       ]
     },
@@ -35,15 +35,15 @@
       "items": [
         {
           "label": "Expedición de recalibración",
-          "href": ""
+          "href": "/es/recalibration-expedition/"
         },
         {
           "label": "Expedición activa",
-          "href": ""
+          "href": "/es/active-expedition/"
         },
         {
           "label": "Expedición ad hoc",
-          "href": ""
+          "href": "/es/ad-hoc-expedition/"
         }
       ]
     },
@@ -55,12 +55,12 @@
     {
       "_template": "link",
       "label": "La Paz",
-      "href": ""
+      "href": "/es/la-paz/"
     },
     {
       "_template": "link",
       "label": "Barcos",
-      "href": ""
+      "href": "/es/boats/"
     },
     {
       "_template": "link",

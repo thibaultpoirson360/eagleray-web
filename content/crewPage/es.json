@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "kicker": "Nuestro equipo",
+    "title": "Gente del mar apasionada",
+    "lede": "Las personas que hacen que cada expedición sea lo que es.",
+    "image": "/assets/img/hero-premium.webp",
+    "imageAlt": "Un catamarán fondeado en una bahía tranquila al atardecer"
+  },
+  "intro": "Seleccionamos a la tripulación basándonos en dos aspectos: cómo manejan el barco y cómo hacen que la gente se sienta bienvenida a bordo. La mayoría de las empresas de alquiler contratan en función de uno u otro criterio. Nosotros no.\n\nLee sus perfiles a continuación y dinos a quién te gustaría tener a bordo. Haremos todo lo posible por ajustarnos a su disponibilidad, aunque no siempre podemos garantizarlo.",
+  "gridTitle": "Te presentamos a nuestro equipo"
+}
