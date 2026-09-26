@@ -2,23 +2,22 @@
   "title": "Semaine de la voile de La Paz — Exemple de page d'accueil",
   "blocks": [
     {
-      "_template": "hero",
       "kicker": "Dates limitées · 2026",
       "title": "Une semaine, un bateau, toute la mer de Cortez.",
-      "lede": "Un bloc « héros » de structure qui exploite tous les champs de ce modèle — le texte réel de la campagne sera ajouté ultérieurement à partir de la cartographie de contenu fournie par le client, selon la même règle « structure des espaces réservés, pas de contenu » que pour la création de la page d'accueil.",
+      "lede": "Un bloc « héros » de structure de base qui exploite tous les champs de ce modèle — le texte réel de la campagne sera ajouté ultérieurement à partir de la cartographie de contenu fournie par le client, selon la même règle « structure des espaces réservés, pas de contenu » que pour la création de la page d'accueil.",
       "image": "/assets/img/hero-premium.webp",
       "imageAlt": "Image de remplacement — les véritables photos de campagne seront ajoutées ultérieurement",
       "cta": {
         "label": "Vérifier la disponibilité",
         "href": "#customize"
-      }
+      },
+      "_template": "hero"
     },
     {
-      "_template": "richText",
-      "body": "Ce paragraphe illustre le rendu d'un paragraphe simple du bloc `richText`, en réutilisant exactement les mêmes composants de redéfinition TinaMarkdown que ceux utilisés pour le corps d'un article de blog.\n\n> Une citation mise en avant, générée via la redéfinition partagée de BodyQuote — même traitement que dans le Journal.\n\n![Espace réservé — une véritable photo en plein milieu de la page sera ajoutée ultérieurement](/assets/img/hero-premium.webp \"Une image légendée, générée via la redéfinition partagée de BodyImage.\")\n\nUn deuxième paragraphe, situé après l'image, permettant de vérifier que le flux de texte se poursuit correctement autour d'une image accompagnée d'une légende en ligne."
+      "body": "Ce paragraphe illustre le rendu d'un paragraphe simple du bloc `richText`, en réutilisant exactement les mêmes composants de redéfinition TinaMarkdown que ceux utilisés pour le corps d'un article de blog.\n\n> Une citation mise en avant, générée via la redéfinition partagée de `BodyQuote` — même traitement que dans le Journal.\n\n![Espace réservé — une véritable photo au milieu de la page sera ajoutée ultérieurement](/assets/img/hero-premium.webp \"Une image légendée, générée via la redéfinition partagée de BodyImage.\")\n\nUn deuxième paragraphe, après l'image, permettant de vérifier que le flux de texte se poursuit correctement autour d'une image accompagnée d'une légende intégrée.\n",
+      "_template": "richText"
     },
     {
-      "_template": "imageGallery",
       "images": [
         {
           "image": "/assets/img/boat-baydreamer-exterior.webp",
@@ -35,22 +34,17 @@
           "alt": "Image de remplacement n° 3 pour la galerie",
           "href": ""
         }
-      ]
+      ],
+      "_template": "imageGallery"
     },
     {
-      "_template": "cta",
       "title": "Prêt à découvrir l'itinéraire ?",
-      "lede": "Un bloc composé d'un titre centré et d'un bouton, utilisant le titre propre au modèle `cta` (contrairement au CTA figurant à la fin des sections « Différence », « Faune », « Bateaux » et « Équipage », ce bloc ne dispose pas de section hôte dont il pourrait emprunter le titre).",
+      "lede": "Un bloc composé d'un titre centré et d'un bouton, utilisant le titre propre au modèle `cta` (contrairement au CTA de fin des pages « Différence », « Faune », « Bateaux » et « Équipage », ce bloc ne dispose pas de section hôte dont il pourrait emprunter le titre).",
       "cta": {
-        "label": "Contactez-nous",
-        "href": "/fr/contact/"
-      }
-    },
-    {
-      "_template": "moguProposal",
-      "tripSlug": "la-paz-sailing-week-demo",
-      "height": 700,
-      "iframeTitle": "Proposition de voyage"
+        "label": "Consultez la proposition dans son intégralité",
+        "href": "https://v2.app.moguplatform.com/trips/numerous-manchester-15970"
+      },
+      "_template": "cta"
     }
   ]
 }

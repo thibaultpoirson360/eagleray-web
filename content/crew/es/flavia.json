@@ -1,9 +1,13 @@
 {
   "name": "Flavia",
-  "role": "Cocinero, azafata y azafata de vuelo",
-  "bio": "Flavia cocina, se encarga de la cubierta, forma al equipo y graba el día tal y como se desarrolla. En un barco pequeño, eso no son cuatro trabajos; es un instinto excepcional para mantener la vida en movimiento. Sabe lo que necesita un nadador hambriento, cómo animar al grupo al amanecer y cuándo debe desaparecer la cámara. Con Flavia a bordo, todo fluye.",
-  "photo": "/assets/img/crew-flavia.webp",
-  "photoAlt": "Flavia Elin Conradi, azafata, chef y cineasta",
+  "roles": [
+    "Chef",
+    "Anfitriona",
+    "Azafata"
+  ],
+  "about": "Flavia cocina, se encarga de la cubierta, forma al equipo y graba el día tal y como se desarrolla. En un barco pequeño, eso no son cuatro trabajos distintos, sino un instinto excepcional para mantener la vida en movimiento. Sabe lo que necesita un nadador hambriento, cómo animar al grupo al amanecer y cuándo debe desaparecer la cámara. Con Flavia a bordo, todo fluye.",
+  "image": "/assets/img/crew-flavia.webp",
+  "imageAlt": "Flavia Elin Conradi, azafata, chef y cineasta",
   "joiningTag": "Se incorporará en el cuarto trimestre de 2026",
   "order": 11
 }

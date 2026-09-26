@@ -6,12 +6,19 @@
   "kickerNumber": "02",
   "kicker": "Avec qui naviguez-vous ?",
   "title": "Bien plus que de simples employés de service —",
-  "titleEmphasis": "Nous naviguons, plongeons et avançons à vos côtés.",
-  "intro": "Nous sélectionnons notre équipage en fonction de deux critères : leur maîtrise du bateau et leur capacité à mettre les passagers à l'aise à bord. La plupart des sociétés de location recrutent en se basant sur l'un ou l'autre de ces critères. Ce n'est pas notre cas. Consultez leurs profils et indiquez-nous qui vous aimeriez avoir à bord ; nous ferons de notre mieux pour nous adapter à leurs disponibilités.",
-  "rolesIntro": "Nous sélectionnons notre équipage en fonction de deux critères : leur maîtrise du bateau et leur capacité à mettre les passagers à l'aise à bord. La plupart des sociétés de location recrutent en fonction de l'un ou de l'autre. Ce n'est pas notre cas. Consultez leurs profils et dites-nous qui vous aimeriez avoir à bord. Nous ferons de notre mieux pour nous adapter à leurs disponibilités, même si nous ne pouvons pas toujours le garantir.",
+  "titleEmphasis": "Nous naviguons, plongeons et évoluons à vos côtés.",
+  "intro": "Nous sélectionnons notre équipage en fonction de deux critères : leur maîtrise du bateau et leur capacité à mettre les passagers à l’aise à bord. La plupart des sociétés de location embauchent en se basant sur l’un ou l’autre de ces critères. Ce n’est pas notre cas. Consultez leurs profils et indiquez-nous qui vous aimeriez avoir à bord ; nous ferons de notre mieux pour nous adapter à leurs disponibilités.",
+  "rolesIntro": "Nous sélectionnons notre équipage en fonction de deux critères : leur maîtrise du bateau et leur capacité à mettre les passagers à l'aise à bord. La plupart des sociétés de location recrutent en se basant sur l'un ou l'autre de ces critères. Ce n'est pas notre cas. Consultez leurs profils et dites-nous qui vous aimeriez avoir à bord. Nous ferons de notre mieux pour nous adapter à leurs disponibilités, même si nous ne pouvons pas toujours le garantir.",
   "cta": {
     "label": "Découvrez nos passionnés de la mer",
-    "href": "#"
+    "href": "/fr/passionate-sea-people/"
   },
-  "dotsLabel": "Aller à la page « Membre d'équipage »"
+  "dotsLabel": "Aller à la page « Membre d'équipage »",
+  "meetLabel": "Découvrez",
+  "closeLabel": "Fermer",
+  "yearsLabel": "années passées à ce poste",
+  "yearLabel": "année à ce poste",
+  "readMoreLabel": "Continuer la lecture →",
+  "historyLabel": "Histoire",
+  "whyLabel": "Pourquoi je fais ça ?"
 }
