@@ -2,7 +2,6 @@
   "title": "La Paz Sailing Week — Landing Page Sample",
   "blocks": [
     {
-      "_template": "hero",
       "kicker": "Limited dates · 2026",
       "title": "One week, one boat, the whole Sea of Cortez.",
       "lede": "A scaffold hero block exercising every field this template has — real campaign copy comes later from the client's content mapping, same placeholder-structure-not-content rule as the homepage build.",
@@ -11,14 +10,14 @@
       "cta": {
         "label": "Check availability",
         "href": "#customize"
-      }
+      },
+      "_template": "hero"
     },
     {
-      "_template": "richText",
-      "body": "This paragraph exercises the `richText` block's plain-paragraph rendering, reusing the exact same TinaMarkdown override components as a blog post body.\n\n> A pull-quote, rendered through the shared BodyQuote override — same treatment as the Journal.\n\n![Placeholder — real mid-page photography to come](/assets/img/hero-premium.webp \"A captioned image, rendered through the shared BodyImage override.\")\n\nA second paragraph, after the image, to confirm normal text flow continues correctly around an inline captioned image."
+      "body": "This paragraph exercises the `richText` block's plain-paragraph rendering, reusing the exact same TinaMarkdown override components as a blog post body.\n\n> A pull-quote, rendered through the shared BodyQuote override — same treatment as the Journal.\n\n![Placeholder — real mid-page photography to come](/assets/img/hero-premium.webp \"A captioned image, rendered through the shared BodyImage override.\")\n\nA second paragraph, after the image, to confirm normal text flow continues correctly around an inline captioned image.\n",
+      "_template": "richText"
     },
     {
-      "_template": "imageGallery",
       "images": [
         {
           "image": "/assets/img/boat-baydreamer-exterior.webp",
@@ -35,22 +34,23 @@
           "alt": "Gallery placeholder 3",
           "href": ""
         }
-      ]
+      ],
+      "_template": "imageGallery"
     },
     {
-      "_template": "cta",
       "title": "Ready to see the route?",
       "lede": "A centered heading + button block, exercising the `cta` template's own heading (unlike difference/wildlife/boats/crew's trailing cta, this block has no host section to borrow a heading from).",
       "cta": {
         "label": "Talk with us",
         "href": "/en/contact/"
-      }
+      },
+      "_template": "cta"
     },
     {
-      "_template": "moguProposal",
-      "tripSlug": "la-paz-sailing-week-demo",
+      "tripSlug": "numerous-manchester-15970?embed=true&hideLogo=true&hideTitle=true\"",
       "height": 700,
-      "iframeTitle": "Trip proposal"
+      "iframeTitle": "Trip proposal",
+      "_template": "moguProposal"
     }
   ]
 }
