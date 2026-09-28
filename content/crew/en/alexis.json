@@ -6,6 +6,12 @@
   "skills": [
     "Scuba"
   ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "fluent"
+    }
+  ],
   "about": "Thibault met Alexis in Chile when they were five years old. Today, Alexis leads Eagle Ray underwater — an international scuba instructor with five-star hospitality in his reflexes, honed at Ritz-Carlton and Mandarin Oriental. He reads a table the way he reads a dive site: quickly, quietly, before anyone else notices. They call him the Pirate, and he earned it. He knows which hidden cove to choose, which story belongs at dinner, and when silence says more. With Alexis aboard, exceptional dives tend to end in long French dinners, good wine and the kind of moments that become crew legend.",
   "image": "/assets/img/crew-alexis.jpeg",
   "imageAlt": "Alexis, Expedition Leader — Scuba",
