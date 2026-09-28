@@ -45,6 +45,12 @@
         "href": "https://v2.app.moguplatform.com/trips/numerous-manchester-15970"
       },
       "_template": "cta"
+    },
+    {
+      "tripSlug": "trips/numerous-manchester-15970",
+      "height": 600,
+      "iframeTitle": "Super awesme trip",
+      "_template": "moguProposal"
     }
   ]
 }
