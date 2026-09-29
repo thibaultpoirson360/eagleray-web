@@ -16,6 +16,15 @@
     {
       "body": "fasdfasdfasdf\n\ns\n\ndf\n\nas\n\ndf\n",
       "_template": "richText"
+    },
+    {
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lv3fwingtwjlffngg3pv.jpg",
+          "alt": "tet"
+        }
+      ],
+      "_template": "imageGallery"
     }
   ]
 }
