@@ -1,3 +1,20 @@
 {
-  "title": "Fall 2026"
+  "title": "Fall 2026",
+  "blocks": [
+    {
+      "kicker": "fall 2026",
+      "title": "This is the special for 2026",
+      "lede": "Check out our amazing things~",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/hero-premium_ufueef.webp",
+      "imageAlt": "sailin boat",
+      "cta": {
+        "label": "reserva",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+      },
+      "_template": "hero"
+    },
+    {
+      "_template": "richText"
+    }
+  ]
 }
