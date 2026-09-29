@@ -8,6 +8,11 @@
   },
   "links": [
     {
+      "label": "Passionate Sea People",
+      "href": "/passionate-sea-people/",
+      "_template": "link"
+    },
+    {
       "label": "About Us",
       "items": [
         {
@@ -65,11 +70,6 @@
     {
       "label": "Contact Us",
       "href": "/en/contact/",
-      "_template": "link"
-    },
-    {
-      "label": "Passionate Sea People",
-      "href": "/passionate-sea-people/",
       "_template": "link"
     }
   ],
