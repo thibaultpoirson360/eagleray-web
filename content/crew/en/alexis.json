@@ -19,8 +19,15 @@
       "flag": " 🇪🇸"
     }
   ],
+  "certificates": [
+    "First Aid"
+  ],
+  "yearsOfExperience": 8,
+  "quote": "I love fishing in the sea of Cortez!",
   "about": "Thibault met Alexis in Chile when they were five years old. Today, Alexis leads Eagle Ray underwater — an international scuba instructor with five-star hospitality in his reflexes, honed at Ritz-Carlton and Mandarin Oriental. He reads a table the way he reads a dive site: quickly, quietly, before anyone else notices. They call him the Pirate, and he earned it. He knows which hidden cove to choose, which story belongs at dinner, and when silence says more. With Alexis aboard, exceptional dives tend to end in long French dinners, good wine and the kind of moments that become crew legend.",
-  "image": "/assets/img/crew-alexis.jpeg",
+  "history": "Thibault met Alexis in Chile when they were five years old. Today, Alexis leads Eagle Ray underwater — an international scuba instructor with five-star hospitality in his reflexes, honed at Ritz-Carlton and Mandarin Oriental. He reads a table the way he reads a dive site: quickly, quietly, before anyone else notices. They call him the Pirate, and he earned it. He knows which hidden cove to choose, which story belongs at dinner, and when silence says more. With Alexis aboard, exceptional dives tend to end in long French dinners, good wine and the kind of moments that become crew legend.",
+  "why": "I love the ocean and all the life that is has!",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Contact_Us_ipfhl9.png",
   "imageAlt": "Alexis, Expedition Leader — Scuba",
   "order": 2
 }
