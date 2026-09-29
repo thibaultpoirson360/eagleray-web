@@ -25,6 +25,12 @@
         }
       ],
       "_template": "imageGallery"
+    },
+    {
+      "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar",
+      "height": 600,
+      "iframeTitle": "trip",
+      "_template": "moguProposal"
     }
   ]
 }
