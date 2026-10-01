@@ -13,7 +13,9 @@
     "Land tours"
   ],
   "languages": [
-    {},
+    {
+      "language": "English"
+    },
     {},
     {},
     {}
