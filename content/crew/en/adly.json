@@ -8,7 +8,8 @@
     "Kite",
     "Snorkeling",
     "Freediving",
-    "Kayaking"
+    "Kayaking",
+    "Foiling"
   ],
   "languages": [
     {
@@ -34,8 +35,10 @@
   ],
   "yearsOfExperience": 5,
   "quote": "I might be the reason someone falls in love with the ocean.",
-  "about": "Thibault met Adly while learning to kite in La Ventana, Mexico's legendary wind playground. Originally from Egypt, Adly soon invited him to return the favor on the Red Sea. An engineer by training, he is now an IKO kite instructor and PADI scuba instructor with 1,500+ dives, 80+ students and boat-crew experience across four continents. Adly reads wind, current and group energy in the same glance. He knows when to push for one more dive — and when doing absolutely nothing at anchor is exactly the adventure everyone needs.",
-  "image": "/assets/img/crew-adly.webp",
-  "imageAlt": "Adly, Expedition Leader",
+  "about": "\"I'm a PADI scuba instructor, a freediver and a kitesurf instructor, with more than 1,500 dives from the Red Sea to the Caribbean. Today I live in Baja California Sur, between the wind of La Ventana and the Sea of Cortez.\n\nOn day one I watch before anyone speaks: who brings their own gear, who shows up early, who talks for the group. By the first briefing, I know where each person is starting from. My job is to put you in the right place at the right moment, so the rays come to us.\"",
+  "history": "\"In Tanzania, with a group of beginner divers, the current came up stronger than forecast. I saw the hesitation at the briefing and changed site on the spot: calmer water, the same marine life. One diver surfaced saying it was the best dive of her life. The whole boat was buzzing.\n\nBefore Baja, I led dive groups of four to eight, and outdoor programs for groups of students.\"",
+  "why": "\"The first time I went in, the ocean showed me what it could do: the life, the silence, the feeling of being part of something much bigger. I wanted other people to feel it, not as something to check off a list, but as something that changes how they see the world.\n\nWhat I love most is watching someone who stood on the boat thinking they couldn't do it find out they're braver than they thought.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Mohamed_Elsdly_Adly_Profile_dosvz1.jpg",
+  "imageAlt": "Adly, expedition leader with Eagle Ray Expeditions",
   "order": 4
 }
