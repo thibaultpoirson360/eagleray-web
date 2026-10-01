@@ -1,12 +1,16 @@
 {
   "name": "Alexis",
   "roles": [
-    "Expedition Leader",
-    "Fisherman"
+    "Expedition Leader"
   ],
   "skills": [
-    "Scuba",
-    "Fishing"
+    "Diving",
+    "Snorkeling",
+    "Sailing",
+    "Surfing",
+    "Kayaking",
+    "Boating",
+    "Land exploration"
   ],
   "languages": [
     {
