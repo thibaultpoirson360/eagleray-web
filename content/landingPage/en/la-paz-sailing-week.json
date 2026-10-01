@@ -39,10 +39,10 @@
     },
     {
       "title": "Ready to see the route?",
-      "lede": "A centered heading + button block, exercising the `cta` template's own heading (unlike difference/wildlife/boats/crew's trailing cta, this block has no host section to borrow a heading from).",
+      "lede": "",
       "cta": {
-        "label": "Check out the complete proposal",
-        "href": "https://v2.app.moguplatform.com/trips/numerous-manchester-15970"
+        "label": "Check out the complete proposal (in spanish)",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
       },
       "_template": "cta"
     },
