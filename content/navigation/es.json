@@ -9,6 +9,11 @@
   "links": [
     {
       "label": "Quiénes somos",
+      "href": "/es/passionate-sea-people/",
+      "_template": "link"
+    },
+    {
+      "label": "Quiénes somos",
       "items": [
         {
           "label": "Nuestra historia",
