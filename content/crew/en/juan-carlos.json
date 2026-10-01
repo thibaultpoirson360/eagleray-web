@@ -3,6 +3,19 @@
   "roles": [
     "Expedition Leader"
   ],
+  "skills": [
+    "Scuba",
+    "Snorkeling",
+    "Freediving",
+    "Paddleboarding",
+    "Kayaking",
+    "Hiking",
+    "Camping"
+  ],
+  "languages": [
+    {},
+    {}
+  ],
   "about": "Juan Carlos has been a dive instructor since he was 20, worked on liveaboards in the Revillagigedo Islands and sailed solo from Loreto to La Paz. He carries experience that never needs to announce itself. He knows when the water deserves respect and when a group is ready to go deeper. Around him, courage becomes contagious — never reckless.",
   "image": "/assets/img/crew-juancarlos.png",
   "imageAlt": "Juan Carlos, Expedition Leader",
