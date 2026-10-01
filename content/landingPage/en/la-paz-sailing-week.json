@@ -14,7 +14,7 @@
       "_template": "hero"
     },
     {
-      "body": "This paragraph exercises the `richText` block's plain-paragraph rendering, reusing the exact same TinaMarkdown override components as a blog post body.\n\n> A pull-quote, rendered through the shared BodyQuote override — same treatment as the Journal.\n\n![Placeholder — real mid-page photography to come](/assets/img/hero-premium.webp \"A captioned image, rendered through the shared BodyImage override.\")\n\nA second paragraph, after the image, to confirm normal text flow continues correctly around an inline captioned image.\n",
+      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
       "_template": "richText"
     },
     {
