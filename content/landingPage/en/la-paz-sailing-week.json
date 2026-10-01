@@ -2,11 +2,11 @@
   "title": "Thanksgiving with Sergio Torres \"Canei\"",
   "blocks": [
     {
-      "kicker": "Limited dates · 2026",
-      "title": "One week, one boat, the whole Sea of Cortez.",
-      "lede": "A scaffold hero block exercising every field this template has — real campaign copy comes later from the client's content mapping, same placeholder-structure-not-content rule as the homepage build.",
-      "image": "/assets/img/hero-premium.webp",
-      "imageAlt": "Placeholder — real campaign photography to come",
+      "kicker": "Limited dates · November 2026",
+      "title": "November in the Sea of Cortez, with Sergio Torres.",
+      "lede": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+      "imageAlt": "Sergio Torres Expedition Leader de Eagle Ray Expeditions Sailing Experience in La Paz",
       "cta": {
         "label": "Check availability",
         "href": "#customize"
