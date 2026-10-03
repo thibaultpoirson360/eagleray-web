@@ -1,9 +1,15 @@
 {
-  "depth": { "meters": 96, "name": "The boats" },
+  "depth": {
+    "meters": 96,
+    "name": "The boats"
+  },
   "kickerNumber": "07",
   "kicker": "Your expedition",
   "title": "Our fleet. One standard:",
   "titleEmphasis": "fully private, fully yours.",
-  "cta": { "label": "See all boats →", "href": "#customize" },
+  "cta": {
+    "label": "See all boats →",
+    "href": "#customize"
+  },
   "dotsLabel": "Go to boat"
 }
