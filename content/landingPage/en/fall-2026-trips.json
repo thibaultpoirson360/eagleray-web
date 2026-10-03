@@ -1,9 +1,4 @@
 {
   "title": "Fall 2026 Trips",
-  "blocks": [
-    {
-      "height": 600,
-      "_template": "moguProposal"
-    }
-  ]
+  "blocks": []
 }
