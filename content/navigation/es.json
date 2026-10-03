@@ -8,7 +8,11 @@
   },
   "links": [
     {
-      "_template": "dropdown",
+      "label": "Apasionados del mar",
+      "href": "/es/passionate-sea-people/",
+      "_template": "link"
+    },
+    {
       "label": "Quiénes somos",
       "items": [
         {
@@ -16,21 +20,21 @@
           "href": "/es/our-story/"
         },
         {
-          "label": "Gente del mar apasionada",
+          "label": "Apasionados del mar",
           "href": "/es/passionate-sea-people/"
         },
         {
-          "label": "La experiencia con la raya águila",
+          "label": "La experiencia Eagle Ray",
           "href": "/es/the-eagle-ray-experience/"
         },
         {
           "label": "La experiencia de nuestros viajeros",
           "href": "/es/our-travelers-experience/"
         }
-      ]
+      ],
+      "_template": "dropdown"
     },
     {
-      "_template": "dropdown",
       "label": "Navega con nosotros",
       "items": [
         {
@@ -45,27 +49,28 @@
           "label": "Expedición ad hoc",
           "href": "/es/ad-hoc-expedition/"
         }
-      ]
+      ],
+      "_template": "dropdown"
     },
     {
-      "_template": "link",
       "label": "Blog",
-      "href": "/es/blog/"
+      "href": "/es/blog/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "La Paz",
-      "href": "/es/la-paz/"
+      "href": "/es/la-paz/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "Barcos",
-      "href": "/es/boats/"
+      "href": "/es/boats/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "Contáctanos",
-      "href": "/es/contact/"
+      "href": "/es/contact/",
+      "_template": "link"
     }
   ],
   "cta": {

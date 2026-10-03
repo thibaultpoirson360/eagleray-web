@@ -8,7 +8,11 @@
   },
   "links": [
     {
-      "_template": "dropdown",
+      "label": "Gens passionnés de mer",
+      "href": "/fr/passionate-sea-people/",
+      "_template": "link"
+    },
+    {
       "label": "À propos de nous",
       "items": [
         {
@@ -16,7 +20,7 @@
           "href": "/fr/our-story/"
         },
         {
-          "label": "Des gens de la mer passionnés",
+          "label": "Gens passionnés de mer",
           "href": "/fr/passionate-sea-people/"
         },
         {
@@ -27,10 +31,10 @@
           "label": "L'expérience de nos voyageurs",
           "href": "/fr/our-travelers-experience/"
         }
-      ]
+      ],
+      "_template": "dropdown"
     },
     {
-      "_template": "dropdown",
       "label": "Venez naviguer avec nous",
       "items": [
         {
@@ -42,30 +46,31 @@
           "href": "/fr/active-expedition/"
         },
         {
-          "label": "Expédition ponctuelle",
+          "label": "Expédition sur mesure",
           "href": "/fr/ad-hoc-expedition/"
         }
-      ]
+      ],
+      "_template": "dropdown"
     },
     {
-      "_template": "link",
       "label": "Blog",
-      "href": "/fr/blog/"
+      "href": "/fr/blog/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "La Paz",
-      "href": "/fr/la-paz/"
+      "href": "/fr/la-paz/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "Bateaux",
-      "href": "/fr/boats/"
+      "href": "/fr/boats/",
+      "_template": "link"
     },
     {
-      "_template": "link",
       "label": "Nous contacter",
-      "href": "/fr/contact/"
+      "href": "/fr/contact/",
+      "_template": "link"
     }
   ],
   "cta": {

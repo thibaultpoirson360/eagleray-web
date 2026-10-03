@@ -1,17 +1,24 @@
 {
   "claim": "The Sea of Cortez",
-  "claimEmphasis": "isn't visited. It's sailed.",
+  "claimEmphasis": "Isn't visited. It's sailed.",
   "contactDisplay": {
     "phone": "+52 55 6809 0942",
-    "email": "thibault@eaglerayexpeditions.com"
+    "email": "hello@eaglerayexpeditions.com"
   },
   "base": {
     "heading": "Base",
-    "lines": ["Marina de La Paz", "La Paz, Baja California Sur", "Mexico"]
+    "lines": [
+      "Marina de La Paz",
+      "La Paz, Baja California Sur",
+      "Mexico"
+    ]
   },
   "coords": {
     "heading": "Coordinates",
-    "lines": ["24°12′37.6″ N", "110°19′ W"]
+    "lines": [
+      "24°12′37.6″ N",
+      "110°19′ W"
+    ]
   },
   "followHeading": "Follow",
   "legal": {

@@ -1,0 +1,35 @@
+{
+  "name": "Roberto",
+  "roles": [
+    "Captain"
+  ],
+  "skills": [
+    "Sailing",
+    "Offshore passages",
+    "Night navigation",
+    "Regattas"
+  ],
+  "languages": [
+    {
+      "language": "Spanish"
+    },
+    {
+      "language": "English"
+    },
+    {
+      "language": "French"
+    }
+  ],
+  "certificates": [
+    "Law degree (UNAM)",
+    "LL.M. Law of the Sea (Lund University & World Maritime University)"
+  ],
+  "yearsOfExperience": 11,
+  "quote": "My boat is an extension of me.",
+  "about": "\"I've sailed over 30,000 nautical miles, including a round-the-world journey between 2016 and 2026: across the Pacific, the Indian Ocean and the Atlantic, and from Alaska to Japan through the Aleutians and Kamchatka. Before that, I was a maritime lawyer: I worked at the International Tribunal for the Law of the Sea and took part in international climate negotiations.\n\nOn board, I'll hand you the helm if you want to learn, and take care of everything if you don't. My students say I stay calm when others don't, and that my stories make even cleaning the bilge enjoyable. They also say I make storms feel like part of the plan. I hope we won't need to test that one.\"",
+  "history": "\"A transatlantic passage from Spain to Barbados, planned for two weeks, took me 44 days and several broken sails. In 2020, with ports closing worldwide, I sailed from Mexico towards French Polynesia, was turned away, and kept sailing. A cat named Demonic crossed the Pacific with us.\n\nSailing from Alaska to Japan, I climbed and skied volcanoes in the Aleutians and Kamchatka, with sealskin skis and bear repellent in my bag. I reached Japan with a broken boom.\"",
+  "why": "\"I sail under sail whenever the wind allows, not on the engine, so you can hear what I listen for: the silence, and the sound of the hull moving through the water.\n\nFor me, the sea is where time feels limited and freedom stays intact. In Baja, I share it from the deck of a boat I know inside out.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
+  "imageAlt": "Roberto Cámara sailing captain and expedition leader with Eagle Ray Expeditions",
+  "order": 8
+}

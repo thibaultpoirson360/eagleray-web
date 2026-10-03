@@ -1,11 +1,11 @@
 {
   "hero": {
     "kicker": "Our crew",
-    "title": "Passionate Sea People",
-    "lede": "The people who make every expedition what it is.",
-    "image": "/assets/img/hero-premium.webp",
-    "imageAlt": "A catamaran at anchor in a quiet bay at dusk"
+    "title": "We are Passionate Sea People",
+    "lede": "You'll remember our crew longer than the boat.",
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Passionate_Sea_People_Sailing_Experience_Sailing_uqdgak.jpg",
+    "imageAlt": "Passionate Sea People Eagle Ray Expeditions Sailing Experiences Sailign Trips Sailing Crew"
   },
-  "intro": "We select crew for two things: how they handle a boat, and how they make people feel welcome on it. Most charter companies hire for one or the other. We don't.\n\nRead their profiles below, and tell us who you'd like on board. We'll do our best to match their schedule, though we can't always guarantee it.",
-  "gridTitle": "Meet our people"
+  "intro": "We select our crew for two things.\n1. How they handle a boat: safety first, a clean deck, everything in its place\n2. and how they make people feel welcome on it.\nWe never hire one without the other.\n\nThey know this sea, they respect it, and they'll show you how to read it.\nBelow, each of them in their own words. Tell us who you'd like on board, and we'll do our best to match their schedule, though we can't always guarantee it.",
+  "gridTitle": "Meet the people behind Eagle Ray Expeditions"
 }

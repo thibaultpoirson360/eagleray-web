@@ -4,9 +4,26 @@
     "Captain",
     "Expedition Leader"
   ],
-  "about": "Javier makes the ocean feel bigger. Yacht Master 200GT, PADI dive instructor, IKO kite instructor, freediving and spearfishing guide, and drone pilot — he can captain the boat, open the underwater world, find the wind and film it all. His real gift is confidence: guests stop watching adventure and start asking what comes next.",
+  "skills": [
+    "Diving",
+    "Kite",
+    "Wingfoil",
+    "E-foil",
+    "Filmmaking"
+  ],
+  "languages": [
+    {
+      "language": "Spanish"
+    }
+  ],
+  "certificates": [
+    "PADI Instructor",
+    "IKO Kite",
+    "Yachtmaster Offshore"
+  ],
+  "about": "I'm a captain, dive instructor and lifelong waterman. I open the ocean as a playground, reading the conditions calmly, helping guests feel confident in and on the water, and capturing the moments that make an expedition unforgettable.",
   "image": "/assets/img/crew-javier.webp",
   "imageAlt": "Javier Sánchez Darder, Captain & Filmmaker",
-  "joiningTag": "Joining Q4 2026",
+  "joiningTag": "",
   "order": 10
 }
