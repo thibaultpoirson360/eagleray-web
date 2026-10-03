@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { doNotTranslate, textarea } from "../shared/fields";
+import { doNotTranslate, seoField, textarea } from "../shared/fields";
 
 /**
  * `/en/blog` (listing) + `/en/blog/<slug>` (post). No source markup for
@@ -53,6 +53,7 @@ export const blogSection: Collection = {
       label: "Text after the author's role (end of a post)",
       description: 'Printed as "<role> <text>", e.g. "at Eagle Ray Expeditions" -> "Naturalist Guide at Eagle Ray Expeditions".',
     },
+    seoField(),
   ],
 };
 

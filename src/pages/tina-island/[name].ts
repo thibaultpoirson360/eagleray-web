@@ -281,8 +281,9 @@ const route = createIslandRoute({
     },
     component: LandingPageView,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => ({
+    propsFromData: (result: unknown, params: URLSearchParams) => ({
       landingPage: (result as Awaited<ReturnType<typeof loadLandingPage>>).data.landingPage,
+      locale: localeFromParams(params),
     }),
   },
 });

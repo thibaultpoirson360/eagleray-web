@@ -1,13 +1,13 @@
 {
   "depth": {
     "meters": 12,
-    "name": "Anchorage"
+    "name": "Fondeadero"
   },
   "kickerNumber": "01",
-  "kicker": "Qué hacemos",
+  "kicker": "Lo que hacemos",
   "title": "No ofrecemos viajes chárter.",
   "titleEmphasis": "Diseñamos experiencias en el mar.",
-  "lede": "Eagle Ray Expeditions diseña y organiza expediciones marítimas en grupos reducidos que combinan la navegación a vela, el buceo y el contacto con la fauna silvestre en Baja California Sur. Pensadas para quienes buscan algo más que un simple barco.",
+  "lede": "Eagle Ray Expeditions diseña y guía expediciones marítimas para grupos pequeños que combinan vela, buceo y encuentros con fauna en Baja California Sur. Pensado para quienes quieren algo más que un barco.",
   "comparison": {
     "usTitle": "Eagle Ray Expeditions",
     "usPoints": [
@@ -17,7 +17,7 @@
       "El plan gira en torno al agua: buceo, snorkel, kayak… todos los días."
     ],
     "axisLabel": "vs",
-    "themTitle": "Viajes en barco de alquiler",
+    "themTitle": "Charters tradicionales",
     "themPoints": [
       "Lo primero es el barco, y la comodidad es lo más importante.",
       "Tripulación neutral, contratada por semanas.",
@@ -27,7 +27,7 @@
   },
   "founderQuote": {
     "kicker": "Ellos venden viajes.\nNosotros diseñamos expediciones humanas.",
-    "quote": "No quería vender barcos. Quería organizar el tipo de viaje en el que realmente me apetecería participar: con gente que conozca el mar, no solo que sepa entregarte un juego de llaves.",
-    "cite": "— Thibault Poirson De Cardon, fundador"
+    "quote": "No quería vender barcos. Quería construir el tipo de viaje en el que yo mismo querría estar — con gente que conoce el mar de verdad, no solo cómo entregarte unas llaves.",
+    "cite": "— Thibault Poirson De Cardon, Fundador"
   }
 }

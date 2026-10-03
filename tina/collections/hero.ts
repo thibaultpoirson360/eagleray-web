@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { ctaField, localeRouter, textarea } from "../shared/fields";
+import { ctaField, localeRouter, seoField, textarea } from "../shared/fields";
 
 /**
  * Homepage section 1 — `<section class="hero" id="top">`.
@@ -42,6 +42,8 @@ const hero: Collection = {
       ],
     },
     { type: "string", name: "scrollCueLabel", label: "Scroll-cue accessible label" },
+    // The HOME page's search/share text (this document is the homepage).
+    seoField(),
   ],
 };
 

@@ -32,7 +32,14 @@ const post = postResult.data.blogPost;
 const related = allPostsResult.posts.filter((p) => p._sys.filename !== slug).slice(0, 2);
 ---
 
-<BaseLayout title={`${post.title} — Eagle Ray Expeditions`} locale={locale} path={`blog/${slug}/`} transparentNav={false}>
+<BaseLayout
+  title={`${post.title} — Eagle Ray Expeditions`}
+  description={post.excerpt ?? post.subtitle ?? undefined}
+  ogImage={post.coverImage ?? undefined}
+  locale={locale}
+  path={`blog/${slug}/`}
+  transparentNav={false}
+>
   <main id="main">
     <TinaIsland name="blogPost" wrapper={{ tag: "div" }} params={{ locale, slug }}>
       <BlogPostView post={post} related={related} blogSection={blogSectionResult.data.blogSection} locale={locale} />

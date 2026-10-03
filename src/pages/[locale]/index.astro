@@ -27,6 +27,7 @@ export function getStaticPaths() {
 const locale = Astro.params.locale as Locale;
 
 const heroResult = await loadHero(locale, { priority: "primary" });
+const seo = heroResult.data.hero.seo;
 const differenceResult = await loadDifference(locale);
 const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection(locale), loadCrew(locale)]);
 const wildlifeResult = await loadWildlife(locale);
@@ -34,7 +35,14 @@ const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection(lo
 const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
 ---
 
-<BaseLayout title="Eagle Ray Expeditions" locale={locale}>
+<BaseLayout
+  title={seo?.title ?? "Eagle Ray Expeditions"}
+  description={seo?.description ?? undefined}
+  ogTitle={seo?.ogTitle ?? undefined}
+  ogDescription={seo?.ogDescription ?? undefined}
+  preloadImage={heroResult.data.hero.background?.image ?? undefined}
+  locale={locale}
+>
   <main id="main">
     <!--
       Neutral <div> wrapper for the bridge's DOM-patching target, not

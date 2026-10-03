@@ -75,12 +75,13 @@
   ],
   "cta": {
     "href": "#customize",
-    "label": "Sal a navegar",
+    "label": "Go Sailing",
     "mobileLabel": "Personaliza tu expedición"
   },
   "mobileFoot": "24°12′37,6″ N · LA PAZ · B.C.S.",
   "toggleLabel": "Mostrar/ocultar menú",
   "ariaLabel": "Inicio",
   "languageLabel": "Idioma",
+  "skipLabel": "Saltar al contenido principal",
   "surfaceLabel": "Superficie"
 }

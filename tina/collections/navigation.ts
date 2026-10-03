@@ -41,7 +41,16 @@ const navigation: Collection = {
   path: "content/navigation",
   format: "json",
   ui: {
-    router: localeRouter(),
+    // A distinct fragment from footer.ts/hero.ts — see the comment on
+    // "One document per locale" above: navigation, footer and hero used to
+    // all route to the bare `/<locale>/` page. TinaCMS's admin identifies
+    // "which document is open" by the URL its router returns, POLLED BACK
+    // from the live-preview iframe every 100ms (upstream `PreviewInner`,
+    // not something this project's code touches) — three documents sharing
+    // one URL is exactly the ambiguity that made the sidebar land on the
+    // wrong collection's form. `#site-nav` is a real id on <nav> (Nav.astro),
+    // so this also scrolls the preview straight to it.
+    router: localeRouter("#site-nav"),
     allowedActions: { delete: false },
   },
   fields: [
@@ -144,6 +153,12 @@ const navigation: Collection = {
       name: "languageLabel",
       label: "Language switcher (accessible label, not visible text)",
       description: 'e.g. "Language".',
+    },
+    {
+      type: "string",
+      name: "skipLabel",
+      label: '"Skip to content" link (first thing keyboard users reach)',
+      description: 'Invisible until someone presses Tab. e.g. "Skip to main content".',
     },
     {
       type: "string",

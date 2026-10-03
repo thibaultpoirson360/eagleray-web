@@ -1,18 +1,12 @@
 {
-  "depth": {
-    "meters": 26,
-    "name": "Aboard"
-  },
+  "depth": { "meters": 26, "name": "Aboard" },
   "kickerNumber": "02",
   "kicker": "Who you sail with",
   "title": "Far more than service staff —",
   "titleEmphasis": "we sail, dive, and move with you.",
-  "intro": "We select crew for two things:how they handle a boat, and how they make people feel welcome on it. Most charter companies hire for one or the other. We don't.Read their profiles, and tell us who you'd like on board, we'll do our best to match their schedule.",
-  "rolesIntro": "We select crew for two things: how they handle a boat, and how they make people feel welcome on it. Most chartercompanies hire for one or the other. We don't. Read their profiles, and tell us who you'd like on board. We'll do our best to match their schedule, though we can't always guarantee it..",
-  "cta": {
-    "label": "Meet our Passionate Sea People",
-    "href": "/en/passionate-sea-people/"
-  },
+  "intro": "We select crew for two things: how they handle a boat, and how they make people feel welcome on it. Most charter companies hire for one or the other. We don't. Read their profiles, and tell us who you'd like on board, we'll do our best to match their schedule.",
+  "rolesIntro": "We select crew for two things: how they handle a boat, and how they make people feel welcome on it. Most charter companies hire for one or the other. We don't. Read their profiles, and tell us who you'd like on board. We'll do our best to match their schedule, though we can't always guarantee it.",
+  "cta": { "label": "Meet our Passionate Sea People", "href": "/en/passionate-sea-people/" },
   "dotsLabel": "Go to crew member",
   "meetLabel": "Meet",
   "closeLabel": "Close",

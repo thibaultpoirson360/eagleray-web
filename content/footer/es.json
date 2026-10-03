@@ -20,12 +20,12 @@
       "110°19′ O"
     ]
   },
-  "followHeading": "Seguir",
+  "followHeading": "Síguenos",
   "legal": {
     "rights": "Todos los derechos reservados",
     "creditsText": "Fotografía bajo licencia Creative Commons.",
-    "creditsLabel": "Créditos fotográficos →",
-    "termsLabel": "Términos y condiciones",
-    "privacyLabel": "Política de privacidad"
+    "creditsLabel": "Créditos de fotos →",
+    "termsLabel": "Términos y Condiciones",
+    "privacyLabel": "Aviso de Privacidad"
   }
 }

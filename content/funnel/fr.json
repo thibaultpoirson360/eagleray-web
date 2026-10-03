@@ -4,15 +4,15 @@
     "name": "Planifier votre itinéraire"
   },
   "kickerNumber": "09",
-  "kicker": "Organisez votre expédition",
+  "kicker": "Construisez votre expédition",
   "title": "Personnalisez votre premier",
   "titleEmphasis": "Expédition en Basse-Californie.",
-  "lede": "4 questions rapides. À la fin, WhatsApp s'ouvre et votre projet est déjà rédigé : Thibault a une vue d'ensemble de la situation et vous répond avec une véritable proposition dans les 48 heures, et non pas par un simple « merci de votre intérêt ».",
-  "escapeText": "Vous préférez passer cette étape ? Envoyez-nous un message directement sur WhatsApp →",
+  "lede": "4 questions rapides. À la fin, WhatsApp s'ouvre avec votre expédition déjà rédigée — Thibault reçoit le tableau complet et répond avec une vraie proposition sous 48 heures, pas un « merci de votre intérêt ».",
+  "escapeText": "Vous préférez passer tout ça ? Écrivez-nous directement sur WhatsApp →",
   "step1": {
-    "legend": "Informations pratiques sur le voyage",
+    "legend": "Les bases du voyage",
     "tripDuration": {
-      "question": "Combien de jours envisages-tu ?",
+      "question": "Combien de jours envisagez-vous ?",
       "options": [
         {
           "label": "3 à 4 jours",
@@ -33,7 +33,7 @@
       ]
     },
     "travelingAs": {
-      "question": "À qui s'adresse cette expédition ?",
+      "question": "Pour qui est cette expédition ?",
       "options": [
         {
           "label": "Famille",
@@ -54,19 +54,19 @@
       ]
     },
     "guestCount": {
-      "question": "Vous serez combien à bord ?",
+      "question": "Combien serez-vous à bord ?",
       "min": 2,
       "max": 10,
       "defaultValue": 4,
-      "hint": "Jusqu'à 10 passagers sur le Bali 4.4, jusqu'à 8 sur l'Astrea 42. Au-delà de ce nombre, nous naviguons avec les deux bateaux.",
-      "fewerLabel": "Moins de clients",
-      "moreLabel": "D'autres invités"
+      "hint": "Jusqu'à 10 invités sur le Bali 4.4, jusqu'à 8 sur l'Astrea 42. Au-delà, nous naviguons avec les deux bateaux.",
+      "fewerLabel": "Moins d'invités",
+      "moreLabel": "Plus d'invités"
     }
   },
   "step2": {
     "legend": "Itinéraire et priorités",
     "routeFocus": {
-      "question": "Quel domaine vous intéresse le plus ?",
+      "question": "Quel axe vous attire le plus ?",
       "options": [
         {
           "label": "Espíritu Santo — faune sauvage",
@@ -87,7 +87,7 @@
       ]
     },
     "topPriority": {
-      "question": "Si tu pouvais ne demander qu'une seule chose ?",
+      "question": "Si vous ne pouviez demander qu'une seule chose ?",
       "options": [
         {
           "label": "Faune sauvage et plongée libre",
@@ -113,11 +113,11 @@
     "dateFromLabel": "De",
     "dateToLabel": "À",
     "flexibleDates": {
-      "label": "Ou écris-le à ta façon",
-      "placeholder": "par exemple : fin octobre 2026, ou à déterminer"
+      "label": "Ou écrivez-le à votre façon",
+      "placeholder": "ex. fin octobre 2026, ou flexible"
     },
     "boatPreference": {
-      "question": "Tu as une préférence pour un type de bateau en particulier ?",
+      "question": "Une préférence de bateau ?",
       "options": [
         {
           "label": "Bali 4.4",
@@ -138,48 +138,48 @@
     "legend": "À qui Thibault s'adresse-t-il ?",
     "fullName": {
       "label": "Nom",
-      "placeholder": "Prénom",
-      "error": "Veuillez nous indiquer votre nom."
+      "placeholder": "Votre prénom",
+      "error": "Merci d'indiquer votre nom."
     },
     "email": {
       "label": "E-mail",
-      "placeholder": "you@email.com",
-      "error": "Veuillez saisir une adresse e-mail valide."
+      "placeholder": "vous@email.com",
+      "error": "Merci d'indiquer un e-mail valide."
     },
     "whatsappNumber": {
       "label": "Numéro WhatsApp",
       "placeholder": "+52 55 0000 0000",
-      "optionalHint": "(facultatif, pour obtenir une réponse plus rapide)"
+      "optionalHint": "(facultatif, pour une réponse plus rapide)"
     },
     "notes": {
-      "label": "Y a-t-il autre chose que nous devrions savoir ? (facultatif)",
-      "placeholder": "Allergies, profondeur de plongée, fête, mal de mer…"
+      "label": "Quelque chose à savoir (facultatif)",
+      "placeholder": "Allergies, niveau de plongée, un événement à fêter, mal de mer…"
     },
-    "privacy": "🔒 Nous utilisons ces informations uniquement pour préparer votre devis. Pas de spam, jamais."
+    "privacy": "🔒 Nous utilisons ceci uniquement pour préparer votre proposition. Jamais de spam."
   },
   "ui": {
     "stepCounter": "Étape {n} sur {total}",
-    "autosaveRestored": "✓ Reprendre là où vous vous êtes arrêté",
-    "autosaveSaved": "✓ Progrès enregistrés",
+    "autosaveRestored": "✓ Reprise là où vous en étiez",
+    "autosaveSaved": "✓ Progression enregistrée",
     "back": "← Retour",
     "continue": "Continuer →",
     "submit": "Envoyer ma demande d'expédition",
-    "sending": "Envoi en cours…",
-    "submitError": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ou utiliser le lien WhatsApp ci-dessus.",
-    "recapTitle": "Le déroulement de votre expédition jusqu'à présent"
+    "sending": "Envoi…",
+    "submitError": "Un problème est survenu lors de l'envoi — réessayez, ou utilisez le lien WhatsApp ci-dessus.",
+    "recapTitle": "Votre expédition jusqu'ici"
   },
   "success": {
     "title": "Reçu — merci",
-    "body": "Thibault examinera votre projet d'expédition et vous répondra dans les 48 heures.",
-    "whatsappButton": "Poursuivez la conversation sur WhatsApp"
+    "body": "Thibault examinera votre expédition et vous répondra sous 48 heures.",
+    "whatsappButton": "Continuer la conversation sur WhatsApp"
   },
   "whatsappMessage": {
-    "intro": "Salut Thibault ! J'aimerais personnaliser une expédition Eagle Ray.",
+    "intro": "Bonjour Thibault ! J'aimerais personnaliser une expédition Eagle Ray.",
     "tripDurationLabel": "Durée",
     "travelingAsLabel": "Pour",
     "guestCountLabel": "Invités",
-    "routeFocusLabel": "Axe routier",
-    "topPriorityLabel": "Priorité absolue",
+    "routeFocusLabel": "Itinéraire souhaité",
+    "topPriorityLabel": "Priorité principale",
     "datesLabel": "Dates",
     "datesFrom": "de",
     "datesToBeConfirmed": "à confirmer",
@@ -187,6 +187,6 @@
     "fullNameLabel": "Nom",
     "emailLabel": "E-mail",
     "whatsappNumberLabel": "WhatsApp",
-    "notesLabel": "Remarques"
+    "notesLabel": "Notes"
   }
 }

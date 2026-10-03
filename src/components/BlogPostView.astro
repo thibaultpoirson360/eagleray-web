@@ -39,9 +39,9 @@ function postHref(p: { _sys: { filename: string } }): string {
 ---
 
 <section class="relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
-  <a href={localePath(locale, "blog/")} class="mb-10 block text-[13px] tracking-[.04em] text-ink/52 hover:text-ink" data-tina-field={tinaField(blogSection, "backLabel")}>{blogSection.backLabel}</a>
+  <a href={localePath(locale, "blog/")} class="mb-10 block text-[13px] tracking-[.04em] text-ink/64 hover:text-ink" data-tina-field={tinaField(blogSection, "backLabel")}>{blogSection.backLabel}</a>
 
-  <div class="text-[.72rem] tracking-[.1em] text-ink/52 uppercase">
+  <div class="text-[.72rem] tracking-[.1em] text-ink/64 uppercase">
     <span class="text-ink" data-tina-field={tinaField(post, "category")}>
       {post.category}
     </span>{" "}
@@ -52,7 +52,7 @@ function postHref(p: { _sys: { filename: string } }): string {
   </h1>
   {
     post.subtitle && (
-      <p class="mb-8 max-w-[640px] text-lg text-ink/55" data-tina-field={tinaField(post, "subtitle")}>
+      <p class="mb-8 max-w-[640px] text-lg text-ink/64" data-tina-field={tinaField(post, "subtitle")}>
         {post.subtitle}
       </p>
     )
@@ -72,7 +72,7 @@ function postHref(p: { _sys: { filename: string } }): string {
         {post.author}
       </div>
       {post.authorRole && (
-        <div class="text-[13px] text-ink/52" data-tina-field={tinaField(post, "authorRole")}>
+        <div class="text-[13px] text-ink/64" data-tina-field={tinaField(post, "authorRole")}>
           {post.authorRole}
         </div>
       )}
@@ -101,7 +101,7 @@ function postHref(p: { _sys: { filename: string } }): string {
       {post.authorAvatar && <img src={post.authorAvatar} alt={post.author} class="size-12 flex-none rounded-full object-cover" />}
       <div>
         <div class="font-display text-base text-ink">{post.author}</div>
-        <div class="text-[13px] text-ink/52">
+        <div class="text-[13px] text-ink/64">
           <span data-tina-field={tinaField(post, "authorRole")}>{post.authorRole}</span>
           {blogSection.authorSuffix && <span data-tina-field={tinaField(blogSection, "authorSuffix")}>{" "}{blogSection.authorSuffix}</span>}
         </div>
@@ -112,7 +112,7 @@ function postHref(p: { _sys: { filename: string } }): string {
   {
     related.length > 0 && (
       <div class="mt-[4.5rem]">
-        <h3 class="mb-7 text-[22px]" data-tina-field={tinaField(blogSection, "relatedHeading")}>{blogSection.relatedHeading}</h3>
+        <h2 class="mb-7 text-[22px]" data-tina-field={tinaField(blogSection, "relatedHeading")}>{blogSection.relatedHeading}</h2>
         <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(260px,1fr))]">
           {related.map((p) => (
             <a href={postHref(p)} class="block">
@@ -121,10 +121,10 @@ function postHref(p: { _sys: { filename: string } }): string {
                   <img src={p.coverImage} alt={p.coverImageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
                 )}
               </div>
-              <div class="mt-4 text-xs text-ink/52">
+              <div class="mt-4 text-xs text-ink/64">
                 {p.author} · {formatDate(p.date)}
               </div>
-              <h4 class="mt-2 text-lg">{p.title}</h4>
+              <h3 class="mt-2 text-lg">{p.title}</h3>
             </a>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { localeRouter, textarea } from "../shared/fields";
+import { localeRouter, seoField, textarea } from "../shared/fields";
 
 /**
  * `/<locale>/passionate-sea-people/` — the page that shows every crew member
@@ -42,6 +42,7 @@ const crewPage: Collection = {
       description: "Shown under the hero. A blank line starts a new paragraph.",
     },
     { type: "string", name: "gridTitle", label: "Title above the crew grid", description: 'e.g. "Meet our people".' },
+    seoField(),
   ],
 };
 

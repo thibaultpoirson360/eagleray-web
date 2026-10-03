@@ -242,6 +242,33 @@ check the PR, in increasing order of how much they let a reviewer actually do:
 A normal PR merge, by a human, once the reviewer is satisfied — same as any
 other change to `main`. No special-casing.
 
+## Translation memory (approved wording that DeepL must not overwrite)
+
+`scripts/translation-memory.json` maps an **exact English string** to its
+**approved Spanish / French text**: `{ "es": { "<English>": "<Español>" }, "fr": { … } }`.
+The translate script consults it before calling DeepL — a string found there
+is used as-is and never sent — so a native reviewer's corrections and the
+original site's human-written copy survive every redraft (a redraft replaces
+a whole file, so without this, any hand-corrected text would be lost the next
+time the English changes).
+
+* **Where it came from:** `node --experimental-strip-types scripts/build-translation-memory.mjs`
+  matched the English strings still on the site against the original,
+  human-written dictionary (`lib/i18n.js`) and kept the ones that are the
+  same sentence — about 110 strings per language, including the funnel, the
+  WhatsApp message labels, the footer, the home page's search/share text and
+  the depth-gauge labels. Re-running it only ever *adds* entries; it never
+  overwrites one.
+* **To fix a translation for good:** correct it in the editor, then add the
+  pair to the memory file (exact English on the left). Do it in the same pull
+  request as the correction.
+* **To apply the memory to the files that already exist** (no DeepL call, no
+  key needed): `node --experimental-strip-types scripts/translate-content.mjs --apply-memory`.
+  Files whose structure differs from the English are left alone and reported.
+* A string that appears in the memory but whose English wording was later
+  changed is simply no longer matched, so it goes back to DeepL — which is
+  correct: the reviewed text no longer describes the new English.
+
 ## 6. Going live — enabling a language
 
 Whether a language is *published* is separate from whether its content

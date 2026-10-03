@@ -246,6 +246,8 @@ is not a person. Other sources of truth: Vercel function logs per request.
 
 ## 5. Schema
 
+> **`seo`** — `hero`, `contactPage`, `crewPage`, `blogSection` and `landingPage` each carry an optional `seo{title, description, ogTitle, ogDescription}` object (`seoField()` in `tina/shared/fields.ts`): how the page appears in Google and in WhatsApp/Facebook/LinkedIn previews. Empty falls back to the page's own title and lead text. Blog posts use their excerpt. `/sitemap.xml` and `/robots.txt` are generated at build time (`src/pages/sitemap.xml.ts`, `robots.txt.ts`).
+
 Only the homepage scope is modelled (CLAUDE.md). All field names are English; funnel
 fields use the rename table. Layout: `content/<collection>/<locale>/<slug>.json` for item
 collections, `content/<collection>/<locale>.json` for one-doc-per-locale sections (e.g.
@@ -255,7 +257,7 @@ is always the locale, which `ui.router` uses to open the right page in the edito
 
 | Collection | Path | Fields (top level) |
 |---|---|---|
-| `hero` | `content/hero/<loc>.json` | metaLine, title, subtitle, primaryCta{label,href}, secondaryCta{label,href}, background{videoSrc, image, imageAlt}, scrollCueLabel |
+| `hero` | `content/hero/<loc>.json` | metaLine, title, subtitle, primaryCta{label,href}, secondaryCta{label,href}, background{videoSrc, image, imageAlt}, scrollCueLabel, seo{title, description, ogTitle, ogDescription} (the HOME page's Google/share text) |
 | `difference` | `content/difference/<loc>.json` | depth{meters,name}, kickerNumber, kicker, title, titleEmphasis, lede, comparison{usTitle, usPoints[], axisLabel, themTitle, themPoints[]}, founderQuote{kicker, quote, cite} |
 | `crewSection` | `content/crewSection/<loc>.json` | depth, kickerNumber, kicker, title, titleEmphasis, intro, rolesIntro, cta, dotsLabel, and the crew cards' labels (meetLabel, closeLabel, yearsLabel, yearLabel, readMoreLabel, historyLabel, whyLabel) |
 | `crew` | `content/crew/<loc>/<slug>.json` | name, roles[] (tags), skills[] (tags), languages[]{language, level, flag}, certificates[] (tags), yearsOfExperience, quote, about, history, why, image, imageAlt, joiningTag, order. One complete record; the home slider shows a summary card (photo, quote, name, first role, "Meet …" button opening the complete card in a modal) and `/<loc>/passionate-sea-people/` shows the complete cards in a grid |

@@ -51,7 +51,7 @@ const { cta } = boatsSection;
 >
   <div class="section-head mb-section-head">
     <p
-      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase"
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
       data-reveal
     >
       {
@@ -81,10 +81,14 @@ const { cta } = boatsSection;
   <div
     class="boats-grid -mx-pad mt-[3.4rem] flex snap-x snap-mandatory gap-8 overflow-x-auto px-pad pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     data-boats-slider
+    tabindex="0"
+    role="group"
+    aria-label={boatsSection.title}
   >
     {
       boats.map((boat) => (
         <article
+          id={boat._sys.filename}
           class="boat-card has-tilt reveal w-[min(100vw,550px)] flex-none snap-start rounded-lg border border-ink/14 bg-surface p-[1.8rem] transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
         >
           <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] aspect-[4/5] overflow-hidden rounded-t-lg bg-white">

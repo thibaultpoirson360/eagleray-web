@@ -103,7 +103,11 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
 
   {
     about.length > 0 && (
-      <div class="crew-full-text max-h-[14rem] min-h-[7rem] flex-1 overflow-y-auto border-t border-ink/8 px-6 pt-5 pb-8 text-[.94rem] leading-[1.7] text-ink/80 [mask-image:linear-gradient(to_bottom,#000_calc(100%-1.75rem),transparent)]">
+      <div
+        tabindex="0"
+        role="group"
+        aria-label={member.name}
+        class="crew-full-text max-h-[14rem] min-h-[7rem] flex-1 overflow-y-auto border-t border-ink/8 px-6 pt-5 pb-8 text-[.94rem] leading-[1.7] text-ink/80 [mask-image:linear-gradient(to_bottom,#000_calc(100%-1.75rem),transparent)] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ink">
         <div class="space-y-3" data-tina-field={tinaField(member, "about")}>
           {about.map((p) => (
             <p>{p}</p>
@@ -118,7 +122,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
               {history.length > 0 && (
                 <div data-tina-field={tinaField(member, "history")}>
                   {labels.historyLabel && (
-                    <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/52 uppercase">{labels.historyLabel}</h4>
+                    <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/64 uppercase">{labels.historyLabel}</h4>
                   )}
                   <div class="space-y-3">
                     {history.map((p) => (
@@ -130,7 +134,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
               {why.length > 0 && (
                 <div data-tina-field={tinaField(member, "why")}>
                   {labels.whyLabel && (
-                    <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/52 uppercase">{labels.whyLabel}</h4>
+                    <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/64 uppercase">{labels.whyLabel}</h4>
                   )}
                   <div class="space-y-3">
                     {why.map((p) => (
@@ -165,7 +169,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
                 <li>
                   {l.flag && <span aria-hidden="true">{l.flag} </span>}
                   {l.language}
-                  {l.level && <span class="text-ink/52"> ({l.level})</span>}
+                  {l.level && <span class="text-ink/64"> ({l.level})</span>}
                 </li>
               ))}
             </ul>
@@ -178,7 +182,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
         )}
         {years != null && (
           <p
-            class:list={["border-t border-ink/14 pt-3 text-[.78rem] text-ink/52", (skills.length > 0 || languages.length > 0 || certificates.length > 0) && "mt-4"]}
+            class:list={["border-t border-ink/14 pt-3 text-[.78rem] text-ink/64", (skills.length > 0 || languages.length > 0 || certificates.length > 0) && "mt-4"]}
             data-tina-field={tinaField(member, "yearsOfExperience")}
           >
             {yearsText(years, labels)}

@@ -2,11 +2,11 @@
   "name": "Javier",
   "roles": [
     "Capitaine",
-    "Chef d'expédition"
+    "Leader d'expédition"
   ],
-  "about": "Avec Javier, l'océan semble encore plus vaste. Titulaire du brevet Yacht Master 200GT, moniteur de plongée PADI, moniteur de kitesurf IKO, guide de plongée en apnée et de chasse sous-marine, et pilote de drone : il peut barrer le bateau, vous faire découvrir le monde sous-marin, trouver le vent et filmer tout cela. Son véritable atout, c’est sa confiance en soi : les clients ne se contentent plus d’observer l’aventure, ils commencent à se demander quelle sera la prochaine étape.",
+  "about": "Javier agrandit encore l'océan. Yacht Master 200GT, instructeur PADI et IKO, guide d'apnée et de chasse sous-marine, et pilote de drone — il peut mener le bateau, ouvrir le monde sous-marin, trouver le vent et tout filmer. Son vrai talent est de donner confiance : les invités cessent de regarder l'aventure et demandent ce qui vient ensuite.",
   "image": "/assets/img/crew-javier.webp",
   "imageAlt": "Javier Sánchez Darder, capitaine et cinéaste",
-  "joiningTag": "Entrée en fonction au quatrième trimestre 2026",
+  "joiningTag": "Rejoignent l'équipe au Q4 2026",
   "order": 10
 }

@@ -38,8 +38,14 @@ const {
   "data-tina-field": tinaField,
 } = Astro.props;
 
+// One deliberate deviation from CLAUDE.md's locked base mapping: below `sm`
+// the label may wrap (`whitespace-normal text-center`) instead of being
+// `whitespace-nowrap` at every width. Spanish and French labels run long
+// ("Te presentamos a nuestra gente apasionada por el mar" is 426px), and a
+// button that can't wrap stretches the whole page wider than a phone.
+// From `sm` up it is nowrap exactly as specified.
 const base =
-  "inline-flex items-center justify-center gap-2 rounded font-medium whitespace-nowrap border border-transparent transition duration-500 ease-soft disabled:opacity-35 disabled:pointer-events-none";
+  "inline-flex items-center justify-center gap-2 rounded font-medium whitespace-normal text-center sm:whitespace-nowrap border border-transparent transition duration-500 ease-soft disabled:opacity-35 disabled:pointer-events-none";
 
 const sizeClasses = {
   default: "px-7 py-4 text-sm",

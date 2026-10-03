@@ -52,7 +52,7 @@ const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
 >
   <div class="section-head mb-section-head">
     <p
-      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase"
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
       data-reveal
     >
       {
@@ -92,7 +92,7 @@ const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
 
   {
     gallery && gallery.length > 0 && (
-      <div class="wildlife-gallery scrollbar-none -mx-pad flex snap-x snap-mandatory gap-4 overflow-x-auto px-pad [-webkit-overflow-scrolling:touch] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden">
+      <div tabindex="0" role="group" aria-label={wildlife.title} class="wildlife-gallery scrollbar-none -mx-pad flex snap-x snap-mandatory gap-4 overflow-x-auto px-pad [-webkit-overflow-scrolling:touch] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden">
         {gallery.map(
           (item, i) =>
             item &&
@@ -111,7 +111,7 @@ const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
   }
 
   {
-    cta && (
+    cta && cta.href && cta.href !== "#" && (
       <p class="mt-10 text-center" data-reveal>
         <Button href={cta.href} variant="primary" context="default" data-tina-field={tinaField(wildlife, "cta")}>
           {cta.label}

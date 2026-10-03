@@ -6,6 +6,10 @@
  * adding a document there adds a page. Static routes (contact,
  * passionate-sea-people, blog/, landing/) take priority over this one, so a
  * page that gets its own template wins automatically.
+ *
+ * These are title-only stand-ins, so they are `noindex` (and left out of the
+ * sitemap): a page with nothing on it must not compete for search results.
+ * A real page replacing one is built with its own route and is indexable.
  */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TinaIsland from "@tinacms/astro/TinaIsland.astro";
@@ -29,7 +33,7 @@ const result = await loadNavPage(locale, slug);
 const navPage = result.data.navPages;
 ---
 
-<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={false}>
+<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={false} noindex>
   <main id="main">
     <TinaIsland name="navPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
       <NavPageView navPage={navPage} />

@@ -2,9 +2,9 @@
   "name": "Lou",
   "roles": [
     "Capitaine",
-    "Chef d'expédition"
+    "Leader d'expédition"
   ],
-  "about": "Lou est capitaine, spécialiste du kitesurf et apnéiste ; elle s'est installée à Baja. Elle ne s'impose pas à bord d'un bateau ; elle en transforme l'ambiance. Les épaules se détendent, la respiration ralentit et les débutants nerveux commencent à se sentir à leur place. Lou sait lire la mer et les gens avec le même instinct sûr, sachant quand insuffler de l'énergie et quand laisser de l'espace.",
+  "about": "Lou est capitaine, spécialiste du kite et apnéiste ; elle a fait de la Baja sa maison. Elle ne prend pas le contrôle de l'atmosphère d'un bateau : elle la transforme. Les épaules se détendent, le souffle ralentit et les novices trouvent leur place. Lou lit la mer et les gens avec le même instinct, sachant quand apporter de l'énergie ou laisser de l'espace.",
   "image": "/assets/img/crew-lou.jpeg",
   "imageAlt": "Lou, capitaine et chef d'expédition",
   "order": 9

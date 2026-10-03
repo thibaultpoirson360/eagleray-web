@@ -35,7 +35,13 @@ export const boats: Collection = {
   path: "content/boats",
   format: "json",
   ui: {
-    router: localeRouter("#boats"),
+    // Same fix as crew.ts: all 3 boats used to share the one `/<locale>/#boats`
+    // URL, which is ambiguous to TinaCMS's admin. Each boat now has its own
+    // id on its card (Boats.astro) and its own URL.
+    router: ({ document }) => {
+      const [locale, slug] = document._sys.breadcrumbs;
+      return `/${locale}/#${slug}`;
+    },
     filename: { slugify: (values) => (values?.name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-") },
   },
   fields: [

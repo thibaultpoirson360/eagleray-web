@@ -1,7 +1,7 @@
 {
   "name": "Mohamed “Adly”",
   "roles": [
-    "Chef d'expédition"
+    "Leader d'expédition"
   ],
   "skills": [
     "Plongée",
@@ -34,8 +34,8 @@
   ],
   "yearsOfExperience": 5,
   "quote": "Je suis peut-être la raison pour laquelle quelqu'un tombe amoureux de l'océan.",
-  "about": "Thibault a rencontré Adly alors qu'il apprenait le kitesurf à La Ventana, le légendaire paradis du vent au Mexique. Originaire d'Égypte, Adly l'a rapidement invité à lui rendre la pareille en mer Rouge. Ingénieur de formation, il est aujourd’hui moniteur de kitesurf certifié IKO et moniteur de plongée PADI, avec plus de 1 500 plongées à son actif, plus de 80 élèves formés et une expérience en tant que membre d’équipage sur quatre continents. Adly sait décrypter le vent, les courants et l'énergie du groupe d'un seul coup d'œil. Il sait quand insister pour faire une plongée de plus — et quand le simple fait de ne rien faire au mouillage est exactement l'aventure dont tout le monde a besoin.",
+  "about": "Thibault a rencontré Adly en apprenant le kite à La Ventana, terrain de jeu légendaire du vent au Mexique. Originaire d'Égypte, Adly l'a bientôt invité à lui rendre la pareille sur la mer Rouge. Ingénieur de formation, il est aujourd'hui instructeur IKO et PADI, avec plus de 1 500 plongées, plus de 80 élèves et une expérience d'équipage sur quatre continents. Adly lit le vent, le courant et l'énergie du groupe d'un même regard. Il sait quand pousser pour une plongée de plus — et quand ne rien faire au mouillage est exactement l'aventure dont tout le monde a besoin.",
   "image": "/assets/img/crew-adly.webp",
-  "imageAlt": "Adly, chef d'expédition",
+  "imageAlt": "— Adly, Chef d'expédition",
   "order": 4
 }

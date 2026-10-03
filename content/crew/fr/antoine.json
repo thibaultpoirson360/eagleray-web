@@ -1,9 +1,9 @@
 {
   "name": "Antoine",
   "roles": [
-    "Gold Chef"
+    "Chef Gold"
   ],
-  "about": "Antoine a passé plus de 15 ans à cuisiner à bord de bateaux et de super-yachts, notamment en tant que chef privé pour des cadres supérieurs. Il connaît les normes rigoureuses, les cuisines exiguës et les appétits des marins. Son talent réside dans des techniques de restauration adaptées à la vie en mer : précises sans être guindées, généreuses sans être tape-à-l’œil, et servies au moment où tout l’équipage est prêt à en garder un souvenir inoubliable.",
+  "about": "Antoine cuisine depuis plus de quinze ans à bord de bateaux et de superyachts, notamment comme chef privé pour de grands dirigeants. Il connaît les standards exigeants, les cuisines minuscules et l'appétit creusé par la mer. Sa magie : une technique gastronomique faite pour le large, précise sans raideur et généreuse sans spectacle.",
   "image": "/assets/img/crew-antoine.webp",
   "imageAlt": "Antoine, Gold Chef",
   "order": 5

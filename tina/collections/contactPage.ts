@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { textarea } from "../shared/fields";
+import { seoField, textarea } from "../shared/fields";
 
 /**
  * `/en/contact` — the "Talk with us" page. Built from a wireframe, not
@@ -68,6 +68,7 @@ const contactPage: Collection = {
         { type: "string", name: "description", label: "Description", ui: textarea },
       ],
     },
+    seoField(),
   ],
 };
 

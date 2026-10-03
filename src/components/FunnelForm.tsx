@@ -225,7 +225,8 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
       if (!raw) return;
       const draft = JSON.parse(raw);
       if (!draft?.values) return;
-      setValues((v) => ({ ...v, ...draft.values }));
+      valuesRef.current = { ...valuesRef.current, ...draft.values };
+      setValues(valuesRef.current);
       if (typeof draft.step === "number") setStep(clamp(draft.step, 0, TOTAL_STEPS - 1));
       flashAutosave(ui?.autosaveRestored || "");
     } catch {
@@ -237,6 +238,12 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
   /* ---------- field updates ---------- */
   function updateField(name: keyof Values, value: string) {
     const next = { ...valuesRef.current, [name]: value };
+    // Update the ref NOW, not in the effect after the re-render. Browser
+    // autofill / password managers fill several fields in one task; each
+    // input event builds `next` from this ref, so if it were only refreshed
+    // after the render, every field but the last would be overwritten with
+    // the stale copy (name + email wiped, only the phone survived).
+    valuesRef.current = next;
     setValues(next);
     if (name === "fullName" || name === "email") validate(name, next);
     saveDraft(step, next);
@@ -286,7 +293,13 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
         _status: "partial : tab closed after entering email",
       };
       try {
-        navigator.sendBeacon(leadEndpoint, new Blob([JSON.stringify(payload)], { type: "application/json" }));
+        // Form-encoded, NOT a JSON Blob: a JSON body makes the browser send a
+        // CORS preflight first, and a beacon is sent "with credentials", so
+        // Chrome drops it whenever the server answers the preflight with
+        // `Access-Control-Allow-Origin: *`. A form-encoded body is a "simple"
+        // request — no preflight — and Formspree accepts it. (The blur-path
+        // fetch above is unaffected and keeps its JSON body.)
+        navigator.sendBeacon(leadEndpoint, new URLSearchParams(payload));
       } catch {
         partialSentRef.current = false;
       }
@@ -404,7 +417,7 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
           style={{ width: `${((step + 1) / TOTAL_STEPS) * 100}%` }}
         />
       </div>
-      <p class="funnel-count mb-[1.8rem] font-mono text-[.76rem] tracking-widest text-ink/52 uppercase">
+      <p class="funnel-count mb-[1.8rem] font-mono text-[.76rem] tracking-widest text-ink/64 uppercase">
         <span>{(ui?.stepCounter || "Step {n} of {total}").replace("{n}", String(step + 1)).replace("{total}", String(TOTAL_STEPS))}</span>{" "}
         {autosave.revealed && (
           <span
@@ -424,17 +437,17 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
           {step1.legend}
         </legend>
 
-        <p class="funnel-q mt-0 mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+        <p class="funnel-q mt-0 mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
           {step1.tripDuration?.question}
         </p>
         {radioGroup("tripDuration", step1.tripDuration)}
 
-        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
           {step1.travelingAs?.question}
         </p>
         {radioGroup("travelingAs", step1.travelingAs)}
 
-        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
           {step1.guestCount?.question}
         </p>
         <div class="stepper flex items-center gap-4">
@@ -465,7 +478,7 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
             +
           </button>
         </div>
-        {step1.guestCount?.hint && <p class="fhint mt-[1.1rem] text-[.86rem] text-ink/52">{step1.guestCount.hint}</p>}
+        {step1.guestCount?.hint && <p class="fhint mt-[1.1rem] text-[.86rem] text-ink/64">{step1.guestCount.hint}</p>}
       </fieldset>
 
       <fieldset class={"fstep border-0 p-0 " + (step === 1 ? "is-active" : "")} data-step="2">
@@ -474,12 +487,12 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
           {step2.legend}
         </legend>
 
-        <p class="funnel-q mt-0 mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+        <p class="funnel-q mt-0 mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
           {step2.routeFocus?.question}
         </p>
         {radioGroup("routeFocus", step2.routeFocus)}
 
-        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+        <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
           {step2.topPriority?.question}
         </p>
         {radioGroup("topPriority", step2.topPriority)}
@@ -493,9 +506,9 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
 
           <div class="fields grid gap-4 sm:grid-cols-2">
             <label class="field block">
-              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step3.dateFromLabel}</span>
+              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step3.dateFromLabel}</span>
               <input
-                class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden"
+                class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden"
                 type="date"
                 name="dateFrom"
                 value={values.dateFrom}
@@ -503,9 +516,9 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
               />
             </label>
             <label class="field block">
-              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step3.dateToLabel}</span>
+              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step3.dateToLabel}</span>
               <input
-                class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden"
+                class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden"
                 type="date"
                 name="dateTo"
                 value={values.dateTo}
@@ -514,9 +527,9 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
             </label>
           </div>
           <label class="field field-full mt-4 block">
-            <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step3.flexibleDates?.label}</span>
+            <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step3.flexibleDates?.label}</span>
             <input
-              class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden"
+              class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden"
               type="text"
               name="flexibleDates"
               placeholder={step3.flexibleDates?.placeholder ?? undefined}
@@ -525,7 +538,7 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
             />
           </label>
 
-          <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">
+          <p class="funnel-q mt-[1.6rem] mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">
             {step3.boatPreference?.question}
           </p>
           {radioGroup("boatPreference", step3.boatPreference)}
@@ -539,7 +552,7 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
 
           {recapRows.length > 0 && (
             <div class="funnel-recap mb-[1.6rem] rounded border border-ink/26 bg-white p-[1.1rem_1.3rem]">
-              <p class="funnel-recap-title mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/52 uppercase">{ui?.recapTitle}</p>
+              <p class="funnel-recap-title mb-[.7rem] font-mono text-[.68rem] tracking-widest text-ink/64 uppercase">{ui?.recapTitle}</p>
               <div class="funnel-recap-row flex flex-wrap gap-2">
                 {recapRows.map((r, idx) => (
                   <span key={idx} class="funnel-recap-chip rounded-sm border border-ink/14 px-3 py-[.3rem] text-[.82rem] text-ink/74">
@@ -552,10 +565,10 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
 
           <div class="fields grid gap-4 sm:grid-cols-2">
             <label class="field block">
-              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step4.fullName?.label}</span>
+              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step4.fullName?.label}</span>
               <input
                 class={
-                  "w-full rounded border bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden " +
+                  "w-full rounded border bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden " +
                   (errors.fullName ? "border-2 border-ink" : "border-ink/26")
                 }
                 type="text"
@@ -567,10 +580,10 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
               />
             </label>
             <label class="field block">
-              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step4.email?.label}</span>
+              <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step4.email?.label}</span>
               <input
                 class={
-                  "w-full rounded border bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden " +
+                  "w-full rounded border bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden " +
                   (errors.email ? "border-2 border-ink" : "border-ink/26")
                 }
                 type="email"
@@ -587,10 +600,10 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
           {errors.email && <p class="field-error mt-2 text-[.8rem] font-semibold text-ink">{step4.email?.error}</p>}
 
           <label class="field field-full mt-4 block">
-            <span class="mb-2 inline font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step4.whatsappNumber?.label}</span>{" "}
-            <span class="field-optional text-[.78rem] text-ink/52 opacity-80">{step4.whatsappNumber?.optionalHint}</span>
+            <span class="mb-2 inline font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step4.whatsappNumber?.label}</span>{" "}
+            <span class="field-optional text-[.78rem] text-ink/64">{step4.whatsappNumber?.optionalHint}</span>
             <input
-              class="mt-2 w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden"
+              class="mt-2 w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden"
               type="tel"
               name="whatsappNumber"
               inputmode="tel"
@@ -601,9 +614,9 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
             />
           </label>
           <label class="field field-full mt-4 block">
-            <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/52 uppercase">{step4.notes?.label}</span>
+            <span class="mb-2 block font-mono text-[.62rem] tracking-[.14em] text-ink/64 uppercase">{step4.notes?.label}</span>
             <textarea
-              class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/52 focus:border-ink focus:outline-hidden"
+              class="w-full rounded border border-ink/26 bg-white px-4 py-[.9rem] text-[.95rem] text-ink transition-colors duration-500 ease-out placeholder:text-ink/64 focus:border-ink focus:outline-hidden"
               name="notes"
               rows={3}
               placeholder={step4.notes?.placeholder ?? undefined}
@@ -612,7 +625,7 @@ export default function FunnelForm({ funnel, leadEndpoint, whatsappNumber }: Pro
             />
           </label>
 
-        {step4.privacy && <p class="funnel-privacy mt-[1.4rem] text-[.8rem] text-ink/52">{step4.privacy}</p>}
+        {step4.privacy && <p class="funnel-privacy mt-[1.4rem] text-[.8rem] text-ink/64">{step4.privacy}</p>}
       </fieldset>
 
       <div class="funnel-nav mt-[2.2rem] flex justify-between gap-4 border-t border-ink/8 pt-[1.6rem]">
