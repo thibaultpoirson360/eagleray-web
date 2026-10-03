@@ -20,6 +20,7 @@ import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
 import notFoundPage from "./collections/notFoundPage";
+import laPage from "./collections/laPage";
 import { blogSection, blogPost } from "./collections/blog";
 import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
@@ -85,6 +86,7 @@ export default defineConfig({
       footer,
       contactPage,
       notFoundPage,
+      laPage,
       crewPage,
       blogSection,
       blogPost,

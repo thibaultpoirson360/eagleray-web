@@ -1,0 +1,108 @@
+{
+  "title": "La Paz, the aquarium of the world",
+  "metaLine": "24°12′37.6″ N · LA PAZ · B.C.S.",
+  "lede": "Jacques Cousteau's name for the Sea of Cortez. A narrow gulf that concentrates what other oceans spread across thousands of miles — cold upwellings, deserted islands, and a density of marine life that still surprises people who've sailed it for years. Every Eagle Ray expedition departs from here.",
+  "heroImage": "/assets/img/la-paz/hero-sea-lion-beach.webp",
+  "heroImageAlt": "Sea lion resting near Los Islotes, La Paz",
+  "facts": [
+    {
+      "label": "Departure",
+      "value": "Marina de La Paz"
+    },
+    {
+      "label": "Working waters",
+      "value": "La Paz · Espíritu Santo · Cerralvo"
+    },
+    {
+      "label": "Protection",
+      "value": "UNESCO World Heritage site"
+    },
+    {
+      "label": "Wildlife",
+      "value": "Something in season, year-round"
+    }
+  ],
+  "wildlifeKicker": "Wildlife",
+  "wildlifeTitle": "Six encounters, one bay",
+  "wildlifeIntro": "Sightings are never guaranteed — these are wild animals in open water. What we can offer is the season, the place, and the odds.",
+  "species": [
+    {
+      "name": "Whale sharks",
+      "season": "Oct — Apr",
+      "place": "Bahía de La Paz",
+      "note": "Juveniles feeding right in the bay. You snorkel alongside them, no scuba gear needed.",
+      "image": "/assets/img/la-paz/whale-shark.webp",
+      "imageAlt": "Whale shark feeding near the surface"
+    },
+    {
+      "name": "Mobula rays",
+      "season": "May — Jul",
+      "place": "Offshore channels",
+      "note": "Schools of hundreds leaping clear of the water. You hear them before you see them.",
+      "image": "/assets/img/la-paz/mobula-ray.webp",
+      "imageAlt": "Mobula rays leaping from the water"
+    },
+    {
+      "name": "Sea lions — Los Islotes",
+      "season": "Year-round",
+      "place": "Los Islotes colony",
+      "note": "A permanent colony. The juveniles dive with you, not the other way around.",
+      "image": "/assets/img/la-paz/sea-lions.webp",
+      "imageAlt": "Sea lions at Los Islotes"
+    },
+    {
+      "name": "Dolphins",
+      "season": "Year-round",
+      "place": "Channel crossings",
+      "note": "They show up at the bow while under sail. We don't look for them — they find us.",
+      "image": "/assets/img/la-paz/dolphins.webp",
+      "imageAlt": "Dolphins riding the bow wave"
+    },
+    {
+      "name": "Manta rays",
+      "season": "May — Sep",
+      "place": "Reef pinnacles",
+      "note": "Over reef pinnacles and sandy bottoms, usually during the morning dive.",
+      "image": "/assets/img/la-paz/manta-ray.webp",
+      "imageAlt": "Manta ray over the reef"
+    },
+    {
+      "name": "Humpback whales",
+      "season": "Jan — Mar",
+      "place": "Open gulf",
+      "note": "Seasonal migration, observed from the boat at the distance regulation requires.",
+      "image": "/assets/img/la-paz/humpback-whale.webp",
+      "imageAlt": "Humpback whale at the surface"
+    }
+  ],
+  "wildlifeFootnote": "Espíritu Santo is a protected national park and part of the UNESCO World Heritage Site \"Islands and Protected Areas of the Gulf of California.\" We anchor only at authorized buoys, and sightings follow the distances and timing set by regulation.",
+  "destinationsKicker": "Where we go",
+  "destinationsTitle": "Three places, all reachable in a day",
+  "destinations": [
+    {
+      "name": "Espíritu Santo",
+      "description": "A protected island national park ten miles out. Home to the Los Islotes sea lion colony and mangrove channels we kayak at low tide.",
+      "image": "/assets/img/la-paz/espiritu-santo.webp",
+      "imageAlt": "Mangrove channel at Espíritu Santo"
+    },
+    {
+      "name": "Balandra",
+      "description": "One of the most photographed bays on the gulf. Shallow turquoise water and easy reef snorkeling, usually empty by early evening.",
+      "image": "/assets/img/la-paz/balandra.webp",
+      "imageAlt": "Playa Balandra, La Paz"
+    },
+    {
+      "name": "La Ventana",
+      "description": "An hour from La Paz, on the other side of the peninsula. The same north wind that keeps the bay flat turns into one of Baja's most reliable kite spots.",
+      "image": "/assets/img/la-paz/la-ventana.webp",
+      "imageAlt": "Kitesurfing at La Ventana"
+    }
+  ],
+  "ctaTitle": "La Paz is where every Eagle Ray expedition begins.",
+  "ctaLabel": "Customize your expedition",
+  "ctaHref": "/en/#customize",
+  "seo": {
+    "title": "La Paz, the aquarium of the world — Eagle Ray Expeditions",
+    "description": "Sailing out of La Paz, Baja California Sur: whale sharks, sea lions at Los Islotes, Espíritu Santo, Balandra and La Ventana."
+  }
+}

@@ -202,3 +202,8 @@ export function loadLandingPage(locale: Locale, slug: string, options?: RequestO
     options
   );
 }
+
+/** The La Paz page (content/laPage/<locale>.json). */
+export function loadLaPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.laPage({ relativePath: `${locale}.json` }), options);
+}
