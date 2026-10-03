@@ -1,0 +1,31 @@
+---
+/**
+ * `/en/about-us/` — the Our story page, from the Claude Design mockup.
+ * English only until its Spanish and French versions are drafted from
+ * content/aboutPage/en.json by the translation workflow.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AboutPageView from "../../../components/AboutPageView.astro";
+import { loadAboutPage } from "../../../lib/content";
+
+export function getStaticPaths() {
+  return [{ params: { locale: "en" } }];
+}
+
+const aboutPage = (await loadAboutPage("en")).data.aboutPage;
+const title = aboutPage.seo?.title ?? `${aboutPage.title} — Eagle Ray Expeditions`;
+---
+
+<BaseLayout
+  title={title}
+  description={aboutPage.seo?.description ?? aboutPage.lede ?? undefined}
+  ogTitle={aboutPage.seo?.ogTitle ?? undefined}
+  ogDescription={aboutPage.seo?.ogDescription ?? undefined}
+  locale="en"
+  path="about-us/"
+  transparentNav={true}
+>
+  <main id="main">
+    <AboutPageView aboutPage={aboutPage} />
+  </main>
+</BaseLayout>

@@ -207,3 +207,8 @@ export function loadLandingPage(locale: Locale, slug: string, options?: RequestO
 export function loadLaPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.laPage({ relativePath: `${locale}.json` }), options);
 }
+
+/** The About Us ("Our story") page (content/aboutPage/<locale>.json). */
+export function loadAboutPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.aboutPage({ relativePath: `${locale}.json` }), options);
+}
