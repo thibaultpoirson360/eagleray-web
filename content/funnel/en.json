@@ -1,5 +1,8 @@
 {
-  "depth": { "meters": 130, "name": "Charting your route" },
+  "depth": {
+    "meters": 130,
+    "name": "Charting your route"
+  },
   "kickerNumber": "09",
   "kicker": "Build your expedition",
   "title": "Customize your first",
@@ -11,19 +14,43 @@
     "tripDuration": {
       "question": "How many days are you thinking?",
       "options": [
-        { "label": "3 – 4 days", "value": "3–4 days" },
-        { "label": "5 – 6 days", "value": "5–6 days" },
-        { "label": "7 – 8 days", "value": "7–8 days" },
-        { "label": "10 or more", "value": "10 days or more" }
+        {
+          "label": "3 – 4 days",
+          "value": "3–4 days"
+        },
+        {
+          "label": "5 – 6 days",
+          "value": "5–6 days"
+        },
+        {
+          "label": "7 – 8 days",
+          "value": "7–8 days"
+        },
+        {
+          "label": "10 or more",
+          "value": "10 days or more"
+        }
       ]
     },
     "travelingAs": {
       "question": "Who's this expedition for?",
       "options": [
-        { "label": "Family", "value": "Family" },
-        { "label": "Couple", "value": "Couple" },
-        { "label": "Friends group", "value": "Friends group" },
-        { "label": "Corporate / team", "value": "Corporate / team" }
+        {
+          "label": "Family",
+          "value": "Family"
+        },
+        {
+          "label": "Couple",
+          "value": "Couple"
+        },
+        {
+          "label": "Friends group",
+          "value": "Friends group"
+        },
+        {
+          "label": "Corporate / team",
+          "value": "Corporate / team"
+        }
       ]
     },
     "guestCount": {
@@ -41,19 +68,43 @@
     "routeFocus": {
       "question": "Which focus calls to you most?",
       "options": [
-        { "label": "Espíritu Santo — wildlife", "value": "Espíritu Santo — wildlife" },
-        { "label": "La Ventana — kite & wingfoil", "value": "La Ventana — kite & wingfoil" },
-        { "label": "Balandra — reef & paddle", "value": "Balandra — reef & paddle" },
-        { "label": "Not sure yet", "value": "Not sure yet" }
+        {
+          "label": "Espíritu Santo — wildlife",
+          "value": "Espíritu Santo — wildlife"
+        },
+        {
+          "label": "La Ventana — kite & wingfoil",
+          "value": "La Ventana — kite & wingfoil"
+        },
+        {
+          "label": "Balandra — reef & paddle",
+          "value": "Balandra — reef & paddle"
+        },
+        {
+          "label": "Not sure yet",
+          "value": "Not sure yet"
+        }
       ]
     },
     "topPriority": {
       "question": "If you could ask for just one thing?",
       "options": [
-        { "label": "Wildlife & snorkeling", "value": "Wildlife & snorkeling" },
-        { "label": "Kite & wingfoil", "value": "Kite & wingfoil" },
-        { "label": "Slow pace & relaxation", "value": "Slow pace & relaxation" },
-        { "label": "A bit of everything", "value": "A bit of everything" }
+        {
+          "label": "Wildlife & snorkeling",
+          "value": "Wildlife & snorkeling"
+        },
+        {
+          "label": "Kite & wingfoil",
+          "value": "Kite & wingfoil"
+        },
+        {
+          "label": "Slow pace & relaxation",
+          "value": "Slow pace & relaxation"
+        },
+        {
+          "label": "A bit of everything",
+          "value": "A bit of everything"
+        }
       ]
     }
   },
@@ -68,16 +119,33 @@
     "boatPreference": {
       "question": "Any boat preference?",
       "options": [
-        { "label": "Bali 4.4", "value": "Bali 4.4" },
-        { "label": "Fountaine Pajot Astrea 42", "value": "Fountaine Pajot Astrea 42" },
-        { "label": "No preference", "value": "No preference" }
+        {
+          "label": "Bali 4.4",
+          "value": "Bali 4.4"
+        },
+        {
+          "label": "Fountaine Pajot Astrea 42",
+          "value": "Fountaine Pajot Astrea 42"
+        },
+        {
+          "label": "No preference",
+          "value": "No preference"
+        }
       ]
     }
   },
   "step4": {
     "legend": "Who does Thibault talk to?",
-    "fullName": { "label": "Name", "placeholder": "First name", "error": "Please tell us your name." },
-    "email": { "label": "Email", "placeholder": "you@email.com", "error": "Please enter a valid email." },
+    "fullName": {
+      "label": "Name",
+      "placeholder": "First name",
+      "error": "Please tell us your name."
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "you@email.com",
+      "error": "Please enter a valid email."
+    },
     "whatsappNumber": {
       "label": "WhatsApp number",
       "placeholder": "+52 55 0000 0000",
