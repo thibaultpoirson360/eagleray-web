@@ -2,8 +2,14 @@
   "metaLine": "24°12′37.6″ N · LA PAZ · B.C.S.",
   "title": "Ocean Adventures led by passionate Sea people",
   "subtitle": "Small groups. Real crew. Private catamaran. No fixed schedule.",
-  "primaryCta": { "label": "Customize your expedition", "href": "#customize" },
-  "secondaryCta": { "label": "What makes us unique", "href": "#difference" },
+  "primaryCta": {
+    "label": "Customize your expedition",
+    "href": "#customize"
+  },
+  "secondaryCta": {
+    "label": "What makes us unique",
+    "href": "#difference"
+  },
   "background": {
     "videoSrc": "/assets/video/hero-loop.mp4",
     "image": "/assets/img/hero-premium.webp",
