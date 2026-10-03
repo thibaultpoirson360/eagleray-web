@@ -20,12 +20,15 @@ import LandingImageGallery from "./LandingImageGallery.astro";
 import LandingCta from "./LandingCta.astro";
 import LandingMoguProposal from "./LandingMoguProposal.astro";
 import type { LandingPageBlocksParent } from "./blockTypes";
+import type { Locale } from "../../i18n/config";
 
 interface Props {
   landingPage: LandingPageBlocksParent;
+  /** Needed so a block's `#customize` link can point at that language's homepage. */
+  locale: Locale;
 }
 
-const { landingPage } = Astro.props;
+const { landingPage, locale } = Astro.props;
 ---
 
 {
@@ -34,16 +37,16 @@ const { landingPage } = Astro.props;
       block && (
         <>
           {block.__typename === "LandingPageBlocksHero" && (
-            <LandingHero block={block} landingPage={landingPage} index={index} />
+            <LandingHero block={block} landingPage={landingPage} index={index} locale={locale} />
           )}
           {block.__typename === "LandingPageBlocksRichText" && (
             <LandingRichText block={block} landingPage={landingPage} index={index} />
           )}
           {block.__typename === "LandingPageBlocksImageGallery" && (
-            <LandingImageGallery block={block} landingPage={landingPage} index={index} />
+            <LandingImageGallery block={block} landingPage={landingPage} index={index} locale={locale} />
           )}
           {block.__typename === "LandingPageBlocksCta" && (
-            <LandingCta block={block} landingPage={landingPage} index={index} />
+            <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />
           )}
           {block.__typename === "LandingPageBlocksMoguProposal" && (
             <LandingMoguProposal block={block} landingPage={landingPage} index={index} />

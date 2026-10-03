@@ -21,13 +21,24 @@ interface Props {
   height?: number;
   /** Accessible name for the iframe (screen readers). */
   title?: string;
+  /** Adds `&hideLogo=true` — hides Mogu's own logo bar inside the frame. */
+  hideLogo?: boolean;
+  /** Adds `&hideTitle=true` — hides the trip title inside the frame. */
+  hideTitle?: boolean;
 }
 
-const { tripSlug, height = 600, title = "Trip proposal" } = Astro.props;
+const { tripSlug, height = 600, title = "Trip proposal", hideLogo = false, hideTitle = false } = Astro.props;
+
+// Keep only the trip code. An editor once pasted
+// "numerous-manchester-15970?embed=true&hideLogo=true" into the slug field,
+// which built a URL with a second "?" in it. Cut at the first character that
+// can't be part of a code (a query, fragment, path, quote or space).
+const slug = tripSlug.trim().split(/[?&#/"'\s]/)[0];
+const params = ["embed=true", hideLogo && "hideLogo=true", hideTitle && "hideTitle=true"].filter(Boolean).join("&");
 ---
 
 <iframe
-  src={`https://v2.app.moguplatform.com/trips/${tripSlug}?embed=true`}
+  src={`https://v2.app.moguplatform.com/trips/${slug}?${params}`}
   height={height}
   loading="lazy"
   class="w-full border-0"

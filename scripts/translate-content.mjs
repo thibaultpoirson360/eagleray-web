@@ -26,6 +26,13 @@
  *     so the run degrades to "translate everything" rather than silently
  *     translating nothing.
  *
+ * Translation memory: scripts/translation-memory.json holds approved,
+ * human-written translations of English strings (built from the original
+ * site's dictionary by scripts/build-translation-memory.mjs, and editable by
+ * hand). Any string found there is used as-is and never sent to DeepL, so
+ * approved wording survives redrafts. `--apply-memory` applies the memory to
+ * the ES/FR files that already exist, with no DeepL call and no API key.
+ *
  * Requires `DEEPL_API_KEY` in the environment (a GitHub Actions secret in
  * CI — see docs/translation-workflow.md). Requires `node --experimental-strip-types`
  * because scripts/lib/tina-schema.mjs imports tina/collections/*.ts directly,
@@ -46,11 +53,19 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 register(pathToFileURL(path.join(path.dirname(fileURLToPath(import.meta.url)), "lib/ts-resolve-hook.mjs")).href, import.meta.url);
 
 const { loadTinaSchema } = await import("./lib/tina-schema.mjs");
-const { translateDocument } = await import("./lib/translatable-content.mjs");
+const { translateDocument, collectTranslationUnits } = await import("./lib/translatable-content.mjs");
 const { translateBatch } = await import("./lib/deepl.mjs");
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const TARGET_LOCALES = ["es", "fr"];
+
+const MEMORY_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "translation-memory.json");
+/** { es: { "<English>": "<approved>" }, fr: {...} } — empty if the file is missing. */
+function loadMemory() {
+  if (!existsSync(MEMORY_PATH)) return { es: {}, fr: {} };
+  const memory = JSON.parse(readFileSync(MEMORY_PATH, "utf8"));
+  return { es: memory.es ?? {}, fr: memory.fr ?? {} };
+}
 
 // content/<folder>/en.json  (one document per locale, e.g. hero, funnel)
 const SINGLE_DOC_RE = /^content\/([^/]+)\/en\.json$/;
@@ -154,7 +169,7 @@ function outputPathFor(folder, slug, locale) {
  * — injected so tests can pass a fake translator instead of calling DeepL.
  * Returns the list of repo-relative paths written.
  */
-export async function translateFile(entry, schema, translateFnFactory, { skipExisting = false } = {}) {
+export async function translateFile(entry, schema, translateFnFactory, { skipExisting = false, memory = { es: {}, fr: {} } } = {}) {
   const { file, folder, slug } = entry;
   const collection = schema.get(folder);
   if (!collection) {
@@ -169,7 +184,10 @@ export async function translateFile(entry, schema, translateFnFactory, { skipExi
     const outRelative = outputPathFor(folder, slug, locale);
     const outAbsolute = path.join(REPO_ROOT, outRelative);
     if (skipExisting && existsSync(outAbsolute)) continue;
-    const translated = await translateDocument(doc, collection.fields, translateFnFactory(locale), { locale });
+    const translated = await translateDocument(doc, collection.fields, translateFnFactory(locale), {
+      locale,
+      memory: memory[locale],
+    });
     mkdirSync(path.dirname(outAbsolute), { recursive: true });
     // 2-space indent + trailing newline, matching every existing content/ file.
     writeFileSync(outAbsolute, `${JSON.stringify(translated, null, 2)}\n`);
@@ -177,6 +195,47 @@ export async function translateFile(entry, schema, translateFnFactory, { skipExi
   }
 
   return written;
+}
+
+/**
+ * Applies the translation memory to the ES/FR files that already exist,
+ * in place, without calling DeepL. The English and the translated document
+ * have the same structure, so their translatable strings line up one to one;
+ * wherever the English string is in the memory, the translated string is set
+ * to the approved one. A file whose two sides don't line up is left alone and
+ * reported. Returns the repo-relative paths that changed.
+ */
+export function applyMemoryToFile(entry, schema, memory) {
+  const { file, folder, slug } = entry;
+  const collection = schema.get(folder);
+  if (!collection) return { changed: [], skipped: [] };
+  const english = collectTranslationUnits(JSON.parse(readFileSync(path.join(REPO_ROOT, file), "utf8")), collection.fields).units.map((u) => u.get());
+  const changed = [];
+  const skipped = [];
+
+  for (const locale of TARGET_LOCALES) {
+    const rel = outputPathFor(folder, slug, locale);
+    const abs = path.join(REPO_ROOT, rel);
+    if (!existsSync(abs)) continue;
+    const before = readFileSync(abs, "utf8");
+    const doc = JSON.parse(before);
+    const { units, finalize } = collectTranslationUnits(doc, collection.fields, { locale });
+    if (units.length !== english.length) {
+      skipped.push(rel);
+      continue;
+    }
+    units.forEach((unit, i) => {
+      const approved = memory[locale][english[i]];
+      if (approved !== undefined && unit.get() !== approved) unit.set(approved);
+    });
+    finalize();
+    const after = `${JSON.stringify(doc, null, 2)}\n`;
+    if (after !== before) {
+      writeFileSync(abs, after);
+      changed.push(rel);
+    }
+  }
+  return { changed, skipped };
 }
 
 function setGithubOutput(name, value) {
@@ -192,8 +251,22 @@ function realTranslateFnFactory(apiKey) {
 
 const SCOPES = ["changed", "missing", "all"];
 
+async function applyMemory() {
+  const schema = await loadTinaSchema();
+  const memory = loadMemory();
+  let changedCount = 0;
+  for (const entry of resolveChangedEnFiles([], "all")) {
+    const { changed, skipped } = applyMemoryToFile(entry, schema, memory);
+    changed.forEach((f) => console.log(`[translate-content] memory applied: ${f}`));
+    skipped.forEach((f) => console.warn(`[translate-content] structure differs from English, left alone: ${f}`));
+    changedCount += changed.length;
+  }
+  console.log(`[translate-content] translation memory applied to ${changedCount} file(s).`);
+}
+
 export async function main() {
-  const explicitFiles = process.argv.slice(2);
+  if (process.argv.includes("--apply-memory")) return applyMemory();
+  const explicitFiles = process.argv.slice(2).filter((a) => !a.startsWith("--"));
   const scope = (process.env.TRANSLATE_SCOPE || "changed").trim();
   if (!SCOPES.includes(scope)) {
     throw new Error(`TRANSLATE_SCOPE must be one of ${SCOPES.join(", ")} (got "${scope}").`);
@@ -216,11 +289,12 @@ export async function main() {
 
   const schema = await loadTinaSchema();
   const translateFnFactory = realTranslateFnFactory(apiKey);
+  const memory = loadMemory();
 
   const allWritten = [];
   for (const entry of entries) {
     console.log(`[translate-content] Translating ${entry.file} -> ${TARGET_LOCALES.join(", ")}`);
-    const written = await translateFile(entry, schema, translateFnFactory, { skipExisting: scope === "missing" });
+    const written = await translateFile(entry, schema, translateFnFactory, { skipExisting: scope === "missing", memory });
     allWritten.push(...written);
   }
 

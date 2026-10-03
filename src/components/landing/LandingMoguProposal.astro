@@ -22,6 +22,12 @@ const { block, landingPage, index } = Astro.props;
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
   <div data-tina-field={tinaField(block, "tripSlug")}>
-    <MoguProposal tripSlug={block.tripSlug} height={block.height ?? undefined} title={block.iframeTitle ?? undefined} />
+    <MoguProposal
+      tripSlug={block.tripSlug}
+      height={block.height ?? undefined}
+      title={block.iframeTitle ?? undefined}
+      hideLogo={block.hideLogo ?? false}
+      hideTitle={block.hideTitle ?? false}
+    />
   </div>
 </section>

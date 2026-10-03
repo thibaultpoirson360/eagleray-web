@@ -67,7 +67,21 @@ export const crew: Collection = {
   path: "content/crew",
   format: "json",
   ui: {
-    router: localeRouter("#crew"),
+    // Every member used to route to the SAME `/<locale>/#crew` (the
+    // homepage's crew slider), which is a shared URL across all 11
+    // documents — TinaCMS's admin can't tell them apart from that alone
+    // (see the comment in navigation.ts for the underlying mechanism),
+    // which is why clicking any crew member could land on some other
+    // member's, or even another collection's, form. Each member now routes
+    // to their OWN full card on the Passionate Sea People page
+    // (CrewPage.astro gives each one id={member._sys.filename}), which is
+    // also the richer of the two places a crew member appears — every
+    // field (skills, languages, history, why...) is click-to-edit there,
+    // not just the homepage's summary card.
+    router: ({ document }) => {
+      const [locale, slug] = document._sys.breadcrumbs;
+      return `/${locale}/passionate-sea-people/#${slug}`;
+    },
     filename: { slugify: (values) => (values?.name ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "-") },
   },
   fields: [

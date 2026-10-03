@@ -34,7 +34,7 @@ const { comparison, founderQuote } = difference;
   data-depth-name={difference.depth?.name ?? undefined}
 >
   <div class="section-head mb-section-head">
-    <p class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase" data-reveal>
+    <p class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase" data-reveal>
       {
         difference.kickerNumber && (
           <span class="text-ink" data-tina-field={tinaField(difference, "kickerNumber")}>
@@ -94,7 +94,7 @@ const { comparison, founderQuote } = difference;
           </ol>
         </article>
 
-        <div class="vs-axis hidden md:grid md:place-items-center md:font-serif md:text-[1.2rem] md:text-ink/52 md:italic">
+        <div class="vs-axis hidden md:grid md:place-items-center md:font-serif md:text-[1.2rem] md:text-ink/64 md:italic">
           {comparison.axisLabel && <span data-tina-field={tinaField(comparison, "axisLabel")}>{comparison.axisLabel}</span>}
         </div>
 
@@ -102,7 +102,7 @@ const { comparison, founderQuote } = difference;
           {
             comparison.themTitle && (
               <h3
-                class="vs-title mb-[1.4rem] font-mono text-[.72rem] tracking-[.16em] text-ink/52 uppercase"
+                class="vs-title mb-[1.4rem] font-mono text-[.72rem] tracking-[.16em] text-ink/64 uppercase"
                 data-tina-field={tinaField(comparison, "themTitle")}
               >
                 {comparison.themTitle}
@@ -128,7 +128,7 @@ const { comparison, founderQuote } = difference;
         {
           founderQuote.kicker && (
             <p
-              class="founder-quote-kicker mb-[1.6rem] font-serif text-quote-lead text-ink/52 italic whitespace-pre-line"
+              class="founder-quote-kicker mb-[1.6rem] font-serif text-quote-lead text-ink/64 italic whitespace-pre-line"
               data-tina-field={tinaField(founderQuote, "kicker")}
             >
               {founderQuote.kicker}
@@ -152,7 +152,7 @@ const { comparison, founderQuote } = difference;
           {
             founderQuote.cite && (
               <cite
-                class="mt-[1.4rem] block font-mono text-[.8rem] tracking-[.06em] text-ink/52 not-italic"
+                class="mt-[1.4rem] block font-mono text-[.8rem] tracking-[.06em] text-ink/64 not-italic"
                 data-tina-field={tinaField(founderQuote, "cite")}
               >
                 {founderQuote.cite}

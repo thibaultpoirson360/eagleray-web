@@ -10,6 +10,7 @@ import TinaIsland from "@tinacms/astro/TinaIsland.astro";
 import CrewPage from "../../components/CrewPage.astro";
 import { loadCrewPage, loadCrewSection, loadCrew } from "../../lib/content";
 import { liveLocales, type Locale } from "../../i18n/config";
+import { paragraphs } from "../../lib/crew";
 
 export function getStaticPaths() {
   return liveLocales.map((locale) => ({ params: { locale } }));
@@ -24,7 +25,10 @@ const [pageResult, sectionResult, crewResult] = await Promise.all([
 ---
 
 <BaseLayout
-  title={`${pageResult.data.crewPage.hero?.title ?? "Passionate Sea People"} — Eagle Ray Expeditions`}
+  title={pageResult.data.crewPage.seo?.title ?? `${pageResult.data.crewPage.hero?.title ?? "Passionate Sea People"} — Eagle Ray Expeditions`}
+  description={pageResult.data.crewPage.seo?.description ?? paragraphs(pageResult.data.crewPage.intro)[0]}
+  ogTitle={pageResult.data.crewPage.seo?.ogTitle ?? undefined}
+  ogDescription={pageResult.data.crewPage.seo?.ogDescription ?? undefined}
   locale={locale}
   path="passionate-sea-people/"
 >

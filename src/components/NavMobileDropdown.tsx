@@ -9,6 +9,9 @@ import { useState } from "preact/hooks";
  * navigate AND close the menu) but wrong for the trigger (tapping it
  * should only expand/collapse, never close the menu).
  *
+ * The sub-links are always in the HTML (hidden while collapsed) so they can
+ * be crawled — same reasoning as NavDesktopDropdown.
+ *
  * Independent per instance, same as NavDesktopDropdown — expanding one
  * doesn't collapse the other.
  */
@@ -50,15 +53,13 @@ export default function NavMobileDropdown({ index, label, tinaField, items }: Pr
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
-      {open && (
-        <div class="mt-[.8rem] mb-[.4rem] ml-[2.6rem] flex flex-col gap-[.7rem]">
-          {items.map((item) => (
-            <a key={item.label} href={item.href} data-tina-field={item.tinaField} class="text-[.85rem] tracking-[.02em] text-white/74">
-              {item.label}
-            </a>
-          ))}
-        </div>
-      )}
+      <div class={`mt-[.8rem] mb-[.4rem] ml-[2.6rem] flex-col gap-[.7rem] ${open ? "flex" : "hidden"}`}>
+        {items.map((item) => (
+          <a key={item.label} href={item.href} data-tina-field={item.tinaField} class="text-[.85rem] tracking-[.02em] text-white/74">
+            {item.label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

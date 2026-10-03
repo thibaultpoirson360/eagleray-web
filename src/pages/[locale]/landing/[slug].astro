@@ -27,6 +27,9 @@ const { slug } = Astro.params;
 const locale = Astro.params.locale as Locale;
 const result = await loadLandingPage(locale, slug);
 const landingPage = result.data.landingPage;
+// Meta description falls back to the first hero banner's supporting line.
+const firstHero = landingPage.blocks?.find((b) => b?.__typename === "LandingPageBlocksHero");
+const firstLede = firstHero && firstHero.__typename === "LandingPageBlocksHero" ? (firstHero.lede ?? undefined) : undefined;
 
 // The nav floats transparently (white text) only when the page opens with a
 // hero banner it can sit over; any other first block is on a white
@@ -38,14 +41,17 @@ const transparentNav = landingPage.blocks?.[0]?.__typename === "LandingPageBlock
 ---
 
 <BaseLayout
-  title={`${landingPage.title} — Eagle Ray Expeditions`}
+  title={landingPage.seo?.title ?? `${landingPage.title} — Eagle Ray Expeditions`}
+  description={landingPage.seo?.description ?? firstLede}
+  ogTitle={landingPage.seo?.ogTitle ?? undefined}
+  ogDescription={landingPage.seo?.ogDescription ?? undefined}
   locale={locale}
   path={`landing/${slug}/`}
   transparentNav={transparentNav}
 >
   <main id="main">
     <TinaIsland name="landingPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
-      <LandingPageView landingPage={landingPage} />
+      <LandingPageView landingPage={landingPage} locale={locale} />
     </TinaIsland>
   </main>
 </BaseLayout>

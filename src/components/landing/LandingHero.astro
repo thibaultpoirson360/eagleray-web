@@ -14,15 +14,22 @@
  */
 import Button from "../ui/Button.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
+import { homeAnchor } from "../../lib/links";
+import type { Locale } from "../../i18n/config";
 import type { HeroBlock, LandingPageBlocksParent } from "./blockTypes";
 
 interface Props {
   block: HeroBlock;
   landingPage: LandingPageBlocksParent;
   index: number;
+  locale: Locale;
 }
 
-const { block, landingPage, index } = Astro.props;
+const { block, landingPage, index, locale } = Astro.props;
+// The page's <h1> is its first block's title when that block is a hero
+// (LandingPageView adds a visually hidden <h1> when it isn't); any later
+// hero is a section heading.
+const Heading = index === 0 ? "h1" : "h2";
 ---
 
 <section
@@ -56,9 +63,9 @@ const { block, landingPage, index } = Astro.props;
         </p>
       )
     }
-    <h2 class="max-w-[20ch] font-display text-hero text-white" data-tina-field={tinaField(block, "title")}>
+    <Heading class="max-w-[20ch] font-display text-hero text-white" data-tina-field={tinaField(block, "title")}>
       {block.title}
-    </h2>
+    </Heading>
     {
       block.lede && (
         <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={tinaField(block, "lede")}>
@@ -69,7 +76,7 @@ const { block, landingPage, index } = Astro.props;
     {
       block.cta && (
         <div class="mt-[2.3rem]">
-          <Button href={block.cta.href} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
+          <Button href={homeAnchor(locale, block.cta.href)} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
             {block.cta.label}
           </Button>
         </div>

@@ -43,7 +43,7 @@ function postHref(post: NonNullable<Post>): string {
 
 <section class="relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
   <p
-    class="mb-5 flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/52 uppercase"
+    class="mb-5 flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
     data-tina-field={tinaField(blogSection, "metaLine")}
   >
     <span class="size-1.5 flex-none rounded-full bg-ink animate-pulse-dot motion-reduce:animate-none" aria-hidden="true" />
@@ -54,7 +54,7 @@ function postHref(post: NonNullable<Post>): string {
   </h1>
   {
     blogSection.lede && (
-      <p class="mt-[18px] max-w-[540px] text-ink/52" data-tina-field={tinaField(blogSection, "lede")}>
+      <p class="mt-[18px] max-w-[540px] text-ink/64" data-tina-field={tinaField(blogSection, "lede")}>
         {blogSection.lede}
       </p>
     )
@@ -76,7 +76,7 @@ function postHref(post: NonNullable<Post>): string {
           )}
         </a>
         <div>
-          <div class="mb-[14px] text-[.72rem] tracking-[.1em] text-ink/52 uppercase">
+          <div class="mb-[14px] text-[.72rem] tracking-[.1em] text-ink/64 uppercase">
             <span data-tina-field={tinaField(blogSection, "featuredLabel")}>{blogSection.featuredLabel}</span> · <span data-tina-field={tinaField(featured, "category")}>{featured.category}</span>
           </div>
           <h2 class="mb-[14px] text-[28px]">
@@ -91,7 +91,7 @@ function postHref(post: NonNullable<Post>): string {
               </p>
             )
           }
-          <div class="mb-[18px] text-[13px] text-ink/52">
+          <div class="mb-[18px] text-[13px] text-ink/64">
             {featured.author} · {formatDate(featured.date)} · {featured.readTime}
           </div>
           <Button href={postHref(featured)} variant="ghost" context="default" data-tina-field={tinaField(blogSection, "readMoreLabel")}>
@@ -120,14 +120,14 @@ function postHref(post: NonNullable<Post>): string {
               />
             )}
           </div>
-          <div class="mt-4 text-xs text-ink/52">
+          <div class="mt-4 text-xs text-ink/64">
             {post.author} · {formatDate(post.date)}
           </div>
           <h3 class="mt-2 mb-2 text-xl" data-tina-field={tinaField(post, "title")}>
             {post.title}
           </h3>
           {post.excerpt && (
-            <p class="text-sm text-ink/55" data-tina-field={tinaField(post, "excerpt")}>
+            <p class="text-sm text-ink/64" data-tina-field={tinaField(post, "excerpt")}>
               {post.excerpt}
             </p>
           )}

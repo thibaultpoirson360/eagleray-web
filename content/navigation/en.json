@@ -56,5 +56,6 @@
   "toggleLabel": "Toggle menu",
   "ariaLabel": "Main",
   "languageLabel": "Language",
+  "skipLabel": "Skip to main content",
   "surfaceLabel": "Surface"
 }

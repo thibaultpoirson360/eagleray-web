@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { ctaField, textarea } from "../shared/fields";
+import { ctaField, seoField, textarea } from "../shared/fields";
 
 /**
  * Free-form marketing/landing pages composed entirely from an editor-picked
@@ -135,7 +135,27 @@ const landingPage: Collection = {
               label: "Mogu trip slug",
               required: true,
               description:
-                'The trip identifier in Mogu\'s own URL, e.g. "baja-sailing-7-days" — becomes https://v2.app.moguplatform.com/trips/<slug>?embed=true.',
+                'Only the trip code from Mogu\'s link: the part after /trips/ and before any "?". In https://v2.app.moguplatform.com/trips/baja-sailing-7-days?embed=true the code is "baja-sailing-7-days". It becomes https://v2.app.moguplatform.com/trips/<code>?embed=true.',
+              // Mogu answers an unknown or mistyped code with HTTP 200 and a
+              // "Page not found" screen INSIDE the frame, so nothing else would
+              // ever flag a bad code — catch the common mistake while editing.
+              validate: (value: string | undefined) => {
+                if (value && !/^[A-Za-z0-9-]+$/.test(value.trim())) {
+                  return 'Paste only the trip code (letters, numbers and hyphens) — the part of the Mogu link after "/trips/" and before any "?".';
+                }
+              },
+            },
+            {
+              type: "boolean",
+              name: "hideLogo",
+              label: "Hide Mogu's logo bar",
+              description: "Adds &hideLogo=true to the embed.",
+            },
+            {
+              type: "boolean",
+              name: "hideTitle",
+              label: "Hide the trip title",
+              description: "Adds &hideTitle=true to the embed.",
             },
             {
               type: "number",
@@ -153,6 +173,7 @@ const landingPage: Collection = {
         },
       ],
     },
+    seoField(),
   ],
 };
 

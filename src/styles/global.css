@@ -260,7 +260,7 @@ html:not(.js) .reveal {
 
 .nav.is-solid {
   --nav-fg: var(--color-ink);
-  --nav-fg-mute: rgba(14, 27, 43, 0.52);
+  --nav-fg-mute: rgba(14, 27, 43, 0.64);
   --nav-line: rgba(14, 27, 43, 0.26);
   --nav-hover-fg: #fff;
   background: rgba(255, 255, 255, 0.9);

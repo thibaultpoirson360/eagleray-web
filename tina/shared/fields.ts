@@ -20,6 +20,25 @@ export const localeRouter =
   ({ document }: { document: { _sys: { breadcrumbs: string[] } } }) =>
     `/${document._sys.breadcrumbs[0] ?? "en"}/${suffix}`;
 
+/**
+ * "Search results & sharing" — how a page looks in Google and in a WhatsApp /
+ * Facebook / LinkedIn preview. Optional on every page that has one: a page
+ * with nothing here falls back to its own title and lead paragraph, so it is
+ * never blank; an editor fills this in to tune the wording.
+ */
+export const seoField = (): TinaField => ({
+  type: "object",
+  name: "seo",
+  label: "Search results & sharing (SEO)",
+  description: "How this page appears in Google and when a link to it is shared. Optional — empty falls back to the page's own title and text.",
+  fields: [
+    { type: "string", name: "title", label: "Page title (browser tab and Google)", description: "Around 50–60 characters." },
+    { type: "string", name: "description", label: "Description (Google)", ui: textarea, description: "One or two sentences, up to about 155 characters." },
+    { type: "string", name: "ogTitle", label: "Sharing title (optional)", description: "Used in share previews. Empty uses the page title." },
+    { type: "string", name: "ogDescription", label: "Sharing description (optional)", ui: textarea, description: "Used in share previews. Empty uses the description." },
+  ],
+});
+
 /** A button/link: `<a class="btn ..." href>label</a>`. */
 export const ctaField = (name: string, label: string): TinaField => ({
   type: "object",

@@ -107,6 +107,9 @@ function initNav() {
   const setOpen = (open: boolean) => {
     toggle.setAttribute("aria-expanded", String(open));
     mobile.setAttribute("aria-hidden", String(!open));
+    // The closed overlay must not be reachable with Tab (it is hidden by a
+    // clip-path only, which doesn't remove its links from the tab order).
+    mobile.inert = !open;
     document.body.style.overflow = open ? "hidden" : "";
   };
 

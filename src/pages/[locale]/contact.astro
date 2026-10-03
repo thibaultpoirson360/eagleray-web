@@ -25,7 +25,10 @@ const [contactPageResult, siteSettingsResult] = await Promise.all([
 ---
 
 <BaseLayout
-  title={`${contactPageResult.data.contactPage.title} — Eagle Ray Expeditions`}
+  title={contactPageResult.data.contactPage.seo?.title ?? `${contactPageResult.data.contactPage.title} — Eagle Ray Expeditions`}
+  description={contactPageResult.data.contactPage.seo?.description ?? contactPageResult.data.contactPage.lede ?? undefined}
+  ogTitle={contactPageResult.data.contactPage.seo?.ogTitle ?? undefined}
+  ogDescription={contactPageResult.data.contactPage.seo?.ogDescription ?? undefined}
   locale={locale}
   path="contact/"
   transparentNav={false}

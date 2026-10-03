@@ -238,6 +238,12 @@ export function collectTranslationUnits(doc, fields, { locale } = {}) {
  * fields, `_template`) come through byte-identical because they were never
  * touched.
  *
+ * `options.memory` is the translation memory for the target language,
+ * `{ "<exact English string>": "<approved translation>" }`
+ * (scripts/translation-memory.json). A unit whose English text is in it is
+ * set from the memory and never sent to `translateFn`, so approved human
+ * wording survives every redraft.
+ *
  * `translateFn` is `(texts: string[]) => Promise<string[]>` — same shape as
  * `deepl.mjs`'s `translateBatch` with its options pre-bound, and easy to
  * swap for a fake in tests (this is exactly how this module was verified —
@@ -247,8 +253,16 @@ export async function translateDocument(doc, fields, translateFn, options = {}) 
   const clone = structuredClone(doc);
   const { units, finalize } = collectTranslationUnits(clone, fields, options);
 
-  if (units.length > 0) {
-    const originals = units.map((u) => u.get());
+  const memory = options.memory ?? {};
+  const pending = [];
+  for (const unit of units) {
+    const english = unit.get();
+    if (Object.prototype.hasOwnProperty.call(memory, english)) unit.set(memory[english]);
+    else pending.push(unit);
+  }
+
+  if (pending.length > 0) {
+    const originals = pending.map((u) => u.get());
     const translated = await translateFn(originals);
     if (!Array.isArray(translated) || translated.length !== originals.length) {
       throw new Error(
@@ -256,7 +270,7 @@ export async function translateDocument(doc, fields, translateFn, options = {}) 
           `results for ${originals.length} inputs.`
       );
     }
-    units.forEach((unit, i) => unit.set(translated[i]));
+    pending.forEach((unit, i) => unit.set(translated[i]));
   }
 
   finalize();

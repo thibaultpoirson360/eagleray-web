@@ -70,12 +70,13 @@
   ],
   "cta": {
     "href": "#customize",
-    "label": "Faites de la voile",
+    "label": "Go Sailing",
     "mobileLabel": "Personnalisez votre expédition"
   },
   "mobileFoot": "24°12′37,6″ N · LA PAZ · B.C.S.",
   "toggleLabel": "Afficher/masquer le menu",
   "ariaLabel": "Accueil",
   "languageLabel": "Langue",
+  "skipLabel": "Aller au contenu principal",
   "surfaceLabel": "Surface"
 }

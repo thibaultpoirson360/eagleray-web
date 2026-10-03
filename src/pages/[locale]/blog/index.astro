@@ -19,7 +19,15 @@ const locale = Astro.params.locale as Locale;
 const [blogSectionResult, blogPostsResult] = await Promise.all([loadBlogSection(locale), loadBlogPosts(locale)]);
 ---
 
-<BaseLayout title={`${blogSectionResult.data.blogSection.title} — Eagle Ray Expeditions`} locale={locale} path="blog/" transparentNav={false}>
+<BaseLayout
+  title={blogSectionResult.data.blogSection.seo?.title ?? `${blogSectionResult.data.blogSection.title} — Eagle Ray Expeditions`}
+  description={blogSectionResult.data.blogSection.seo?.description ?? blogSectionResult.data.blogSection.lede ?? undefined}
+  ogTitle={blogSectionResult.data.blogSection.seo?.ogTitle ?? undefined}
+  ogDescription={blogSectionResult.data.blogSection.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path="blog/"
+  transparentNav={false}
+>
   <main id="main">
     <TinaIsland name="blogSection" wrapper={{ tag: "div" }} params={{ locale }}>
       <BlogListing blogSection={blogSectionResult.data.blogSection} posts={blogPostsResult.posts} locale={locale} />

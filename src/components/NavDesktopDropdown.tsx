@@ -7,6 +7,12 @@ import { useEffect, useRef, useState } from "preact/hooks";
  * Preact per CLAUDE.md's stack rules — open/close state, outside-click and
  * Escape to close mirrors LangSwitch.tsx exactly.
  *
+ * The sub-link panel is ALWAYS rendered (hidden with a class while closed),
+ * not mounted on click: the links have to exist in the page's HTML so search
+ * engines can follow them and so they can be used without JavaScript. With
+ * JS off (`html:not(.js)`) the panel opens on hover / keyboard focus instead
+ * of on a click.
+ *
  * Deliberately independent per instance — opening one dropdown doesn't
  * close another (there are only two today; flag back if you want the
  * usual "only one open at a time" nav behavior instead).
@@ -48,7 +54,7 @@ export default function NavDesktopDropdown({ label, tinaField, items }: Props) {
   }, [open]);
 
   return (
-    <div class="relative" ref={rootRef}>
+    <div class="group relative" ref={rootRef}>
       <button
         type="button"
         ref={triggerRef}
@@ -69,25 +75,23 @@ export default function NavDesktopDropdown({ label, tinaField, items }: Props) {
         </svg>
       </button>
 
-      {open && (
-        <div
-          role="menu"
-          aria-label={label}
-          class="absolute top-[calc(100%+.9rem)] left-1/2 z-10 min-w-[13rem] -translate-x-1/2 overflow-hidden rounded border border-ink/14 bg-white py-1 text-ink shadow-lg"
-        >
-          {items.map((item) => (
-            <a
-              key={item.label}
-              role="menuitem"
-              href={item.href}
-              data-tina-field={item.tinaField}
-              class="block px-[1.1rem] py-[.6rem] text-[.82rem] tracking-[.02em] text-ink/74 transition-colors duration-200 ease-out hover:bg-surface hover:text-ink focus-visible:bg-surface focus-visible:text-ink focus-visible:outline-none"
-            >
-              {item.label}
-            </a>
-          ))}
-        </div>
-      )}
+      <div
+        role="menu"
+        aria-label={label}
+        class={`absolute top-[calc(100%+.9rem)] left-1/2 z-10 min-w-[13rem] -translate-x-1/2 overflow-hidden rounded border border-ink/14 bg-white py-1 text-ink shadow-lg no-js:group-focus-within:block no-js:group-hover:block ${open ? "" : "hidden"}`}
+      >
+        {items.map((item) => (
+          <a
+            key={item.label}
+            role="menuitem"
+            href={item.href}
+            data-tina-field={item.tinaField}
+            class="block px-[1.1rem] py-[.6rem] text-[.82rem] tracking-[.02em] text-ink/74 transition-colors duration-200 ease-out hover:bg-surface hover:text-ink focus-visible:bg-surface focus-visible:text-ink focus-visible:outline-none"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

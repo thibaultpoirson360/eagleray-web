@@ -42,7 +42,11 @@ const footer: Collection = {
   path: "content/footer",
   format: "json",
   ui: {
-    router: localeRouter(),
+    // See the matching comment in navigation.ts: this used to share
+    // `/<locale>/` with navigation and hero, which is the root cause of
+    // "footer shows when I meant to edit navigation." `#site-footer` is a
+    // real id on <footer> (Footer.astro).
+    router: localeRouter("#site-footer"),
     allowedActions: { delete: false },
   },
   fields: [

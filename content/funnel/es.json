@@ -4,15 +4,15 @@
     "name": "Planificar tu ruta"
   },
   "kickerNumber": "09",
-  "kicker": "Organiza tu expedición",
+  "kicker": "Arma tu expedición",
   "title": "Personaliza tu primer",
   "titleEmphasis": "Expedición a Baja California.",
-  "lede": "4 preguntas rápidas. Al final, se abre WhatsApp con tu solicitud ya redactada: Thibault se hace una idea completa y te responde con una propuesta concreta en un plazo de 48 horas, no con un simple «gracias por tu interés».",
-  "escapeText": "¿Prefieres saltarte esto? Envíanos un mensaje directamente por WhatsApp →",
+  "lede": "4 preguntas breves. Al final, se abre WhatsApp con tu expedición ya redactada — Thibault recibe el panorama completo y responde con una propuesta real en 48 horas, no un \"gracias por tu interés\".",
+  "escapeText": "¿Prefieres saltarte esto? Escríbenos directo por WhatsApp →",
   "step1": {
-    "legend": "Información básica sobre el viaje",
+    "legend": "Lo básico del viaje",
     "tripDuration": {
-      "question": "¿Cuántos días tienes pensado?",
+      "question": "¿Cuántos días tienes en mente?",
       "options": [
         {
           "label": "3 – 4 días",
@@ -33,7 +33,7 @@
       ]
     },
     "travelingAs": {
-      "question": "¿A quién va dirigida esta expedición?",
+      "question": "¿Para quién es esta expedición?",
       "options": [
         {
           "label": "Familia",
@@ -54,19 +54,19 @@
       ]
     },
     "guestCount": {
-      "question": "¿Cuántos de vosotros iréis a bordo?",
+      "question": "¿Cuántos irán a bordo?",
       "min": 2,
       "max": 10,
       "defaultValue": 4,
-      "hint": "El Bali 4.4 tiene capacidad para un máximo de 10 pasajeros, y el Astrea 42, para un máximo de 8. Si hay más pasajeros, zarpamos con ambos barcos.",
+      "hint": "Hasta 10 invitados en el Bali 4.4, hasta 8 en el Astrea 42. Si son más, navegamos con los dos barcos.",
       "fewerLabel": "Menos invitados",
       "moreLabel": "Más invitados"
     }
   },
   "step2": {
-    "legend": "Itinerario y prioridades",
+    "legend": "Ruta y prioridades",
     "routeFocus": {
-      "question": "¿Qué tema te llama más la atención?",
+      "question": "¿Qué enfoque te llama más la atención?",
       "options": [
         {
           "label": "Espíritu Santo — fauna silvestre",
@@ -87,7 +87,7 @@
       ]
     },
     "topPriority": {
-      "question": "¿Si pudieras pedir solo una cosa?",
+      "question": "Si solo pudieras pedir una cosa, ¿cuál sería?",
       "options": [
         {
           "label": "Fauna y buceo con esnórquel",
@@ -110,18 +110,18 @@
   },
   "step3": {
     "legend": "Fechas y barco",
-    "dateFromLabel": "De",
+    "dateFromLabel": "desde",
     "dateToLabel": "A",
     "flexibleDates": {
       "label": "O escríbelo a tu manera",
-      "placeholder": "Por ejemplo: a finales de octubre de 2026, o en una fecha flexible"
+      "placeholder": "ej. finales de octubre 2026, o flexible"
     },
     "boatPreference": {
-      "question": "¿Tienes alguna preferencia en cuanto al barco?",
+      "question": "¿Tienes preferencia de barco?",
       "options": [
         {
-          "label": "Bali 4,4",
-          "value": "Bali 4,4"
+          "label": "Bali 4.4",
+          "value": "Bali 4.4"
         },
         {
           "label": "Fountaine Pajot Astrea 42",
@@ -138,54 +138,54 @@
     "legend": "¿Con quién habla Thibault?",
     "fullName": {
       "label": "Nombre",
-      "placeholder": "Nombre",
-      "error": "Por favor, dinos tu nombre."
+      "placeholder": "Tu nombre",
+      "error": "Cuéntanos tu nombre, por favor."
     },
     "email": {
-      "label": "Correo electrónico",
-      "placeholder": "you@email.com",
-      "error": "Introduce una dirección de correo electrónico válida."
+      "label": "Correo",
+      "placeholder": "tu@correo.com",
+      "error": "Ingresa un correo válido."
     },
     "whatsappNumber": {
       "label": "Número de WhatsApp",
       "placeholder": "+52 55 0000 0000",
-      "optionalHint": "(opcional, para recibir una respuesta más rápida)"
+      "optionalHint": "(opcional, para responder más rápido)"
     },
     "notes": {
-      "label": "¿Hay algo que debamos saber? (opcional)",
-      "placeholder": "Alergias, profundidad de inmersión, celebrar algo, mareo…"
+      "label": "Algo que debamos saber (opcional)",
+      "placeholder": "Alergias, nivel de buceo, si celebran algo, si alguien se marea…"
     },
-    "privacy": "🔒 Solo utilizamos estos datos para preparar tu propuesta. Nada de spam, nunca."
+    "privacy": "🔒 Solo usamos esto para preparar tu propuesta. Cero spam."
   },
   "ui": {
     "stepCounter": "Paso {n} de {total}",
-    "autosaveRestored": "✓ Retoma la lectura donde la dejaste",
+    "autosaveRestored": "✓ Continuamos donde lo dejaste",
     "autosaveSaved": "✓ Progreso guardado",
     "back": "← Atrás",
     "continue": "Continuar →",
     "submit": "Enviar mi solicitud de expedición",
     "sending": "Enviando…",
-    "submitError": "Se ha producido un error al enviar tu solicitud. Inténtalo de nuevo o utiliza el enlace de WhatsApp que aparece más arriba.",
+    "submitError": "Algo salió mal al enviar tu solicitud — intenta de nuevo, o usa el enlace de WhatsApp de arriba.",
     "recapTitle": "Tu expedición hasta ahora"
   },
   "success": {
     "title": "Recibido — gracias",
-    "body": "Thibault revisará tu expedición y te responderá en un plazo de 48 horas.",
-    "whatsappButton": "Sigue la conversación en WhatsApp"
+    "body": "Thibault revisará tu expedición y te responderá en menos de 48 horas.",
+    "whatsappButton": "Continuar la conversación en WhatsApp"
   },
   "whatsappMessage": {
-    "intro": "¡Hola, Thibault! Me gustaría personalizar una expedición de Eagle Ray.",
+    "intro": "¡Hola Thibault! Quiero personalizar una expedición con Eagle Ray.",
     "tripDurationLabel": "Duración",
     "travelingAsLabel": "Para",
     "guestCountLabel": "Invitados",
-    "routeFocusLabel": "Enfoque en la ruta",
-    "topPriorityLabel": "Prioridad máxima",
+    "routeFocusLabel": "Ruta de enfoque",
+    "topPriorityLabel": "Prioridad principal",
     "datesLabel": "Fechas",
-    "datesFrom": "de",
+    "datesFrom": "desde",
     "datesToBeConfirmed": "por confirmar",
     "boatPreferenceLabel": "Barco",
     "fullNameLabel": "Nombre",
-    "emailLabel": "Correo electrónico",
+    "emailLabel": "Correo",
     "whatsappNumberLabel": "WhatsApp",
     "notesLabel": "Notas"
   }

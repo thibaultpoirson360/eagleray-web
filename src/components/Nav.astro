@@ -45,6 +45,7 @@ import LangSwitch from "./LangSwitch.tsx";
 import NavDesktopDropdown from "./NavDesktopDropdown.tsx";
 import NavMobileDropdown from "./NavMobileDropdown.tsx";
 import { locales, liveLocales, localePath, localeLabel, type Locale } from "../i18n/config";
+import { homeAnchor } from "../lib/links";
 
 interface Props {
   navigation: NavigationQuery["navigation"];
@@ -79,6 +80,7 @@ const langOptions = locales.map((l) => ({
 ---
 
 <nav
+  id="site-nav"
   class={`nav fixed inset-x-0 top-0 z-[100] flex h-nav items-center justify-between gap-6 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] transition-[background-color,backdrop-filter,box-shadow,height] duration-[450ms] ease-out ${transparentNav ? "" : "is-solid"}`}
   data-nav
   data-nav-transparent={transparentNav ? "true" : "false"}
@@ -180,7 +182,7 @@ const langOptions = locales.map((l) => ({
     cta && (
       <a
         class="nav-cta hidden rounded border border-(--nav-line) px-[1.2rem] py-[.55rem] text-[.82rem] text-(--nav-fg) transition-colors duration-300 ease-out hover:border-(--nav-fg) hover:bg-(--nav-fg) hover:text-(--nav-hover-fg) lg:inline-flex"
-        href={cta.href}
+        href={homeAnchor(locale, cta.href)}
         data-tina-field={tinaField(navigation, "cta")}
       >
         {cta.label}
@@ -194,6 +196,7 @@ const langOptions = locales.map((l) => ({
   id="nav-mobile"
   data-nav-mobile
   aria-hidden="true"
+  inert
 >
   {
     links?.map((link, i) =>
@@ -221,7 +224,7 @@ const langOptions = locales.map((l) => ({
   }
   {
     cta && (
-      <a class="nav-cta mt-[.8rem] inline-flex rounded border border-white/35 px-[1.4rem] py-[.7rem] text-base text-white" href={cta.href}>
+      <a class="nav-cta mt-[.8rem] inline-flex rounded border border-white/35 px-[1.4rem] py-[.7rem] text-base text-white" href={homeAnchor(locale, cta.href)}>
         {cta.mobileLabel}
       </a>
     )
