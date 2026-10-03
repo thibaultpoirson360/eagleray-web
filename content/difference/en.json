@@ -1,5 +1,8 @@
 {
-  "depth": { "meters": 12, "name": "Anchorage" },
+  "depth": {
+    "meters": 12,
+    "name": "Anchorage"
+  },
   "kickerNumber": "01",
   "kicker": "What we do",
   "title": "We don't sell charter trips.",
