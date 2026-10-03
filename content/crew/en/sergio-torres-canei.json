@@ -39,5 +39,6 @@
   "why": "\"What draws me to the sea: its mystery, its animals, its colours and its size.\n\nLeaving something good in other people is what makes me feel whole. At sea, I take care of the group. The Eagle Ray crew takes care of the boat.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
   "imageAlt": "Sergio, expedition leader with Eagle Ray Expeditions",
-  "joiningTag": "Thanksgiving"
+  "joiningTag": "Thanksgiving",
+  "order": 12
 }
