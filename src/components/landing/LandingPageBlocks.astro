@@ -19,6 +19,7 @@ import LandingRichText from "./LandingRichText.astro";
 import LandingImageGallery from "./LandingImageGallery.astro";
 import LandingCta from "./LandingCta.astro";
 import LandingMoguProposal from "./LandingMoguProposal.astro";
+import MoguProposalHero from "../MoguProposalHero.astro";
 import type { LandingPageBlocksParent } from "./blockTypes";
 import type { Locale } from "../../i18n/config";
 
@@ -48,6 +49,7 @@ const { landingPage, locale } = Astro.props;
         )}
         {kind === "Cta" && <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} />}
+        {kind === "MoguHero" && <MoguProposalHero tripSlug={block.tripSlug} hideLogo={block.hideLogo ?? false} hideTitle={block.hideTitle ?? false} title={block.iframeTitle ?? undefined} />}
       </>
     );
   })

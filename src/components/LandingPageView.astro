@@ -20,6 +20,7 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import LandingPageBlocks from "./landing/LandingPageBlocks.astro";
 import type { Locale } from "../i18n/config";
+import { firstBlockHasHeading } from "../lib/mogu";
 import type { LandingPageQuery } from "../../tina/__generated__/types";
 
 interface Props {
@@ -28,7 +29,7 @@ interface Props {
 }
 
 const { landingPage, locale } = Astro.props;
-const firstIsHero = landingPage.blocks?.[0]?.__typename === "LandingPageBlocksHero";
+const firstIsHero = firstBlockHasHeading(landingPage.blocks);
 ---
 
 {

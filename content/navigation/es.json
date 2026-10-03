@@ -22,35 +22,14 @@
         {
           "label": "Apasionados del mar",
           "href": "/es/passionate-sea-people/"
-        },
-        {
-          "label": "La experiencia Eagle Ray",
-          "href": "/es/the-eagle-ray-experience/"
-        },
-        {
-          "label": "La experiencia de nuestros viajeros",
-          "href": "/es/our-travelers-experience/"
         }
       ],
       "_template": "dropdown"
     },
     {
       "label": "Navega con nosotros",
-      "items": [
-        {
-          "label": "Expedición de recalibración",
-          "href": "/es/recalibration-expedition/"
-        },
-        {
-          "label": "Expedición activa",
-          "href": "/es/active-expedition/"
-        },
-        {
-          "label": "Expedición ad hoc",
-          "href": "/es/ad-hoc-expedition/"
-        }
-      ],
-      "_template": "dropdown"
+      "href": "/es/sail-with-us/",
+      "_template": "link"
     },
     {
       "label": "Blog",
@@ -74,7 +53,7 @@
     }
   ],
   "cta": {
-    "href": "#customize",
+    "href": "/es/contact/",
     "label": "Go Sailing",
     "mobileLabel": "Personaliza tu expedición"
   },

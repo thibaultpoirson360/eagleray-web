@@ -1,0 +1,30 @@
+---
+/**
+ * `/<locale>/sail-with-us/` — "Sail with Us". The same trip-planning funnel
+ * as the homepage (#customize), from the same funnel document
+ * (content/funnel/<locale>.json), so one edit in the admin updates both.
+ *
+ * Wrapped in the same funnel island as the homepage, so the visual editor
+ * can refresh it. No hero, so the solid nav is used.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import Funnel from "../../../components/Funnel.astro";
+import { loadFunnel, loadSiteSettings } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
+---
+
+<BaseLayout title={`Sail with Us — Eagle Ray Expeditions`} locale={locale} path="sail-with-us/" transparentNav={false}>
+  <main id="main">
+    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale }}>
+      <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

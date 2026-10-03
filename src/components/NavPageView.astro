@@ -12,6 +12,7 @@ import { tinaField } from "@tinacms/astro/tina-field";
 import LandingPageBlocks from "./landing/LandingPageBlocks.astro";
 import type { LandingPageBlocksParent } from "./landing/blockTypes";
 import type { Locale } from "../i18n/config";
+import { firstBlockHasHeading } from "../lib/mogu";
 import type { NavPagesQuery } from "../../tina/__generated__/types";
 
 interface Props {
@@ -20,7 +21,7 @@ interface Props {
 }
 
 const { navPage, locale } = Astro.props;
-const firstIsHero = navPage.blocks?.[0]?.__typename.endsWith("BlocksHero") ?? false;
+const firstIsHero = firstBlockHasHeading(navPage.blocks);
 const hasBlocks = (navPage.blocks?.length ?? 0) > 0;
 ---
 

@@ -116,6 +116,34 @@ export const landingBlocksField = (): TinaField => (
           },
         ],
       },
+      {
+        name: "moguHero",
+        label: "Trip proposal, full screen (first block: header floats over it)",
+        ui: { defaultItem: { tripSlug: "" } },
+        fields: [
+          {
+            type: "string",
+            name: "tripSlug",
+            label: "Mogu trip slug",
+            required: true,
+            description:
+              'Only the trip code from Mogu\'s link: the part after /trips/ and before any "?". The frame fills the screen height.',
+            validate: (value: string | undefined) => {
+              if (value && !/^[A-Za-z0-9-]+$/.test(value.trim())) {
+                return 'Paste only the trip code (letters, numbers and hyphens) — the part of the Mogu link after "/trips/" and before any "?".';
+              }
+            },
+          },
+          { type: "boolean", name: "hideLogo", label: "Hide Mogu's logo bar" },
+          { type: "boolean", name: "hideTitle", label: "Hide the trip title" },
+          {
+            type: "string",
+            name: "iframeTitle",
+            label: "Embed name (accessible label, not visible text)",
+            description: 'Defaults to "Trip proposal" if left blank.',
+          },
+        ],
+      },
     ],
   }
 );

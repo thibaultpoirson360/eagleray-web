@@ -16,6 +16,7 @@ import TinaIsland from "@tinacms/astro/TinaIsland.astro";
 import NavPageView from "../../components/NavPageView.astro";
 import { loadNavPage, loadNavPages } from "../../lib/content";
 import { liveLocales, type Locale } from "../../i18n/config";
+import { startsWithHero } from "../../lib/mogu";
 
 export async function getStaticPaths() {
   const perLocale = await Promise.all(
@@ -39,7 +40,7 @@ const navPage = result.data.navPages;
 // results. Once it has blocks it is a real page, so it is indexed.
 const hasBlocks = (navPage.blocks?.length ?? 0) > 0;
 // The nav is transparent over a hero, solid otherwise (same rule as landing pages).
-const firstIsHero = navPage.blocks?.[0]?.__typename.endsWith("BlocksHero") ?? false;
+const firstIsHero = startsWithHero(navPage.blocks);
 ---
 
 <BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={firstIsHero} noindex={!hasBlocks}>

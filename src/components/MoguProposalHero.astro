@@ -1,0 +1,29 @@
+---
+/**
+ * Full-screen Mogu trip proposal, for a landing page's first block. Same
+ * embed as MoguProposal.astro, but the frame fills the screen below the nav
+ * bar: the container is 100vh minus the nav height, and the iframe is 100% of it.
+ *
+ * Like LandingHero, when it is the first block the header floats over it
+ * (the landing route checks startsWithHero in src/lib/mogu.ts).
+ */
+import { moguEmbedSrc } from "../lib/mogu";
+
+interface Props {
+  tripSlug: string;
+  hideLogo?: boolean;
+  hideTitle?: boolean;
+  title?: string;
+}
+
+const { tripSlug, hideLogo = false, hideTitle = false, title = "Trip proposal" } = Astro.props;
+---
+
+<section class="relative block h-[calc(100vh-var(--spacing-nav))] w-full overflow-hidden">
+  <iframe
+    src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })}
+    loading="eager"
+    class="block h-full w-full border-0"
+    title={title}
+  ></iframe>
+</section>

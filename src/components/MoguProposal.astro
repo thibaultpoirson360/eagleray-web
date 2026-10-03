@@ -6,14 +6,11 @@
  * src/components/landing/LandingMoguProposal.astro) — one component either
  * way, not duplicated.
  *
- * Real embed pattern, confirmed directly (not guessed):
- *   <iframe src="https://v2.app.moguplatform.com/trips/{tripSlug}?embed=true" width="100%" height="600" frameborder="0"></iframe>
- * The `src` URL shape above is authoritative — don't change it. Tailwind's
- * `border-0` replaces the legacy `frameborder="0"` attribute, and `w-full`
- * replaces `width="100%"`; `height` stays a real attribute since Tailwind
- * has no utility for an arbitrary, content-driven pixel height passed as a
- * prop.
+ * The embed URL comes from moguEmbedSrc (src/lib/mogu.ts): the trip code is
+ * cut from whatever was pasted, and the Mogu logo / title can be hidden.
  */
+import { moguEmbedSrc } from "../lib/mogu";
+
 interface Props {
   /** Mogu trip identifier used in the embed URL, e.g. "baja-sailing-7-days". */
   tripSlug: string;
@@ -28,17 +25,10 @@ interface Props {
 }
 
 const { tripSlug, height = 600, title = "Trip proposal", hideLogo = false, hideTitle = false } = Astro.props;
-
-// Keep only the trip code. An editor once pasted
-// "numerous-manchester-15970?embed=true&hideLogo=true" into the slug field,
-// which built a URL with a second "?" in it. Cut at the first character that
-// can't be part of a code (a query, fragment, path, quote or space).
-const slug = tripSlug.trim().split(/[?&#/"'\s]/)[0];
-const params = ["embed=true", hideLogo && "hideLogo=true", hideTitle && "hideTitle=true"].filter(Boolean).join("&");
 ---
 
 <iframe
-  src={`https://v2.app.moguplatform.com/trips/${slug}?${params}`}
+  src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })}
   height={height}
   loading="lazy"
   class="w-full border-0"

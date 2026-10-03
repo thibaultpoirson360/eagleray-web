@@ -12,6 +12,7 @@ import LandingPageView from "../../../components/LandingPageView.astro";
 import { loadLandingPage, loadLandingPages } from "../../../lib/content";
 
 import { liveLocales, type Locale } from "../../../i18n/config";
+import { startsWithHero } from "../../../lib/mogu";
 
 export async function getStaticPaths() {
   const perLocale = await Promise.all(
@@ -37,7 +38,7 @@ const firstLede = firstHero && firstHero.__typename === "LandingPageBlocksHero" 
 // the content rather than a per-page toggle, so it can't be set wrong. It is
 // rendered by the layout, outside the landing island, so it follows the
 // saved content — not a live edit of block order in the visual editor.
-const transparentNav = landingPage.blocks?.[0]?.__typename === "LandingPageBlocksHero";
+const transparentNav = startsWithHero(landingPage.blocks);
 ---
 
 <BaseLayout
