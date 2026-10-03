@@ -13,7 +13,7 @@
  */
 import type { APIRoute } from "astro";
 import { defaultLocale, liveLocales, localeHref, type Locale } from "../i18n/config";
-import { loadBlogPosts, loadLandingPages } from "../lib/content";
+import { loadBlogPosts, loadLandingPages, loadNavPages } from "../lib/content";
 
 interface Entry {
   /** Path after the language prefix, e.g. "blog/" ("" = home). */
@@ -48,6 +48,12 @@ export const GET: APIRoute = async ({ site }) => {
     for (const post of posts) add("blog/", post._sys.filename, locale, post.date ? String(post.date).slice(0, 10) : undefined);
     const { pages } = await loadLandingPages(locale);
     for (const page of pages) add("landing/", page._sys.filename, locale);
+    // Nav pages with blocks are real pages (see [locale]/[slug].astro); the
+    // title-only placeholders are noindex and stay out of the sitemap.
+    const { pages: navPages } = await loadNavPages(locale);
+    for (const page of navPages) {
+      if ((page.blocks?.length ?? 0) > 0) add("", page._sys.filename, locale);
+    }
   }
   entries.push(...bySlug.values());
 

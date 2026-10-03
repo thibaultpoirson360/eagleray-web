@@ -268,8 +268,9 @@ const route = createIslandRoute({
     },
     component: NavPageView,
     wrapper: { tag: "div" },
-    propsFromData: (result: unknown) => ({
+    propsFromData: (result: unknown, params: URLSearchParams) => ({
       navPage: (result as Awaited<ReturnType<typeof loadNavPage>>).data.navPages,
+      locale: localeFromParams(params),
     }),
   },
   // Same "one page per document, slug in params" shape as blogPost above.

@@ -32,26 +32,23 @@ const { landingPage, locale } = Astro.props;
 ---
 
 {
-  (landingPage.blocks ?? []).map(
-    (block, index) =>
-      block && (
-        <>
-          {block.__typename === "LandingPageBlocksHero" && (
-            <LandingHero block={block} landingPage={landingPage} index={index} locale={locale} />
-          )}
-          {block.__typename === "LandingPageBlocksRichText" && (
-            <LandingRichText block={block} landingPage={landingPage} index={index} />
-          )}
-          {block.__typename === "LandingPageBlocksImageGallery" && (
-            <LandingImageGallery block={block} landingPage={landingPage} index={index} locale={locale} />
-          )}
-          {block.__typename === "LandingPageBlocksCta" && (
-            <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />
-          )}
-          {block.__typename === "LandingPageBlocksMoguProposal" && (
-            <LandingMoguProposal block={block} landingPage={landingPage} index={index} />
-          )}
-        </>
-      )
-  )
+  // Matched by block kind, not by the full GraphQL type name: the same block
+  // definitions are used by landing pages (LandingPageBlocks…) and nav pages
+  // (NavPagesBlocks…), so the generated type name differs by document.
+  (landingPage.blocks ?? []).map((raw: any, index: number) => {
+    if (!raw) return null;
+    const kind = raw.__typename.replace(/^(LandingPage|NavPages)Blocks/, "");
+    const block = raw as any;
+    return (
+      <>
+        {kind === "Hero" && <LandingHero block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "RichText" && <LandingRichText block={block} landingPage={landingPage} index={index} />}
+        {kind === "ImageGallery" && (
+          <LandingImageGallery block={block} landingPage={landingPage} index={index} locale={locale} />
+        )}
+        {kind === "Cta" && <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} />}
+      </>
+    );
+  })
 }

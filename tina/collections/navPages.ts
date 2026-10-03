@@ -1,4 +1,5 @@
 import type { Collection } from "tinacms";
+import { landingBlocksField } from "../shared/landingBlocks";
 
 /**
  * Placeholder pages for the navigation entries that have no real page yet:
@@ -32,7 +33,12 @@ const navPages: Collection = {
     filename: { readonly: true },
     allowedActions: { create: false, delete: false },
   },
-  fields: [{ type: "string", name: "title", label: "Page title", required: true, isTitle: true }],
+  fields: [
+    { type: "string", name: "title", label: "Page title", required: true, isTitle: true },
+    // Empty = the title-only placeholder (noindex). Add blocks to build the
+    // page, the same way as a landing page; once it has blocks it is indexed.
+    landingBlocksField(),
+  ],
 };
 
 export default navPages;

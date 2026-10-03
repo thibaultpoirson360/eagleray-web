@@ -31,12 +31,17 @@ const { slug } = Astro.params;
 const locale = Astro.params.locale as Locale;
 const result = await loadNavPage(locale, slug);
 const navPage = result.data.navPages;
+// A page with no blocks is the title-only placeholder: kept out of search
+// results. Once it has blocks it is a real page, so it is indexed.
+const hasBlocks = (navPage.blocks?.length ?? 0) > 0;
+// The nav is transparent over a hero, solid otherwise (same rule as landing pages).
+const firstIsHero = navPage.blocks?.[0]?.__typename.endsWith("BlocksHero") ?? false;
 ---
 
-<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={false} noindex>
+<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={firstIsHero} noindex={!hasBlocks}>
   <main id="main">
     <TinaIsland name="navPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
-      <NavPageView navPage={navPage} />
+      <NavPageView navPage={navPage} locale={locale} />
     </TinaIsland>
   </main>
 </BaseLayout>
