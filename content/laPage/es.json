@@ -1,0 +1,108 @@
+{
+  "title": "La Paz, el acuario del mundo",
+  "metaLine": "24°12′37,6″ N · LA PAZ · B.C.S.",
+  "lede": "El nombre que Jacques Cousteau le dio al mar de Cortés. Un estrecho golfo que concentra lo que otros océanos reparten a lo largo de miles de millas: corrientes ascendentes frías, islas desiertas y una densidad de vida marina que aún sorprende a quienes llevan años navegando por él. Todas las expediciones de Eagle Ray parten desde aquí.",
+  "heroImage": "/assets/img/la-paz/hero-sea-lion-beach.webp",
+  "heroImageAlt": "León marino descansando cerca de Los Islotes, La Paz",
+  "facts": [
+    {
+      "label": "Salida",
+      "value": "Marina de La Paz"
+    },
+    {
+      "label": "Aguas de trabajo",
+      "value": "La Paz · Espíritu Santo · Cerralvo"
+    },
+    {
+      "label": "Protección",
+      "value": "Lugar declarado Patrimonio de la Humanidad por la UNESCO"
+    },
+    {
+      "label": "Fauna",
+      "value": "Algo de temporada, durante todo el año"
+    }
+  ],
+  "wildlifeKicker": "Fauna",
+  "wildlifeTitle": "Seis encuentros, una bahía",
+  "wildlifeIntro": "Nunca se puede garantizar que se vean —se trata de animales salvajes en mar abierto—. Lo que sí podemos ofrecerte es la temporada, el lugar y las probabilidades.",
+  "species": [
+    {
+      "name": "Tiburones ballena",
+      "season": "Octubre — abril",
+      "place": "Bahía de La Paz",
+      "note": "Los juveniles se alimentan justo en la bahía. Puedes hacer snorkel junto a ellos, sin necesidad de equipo de buceo.",
+      "image": "/assets/img/la-paz/whale-shark.webp",
+      "imageAlt": "Tiburón ballena alimentándose cerca de la superficie"
+    },
+    {
+      "name": "Rayas mobula",
+      "season": "Mayo — julio",
+      "place": "Canales marítimos",
+      "note": "Bancos de cientos de peces que saltan fuera del agua. Se oyen antes de verlos.",
+      "image": "/assets/img/la-paz/mobula-ray.webp",
+      "imageAlt": "Las rayas mobula saltando del agua"
+    },
+    {
+      "name": "Leones marinos — Los Islotes",
+      "season": "Durante todo el año",
+      "place": "Colonia de Los Islotes",
+      "note": "Una colonia permanente. Los juveniles se sumergen contigo, y no al revés.",
+      "image": "/assets/img/la-paz/sea-lions.webp",
+      "imageAlt": "Leones marinos en Los Islotes"
+    },
+    {
+      "name": "Delfines",
+      "season": "Durante todo el año",
+      "place": "Cruce de canales",
+      "note": "Aparecen en la proa mientras navegamos a vela. Nosotros no los buscamos: son ellos los que nos encuentran.",
+      "image": "/assets/img/la-paz/dolphins.webp",
+      "imageAlt": "Delfines surcando la ola de proa"
+    },
+    {
+      "name": "Mantas",
+      "season": "Mayo — septiembre",
+      "place": "Pinnáculos de arrecife",
+      "note": "Sobre los pináculos del arrecife y los fondos arenosos, normalmente durante la inmersión matutina.",
+      "image": "/assets/img/la-paz/manta-ray.webp",
+      "imageAlt": "Una manta sobre el arrecife"
+    },
+    {
+      "name": "Ballenas jorobadas",
+      "season": "Ene — Mar",
+      "place": "Golfo abierto",
+      "note": "Migración estacional, observada desde la embarcación a la distancia que establece la normativa.",
+      "image": "/assets/img/la-paz/humpback-whale.webp",
+      "imageAlt": "Ballena jorobada en la superficie"
+    }
+  ],
+  "wildlifeFootnote": "Espíritu Santo es un parque nacional protegido y forma parte del sitio declarado Patrimonio de la Humanidad por la UNESCO «Islas y áreas protegidas del Golfo de California». Solo fondeamos en las boyas autorizadas, y los avistamientos se realizan respetando las distancias y los horarios establecidos por la normativa.",
+  "destinationsKicker": "Adónde vamos",
+  "destinationsTitle": "Tres lugares a los que se puede llegar en un día",
+  "destinations": [
+    {
+      "name": "Espíritu Santo",
+      "description": "Un parque nacional insular protegido situado a diez millas de la costa. Alberga la colonia de leones marinos de Los Islotes y los canales de manglares por los que navegamos en kayak durante la marea baja.",
+      "image": "/assets/img/la-paz/espiritu-santo.webp",
+      "imageAlt": "Canal de manglares en Espíritu Santo"
+    },
+    {
+      "name": "Balandra",
+      "description": "Una de las bahías más fotografiadas del golfo. Aguas poco profundas de color turquesa y un arrecife ideal para practicar snorkel; suele estar desierta a primera hora de la tarde.",
+      "image": "/assets/img/la-paz/balandra.webp",
+      "imageAlt": "Playa Balandra, La Paz"
+    },
+    {
+      "name": "La Ventana",
+      "description": "A una hora de La Paz, al otro lado de la península. El mismo viento del norte que mantiene la bahía en calma la convierte en uno de los lugares más fiables de Baja California para practicar kitesurf.",
+      "image": "/assets/img/la-paz/la-ventana.webp",
+      "imageAlt": "Kitesurf en La Ventana"
+    }
+  ],
+  "ctaTitle": "La Paz es el punto de partida de todas las expediciones de Eagle Ray.",
+  "ctaLabel": "Personaliza tu expedición",
+  "ctaHref": "/en/#customize",
+  "seo": {
+    "title": "La Paz, el acuario del mundo — Eagle Ray Expeditions",
+    "description": "Zarpando desde La Paz, Baja California del Sur: tiburones ballena y leones marinos en Los Islotes, Espíritu Santo, Balandra y La Ventana."
+  }
+}
