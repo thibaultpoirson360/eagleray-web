@@ -212,3 +212,12 @@ export function loadLaPage(locale: Locale, options?: RequestOptions) {
 export function loadAboutPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.aboutPage({ relativePath: `${locale}.json` }), options);
 }
+
+/** Every About Us document, filtered to one locale (same pattern as loadLaPages/loadBlogPosts). */
+export async function loadAboutPages(locale: Locale, options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.aboutPageConnection(), options);
+  const pages = (result.data.aboutPageConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale);
+  return { ...result, pages };
+}
