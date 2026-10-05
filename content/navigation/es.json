@@ -8,7 +8,7 @@
   },
   "links": [
     {
-      "label": "Apasionados del mar",
+      "label": "Gente del mar apasionada",
       "href": "/es/passionate-sea-people/",
       "_template": "link"
     },
@@ -17,10 +17,10 @@
       "items": [
         {
           "label": "Nuestra historia",
-          "href": "/es/our-story/"
+          "href": "/es/about-us/"
         },
         {
-          "label": "Apasionados del mar",
+          "label": "Gente del mar apasionada",
           "href": "/es/passionate-sea-people/"
         }
       ],

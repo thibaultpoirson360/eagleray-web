@@ -5,11 +5,11 @@
   },
   "kickerNumber": "07",
   "kicker": "Your expedition",
-  "title": "Our fleet. One standard:",
+  "title": "One standard: ",
   "titleEmphasis": "fully private, fully yours.",
   "cta": {
     "label": "See all boats →",
-    "href": "#customize"
+    "href": "en/boats"
   },
   "dotsLabel": "Go to boat"
 }
