@@ -40,5 +40,17 @@
   "why": "\"What I love underwater: pelagic fish, sharks, clear blue water, and the poetry of it. For me, the ocean is emotion.\n\nI see guides as ambassadors of the ocean. My job is to share it, and to pass on why it's worth protecting. And after a long dive, a long French dinner.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Alexis_expedition_leader_with_Eagle_Ray_Expeditions_i2yj28.jpg",
   "imageAlt": "Alexis, expedition leader with Eagle Ray Expeditions",
-  "order": 2
+  "order": 2,
+  "images": [
+    "/assets/img/crew/alexis-01.webp",
+    "/assets/img/crew/alexis-02.webp",
+    "/assets/img/crew/alexis-03.webp",
+    "/assets/img/crew/alexis-04.webp",
+    "/assets/img/crew/alexis-05.webp",
+    "/assets/img/crew/alexis-06.webp",
+    "/assets/img/crew/alexis-07.webp",
+    "/assets/img/crew/alexis-08.webp",
+    "/assets/img/crew/alexis-09.webp",
+    "/assets/img/crew/alexis-10.webp"
+  ]
 }

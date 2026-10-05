@@ -31,5 +31,11 @@
   "why": "\"I sail under sail whenever the wind allows, not on the engine, so you can hear what I listen for: the silence, and the sound of the hull moving through the water.\n\nFor me, the sea is where time feels limited and freedom stays intact. In Baja, I share it from the deck of a boat I know inside out.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
   "imageAlt": "Roberto Cámara sailing captain and expedition leader with Eagle Ray Expeditions",
-  "order": 8
+  "order": 8,
+  "images": [
+    "/assets/img/crew/roberto-01.webp",
+    "/assets/img/crew/roberto-02.webp",
+    "/assets/img/crew/roberto-03.webp",
+    "/assets/img/crew/roberto-04.webp"
+  ]
 }

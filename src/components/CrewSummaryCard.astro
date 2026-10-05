@@ -11,8 +11,9 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import CrewFullCard from "./CrewFullCard.astro";
 import CrewModal from "./CrewModal.tsx";
+import ImageSlider from "./ImageSlider.tsx";
 import { localePath, type Locale } from "../i18n/config";
-import { clean, shortName, type CrewLabels, type CrewMember } from "../lib/crew";
+import { clean, memberPhotos, shortName, type CrewLabels, type CrewMember } from "../lib/crew";
 
 interface Props {
   member: NonNullable<CrewMember>;
@@ -28,19 +29,15 @@ const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →
 <article
   class="crew-card relative flex w-[min(82vw,340px)] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white shadow-sm"
 >
-  <div class="relative aspect-[3/2] flex-none overflow-hidden bg-ink">
-    {
-      member.image && (
-        <img
-          src={member.image}
-          alt={member.imageAlt ?? ""}
-          loading="lazy"
-          decoding="async"
-          class="h-full w-full object-cover object-top"
-          data-tina-field={tinaField(member, "image")}
-        />
-      )
-    }
+  <div class="relative aspect-[3/2] flex-none">
+    <ImageSlider
+      client:visible
+      photos={memberPhotos(member)}
+      previousLabel="Previous photo"
+      nextLabel="Next photo"
+      dotLabel="Photo"
+      className="h-full w-full"
+    />
     {
       member.joiningTag && (
         <span

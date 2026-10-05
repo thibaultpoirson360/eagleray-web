@@ -33,5 +33,12 @@
   "why": "\"It started the first time I went diving, when someone told me I could do this for a living and travel the world.\n\nWhat I love about sharing the sea fits in a list: intimacy, confidence, learning new skills, facing fears, unexpected encounters. And trust.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
   "imageAlt": "Juan Carlos, Expedition Leader",
-  "order": 8
+  "order": 8,
+  "images": [
+    "/assets/img/crew/juan-carlos-01.webp",
+    "/assets/img/crew/juan-carlos-02.webp",
+    "/assets/img/crew/juan-carlos-03.webp",
+    "/assets/img/crew/juan-carlos-04.webp",
+    "/assets/img/crew/juan-carlos-05.webp"
+  ]
 }

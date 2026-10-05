@@ -23,7 +23,8 @@
  * not empty boxes.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
-import { clean, paragraphs, yearsText, type CrewLabels, type CrewMember } from "../lib/crew";
+import ImageSlider from "./ImageSlider.tsx";
+import { clean, memberPhotos, paragraphs, yearsText, type CrewLabels, type CrewMember } from "../lib/crew";
 
 interface Props {
   member: NonNullable<CrewMember>;
@@ -48,19 +49,16 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
 ---
 
 <article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", className]}>
-  <div class:list={["relative flex-none overflow-hidden bg-ink", compact ? "aspect-[4/3]" : "aspect-[11/10]"]}>
-    {
-      member.image && (
-        <img
-          src={member.image}
-          alt={member.imageAlt ?? ""}
-          loading="lazy"
-          decoding="async"
-          class="absolute inset-0 h-full w-full object-cover object-top"
-          data-tina-field={tinaField(member, "image")}
-        />
-      )
-    }
+  <div class:list={["relative flex-none", compact ? "aspect-[4/3]" : "aspect-[11/10]"]}>
+    <ImageSlider
+      client:visible
+      photos={memberPhotos(member)}
+      previousLabel="Previous photo"
+      nextLabel="Next photo"
+      dotLabel="Photo"
+      dotsAt="top"
+      className="h-full w-full"
+    />
     {
       member.joiningTag && (
         <span

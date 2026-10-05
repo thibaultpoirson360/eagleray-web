@@ -40,5 +40,11 @@
   "why": "\"The first time I went in, the ocean showed me what it could do: the life, the silence, the feeling of being part of something much bigger. I wanted other people to feel it, not as something to check off a list, but as something that changes how they see the world.\n\nWhat I love most is watching someone who stood on the boat thinking they couldn't do it find out they're braver than they thought.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Mohamed_Elsdly_Adly_Profile_dosvz1.jpg",
   "imageAlt": "Adly, expedition leader with Eagle Ray Expeditions",
-  "order": 4
+  "order": 4,
+  "images": [
+    "/assets/img/crew/adly-01.webp",
+    "/assets/img/crew/adly-02.webp",
+    "/assets/img/crew/adly-03.webp",
+    "/assets/img/crew/adly-04.webp"
+  ]
 }

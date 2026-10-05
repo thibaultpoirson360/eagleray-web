@@ -208,6 +208,21 @@ export function loadLaPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.laPage({ relativePath: `${locale}.json` }), options);
 }
 
+/** The Boats page text (content/boatsPage/<locale>.json). */
+export function loadBoatsPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.boatsPage({ relativePath: `${locale}.json` }), options);
+}
+
+/** The Sail with Us page text (content/sailWithUsPage/<locale>.json). */
+export function loadSailWithUsPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.sailWithUsPage({ relativePath: `${locale}.json` }), options);
+}
+
+/** The Recalibration Expedition page (content/recalibrationPage/<locale>.json). */
+export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
+}
+
 /** The About Us ("Our story") page (content/aboutPage/<locale>.json). */
 export function loadAboutPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.aboutPage({ relativePath: `${locale}.json` }), options);

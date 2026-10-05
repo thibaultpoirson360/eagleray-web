@@ -42,6 +42,19 @@ const crewPage: Collection = {
       description: "Shown under the hero. A blank line starts a new paragraph.",
     },
     { type: "string", name: "gridTitle", label: "Title above the crew grid", description: 'e.g. "Meet our people".' },
+    {
+      type: "object",
+      name: "roleLabels",
+      label: "Group headings above the crew grid",
+      description: "Each group appears in this order: Founder, Captain, Expedition Leader, Chef. Members with no matching role appear last.",
+      fields: [
+        { type: "string", name: "founder", label: "Founder heading" },
+        { type: "string", name: "captain", label: "Captain heading" },
+        { type: "string", name: "expeditionLeader", label: "Expedition Leader heading" },
+        { type: "string", name: "chef", label: "Chef heading" },
+        { type: "string", name: "other", label: "Other roles heading" },
+      ],
+    },
     seoField(),
   ],
 };

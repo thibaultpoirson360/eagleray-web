@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import { ctaField, depthFields, doNotTranslate, localeRouter, sectionHeadFields, textarea } from "../shared/fields";
+import { ctaField, depthFields, doNotTranslate, localeRouter, seoField, sectionHeadFields, textarea } from "../shared/fields";
 
 /**
  * Homepage section 5 (`#boats`) is split in two collections:
@@ -64,10 +64,63 @@ export const boats: Collection = {
     { type: "image", name: "photo", label: "Photo" },
     { type: "string", name: "photoAlt", label: "Photo alt text" },
     {
+      type: "object",
+      name: "photos",
+      label: "Photos (Boats page: add, remove or reorder; the first one is the card photo there)",
+      list: true,
+      ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+      fields: [
+        { type: "image", name: "image", label: "Photo", required: true },
+        { type: "string", name: "alt", label: "Alt text" },
+      ],
+    },
+    { type: "string", name: "length", label: "Length (e.g. 13.72 m)" },
+    { type: "string", name: "cabins", label: "Cabins (e.g. 4 double)" },
+    { type: "string", name: "bathrooms", label: "Bathrooms (e.g. 4 private)" },
+    { type: "string", name: "guests", label: "Guests (e.g. up to 8)" },
+    {
       type: "number",
       name: "order",
       label: "Card position",
       description: "Lower numbers first.",
     },
+  ],
+};
+
+/**
+ * `/<locale>/boats/` — the Boats page text (the boat cards come from `boats`
+ * above, the same list the homepage shows). One document per locale.
+ */
+export const boatsPage: Collection = {
+  name: "boatsPage",
+  label: "Boats page",
+  path: "content/boatsPage",
+  format: "json",
+  ui: {
+    router: localeRouter("boats/"),
+    allowedActions: { delete: false },
+  },
+  fields: [
+    { type: "string", name: "kicker", label: "Small label above the headline", description: 'e.g. "Your expedition"' },
+    { type: "string", name: "title", label: "Headline (h1)", required: true, ui: textarea },
+    { type: "string", name: "lede", label: "Intro paragraph", ui: textarea },
+    { type: "string", name: "includedHeading", label: "Included list — heading" },
+    {
+      type: "string",
+      name: "included",
+      label: "Included list — items",
+      list: true,
+      description: "One line per item.",
+    },
+    { type: "string", name: "notIncludedHeading", label: "Not included list — heading" },
+    {
+      type: "string",
+      name: "notIncluded",
+      label: "Not included list — items",
+      list: true,
+      description: "One line per item.",
+    },
+    ctaField("cta", "Closing button"),
+    seoField(),
   ],
 };

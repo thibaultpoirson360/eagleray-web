@@ -74,7 +74,7 @@ export default function CrewModal({ label, closeLabel, name, fallbackHref, child
         onClick={(e) => {
           if (e.target === dialogRef.current) close();
         }}
-        class="m-auto max-h-[92vh] w-[min(94vw,30rem)] overflow-hidden rounded-lg bg-transparent p-0 text-ink backdrop:bg-ink/60 backdrop:backdrop-blur-sm"
+        class="m-auto max-h-[92vh] w-[min(94vw,650px)] overflow-hidden rounded-lg bg-transparent p-0 text-ink backdrop:bg-ink/60 backdrop:backdrop-blur-sm"
       >
         <div class="relative">
           <button
