@@ -11,23 +11,24 @@
   "comparison": {
     "usTitle": "Eagle Ray Expeditions",
     "usPoints": [
-      "Experience-first, exploration-driven.",
       "Your group comes first.",
       "A specialized crew.",
-      "A route that moves with the weather and guests preferences."
+      "You choose everyone who comes aboard.",
+      "A route that moves with the weather and guests preferences.",
+      "Experience-first, exploration-driven."
     ],
     "axisLabel": "vs",
     "themTitle": "Charter trips",
     "themPoints": [
-      "Boat-first, comfort-driven.",
-      "Neutral crew, hired by the week.",
-      "Fixed routes, printed before you meet them.",
-      "The water is scenery — watched from the cockpit."
+      "The boat comes first.",
+      "A rotating crew, not specialized.",
+      "You might share the boat with people won't connect with.",
+      "Fixed routes, printed before you meet them."
     ]
   },
   "founderQuote": {
     "kicker": "They sell trips.\nWe design human expeditions.",
-    "quote": "I didn't want to sell boats. I wanted to build the kind of trip I'd actually want to be on — with people who know the ocean, not just how to hand you a set of keys.",
+    "quote": "I didn't want to sell boats. I wanted to build the kind of trip I'd actually want to be on; with people who know the ocean, not just how to hand you a set of keys.",
     "cite": "— Thibault Poirson De Cardon, Founder"
   }
 }
