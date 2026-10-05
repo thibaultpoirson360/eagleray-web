@@ -6,5 +6,9 @@
   "about": "Benji spent eight years running industrial and energy operations before trading project sites for the helm. The civil engineer never disappeared: he reads weather routing like a systems map and notices what the boat needs before it asks. While everyone watches the horizon, Benji has already cleared the way for the next adventure.",
   "image": "/assets/img/crew-benji.jpeg",
   "imageAlt": "Benji, Captain",
-  "order": 3
+  "order": 3,
+  "images": [
+    "/assets/img/crew-benji.jpeg",
+    "/assets/img/crew/benji-01.webp"
+  ]
 }

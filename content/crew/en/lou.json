@@ -38,5 +38,13 @@
   "why": "\"I love the calm of deep, glassy water, and the adrenaline of the perfect wave and the right wind.\n\nWhat I look for in guests is the spark in their eyes when the sea starts to work on them. I've watched it change people, me included.\"",
   "image": "/assets/img/crew-lou.jpeg",
   "imageAlt": "Lou, captain and expedition leader with Eagle Ray Expeditions",
-  "order": 3
+  "order": 3,
+  "images": [
+    "/assets/img/crew-lou.jpeg",
+    "/assets/img/crew/lou-01.webp",
+    "/assets/img/crew/lou-02.webp",
+    "/assets/img/crew/lou-03.webp",
+    "/assets/img/crew/lou-04.webp",
+    "/assets/img/crew/lou-05.webp"
+  ]
 }

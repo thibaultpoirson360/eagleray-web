@@ -142,7 +142,14 @@ export const crew: Collection = {
     { type: "string", name: "about", label: "About me", ui: textarea, description: "A blank line starts a new paragraph." },
     { type: "string", name: "history", label: "History", ui: textarea, description: "Shown after \"Keep reading\". A blank line starts a new paragraph." },
     { type: "string", name: "why", label: "Why", ui: textarea, description: "Shown after \"Keep reading\". A blank line starts a new paragraph." },
-    { type: "image", name: "image", label: "Photo" },
+    {
+      type: "image",
+      name: "images",
+      label: "Photos (slider: add, remove or reorder)",
+      list: true,
+      description: "The first photo shows on the card. Add more to show a slider on the card and in the pop-up.",
+    },
+    { type: "image", name: "image", label: "Photo (used if the slider list is empty)" },
     { type: "string", name: "imageAlt", label: "Photo alt text" },
     {
       type: "string",

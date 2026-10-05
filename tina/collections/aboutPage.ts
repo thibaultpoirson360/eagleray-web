@@ -5,7 +5,8 @@ import { localeRouter, seoField, textarea } from "../shared/fields";
  * `/<locale>/about-us/` — the "Our story" page, built from the Claude Design
  * mockup ("About Us.dc.html"). One document per locale (content/aboutPage/<locale>.json).
  *
- * Long text fields: a blank line starts a new paragraph.
+ * Everything below the hero is one rich-text body, so the structure can change
+ * without a developer.
  * Edited in the admin form only (no visual-editing wrapper on this page).
  */
 const aboutPage: Collection = {
@@ -23,18 +24,12 @@ const aboutPage: Collection = {
     { type: "string", name: "lede", label: "Hero — sub-headline", ui: textarea },
     { type: "image", name: "heroImage", label: "Hero photo" },
     { type: "string", name: "heroImageAlt", label: "Hero photo alt text" },
-    { type: "string", name: "storyKicker", label: "Story — small label" },
-    { type: "string", name: "storyTitle", label: "Story — heading", ui: textarea },
-    { type: "string", name: "storyBody", label: "Story — text", ui: textarea },
-    { type: "image", name: "founderImage", label: "Founder photo" },
-    { type: "string", name: "founderImageAlt", label: "Founder photo alt text" },
-    { type: "string", name: "quote", label: "Pull quote", ui: textarea },
-    { type: "string", name: "afterQuote", label: "Text after the pull quote", ui: textarea },
-    { type: "string", name: "approachKicker", label: "How we work — small label" },
-    { type: "string", name: "approachBody", label: "How we work — text", ui: textarea },
-    { type: "string", name: "closingLine", label: "Closing line", ui: textarea },
-    { type: "string", name: "closingLabel", label: "Closing button text" },
-    { type: "string", name: "closingHref", label: "Closing button link", description: 'e.g. "/en/#crew"' },
+    {
+      type: "rich-text",
+      name: "body",
+      label: "Page body (everything below the hero)",
+      description: "Write the story, pictures and quotes in any order. Use a heading for each section, a quote block for pull quotes, and an image where you want a photo.",
+    },
     seoField(),
   ],
 };

@@ -25,5 +25,9 @@
   "image": "/assets/img/crew-javier.webp",
   "imageAlt": "Javier Sánchez Darder, Captain & Filmmaker",
   "joiningTag": "",
-  "order": 10
+  "order": 10,
+  "images": [
+    "/assets/img/crew-javier.webp",
+    "/assets/img/crew/javier-01.webp"
+  ]
 }

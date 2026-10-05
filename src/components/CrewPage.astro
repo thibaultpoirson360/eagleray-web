@@ -17,7 +17,7 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import CrewFullCard from "./CrewFullCard.astro";
 import PageHero from "./ui/PageHero.astro";
-import { paragraphs, type CrewLabels, type CrewMember } from "../lib/crew";
+import { paragraphs, roleGroup, type CrewLabels, type CrewMember, type RoleGroup } from "../lib/crew";
 import type { CrewPageQuery } from "../../tina/__generated__/types";
 
 interface Props {
@@ -29,6 +29,24 @@ interface Props {
 const { crewPage, crewSection, members } = Astro.props;
 const { hero } = crewPage;
 const intro = paragraphs(crewPage.intro);
+
+// Group the members by their main role, in the order Founder, Captain,
+// Expedition Leader, Chef; anyone else last. Empty groups are not shown.
+const labels = crewPage.roleLabels;
+const groupDefs: { key: RoleGroup; label: string | null | undefined }[] = [
+  { key: "founder", label: labels?.founder },
+  { key: "captain", label: labels?.captain },
+  { key: "expeditionLeader", label: labels?.expeditionLeader },
+  { key: "chef", label: labels?.chef },
+  { key: "other", label: labels?.other },
+];
+const groups = groupDefs
+  .map((g) => ({
+    key: g.key,
+    label: g.label ?? "",
+    members: members.filter((m) => roleGroup(m.roles) === g.key),
+  }))
+  .filter((g) => g.members.length > 0);
 ---
 
 <PageHero
@@ -65,13 +83,20 @@ const intro = paragraphs(crewPage.intro);
       </h2>
     )
   }
-  <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))]">
-    {
-      members.map((member) => (
-        <div id={member._sys.filename} class="scroll-mt-[calc(var(--spacing-nav-solid)+1rem)]">
-          <CrewFullCard member={member} labels={crewSection} />
+  {
+    groups.map((group) => (
+      <div class="mb-16 last:mb-0">
+        <h3 class="mb-8 font-display text-[clamp(22px,2.6vw,28px)] text-ink" data-tina-field={tinaField(crewPage.roleLabels, group.key)}>
+          {group.label}
+        </h3>
+        <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))]">
+          {group.members.map((member) => (
+            <div id={member._sys.filename} class="scroll-mt-[calc(var(--spacing-nav-solid)+1rem)]">
+              <CrewFullCard member={member} labels={crewSection} />
+            </div>
+          ))}
         </div>
-      ))
-    }
-  </div>
+      </div>
+    ))
+  }
 </section>

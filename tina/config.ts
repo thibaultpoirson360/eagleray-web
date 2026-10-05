@@ -13,7 +13,7 @@ import difference from "./collections/difference";
 import { crewSection, crew } from "./collections/crew";
 import crewPage from "./collections/crewPage";
 import wildlife from "./collections/wildlife";
-import { boatsSection, boats } from "./collections/boats";
+import { boatsSection, boats, boatsPage } from "./collections/boats";
 import funnel from "./collections/funnel";
 import navPages from "./collections/navPages";
 import navigation from "./collections/navigation";
@@ -22,6 +22,8 @@ import contactPage from "./collections/contactPage";
 import notFoundPage from "./collections/notFoundPage";
 import laPage from "./collections/laPage";
 import aboutPage from "./collections/aboutPage";
+import sailWithUsPage from "./collections/sailWithUsPage";
+import recalibrationPage from "./collections/recalibrationPage";
 import { blogSection, blogPost } from "./collections/blog";
 import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
@@ -80,6 +82,7 @@ export default defineConfig({
       wildlife,
       boatsSection,
       boats,
+      boatsPage,
       funnel,
       // pages + globals
       navPages,
@@ -89,6 +92,8 @@ export default defineConfig({
       notFoundPage,
       laPage,
       aboutPage,
+      sailWithUsPage,
+      recalibrationPage,
       crewPage,
       blogSection,
       blogPost,
