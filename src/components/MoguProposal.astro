@@ -1,0 +1,36 @@
+---
+/**
+ * Mogu Trips proposal embed. Standalone and reusable on its own (e.g. a
+ * future boat/route detail page) AND as the render target for the landing
+ * page's `moguProposal` block (tina/collections/landingPage.ts,
+ * src/components/landing/LandingMoguProposal.astro) — one component either
+ * way, not duplicated.
+ *
+ * The embed URL comes from moguEmbedSrc (src/lib/mogu.ts): the trip code is
+ * cut from whatever was pasted, and the Mogu logo / title can be hidden.
+ */
+import { moguEmbedSrc } from "../lib/mogu";
+
+interface Props {
+  /** Mogu trip identifier used in the embed URL, e.g. "baja-sailing-7-days". */
+  tripSlug: string;
+  /** Iframe height in px. Defaults to 600, matching the confirmed embed example. */
+  height?: number;
+  /** Accessible name for the iframe (screen readers). */
+  title?: string;
+  /** Adds `&hideLogo=true` — hides Mogu's own logo bar inside the frame. */
+  hideLogo?: boolean;
+  /** Adds `&hideTitle=true` — hides the trip title inside the frame. */
+  hideTitle?: boolean;
+}
+
+const { tripSlug, height = 600, title = "Trip proposal", hideLogo = false, hideTitle = false } = Astro.props;
+---
+
+<iframe
+  src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })}
+  height={height}
+  loading="lazy"
+  class="w-full border-0"
+  title={title}
+></iframe>

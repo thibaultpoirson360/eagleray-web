@@ -1,0 +1,10 @@
+{
+  "name": "Antoine",
+  "roles": [
+    "Chef Gold"
+  ],
+  "about": "Antoine lleva más de quince años cocinando en barcos y superyates, incluso como chef privado para altos ejecutivos. Conoce los estándares exigentes, las cocinas diminutas y el apetito del mar. Su magia es técnica gastronómica hecha para navegar: precisa sin rigidez, generosa sin espectáculo y servida cuando toda la tripulación está lista para recordarla.",
+  "image": "/assets/img/crew-antoine.webp",
+  "imageAlt": "Antoine, Gold Chef",
+  "order": 5
+}

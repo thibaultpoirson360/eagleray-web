@@ -1,0 +1,139 @@
+---
+/**
+ * Boats — `<section class="section" id="boats">` in the source index.html
+ * (lines 372-418), CSS at styles.css "14. BOATS" (L1717-1782) plus the
+ * shared `.boats-dots`/`.boats-dot` rules (L1784-1809, see SliderDots.tsx)
+ * and "21. TILT" (L2754-2766).
+ *
+ * Placeholder content, per CLAUDE.md's explicit callout: the source
+ * repeats "Bay Dreamer" three times. Ported as exactly that — three
+ * identical placeholder boat documents — not invented real boats.
+ * bay-dreamer.json's filename can't just be re-slugified for the other
+ * two (Tina's filename.slugify on `name` would collide, all three being
+ * "Bay Dreamer"), so they're bay-dreamer-2.json / -3.json on disk. Worth
+ * knowing: a genuinely new second "Bay Dreamer" created through the
+ * admin later will hit the same slug collision and need a manual rename.
+ *
+ * `.has-tilt` (pointer-tracked 3D tilt, main.js's initTilt()) is page-
+ * chrome JS, deferred same as Hero's magnetic/every section's reveal —
+ * the CSS shell (default 0deg rotation, ready to receive --rx/--ry) is
+ * in place, the actual pointer tracking wires up with Nav/chrome.
+ *
+ * Every boat card here also carries .reveal, which is exactly the
+ * has-tilt + reveal combination the audit found dead-on-arrival (§2c.3):
+ * both set the same `transform` property, so whichever wins the cascade
+ * fully discards the other, and .reveal.is-in's higher-specificity
+ * `transform: none` permanently kills the tilt once revealed. Fixed at
+ * the source of the conflict in global.css's shared .reveal rule (now
+ * uses `translate`, not `transform`) rather than special-cased here.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import SliderDots from "./SliderDots.tsx";
+import type { BoatsSectionQuery, BoatsConnectionQuery } from "../../tina/__generated__/types";
+
+type Boat = NonNullable<NonNullable<BoatsConnectionQuery["boatsConnection"]["edges"]>[number]>["node"];
+
+interface Props {
+  boatsSection: BoatsSectionQuery["boatsSection"];
+  boats: NonNullable<Boat>[];
+}
+
+const { boatsSection, boats } = Astro.props;
+const { cta } = boatsSection;
+---
+
+<section
+  class="section relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="boats"
+  data-depth-stop={boatsSection.depth?.meters ?? undefined}
+  data-depth-name={boatsSection.depth?.name ?? undefined}
+>
+  <div class="section-head mb-section-head">
+    <p
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
+      data-reveal
+    >
+      {
+        boatsSection.kickerNumber && (
+          <span class="text-ink" data-tina-field={tinaField(boatsSection, "kickerNumber")}>
+            {boatsSection.kickerNumber}
+          </span>
+        )
+      }
+      <span data-tina-field={tinaField(boatsSection, "kicker")}>{boatsSection.kicker}</span>
+    </p>
+    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(boatsSection, "title")}>
+      {boatsSection.title}
+      {
+        boatsSection.titleEmphasis && (
+          <>
+            <br />
+            <em class="not-italic text-ink" data-tina-field={tinaField(boatsSection, "titleEmphasis")}>
+              {boatsSection.titleEmphasis}
+            </em>
+          </>
+        )
+      }
+    </h2>
+  </div>
+
+  <div
+    class="boats-grid -mx-pad mt-[3.4rem] flex snap-x snap-mandatory gap-8 overflow-x-auto px-pad pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    data-boats-slider
+    tabindex="0"
+    role="group"
+    aria-label={boatsSection.title}
+  >
+    {
+      boats.map((boat) => (
+        <article
+          id={boat._sys.filename}
+          class="boat-card has-tilt reveal w-[min(100vw,550px)] flex-none snap-start rounded-lg border border-ink/14 bg-surface p-[1.8rem] transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
+        >
+          <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] aspect-[4/5] overflow-hidden rounded-t-lg bg-white">
+            {boat.photo && (
+              <img
+                src={boat.photo}
+                alt={boat.photoAlt ?? ""}
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover object-center"
+                data-tina-field={tinaField(boat, "photo")}
+              />
+            )}
+          </div>
+          <h3 class="font-display text-[1.4rem]" data-tina-field={tinaField(boat, "name")}>
+            {boat.name}
+          </h3>
+          {boat.description && (
+            // No margin-top in source (.boat-card h3 has no margin-bottom
+            // either) — the universal `* { margin: 0 }` reset means the
+            // description really does sit flush under the name.
+            <p class="text-ink/74" data-tina-field={tinaField(boat, "description")}>
+              {boat.description}
+            </p>
+          )}
+        </article>
+      ))
+    }
+  </div>
+
+  <SliderDots
+    client:visible
+    sliderSelector="[data-boats-slider]"
+    cardSelector=".boat-card"
+    count={boats.length}
+    labelPrefix={boatsSection.dotsLabel ?? "Go to boat"}
+  />
+
+  {
+    cta && (
+      <p class="mt-10 text-center" data-reveal>
+        <Button href={cta.href} variant="primary" context="default" data-tina-field={tinaField(boatsSection, "cta")}>
+          {cta.label}
+        </Button>
+      </p>
+    )
+  }
+</section>

@@ -1,0 +1,41 @@
+{
+  "name": "Mohamed “Adly”",
+  "roles": [
+    "Líder de Expedición"
+  ],
+  "skills": [
+    "Buceo",
+    "Cometa",
+    "Snorkel",
+    "Buceo en apnea",
+    "Kayak"
+  ],
+  "languages": [
+    {
+      "language": "Árabe",
+      "level": "nativo",
+      "flag": "🇪🇬"
+    },
+    {
+      "language": "Inglés",
+      "level": "con fluidez",
+      "flag": "🇬🇧"
+    },
+    {
+      "language": "Español",
+      "level": "intermedio",
+      "flag": "🇪🇸"
+    }
+  ],
+  "certificates": [
+    "Instructor de IKO",
+    "PADI OWSI",
+    "STCW"
+  ],
+  "yearsOfExperience": 5,
+  "quote": "Quizá yo sea la razón por la que alguien se enamora del mar.",
+  "about": "Thibault conoció a Adly mientras aprendía kite en La Ventana, el legendario patio de juegos del viento en México. Originario de Egipto, Adly pronto lo invitó a devolverle la visita en el Mar Rojo. Ingeniero de formación, hoy es instructor IKO y PADI, con más de 1.500 inmersiones, más de 80 alumnos y experiencia como tripulante en cuatro continentes. Adly lee el viento, la corriente y la energía del grupo de una sola mirada. Sabe cuándo impulsar una inmersión más — y cuándo no hacer nada fondeados es justo la aventura que todos necesitan.",
+  "image": "/assets/img/crew-adly.webp",
+  "imageAlt": "— Adly, Líder de expedición",
+  "order": 4
+}

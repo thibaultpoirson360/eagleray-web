@@ -1,0 +1,56 @@
+{
+  "name": "Alexis",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Diving",
+    "Snorkeling",
+    "Sailing",
+    "Surfing",
+    "Kayaking",
+    "Boating",
+    "Land exploration"
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "fluent"
+    },
+    {
+      "language": "Spanish",
+      "level": "fluent",
+      "flag": " 🇪🇸"
+    },
+    {
+      "language": "French"
+    }
+  ],
+  "certificates": [
+    "PADI OWSI",
+    "Glénans Skipper Level III",
+    "Powerboat License 12 NM",
+    "Bachelor in Hospitality Management (ESADE)",
+    "Master in Business Management"
+  ],
+  "yearsOfExperience": 2,
+  "quote": "Ocean is emotion",
+  "about": "\"I'm a PADI scuba instructor. I've lived in more than seven countries and explored 58, mostly by water: the Indian Ocean, the Caribbean, Southeast Asia, the Atlantic. Before diving became my work, I studied hotel and resort management at ESADE and worked in five-star hospitality at Ritz-Carlton and Mandarin Oriental.\n\nThibault and I met in Chile when we were five. Most people call me the Pirate. On board, I lead the dives and the snorkeling, and I'm usually the one suggesting which cove to anchor in and which story goes with dinner.\"",
+  "history": "\"In Sri Lanka, I led a group of 12 experienced French divers. I had everything ready before they asked: DIN valves on every tank, extra weights for the switch from steel to aluminium tanks, the right tools for their gear. With divers like that, the details are the experience.\n\nAs a kid I was always exploring: boats, the ocean, what I call the pirate way of life. Adventure was always part of it.\"",
+  "why": "\"What I love underwater: pelagic fish, sharks, clear blue water, and the poetry of it. For me, the ocean is emotion.\n\nI see guides as ambassadors of the ocean. My job is to share it, and to pass on why it's worth protecting. And after a long dive, a long French dinner.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Alexis_expedition_leader_with_Eagle_Ray_Expeditions_i2yj28.jpg",
+  "imageAlt": "Alexis, expedition leader with Eagle Ray Expeditions",
+  "order": 2,
+  "images": [
+    "/assets/img/crew/alexis-01.webp",
+    "/assets/img/crew/alexis-02.webp",
+    "/assets/img/crew/alexis-03.webp",
+    "/assets/img/crew/alexis-04.webp",
+    "/assets/img/crew/alexis-05.webp",
+    "/assets/img/crew/alexis-06.webp",
+    "/assets/img/crew/alexis-07.webp",
+    "/assets/img/crew/alexis-08.webp",
+    "/assets/img/crew/alexis-09.webp",
+    "/assets/img/crew/alexis-10.webp"
+  ]
+}

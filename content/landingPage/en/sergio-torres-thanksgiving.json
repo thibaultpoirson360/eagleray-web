@@ -1,0 +1,58 @@
+{
+  "title": "Thanksgiving with Sergio Torres \"Canei\"",
+  "blocks": [
+    {
+      "kicker": "Limited dates · November 2026",
+      "title": "November in the Sea of Cortez, with Sergio Torres.",
+      "lede": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+      "imageAlt": "Sergio Torres Expedition Leader de Eagle Ray Expeditions Sailing Experience in La Paz",
+      "cta": {
+        "label": "Check availability",
+        "href": "#customize"
+      },
+      "_template": "hero"
+    },
+    {
+      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
+      "_template": "richText"
+    },
+    {
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+          "alt": "Sergio Torres underwater",
+          "href": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_inmersio%CC%81n_jphte8.jpg",
+          "alt": "Sergio Torres Scubadiving La Paz ",
+          "href": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_rnxdut.jpg",
+          "alt": "Sergio Torres scusadiving in La paz",
+          "href": ""
+        }
+      ],
+      "_template": "imageGallery"
+    },
+    {
+      "title": "Ready to see the route?",
+      "lede": "",
+      "cta": {
+        "label": "Check out the complete proposal (in spanish)",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+      },
+      "_template": "cta"
+    },
+    {
+      "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar",
+      "hideLogo": true,
+      "hideTitle": true,
+      "height": 600,
+      "iframeTitle": "Sergio Torres x Eagle Ray Expeditions ",
+      "_template": "moguProposal"
+    }
+  ]
+}

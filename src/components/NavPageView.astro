@@ -1,0 +1,36 @@
+---
+/**
+ * A navigation page: its title as an <h1>, then its page-builder blocks
+ * (the same renderers as landing pages: src/components/landing/). A page with
+ * no blocks yet is the title-only placeholder.
+ *
+ * If the first block is a hero, that hero's title is the <h1> (LandingHero
+ * makes it so) and the page title is not printed separately — the same rule
+ * as LandingPageView.astro, so a page never has two <h1>s.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import LandingPageBlocks from "./landing/LandingPageBlocks.astro";
+import type { LandingPageBlocksParent } from "./landing/blockTypes";
+import type { Locale } from "../i18n/config";
+import { firstBlockHasHeading } from "../lib/mogu";
+import type { NavPagesQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  navPage: NavPagesQuery["navPages"];
+  locale: Locale;
+}
+
+const { navPage, locale } = Astro.props;
+const firstIsHero = firstBlockHasHeading(navPage.blocks);
+const hasBlocks = (navPage.blocks?.length ?? 0) > 0;
+---
+
+{
+  // With a hero first, the hero's own title is the <h1> — no second one here.
+  !firstIsHero && (
+    <section class="relative mx-auto max-w-site pt-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+      <h1 class="text-h2" data-tina-field={tinaField(navPage, "title")}>{navPage.title}</h1>
+    </section>
+  )
+}
+{hasBlocks && <LandingPageBlocks landingPage={navPage as unknown as LandingPageBlocksParent} locale={locale} />}

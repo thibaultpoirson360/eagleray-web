@@ -1,0 +1,15 @@
+{
+  "name": "Eagle Ray Expeditions",
+  "base": "La Paz, Baja California Sur",
+  "coords": "24°12′37.6″ N",
+  "contact": {
+    "whatsapp": "525568090942",
+    "email": "hello@eaglerayexpeditions.com",
+    "instagram": "https://www.instagram.com/eaglerayexpeditions/"
+  },
+  "sounder": {
+    "maxDepth": 145
+  },
+  "funnelIntro": "Hi Thibault! I'd like to customize an Eagle Ray expedition.",
+  "leadEndpoint": "https://formspree.io/f/xwlearnw"
+}

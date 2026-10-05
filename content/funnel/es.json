@@ -1,0 +1,192 @@
+{
+  "depth": {
+    "meters": 130,
+    "name": "Planificar tu ruta"
+  },
+  "kickerNumber": "09",
+  "kicker": "Arma tu expedición",
+  "title": "Personaliza tu primer",
+  "titleEmphasis": "Expedición a Baja California.",
+  "lede": "4 preguntas breves. Al final, se abre WhatsApp con tu expedición ya redactada — Thibault recibe el panorama completo y responde con una propuesta real en 48 horas, no un \"gracias por tu interés\".",
+  "escapeText": "¿Prefieres saltarte esto? Escríbenos directo por WhatsApp →",
+  "step1": {
+    "legend": "Lo básico del viaje",
+    "tripDuration": {
+      "question": "¿Cuántos días tienes en mente?",
+      "options": [
+        {
+          "label": "3 – 4 días",
+          "value": "3-4 días"
+        },
+        {
+          "label": "5 a 6 días",
+          "value": "5-6 días"
+        },
+        {
+          "label": "7 – 8 días",
+          "value": "7-8 días"
+        },
+        {
+          "label": "10 o más",
+          "value": "10 días o más"
+        }
+      ]
+    },
+    "travelingAs": {
+      "question": "¿Para quién es esta expedición?",
+      "options": [
+        {
+          "label": "Familia",
+          "value": "Familia"
+        },
+        {
+          "label": "Pareja",
+          "value": "Pareja"
+        },
+        {
+          "label": "Grupo de amigos",
+          "value": "Grupo de amigos"
+        },
+        {
+          "label": "Empresa / equipo",
+          "value": "Empresa / equipo"
+        }
+      ]
+    },
+    "guestCount": {
+      "question": "¿Cuántos irán a bordo?",
+      "min": 2,
+      "max": 10,
+      "defaultValue": 4,
+      "hint": "Hasta 10 invitados en el Bali 4.4, hasta 8 en el Astrea 42. Si son más, navegamos con los dos barcos.",
+      "fewerLabel": "Menos invitados",
+      "moreLabel": "Más invitados"
+    }
+  },
+  "step2": {
+    "legend": "Ruta y prioridades",
+    "routeFocus": {
+      "question": "¿Qué enfoque te llama más la atención?",
+      "options": [
+        {
+          "label": "Espíritu Santo — fauna silvestre",
+          "value": "Espíritu Santo — fauna silvestre"
+        },
+        {
+          "label": "La Ventana — kitesurf y wingfoil",
+          "value": "La Ventana — kitesurf y wingfoil"
+        },
+        {
+          "label": "Balandra — arrecife y remo",
+          "value": "Balandra — arrecife y remo"
+        },
+        {
+          "label": "Aún no lo tengo claro",
+          "value": "Aún no lo tengo claro"
+        }
+      ]
+    },
+    "topPriority": {
+      "question": "Si solo pudieras pedir una cosa, ¿cuál sería?",
+      "options": [
+        {
+          "label": "Fauna y buceo con esnórquel",
+          "value": "Fauna y buceo con esnórquel"
+        },
+        {
+          "label": "Kite y wingfoil",
+          "value": "Kite y wingfoil"
+        },
+        {
+          "label": "Ritmo pausado y relajación",
+          "value": "Ritmo pausado y relajación"
+        },
+        {
+          "label": "Un poco de todo",
+          "value": "Un poco de todo"
+        }
+      ]
+    }
+  },
+  "step3": {
+    "legend": "Fechas y barco",
+    "dateFromLabel": "desde",
+    "dateToLabel": "A",
+    "flexibleDates": {
+      "label": "O escríbelo a tu manera",
+      "placeholder": "ej. finales de octubre 2026, o flexible"
+    },
+    "boatPreference": {
+      "question": "¿Tienes preferencia de barco?",
+      "options": [
+        {
+          "label": "Bali 4.4",
+          "value": "Bali 4.4"
+        },
+        {
+          "label": "Fountaine Pajot Astrea 42",
+          "value": "Fountaine Pajot Astrea 42"
+        },
+        {
+          "label": "Sin preferencia",
+          "value": "Sin preferencia"
+        }
+      ]
+    }
+  },
+  "step4": {
+    "legend": "¿Con quién habla Thibault?",
+    "fullName": {
+      "label": "Nombre",
+      "placeholder": "Tu nombre",
+      "error": "Cuéntanos tu nombre, por favor."
+    },
+    "email": {
+      "label": "Correo",
+      "placeholder": "tu@correo.com",
+      "error": "Ingresa un correo válido."
+    },
+    "whatsappNumber": {
+      "label": "Número de WhatsApp",
+      "placeholder": "+52 55 0000 0000",
+      "optionalHint": "(opcional, para responder más rápido)"
+    },
+    "notes": {
+      "label": "Algo que debamos saber (opcional)",
+      "placeholder": "Alergias, nivel de buceo, si celebran algo, si alguien se marea…"
+    },
+    "privacy": "🔒 Solo usamos esto para preparar tu propuesta. Cero spam."
+  },
+  "ui": {
+    "stepCounter": "Paso {n} de {total}",
+    "autosaveRestored": "✓ Continuamos donde lo dejaste",
+    "autosaveSaved": "✓ Progreso guardado",
+    "back": "← Atrás",
+    "continue": "Continuar →",
+    "submit": "Enviar mi solicitud de expedición",
+    "sending": "Enviando…",
+    "submitError": "Algo salió mal al enviar tu solicitud — intenta de nuevo, o usa el enlace de WhatsApp de arriba.",
+    "recapTitle": "Tu expedición hasta ahora"
+  },
+  "success": {
+    "title": "Recibido — gracias",
+    "body": "Thibault revisará tu expedición y te responderá en menos de 48 horas.",
+    "whatsappButton": "Continuar la conversación en WhatsApp"
+  },
+  "whatsappMessage": {
+    "intro": "¡Hola Thibault! Quiero personalizar una expedición con Eagle Ray.",
+    "tripDurationLabel": "Duración",
+    "travelingAsLabel": "Para",
+    "guestCountLabel": "Invitados",
+    "routeFocusLabel": "Ruta de enfoque",
+    "topPriorityLabel": "Prioridad principal",
+    "datesLabel": "Fechas",
+    "datesFrom": "desde",
+    "datesToBeConfirmed": "por confirmar",
+    "boatPreferenceLabel": "Barco",
+    "fullNameLabel": "Nombre",
+    "emailLabel": "Correo",
+    "whatsappNumberLabel": "WhatsApp",
+    "notesLabel": "Notas"
+  }
+}

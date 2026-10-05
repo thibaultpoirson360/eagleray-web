@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string"
+    },
+    "isFounder": {
+      "default": false,
+      "type": "boolean"
+    },
+    "founderSignature": {
+      "type": "string"
+    },
+    "status": {
+      "default": "active",
+      "type": "string",
+      "enum": [
+        "active",
+        "joiningSoon"
+      ]
+    },
+    "joiningLabel": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

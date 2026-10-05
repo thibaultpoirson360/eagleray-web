@@ -1,0 +1,32 @@
+{
+  "depth": {
+    "meters": 41,
+    "name": "Canal de San Lorenzo"
+  },
+  "kickerNumber": "03",
+  "kicker": "Où nous naviguons",
+  "title": "L'aquarium",
+  "titleEmphasis": "du monde.",
+  "lede": "C'est ainsi que Cousteau surnommait la mer de Cortez. Un golfe étroit qui concentre sur quelques milles ce que d'autres océans dispersent sur des milliers — remontées d'eaux froides, îles désertes et une densité de vie qui surprend encore ceux qui la naviguent depuis des années. Nous travaillons la zone entre La Paz, Espíritu Santo et Cerralvo.",
+  "gallery": [
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/wdwmnrf7rtepuusne6fm.jpg",
+      "alt": "Exemple de contenu sur la faune sauvage 1",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/e2ieabxohwithxvsuo7m.jpg",
+      "alt": "Exemple de contenu sur la faune sauvage 2",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lv3fwingtwjlffngg3pv.jpg",
+      "alt": "Exemple de contenu sur la faune sauvage 3",
+      "href": ""
+    }
+  ],
+  "cta": {
+    "label": "Consultez le calendrier de la faune →",
+    "href": "#"
+  }
+}

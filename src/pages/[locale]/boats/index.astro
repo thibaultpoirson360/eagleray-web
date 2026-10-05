@@ -1,0 +1,122 @@
+---
+/**
+ * `/<locale>/boats/` — the Boats page, from the Claude Design mockup
+ * (Boats.dc.html). The boat cards are the same `boats` documents the homepage
+ * slider shows; the page text is content/boatsPage/<locale>.json.
+ *
+ * English gets the full page. Spanish and French fall back to the title-only
+ * placeholder from navPages until their drafts exist (same as La Paz).
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BoatsGrid, { type BoatCard } from "../../../components/BoatsGrid.tsx";
+import Button from "../../../components/ui/Button.astro";
+import { loadBoats, loadBoatsPage, loadNavPage } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const isEnglish = locale === "en";
+const boatsPage = isEnglish ? (await loadBoatsPage("en")).data.boatsPage : null;
+const boats = isEnglish ? (await loadBoats("en")).boats : [];
+const placeholder = isEnglish ? null : (await loadNavPage(locale, "boats")).data.navPages;
+
+const cards: BoatCard[] = boats.map((boat) => {
+  const photos = (boat.photos ?? [])
+    .filter((p): p is NonNullable<typeof p> => !!p?.image)
+    .map((p) => ({ src: p.image as string, alt: p.alt || boat.name }));
+  if (photos.length === 0 && boat.photo) photos.push({ src: boat.photo, alt: boat.photoAlt || boat.name });
+  return {
+    id: boat._sys.filename,
+    name: boat.name,
+    tagline: boat.tagline ?? undefined,
+    description: boat.description ?? undefined,
+    cover: photos[0]?.src,
+    coverAlt: photos[0]?.alt,
+    length: boat.length ?? undefined,
+    cabins: boat.cabins ?? undefined,
+    bathrooms: boat.bathrooms ?? undefined,
+    guests: boat.guests ?? undefined,
+    photos,
+  };
+});
+
+const included = (boatsPage?.included ?? []).filter((item): item is string => !!item);
+const notIncluded = (boatsPage?.notIncluded ?? []).filter((item): item is string => !!item);
+const title = boatsPage ? (boatsPage.seo?.title ?? `Boats — Eagle Ray Expeditions`) : `${placeholder?.title ?? "Boats"} — Eagle Ray Expeditions`;
+const description = boatsPage?.seo?.description ?? undefined;
+---
+
+<BaseLayout title={title} description={description} locale={locale} path="boats/" transparentNav={false} noindex={!isEnglish}>
+  <main id="main">
+    {
+      boatsPage ? (
+        <>
+          <section class="relative mx-auto max-w-site px-5 pt-16 pb-16 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+            <p class="mb-5 flex items-center gap-2.5 font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase">
+              <span class="size-1.5 rounded-full bg-ink" aria-hidden="true" />
+              {boatsPage.kicker}
+            </p>
+            <h1 class="max-w-[680px] text-h2">{boatsPage.title}</h1>
+            {boatsPage.lede && <p class="mt-5 max-w-[560px] text-[1.05rem] leading-[1.6] text-ink/64">{boatsPage.lede}</p>}
+          </section>
+
+          <section class="relative mx-auto max-w-site px-5 pb-20 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+            <BoatsGrid
+              client:visible
+              boats={cards}
+              labels={{
+                close: "Close",
+                previous: "Previous photo",
+                next: "Next photo",
+                photo: "Photo",
+                customize: boatsPage.cta?.label ?? "Customize my expedition",
+                customizeHref: boatsPage.cta?.href ?? "/en/#customize",
+                stats: { length: "Length", cabins: "Cabins", bathrooms: "Bathrooms", guests: "Guests" },
+              }}
+            />
+          </section>
+
+          <section class="relative mx-auto grid max-w-[900px] gap-10 border-t border-ink/14 px-5 py-20 md:grid-cols-2 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+            <div>
+              <p class="mb-4 font-mono text-[.72rem] tracking-[.1em] text-ink/64 uppercase">{boatsPage.includedHeading}</p>
+              <ul class="flex flex-col gap-2.5">
+                {included.map((item) => (
+                  <li class="flex gap-2.5 text-[.92rem] text-ink/72">
+                    <span class="text-[#6b3f4f]" aria-hidden="true">—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p class="mb-4 font-mono text-[.72rem] tracking-[.1em] text-ink/64 uppercase">{boatsPage.notIncludedHeading}</p>
+              <ul class="flex flex-col gap-2.5">
+                {notIncluded.map((item) => (
+                  <li class="flex gap-2.5 text-[.92rem] text-ink/50">
+                    <span aria-hidden="true">—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          {boatsPage.cta && (
+            <section class="pb-24 text-center">
+              <Button href={boatsPage.cta.href} variant="primary" context="default">
+                {boatsPage.cta.label}
+              </Button>
+            </section>
+          )}
+        </>
+      ) : (
+        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+          <h1 class="text-h2">{placeholder?.title}</h1>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>

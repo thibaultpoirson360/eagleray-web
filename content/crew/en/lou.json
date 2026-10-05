@@ -1,0 +1,49 @@
+{
+  "name": "Lou Lombardi",
+  "roles": [
+    "Captain",
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Sailing",
+    "Kite",
+    "Freediving",
+    "Marine Engineering",
+    "Snorkeling",
+    "Paddleboarding"
+  ],
+  "languages": [
+    {
+      "language": "French"
+    },
+    {
+      "language": "English"
+    },
+    {
+      "language": "Spanish"
+    }
+  ],
+  "certificates": [
+    "Master 200 GT Sailing Yacht",
+    "Marine Engineer 250 kW",
+    "Medical Care Level II",
+    "General Radio Operator",
+    "AIDA 2 Freediver",
+    "PADI Open Water"
+  ],
+  "yearsOfExperience": 15,
+  "quote": "The calmness of the deep and the glassy water.",
+  "about": "\"I've spent 15 years on sailboats around the world: the Bahamas, Polynesia, Brittany, the Caribbean and the Sea of Cortez. I've skippered boats from a Lagoon 41 to a Lagoon 62, and I'm a certified marine engineer, so I know the boat from the helm to the engine room.\n\nOn board, I teach sailing, kiting and freediving, and take you paddleboarding and snorkeling. Years of all of it in Baja have taught me to read the sea and the people on it, and to adjust the day as it goes. If it's your first time at sea, you're in the right place.\"",
+  "history": "\"The story I tell most: seeing Kavachi, an active underwater volcano in the Solomon Islands.\n\nCrossing the equator is when I understood what sailing does for my life, and decided to spend it bringing other people closer to the ocean.\"",
+  "why": "\"I love the calm of deep, glassy water, and the adrenaline of the perfect wave and the right wind.\n\nWhat I look for in guests is the spark in their eyes when the sea starts to work on them. I've watched it change people, me included.\"",
+  "image": "/assets/img/crew-lou.jpeg",
+  "imageAlt": "Lou, captain and expedition leader with Eagle Ray Expeditions",
+  "order": 3,
+  "images": [
+    "/assets/img/crew/lou-01.webp",
+    "/assets/img/crew/lou-02.webp",
+    "/assets/img/crew/lou-03.webp",
+    "/assets/img/crew/lou-04.webp",
+    "/assets/img/crew/lou-05.webp"
+  ]
+}

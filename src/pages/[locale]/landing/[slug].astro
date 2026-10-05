@@ -1,0 +1,58 @@
+---
+/**
+ * `/<locale>/landing/<slug>/` — one landing page, enumerated at build time
+ * (output: 'static', astro.config.mjs) via getStaticPaths, the same
+ * pattern as /<locale>/blog/[slug].astro. See tina/collections/landingPage.ts's
+ * header comment for why this URL lives under its own /landing/ namespace
+ * rather than directly under /<locale>/.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import LandingPageView from "../../../components/LandingPageView.astro";
+import { loadLandingPage, loadLandingPages } from "../../../lib/content";
+
+import { liveLocales, type Locale } from "../../../i18n/config";
+import { startsWithHero } from "../../../lib/mogu";
+
+export async function getStaticPaths() {
+  const perLocale = await Promise.all(
+    liveLocales.map(async (locale) => {
+      const { pages } = await loadLandingPages(locale);
+      return pages.map((page) => ({ params: { locale, slug: page._sys.filename } }));
+    })
+  );
+  return perLocale.flat();
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const result = await loadLandingPage(locale, slug);
+const landingPage = result.data.landingPage;
+// Meta description falls back to the first hero banner's supporting line.
+const firstHero = landingPage.blocks?.find((b) => b?.__typename === "LandingPageBlocksHero");
+const firstLede = firstHero && firstHero.__typename === "LandingPageBlocksHero" ? (firstHero.lede ?? undefined) : undefined;
+
+// The nav floats transparently (white text) only when the page opens with a
+// hero banner it can sit over; any other first block is on a white
+// background, where a transparent nav would be unreadable. Decided here from
+// the content rather than a per-page toggle, so it can't be set wrong. It is
+// rendered by the layout, outside the landing island, so it follows the
+// saved content — not a live edit of block order in the visual editor.
+const transparentNav = startsWithHero(landingPage.blocks);
+---
+
+<BaseLayout
+  title={landingPage.seo?.title ?? `${landingPage.title} — Eagle Ray Expeditions`}
+  description={landingPage.seo?.description ?? firstLede}
+  ogTitle={landingPage.seo?.ogTitle ?? undefined}
+  ogDescription={landingPage.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path={`landing/${slug}/`}
+  transparentNav={transparentNav}
+>
+  <main id="main">
+    <TinaIsland name="landingPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
+      <LandingPageView landingPage={landingPage} locale={locale} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

@@ -1,0 +1,102 @@
+---
+/**
+ * `/<locale>/passionate-sea-people/` — a hero, an intro text, a "Meet our
+ * people" title and the grid of COMPLETE crew cards (CrewFullCard.astro).
+ * Copy comes from the crewPage document; the cards come from the crew
+ * collection (the same records the home slider uses) with their small labels
+ * from crewSection. Extracted into its own component so the on-demand
+ * island-refresh route (src/pages/tina-island/[name].ts) can re-render it,
+ * like every other page.
+ *
+ * The hero is the shared PageHero (ui/PageHero.astro). The page starts with
+ * a dark hero, so it uses the transparent nav (BaseLayout's default).
+ *
+ * Each card has an `id` (the member's filename) so the home slider's
+ * no-JavaScript "Meet <name>" link can land on the right card.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import CrewFullCard from "./CrewFullCard.astro";
+import PageHero from "./ui/PageHero.astro";
+import { paragraphs, roleGroup, type CrewLabels, type CrewMember, type RoleGroup } from "../lib/crew";
+import type { CrewPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  crewPage: CrewPageQuery["crewPage"];
+  crewSection: CrewLabels;
+  members: NonNullable<CrewMember>[];
+}
+
+const { crewPage, crewSection, members } = Astro.props;
+const { hero } = crewPage;
+const intro = paragraphs(crewPage.intro);
+
+// Group the members by their main role, in the order Founder, Captain,
+// Expedition Leader, Chef; anyone else last. Empty groups are not shown.
+const labels = crewPage.roleLabels;
+const groupDefs: { key: RoleGroup; label: string | null | undefined }[] = [
+  { key: "founder", label: labels?.founder },
+  { key: "captain", label: labels?.captain },
+  { key: "expeditionLeader", label: labels?.expeditionLeader },
+  { key: "chef", label: labels?.chef },
+  { key: "other", label: labels?.other },
+];
+const groups = groupDefs
+  .map((g) => ({
+    key: g.key,
+    label: g.label ?? "",
+    members: members.filter((m) => roleGroup(m.roles) === g.key),
+  }))
+  .filter((g) => g.members.length > 0);
+---
+
+<PageHero
+  title={hero?.title ?? ""}
+  kicker={hero?.kicker}
+  lede={hero?.lede}
+  image={hero?.image}
+  imageAlt={hero?.imageAlt}
+  fields={{
+    title: tinaField(hero, "title"),
+    kicker: tinaField(hero, "kicker"),
+    lede: tinaField(hero, "lede"),
+    image: tinaField(hero, "image"),
+  }}
+/>
+
+{
+  intro.length > 0 && (
+    <section class="relative mx-auto max-w-site px-pad pt-section pl-[calc(var(--spacing-pad)+var(--rail))]">
+      <div class="max-w-[62ch] space-y-4 text-lede text-ink/74" data-tina-field={tinaField(crewPage, "intro")}>
+        {intro.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+<section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+  {
+    crewPage.gridTitle && (
+      <h2 class="h2 mb-section-head text-h2" data-tina-field={tinaField(crewPage, "gridTitle")}>
+        {crewPage.gridTitle}
+      </h2>
+    )
+  }
+  {
+    groups.map((group) => (
+      <div class="mb-16 last:mb-0">
+        <h3 class="mb-8 font-display text-[clamp(22px,2.6vw,28px)] text-ink" data-tina-field={tinaField(crewPage.roleLabels, group.key)}>
+          {group.label}
+        </h3>
+        <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))]">
+          {group.members.map((member) => (
+            <div id={member._sys.filename} class="scroll-mt-[calc(var(--spacing-nav-solid)+1rem)]">
+              <CrewFullCard member={member} labels={crewSection} />
+            </div>
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</section>

@@ -1,0 +1,108 @@
+---
+/**
+ * Customize funnel — `<section class="section section-funnel" id="customize">`
+ * in the source index.html (lines 421-591), CSS at styles.css "18. FUNNEL"
+ * (L2111-2589). The most stateful component on the site: CLAUDE.md ground
+ * rule 5 requires preserving partial-lead capture (blur + sendBeacon on
+ * tab-close), draft autosave/restore, dynamic WhatsApp message generation,
+ * prefers-reduced-motion, and no-JS fallbacks exactly.
+ *
+ * Split in two: this file is the static shell (head, WhatsApp escape
+ * link — server-rendered, Tina-editable) and FunnelForm.tsx is the actual
+ * `<form>`, a single Preact island. Per CLAUDE.md, "the funnel wizard"
+ * needs Preact — unlike Crew/Boats' sliders, almost everything in the
+ * form (step, every field, validation, autosave) is real component state,
+ * not a small hydrated control bolted onto server-rendered markup, so the
+ * whole form is the island rather than splitting it further.
+ *
+ * KNOWN, UNRESOLVED GAP — flagging rather than silently fixing or
+ * preserving without comment: source's no-JS fallback for this section
+ * doesn't actually work. `html:not(.js) .funnel-nav { display: none }`
+ * hides Back/Continue/Submit, and the submit button also starts with a
+ * `hidden` attribute that only JS ever removes — so without JS, all 4
+ * steps render stacked (per `html:not(.js) .fstep`) but there is no way
+ * to submit the form at all. This needs a `<form action=method=>` plus a
+ * real Formspree POST fallback to actually work, which is new scope
+ * beyond migrating existing behaviour — ported as-is (broken) rather
+ * than silently building that, pending a decision.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import FunnelForm from "./FunnelForm.tsx";
+import type { FunnelQuery, SiteSettingsQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  funnel: FunnelQuery["funnel"];
+  siteSettings: SiteSettingsQuery["siteSettings"];
+}
+
+const { funnel, siteSettings } = Astro.props;
+const waHref = siteSettings.contact?.whatsapp ? `https://wa.me/${siteSettings.contact.whatsapp}` : undefined;
+---
+
+<section
+  class="section section-funnel relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="customize"
+  data-depth-stop={funnel.depth?.meters ?? undefined}
+  data-depth-name={funnel.depth?.name ?? undefined}
+>
+  <div class="customize-inner mx-auto max-w-form">
+    <div class="customize-head mb-[2.4rem] text-center" data-reveal>
+      <p
+        class="kicker mb-[1.1rem] flex items-center justify-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
+      >
+        {
+          funnel.kickerNumber && (
+            <span class="text-ink" data-tina-field={tinaField(funnel, "kickerNumber")}>
+              {funnel.kickerNumber}
+            </span>
+          )
+        }
+        <span data-tina-field={tinaField(funnel, "kicker")}>{funnel.kicker}</span>
+      </p>
+      <h2 class="h2 text-h2" data-tina-field={tinaField(funnel, "title")}>
+        {funnel.title}
+        {
+          funnel.titleEmphasis && (
+            <>
+              <br />
+              <em class="not-italic text-ink" data-tina-field={tinaField(funnel, "titleEmphasis")}>
+                {funnel.titleEmphasis}
+              </em>
+            </>
+          )
+        }
+      </h2>
+      {
+        funnel.lede && (
+          <p
+            class="lede mx-auto mt-[1.2rem] max-w-[58ch] text-lede text-ink/74 opacity-[.92]"
+            data-tina-field={tinaField(funnel, "lede")}
+          >
+            {funnel.lede}
+          </p>
+        )
+      }
+    </div>
+
+    {
+      waHref && funnel.escapeText && (
+        <a
+          class="funnel-escape mb-[1.4rem] block rounded border border-dashed border-ink/26 px-4 py-[.7rem] text-center text-[.88rem] text-ink/64 transition-colors duration-300 hover:border-ink hover:text-ink"
+          href={waHref}
+          target="_blank"
+          rel="noopener"
+          data-tina-field={tinaField(funnel, "escapeText")}
+        >
+          {funnel.escapeText}
+        </a>
+      )
+    }
+
+    <FunnelForm
+      client:visible
+      funnel={funnel}
+      leadEndpoint={siteSettings.leadEndpoint ?? ""}
+      whatsappNumber={siteSettings.contact?.whatsapp ?? ""}
+    />
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+  "name": "Alexis",
+  "roles": [
+    "Leader d'expédition"
+  ],
+  "skills": [
+    "Plongée sous-marine"
+  ],
+  "about": "Thibault a rencontré Alexis au Chili alors qu'ils n'avaient que cinq ans. Aujourd'hui, Alexis mène Eagle Ray sous la surface — un instructeur de plongée international dont les réflexes d'hospitalité cinq étoiles se sont affûtés au Ritz-Carlton et au Mandarin Oriental. Il lit une table comme il lit un site de plongée : vite, sans bruit, avant que les autres ne s'en aperçoivent. On l'appelle le Pirate, et il a mérité ce surnom. Il sait quelle crique secrète choisir, quelle histoire mérite d'être racontée à dîner et quand le silence en dit davantage. Avec Alexis à bord, les plongées d'exception finissent souvent en longs dîners à la française, autour d'un bon vin, et en moments qui entrent dans la légende de l'équipage.",
+  "image": "/assets/img/crew-alexis.jpeg",
+  "imageAlt": "Alexis, chef d'expédition — Plongée sous-marine",
+  "order": 2
+}

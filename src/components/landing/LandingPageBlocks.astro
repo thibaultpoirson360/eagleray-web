@@ -1,0 +1,56 @@
+---
+/**
+ * Dispatches each `landingPage.blocks` item to its renderer by
+ * `__typename` — the same union-discrimination pattern Nav.astro uses for
+ * `NavigationLinksLink` vs `NavigationLinksDropdown` (tina/collections/
+ * navigation.ts). Tina names a stored block's generated GraphQL type
+ * `<Collection><Field><Template>` in PascalCase, so the five templates on
+ * landingPage.blocks (tina/collections/landingPage.ts) become:
+ *   hero          -> LandingPageBlocksHero
+ *   richText      -> LandingPageBlocksRichText
+ *   imageGallery  -> LandingPageBlocksImageGallery
+ *   cta           -> LandingPageBlocksCta
+ *   moguProposal  -> LandingPageBlocksMoguProposal
+ * Confirmed against the generated tina/__generated__/types.ts after
+ * `tinacms build` (see blockTypes.ts).
+ */
+import LandingHero from "./LandingHero.astro";
+import LandingRichText from "./LandingRichText.astro";
+import LandingImageGallery from "./LandingImageGallery.astro";
+import LandingCta from "./LandingCta.astro";
+import LandingMoguProposal from "./LandingMoguProposal.astro";
+import MoguProposalHero from "../MoguProposalHero.astro";
+import type { LandingPageBlocksParent } from "./blockTypes";
+import type { Locale } from "../../i18n/config";
+
+interface Props {
+  landingPage: LandingPageBlocksParent;
+  /** Needed so a block's `#customize` link can point at that language's homepage. */
+  locale: Locale;
+}
+
+const { landingPage, locale } = Astro.props;
+---
+
+{
+  // Matched by block kind, not by the full GraphQL type name: the same block
+  // definitions are used by landing pages (LandingPageBlocks…) and nav pages
+  // (NavPagesBlocks…), so the generated type name differs by document.
+  (landingPage.blocks ?? []).map((raw: any, index: number) => {
+    if (!raw) return null;
+    const kind = raw.__typename.replace(/^(LandingPage|NavPages)Blocks/, "");
+    const block = raw as any;
+    return (
+      <>
+        {kind === "Hero" && <LandingHero block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "RichText" && <LandingRichText block={block} landingPage={landingPage} index={index} />}
+        {kind === "ImageGallery" && (
+          <LandingImageGallery block={block} landingPage={landingPage} index={index} locale={locale} />
+        )}
+        {kind === "Cta" && <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} />}
+        {kind === "MoguHero" && <MoguProposalHero tripSlug={block.tripSlug} hideLogo={block.hideLogo ?? false} hideTitle={block.hideTitle ?? false} title={block.iframeTitle ?? undefined} />}
+      </>
+    );
+  })
+}

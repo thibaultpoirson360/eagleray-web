@@ -1,0 +1,15 @@
+{
+  "depth": {
+    "meters": 96,
+    "name": "Les bateaux"
+  },
+  "kickerNumber": "07",
+  "kicker": "Votre expédition",
+  "title": "Notre flotte. Une seule norme :",
+  "titleEmphasis": "entièrement privé, entièrement à vous.",
+  "cta": {
+    "label": "Voir tous les bateaux →",
+    "href": "#customize"
+  },
+  "dotsLabel": "Aller au bateau"
+}

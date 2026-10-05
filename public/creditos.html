@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="credits.title">Photo credits · Eagle Ray Expeditions</title>
+<link rel="stylesheet" href="styles.css?v=20260724">
+<link rel="icon" href="assets/img/logo-mark-navy.png" type="image/png">
+</head>
+<body class="page-credits">
+<a class="credits-back" href="index.html" data-i18n="credits.back">← Back to Eagle Ray Expeditions</a>
+<main class="container">
+  <h1 class="h2 h2-plain" data-i18n="credits.title">Photo credits</h1>
+  <p class="lede"><span data-i18n="credits.lede">Photography used on this site is licensed under Creative Commons via</span> <a href="https://openverse.org" target="_blank" rel="noopener" style="color:var(--accent)">Openverse</a>.</p>
+  <ul class="credits-list" data-credits></ul>
+</main>
+<script defer src="lib/i18n.js?v=20260724"></script>
+<script defer src="lib/credits-render.js"></script>
+<script>
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var LANGS = ["en", "es", "fr"];
+    var lang = "en";
+    try {
+      var saved = window.localStorage.getItem("ere_lang");
+      if (saved && LANGS.indexOf(saved) > -1) lang = saved;
+      else {
+        var nav = ((navigator.language || "en") + "").slice(0, 2).toLowerCase();
+        if (LANGS.indexOf(nav) > -1) lang = nav;
+      }
+    } catch (e) {}
+    document.documentElement.setAttribute("lang", lang);
+    var dict = (window.__I18N__ && window.__I18N__[lang]) || {};
+    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function (el) {
+      var v = el.getAttribute("data-i18n").split(".").reduce(function (o, k) { return o == null ? undefined : o[k]; }, dict);
+      if (v != null) el.textContent = v;
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -9,10 +9,25 @@ out/
 next-env.d.ts
 *.tsbuildinfo
 
-# env — never commit the Airtable key
+# env : never commit the Airtable key
 .env
 .env.local
 .env*.local
 
 # vercel
 .vercel
+
+# tinacms (self-hosted): generated at build time by `tinacms build|dev`
+tina/__generated__/
+public/admin/
+.tina/
+
+# astro
+dist/
+.astro/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

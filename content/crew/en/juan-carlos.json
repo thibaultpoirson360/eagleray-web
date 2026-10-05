@@ -1,0 +1,44 @@
+{
+  "name": "Juan Carlos",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Scuba",
+    "Snorkeling",
+    "Freediving",
+    "Paddleboarding",
+    "Kayaking",
+    "Hiking",
+    "Camping"
+  ],
+  "languages": [
+    {
+      "language": "Spanish"
+    },
+    {
+      "language": "English"
+    }
+  ],
+  "certificates": [
+    "PADI Master Scuba Diver Trainer",
+    "STCW Deckhand",
+    "TDI Tech Diver",
+    "TDI Cave Diver"
+  ],
+  "yearsOfExperience": 10,
+  "quote": "It's everywhere: mysterious, powerful, calm, life everywhere.",
+  "about": "\"I became a scuba instructor at 21, and a cave, cenote and shark dive guide in Cozumel before 23. I've taught diving in the Maldives, Indonesia and Guatemala, but the waters I know best are the Sea of Cortez.\n\nI start every trip with questions: what's your name, where are you from, have you been in these waters before, what do you definitely want to experience? Then I plan around the answers. It's hard to stay tense when you're telling your own story.\"",
+  "history": "\"Most recently, I sailed solo from Loreto to La Paz. Before that, I spent more than 30 days in a row as a deckhand on a liveaboard to the Socorro Islands.\n\nI've led dive groups of up to eight in hard conditions, beginner divers and snorkelers, hiking and camping groups, and sailing charters as a guide and deckhand.\"",
+  "why": "\"It started the first time I went diving, when someone told me I could do this for a living and travel the world.\n\nWhat I love about sharing the sea fits in a list: intimacy, confidence, learning new skills, facing fears, unexpected encounters. And trust.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
+  "imageAlt": "Juan Carlos, Expedition Leader",
+  "order": 8,
+  "images": [
+    "/assets/img/crew/juan-carlos-01.webp",
+    "/assets/img/crew/juan-carlos-02.webp",
+    "/assets/img/crew/juan-carlos-03.webp",
+    "/assets/img/crew/juan-carlos-04.webp",
+    "/assets/img/crew/juan-carlos-05.webp"
+  ]
+}

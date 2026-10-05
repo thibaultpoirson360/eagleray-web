@@ -1,0 +1,122 @@
+---
+/**
+ * Wildlife — `<section class="section" id="wildlife">` in the source
+ * index.html (lines 339-367), CSS at styles.css "new additions" block
+ * (L2917-2935) plus the shared `.section`/`.section-head` shell.
+ *
+ * CLAUDE.md is explicit that this page's gallery is placeholder — the
+ * same whale-shark.jpg three times with generic alt text — not real
+ * content, so it's ported structurally as exactly that: three identical
+ * placeholder items, real photos/copy to come later from the client's
+ * content mapping.
+ *
+ * `.wildlife-gallery-item` was fixed 3-across at every width (audit §6
+ * item 4 — flagged as needing a human decision on first build): on a
+ * phone that rendered as ~100px-wide slivers. Resolved per explicit
+ * direction: below `sm` (640px) it's a horizontal scroll-snap slider,
+ * one image per screen width, no dot nav (unlike crew/boats — CSS only,
+ * same `-mx-pad`/scroll-snap technique those two already use, just
+ * without SliderDots.tsx); `sm` and up keeps the original 3-column grid
+ * unchanged. Breakpoint choice: source had no responsive treatment at
+ * all to anchor this on, so `sm` (not `md`) was picked as the narrowest
+ * "mobile" reading — flag back if tablet-width (640-1024px) should also
+ * get the slider.
+ *
+ * One small, consistent deviation: source's gallery links are `href=""`
+ * (a dead self-link — arguably worse than no link, since it presents as
+ * clickable to keyboard/screen-reader users and does nothing). Same
+ * "don't render a broken affordance" rule I've applied to every other
+ * empty-optional-CTA case: an item without an href renders as a plain
+ * div instead of an anchor.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import type { WildlifeQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  wildlife: WildlifeQuery["wildlife"];
+}
+
+const { wildlife } = Astro.props;
+const { cta, gallery } = wildlife;
+const itemClass =
+  "wildlife-gallery-item w-full flex-none snap-start sm:w-auto sm:flex-[1_1_calc(33.333%-1rem)] sm:max-w-[calc(33.333%-1rem)]";
+const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
+---
+
+<section
+  class="section relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="wildlife"
+  data-depth-stop={wildlife.depth?.meters ?? undefined}
+  data-depth-name={wildlife.depth?.name ?? undefined}
+>
+  <div class="section-head mb-section-head">
+    <p
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
+      data-reveal
+    >
+      {
+        wildlife.kickerNumber && (
+          <span class="text-ink" data-tina-field={tinaField(wildlife, "kickerNumber")}>
+            {wildlife.kickerNumber}
+          </span>
+        )
+      }
+      <span data-tina-field={tinaField(wildlife, "kicker")}>{wildlife.kicker}</span>
+    </p>
+    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(wildlife, "title")}>
+      {wildlife.title}
+      {
+        wildlife.titleEmphasis && (
+          <>
+            <br />
+            <em class="not-italic text-ink" data-tina-field={tinaField(wildlife, "titleEmphasis")}>
+              {wildlife.titleEmphasis}
+            </em>
+          </>
+        )
+      }
+    </h2>
+    {
+      wildlife.lede && (
+        <p
+          class="lede mt-[1.2rem] max-w-[58ch] text-lede text-ink/74 opacity-[.92]"
+          data-reveal
+          data-tina-field={tinaField(wildlife, "lede")}
+        >
+          {wildlife.lede}
+        </p>
+      )
+    }
+  </div>
+
+  {
+    gallery && gallery.length > 0 && (
+      <div tabindex="0" role="group" aria-label={wildlife.title} class="wildlife-gallery scrollbar-none -mx-pad flex snap-x snap-mandatory gap-4 overflow-x-auto px-pad [-webkit-overflow-scrolling:touch] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden">
+        {gallery.map(
+          (item, i) =>
+            item &&
+            (item.href ? (
+              <a href={item.href} class={itemClass} data-tina-field={tinaField(wildlife, "gallery", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </a>
+            ) : (
+              <div class={itemClass} data-tina-field={tinaField(wildlife, "gallery", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </div>
+            ))
+        )}
+      </div>
+    )
+  }
+
+  {
+    cta && cta.href && cta.href !== "#" && (
+      <p class="mt-10 text-center" data-reveal>
+        <Button href={cta.href} variant="primary" context="default" data-tina-field={tinaField(wildlife, "cta")}>
+          {cta.label}
+        </Button>
+      </p>
+    )
+  }
+</section>

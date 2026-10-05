@@ -1,0 +1,95 @@
+---
+/**
+ * `/<locale>/sail-with-us/` — "Sail with Us", from the Claude Design mockup
+ * (Sail With Us.dc.html): hero photo and title, intro, and the expedition
+ * cards (up to three in a row). The trip-planning funnel follows below, from
+ * the same funnel document as the homepage (#customize), so one edit in the
+ * admin updates both.
+ *
+ * English gets the mockup content (content/sailWithUsPage/en.json). Spanish
+ * and French show the funnel alone until their drafts exist.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import Funnel from "../../../components/Funnel.astro";
+import ExpeditionCards, { type ExpeditionCard } from "../../../components/ExpeditionCards.tsx";
+import { loadFunnel, loadSailWithUsPage, loadSiteSettings } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const isEnglish = locale === "en";
+const [funnelResult, siteSettingsResult, pageResult] = await Promise.all([
+  loadFunnel(locale),
+  loadSiteSettings(),
+  isEnglish ? loadSailWithUsPage("en") : Promise.resolve(null),
+]);
+const page = pageResult?.data.sailWithUsPage ?? null;
+
+const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
+  .filter((e): e is NonNullable<typeof e> => !!e?.name)
+  .map((e) => ({
+    id: e.name,
+    name: e.name,
+    image: e.image ?? undefined,
+    imageAlt: e.imageAlt ?? undefined,
+    description: e.description ?? undefined,
+    href: e.href || undefined,
+  }));
+const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
+---
+
+<BaseLayout
+  title={page?.seo?.title ?? `Sail with Us — Eagle Ray Expeditions`}
+  description={page?.seo?.description ?? undefined}
+  locale={locale}
+  path="sail-with-us/"
+  transparentNav={false}
+>
+  <main id="main">
+    {
+      page && (
+        <>
+          <section class="relative aspect-[16/9] max-h-[70vh] w-full overflow-hidden bg-surface">
+            {page.heroImage && <img src={page.heroImage} alt={page.heroImageAlt ?? ""} class="absolute inset-0 h-full w-full object-cover" />}
+            <div class="absolute inset-0 flex items-center justify-center px-5">
+              <h1 class="text-center text-[clamp(1.75rem,5vw,2.875rem)] tracking-[.3em] text-[#16263a] uppercase">{page.title}</h1>
+            </div>
+          </section>
+
+          <section class="mx-auto max-w-[720px] px-5 pt-16 pb-14 text-center">
+            {intro.map((paragraph) => (
+              <p class="text-[1.0625rem] leading-[1.8] text-ink/68">{paragraph}</p>
+            ))}
+          </section>
+
+          <section class="mx-auto max-w-site px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+            {page.expeditionsLabel && (
+              <p class="mb-10 border-t border-ink/14 pt-10 text-center font-mono text-[.76rem] tracking-[.24em] text-ink/50 uppercase">
+                {page.expeditionsLabel}
+              </p>
+            )}
+            <ExpeditionCards
+              client:visible
+              expeditions={expeditions}
+              labels={{
+                info: "+ INFO",
+                close: "Close",
+                learnMore: "Learn more",
+                customize: "Customize my expedition",
+                customizeHref: "#customize",
+              }}
+            />
+          </section>
+        </>
+      )
+    }
+
+    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale }}>
+      <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
+  </main>
+</BaseLayout>
