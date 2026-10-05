@@ -8,7 +8,7 @@
   },
   "secondaryCta": {
     "label": "Meet us",
-    "href": "#difference"
+    "href": "/en/about-us/"
   },
   "background": {
     "videoSrc": "/assets/video/hero-loop.mp4",
