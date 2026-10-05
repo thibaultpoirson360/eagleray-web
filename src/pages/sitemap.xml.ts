@@ -29,7 +29,7 @@ export const GET: APIRoute = async ({ site }) => {
   const origin = site ?? new URL("https://eaglerayexpeditions.com");
 
   // Pages that exist in every live language.
-  const entries: Entry[] = ["", "contact/", "blog/", "passionate-sea-people/", "sail-with-us/"].map((path) => ({
+  const entries: Entry[] = ["", "contact/", "blog/", "passionate-sea-people/", "sail-with-us/", "customize-your-expedition/"].map((path) => ({
     path,
     locales: [...liveLocales],
   }));

@@ -1,0 +1,28 @@
+---
+/**
+ * `/<locale>/customize-your-expedition/` — the trip-planning funnel on its own
+ * page, the same layout the Sail with Us page had before it got its content.
+ * Uses the same funnel document as the homepage (#customize), so one edit in
+ * the admin updates both.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import Funnel from "../../../components/Funnel.astro";
+import { loadFunnel, loadSiteSettings } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
+---
+
+<BaseLayout title={`Customize your expedition — Eagle Ray Expeditions`} locale={locale} path="customize-your-expedition/" transparentNav={false}>
+  <main id="main">
+    <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale }}>
+      <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

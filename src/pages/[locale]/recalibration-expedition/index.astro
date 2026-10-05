@@ -7,6 +7,7 @@
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
+import PageHero from "../../../components/ui/PageHero.astro";
 import MoguProposal from "../../../components/MoguProposal.astro";
 import BodyParagraph from "../../../components/richtext/BodyParagraph.astro";
 import { loadNavPage, loadRecalibrationPage } from "../../../lib/content";
@@ -30,20 +31,14 @@ const title = page ? (page.seo?.title ?? `${page.title} — Eagle Ray Expedition
   description={page?.seo?.description ?? undefined}
   locale={locale}
   path="recalibration-expedition/"
-  transparentNav={false}
+  transparentNav={isEnglish}
   noindex={!isEnglish}
 >
   <main id="main">
     {
       page ? (
         <>
-          <section class="relative aspect-[16/9] max-h-[68vh] w-full overflow-hidden bg-surface">
-            {page.heroImage && <img src={page.heroImage} alt={page.heroImageAlt ?? ""} class="absolute inset-0 h-full w-full object-cover" />}
-            <div class="absolute inset-x-0 top-0 flex flex-col items-center gap-3 px-5 pt-[clamp(28px,6vw,56px)] text-center">
-              <h1 class="text-[clamp(1.625rem,4.2vw,2.5rem)] tracking-[.06em] text-[#16263a] uppercase">{page.title}</h1>
-              {page.subtitle && <p class="text-[.9375rem] text-[#16263a]/80">{page.subtitle}</p>}
-            </div>
-          </section>
+          <PageHero title={page.title} lede={page.subtitle} image={page.heroImage} imageAlt={page.heroImageAlt} />
 
           <section class="mx-auto grid max-w-[1100px] items-center gap-12 px-5 py-20 md:grid-cols-2 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
             <div class="text-[1.05rem] leading-[1.75] text-ink/75">
