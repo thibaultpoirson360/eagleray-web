@@ -2,11 +2,13 @@
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
   "heroImageAlt": "Guests sailing on a catamaran in La Paz",
   "title": "Sail with us",
+  "subtitle": "Private sailing trips built around your group.",
   "intro": "Eagle Ray Expeditions builds private sailing trips around your group, not the other way around.\nYou choose who comes. Our team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
   "expeditionsLabel": "Choose the expedition",
   "expeditions": [
     {
       "name": "Recalibration Expedition",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Passionate_Sea_People_Sailing_Experience_Sailing_uqdgak.jpg",
       "imageAlt": "Recalibration Expedition",
       "href": "/en/recalibration-expedition/"
     },
@@ -19,6 +21,5 @@
   "seo": {
     "title": "Sail with Us — Eagle Ray Expeditions",
     "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip."
-  },
-  "subtitle": "Private sailing trips built around your group."
+  }
 }
