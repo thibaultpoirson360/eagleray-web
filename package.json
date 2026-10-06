@@ -14,7 +14,8 @@
     "tina:dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"astro dev\"",
     "tina:build": "tinacms build --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
     "tina:build:local": "TINA_PUBLIC_IS_LOCAL=true tinacms build --local --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "design-system": "node scripts/build-design-system.mjs"
   },
   "dependencies": {
     "@astrojs/preact": "6.0.5",
