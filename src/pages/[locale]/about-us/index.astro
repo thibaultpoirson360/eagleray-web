@@ -1,0 +1,49 @@
+---
+/**
+ * `/<locale>/about-us/` — the Our story page, from the Claude Design mockup.
+ *
+ * Each live language gets the full page once its aboutPage document exists
+ * (content/aboutPage/<locale>.json; the translation workflow drafts es and fr
+ * from the English file). Until then, the language shows the title-only Our
+ * Story page from navPages, so the menu link never leads to a 404.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import AboutPageView from "../../../components/AboutPageView.astro";
+import { loadAboutPages, loadNavPage } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export async function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const { pages } = await loadAboutPages(locale);
+const aboutPage = pages[0];
+const placeholder = aboutPage ? null : (await loadNavPage(locale, "our-story")).data.navPages;
+const title = aboutPage
+  ? (aboutPage.seo?.title ?? `${aboutPage.title} — Eagle Ray Expeditions`)
+  : `${placeholder?.title ?? "Our story"} — Eagle Ray Expeditions`;
+---
+
+<BaseLayout
+  title={title}
+  description={aboutPage?.seo?.description ?? aboutPage?.lede ?? undefined}
+  ogTitle={aboutPage?.seo?.ogTitle ?? undefined}
+  ogDescription={aboutPage?.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path="about-us/"
+  transparentNav={!!aboutPage}
+  noindex={!aboutPage}
+>
+  <main id="main">
+    {
+      aboutPage ? (
+        <AboutPageView aboutPage={aboutPage} />
+      ) : (
+        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+          <h1 class="text-h2">{placeholder?.title}</h1>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>

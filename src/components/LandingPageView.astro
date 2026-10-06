@@ -1,0 +1,42 @@
+---
+/**
+ * `/<locale>/landing/<slug>/` — free-form landing pages composed from
+ * tina/collections/landingPage.ts's `blocks` list. Thin content component
+ * (not inlined in the page route), matching every other page's own
+ * pattern: the on-demand island-refresh route
+ * (src/pages/tina-island/[name].ts) needs a component reference to
+ * re-render for live editing.
+ *
+ * The page's `title` is NOT printed as a visible heading above the blocks
+ * (a decision made on the owner's side: a landing page opens straight into
+ * its blocks). It is still the page's <h1>, though, because every page needs
+ * exactly one:
+ *   - if the FIRST block is a hero, that block's title is the <h1>
+ *     (LandingHero.astro makes it so);
+ *   - otherwise a visually hidden <h1> with the page title is added here, so
+ *     screen readers and search engines get a heading and the editor can
+ *     still click-to-edit the title in the visual editor's sidebar.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import LandingPageBlocks from "./landing/LandingPageBlocks.astro";
+import type { Locale } from "../i18n/config";
+import { firstBlockHasHeading } from "../lib/mogu";
+import type { LandingPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  landingPage: LandingPageQuery["landingPage"];
+  locale: Locale;
+}
+
+const { landingPage, locale } = Astro.props;
+const firstIsHero = firstBlockHasHeading(landingPage.blocks);
+---
+
+{
+  !firstIsHero && (
+    <h1 class="sr-only" data-tina-field={tinaField(landingPage, "title")}>
+      {landingPage.title}
+    </h1>
+  )
+}
+<LandingPageBlocks landingPage={landingPage} locale={locale} />

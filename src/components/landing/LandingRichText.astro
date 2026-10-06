@@ -1,0 +1,33 @@
+---
+/**
+ * `richText` landing block — the exact same TinaMarkdown + override-
+ * components pattern as a blog post body (BlogPostView.astro), reusing
+ * src/components/richtext/*.astro directly rather than duplicating their
+ * styling. The visual context (a narrow reading column inside a block
+ * list) matches the blog post body closely enough that no new overrides
+ * were needed.
+ */
+import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import BodyParagraph from "../richtext/BodyParagraph.astro";
+import BodyQuote from "../richtext/BodyQuote.astro";
+import BodyImage from "../richtext/BodyImage.astro";
+import type { RichTextBlock, LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: RichTextBlock;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class="mx-auto max-w-[700px]" data-tina-field={tinaField(block, "body")}>
+    <TinaMarkdown content={block.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
+  </div>
+</section>

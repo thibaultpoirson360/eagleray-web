@@ -1,0 +1,11 @@
+{
+  "name": "Thibault",
+  "roles": [
+    "Fundador",
+    "Organizador de la expedición"
+  ],
+  "about": "Thibault vive en México desde 2016. Después de siete años impulsando empresas tecnológicas en Ciudad de México, decidió dedicar su energía a lo que siempre fue más importante: la aventura, las conexiones humanas y el poder del mar. Construye Eagle Ray relación a relación, reuniendo a gente de mar que comparte la misma calidez, curiosidad e instinto.",
+  "image": "/assets/img/founder-thibault.webp",
+  "imageAlt": "Thibault Poirson De Cardon, fundador de Eagle Ray Expeditions",
+  "order": 1
+}

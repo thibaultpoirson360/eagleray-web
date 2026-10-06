@@ -1,0 +1,12 @@
+{
+  "title": "El Día de Acción de Gracias con Sergio Torres (prueba)",
+  "blocks": [
+    {
+      "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar",
+      "hideLogo": false,
+      "hideTitle": false,
+      "iframeTitle": "Sergio Torres x Eagle Ray Expeditions",
+      "_template": "moguHero"
+    }
+  ]
+}

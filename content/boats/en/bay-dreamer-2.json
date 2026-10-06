@@ -1,0 +1,18 @@
+{
+  "name": "Bay Dreamer",
+  "tagline": "Icon Charter — Lagoon 450F",
+  "description": "4 cabins, 8 berths, 4 heads. Flybridge, Starlink, watermaker — built for groups who want space and comfort in equal measure.",
+  "photo": "/assets/img/boat-baydreamer-exterior.webp",
+  "photoAlt": "Bay Dreamer — catamaran exterior at anchor",
+  "photos": [
+    {
+      "image": "/assets/img/boat-baydreamer-exterior.webp",
+      "alt": "Bay Dreamer — catamaran exterior"
+    }
+  ],
+  "length": "13.72 m",
+  "cabins": "4 double",
+  "bathrooms": "4 private",
+  "guests": "up to 8",
+  "order": 1
+}

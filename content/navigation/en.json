@@ -1,0 +1,66 @@
+{
+  "brand": {
+    "markLight": "/assets/img/logo-mark-cream.png",
+    "wordmarkLight": "/assets/img/logo-wordmark-cream.png",
+    "markDark": "/assets/img/logo-mark-navy.png",
+    "wordmarkDark": "/assets/img/logo-wordmark-navy.png",
+    "wordmarkAlt": "Eagle Ray Expeditions"
+  },
+  "links": [
+    {
+      "label": "Passionate Sea People",
+      "href": "/en/passionate-sea-people/",
+      "_template": "link"
+    },
+    {
+      "label": "About Us",
+      "items": [
+        {
+          "label": "Our Story",
+          "href": "/en/about-us/"
+        },
+        {
+          "label": "Passionate Sea People",
+          "href": "/en/passionate-sea-people/"
+        }
+      ],
+      "_template": "dropdown"
+    },
+    {
+      "label": "Sail with Us",
+      "href": "/en/sail-with-us/",
+      "_template": "link"
+    },
+    {
+      "label": "Blog",
+      "href": "/en/blog/",
+      "_template": "link"
+    },
+    {
+      "label": "La Paz",
+      "href": "/en/la-paz/",
+      "_template": "link"
+    },
+    {
+      "label": "Boats",
+      "href": "/en/boats/",
+      "_template": "link"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/en/contact/",
+      "_template": "link"
+    }
+  ],
+  "cta": {
+    "href": "/en/sail-with-us/",
+    "label": "Go Sailing",
+    "mobileLabel": "Customize your expedition"
+  },
+  "mobileFoot": "24°12′37.6″ N · LA PAZ · B.C.S.",
+  "toggleLabel": "Toggle menu",
+  "ariaLabel": "Main",
+  "languageLabel": "Language",
+  "skipLabel": "Skip to main content",
+  "surfaceLabel": "Surface"
+}

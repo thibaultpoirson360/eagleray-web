@@ -1,0 +1,32 @@
+{
+  "depth": {
+    "meters": 41,
+    "name": "Canal de San Lorenzo"
+  },
+  "kickerNumber": "03",
+  "kicker": "Dónde navegamos",
+  "title": "El acuario",
+  "titleEmphasis": "del mundo.",
+  "lede": "Así llamó Cousteau al Mar de Cortés. Un golfo angosto que concentra en pocas millas lo que otros océanos reparten en miles — corrientes frías que suben del fondo, islas desiertas y una densidad de vida que sigue sorprendiendo a quien lleva años navegándolo. Trabajamos el tramo entre La Paz, Espíritu Santo y Cerralvo.",
+  "gallery": [
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/wdwmnrf7rtepuusne6fm.jpg",
+      "alt": "Marca de posición «Fauna silvestre» 1",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/e2ieabxohwithxvsuo7m.jpg",
+      "alt": "Marca de posición «Fauna silvestre» 2",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lv3fwingtwjlffngg3pv.jpg",
+      "alt": "Marca de posición «Fauna silvestre 3»",
+      "href": ""
+    }
+  ],
+  "cta": {
+    "label": "Consulta el calendario de fauna silvestre →",
+    "href": "#"
+  }
+}

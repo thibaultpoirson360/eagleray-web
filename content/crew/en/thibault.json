@@ -1,0 +1,20 @@
+{
+  "name": "Thibault",
+  "roles": [
+    "Founder",
+    "Expedition Host"
+  ],
+  "about": "Thibault has called Mexico home since 2016. After seven years scaling tech ventures in Mexico City, he turned his energy toward what always mattered most: adventure, human connection and the power of the sea. He is building Eagle Ray one trusted relationship at a time, bringing together sea people who share the same warmth, curiosity and instinct for life at sea.",
+  "image": "/assets/img/founder-thibault.webp",
+  "imageAlt": "Thibault Poirson De Cardon, Founder of Eagle Ray Expeditions",
+  "order": 1,
+  "images": [
+    "/assets/img/founder-thibault.webp",
+    "/assets/img/crew/thibault-01.webp",
+    "/assets/img/crew/thibault-02.webp",
+    "/assets/img/crew/thibault-03.webp",
+    "/assets/img/crew/thibault-04.webp",
+    "/assets/img/crew/thibault-05.webp",
+    "/assets/img/crew/thibault-06.webp"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "kicker": "Notre équipe",
+    "title": "Nou sommes des passionnés de mer",
+    "lede": "Nous sélectionnons notre équipage en fonction de deux critères. 1. La manière dont ils manœuvrent le bateau : la sécurité avant tout, un pont impeccable, chaque chose à sa place. 2. Et la façon dont ils accueillent les passagers à bord. Nous n’embauchons jamais quelqu’un sans tenir compte de ces deux aspects.\n\nIls connaissent cette mer, ils la respectent et ils vous apprendront à la décrypter. Vous trouverez ci-dessous les témoignages de chacun d’entre eux. Dites-nous qui vous aimeriez avoir à bord, et nous ferons de notre mieux pour concilier leurs disponibilités, même si nous ne pouvons pas toujours le garantir.",
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Passionate_Sea_People_Sailing_Experience_Sailing_uqdgak.jpg",
+    "imageAlt": "Un catamaran au mouillage dans une baie tranquille au crépuscule"
+  },
+  "intro": "Nous sélectionnons notre équipage en fonction de deux critères. 1. La manière dont ils manœuvrent le bateau : la sécurité avant tout, un pont impeccable, chaque chose à sa place. 2. Et la façon dont ils accueillent les passagers à bord. Nous ne recrutons jamais les uns sans les autres.\n\nIls connaissent cette mer, ils la respectent et ils vous apprendront à la décrypter. Vous trouverez ci-dessous les témoignages de chacun d’entre eux. Dites-nous qui vous aimeriez avoir à bord, et nous ferons de notre mieux pour coordonner leurs disponibilités, même si nous ne pouvons pas toujours le garantir.",
+  "gridTitle": "Découvrez notre équipe Eagle Ray Expeditions"
+}

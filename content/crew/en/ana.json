@@ -1,0 +1,14 @@
+{
+  "name": "Ana",
+  "roles": [
+    "Silver Chef"
+  ],
+  "about": "Ana built her own pastry business from scratch, so she knows magic rarely arrives by accident. It lives in timing, texture and the extra detail nobody thought to request. On board, she cooks the same way: attentive, inventive and quietly generous — turning a simple breakfast into a ritual and dessert into the story told back on shore.",
+  "image": "/assets/img/crew-ana.webp",
+  "imageAlt": "Ana, Silver Chef",
+  "order": 6,
+  "images": [
+    "/assets/img/crew-ana.webp",
+    "/assets/img/crew/ana-01.webp"
+  ]
+}

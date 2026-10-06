@@ -1,0 +1,52 @@
+{
+  "name": "Sergio Torres \"Canei\"",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Snorkeling",
+    "Freediving",
+    "Spearfishing",
+    "Fishing",
+    "Open water swimming",
+    "Kayaking",
+    "Wakeboard",
+    "Wakesurf",
+    "Survival",
+    "Functional training",
+    "Calisthenics",
+    "Meditation",
+    "Biking",
+    "Running"
+  ],
+  "languages": [
+    {
+      "language": "Spanish"
+    },
+    {
+      "language": "English"
+    },
+    {
+      "language": "French"
+    }
+  ],
+  "certificates": [
+    "PADI Open Water"
+  ],
+  "quote": "I love teaching and having fun at sea with people who share my passions.",
+  "about": "\"I'm Sergio, but you can call me Canei. You might know me from Survivor México, which I won in 2025. A few years earlier, I decided to take care of myself: training, eating well, learning how my body works. Today that's what I teach, as a personal trainer in Cancún and to the more than 100 people I've coached.\n\nI've led groups of 8 to 19 through Iceland, the Acatenango and Fuego volcanoes in Guatemala, Hawaii's Big Island, the Dolomites and the Camino de Santiago. On board, we start the day moving on deck. Before you go in the water, I teach you to breathe, and each day you hold your breath a little longer.\"",
+  "history": "\"On the Camino de Santiago, on the longest stage, part of my group woke up with blisters and no energy left. Before we set off, I ran an exercise on intention and reflection, and we walked that stage with a different attitude.\n\nI read a group in three steps: the welcome message, a longer call before the trip, and body language on day one.\"",
+  "why": "\"What draws me to the sea: its mystery, its animals, its colours and its size.\n\nLeaving something good in other people is what makes me feel whole. At sea, I take care of the group. The Eagle Ray crew takes care of the boat.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+  "imageAlt": "Sergio, expedition leader with Eagle Ray Expeditions",
+  "joiningTag": "Thanksgiving",
+  "order": 12,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+    "/assets/img/crew/sergio-torres-canei-01.webp",
+    "/assets/img/crew/sergio-torres-canei-02.webp",
+    "/assets/img/crew/sergio-torres-canei-03.webp",
+    "/assets/img/crew/sergio-torres-canei-04.webp",
+    "/assets/img/crew/sergio-torres-canei-05.webp"
+  ]
+}

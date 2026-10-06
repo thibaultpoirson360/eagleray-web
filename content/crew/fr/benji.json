@@ -1,0 +1,10 @@
+{
+  "name": "Benji",
+  "roles": [
+    "Capitaine"
+  ],
+  "about": "Benji a dirigé pendant huit ans des opérations industrielles et énergétiques avant de troquer les chantiers pour la barre. L'ingénieur civil n'a jamais disparu : il lit les routages météo comme un système et remarque les besoins du bateau avant même qu'il ne les exprime. Pendant que les autres regardent l'horizon, Benji a déjà ouvert la voie.",
+  "image": "/assets/img/crew-benji.jpeg",
+  "imageAlt": "Benji, capitaine",
+  "order": 3
+}

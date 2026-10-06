@@ -1,0 +1,15 @@
+{
+  "depth": {
+    "meters": 96,
+    "name": "Los barcos"
+  },
+  "kickerNumber": "07",
+  "kicker": "Tu expedición",
+  "title": "Nuestra flota. Un único estándar:",
+  "titleEmphasis": "Totalmente privado, totalmente tuyo.",
+  "cta": {
+    "label": "Ver todos los barcos →",
+    "href": "#customize"
+  },
+  "dotsLabel": "Ir al barco"
+}

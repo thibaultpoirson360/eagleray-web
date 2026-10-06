@@ -1,0 +1,45 @@
+{
+  "name": "eagleray-web",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "tinacms build --skip-cloud-checks && node scripts/patch-tina-generated.mjs && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "tina:dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"astro dev\"",
+    "tina:build": "tinacms build --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
+    "tina:build:local": "TINA_PUBLIC_IS_LOCAL=true tinacms build --local --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
+    "test:e2e": "playwright test",
+    "design-system": "node scripts/build-design-system.mjs"
+  },
+  "dependencies": {
+    "@astrojs/preact": "6.0.5",
+    "@astrojs/vercel": "11.0.10",
+    "@tailwindcss/vite": "4.3.3",
+    "@tinacms/astro": "0.7.0",
+    "@tinacms/datalayer": "2.0.29",
+    "astro": "7.3.2",
+    "next-auth": "4.24.15",
+    "preact": "10.29.8",
+    "tailwindcss": "4.3.3",
+    "tinacms": "3.13.0",
+    "tinacms-authjs": "24.0.4",
+    "tinacms-gitprovider-github": "4.1.17",
+    "upstash-redis-level": "1.1.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@playwright/test": "^1.63.0",
+    "@tinacms/cli": "2.7.0",
+    "@types/node": "26.5.1",
+    "next": "15.5.25",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "typescript": "6.0.3"
+  }
+}

@@ -1,0 +1,152 @@
+---
+import '../styles/global.css';
+import { defaultLocale, liveLocales, localeHref, ogLocale, type Locale } from '../i18n/config';
+import TinaIsland from '@tinacms/astro/TinaIsland.astro';
+import { tinaField } from '@tinacms/astro/tina-field';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Sounder from '../components/Sounder.astro';
+import { loadNavigation, loadFooter, loadSiteSettings } from '../lib/content';
+
+interface Props {
+  title: string;
+  /** The page's meta description (Google's snippet). Omit only for pages that are `noindex`. */
+  description?: string;
+  /** Title / description used when the page is shared (WhatsApp, Facebook, LinkedIn). Default to `title` / `description`. */
+  ogTitle?: string;
+  ogDescription?: string;
+  /** Share-preview image, a path under /public or a full URL. Defaults to the homepage hero photo. */
+  ogImage?: string;
+  /** An above-the-fold image to preload (the homepage hero) so it isn't discovered late. */
+  preloadImage?: string;
+  locale?: Locale;
+  /** Path after the locale prefix, e.g. "" for the homepage or "about-us/". */
+  path?: string;
+  /**
+   * True (default) for a page whose top section is a dark hero the nav can
+   * float transparently over until scrolled (today: the homepage). False
+   * for a page with no such hero — a plain white section right at the top
+   * — where the nav must render solid (dark-on-light) from the very first
+   * paint instead of waiting for scroll, or its white-on-transparent
+   * default state is unreadable against the page's own white background.
+   */
+  transparentNav?: boolean;
+  /**
+   * For pages that must stay out of search results and off the language graph
+   * (the 404): emits `noindex` and drops the canonical/hreflang/og:locale
+   * tags, which would otherwise declare the error page to be the home page.
+   */
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogImage = '/assets/img/hero-premium.webp',
+  preloadImage,
+  locale = defaultLocale,
+  path = '',
+  transparentNav = true,
+  noindex = false,
+} = Astro.props;
+const site = Astro.site ?? new URL(Astro.url.origin);
+const urlFor = (l: Locale) => localeHref(l, path, site);
+const absolute = (u: string) => new URL(u, site).href;
+
+// Page chrome, not page content — fetched here (not per-page) so every
+// page that uses this layout gets Nav/Footer for free.
+const navigationResult = await loadNavigation(locale);
+const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale), loadSiteSettings()]);
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="/assets/img/logo-mark-navy.png" type="image/png" />
+    <!--
+      Share previews (WhatsApp, Facebook, LinkedIn, X). The original site's
+      <head> had og:title/description/type/locale; this adds the image, the
+      URL and the site name, which those apps need to show a proper card.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eagle Ray Expeditions" />
+    <meta property="og:title" content={ogTitle ?? title} />
+    {(ogDescription ?? description) && <meta property="og:description" content={ogDescription ?? description} />}
+    {!noindex && <meta property="og:url" content={urlFor(locale)} />}
+    <meta property="og:image" content={absolute(ogImage)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    <!--
+      The four web fonts the design uses (--font-display/serif/sans/mono in
+      global.css), same families and weights as the original index.html
+      <head>. Nothing else loads them, so without this every heading, body
+      and mono label renders in a system fallback. One combined request
+      (families in alphabetical order) instead of the source's two.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=TASA+Explorer:wght@400..800&display=swap"
+    />
+    {noindex && <meta name="robots" content="noindex" />}
+    {!noindex && <link rel="canonical" href={urlFor(locale)} />}
+    {!noindex && liveLocales.map((l) => <link rel="alternate" hreflang={l} href={urlFor(l)} />)}
+    {!noindex && <link rel="alternate" hreflang="x-default" href={urlFor(defaultLocale)} />}
+    <meta property="og:locale" content={ogLocale[locale]} />
+    {!noindex && liveLocales.filter((l) => l !== locale).map((l) => <meta property="og:locale:alternate" content={ogLocale[l]} />)}
+    <!--
+      Source index.html <head>: `document.documentElement.className += " js"`.
+      Synchronous and inline so it runs before first paint — every
+      `html.js` / `html:not(.js)` progressive-enhancement rule (reveal's
+      no-JS fallback being the first one built) depends on this marker
+      existing before CSS paints, not after.
+    -->
+    <script is:inline>document.documentElement.className += ' js';</script>
+  </head>
+  <body class={`bg-white font-sans text-ink ${transparentNav ? '' : 'pt-nav-solid'}`}>
+    <!--
+      Not wrapped in a <TinaIsland>: unlike Nav/Footer this isn't really
+      content (no copy of its own, no data-tina-field markers) — it's a
+      technical readout of siteSettings.sounder.maxDepth and the
+      navigation's per-locale surfaceLabel — both editable in the Tina
+      admin (Site Settings / Navigation), just not click-to-edit on the
+      gauge itself.
+    -->
+    <!--
+      "Skip to main content": the first tab stop, invisible until focused, so
+      a keyboard or screen-reader visitor can jump past the header. (The
+      original site had one; it was dropped in the migration.) Every page's
+      content sits in <main id="main">.
+    -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[200] focus:rounded focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+      data-tina-field={tinaField(navigationResult.data.navigation, "skipLabel")}
+    >
+      {navigationResult.data.navigation.skipLabel ?? 'Skip to main content'}
+    </a>
+    <Sounder siteSettings={siteSettingsResult.data.siteSettings} surfaceLabel={navigationResult.data.navigation.surfaceLabel} />
+    <TinaIsland
+      name="navigation"
+      wrapper={{ tag: 'div' }}
+      params={{ locale, path, transparentNav: String(transparentNav) }}
+    >
+      <Nav navigation={navigationResult.data.navigation} locale={locale} path={path} transparentNav={transparentNav} />
+    </TinaIsland>
+    <slot />
+    <TinaIsland name="footer" wrapper={{ tag: 'div' }} params={{ locale }}>
+      <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} />
+    </TinaIsland>
+    <script>
+      import '../scripts/chrome.ts';
+    </script>
+  </body>
+</html>

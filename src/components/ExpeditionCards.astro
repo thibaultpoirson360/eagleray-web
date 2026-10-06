@@ -1,0 +1,44 @@
+---
+/**
+ * The expedition cards on the Sail with Us page (Sail With Us.dc.html): a
+ * photo with the name over it. Each card links to its expedition's page.
+ * Plain links, so no JavaScript is needed.
+ */
+export interface ExpeditionCard {
+  id: string;
+  name: string;
+  image?: string;
+  imageAlt?: string;
+  href?: string;
+}
+
+interface Props {
+  expeditions: ExpeditionCard[];
+  linkLabel: string;
+}
+
+const { expeditions, linkLabel } = Astro.props;
+// Cards fill the row: 1 card full width, 2 cards split it, 3 or more use three columns.
+const columns =
+  expeditions.length === 1 ? "grid-cols-1" : expeditions.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
+---
+
+<div class={`grid gap-8 ${columns}`}>
+  {
+    expeditions.map((expedition) => (
+      <a
+        href={expedition.href || "#"}
+        class="group relative aspect-square overflow-hidden rounded-lg bg-ink transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgb(14_27_43/0.14)]"
+      >
+        {expedition.image && (
+          <img src={expedition.image} alt={expedition.imageAlt ?? ""} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
+        )}
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/5 to-ink/55" />
+        <p class="absolute top-4 left-4 right-4 font-display text-[1.05rem] text-white">{expedition.name}</p>
+        <span class="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-sm bg-white/90 px-6 py-2.5 text-[.82rem] tracking-[.04em] whitespace-nowrap text-ink transition-colors group-hover:bg-white">
+          {linkLabel}
+        </span>
+      </a>
+    ))
+  }
+</div>

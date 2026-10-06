@@ -1,0 +1,86 @@
+---
+/**
+ * `hero` landing block — kicker/title/lede/image/CTA, a simpler
+ * block-scoped sibling of the homepage's own Hero.astro. No video field
+ * (see tina/collections/landingPage.ts's comment on why) and only one CTA,
+ * not a primary+secondary pair, matching the block's field set exactly.
+ *
+ * Deliberate visual deviation from the homepage Hero: `min-h-[70vh]`
+ * instead of `min-h-svh`. This is one block among several in an
+ * editor-composed list, not guaranteed to be the very top of the page the
+ * way the homepage hero always is, so it doesn't claim the full viewport.
+ * Gradient/typography classes are otherwise copied verbatim from Hero.astro
+ * so it reads as the same design language, not a new one.
+ */
+import Button from "../ui/Button.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import { homeAnchor } from "../../lib/links";
+import type { Locale } from "../../i18n/config";
+import type { HeroBlock, LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: HeroBlock;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+// The page's <h1> is its first block's title when that block is a hero
+// (LandingPageView adds a visually hidden <h1> when it isn't); any later
+// hero is a section heading.
+const Heading = index === 0 ? "h1" : "h2";
+---
+
+<section
+  class="relative isolate flex min-h-[70vh] items-end overflow-hidden"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class="absolute inset-0 z-[-1]">
+    {
+      block.image && (
+        <img
+          src={block.image}
+          alt={block.imageAlt ?? ""}
+          loading="lazy"
+          decoding="async"
+          class="h-full w-full object-cover"
+          data-tina-field={tinaField(block, "image")}
+        />
+      )
+    }
+    <div class="absolute inset-0 bg-linear-to-b from-ink/25 via-ink/42 via-45% to-ink/82"></div>
+  </div>
+
+  <div class="relative mx-auto w-full max-w-site px-pad py-20 text-white">
+    {
+      block.kicker && (
+        <p
+          class="mb-[1.1rem] font-mono text-[.76rem] tracking-[.14em] text-white/82 uppercase"
+          data-tina-field={tinaField(block, "kicker")}
+        >
+          {block.kicker}
+        </p>
+      )
+    }
+    <Heading class="max-w-[20ch] font-display text-hero text-white" data-tina-field={tinaField(block, "title")}>
+      {block.title}
+    </Heading>
+    {
+      block.lede && (
+        <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={tinaField(block, "lede")}>
+          {block.lede}
+        </p>
+      )
+    }
+    {
+      block.cta && (
+        <div class="mt-[2.3rem]">
+          <Button href={homeAnchor(locale, block.cta.href)} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
+            {block.cta.label}
+          </Button>
+        </div>
+      )
+    }
+  </div>
+</section>

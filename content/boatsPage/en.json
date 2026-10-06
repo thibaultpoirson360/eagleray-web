@@ -1,0 +1,34 @@
+{
+  "kicker": "Your expedition",
+  "title": "Our fleet. One standard: fully private, fully yours.",
+  "lede": "Five catamarans, all based out of La Paz. Tap a boat to see layout, capacity and what's included.",
+  "includedHeading": "Always included",
+  "included": [
+    "Private catamaran, prepared for life aboard",
+    "Professional skipper",
+    "Dinghy with motor",
+    "Snorkeling gear onboard",
+    "Permits / access bracelets for protected areas",
+    "Boat prep & cleaning",
+    "ERE coordination before and during your trip",
+    "Flexible itinerary, adapted to weather and your group"
+  ],
+  "notIncludedHeading": "À la carte / not included",
+  "notIncluded": [
+    "Food & drinks",
+    "Skipper tip",
+    "WiFi / Starlink",
+    "Extra gear (kayak, paddle, fishing)",
+    "Fuel consumed during the trip",
+    "Diving, kite & wingfoil, guided activities",
+    "Personal travel insurance"
+  ],
+  "cta": {
+    "label": "Customize my expedition",
+    "href": "/en/#customize"
+  },
+  "seo": {
+    "title": "Boats — Eagle Ray Expeditions",
+    "description": "Five private catamarans based in La Paz. Compare length, cabins, guests and what is included."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "depth": {
+    "meters": 41,
+    "name": "San Lorenzo Channel"
+  },
+  "kickerNumber": "03",
+  "kicker": "Where we sail",
+  "title": "The aquarium",
+  "titleEmphasis": "of the world.",
+  "lede": "Cousteau's name for the Sea of Cortez. A narrow gulf that concentrates what other oceans spread across thousands of miles; cold upwellings, deserted islands, and a density of life that still surprises people who've sailed it for years. We work the stretch between La Paz, Espíritu Santo, and Cerralvo.",
+  "gallery": [
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/wdwmnrf7rtepuusne6fm.jpg",
+      "alt": "Wildlife placeholder 1",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/e2ieabxohwithxvsuo7m.jpg",
+      "alt": "Wildlife placeholder 2",
+      "href": ""
+    },
+    {
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lv3fwingtwjlffngg3pv.jpg",
+      "alt": "Wildlife placeholder 3",
+      "href": ""
+    }
+  ],
+  "cta": {
+    "label": "See the wildlife calendar →",
+    "href": "#"
+  }
+}

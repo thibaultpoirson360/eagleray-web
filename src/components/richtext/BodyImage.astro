@@ -1,0 +1,17 @@
+---
+/** Registered on TinaMarkdown's `img` override — a captioned image
+ * (`![alt](url "caption")` in the body markdown) becomes the mockup's
+ * mid-article image + italic caption treatment. */
+interface Props {
+  url: string;
+  alt?: string;
+  caption?: string;
+}
+
+const { url, alt, caption } = Astro.props;
+---
+
+<span class="mt-12 mb-[10px] block aspect-video overflow-hidden rounded-lg">
+  <img src={url} alt={alt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
+</span>
+{caption && <span class="mb-10 block text-[13px] text-ink/64 italic">{caption}</span>}

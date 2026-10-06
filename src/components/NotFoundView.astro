@@ -1,0 +1,30 @@
+---
+/**
+ * The 404 page's content: a PageHero with the title and a button back to the
+ * home page. Its own component (rather than inlined in 404.astro) so the
+ * on-demand island-refresh route (src/pages/tina-island/[name].ts) can
+ * re-render it for click-to-edit, like every other page.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import PageHero from "./ui/PageHero.astro";
+import { defaultLocale, localePath } from "../i18n/config";
+import type { NotFoundPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  notFound: NotFoundPageQuery["notFoundPage"];
+}
+
+const { notFound } = Astro.props;
+---
+
+<PageHero
+  title={notFound.title}
+  image={notFound.image}
+  imageAlt={notFound.imageAlt}
+  cta={notFound.buttonLabel ? { label: notFound.buttonLabel, href: localePath(defaultLocale, "") } : null}
+  fields={{
+    title: tinaField(notFound, "title"),
+    image: tinaField(notFound, "image"),
+    cta: tinaField(notFound, "buttonLabel"),
+  }}
+/>

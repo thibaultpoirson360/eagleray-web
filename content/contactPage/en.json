@@ -1,0 +1,24 @@
+{
+  "title": "Talk with us directly",
+  "lede": "No call center, no chatbot forwarding you along. We read every message and reply within 48 hours.",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Contact_Us_ipfhl9.png",
+  "photoAlt": "Eagle Ray Expeditions contact us we will respond withing 48 hours or less",
+  "form": {
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "howFoundPlaceholder": "How did you find us?",
+    "messagePlaceholder": "Message",
+    "submitLabel": "Send message",
+    "sendingLabel": "Sending…",
+    "successMessage": "Thanks — your message is in. We read every one ourselves and reply within 48 hours.",
+    "errorMessage": "Something went wrong sending your message — please try again, or use WhatsApp below."
+  },
+  "whatsappCard": {
+    "label": "Direct WhatsApp",
+    "description": "Prefer WhatsApp? We will forward your message to our founder for him to answer your enquire personally."
+  },
+  "expeditionCard": {
+    "label": "Expedition Builder",
+    "description": "Already picturing a route? Skip ahead to the expedition builder form and receive a personalized quote."
+  }
+}

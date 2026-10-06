@@ -1,0 +1,13 @@
+{
+  "name": "Alexis",
+  "roles": [
+    "Líder de Expedición"
+  ],
+  "skills": [
+    "Buceo"
+  ],
+  "about": "Thibault conoció a Alexis en Chile cuando ambos tenían cinco años. Hoy, Alexis dirige Eagle Ray bajo la superficie — un instructor internacional de buceo con la hospitalidad de cinco estrellas en los reflejos, perfeccionada en Ritz-Carlton y Mandarin Oriental. Lee una mesa como lee un punto de inmersión: rápido, en silencio y antes de que los demás lo noten. Lo llaman el Pirata, y se ha ganado el apodo. Sabe qué cala escondida elegir, qué historia merece contarse durante la cena y cuándo el silencio dice más. Con Alexis a bordo, las inmersiones excepcionales suelen terminar en largas cenas francesas, buen vino y momentos que se convierten en leyenda de la tripulación.",
+  "image": "/assets/img/crew-alexis.jpeg",
+  "imageAlt": "Alexis, jefe de expedición — Buceo",
+  "order": 2
+}

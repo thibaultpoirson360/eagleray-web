@@ -1,0 +1,55 @@
+{
+  "name": "Monik Saab ",
+  "roles": [
+    "Expedition Leader"
+  ],
+  "skills": [
+    "Scuba",
+    "Snorkeling",
+    "Kayaking",
+    "Stand-up paddle",
+    "Trekking",
+    "Biking",
+    "Land tours"
+  ],
+  "languages": [
+    {
+      "language": "English"
+    },
+    {
+      "language": "Spanish"
+    },
+    {
+      "language": "Portuguese"
+    },
+    {
+      "language": "German"
+    }
+  ],
+  "certificates": [
+    "PADI Instructor",
+    "STCW",
+    "Seaman's Book Type A",
+    "Helideck Operations",
+    "NOM-09 Tour Guide",
+    "SECTUR Tourist Guide",
+    "Revillagigedo Guide License",
+    "MBA in Marketing"
+  ],
+  "yearsOfExperience": 20,
+  "quote": "In the ocean, everybody helps everybody.",
+  "about": "\"I grew up by the beach in Brazil. After 16 years in large corporations and teaching English, I made the sea my work. Today I'm a PADI dive instructor and licensed expedition guide, based in Cabo San Lucas, with six years in Baja California Sur.\n\nFrom the start, I watch a group's energy, comfort and personalities, and I adjust the way I lead to match. I guide in English, Spanish, Portuguese and German.\"",
+  "history": "\"I hold licenses to guide in Mexico, including in the Revillagigedo Islands, and I've worked on yachts with helicopter decks.\n\nI've guided groups of every size, from all over the world. On a sailing boat, I prefer small ones.\"",
+  "why": "\"What keeps me at sea is the life underwater, and the harmony and connection you feel down there. Ocean people are like a family: everybody helps everybody. I wish it were like that on land.\n\nLeaving my corporate life wasn't about money. It was about having fun and making people as happy as the sea makes me.\"",
+  "image": "/assets/img/crew-monique.png",
+  "imageAlt": "Monique, expedition leader with Eagle Ray Expeditions",
+  "order": 7,
+  "images": [
+    "/assets/img/crew-monique.png",
+    "/assets/img/crew/monique-01.webp",
+    "/assets/img/crew/monique-02.webp",
+    "/assets/img/crew/monique-03.webp",
+    "/assets/img/crew/monique-04.webp",
+    "/assets/img/crew/monique-05.webp"
+  ]
+}

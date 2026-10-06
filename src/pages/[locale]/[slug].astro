@@ -1,0 +1,52 @@
+---
+/**
+ * `/<locale>/<slug>/` — the placeholder pages for navigation entries that
+ * have no real page yet (title only): our-story, la-paz, boats, the
+ * expeditions... Enumerated at build time from the `navPages` collection, so
+ * adding a document there adds a page. Static routes (contact,
+ * passionate-sea-people, blog/, landing/) take priority over this one, so a
+ * page that gets its own template wins automatically.
+ *
+ * These are title-only stand-ins, so they are `noindex` (and left out of the
+ * sitemap): a page with nothing on it must not compete for search results.
+ * A real page replacing one is built with its own route and is indexable.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import NavPageView from "../../components/NavPageView.astro";
+import { loadNavPage, loadNavPages } from "../../lib/content";
+import { liveLocales, type Locale } from "../../i18n/config";
+import { startsWithHero } from "../../lib/mogu";
+
+export async function getStaticPaths() {
+  const perLocale = await Promise.all(
+    liveLocales.map(async (locale) => {
+      const { pages } = await loadNavPages(locale);
+      // /en/la-paz/ is the La Paz page (la-paz/index.astro); the navPages
+      // placeholder is kept only for es and fr until their drafts exist.
+      return pages
+        .filter((page) => !(locale === "en" && page._sys.filename === "la-paz"))
+        .map((page) => ({ params: { locale, slug: page._sys.filename } }));
+    })
+  );
+  return perLocale.flat();
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const result = await loadNavPage(locale, slug);
+const navPage = result.data.navPages;
+// A page with no blocks is the title-only placeholder: kept out of search
+// results. Once it has blocks it is a real page, so it is indexed.
+const hasBlocks = (navPage.blocks?.length ?? 0) > 0;
+// The nav is transparent over a hero, solid otherwise (same rule as landing pages).
+const firstIsHero = startsWithHero(navPage.blocks);
+---
+
+<BaseLayout title={`${navPage.title} — Eagle Ray Expeditions`} locale={locale} path={`${slug}/`} transparentNav={firstIsHero} noindex={!hasBlocks}>
+  <main id="main">
+    <TinaIsland name="navPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>
+      <NavPageView navPage={navPage} locale={locale} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

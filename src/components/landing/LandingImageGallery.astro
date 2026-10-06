@@ -1,0 +1,55 @@
+---
+/**
+ * `imageGallery` landing block — same gallery shape and responsive
+ * treatment as the homepage Wildlife section (src/components/Wildlife.astro):
+ * a horizontal scroll-snap slider below `sm`, a wrapped 3-up grid at `sm`
+ * and above. `images` mirrors `wildlife.gallery`'s field shape exactly
+ * (tina/collections/landingPage.ts's own comment) — same field names, same
+ * per-item rendering (an item without an href renders as a plain div
+ * rather than a dead self-link, matching Wildlife.astro's own rule).
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import { homeAnchor } from "../../lib/links";
+import type { Locale } from "../../i18n/config";
+import type { ImageGalleryBlock, LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: ImageGalleryBlock;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+// The scrolling row is keyboard-focusable (a swipe-only row is unreachable
+// otherwise), so it needs a name: the page's own title.
+const galleryLabel = typeof landingPage.title === "string" ? landingPage.title : undefined;
+const itemClass =
+  "w-full flex-none snap-start sm:w-auto sm:flex-[1_1_calc(33.333%-1rem)] sm:max-w-[calc(33.333%-1rem)]";
+const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
+---
+
+{
+  block.images && block.images.length > 0 && (
+    <section
+      class="relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+      data-tina-field={tinaField(landingPage, "blocks", index)}
+    >
+      <div tabindex="0" role="group" aria-label={galleryLabel} class="scrollbar-none -mx-pad flex snap-x snap-mandatory gap-4 overflow-x-auto px-pad [-webkit-overflow-scrolling:touch] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden">
+        {block.images.map(
+          (item, i) =>
+            item &&
+            (item.href ? (
+              <a href={homeAnchor(locale, item.href)} class={itemClass} data-tina-field={tinaField(block, "images", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </a>
+            ) : (
+              <div class={itemClass} data-tina-field={tinaField(block, "images", i)}>
+                {item.image && <img src={item.image} alt={item.alt ?? ""} loading="lazy" decoding="async" class={imgClass} />}
+              </div>
+            ))
+        )}
+      </div>
+    </section>
+  )
+}

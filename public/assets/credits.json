@@ -1,0 +1,226 @@
+{
+  "ocean-aerial": {
+    "src": "assets/img/ocean-aerial.webp",
+    "title": "An aerial view of a river mouth meeting the ocean along a wide coastline. White waves roll onto dark sand, while turquoise river water curve",
+    "creator": "Pablo Jimenez",
+    "creator_url": "https://pablojimenez.blog/",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://wordpress.org/photos/photo/5546a2b832/",
+    "source": "wordpress"
+  },
+  "whale-shark": {
+    "src": "assets/img/whale-shark.webp",
+    "title": "Diving Maldives, 2009",
+    "creator": "Christian Steen",
+    "creator_url": "https://www.flickr.com/photos/87974168@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/87974168@N00/4072984589",
+    "source": "flickr"
+  },
+  "sea-lions": {
+    "src": "assets/img/sea-lions.webp",
+    "title": "Sea Lion - Galapagos (45901324335)",
+    "creator": "Andy Witchger",
+    "creator_url": "https://www.flickr.com/people/42878734@N06",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=77986087",
+    "source": "wikimedia"
+  },
+  "mobula-ray": {
+    "src": "assets/img/mobula-ray.webp",
+    "title": "Manta-ray australia",
+    "creator": "No machine-readable author provided. Mbz1 assumed (based on copyright claims).",
+    "creator_url": "https://commons.wikimedia.org/wiki/User:Mbz1",
+    "license": "by-sa",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=1979965",
+    "source": "wikimedia"
+  },
+  "dolphins": {
+    "src": "assets/img/dolphins.webp",
+    "title": "Sea Party",
+    "creator": "jurvetson",
+    "creator_url": "https://www.flickr.com/photos/44124348109@N01",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/44124348109@N01/3728318",
+    "source": "flickr"
+  },
+  "mangrove-kayak": {
+    "src": "assets/img/mangrove-kayak.webp",
+    "title": "<div class='fn'> Beach Of Cayo Coco</div>",
+    "creator": "Antonio Careses",
+    "creator_url": "https://500px.com/maestr0",
+    "license": "by",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=78766466",
+    "source": "wikimedia"
+  },
+  "kitesurf": {
+    "src": "assets/img/kitesurf.webp",
+    "title": "<div class='fn'> Kitesurfing Jpg</div>",
+    "creator": "Dana Hutchinson",
+    "creator_url": "https://500px.com/danajoehutchinson",
+    "license": "by",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=71587215",
+    "source": "wikimedia"
+  },
+  "catamaran-deck": {
+    "src": "assets/img/catamaran-deck.webp",
+    "title": "Karibik Cruise 2014",
+    "creator": "_dChris",
+    "creator_url": "https://www.flickr.com/photos/23392528@N02",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/23392528@N02/15850332168",
+    "source": "flickr"
+  },
+  "catamaran-sailing": {
+    "src": "assets/img/catamaran-sailing.webp",
+    "title": "Rat Spit and the Outer Harbour Sailing Clubs (53051807678)",
+    "creator": "Outer Harbour Sailing Federation OHSF from Canada",
+    "creator_url": "https://www.flickr.com/people/157301177@N03",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=136833889",
+    "source": "wikimedia"
+  },
+  "sunset-onboard": {
+    "src": "assets/img/sunset-onboard.webp",
+    "title": "Sea Ocean",
+    "creator": "Nitin Dhumal",
+    "creator_url": "https://stocksnap.io/author/38147",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://stocksnap.io/photo/sea-ocean-NL85HFFPLX",
+    "source": "stocksnap"
+  },
+  "crew-ana": {
+    "src": "assets/img/crew-ana.webp",
+    "title": "Ana — Sea People photo (provided directly, not stock)",
+    "source": "ere"
+  },
+  "beach-cove": {
+    "src": "assets/img/beach-cove.webp",
+    "title": "An aerial view of a turquoise bay bordered by rocky coastal cliffs and tree-covered hills. A small sandy beach appears at the edge of the wa",
+    "creator": "Pablo Jimenez",
+    "creator_url": "https://pablojimenez.blog/",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://wordpress.org/photos/photo/9256a2b821/",
+    "source": "wordpress"
+  },
+  "crew-adly": {
+    "src": "assets/img/crew-adly.webp",
+    "title": "Adly — Sea People photo (provided directly, not stock)",
+    "source": "ere"
+  },
+  "crew-antoine": {
+    "src": "assets/img/crew-antoine.webp",
+    "title": "Antoine — Sea People photo (provided directly, not stock)",
+    "source": "ere"
+  },
+  "manta-ray": {
+    "src": "assets/img/manta-ray.webp",
+    "title": "<div class='fn'> Gentle Approach</div>",
+    "creator": "Tilonaut",
+    "creator_url": "https://500px.com/Tilonaut",
+    "license": "by",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=71409377",
+    "source": "wikimedia"
+  },
+  "humpback-whale": {
+    "src": "assets/img/humpback-whale.webp",
+    "title": "Blue whale tail",
+    "creator": "Mike Baird from Morro Bay, USA",
+    "creator_url": "https://www.flickr.com/photos/72825507@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=11043581",
+    "source": "wikimedia"
+  },
+  "sea-lion-beach": {
+    "src": "assets/img/sea-lion-beach.webp",
+    "title": "Sleeping Galapagos Sea Lion V",
+    "creator": "A.Davey",
+    "creator_url": "https://www.flickr.com/photos/40595948@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/40595948@N00/4128024888",
+    "source": "flickr"
+  },
+  "kitesurf-action": {
+    "src": "assets/img/kitesurf-action.webp",
+    "title": "Kite surfing, sports photography",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/6035730/photo-image-public-domain-ocean-nature",
+    "source": "rawpixel"
+  },
+  "boat-bali-cockpit": {
+    "src": "assets/img/boat-bali-cockpit.webp",
+    "title": "Lagoon-380 cockpit",
+    "creator": "Autopilot",
+    "creator_url": "https://en.wikipedia.org/wiki/User:Autopilot",
+    "license": "by-sa",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/wiki/File:Lagoon-380_cockpit.jpg",
+    "source": "wikimedia_commons"
+  },
+  "boat-bali-exterior": {
+    "src": "assets/img/boat-bali-exterior.webp",
+    "title": "Catamaran de croisière Lagoon 560",
+    "creator": "Jpbazard",
+    "creator_url": "https://commons.wikimedia.org/wiki/User:Jpbazard",
+    "license": "by-sa",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/wiki/File:Catamaran_de_croisi%C3%A8re_Lagoon_560.JPG",
+    "source": "wikimedia_commons"
+  },
+  "boat-astrea-salon": {
+    "src": "assets/img/boat-astrea-salon.webp",
+    "title": "Salon einer kleinen Segelyacht",
+    "creator": "PaterMcFly",
+    "creator_url": "https://commons.wikimedia.org/wiki/User:PaterMcFly",
+    "license": "by",
+    "license_version": "4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/wiki/File:Salon_einer_kleinen_Segelyacht.jpg",
+    "source": "wikimedia_commons"
+  },
+  "boat-astrea-sailing": {
+    "src": "assets/img/boat-astrea-sailing.webp",
+    "title": "Jeanneau 44DS Sailboat",
+    "creator": "Effluviums",
+    "creator_url": "https://commons.wikimedia.org/wiki/User:Effluviums",
+    "license": "by-sa",
+    "license_version": "4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/wiki/File:Jeanneau_44DS_Sailboat.jpg",
+    "source": "wikimedia_commons"
+  }
+}

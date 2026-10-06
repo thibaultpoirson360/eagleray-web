@@ -1,0 +1,86 @@
+---
+/**
+ * The home slider's crew card — the client's "Ficha resumen (Home)" mockup:
+ * photo, quote, name, headline role, and a button that opens the COMPLETE
+ * card (CrewFullCard.astro) in a modal. Nothing else is shown here on
+ * purpose; the rest of the record lives in the modal and on the Passionate
+ * Sea People page.
+ *
+ * Keeps the `crew-card` class: SliderDots.tsx finds the cards by it.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import CrewFullCard from "./CrewFullCard.astro";
+import CrewModal from "./CrewModal.tsx";
+import { localePath, type Locale } from "../i18n/config";
+import { clean, memberPhotos, shortName, type CrewLabels, type CrewMember } from "../lib/crew";
+
+interface Props {
+  member: NonNullable<CrewMember>;
+  labels: CrewLabels;
+  locale: Locale;
+}
+
+const { member, labels, locale } = Astro.props;
+const headlineRole = clean(member.roles)[0];
+// Home card shows only the first photo; the slider is in the full card (modal).
+const cover = memberPhotos(member)[0];
+const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →`;
+---
+
+<article
+  class="crew-card relative flex w-[min(82vw,340px)] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white shadow-sm"
+>
+  <div class="relative aspect-[3/2] flex-none">
+    {
+      cover && (
+        <img
+          src={cover.src}
+          alt={cover.alt}
+          loading="lazy"
+          decoding="async"
+          class="absolute inset-0 h-full w-full object-cover object-top"
+        />
+      )
+    }
+    {
+      member.joiningTag && (
+        <span
+          class="absolute top-3 left-3 z-[2] rounded-sm bg-ink px-[.7rem] py-[.35rem] font-mono text-[.58rem] tracking-[.1em] text-white uppercase"
+          data-tina-field={tinaField(member, "joiningTag")}
+        >
+          {member.joiningTag}
+        </span>
+      )
+    }
+  </div>
+  <div class="flex flex-1 flex-col p-5">
+    {
+      member.quote && (
+        <blockquote class="font-serif text-[1.02rem] leading-[1.35] text-ink italic" data-tina-field={tinaField(member, "quote")}>
+          “{member.quote}”
+        </blockquote>
+      )
+    }
+    <div class="mt-auto pt-5">
+      <h3 class="font-display text-[1.15rem]" data-tina-field={tinaField(member, "name")}>{member.name}</h3>
+      {
+        headlineRole && (
+          <p class="mt-0.5 font-mono text-[.66rem] tracking-[.12em] text-ink/64 uppercase" data-tina-field={tinaField(member, "roles")}>
+            {headlineRole}
+          </p>
+        )
+      }
+      <div class="mt-4">
+        <CrewModal
+          client:visible
+          label={buttonLabel}
+          closeLabel={labels.closeLabel ?? "Close"}
+          name={member.name}
+          fallbackHref={localePath(locale, `passionate-sea-people/#${member._sys.filename}`)}
+        >
+          <CrewFullCard member={member} labels={labels} compact class="max-h-[92vh]" />
+        </CrewModal>
+      </div>
+    </div>
+  </div>
+</article>
