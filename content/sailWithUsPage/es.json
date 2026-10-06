@@ -1,0 +1,24 @@
+{
+  "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
+  "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
+  "title": "Navega con nosotros",
+  "intro": "Eagle Ray Expeditions organiza viajes privados en velero adaptados a tu grupo, y no al revés.\nTú eliges quién viene. Nuestro equipo se encarga de la embarcación, vela por la seguridad de todos y evalúa cómo va el día para poder cambiar de planes si surge algo que merezca la pena.",
+  "expeditionsLabel": "Elige la expedición",
+  "expeditions": [
+    {
+      "name": "Expedición de recalibración",
+      "imageAlt": "Expedición de recalibración",
+      "href": "/es/recalibration-expedition/"
+    },
+    {
+      "name": "El Día de Acción de Gracias con Sergio Torres",
+      "imageAlt": "Expedición activa",
+      "href": "/es/landing/sergio-torres-thanksgiving/"
+    }
+  ],
+  "seo": {
+    "title": "Navega con nosotros — Eagle Ray Expeditions",
+    "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje."
+  },
+  "subtitle": "Excursiones privadas en velero adaptadas a tu grupo."
+}
