@@ -5,7 +5,7 @@ import { doNotTranslate, localeRouter } from "../shared/fields";
  * Page chrome, not a homepage section — the `<nav>` bar (styles.css
  * L437-630) and its mobile overlay (L644-717). Not anticipated by the
  * original schema pass (built for the 6 homepage sections + navPages
- * stubs + siteSettings); added here because CLAUDE.md's ground rule 2
+ * stubs + siteSettings); added here because docs/migration-history.md's ground rule 2
  * ("every component must be editable... no exceptions") applies to Nav
  * too, and nothing here already exists elsewhere:
  *   - `links` is deliberately separate from the `navPages` collection.

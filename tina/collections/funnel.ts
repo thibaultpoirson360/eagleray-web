@@ -8,7 +8,7 @@ import { depthFields, localeRouter, optionsField, sectionHeadFields, textarea } 
  * template) so the Preact funnel island renders from content and nothing is
  * hardcoded.
  *
- * FIELD NAMES follow the CLAUDE.md rename table. Each question is keyed by
+ * FIELD NAMES follow the docs/migration-history.md rename table. Each question is keyed by
  * its new English name; those same names are the form input `name`s, the
  * localStorage draft keys and the lead-payload keys:
  *   dias -> tripDuration        quien -> travelingAs      invitados -> guestCount
@@ -17,7 +17,7 @@ import { depthFields, localeRouter, optionsField, sectionHeadFields, textarea } 
  *   nombre -> fullName          contacto -> whatsappNumber   extra -> notes
  * (`email` was already English.)
  *
- * Behaviour that must NOT move into content (CLAUDE.md rule 5): partial-lead
+ * Behaviour that must NOT move into content (docs/migration-history.md rule 5): partial-lead
  * capture (blur + sendBeacon), localStorage draft autosave/restore, WhatsApp
  * message assembly. Those live in the funnel component; only their strings are here.
  */

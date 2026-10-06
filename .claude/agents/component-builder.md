@@ -21,7 +21,7 @@ independently of what those agents already worked out.
    WildlifeGallery, DayInLifeSteps, ActivityManifest, BoatCard/Grid,
    FAQAccordion, TestimonialQuote, CTABanner, plus the `MoguProposal` iframe
    embed (below).
-2. **Follow the interactivity split from `CLAUDE.md` exactly:**
+2. **Follow the interactivity split from `docs/migration-history.md` exactly:**
    - Chrome-level effects (splash, nav, reveals, tilt, magnetic buttons, the
      sounder canvas gauge, contact-info injection) — port as vanilla JS,
      scoped appropriately in Astro, not rebuilt as components.

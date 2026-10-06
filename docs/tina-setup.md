@@ -136,7 +136,7 @@ Other deploy notes for `api/`:
 
 ## 3. Auth: Auth.js + Google, and how it is mounted
 
-CLAUDE.md overrides the earlier GitHub choice: the marketing team has no GitHub accounts.
+docs/migration-history.md overrides the earlier GitHub choice: the marketing team has no GitHub accounts.
 The earlier reasoning (GitHub OAuth = same identity as the git provider) no longer applies.
 Google is a documented Auth.js login provider; Tina has no first-class "Google provider".
 Google was the simpler option here for the actual reason above, plus editors already have
@@ -248,7 +248,7 @@ is not a person. Other sources of truth: Vercel function logs per request.
 
 > **`seo`** — `hero`, `contactPage`, `crewPage`, `blogSection` and `landingPage` each carry an optional `seo{title, description, ogTitle, ogDescription}` object (`seoField()` in `tina/shared/fields.ts`): how the page appears in Google and in WhatsApp/Facebook/LinkedIn previews. Empty falls back to the page's own title and lead text. Blog posts use their excerpt. `/sitemap.xml` and `/robots.txt` are generated at build time (`src/pages/sitemap.xml.ts`, `robots.txt.ts`).
 
-Only the homepage scope is modelled (CLAUDE.md). All field names are English; funnel
+Only the homepage scope is modelled (docs/migration-history.md). All field names are English; funnel
 fields use the rename table. Layout: `content/<collection>/<locale>/<slug>.json` for item
 collections, `content/<collection>/<locale>.json` for one-doc-per-locale sections (e.g.
 `content/hero/en.json`). Only `en` is populated. All `format: "json"`, so **no MDX
@@ -326,7 +326,7 @@ Limits and gotchas found:
   starts, so run pages under `npm run tina:dev`.
 - Islands endpoint and the admin are same-origin, so `PUBLIC_TINA_ADMIN_ORIGIN` is not
   needed. Only set it if the admin ever lives on another origin.
-- Per CLAUDE.md, "every component editable": every field in a component needs
+- Per docs/migration-history.md, "every component editable": every field in a component needs
   `data-tina-field`, and each component must be inside a registered island.
 
 ## 7. Vercel Preview + Vercel Edit Mode (formerly "Visual Editing")
@@ -435,7 +435,7 @@ harmless here (not gitignored; commit or ignore as you like).
 Vercel does not apply env changes to running deployments; always redeploy.
 Never commit real values: `.env` is gitignored, `.env.example` has placeholders only.
 
-## 12. Divergences from the earlier attempt (`feature/migration`, 50129e7) and from CLAUDE.md assumptions
+## 12. Divergences from the earlier attempt (`feature/migration`, 50129e7) and from docs/migration-history.md assumptions
 
 - Backend imports the generated `databaseClient`, not `tina/database.ts` (old code could not
   have authorized anyone).
@@ -444,7 +444,7 @@ Never commit real values: `.env` is gitignored, `.env.example` has placeholders 
   free-form `tinaUsers` would have been ignored. Renamed `editors`, keyed on email.
 - `namespace` now passed to `createDatabase` (current CLI template) instead of `RedisLevel`.
 - `media.tina` cannot work in production (section 8).
-- Google instead of GitHub (per CLAUDE.md). Commit attribution added (section 3).
+- Google instead of GitHub (per docs/migration-history.md). Commit attribution added (section 3).
 - No Alpine, no `@astrojs/mdx`, no `next-auth` "pages-style route", no landingPages/blocks/
   routes/dayInLife/FAQ/legal (out of scope now).
 - `tsconfig.json` excludes `tina/collections|shared|config.ts` from `astro check` (Tina's own

@@ -8,7 +8,7 @@ import { tinaAdminDevRedirect } from '@tinacms/astro/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  // Static output (CLAUDE.md). The Vercel adapter is still required because
+  // Static output (docs/migration-history.md). The Vercel adapter is still required because
   // @tinacms/astro's island-refresh endpoint (src/pages/tina-island/[name].ts,
   // `prerender = false`) is served on demand — see docs/tina-setup.md section 5.
   output: 'static',
@@ -27,7 +27,7 @@ export default defineConfig({
   },
 
   integrations: [
-    // Preact only (CLAUDE.md): sliders, tabs, FAQ accordion, funnel wizard.
+    // Preact only (docs/migration-history.md): sliders, tabs, FAQ accordion, funnel wizard.
     // No `compat` alias: Tina's admin SPA is a separate React bundle built by
     // `tinacms build` into public/admin/ and never shares a module graph with
     // the site's Preact islands.

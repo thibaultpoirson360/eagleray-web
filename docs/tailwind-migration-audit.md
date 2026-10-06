@@ -12,10 +12,10 @@ Limits of this audit:
 
 ## 0. Headline findings
 
-1. CLAUDE.md's colour claim is loosely worded. Beyond `#0e1b2b` and `#ffffff` there are two solid colours, not one: `#f7f6f1` (`surface`, L33) and `#1b2f47` (L394). CLAUDE.md's own config lists both, so the prose "exactly one outlier" contradicts it. No other hex or rgb colours exist in the CSS or `index.html`, apart from `<meta theme-color>` (index.html L11) and the sounder canvas (JS, ink rgba only).
-2. CLAUDE.md's token block has no `fontFamily`, no layout tokens (`--pad`, `--max`, `--rail`, `--nav-h`), no fluid clamp() sizes, and no keyframes. All are real and used (see §1).
-3. CLAUDE.md's "6 sections" is not what `index.html` contains. There is a 7th `<section class="section final-cta">` (index.html L594-603), plus the footer and the `.nav-mobile` overlay (L74-84). `.final-cta` CSS is at L2592-2606.
-4. The sounder threshold is confirmed as 1280px (L843). It is not only a visibility toggle. It also sets `--rail: 84px`, which adds left padding to `.container`, `.section`, `.nav`, `.hero` and `.footer` (L218, 311, 448, 861, 2612). Moving to `lg:` must move the rail with it. CLAUDE.md never mentions `--rail`.
+1. docs/migration-history.md's colour claim is loosely worded. Beyond `#0e1b2b` and `#ffffff` there are two solid colours, not one: `#f7f6f1` (`surface`, L33) and `#1b2f47` (L394). docs/migration-history.md's own config lists both, so the prose "exactly one outlier" contradicts it. No other hex or rgb colours exist in the CSS or `index.html`, apart from `<meta theme-color>` (index.html L11) and the sounder canvas (JS, ink rgba only).
+2. docs/migration-history.md's token block has no `fontFamily`, no layout tokens (`--pad`, `--max`, `--rail`, `--nav-h`), no fluid clamp() sizes, and no keyframes. All are real and used (see §1).
+3. docs/migration-history.md's "6 sections" is not what `index.html` contains. There is a 7th `<section class="section final-cta">` (index.html L594-603), plus the footer and the `.nav-mobile` overlay (L74-84). `.final-cta` CSS is at L2592-2606.
+4. The sounder threshold is confirmed as 1280px (L843). It is not only a visibility toggle. It also sets `--rail: 84px`, which adds left padding to `.container`, `.section`, `.nav`, `.hero` and `.footer` (L218, 311, 448, 861, 2612). Moving to `lg:` must move the rail with it. docs/migration-history.md never mentions `--rail`.
 5. Preflight and the v4 rename of `rounded` interact badly with the locked token block. Bare `rounded` in v4 resolves from `--radius`, and Tailwind's default is 0.25rem (4px), not 6px. A `DEFAULT` key does not exist in v4. See §2b.
 6. Several `main.js` inits are no-ops on this page. The markup does not exist for the splash (`[data-splash]`), fauna, rutas, manifest, or FAQ. Verified by grep of `index.html`.
 7. Existing visual bugs in the current CSS are listed in §2c. They need a keep-or-fix decision before porting.
@@ -281,17 +281,17 @@ Dead: `ping` (L246, and `.kicker .dot` is not in the markup), `splashSafety`, `s
 @media (min-width: 64rem) { :root { --rail: 84px; } }  /* was 1280px; see §5. Consider gating on .js */
 ```
 
-Do not declare `--breakpoint-*`. Tailwind's defaults (sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem) are what CLAUDE.md wants.
+Do not declare `--breakpoint-*`. Tailwind's defaults (sm 40rem, md 48rem, lg 64rem, xl 80rem, 2xl 96rem) are what docs/migration-history.md wants.
 
 ---
 
-## 2. Discrepancies vs CLAUDE.md
+## 2. Discrepancies vs docs/migration-history.md
 
 ### 2a. Factual
 
 1. **"Every color is ink/white/opacity, one outlier"**: partly wrong, see §0.2. `surface` `#f7f6f1` is a third solid.
 2. **"6 sections"**: the file has a 7th (`final-cta`, index.html L594) plus the footer. Human decision in §6.
-3. **Mapping of old tokens to opacity modifiers**: CLAUDE.md says "`text-ink/74`, `border-ink/14` etc." That is correct, but the exact table is `--ink-2`=/74, `--mute`=/52, `--line`=/14, `--line-2`=/8, `--line-strong`=/26.
+3. **Mapping of old tokens to opacity modifiers**: docs/migration-history.md says "`text-ink/74`, `border-ink/14` etc." That is correct, but the exact table is `--ink-2`=/74, `--mute`=/52, `--line`=/14, `--line-2`=/8, `--line-strong`=/26.
 4. **`--mesh-*`** (mentioned in your brief): confirmed dead. The only hits in the whole repo are the three `@property` declarations (L11-27). No `var(--mesh-…)` exists in any HTML, JS or CSS file.
 5. **Fauna, rutas, manifest, FAQ, splash**: not just "may be unwired". They are definitely no-ops on this page. `data-fauna-*`, `.fauna-*`, `[data-rutas]`, `.manifest-item`, `[data-faq]` and `[data-splash]` do not appear in `index.html`. The `wildlife` section is now a static three-image `.wildlife-gallery` (index.html L352-362, CSS L2917-2935). The HTML comment "interactive fauna selector" (L338) is stale.
 6. **Locked button mapping** (see also §2c):
@@ -302,7 +302,7 @@ Do not declare `--breakpoint-*`. Tailwind's defaults (sm 40rem, md 48rem, lg 64r
    - `.btn[disabled]` is `opacity .35` (L417) but `[data-funnel-submit][disabled]` is `opacity .7` (L2485). Same specificity, later wins. The submit-while-sending state is .7, not .35.
    - `border border-transparent` in the base plus `border-ink/26` in the ghost variant conflict. Tailwind orders them by its own sort, not class order. The `<Button>` must not concatenate conflicting utilities. Build a class map per variant and context (`bg-ink` vs `bg-white` for hero primary too), or use tailwind-merge.
    - Hero context: the mapping matches L989-1006. `.hero .btn-primary:hover` sets only the background (surface). The `translateY(-2px)` still applies from `.btn-primary:hover`.
-7. **Sounder**: CLAUDE.md is right that it is 1280 (L843). The main.js painter loop (`initSounder`, `main.js` L180-267) runs at every width. Below 1280 the canvas is `display:none`, so `fitCanvas` sees 0×0 and clamps to 1×1 and keeps painting every frame. Wasteful, not broken. With `lg:` the JS is unchanged.
+7. **Sounder**: docs/migration-history.md is right that it is 1280 (L843). The main.js painter loop (`initSounder`, `main.js` L180-267) runs at every width. Below 1280 the canvas is `display:none`, so `fitCanvas` sees 0×0 and clamps to 1×1 and keeps painting every frame. Wasteful, not broken. With `lg:` the JS is unchanged.
 8. **CSS counters "must stay custom"** (your brief): the only counter in the CSS, `.vs-list li` (`counter-increment` and `::before`, L1149-1176), is **commented out**. `.vs-us .vs-list li::before` (L1174) sets a colour on a pseudo-element with no `content`, so it does nothing. The homepage `<ol>` lists render with no numbers. No counter CSS needs to be ported.
 9. **`.container`**: used only on three CTA wrapper `<p>`s (index.html L333, 363, 415), always with inline styles. Its name collides with Tailwind v4's built-in `container` utility. See §2b.
 10. **Kicker numerals** (index.html): "01" difference, "02" crew, "03" wildlife, "07" boats, "09" funnel. 04-06 and 08 are missing. `.nav-mobile` numbers "06" twice (L80-81). These are content bugs.
@@ -311,7 +311,7 @@ Do not declare `--breakpoint-*`. Tailwind's defaults (sm 40rem, md 48rem, lg 64r
 
 - **`rounded` / `DEFAULT`**: no `DEFAULT` key in v4. The `rounded` utility uses `themeKeys: ["--radius"]` (verified in `dist/lib.mjs`). Tailwind's built-in reference value is `--radius: 0.25rem`. If the token block only sets `--radius-sm` / `--radius-lg` and copies the v3 shape, every `rounded` (buttons, inputs, `.field input`, `.funnel-escape`, opt spans) silently becomes 4px instead of 6px. Fix: define `--radius: 6px` (done in §1g) or use `rounded-md`.
 - **Overriding `--radius-sm` and `--radius-lg`** changes every use of `rounded-sm` / `rounded-lg`. That is intended here.
-- **`--ease-out` override**: redefining it replaces Tailwind's built-in `ease-out` curve everywhere. Nothing else in this project uses the built-in, so it is intended, but be aware. Locked by CLAUDE.md. Not a bug.
+- **`--ease-out` override**: redefining it replaces Tailwind's built-in `ease-out` curve everywhere. Nothing else in this project uses the built-in, so it is intended, but be aware. Locked by docs/migration-history.md. Not a bug.
 - **`.container`**: v4 ships `container`. Do not reuse the name. If kept, redefine with `@utility container { … }`. Recommendation: drop it (used only in three accidental CTA wrappers).
 - **Keyframe name collisions**: the site's `@keyframes ping` (L246) and `@keyframes spin` (L2506) share names with Tailwind's built-in `animate-ping` / `animate-spin` keyframes. Delete the dead `ping`. For `spin`, use `animate-spin` with a `.8s` duration override (see `--animate-spin-fast`) and delete the custom keyframe.
 - **Default border colour** is `currentColor` in v4 (v3 was gray-200). Preflight resets borders to `0 solid` (`preflight.css` L15). Always pair `border` with an explicit colour (`border-ink/14`). The original always sets colour explicitly.
@@ -349,7 +349,7 @@ Do not declare `--breakpoint-*`. Tailwind's defaults (sm 40rem, md 48rem, lg 64r
    - `.btn` hover lift
    - magnetic and tilt JS (only gated on `fineHover`, `main.js` L125, 150)
    - the sounder rAF
-5. **No-JS funnel is a dead end**: with JS off, `js-only` hides Back and Continue (L202-208) and the Submit button has the `hidden` attribute (index.html L570). There is no way to submit. CLAUDE.md says to preserve the no-JS fallback. Preserving it as-is preserves a broken submit.
+5. **No-JS funnel is a dead end**: with JS off, `js-only` hides Back and Continue (L202-208) and the Submit button has the `hidden` attribute (index.html L570). There is no way to submit. docs/migration-history.md says to preserve the no-JS fallback. Preserving it as-is preserves a broken submit.
 6. **`.container` on CTA wrappers** (index.html L333, 363): with `--rail: 84px` at ≥1280 the wrapper's `padding-left` is `pad + rail` (L217-219), so the centred CTA sits ~42px right of centre. The boats one overrides `padding-left` (L415).
 7. **Global `:focus-visible` `border-radius: 4px`** (L167) changes the shape of focused pills (`.step-btn` 50%, `.btn` 6px → 4px).
 8. **`.boats-dot`**: `width/height: 6px` plus `padding:.3rem` under `border-box` yields a ~9.6px dot (padding sum exceeds the width), not 6px. Active is 1.2× of that. Replicate the rendered size.
@@ -420,7 +420,7 @@ Legend:
   - Transitions: bg, backdrop-filter, box-shadow, height, all `.45s ease-out`.
 - **U**: `.nav-brand` flex row; `.nav-mark` (h 44px), `.nav-wordmark` (h 30px); `.nav-logo-ink/-light` swap (`hidden` / `group-…:block`, L495-505).
 - **C**: `.nav-links` (hidden below 960, `flex` above; L507-518), `.nav-link` (L520-549). `::after` underline via `after:` utilities (absolute, bottom -3px, h 1px, `scale-x-0` → `hover:scale-x-100`, `origin-right` → `origin-left`, `.45s ease-out`).
-- **C**: `.nav-cta` (L551-575; note bug §2c.1), `.lang-switch`, `.lang-btn` (L577-601; CLAUDE.md says decide when building Nav).
+- **C**: `.nav-cta` (L551-575; note bug §2c.1), `.lang-switch`, `.lang-btn` (L577-601; docs/migration-history.md says decide when building Nav).
 - **C / U**: `.nav-toggle` (L610-642): 3 bars, 22×1.5px, gap 5px. Open state uses `aria-expanded` → `group-aria-expanded:` variants (bar 1 `translate-y-[6.5px] rotate-45`, bar 2 `opacity-0`, bar 3 `-translate-y-[6.5px] -rotate-45`).
 - **C / X**: `.nav-mobile` (L644-717). Fullscreen overlay with `clip-path: inset(0 0 100% 0)` → `inset(0)` on `aria-hidden="false"` (L655-661). `aria-[hidden=false]:` variant + arbitrary `[clip-path:…]` works. Body scroll lock is JS (`main.js` L96). Links: display italic, `.nav-mobile a i` mono `.62rem` white/60. Bugs §2c.2 and §2c.15.
 - **D**: `.nav-mobile-brand/-mark/-wordmark` (L694-709), `.lang-switch-mobile` (L603-608).
@@ -533,7 +533,7 @@ Original breakpoints found: 560, 640, 720, 800, 960, 1280 (min-width), plus max-
 | 720 | footer-grid 4-col (L2675); footer centred `max-width:719` (L2728-2752). Dead: included-grid, roles-strip. | `md` 768 | +48 | Low-medium. 720-767px viewports get the centred stacked footer instead of the 4-column grid. |
 | 800 | `.vs` 3-col (L1102), `.vs-col` padding (L1114), `.vs-axis` show (L1182) | `md` 768 | -32 | Low-medium. 768-799px viewports switch to the side-by-side comparison earlier; columns ~300px wide, more text wrap. |
 | 960 | nav-links / nav-cta show, toggle hide (L514, 561, 619); `.hero-inner` `padding-inline: var(--pad)` (L930); footer-top 2-col (L2681). Dead: concept-grid, fauna, ruta-panel, day-grid, manifest. | `lg` 1024 (+64) or `md` 768 (-192) | +64 | **Medium.** `lg` is the closer match. There are now 7 nav links (index.html L63-69) plus brand, lang switch and CTA. My rough estimate (not measured, unverified) is that desktop nav content is wider than ~980px at 1024px once the 84px rail is added. Links may wrap or the nav may overflow at 1024-1150px. Check visually at 1024 / 1100 / 1180. `md` would clearly overflow. Also the `.hero-inner` padding step (20px → 5vw) happens at 1024 instead of 960. |
-| 1280 | sounder show and `--rail: 84px` (L843-851) | `lg` 1024 (CLAUDE.md) or `xl` 1280 | -256 (lg) | **High.** Between 1024 and 1279 the content area loses 84px on the left, and the nav and hero also shift by the rail. Content width at 1024px is roughly 838px (1024 − 135 left padding − 51 right padding), computed from the formulas, unmeasured. The sounder covers the left 84px of the hero. Keep `--rail` tied to the same breakpoint as the sounder's visibility, and consider gating on `.js`, since without JS the original has an empty 84px gutter at ≥1280 (the rail applies with `.sounder` hidden). |
+| 1280 | sounder show and `--rail: 84px` (L843-851) | `lg` 1024 (docs/migration-history.md) or `xl` 1280 | -256 (lg) | **High.** Between 1024 and 1279 the content area loses 84px on the left, and the nav and hero also shift by the rail. Content width at 1024px is roughly 838px (1024 − 135 left padding − 51 right padding), computed from the formulas, unmeasured. The sounder covers the left 84px of the hero. Keep `--rail` tied to the same breakpoint as the sounder's visibility, and consider gating on `.js`, since without JS the original has an empty 84px gutter at ≥1280 (the rail applies with `.sounder` hidden). |
 
 Notes:
 - Tailwind breakpoints are in `rem` (40 / 48 / 64 / 80 / 96); the original used px. Only matters if the user changes the browser's default font size.
@@ -544,7 +544,7 @@ Notes:
 
 ## 6. Items needing a human decision
 
-1. **Homepage scope**: CLAUDE.md says 6 sections. The file has a 7th (`final-cta`) plus footer. Include the final CTA in the Tina-editable homepage?
+1. **Homepage scope**: docs/migration-history.md says 6 sections. The file has a 7th (`final-cta`) plus footer. Include the final CTA in the Tina-editable homepage?
 2. **Rail breakpoint at `lg`**: accept the 84px rail from 1024px (§5), or use `xl:` for the rail and `lg:` only for the gauge visibility? Should the rail be gated on `.js`?
 3. **Nav crowding at 1024px** with 7 links (§5). Options: hamburger until `xl`, shorter labels, or smaller gaps. Needs a browser check.
 4. **Keep-or-fix the existing bugs** in §2c: nav CTA hover invisible label, `.nav-mobile-foot` invisible text, `.reveal` / `.has-tilt` collision on boat cards, `prefers-reduced-motion` gaps, no-JS funnel with no submit path, `.container` off-centre CTAs, global focus `border-radius:4px`, wildlife gallery not responsive.
@@ -552,19 +552,19 @@ Notes:
 6. **`ease-out` override**: keep the locked name `ease-out` (replaces Tailwind's built-in), or rename it (e.g. `ease-expo`)? Nothing else in the project uses the built-in.
 7. **`--radius`**: keep bare `rounded` (needs `--radius: 6px`), or standardise on `rounded-md` in components? `--radius-md: 6px` is already Tailwind's default.
 8. **Token granularity**: put the clamp() values and layout sizes in `@theme` (as in §1g) or use arbitrary values inline? The micro font sizes (.58-.95rem) are proposed as arbitrary values, not tokens.
-9. **Dead code deletion**: confirm deleting everything marked D. Do the not-yet-built pages (routes, day-in-life, activities, FAQ per CLAUDE.md) need the `.ruta*`, `.day-*`, `.manifest*`, `.faq*` and `.fauna*` CSS kept for later? The mesh `@property` rules and `--ease-bounce` are dead in the whole repo.
+9. **Dead code deletion**: confirm deleting everything marked D. Do the not-yet-built pages (routes, day-in-life, activities, FAQ per docs/migration-history.md) need the `.ruta*`, `.day-*`, `.manifest*`, `.faq*` and `.fauna*` CSS kept for later? The mesh `@property` rules and `--ease-bounce` are dead in the whole repo.
 10. **Fonts**: keep the Google Fonts `<link>`s or self-host (with `@font-face` + `font-display:swap` in a base layer)? The existing TASA `@font-face` has no `src` and does nothing (L62-67). Confirm whether TASA has an italic face (used by `.nav-mobile a`).
 11. **Kicker numerals and nav-mobile numbering**: 01/02/03/07/09 and duplicate "06" (§2a.10). Make the numeral a Tina field or renumber?
 12. **`<Button>` class conflicts**: `border-transparent` + `border-ink/26`, `bg-ink` + `bg-white` (hero) must not be concatenated (§2a.6). Use per-variant maps or tailwind-merge.
 13. **`.container` wrappers on CTAs**: replace the three `<p class="container" style=…>` with a plain centred `div`? That removes the off-centre quirk (§2c.6).
-14. **`.lang-btn`** scroll-state handling (CLAUDE.md defers to Nav build). Only `EN` is visible; ES / FR buttons are commented out (index.html L55-56).
+14. **`.lang-btn`** scroll-state handling (docs/migration-history.md defers to Nav build). Only `EN` is visible; ES / FR buttons are commented out (index.html L55-56).
 15. **Class names built in JS** (`funnel-recap-*`, `boats-dot`, `magnetic-inner`): keep as small custom CSS, or move that markup into scanned components (Preact) with literal Tailwind strings?
-16. **Stale JS**: `initFauna`, `initRutas`, `initManifest`, `initFaq`, `initSplash` and `renderFaunaCaption` are no-ops on the homepage. CLAUDE.md says not to port them. Confirm they stay out.
+16. **Stale JS**: `initFauna`, `initRutas`, `initManifest`, `initFaq`, `initSplash` and `renderFaunaCaption` are no-ops on the homepage. docs/migration-history.md says not to port them. Confirm they stay out.
 
 Files referenced:
 - `/Users/kinich.barcelo/Documents/eagle/eagleray-web/styles.css`
 - `/Users/kinich.barcelo/Documents/eagle/eagleray-web/main.js`
 - `/Users/kinich.barcelo/Documents/eagle/eagleray-web/index.html`
-- `/Users/kinich.barcelo/Documents/eagle/eagleray-web/CLAUDE.md`
+- `/Users/kinich.barcelo/Documents/eagle/eagleray-web/docs/migration-history.md`
 - `/Users/kinich.barcelo/Documents/eagle/eagleray-web/node_modules/tailwindcss/theme.css`
 - `/Users/kinich.barcelo/Documents/eagle/eagleray-web/node_modules/tailwindcss/preflight.css`

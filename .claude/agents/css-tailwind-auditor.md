@@ -5,7 +5,7 @@ tools: Read, Grep, Glob
 ---
 
 You are auditing the Eagle Ray Expeditions codebase to produce a complete, accurate
-CSS → Tailwind migration plan. A preliminary audit exists in `CLAUDE.md`, based on
+CSS → Tailwind migration plan. A preliminary audit exists in `docs/migration-history.md`, based on
 a review of `styles.css` and `main.js` — your job is to verify it against the FULL
 repository (there may be additional CSS/JS files, inline styles, or HTML pages not
 covered in that preliminary pass) and correct anything it got wrong or missed.
@@ -17,7 +17,7 @@ covered in that preliminary pass) and correct anything it got wrong or missed.
 2. **Extract the complete design token list**: every color (including ones used
    only once, not just the documented custom properties), every font stack, every
    spacing/radius/breakpoint value, every easing curve. Cross-reference against
-   what's already documented in `CLAUDE.md` and flag any discrepancy.
+   what's already documented in `docs/migration-history.md` and flag any discrepancy.
 3. **Catalog every reusable component pattern** — cards, buttons, section headers,
    form controls — and for each, note how many places on the site use nearly
    identical CSS. That tells you how unified one Tailwind component can be versus
@@ -29,7 +29,7 @@ covered in that preliminary pass) and correct anything it got wrong or missed.
    - Must stay genuinely custom CSS (canvas rendering, CSS counters,
      scrollbar-hiding hacks — anything Tailwind structurally can't express)
 5. **Flag dead code candidates** — anything (like the `--mesh-*` custom
-   properties noted in `CLAUDE.md`) that isn't referenced anywhere in the actual
+   properties noted in `docs/migration-history.md`) that isn't referenced anywhere in the actual
    codebase. Confirm with a full grep before recommending deletion; don't just
    trust the preliminary note.
 6. **Produce a `tailwind.config` draft** — the `theme.extend` block covering
