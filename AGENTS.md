@@ -5,6 +5,8 @@ This file has two readers.
 - **Thibault** — you don't need to code. Read "Start here" and "Asking the assistant for things" below, and use the two checklists.
 - **The AI coding assistant** — read every rule in this file before you change anything. When this file and a request disagree, follow this file and tell Thibault why.
 
+For the look and feel (colours, type, buttons, heroes), see `docs/design-system.md` and `design-system/styles.css`. Use those tokens; do not add new colours or sizes.
+
 For migration history and setup, see `CLAUDE.md` (how the site was moved to this stack), `docs/tina-setup.md` (accounts, logins, hosting) and `docs/translation-workflow.md` (Spanish and French drafts). This file is about **day-to-day work**: adding and changing pages without breaking what exists.
 
 ---
