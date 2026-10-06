@@ -1,12 +1,14 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
-  "intro": "Eagle Ray Expeditions organise des croisières à la voile privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants. Notre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme dès qu'une occasion intéressante se présente.",
+  "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
+  "intro": "Eagle Ray Expeditions organise des croisières à la voile privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants. Notre équipe s'occupe de la navigation, veille à la sécurité de tous et s'adapte au fil de la journée afin de pouvoir modifier le programme si une occasion intéressante se présente.",
   "expeditionsLabel": "Choisissez l'expédition",
   "expeditions": [
     {
       "name": "Expédition de recalibrage",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Passionate_Sea_People_Sailing_Experience_Sailing_uqdgak.jpg",
       "imageAlt": "Expédition de recalibrage",
       "href": "/fr/recalibration-expedition/"
     },
@@ -18,7 +20,6 @@
   ],
   "seo": {
     "title": "Naviguez avec nous — Eagle Ray Expeditions",
-    "description": "Expéditions privées en voilier à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage."
-  },
-  "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe."
+    "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage."
+  }
 }
