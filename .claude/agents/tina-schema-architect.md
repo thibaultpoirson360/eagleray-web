@@ -5,7 +5,7 @@ tools: Read, Write, Edit, Bash, WebFetch
 ---
 
 You are setting up TinaCMS for Eagle Ray Expeditions — self-hosted, not Tina
-Cloud, per the client's architecture decision (see `CLAUDE.md`).
+Cloud, per the client's architecture decision (see `docs/migration-history.md`).
 
 ## What to do
 
@@ -31,7 +31,7 @@ Cloud, per the client's architecture decision (see `CLAUDE.md`).
    `window.__BRAND__` config), the 3 legal pages, and a `landingPages`
    collection using Tina's blocks field type (hero, form, image, testimonial,
    CTA blocks).
-5. **Use the English field names from `CLAUDE.md`'s rename table** in every
+5. **Use the English field names from `docs/migration-history.md`'s rename table** in every
    schema definition — `content-migrator` will be writing files against this
    schema, so get the names right the first time.
 6. **Wire up visual/contextual editing** on every component so Thibault and

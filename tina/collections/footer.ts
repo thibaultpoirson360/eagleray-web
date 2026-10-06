@@ -5,7 +5,7 @@ import { doNotTranslate, localeRouter, textarea } from "../shared/fields";
  * Page chrome, not a homepage section — `<footer class="footer">`
  * (index.html L607-654), CSS at styles.css "20. FOOTER" (L2609-2752).
  * Same situation as Nav (tina/collections/navigation.ts): not
- * anticipated by the original schema pass, added because CLAUDE.md's
+ * anticipated by the original schema pass, added because docs/migration-history.md's
  * "every component must be editable" rule applies here too.
  *
  * `base.lines` / `coords.lines` are each a list of strings, not a single

@@ -19,7 +19,7 @@ where the actual EN/ES/FR strings live).
    defined** — one content file per language per entry, matching the collection
    structure (routes, boats, crew, wildlife, day-in-life, FAQ, site settings,
    and the 3 legal pages).
-3. **Apply the field rename table from `CLAUDE.md` exactly** — every migrated
+3. **Apply the field rename table from `docs/migration-history.md` exactly** — every migrated
    field uses the new English names (`tripDuration`, `travelingAs`,
    `guestCount`, etc.), never the original Spanish identifiers, regardless of
    what language the content itself is in.
