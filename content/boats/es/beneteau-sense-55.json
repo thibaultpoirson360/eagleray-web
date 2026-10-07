@@ -1,0 +1,71 @@
+{
+  "name": "Beneteau Sense 55",
+  "tagline": "Monocasco de vela",
+  "description": "Un monocasco de vela diseñado pensando en la vida a bordo.",
+  "details": "Un monocasco de vela diseñado pensando en la vida a bordo. La mesa de la bañera tiene capacidad para diez personas, por lo que el almuerzo al fondeo se disfruta al aire libre, y la plataforma de baño desciende hidráulicamente hasta la línea de flotación: el mar está a un paso de la mesa. Con velas de alto rendimiento, es un barco ideal para grupos que quieren disfrutar de la navegación a vela, y no solo desplazarse a motor entre fondeaderos.\n\nBajo cubierta: tres suites y tres baños, con capacidad para hasta seis huéspedes.",
+  "features": [
+    "Monocasco de vela de 55 pies",
+    "3 suites, 3 baños",
+    "Hasta 6 huéspedes",
+    "Mesa de cabina para 10 personas",
+    "Plataforma de baño hidráulica",
+    "Velas de competición"
+  ],
+  "length": "58,3 pies",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "hasta 6",
+  "order": 2,
+  "photo": "/assets/img/boats/beneteau-sense-55-12.webp",
+  "photoAlt": "Beneteau Sense 55",
+  "photos": [
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-12.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-01.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-02.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-03.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-04.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-05.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-06.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-07.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-08.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-09.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-10.webp",
+      "alt": "Beneteau Sense 55"
+    },
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-11.webp",
+      "alt": "Beneteau Sense 55"
+    }
+  ]
+}
