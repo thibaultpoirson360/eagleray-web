@@ -1,0 +1,95 @@
+{
+  "name": "Bay Dreamer",
+  "tagline": "Lagoon 450F — Catamaran",
+  "description": "A catamaran with a flybridge above the saloon: the best seat on board while you sail, and the place to watch the anchorage at sunset.",
+  "details": "A catamaran with a flybridge above the saloon: the best seat on board while you sail, and the place to watch the anchorage at sunset. A Code Zero sail keeps her sailing when the wind is light, and a tender with a 15 HP outboard takes you to the beach when you want to go ashore.\n\nBay Dreamer was refitted in 2022. Below deck: four cabins and four bathrooms, air conditioning in every cabin, a dishwasher in the galley and a watermaker that makes fresh water on board. She also carries Starlink, if anyone needs to stay reachable.",
+  "features": [
+    "45 ft catamaran, refitted in 2022",
+    "4 cabins, 4 bathrooms",
+    "Up to 8 guests",
+    "Flybridge",
+    "Air conditioning in every cabin",
+    "Starlink wifi on board",
+    "Watermaker and generator on board",
+    "Dishwasher",
+    "Code Zero sail for light winds",
+    "Tender with 15 HP outboard"
+  ],
+  "length": "46 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 4,
+  "photo": "/assets/img/boats/bay-dreamer-09.webp",
+  "photoAlt": "Bay Dreamer",
+  "photos": [
+    {
+      "image": "/assets/img/boats/bay-dreamer-09.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-01.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-02.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-03.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-04.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-05.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-06.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-07.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-08.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-10.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-11.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-12.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-13.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-14.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-15.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-16.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-17.webp",
+      "alt": "Bay Dreamer"
+    }
+  ]
+}

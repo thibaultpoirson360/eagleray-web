@@ -1,0 +1,78 @@
+{
+  "name": "Sun Odyssey 44i - Jeanneau",
+  "tagline": "Sailing monohull",
+  "description": "A sailing monohull designed by Philippe Briand to sail well, and sailed here by a captain who knows her inside out.",
+  "details": "A sailing monohull designed by Philippe Briand to sail well, and sailed here by a captain who knows her inside out.\nHer sails are in good shape and she is simple to handle: if you want to take the helm or help with a manoeuvre, he'll show you how.\nIf not, he takes care of everything.\n\nThere's no daylight-only rule on board. When the weather calls for it, she leaves at 4 a.m. while you sleep, or reaches the anchorage at 10 p.m. after a passage under the stars. Below deck: three double cabins, three bathrooms with separate showers, air conditioning and a bright saloon to end the day in.",
+  "features": [
+    "45.1 ft sailing monohull",
+    "3 cabins, 3 bathrooms",
+    "Up to 4 guests",
+    "Philippe Briand design, built for performance under sail",
+    "Captain who knows the boat inside out; guests can learn to helm and trim",
+    "Sails at any hour: early starts and night passages possible",
+    "Starlink wifi on board",
+    "Air conditioning",
+    "Watermaker on board",
+    "Spacious cockpit with comfortable seating",
+    "Well-equipped galley and bright saloon",
+    "Stand-up paddleboard and two-person kayak",
+    "Snorkeling gear and hikes ashore"
+  ],
+  "length": "45.1 ft",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "up to 4",
+  "order": 1,
+  "photo": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+  "photoAlt": "Sun Odyssey 44i - Jeanneau — Exterior",
+  "photos": [
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-02.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior / Deck / timón"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-03.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Deck / mesa"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-04.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-05.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-06.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-07.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Salón"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-08.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Salón"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-09.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Cocina"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-10.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Habitación"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-11.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Habitación"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-12.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Baño"
+    }
+  ]
+}
