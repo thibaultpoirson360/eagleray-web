@@ -1,0 +1,78 @@
+{
+  "name": "Sun Odyssey 44i - Jeanneau",
+  "tagline": "Monocoque à voile",
+  "description": "Un monocoque à voile conçu par Philippe Briand pour offrir d'excellentes performances de navigation, et piloté ici par un capitaine qui le connaît sur le bout des doigts.",
+  "details": "Un monocoque à voile conçu par Philippe Briand pour offrir d’excellentes performances de navigation, et manœuvré ici par un capitaine qui le connaît sur le bout des doigts.\nSes voiles sont en bon état et il est facile à manœuvrer : si vous souhaitez prendre la barre ou aider à une manœuvre, il vous montrera comment faire.\nSinon, il s'occupe de tout.\n\nIl n'y a pas de règle imposant de naviguer uniquement de jour à bord. Lorsque les conditions météorologiques l'exigent, le bateau lève l'ancre à 4 h du matin pendant que vous dormez, ou arrive au mouillage à 22 h après une traversée sous les étoiles. Sous le pont : trois cabines doubles, trois salles de bains avec douches séparées, la climatisation et un salon lumineux pour terminer la journée.",
+  "features": [
+    "Monocoque à voile de 45,1 pieds",
+    "3 chambres, 3 salles de bains",
+    "Jusqu'à 4 personnes",
+    "Conçu par Philippe Briand, construit pour offrir des performances exceptionnelles à la voile",
+    "Un capitaine qui connaît le bateau sur le bout des doigts ; les passagers peuvent s'initier à la barre et au réglage des voiles",
+    "Départs à toute heure : départs tôt le matin et traversées de nuit possibles",
+    "Wi-Fi Starlink à bord",
+    "Climatisation",
+    "Dessalinisateur à bord",
+    "Un cockpit spacieux doté de sièges confortables",
+    "Une cuisine bien équipée et un salon lumineux",
+    "Planche de stand up paddle et kayak biplace",
+    "Matériel de plongée libre et randonnées à terre"
+  ],
+  "length": "45,1 pieds",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "jusqu'à 4",
+  "order": 1,
+  "photo": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+  "photoAlt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+  "photos": [
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Extérieur"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-02.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Extérieur / Pont / Barre"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-03.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Pont / mesa"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-04.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Extérieur"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-05.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Extérieur"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-06.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Extérieur"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-07.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Salon"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-08.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Salon"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-09.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Cuisine"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-10.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Cabine"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-11.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Cabine"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-12.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Salle de bains"
+    }
+  ]
+}

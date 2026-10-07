@@ -1,0 +1,71 @@
+{
+  "name": "Olympia",
+  "tagline": "Downeast 38 — Monocasco a vela, construido en 1977",
+  "description": "El Olympia navega desde 1977. Es un monocasco de 38 pies con un camarote y un cuarto de baño, lo que lo convierte en un barco para dos personas.",
+  "details": "El Olympia lleva navegando desde 1977. Es un monocasco de 38 pies con un camarote y un baño, lo que lo convierte en un barco para dos: una luna de miel, un aniversario o unos días sin tener que seguir los planes de nadie más.\n\nEn una salida de un día, su cubierta tiene capacidad para diez o doce personas. Para dos, es todo el espacio que se puede desear: tumbarse al sol, comer al aire libre, contemplar cómo el fondeadero se va quedando en silencio por la noche. Bajo cubierta, un único camarote con un interior acogedor.",
+  "features": [
+    "Monocasco de vela de 38 pies, construido en 1977",
+    "1 habitación, 1 cuarto de baño",
+    "Para 2 personas: solo parejas",
+    "Cubierta con capacidad para entre 10 y 12 personas en las salidas diurnas",
+    "Acabados interiores acogedores",
+    "Viajes de una noche"
+  ],
+  "length": "38 pies",
+  "cabins": "1",
+  "bathrooms": "1",
+  "guests": "hasta 2",
+  "order": 3,
+  "photo": "/assets/img/boats/olympia-09.webp",
+  "photoAlt": "Olympia",
+  "photos": [
+    {
+      "image": "/assets/img/boats/olympia-09.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-01.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-02.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-03.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-04.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-05.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-06.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-07.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-08.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-10.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-11.webp",
+      "alt": "Olympia"
+    },
+    {
+      "image": "/assets/img/boats/olympia-12.webp",
+      "alt": "Olympia"
+    }
+  ]
+}

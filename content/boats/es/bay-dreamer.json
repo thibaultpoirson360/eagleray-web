@@ -1,7 +1,95 @@
 {
   "name": "Bay Dreamer",
-  "description": "4 camarotes, 8 plazas, 4 baños. Flybridge, Starlink, planta potabilizadora — pensado para grupos que quieren espacio y comodidad a partes iguales.",
-  "photo": "/assets/img/boat-baydreamer-exterior.webp",
-  "photoAlt": "Bay Dreamer — exterior del catamarán fondeado",
-  "order": 1
+  "tagline": "Lagoon 450F — Catamarán",
+  "description": "Un catamarán con un flybridge situado sobre el salón: el mejor sitio a bordo mientras navegas y el lugar ideal para contemplar el fondeadero al atardecer.",
+  "details": "Un catamarán con un flybridge sobre el salón: el mejor sitio a bordo mientras navegas y el lugar ideal para contemplar el fondeadero al atardecer. Una vela Code Zero le permite seguir navegando cuando el viento es flojo, y una lancha auxiliar con un motor fueraborda de 15 HP te lleva a la playa cuando quieras bajar a tierra.\n\nEl Bay Dreamer fue reacondicionado en 2022. Bajo cubierta: cuatro camarotes y cuatro baños, aire acondicionado en todos los camarotes, un lavavajillas en la cocina y una potabilizadora que produce agua dulce a bordo. También cuenta con Starlink, por si alguien necesita estar localizable.",
+  "features": [
+    "Catamarán de 45 pies, reacondicionado en 2022",
+    "4 habitaciones, 4 baños",
+    "Hasta 8 personas",
+    "Flybridge",
+    "Aire acondicionado en todos los camarotes",
+    "Wifi de Starlink a bordo",
+    "Desalinizador y generador a bordo",
+    "Lavavajillas",
+    "Vela Code Zero para vientos flojos",
+    "Embarcación auxiliar con motor fueraborda de 15 HP"
+  ],
+  "length": "46 pies",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "hasta 8",
+  "order": 4,
+  "photo": "/assets/img/boats/bay-dreamer-09.webp",
+  "photoAlt": "Bay Dreamer",
+  "photos": [
+    {
+      "image": "/assets/img/boats/bay-dreamer-09.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-01.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-02.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-03.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-04.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-05.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-06.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-07.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-08.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-10.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-11.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-12.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-13.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-14.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-15.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-16.webp",
+      "alt": "Bay Dreamer"
+    },
+    {
+      "image": "/assets/img/boats/bay-dreamer-17.webp",
+      "alt": "Bay Dreamer"
+    }
+  ]
 }
