@@ -60,7 +60,21 @@ export const boats: Collection = {
       label: "Tagline (optional)",
       description: 'Currently commented out in the markup, e.g. "Icon Charter — Lagoon 450F".',
     },
-    { type: "string", name: "description", label: "Description", ui: textarea },
+    { type: "string", name: "description", label: "Short description (shown on the card)", ui: textarea },
+    {
+      type: "string",
+      name: "details",
+      label: "Full description (shown when the card is opened)",
+      ui: textarea,
+      description: "A blank line starts a new paragraph.",
+    },
+    {
+      type: "string",
+      name: "features",
+      label: "Highlights (shown when the card is opened)",
+      list: true,
+      description: "One line per highlight, e.g. \"Starlink wifi on board\".",
+    },
     { type: "image", name: "photo", label: "Photo" },
     { type: "string", name: "photoAlt", label: "Photo alt text" },
     {

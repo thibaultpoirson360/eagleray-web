@@ -33,6 +33,8 @@ const cards: BoatCard[] = boats.map((boat) => {
     name: boat.name,
     tagline: boat.tagline ?? undefined,
     description: boat.description ?? undefined,
+    details: boat.details ?? undefined,
+    features: (boat.features ?? []).filter((f): f is string => !!f),
     cover: photos[0]?.src,
     coverAlt: photos[0]?.alt,
     length: boat.length ?? undefined,
@@ -73,7 +75,7 @@ const description = boatsPage?.seo?.description ?? undefined;
                 next: "Next photo",
                 photo: "Photo",
                 customize: boatsPage.cta?.label ?? "Customize my expedition",
-                customizeHref: boatsPage.cta?.href ?? "/en/#customize",
+                customizeHref: boatsPage.cta?.href ?? "/en/customize-your-expedition/",
                 stats: { length: "Length", cabins: "Cabins", bathrooms: "Bathrooms", guests: "Guests" },
               }}
             />
