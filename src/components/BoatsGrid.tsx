@@ -13,6 +13,8 @@ export interface BoatCard {
   name: string;
   tagline?: string;
   description?: string;
+  details?: string;
+  features?: string[];
   cover?: string;
   coverAlt?: string;
   length?: string;
@@ -113,13 +115,14 @@ export default function BoatsGrid({ boats, labels }: Props) {
       >
         {active && (
           <div class="max-h-[88vh] overflow-y-auto">
-            <div class="relative aspect-[16/9] bg-ink">
+            <div class="relative aspect-[4/3] bg-ink">
               <ImageSlider
                 photos={active.photos}
                 previousLabel={labels.previous}
                 nextLabel={labels.next}
                 dotLabel={labels.photo}
                 dotsAt="bottom"
+                fit="contain"
                 className="h-full w-full"
               />
               <button
@@ -134,7 +137,23 @@ export default function BoatsGrid({ boats, labels }: Props) {
             <div class="px-6 pt-8 pb-9 md:px-10">
               {active.tagline && <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">{active.tagline}</p>}
               <h2 class="mt-2 mb-4 text-[clamp(1.5rem,4vw,2rem)]">{active.name}</h2>
-              {active.description && <p class="text-[.98rem] leading-[1.65] text-ink/68">{active.description}</p>}
+              {(active.details ?? active.description) && (
+                <div class="text-[.98rem] leading-[1.65] text-ink/68">
+                  {(active.details ?? active.description ?? "").split(/\n\s*\n/).map((paragraph) => (
+                    <p class="mb-3 whitespace-pre-line last:mb-0">{paragraph}</p>
+                  ))}
+                </div>
+              )}
+              {active.features && active.features.length > 0 && (
+                <ul class="mt-4 grid grid-cols-1 gap-x-6 gap-y-1.5 text-[.9rem] text-ink/64 sm:grid-cols-2">
+                  {active.features.map((feature) => (
+                    <li class="flex gap-2">
+                      <span class="text-ink/35" aria-hidden="true">—</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <dl class="mt-6 grid grid-cols-2 gap-5 border-t border-ink/10 pt-5 md:grid-cols-4">
                 {stats(active).map(([label, value]) => (
                   <div>
@@ -143,20 +162,13 @@ export default function BoatsGrid({ boats, labels }: Props) {
                   </div>
                 ))}
               </dl>
-              <div class="mt-8 flex flex-wrap gap-3">
+              <div class="mt-8">
                 <a
                   href={labels.customizeHref}
                   class="inline-flex items-center rounded bg-ink px-6 py-3.5 text-[.88rem] text-white transition-colors hover:bg-ink-hover"
                 >
                   {labels.customize}
                 </a>
-                <button
-                  type="button"
-                  onClick={close}
-                  class="inline-flex items-center rounded border border-ink/26 px-6 py-3.5 text-[.88rem] text-ink transition-colors hover:border-ink hover:bg-surface"
-                >
-                  {labels.close}
-                </button>
               </div>
             </div>
           </div>

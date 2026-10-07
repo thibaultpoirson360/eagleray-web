@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
 
 /**
  * A photo slider for a crew member: dots to pick a photo, and arrows on
@@ -16,18 +16,52 @@ interface Props {
   className?: string;
   /** Where the dots sit: over the bottom edge (default) or the top edge. */
   dotsAt?: "top" | "bottom";
+  /**
+   * "cover" (default) fills the frame and crops — right for a fixed-size card
+   * photo. "contain" shows the whole photo letterboxed on the frame's
+   * background colour — right for a gallery of photos with mixed aspect
+   * ratios, like the Boats modal, where cropping would cut off part of some.
+   */
+  fit?: "cover" | "contain";
 }
 
-export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom" }: Props) {
+export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom", fit = "cover" }: Props) {
   const [index, setIndex] = useState(0);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
   if (photos.length === 0) return null;
   const count = photos.length;
   const current = photos[Math.min(index, count - 1)];
   const go = (n: number) => setIndex((n + count) % count);
 
+  // Swipe left/right on touch devices — the arrow buttons are desktop-only
+  // (md:flex below), so touch has no other way to move through the photos.
+  // touch-pan-y tells the browser this element handles horizontal gestures
+  // itself, so a swipe doesn't also try to scroll the page sideways while
+  // vertical scrolling over the slider still works normally.
+  const onTouchStart = (e: TouchEvent) => {
+    const t = e.touches[0];
+    touchStart.current = { x: t.clientX, y: t.clientY };
+  };
+  const onTouchEnd = (e: TouchEvent) => {
+    const start = touchStart.current;
+    touchStart.current = null;
+    if (!start || count < 2) return;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy)) return;
+    go(index + (dx < 0 ? 1 : -1));
+  };
+
   return (
-    <div class={`group relative overflow-hidden bg-ink ${className}`}>
-      <img src={current.src} alt={current.alt} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-top" />
+    <div class={`group relative touch-pan-y overflow-hidden bg-ink ${className}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      <img
+        src={current.src}
+        alt={current.alt}
+        loading="lazy"
+        decoding="async"
+        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover object-top"}`}
+      />
       {count > 1 && (
         <>
           <button
