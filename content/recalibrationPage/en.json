@@ -1,4 +1,5 @@
 {
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
   "heroImageAlt": "Guests relaxing on the trampoline net of a catamaran",
   "title": "Recalibration Expedition",
   "subtitle": "You only choose the dates & the people. Then we take it from there.",
@@ -8,10 +9,10 @@
   "moguTripSlug": "",
   "aboardLabel": "What's aboard",
   "onBoardLabel": "On board",
-  "onBoard": "*Services included*\n\nThe boat booked exclusively for your group\n\n*Crew*\n\nSkipper (Trained Eagle Ray Expedition Leader) + Chef\n\n*Equipment*\n\n- Snorkelling kit\n- Fishing kit\n- 2 paddleboards\n- 1 kayak\n- 1 dinghy\n- Beach equipment (chairs, tent, etc.)\n\n*Meals and drinks*\n\nAll meals, non-alcoholic drinks\n\n*Extras*\n\nDiesel, on-board Wi-Fi, navigation licence and national park entry fees\n",
+  "onBoard": "*Services included*\n\nThe boat booked exclusively for your group\n\n*Crew*\n\nSkipper (Trained Eagle Ray Expedition Leader) + Chef\n\n*Equipment*\n\n* Snorkelling kit\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, tent, etc.)\n\n*Meals and drinks*\n\nAll meals, non-alcoholic drinks\n\n*Extras*\n\nDiesel, on-board Wi-Fi, navigation licence and national park entry fees\n",
   "onBoardImageAlt": "Snorkeler in the water next to a catamaran",
   "notOnBoardLabel": "Not on board",
-  "notOnBoard": "- Flights and transfers to La Paz\n- Alcoholic drinks\n- Scuba diving: price on request depending on the number of dives and the group's qualifications\n- Tips for the crew on board (10% to 15% recommended)\n",
+  "notOnBoard": "* Flights and transfers to La Paz\n* Alcoholic drinks\n* Scuba diving: price on request depending on the number of dives and the group's qualifications\n* Tips for the crew on board (10% to 15% recommended)\n",
   "notOnBoardImageAlt": "Aerial view of a reef and lagoon",
   "cta": {
     "label": "Customize my expedition",
