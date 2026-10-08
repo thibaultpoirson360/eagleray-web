@@ -20,7 +20,9 @@
     }
   ],
   "seo": {
-    "title": "Sail with Us — Eagle Ray Expeditions",
-    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip."
+    "title": "Sail with Us - Eagle Ray Expeditions",
+    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
+    "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
+    "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
   }
 }
