@@ -18,8 +18,8 @@
   "notOnBoardImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Not_included_oknzyl.png",
   "notOnBoardImageAlt": "Not included items in the sailing expedition",
   "cta": {
-    "label": "Customize my expedition",
-    "href": "/en/customize-your-expedition/"
+    "label": "More information",
+    "href": "https://v2.app.moguplatform.com/trips/recalibration-expedition "
   },
   "seo": {
     "title": "Recalibration Expedition — Eagle Ray Expeditions",
