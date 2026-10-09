@@ -32,6 +32,7 @@ const differenceResult = await loadDifference(locale);
 const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection(locale), loadCrew(locale)]);
 const wildlifeResult = await loadWildlife(locale);
 const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection(locale), loadBoats(locale)]);
+const boatsModalFallback = locale === "en" ? undefined : (await loadBoatsSection("en")).data.boatsSection.modal;
 const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
 ---
 
@@ -65,7 +66,7 @@ const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale)
       <Wildlife wildlife={wildlifeResult.data.wildlife} />
     </TinaIsland>
     <TinaIsland name="boats" wrapper={{ tag: "div" }} params={{ locale }}>
-      <Boats boatsSection={boatsSectionResult.data.boatsSection} boats={boatsResult.boats} />
+      <Boats boatsSection={boatsSectionResult.data.boatsSection} boats={boatsResult.boats} modal={boatsModalFallback} />
     </TinaIsland>
     <TinaIsland name="funnel" wrapper={{ tag: "div" }} params={{ locale }}>
       <Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />

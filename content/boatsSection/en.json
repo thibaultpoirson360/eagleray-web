@@ -11,5 +11,19 @@
     "label": "See all boats →",
     "href": "en/boats"
   },
-  "dotsLabel": "Go to boat"
+  "dotsLabel": "Go to boat",
+  "modal": {
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "photo": "Photo",
+    "length": "Length",
+    "cabins": "Cabins",
+    "bathrooms": "Bathrooms",
+    "guests": "Guests",
+    "cta": {
+      "label": "Customize my expedition",
+      "href": "/en/customize-your-expedition/"
+    }
+  }
 }

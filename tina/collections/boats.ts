@@ -26,6 +26,23 @@ export const boatsSection: Collection = {
       label: "Slider dots (accessible label, not visible text)",
       description: 'Read out before each dot\'s number, e.g. "Go to boat" -> "Go to boat 2".',
     },
+    {
+      type: "object",
+      name: "modal",
+      label: "Boat pop-up (opens when a boat card is clicked)",
+      description: "The small texts in the pop-up that shows a boat's photos, description and details.",
+      fields: [
+        { type: "string", name: "close", label: "Close button (accessible label)" },
+        { type: "string", name: "previous", label: "Previous photo arrow (accessible label)" },
+        { type: "string", name: "next", label: "Next photo arrow (accessible label)" },
+        { type: "string", name: "photo", label: "Photo dots (accessible label)", description: 'Read out before each dot\'s number, e.g. "Photo" -> "Photo 2".' },
+        { type: "string", name: "length", label: "Length heading" },
+        { type: "string", name: "cabins", label: "Cabins heading" },
+        { type: "string", name: "bathrooms", label: "Bathrooms heading" },
+        { type: "string", name: "guests", label: "Guests heading" },
+        ctaField("cta", "Button at the bottom of the pop-up"),
+      ],
+    },
   ],
 };
 
