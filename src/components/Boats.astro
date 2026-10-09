@@ -30,6 +30,8 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import Button from "./ui/Button.astro";
 import SliderDots from "./SliderDots.tsx";
+import BoatsModalHost from "./BoatsModalHost.tsx";
+import type { BoatCard } from "./BoatModal.tsx";
 import type { BoatsSectionQuery, BoatsConnectionQuery } from "../../tina/__generated__/types";
 
 type Boat = NonNullable<NonNullable<BoatsConnectionQuery["boatsConnection"]["edges"]>[number]>["node"];
@@ -37,9 +39,31 @@ type Boat = NonNullable<NonNullable<BoatsConnectionQuery["boatsConnection"]["edg
 interface Props {
   boatsSection: BoatsSectionQuery["boatsSection"];
   boats: NonNullable<Boat>[];
+  /** Pop-up texts; falls back to the English ones until a language has its own. */
+  modal?: BoatsSectionQuery["boatsSection"]["modal"];
 }
 
 const { boatsSection, boats } = Astro.props;
+const modal = boatsSection.modal ?? Astro.props.modal;
+const cards: BoatCard[] = boats.map((boat) => {
+  const photos = (boat.photos ?? [])
+    .filter((p): p is NonNullable<typeof p> => !!p?.image)
+    .map((p) => ({ src: p.image as string, alt: p.alt || boat.name }));
+  if (photos.length === 0 && boat.photo) photos.push({ src: boat.photo, alt: boat.photoAlt || boat.name });
+  return {
+    id: boat._sys.filename,
+    name: boat.name,
+    tagline: boat.tagline ?? undefined,
+    description: boat.description ?? undefined,
+    details: boat.details ?? undefined,
+    features: (boat.features ?? []).filter((f): f is string => !!f),
+    length: boat.length ?? undefined,
+    cabins: boat.cabins ?? undefined,
+    bathrooms: boat.bathrooms ?? undefined,
+    guests: boat.guests ?? undefined,
+    photos,
+  };
+});
 const { cta } = boatsSection;
 ---
 
@@ -87,11 +111,13 @@ const { cta } = boatsSection;
   >
     {
       boats.map((boat) => (
-        <article
+        <button
+          type="button"
           id={boat._sys.filename}
-          class="boat-card has-tilt reveal flex h-[70vh] w-[min(100vw,550px)] flex-none snap-start flex-col rounded-lg border border-ink/14 bg-surface p-[1.8rem] transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
+          data-boat-open={boat._sys.filename}
+          class="boat-card has-tilt reveal flex w-[min(100vw,440px)] flex-none cursor-pointer snap-start flex-col rounded-lg border border-ink/14 bg-surface p-[1.8rem] text-left transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
         >
-          <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] min-h-0 flex-1 overflow-hidden rounded-t-lg bg-white">
+          <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] aspect-[4/3] flex-none overflow-hidden rounded-t-lg bg-white">
             {boat.photo && (
               <img
                 src={boat.photo}
@@ -114,7 +140,7 @@ const { cta } = boatsSection;
               {boat.description}
             </p>
           )}
-        </article>
+        </button>
       ))
     }
   </div>
@@ -126,6 +152,24 @@ const { cta } = boatsSection;
     count={boats.length}
     labelPrefix={boatsSection.dotsLabel ?? "Go to boat"}
   />
+
+  {
+    modal && (
+      <BoatsModalHost
+        client:idle
+        boats={cards}
+        labels={{
+          close: modal.close ?? "",
+          previous: modal.previous ?? "",
+          next: modal.next ?? "",
+          photo: modal.photo ?? "",
+          customize: modal.cta?.label ?? "",
+          customizeHref: modal.cta?.href ?? "",
+          stats: { length: modal.length ?? "", cabins: modal.cabins ?? "", bathrooms: modal.bathrooms ?? "", guests: modal.guests ?? "" },
+        }}
+      />
+    )
+  }
 
   {
     cta && (
