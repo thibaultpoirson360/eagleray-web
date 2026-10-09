@@ -13,7 +13,7 @@
  */
 import databaseClient from "../../tina/__generated__/databaseClient.js";
 import { requestWithMetadata, type RequestOptions } from "@tinacms/astro/data";
-import type { Locale } from "../i18n/config";
+import { defaultLocale, type Locale } from "../i18n/config";
 
 /**
  * Page chrome, not a homepage section — fetched once from BaseLayout so
@@ -235,4 +235,44 @@ export async function loadAboutPages(locale: Locale, options?: RequestOptions) {
     .map((edge) => edge?.node)
     .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale);
   return { ...result, pages };
+}
+
+/**
+ * Loads a one-document-per-language page in `locale`. When that language has
+ * no document yet (or `isUsable` says the draft is out of date), shows the
+ * current English one instead, so the page is never empty. `fallback` tells the
+ * page it is showing English, so it can stay out of search engines.
+ * Links written as `/en/...` in the English content are pointed at `locale`.
+ */
+export async function loadPageOrEnglish<T extends { data: unknown }>(
+  locale: Locale,
+  load: (locale: Locale) => Promise<T>,
+  isUsable: (result: T) => boolean = () => true
+): Promise<{ result: T; fallback: boolean }> {
+  if (locale !== defaultLocale) {
+    try {
+      const result = await load(locale);
+      if (isUsable(result)) return { result, fallback: false };
+    } catch {
+      // no document in this language yet — fall through to English
+    }
+  }
+  const result = await load(defaultLocale);
+  if (locale === defaultLocale) return { result, fallback: false };
+  localizeHrefs(result.data, locale);
+  return { result, fallback: true };
+}
+
+/** Points `/en/...` links at `locale`: `href` fields and markdown links `](/en/...)`. */
+export function localizeHrefs(node: unknown, locale: Locale): void {
+  if (Array.isArray(node)) {
+    node.forEach((item) => localizeHrefs(item, locale));
+  } else if (node && typeof node === "object") {
+    const record = node as Record<string, unknown>;
+    for (const [key, value] of Object.entries(record)) {
+      if (typeof value === "string") {
+        record[key] = (/href$/i.test(key) && value.startsWith("/en/") ? `/${locale}/${value.slice(4)}` : value).replaceAll("](/en/", `](/${locale}/`);
+      } else localizeHrefs(value, locale);
+    }
+  }
 }

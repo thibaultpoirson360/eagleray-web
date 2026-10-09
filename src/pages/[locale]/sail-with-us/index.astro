@@ -4,13 +4,13 @@
  * (Sail With Us.dc.html): hero photo, subtitle, intro and the expedition cards
  * (up to three in a row). The trip-planning funnel is not on this page.
  *
- * English gets the page content (content/sailWithUsPage/en.json). Spanish and
- * French show a title-only heading until their drafts exist.
+ * Each language shows its own content/sailWithUsPage/<locale>.json; a language
+ * without one shows the English page (kept out of search engines).
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import PageHero from "../../../components/ui/PageHero.astro";
 import ExpeditionCards, { type ExpeditionCard } from "../../../components/ExpeditionCards.astro";
-import { loadSailWithUsPage } from "../../../lib/content";
+import { loadPageOrEnglish, loadSailWithUsPage } from "../../../lib/content";
 import { liveLocales, type Locale } from "../../../i18n/config";
 
 export function getStaticPaths() {
@@ -18,10 +18,10 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const page = isEnglish ? (await loadSailWithUsPage("en")).data.sailWithUsPage : null;
+const { result, fallback } = await loadPageOrEnglish(locale, loadSailWithUsPage);
+const page = result.data.sailWithUsPage;
 
-const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
+const expeditions: ExpeditionCard[] = (page.expeditions ?? [])
   .filter((e): e is NonNullable<typeof e> => !!e?.name)
   .map((e) => ({
     id: e.name,
@@ -30,45 +30,35 @@ const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
     imageAlt: e.imageAlt ?? undefined,
     href: e.href || undefined,
   }));
-const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
+const intro = page.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
 ---
 
 <BaseLayout
-  title={page?.seo?.title ?? `Sail with Us — Eagle Ray Expeditions`}
-  description={page?.seo?.description ?? undefined}
+  title={page.seo?.title ?? `Sail with Us — Eagle Ray Expeditions`}
+  description={page.seo?.description ?? undefined}
   locale={locale}
   path="sail-with-us/"
-  transparentNav={isEnglish}
+  transparentNav
+  noindex={fallback}
 >
   <main id="main">
-    {
-      page && (
-        <>
-          <PageHero title={page.title} lede={page.subtitle} image={page.heroImage} imageAlt={page.heroImageAlt} />
+    <>
+      <PageHero title={page.title} lede={page.subtitle} image={page.heroImage} imageAlt={page.heroImageAlt} />
 
-          <section class="mx-auto max-w-[720px] px-5 pt-16 pb-14 text-center">
-            {intro.map((paragraph) => (
-              <p class="text-[1.0625rem] leading-[1.8] text-ink/68">{paragraph}</p>
-            ))}
-          </section>
+      <section class="mx-auto max-w-[720px] px-5 pt-16 pb-14 text-center">
+        {intro.map((paragraph) => (
+          <p class="text-[1.0625rem] leading-[1.8] text-ink/68">{paragraph}</p>
+        ))}
+      </section>
 
-          <section class="mx-auto max-w-site px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
-            {page.expeditionsLabel && (
-              <p class="mb-10 border-t border-ink/14 pt-10 text-center font-mono text-[.76rem] tracking-[.24em] text-ink/50 uppercase">
-                {page.expeditionsLabel}
-              </p>
-            )}
-            <ExpeditionCards expeditions={expeditions} linkLabel="Learn more" />
-          </section>
-        </>
-      )
-    }
-    {
-      !page && (
-        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
-          <h1 class="text-h2">Sail with us</h1>
-        </section>
-      )
-    }
+      <section class="mx-auto max-w-site px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+        {page.expeditionsLabel && (
+          <p class="mb-10 border-t border-ink/14 pt-10 text-center font-mono text-[.76rem] tracking-[.24em] text-ink/50 uppercase">
+            {page.expeditionsLabel}
+          </p>
+        )}
+        <ExpeditionCards expeditions={expeditions} linkLabel="Learn more" />
+      </section>
+    </>
   </main>
 </BaseLayout>

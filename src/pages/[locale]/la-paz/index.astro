@@ -2,14 +2,12 @@
 /**
  * `/<locale>/la-paz/` — the La Paz page, from the Claude Design mockup.
  *
- * English gets the full page (content/laPage/en.json). Spanish and French
- * fall back to the title-only placeholder from navPages until their drafts
- * exist: the translation workflow creates content/laPage/{es,fr}.json from
- * the English file on the next push, and then they get the full page too.
+ * Each language shows its own content/laPage/<locale>.json; a language
+ * without one shows the English page (kept out of search engines).
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import LaPageView from "../../../components/LaPageView.astro";
-import { loadLaPage, loadNavPage } from "../../../lib/content";
+import { loadLaPage, loadPageOrEnglish } from "../../../lib/content";
 import { liveLocales, type Locale } from "../../../i18n/config";
 
 export function getStaticPaths() {
@@ -17,16 +15,13 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const laPage = isEnglish ? (await loadLaPage("en")).data.laPage : null;
-const placeholder = isEnglish ? null : (await loadNavPage(locale, "la-paz")).data.navPages;
+const { result, fallback } = await loadPageOrEnglish(locale, loadLaPage);
+const laPage = result.data.laPage;
 
-const title = laPage
-  ? (laPage.seo?.title ?? `${laPage.title} — Eagle Ray Expeditions`)
-  : `${placeholder?.title ?? "La Paz"} — Eagle Ray Expeditions`;
-const description = laPage?.seo?.description ?? laPage?.lede ?? undefined;
-const ogTitle = laPage?.seo?.ogTitle ?? undefined;
-const ogDescription = laPage?.seo?.ogDescription ?? undefined;
+const title = laPage.seo?.title ?? `${laPage.title} — Eagle Ray Expeditions`;
+const description = laPage.seo?.description ?? laPage.lede ?? undefined;
+const ogTitle = laPage.seo?.ogTitle ?? undefined;
+const ogDescription = laPage.seo?.ogDescription ?? undefined;
 ---
 
 <BaseLayout
@@ -36,18 +31,10 @@ const ogDescription = laPage?.seo?.ogDescription ?? undefined;
   ogDescription={ogDescription}
   locale={locale}
   path="la-paz/"
-  transparentNav={isEnglish}
-  noindex={!isEnglish}
+  transparentNav
+  noindex={fallback}
 >
   <main id="main">
-    {
-      laPage ? (
-        <LaPageView laPage={laPage} />
-      ) : (
-        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
-          <h1 class="text-h2">{placeholder?.title}</h1>
-        </section>
-      )
-    }
+    <LaPageView laPage={laPage} />
   </main>
 </BaseLayout>

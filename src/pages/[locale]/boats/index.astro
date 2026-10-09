@@ -4,13 +4,14 @@
  * (Boats.dc.html). The boat cards are the same `boats` documents the homepage
  * slider shows; the page text is content/boatsPage/<locale>.json.
  *
- * English gets the full page. Spanish and French fall back to the title-only
- * placeholder from navPages until their drafts exist (same as La Paz).
+ * Each language shows its own content/boatsPage/<locale>.json. A language
+ * without one, or whose draft no longer matches the English lists, shows the
+ * English page (kept out of search engines).
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BoatsGrid, { type BoatCard } from "../../../components/BoatsGrid.tsx";
 import Button from "../../../components/ui/Button.astro";
-import { loadBoats, loadBoatsPage, loadNavPage } from "../../../lib/content";
+import { loadBoats, loadBoatsPage, loadBoatsSection, loadPageOrEnglish } from "../../../lib/content";
 import { liveLocales, type Locale } from "../../../i18n/config";
 
 export function getStaticPaths() {
@@ -18,10 +19,20 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const boatsPage = isEnglish ? (await loadBoatsPage("en")).data.boatsPage : null;
-const boats = isEnglish ? (await loadBoats("en")).boats : [];
-const placeholder = isEnglish ? null : (await loadNavPage(locale, "boats")).data.navPages;
+const englishBoats = (await loadBoats("en")).boats;
+const englishPage = (await loadBoatsPage("en")).data.boatsPage;
+// A translated draft is only used while its lists are as long as the English
+// ones; an older draft would show out-of-date "included" items.
+const { result, fallback } = await loadPageOrEnglish(locale, loadBoatsPage, (r) => {
+  const p = r.data.boatsPage;
+  return (p.included?.length ?? 0) === (englishPage.included?.length ?? 0) && (p.notIncluded?.length ?? 0) === (englishPage.notIncluded?.length ?? 0);
+});
+const boatsPage = result.data.boatsPage;
+// Only boats that exist in English (older placeholder documents are skipped).
+const englishIds = new Set(englishBoats.map((boat) => boat._sys.filename));
+const boats = (await loadBoats(locale)).boats.filter((boat) => englishIds.has(boat._sys.filename));
+const { result: sectionResult } = await loadPageOrEnglish(locale, loadBoatsSection, (r) => !!r.data.boatsSection.modal);
+const modal = sectionResult.data.boatsSection.modal;
 
 const cards: BoatCard[] = boats.map((boat) => {
   const photos = (boat.photos ?? [])
@@ -45,16 +56,16 @@ const cards: BoatCard[] = boats.map((boat) => {
   };
 });
 
-const included = (boatsPage?.included ?? []).filter((item): item is string => !!item);
-const notIncluded = (boatsPage?.notIncluded ?? []).filter((item): item is string => !!item);
-const title = boatsPage ? (boatsPage.seo?.title ?? `Boats — Eagle Ray Expeditions`) : `${placeholder?.title ?? "Boats"} — Eagle Ray Expeditions`;
-const description = boatsPage?.seo?.description ?? undefined;
+const included = (boatsPage.included ?? []).filter((item): item is string => !!item);
+const notIncluded = (boatsPage.notIncluded ?? []).filter((item): item is string => !!item);
+const title = boatsPage.seo?.title ?? `Boats — Eagle Ray Expeditions`;
+const description = boatsPage.seo?.description ?? undefined;
 ---
 
-<BaseLayout title={title} description={description} locale={locale} path="boats/" transparentNav={false} noindex={!isEnglish}>
+<BaseLayout title={title} description={description} locale={locale} path="boats/" transparentNav={false} noindex={fallback}>
   <main id="main">
     {
-      boatsPage ? (
+      (
         <>
           <section class="relative mx-auto max-w-site px-5 pt-16 pb-16 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
             <p class="mb-5 flex items-center gap-2.5 font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase">
@@ -70,13 +81,13 @@ const description = boatsPage?.seo?.description ?? undefined;
               client:visible
               boats={cards}
               labels={{
-                close: "Close",
-                previous: "Previous photo",
-                next: "Next photo",
-                photo: "Photo",
-                customize: boatsPage.cta?.label ?? "Customize my expedition",
-                customizeHref: boatsPage.cta?.href ?? "/en/customize-your-expedition/",
-                stats: { length: "Length", cabins: "Cabins", bathrooms: "Bathrooms", guests: "Guests" },
+                close: modal?.close ?? "",
+                previous: modal?.previous ?? "",
+                next: modal?.next ?? "",
+                photo: modal?.photo ?? "",
+                customize: boatsPage.cta?.label ?? "",
+                customizeHref: boatsPage.cta?.href ?? "",
+                stats: { length: modal?.length ?? "", cabins: modal?.cabins ?? "", bathrooms: modal?.bathrooms ?? "", guests: modal?.guests ?? "" },
               }}
             />
           </section>
@@ -114,10 +125,6 @@ const description = boatsPage?.seo?.description ?? undefined;
             </section>
           )}
         </>
-      ) : (
-        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
-          <h1 class="text-h2">{placeholder?.title}</h1>
-        </section>
       )
     }
   </main>

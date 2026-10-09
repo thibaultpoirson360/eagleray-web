@@ -10,7 +10,7 @@
       "value": "Marina de La Paz"
     },
     {
-      "label": "Eaux de pêche",
+      "label": "Zones de navigation",
       "value": "La Paz · Espíritu Santo · Cerralvo"
     },
     {
@@ -19,7 +19,7 @@
     },
     {
       "label": "Faune",
-      "value": "Des produits de saison, toute l'année"
+      "value": "De la faune de saison, toute l'année"
     }
   ],
   "wildlifeKicker": "Faune",
@@ -30,7 +30,7 @@
       "name": "Les requins-baleines",
       "season": "octobre — avril",
       "place": "Baie de La Paz",
-      "note": "Des jeunes poissons se nourrissent en pleine baie. Vous pouvez nager avec eux en apnée, pas besoin de matériel de plongée.",
+      "note": "Des juvéniles se nourrissent en pleine baie. Vous pouvez nager avec eux en apnée, pas besoin de matériel de plongée.",
       "image": "/assets/img/la-paz/whale-shark.webp",
       "imageAlt": "Un requin-baleine se nourrissant près de la surface"
     },
@@ -53,7 +53,7 @@
     {
       "name": "Les dauphins",
       "season": "Toute l'année",
-      "place": "Traversées de la Manche",
+      "place": "Traversées de canaux",
       "note": "Ils apparaissent à la proue quand on navigue à la voile. On ne les cherche pas : ce sont eux qui nous trouvent.",
       "image": "/assets/img/la-paz/dolphins.webp",
       "imageAlt": "Des dauphins surfant sur la vague d'étrave"

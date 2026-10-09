@@ -110,7 +110,9 @@
     "Anchorage": "Fondeadero",
     "Go to crew member": "Ir al miembro de la tripulación",
     "Go to boat": "Ir al barco",
-    "Skip to main content": "Saltar al contenido principal"
+    "Skip to main content": "Saltar al contenido principal",
+    "Something in season, year-round": "Siempre hay algo de temporada, durante todo el año",
+    "Working waters": "Zonas de navegación"
   },
   "fr": {
     "Wildlife": "Faune",
@@ -221,6 +223,10 @@
     "Anchorage": "Mouillage",
     "Go to crew member": "Aller au membre d'équipage",
     "Go to boat": "Aller au bateau",
-    "Skip to main content": "Aller au contenu principal"
+    "Skip to main content": "Aller au contenu principal",
+    "Something in season, year-round": "De la faune de saison, toute l'année",
+    "Channel crossings": "Traversées de canaux",
+    "Working waters": "Zones de navigation",
+    "Juveniles feeding right in the bay. You snorkel alongside them, no scuba gear needed.": "Des juvéniles se nourrissent en pleine baie. Vous pouvez nager avec eux en apnée, pas besoin de matériel de plongée."
   }
 }
