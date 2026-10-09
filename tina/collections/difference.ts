@@ -18,10 +18,12 @@ const difference: Collection = {
     ...depthFields(),
     ...sectionHeadFields(),
     { type: "string", name: "lede", label: "Lede paragraph", ui: textarea },
+    { type: "image", name: "image", label: "Photo", description: "Shown beside the title and intro paragraph." },
+    { type: "string", name: "imageAlt", label: "Photo description", description: "Describe the photo for people who can't see it." },
     {
       type: "object",
       name: "comparison",
-      label: "Comparison columns",
+      label: "Comparison columns (no longer shown on the site)",
       fields: [
         { type: "string", name: "usTitle", label: "Left column title (us)" },
         { type: "string", name: "usPoints", label: "Left column points", list: true },
