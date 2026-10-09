@@ -5,11 +5,25 @@
   },
   "kickerNumber": "07",
   "kicker": "Tu expedición",
-  "title": "Nuestra flota. Un único estándar:",
+  "title": "Una norma: ",
   "titleEmphasis": "Totalmente privado, totalmente tuyo.",
   "cta": {
     "label": "Ver todos los barcos →",
-    "href": "#customize"
+    "href": "en/boats"
   },
-  "dotsLabel": "Ir al barco"
+  "dotsLabel": "Ir al barco",
+  "modal": {
+    "close": "Cerrar",
+    "previous": "Foto anterior",
+    "next": "Siguiente foto",
+    "photo": "Foto",
+    "length": "Longitud",
+    "cabins": "Cabañas",
+    "bathrooms": "Baños",
+    "guests": "Invitados",
+    "cta": {
+      "label": "Personalizar mi expedición",
+      "href": "/es/customize-your-expedition/"
+    }
+  }
 }
