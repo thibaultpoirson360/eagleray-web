@@ -89,9 +89,9 @@ const { cta } = boatsSection;
       boats.map((boat) => (
         <article
           id={boat._sys.filename}
-          class="boat-card has-tilt reveal flex h-[70vh] w-[min(100vw,550px)] flex-none snap-start flex-col rounded-lg border border-ink/14 bg-surface p-[1.8rem] transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
+          class="boat-card has-tilt reveal flex w-[min(100vw,440px)] flex-none snap-start flex-col rounded-lg border border-ink/14 bg-surface p-[1.8rem] transition-transform duration-[550ms] ease-soft [--rx:0deg] [--ry:0deg] [transform-style:preserve-3d] [transform:perspective(1000px)_rotateX(var(--rx))_rotateY(var(--ry))]"
         >
-          <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] min-h-0 flex-1 overflow-hidden rounded-t-lg bg-white">
+          <div class="boat-photo -mx-[1.8rem] -mt-[1.8rem] mb-[1.8rem] aspect-[4/3] flex-none overflow-hidden rounded-t-lg bg-white">
             {boat.photo && (
               <img
                 src={boat.photo}

@@ -24,7 +24,7 @@ interface Props {
 }
 
 const { difference } = Astro.props;
-const { comparison, founderQuote } = difference;
+const { founderQuote } = difference;
 ---
 
 <section
@@ -33,94 +33,56 @@ const { comparison, founderQuote } = difference;
   data-depth-stop={difference.depth?.meters ?? undefined}
   data-depth-name={difference.depth?.name ?? undefined}
 >
-  <div class="section-head mb-section-head">
-    <p class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase" data-reveal>
+  <div class="mb-section-head grid items-center gap-10 md:grid-cols-2 md:gap-16">
+    <div class="section-head">
+      <p class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase" data-reveal>
+        {
+          difference.kickerNumber && (
+            <span class="text-ink" data-tina-field={tinaField(difference, "kickerNumber")}>
+              {difference.kickerNumber}
+            </span>
+          )
+        }
+        <span data-tina-field={tinaField(difference, "kicker")}>{difference.kicker}</span>
+      </p>
+      <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(difference, "title")}>
+        {difference.title}
+        {
+          difference.titleEmphasis && (
+            <>
+              <br />
+              <em class="not-italic text-ink" data-tina-field={tinaField(difference, "titleEmphasis")}>
+                {difference.titleEmphasis}
+              </em>
+            </>
+          )
+        }
+      </h2>
       {
-        difference.kickerNumber && (
-          <span class="text-ink" data-tina-field={tinaField(difference, "kickerNumber")}>
-            {difference.kickerNumber}
-          </span>
+        difference.lede && (
+          <p
+            class="lede mt-[1.2rem] max-w-[58ch] text-lede text-ink/74 opacity-[.92]"
+            data-reveal
+            data-tina-field={tinaField(difference, "lede")}
+          >
+            {difference.lede}
+          </p>
         )
       }
-      <span data-tina-field={tinaField(difference, "kicker")}>{difference.kicker}</span>
-    </p>
-    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(difference, "title")}>
-      {difference.title}
-      {
-        difference.titleEmphasis && (
-          <>
-            <br />
-            <em class="not-italic text-ink" data-tina-field={tinaField(difference, "titleEmphasis")}>
-              {difference.titleEmphasis}
-            </em>
-          </>
-        )
-      }
-    </h2>
+    </div>
     {
-      difference.lede && (
-        <p
-          class="lede mt-[1.2rem] max-w-[58ch] text-lede text-ink/74 opacity-[.92]"
-          data-reveal
-          data-tina-field={tinaField(difference, "lede")}
-        >
-          {difference.lede}
-        </p>
+      difference.image && (
+        <img
+          src={difference.image}
+          alt={difference.imageAlt ?? ""}
+          loading="lazy"
+          decoding="async"
+          class="reveal aspect-[4/5] w-full rounded-lg object-cover object-[50%_80%]"
+          data-tina-field={tinaField(difference, "image")}
+        />
       )
     }
   </div>
-
-  {
-    comparison && (
-      <div class="vs mt-[2.4rem] grid items-stretch gap-[1.2rem] md:grid-cols-[1fr_auto_1fr]">
-        <article class="vs-col vs-us reveal rounded-lg border border-ink/26 bg-surface py-[1.8rem] px-[1.6rem] md:py-[2.4rem] md:px-8">
-          {
-            comparison.usTitle && (
-              <h3
-                class="vs-title mb-[1.4rem] font-mono text-[.72rem] tracking-[.16em] text-ink uppercase"
-                data-tina-field={tinaField(comparison, "usTitle")}
-              >
-                {comparison.usTitle}
-              </h3>
-            )
-          }
-          <ol class="vs-list flex flex-col gap-[.9rem]">
-            {comparison.usPoints?.map(
-              (point, i) =>
-                point && (
-                  <li data-tina-field={tinaField(comparison, "usPoints", i)}>{point}</li>
-                )
-            )}
-          </ol>
-        </article>
-
-        <div class="vs-axis hidden md:grid md:place-items-center md:font-serif md:text-[1.2rem] md:text-ink/64 md:italic">
-          {comparison.axisLabel && <span data-tina-field={tinaField(comparison, "axisLabel")}>{comparison.axisLabel}</span>}
-        </div>
-
-        <article class="vs-col vs-them reveal rounded-lg border border-ink/14 py-[1.8rem] px-[1.6rem] md:py-[2.4rem] md:px-8">
-          {
-            comparison.themTitle && (
-              <h3
-                class="vs-title mb-[1.4rem] font-mono text-[.72rem] tracking-[.16em] text-ink/64 uppercase"
-                data-tina-field={tinaField(comparison, "themTitle")}
-              >
-                {comparison.themTitle}
-              </h3>
-            )
-          }
-          <ol class="vs-list flex flex-col gap-[.9rem]">
-            {comparison.themPoints?.map(
-              (point, i) =>
-                point && (
-                  <li data-tina-field={tinaField(comparison, "themPoints", i)}>{point}</li>
-                )
-            )}
-          </ol>
-        </article>
-      </div>
-    )
-  }
 
   {
     founderQuote && (
