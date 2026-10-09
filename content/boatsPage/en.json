@@ -1,27 +1,34 @@
 {
   "kicker": "Your expedition",
   "title": "Our fleet. One standard: fully private, fully yours.",
-  "lede": "Five catamarans, all based out of La Paz. Tap a boat to see layout, capacity and what's included.",
+  "lede": "Catamarans and sailing monohulls in La Paz, chosen for how your group wants to spend its days.",
   "includedHeading": "Always included",
   "included": [
-    "Private catamaran, prepared for life aboard",
+    "Private boat, prepared for life aboard",
     "Professional skipper",
-    "Dinghy with motor",
+    "Flexible itinerary, adapted to weather and your group",
     "Snorkeling gear onboard",
-    "Permits / access bracelets for protected areas",
+    "Fishing kit",
+    "2 paddleboards",
+    "1 Kayak",
+    "Beach equipment (chairs, sunshade, etc.)",
+    "Dinghy with motor",
+    "Starlink Wi-Fi on board",
+    "All meals on board + Non-alcoholic drinks",
+    "Navigation permits and national park entry fees",
+    "Diesel",
     "Boat prep & cleaning",
-    "ERE coordination before and during your trip",
-    "Flexible itinerary, adapted to weather and your group"
+    "La Paz Airport ↔ marina, on arrival and departure",
+    "Eagle Ray Expeditions team coordination before and during your trip"
   ],
-  "notIncludedHeading": "À la carte / not included",
+  "notIncludedHeading": "À la carte / Not included",
   "notIncluded": [
-    "Food & drinks",
-    "Skipper tip",
-    "WiFi / Starlink",
-    "Extra gear (kayak, paddle, fishing)",
-    "Fuel consumed during the trip",
+    "Crew tips (10–15% recommended)",
+    "Alcoholic drinks, to be selected from a menu prior to the trip",
     "Diving, kite & wingfoil, guided activities",
-    "Personal travel insurance"
+    "Other guided activities, quoted separately",
+    "Personal travel insurance",
+    "Flights to La Paz"
   ],
   "cta": {
     "label": "Customize my expedition",

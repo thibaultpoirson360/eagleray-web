@@ -1,5 +1,5 @@
 {
-  "title": "Thanksgiving with Sergio Torres \"Canei\"",
+  "title": "Thanksgiving Sailing Expedition with Sergio Torres \"Canei\"",
   "blocks": [
     {
       "kicker": "Limited dates · November 2026",
@@ -9,7 +9,7 @@
       "imageAlt": "Sergio Torres Expedition Leader de Eagle Ray Expeditions Sailing Experience in La Paz",
       "cta": {
         "label": "Check availability",
-        "href": "#customize"
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
       },
       "_template": "hero"
     },
@@ -47,7 +47,7 @@
       "_template": "cta"
     },
     {
-      "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar",
+      "tripSlug": "sergio-torres-eagle-ray-expeditions ",
       "hideLogo": true,
       "hideTitle": true,
       "height": 600,

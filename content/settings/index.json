@@ -10,6 +10,6 @@
   "sounder": {
     "maxDepth": 145
   },
-  "funnelIntro": "Hi Thibault! I'd like to customize an Eagle Ray expedition.",
+  "funnelIntro": "Hi! I'd like to customize an Eagle Ray expedition\nWe are (include number of guests)\nWe would like to go from ... to ... (include dates)",
   "leadEndpoint": "https://formspree.io/f/xwlearnw"
 }
