@@ -4,24 +4,23 @@
  * (Boats.dc.html). The boat cards are the same `boats` documents the homepage
  * slider shows; the page text is content/boatsPage/<locale>.json.
  *
- * English gets the full page. Spanish and French fall back to the title-only
- * placeholder from navPages until their drafts exist (same as La Paz).
+ * Each language gets the full page once its boatsPage document exists; until
+ * then it falls back to the title-only placeholder from navPages.
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import BoatsGrid, { type BoatCard } from "../../../components/BoatsGrid.tsx";
 import Button from "../../../components/ui/Button.astro";
 import { loadBoats, loadBoatsPage, loadNavPage } from "../../../lib/content";
-import { liveLocales, type Locale } from "../../../i18n/config";
+import { liveLocales, localePath, type Locale } from "../../../i18n/config";
 
 export function getStaticPaths() {
   return liveLocales.map((locale) => ({ params: { locale } }));
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const boatsPage = isEnglish ? (await loadBoatsPage("en")).data.boatsPage : null;
-const boats = isEnglish ? (await loadBoats("en")).boats : [];
-const placeholder = isEnglish ? null : (await loadNavPage(locale, "boats")).data.navPages;
+const boatsPage = await loadBoatsPage(locale).then((r) => r.data.boatsPage).catch(() => null);
+const boats = boatsPage ? (await loadBoats(locale)).boats : [];
+const placeholder = boatsPage ? null : (await loadNavPage(locale, "boats")).data.navPages;
 
 const cards: BoatCard[] = boats.map((boat) => {
   const photos = (boat.photos ?? [])
@@ -51,7 +50,7 @@ const title = boatsPage ? (boatsPage.seo?.title ?? `Boats — Eagle Ray Expediti
 const description = boatsPage?.seo?.description ?? undefined;
 ---
 
-<BaseLayout title={title} description={description} locale={locale} path="boats/" transparentNav={false} noindex={!isEnglish}>
+<BaseLayout title={title} description={description} locale={locale} path="boats/" transparentNav={false} noindex={!boatsPage}>
   <main id="main">
     {
       boatsPage ? (
@@ -70,13 +69,18 @@ const description = boatsPage?.seo?.description ?? undefined;
               client:visible
               boats={cards}
               labels={{
-                close: "Close",
-                previous: "Previous photo",
-                next: "Next photo",
-                photo: "Photo",
+                close: boatsPage.labels?.close ?? "Close",
+                previous: boatsPage.labels?.previous ?? "Previous photo",
+                next: boatsPage.labels?.next ?? "Next photo",
+                photo: boatsPage.labels?.photo ?? "Photo",
                 customize: boatsPage.cta?.label ?? "Customize my expedition",
-                customizeHref: boatsPage.cta?.href ?? "/en/customize-your-expedition/",
-                stats: { length: "Length", cabins: "Cabins", bathrooms: "Bathrooms", guests: "Guests" },
+                customizeHref: boatsPage.cta?.href ?? localePath(locale, "customize-your-expedition/"),
+                stats: {
+                  length: boatsPage.labels?.length ?? "Length",
+                  cabins: boatsPage.labels?.cabins ?? "Cabins",
+                  bathrooms: boatsPage.labels?.bathrooms ?? "Bathrooms",
+                  guests: boatsPage.labels?.guests ?? "Guests",
+                },
               }}
             />
           </section>

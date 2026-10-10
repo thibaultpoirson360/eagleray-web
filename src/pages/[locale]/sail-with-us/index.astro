@@ -4,8 +4,8 @@
  * (Sail With Us.dc.html): hero photo, subtitle, intro and the expedition cards
  * (up to three in a row). The trip-planning funnel is not on this page.
  *
- * English gets the page content (content/sailWithUsPage/en.json). Spanish and
- * French show a title-only heading until their drafts exist.
+ * Each language shows the page content (content/sailWithUsPage/<locale>.json);
+ * a language without a document shows no content and is `noindex`.
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import PageHero from "../../../components/ui/PageHero.astro";
@@ -18,8 +18,7 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const page = isEnglish ? (await loadSailWithUsPage("en")).data.sailWithUsPage : null;
+const page = await loadSailWithUsPage(locale).then((r) => r.data.sailWithUsPage).catch(() => null);
 
 const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
   .filter((e): e is NonNullable<typeof e> => !!e?.name)
@@ -38,7 +37,8 @@ const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
   description={page?.seo?.description ?? undefined}
   locale={locale}
   path="sail-with-us/"
-  transparentNav={isEnglish}
+  transparentNav={!!page}
+  noindex={!page}
 >
   <main id="main">
     {

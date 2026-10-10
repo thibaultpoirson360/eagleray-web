@@ -27,6 +27,16 @@
     "label": "Personalizar mi expedición",
     "href": "/es/customize-your-expedition/"
   },
+  "labels": {
+    "close": "Cerrar",
+    "previous": "Foto anterior",
+    "next": "Foto siguiente",
+    "photo": "Foto",
+    "length": "Eslora",
+    "cabins": "Camarotes",
+    "bathrooms": "Baños",
+    "guests": "Pasajeros"
+  },
   "seo": {
     "title": "Embarcaciones — Eagle Ray Expeditions",
     "description": "Cinco catamaranes privados con base en La Paz. Compara la eslora, los camarotes, el número de pasajeros y lo que incluye cada uno."

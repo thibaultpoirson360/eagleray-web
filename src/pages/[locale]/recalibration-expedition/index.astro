@@ -2,8 +2,8 @@
 /**
  * `/<locale>/recalibration-expedition/` — the Recalibration Expedition page,
  * from the Claude Design mockup (Recalibration Expedition.dc.html). Content is
- * content/recalibrationPage/en.json. Spanish and French fall back to the
- * title-only placeholder from navPages until their drafts exist (same as La Paz).
+ * content/recalibrationPage/en.json. Each language gets the full page once
+ * its document exists; until then it falls back to the title-only placeholder.
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
@@ -18,9 +18,8 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const page = isEnglish ? (await loadRecalibrationPage("en")).data.recalibrationPage : null;
-const placeholder = isEnglish ? null : (await loadNavPage(locale, "recalibration-expedition")).data.navPages;
+const page = await loadRecalibrationPage(locale).then((r) => r.data.recalibrationPage).catch(() => null);
+const placeholder = page ? null : (await loadNavPage(locale, "recalibration-expedition")).data.navPages;
 
 const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
 const title = page ? (page.seo?.title ?? `${page.title} — Eagle Ray Expeditions`) : `${placeholder?.title ?? "Recalibration Expedition"} — Eagle Ray Expeditions`;
@@ -31,8 +30,8 @@ const title = page ? (page.seo?.title ?? `${page.title} — Eagle Ray Expedition
   description={page?.seo?.description ?? undefined}
   locale={locale}
   path="recalibration-expedition/"
-  transparentNav={isEnglish}
-  noindex={!isEnglish}
+  transparentNav={!!page}
+  noindex={!page}
 >
   <main id="main">
     {

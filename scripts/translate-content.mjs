@@ -43,7 +43,7 @@
  * only. That's why the Action that runs this has no `npm ci` step.
  */
 import { register } from "node:module";
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync, appendFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync, appendFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -238,6 +238,42 @@ export function applyMemoryToFile(entry, schema, memory) {
   return { changed, skipped };
 }
 
+/**
+ * Removes ES/FR files whose English source no longer exists, so deleting a
+ * document in English (e.g. a blog post in the editor) also removes its
+ * translations. Only multi-document collections (`content/<folder>/en/<slug>.json`)
+ * are pruned — a single-document file like `en.json` is never deleted by the
+ * editor. Safety: a folder is only pruned when `content/<folder>/en/` still
+ * holds at least one file, so a missing or emptied English folder can never
+ * wipe every translation. Deletions end up in the reviewed pull request, and
+ * git history keeps the files if a deletion was a mistake.
+ * Returns the repo-relative paths removed.
+ */
+export function pruneOrphanTranslations() {
+  const contentDir = path.join(REPO_ROOT, "content");
+  const removed = [];
+  if (!existsSync(contentDir)) return removed;
+
+  for (const entry of readdirSync(contentDir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const enDir = path.join(contentDir, entry.name, "en");
+    if (!existsSync(enDir) || !statSync(enDir).isDirectory()) continue;
+    const enSlugs = new Set(readdirSync(enDir).filter((f) => f.endsWith(".json")));
+    if (enSlugs.size === 0) continue;
+
+    for (const locale of TARGET_LOCALES) {
+      const localeDir = path.join(contentDir, entry.name, locale);
+      if (!existsSync(localeDir) || !statSync(localeDir).isDirectory()) continue;
+      for (const file of readdirSync(localeDir)) {
+        if (!file.endsWith(".json") || enSlugs.has(file)) continue;
+        rmSync(path.join(localeDir, file));
+        removed.push(path.join("content", entry.name, locale, file));
+      }
+    }
+  }
+  return removed;
+}
+
 function setGithubOutput(name, value) {
   const outputPath = process.env.GITHUB_OUTPUT;
   if (!outputPath) return; // not running in Actions (local/manual run) — nothing to write
@@ -273,10 +309,15 @@ export async function main() {
   }
   const entries = resolveChangedEnFiles(explicitFiles, scope);
 
+  // Runs on every trigger, including a push that only deleted English files.
+  const removed = pruneOrphanTranslations();
+  removed.forEach((f) => console.log(`[translate-content] removed (English source deleted): ${f}`));
+  const removedList = removed.map((f) => `${f} (deleted — English source removed)`);
+
   if (entries.length === 0) {
     console.log("[translate-content] No source-language content files found to translate — nothing to do.");
-    setGithubOutput("files_changed", "false");
-    setGithubOutput("file_list", "");
+    setGithubOutput("files_changed", removed.length > 0 ? "true" : "false");
+    setGithubOutput("file_list", removedList.join("\n"));
     return;
   }
 
@@ -304,8 +345,8 @@ export async function main() {
       : "[translate-content] Matched changed files, but none had a registered Tina collection — nothing written."
   );
 
-  setGithubOutput("files_changed", allWritten.length > 0 ? "true" : "false");
-  setGithubOutput("file_list", allWritten.join("\n"));
+  setGithubOutput("files_changed", allWritten.length > 0 || removed.length > 0 ? "true" : "false");
+  setGithubOutput("file_list", [...allWritten, ...removedList].join("\n"));
 }
 
 const isMain = process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url;
