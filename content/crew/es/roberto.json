@@ -1,0 +1,42 @@
+{
+  "name": "Roberto",
+  "roles": [
+    "Capitán"
+  ],
+  "skills": [
+    "Vela",
+    "Trayectos en alta mar",
+    "Navegación nocturna",
+    "Regatas"
+  ],
+  "languages": [
+    {
+      "language": "Español"
+    },
+    {
+      "language": "Inglés"
+    },
+    {
+      "language": "Francés"
+    }
+  ],
+  "certificates": [
+    "Licenciatura en Derecho (UNAM)",
+    "Máster en Derecho del Mar (Universidad de Lund y Universidad Marítima Mundial)"
+  ],
+  "yearsOfExperience": 11,
+  "quote": "Mi barco es una parte de mí.",
+  "about": "«He navegado más de 30 000 millas náuticas, incluida una vuelta al mundo entre 2016 y 2026: a través del Pacífico, el Océano Índico y el Atlántico, y desde Alaska hasta Japón pasando por las Aleutianas y Kamchatka. Antes de eso, era abogado especializado en derecho marítimo: trabajé en el Tribunal Internacional del Derecho del Mar y participé en negociaciones internacionales sobre el clima.\n\nA bordo, te cederé el timón si quieres aprender, y me encargaré de todo si no quieres. Mis alumnos dicen que mantengo la calma cuando los demás no lo hacen, y que mis historias hacen que incluso limpiar la sentina resulte agradable. También dicen que consigo que las tormentas parezcan parte del plan. Espero que no tengamos que poner eso a prueba».",
+  "history": "«Una travesía transatlántica de España a Barbados, prevista para dos semanas, me llevó 44 días y varias velas rotas. En 2020, con los puertos cerrados en todo el mundo, zarpé de México hacia la Polinesia Francesa, me rechazaron y seguí navegando. Un gato llamado Demonic cruzó el Pacífico con nosotros.\n\nNavegando desde Alaska hasta Japón, escalé y esquié en volcanes de las Aleutianas y Kamchatka, con esquís de piel de foca y repelente de osos en la mochila. Llegué a Japón con la botavara rota».",
+  "why": "«Navego a vela siempre que el viento me lo permite, sin usar el motor, así que puedes oír lo que yo escucho: el silencio y el sonido del casco al deslizarse por el agua.\n\nPara mí, el mar es el lugar donde el tiempo parece limitarse y la libertad permanece intacta. En Baja, lo comparto desde la cubierta de un barco que conozco al dedillo».",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
+  "imageAlt": "Roberto Cámara, capitán de velero y jefe de expedición de Eagle Ray Expeditions",
+  "order": 8,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
+    "/assets/img/crew/roberto-01.webp",
+    "/assets/img/crew/roberto-02.webp",
+    "/assets/img/crew/roberto-03.webp",
+    "/assets/img/crew/roberto-04.webp"
+  ]
+}
