@@ -152,6 +152,22 @@ export const boatsPage: Collection = {
       description: "One line per item.",
     },
     ctaField("cta", "Closing button"),
+    {
+      type: "object",
+      name: "labels",
+      label: "Boat pop-up and card labels",
+      description: "The small words inside the boat pop-up: buttons, photo controls and the boat facts.",
+      fields: [
+        { type: "string", name: "close", label: "Close button" },
+        { type: "string", name: "previous", label: "Previous photo button" },
+        { type: "string", name: "next", label: "Next photo button" },
+        { type: "string", name: "photo", label: "Word for \"Photo\"", description: 'Used in "Photo 2 of 5".' },
+        { type: "string", name: "length", label: "Length" },
+        { type: "string", name: "cabins", label: "Cabins" },
+        { type: "string", name: "bathrooms", label: "Bathrooms" },
+        { type: "string", name: "guests", label: "Guests" },
+      ],
+    },
     seoField(),
   ],
 };

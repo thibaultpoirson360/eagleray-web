@@ -163,6 +163,10 @@ acceptable simplification rather than building change-tracking/diffing logic
 — reviewers should treat every translation PR as a full draft to re-check for
 that file, not assume only the "new" parts need a look.
 
+### Deleted English documents
+
+When an English document in a multi-document collection (`content/<collection>/en/<slug>.json`: blog posts, crew, boats, landing pages) is deleted, the script also deletes `content/<collection>/{es,fr}/<slug>.json` in the same run, and the deletions appear in the translation pull request for review. This runs on every trigger, even a push that only deleted files. Safety: a collection is only pruned while its `en/` folder still contains at least one file. If an English file was deleted by mistake, restore it in git **and** restore its translations from the previous commit; do not merge the pull request that deletes them.
+
 ## 3. Pull request — never auto-publish
 
 The workflow opens a PR (`peter-evans/create-pull-request`) only when files

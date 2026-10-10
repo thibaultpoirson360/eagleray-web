@@ -2,10 +2,9 @@
 /**
  * `/<locale>/la-paz/` — the La Paz page, from the Claude Design mockup.
  *
- * English gets the full page (content/laPage/en.json). Spanish and French
- * fall back to the title-only placeholder from navPages until their drafts
- * exist: the translation workflow creates content/laPage/{es,fr}.json from
- * the English file on the next push, and then they get the full page too.
+ * Each language gets the full page once its laPage document exists
+ * (content/laPage/<locale>.json); until then it falls back to the title-only
+ * placeholder from navPages.
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import LaPageView from "../../../components/LaPageView.astro";
@@ -17,9 +16,8 @@ export function getStaticPaths() {
 }
 
 const locale = Astro.params.locale as Locale;
-const isEnglish = locale === "en";
-const laPage = isEnglish ? (await loadLaPage("en")).data.laPage : null;
-const placeholder = isEnglish ? null : (await loadNavPage(locale, "la-paz")).data.navPages;
+const laPage = await loadLaPage(locale).then((r) => r.data.laPage).catch(() => null);
+const placeholder = laPage ? null : (await loadNavPage(locale, "la-paz")).data.navPages;
 
 const title = laPage
   ? (laPage.seo?.title ?? `${laPage.title} — Eagle Ray Expeditions`)
@@ -36,8 +34,8 @@ const ogDescription = laPage?.seo?.ogDescription ?? undefined;
   ogDescription={ogDescription}
   locale={locale}
   path="la-paz/"
-  transparentNav={isEnglish}
-  noindex={!isEnglish}
+  transparentNav={!!laPage}
+  noindex={!laPage}
 >
   <main id="main">
     {
