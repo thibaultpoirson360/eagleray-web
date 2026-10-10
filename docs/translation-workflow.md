@@ -8,10 +8,17 @@ here.
 ## The flow, in one sentence
 
 **A push to `main` that changes English content -> a script drafts ES/FR
-translations with DeepL -> those drafts land in a pull request, never
-directly on `main` -> a human reviews (and can fix) them, ideally using the
-PR's live preview with Tina's editor active -> a human merges.** Nothing in
-this pipeline auto-publishes anything.
+translations with DeepL -> the workflow commits them straight to `main`
+(no pull request) -> a person reviews and corrects them in the editor.**
+
+> **Current behaviour.** The workflow no longer opens a pull request. Drafts
+> (and deletions of translations whose English source was removed) are
+> committed directly to `main` by `github-actions[bot]`, so they go live as
+> soon as `main` deploys, but only in languages listed in `PUBLIC_LIVE_LOCALES`.
+> The sections below that describe the pull request, the `staging` branch and
+> the review/merge steps describe the earlier flow and no longer apply. Fix a
+> bad draft in the editor or in `scripts/translation-memory.json`. If `main`
+> has branch protection, the bot needs permission to push to it.
 
 ## 1. Trigger
 

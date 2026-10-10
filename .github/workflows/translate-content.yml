@@ -9,9 +9,10 @@ name: Translate content (DeepL draft)
 # after adding/fixing the DEEPL_API_KEY secret), and the way to bring a whole
 # site to a new language: run it with scope "missing" (see the input below).
 #
-# This workflow only ever OPENS a pull request with the drafted ES/FR
-# translations — nothing here merges anything. See docs/translation-workflow.md
-# for the full trigger -> translate -> PR -> review -> merge flow.
+# This workflow commits the drafted ES/FR translations (and deletions of
+# translations whose English source was removed) straight to main — there is
+# no pull request. A push made with GITHUB_TOKEN does not start another
+# workflow run, so this cannot loop. See docs/translation-workflow.md.
 on:
   push:
     branches: [main]
@@ -33,7 +34,11 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
+
+# Two runs must not push to main at the same time.
+concurrency:
+  group: translate-content
+  cancel-in-progress: false
 
 jobs:
   translate:
@@ -81,35 +86,17 @@ jobs:
           TRANSLATE_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'changed' }}
         run: node --experimental-strip-types scripts/translate-content.mjs
 
-      - name: Open pull request with the draft translations
+      - name: Commit the draft translations straight to main
         if: steps.translate.outputs.files_changed == 'true'
-        uses: peter-evans/create-pull-request@v7
-        with:
-          # Default GITHUB_TOKEN — no separate PAT needed; `permissions`
-          # above already grants it `contents: write` + `pull-requests: write`.
-          commit-message: "Translate content to ES/FR (DeepL draft)"
-          # `staging` is the long-lived branch that carries the stable Vercel
-          # alias (docs/tina-setup.md section 7), so the PR head is that
-          # branch rather than a per-run one.
-          branch: staging
-          title: "Translate content to ES/FR (DeepL draft — needs review)"
-          body: |
-            Automated draft translation, opened by `.github/workflows/translate-content.yml`
-            after a push changed EN source content. **Nothing here is published** —
-            this PR must be reviewed (and, if needed, corrected) before merging.
-
-            See `docs/translation-workflow.md` for the full trigger → translate →
-            PR → review → merge flow, what gets sent to DeepL vs. skipped, and
-            how to check the translations in a live Tina Visual Editing preview
-            before approving.
-
-            Files changed in this run:
-            ```
-            ${{ steps.translate.outputs.file_list }}
-            ```
-          add-paths: content/**
-          labels: translation,automated
-          # Must stay false: `staging` is permanent (it owns the Vercel alias
-          # and the Google OAuth redirect URI). `true` would make the action
-          # delete it on any run that finds no changes and no open PR.
-          delete-branch: false
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Translate content to ES/FR (DeepL draft)"
+          # Someone may have pushed while DeepL was running.
+          git pull --rebase origin main
+          git push origin HEAD:main
