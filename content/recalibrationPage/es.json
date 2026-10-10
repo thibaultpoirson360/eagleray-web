@@ -1,0 +1,28 @@
+{
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+  "heroImageAlt": "Pasajeros descansando en la red de la cubierta de un catamarán",
+  "title": "Expedición de recalibración",
+  "subtitle": "Tú solo tienes que elegir las fechas y a las personas. A partir de ahí, nosotros nos encargamos de todo.",
+  "intro": "Una expedición privada en velero diseñada para quienes desean desconectar junto a sus seres queridos, a un ritmo que nadie más marca.",
+  "introImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Men_on_sailboat_rbzpwy.jpg",
+  "introImageAlt": "Gente navegando en un catamarán",
+  "durationLabel": "Elige la duración ideal",
+  "moguTripSlug": "recalibration-expedition ",
+  "aboardLabel": "QUÉ SE INCLUYE Y QUÉ NO",
+  "onBoardLabel": "A bordo - Servicios incluidos",
+  "onBoard": "### EQUIPO\n\n* Patrón + guía de expedición especializado en rayas águila + chef (adaptable)\n\n### ITINERARIO\n\n* Programa diario, adaptado al estado de ánimo del grupo y a las condiciones meteorológicas\n\n### VELEROS Y EQUIPAMIENTO\n\n* El barco completo reservado en exclusiva para tu grupo\n* Equipo de snorkel\n* Equipo de pesca\n* 2 tablas de paddle surf\n* 1 kayak\n* 1 bote auxiliar\n* Material de playa (sillas, sombrilla, etc.)\n\n### COMIDAS Y BEBIDAS\n\n* Todas las comidas a bordo\n* Bebidas sin alcohol\n\n### TRASPASOS\n\n* Aeropuerto de La Paz ↔ puerto deportivo, a la llegada y a la salida\n\n### EXTRAS\n\n* Gasóleo\n* Permisos de navegación y tasas de acceso a los parques nacionales\n* Wi-Fi de Starlink a bordo\n* Licencia de navegación y tasas de acceso a los parques nacionales\n",
+  "onBoardImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Included_ixxstu.png",
+  "onBoardImageAlt": "Elementos incluidos en la expedición náutica",
+  "notOnBoardLabel": "No incluido",
+  "notOnBoard": "* Propinas para la tripulación (se recomienda entre el 10 % y el 15 %)\n* Vuelos a La Paz\n* Bebidas alcohólicas, que se elegirán de una carta antes del viaje\n* Buceo: precio a consultar, en función del número de inmersiones y de la titulación del grupo\n* Otras actividades guiadas, con presupuesto aparte\n* Seguro de viaje personal\n",
+  "notOnBoardImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Not_included_oknzyl.png",
+  "notOnBoardImageAlt": "Elementos no incluidos en la expedición náutica",
+  "cta": {
+    "label": "Más información",
+    "href": "https://v2.app.moguplatform.com/trips/recalibration-expedition "
+  },
+  "seo": {
+    "title": "Expedición «Recalibración» — Eagle Ray Expeditions",
+    "description": "Una expedición privada a vela, sin prisas, en La Paz. Tú eliges las fechas y a quién te llevas, y nosotros nos encargamos del resto."
+  }
+}

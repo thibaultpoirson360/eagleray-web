@@ -1,0 +1,52 @@
+{
+  "name": "Sergio Torres \"Canei\"",
+  "roles": [
+    "Líder de Expedición"
+  ],
+  "skills": [
+    "Snorkel",
+    "Buceo en apnea",
+    "Pesca submarina",
+    "Pesca",
+    "Natación en aguas abiertas",
+    "Piragüismo",
+    "Wakeboard",
+    "Wakesurf",
+    "Supervivencia",
+    "Entrenamiento funcional",
+    "Calistenia",
+    "Meditación",
+    "Ciclismo",
+    "Correr"
+  ],
+  "languages": [
+    {
+      "language": "Español"
+    },
+    {
+      "language": "Inglés"
+    },
+    {
+      "language": "Francés"
+    }
+  ],
+  "certificates": [
+    "PADI Open Water"
+  ],
+  "quote": "Me encanta enseñar y divertirme en el mar con gente que comparte mis pasiones.",
+  "about": "«Soy Sergio, pero podéis llamarme Canei. Quizá me conozcáis por *Survivor México*, que gané en 2025. Unos años antes, decidí cuidar de mí mismo: entrenar, comer bien, aprender cómo funciona mi cuerpo. Hoy en día eso es lo que enseño, como entrenador personal en Cancún y a las más de 100 personas a las que he entrenado.\n\nHe guiado a grupos de entre 8 y 19 personas por Islandia, los volcanes Acatenango y de Fuego en Guatemala, la Isla Grande de Hawái, los Dolomitas y el Camino de Santiago. A bordo, empezamos el día moviéndonos en cubierta. Antes de meterte en el agua, te enseño a respirar, y cada día aguantas la respiración un poco más».",
+  "history": "«En el Camino de Santiago, en la etapa más larga, parte de mi grupo se despertó con ampollas y sin fuerzas. Antes de ponernos en marcha, realicé un ejercicio sobre la intención y la reflexión, y recorrimos esa etapa con una actitud diferente.\n\nAnalicé al grupo en tres pasos: el mensaje de bienvenida, una charla más extensa antes del viaje y el lenguaje corporal durante el primer día».",
+  "why": "«Lo que me atrae del mar: su misterio, sus animales, sus colores y su inmensidad.\n\nDejar algo bueno en los demás es lo que me hace sentir plena. En el mar, yo me encargo del grupo. La tripulación del Eagle Ray se encarga del barco».",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+  "imageAlt": "Sergio, jefe de expedición de Eagle Ray Expeditions",
+  "joiningTag": "Día de Acción de Gracias",
+  "order": 12,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+    "/assets/img/crew/sergio-torres-canei-01.webp",
+    "/assets/img/crew/sergio-torres-canei-02.webp",
+    "/assets/img/crew/sergio-torres-canei-03.webp",
+    "/assets/img/crew/sergio-torres-canei-04.webp",
+    "/assets/img/crew/sergio-torres-canei-05.webp"
+  ]
+}

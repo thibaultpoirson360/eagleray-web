@@ -1,0 +1,52 @@
+{
+  "name": "Sergio Torres \"Canei\"",
+  "roles": [
+    "Leader d'expédition"
+  ],
+  "skills": [
+    "Plongée libre",
+    "Plongée en apnée",
+    "Pêche sous-marine au harpon",
+    "Pêche",
+    "Natation en eau libre",
+    "Kayak",
+    "Wakeboard",
+    "Wakesurf",
+    "Survie",
+    "Entraînement fonctionnel",
+    "Gymnastique au sol",
+    "Méditation",
+    "Le vélo",
+    "Course à pied"
+  ],
+  "languages": [
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Anglais"
+    },
+    {
+      "language": "Français"
+    }
+  ],
+  "certificates": [
+    "PADI Open Water"
+  ],
+  "quote": "J'adore enseigner et m'amuser en mer avec des gens qui partagent mes passions.",
+  "about": "« Je m’appelle Sergio, mais vous pouvez m’appeler Canei. Vous me connaissez peut-être grâce à Survivor México, que j’ai remporté en 2025. Quelques années auparavant, j’avais décidé de prendre soin de moi : m’entraîner, bien manger, comprendre le fonctionnement de mon corps. C’est ce que j’enseigne aujourd’hui, en tant que coach sportif à Cancún, aux plus de 100 personnes que j’ai accompagnées.\n\nJ’ai guidé des groupes de 8 à 19 personnes en Islande, sur les volcans Acatenango et Fuego au Guatemala, sur la Grande Île d’Hawaï, dans les Dolomites et sur le chemin de Saint-Jacques-de-Compostelle. À bord, nous commençons la journée par des exercices sur le pont. Avant de vous jeter à l’eau, je vous apprends à respirer, et chaque jour, vous retenez votre souffle un peu plus longtemps. »",
+  "history": "« Sur le chemin de Saint-Jacques-de-Compostelle, lors de la plus longue étape, certains membres de mon groupe se sont réveillés avec des ampoules et à bout de forces. Avant de partir, j’ai animé un exercice sur l’intention et la réflexion, et nous avons parcouru cette étape avec une attitude différente.\n\nJ'ai animé un groupe en trois étapes : le message de bienvenue, un échange plus long avant le départ, et l'analyse du langage corporel le premier jour. »",
+  "why": "« Ce qui m'attire vers la mer : son mystère, ses animaux, ses couleurs et son immensité.\n\nC'est en laissant une trace positive chez les autres que je me sens épanouie. En mer, je veille sur le groupe. L'équipage de l'Eagle Ray s'occupe du bateau. »",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+  "imageAlt": "Sergio, chef d'expédition chez Eagle Ray Expeditions",
+  "joiningTag": "Thanksgiving",
+  "order": 12,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_ctri8p.jpg",
+    "/assets/img/crew/sergio-torres-canei-01.webp",
+    "/assets/img/crew/sergio-torres-canei-02.webp",
+    "/assets/img/crew/sergio-torres-canei-03.webp",
+    "/assets/img/crew/sergio-torres-canei-04.webp",
+    "/assets/img/crew/sergio-torres-canei-05.webp"
+  ]
+}

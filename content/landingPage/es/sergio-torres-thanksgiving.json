@@ -1,0 +1,58 @@
+{
+  "title": "Expedición náutica de Acción de Gracias con Sergio Torres «Canei»",
+  "blocks": [
+    {
+      "kicker": "Fechas limitadas · Noviembre de 2026",
+      "title": "Noviembre en el mar de Cortés, con Sergio Torres.",
+      "lede": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+      "imageAlt": "Sergio Torres, jefe de expedición de Eagle Ray Expeditions. Experiencia de navegación en La Paz",
+      "cta": {
+        "label": "Comprobar disponibilidad",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+      },
+      "_template": "hero"
+    },
+    {
+      "body": "## ¿QUIÉN ES SERGIO?\n\nGanador de «Survivor México 2025», Ironman y entrenador personal.\n\nHa guiado a grupos en varios países y ahora es jefe de expedición en Eagle Ray.\n\nEn este viaje, él es quien marca el ritmo del día: cuándo meterse en el agua, dónde pescar y cuándo no hacer absolutamente nada.\n",
+      "_template": "richText"
+    },
+    {
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+          "alt": "Sergio Torres bajo el agua",
+          "href": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_inmersio%CC%81n_jphte8.jpg",
+          "alt": "Sergio Torres, Buceo en La Paz ",
+          "href": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_rnxdut.jpg",
+          "alt": "Sergio Torres practicando buceo de rescate en La Paz",
+          "href": ""
+        }
+      ],
+      "_template": "imageGallery"
+    },
+    {
+      "title": "¿Estás listo para ver la ruta?",
+      "lede": "",
+      "cta": {
+        "label": "Echa un vistazo a la propuesta completa",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+      },
+      "_template": "cta"
+    },
+    {
+      "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness",
+      "hideLogo": true,
+      "hideTitle": true,
+      "height": 600,
+      "iframeTitle": "Sergio Torres x Eagle Ray Expeditions ",
+      "_template": "moguProposal"
+    }
+  ]
+}

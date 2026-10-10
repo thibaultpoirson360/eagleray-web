@@ -1,0 +1,28 @@
+{
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+  "heroImageAlt": "Des passagers se détendent sur le filet-trampoline d'un catamaran",
+  "title": "Expédition de recalibrage",
+  "subtitle": "Il vous suffit de choisir les dates et les personnes. Ensuite, on s'occupe de tout.",
+  "intro": "Une expédition à la voile privée conçue pour ceux qui souhaitent se déconnecter en compagnie de leurs proches, à un rythme qu'ils choisissent eux-mêmes.",
+  "introImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Men_on_sailboat_rbzpwy.jpg",
+  "introImageAlt": "Des personnes naviguant sur un catamaran",
+  "durationLabel": "Choisissez la durée idéale",
+  "moguTripSlug": "recalibration-expedition ",
+  "aboardLabel": "CE QUI EST INCLUS ET CE QUI NE L'EST PAS",
+  "onBoardLabel": "À bord - Prestations incluses",
+  "onBoard": "### ÉQUIPE\n\n* Capitaine + guide d'expédition spécialisé dans les raies aigles + chef cuisinier (composition modulable)\n\n### ITINÉRAIRE\n\n* Programme quotidien, adapté à l'humeur du groupe et à la météo\n\n### VOILIERS ET ÉQUIPEMENT\n\n* Le bateau entier réservé exclusivement pour votre groupe\n* Matériel de plongée avec tuba\n* Matériel de pêche\n* 2 planches de paddle\n* 1 kayak\n* 1 canot pneumatique\n* Matériel de plage (chaises longues, parasol, etc.)\n\n### REPAS ET BOISSONS\n\n* Tous les repas à bord\n* Boissons non alcoolisées\n\n### TRANSFERTS\n\n* Aéroport de La Paz ↔ port de plaisance, à l'arrivée et au départ\n\n### SUPPLÉMENTS\n\n* Carburant diesel\n* Permis de navigation et droits d'entrée dans les parcs nationaux\n* Wi-Fi Starlink à bord\n* Permis de navigation et droits d'entrée dans les parcs nationaux\n",
+  "onBoardImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Included_ixxstu.png",
+  "onBoardImageAlt": "Éléments compris dans l'expédition à la voile",
+  "notOnBoardLabel": "Non inclus",
+  "notOnBoard": "* Pourboires à l'équipage (10 à 15 % recommandés)\n* Vols à destination de La Paz\n* Boissons alcoolisées, à choisir sur une carte avant le départ\n* Plongée sous-marine : prix sur demande, en fonction du nombre de plongées et des qualifications du groupe\n* Autres activités guidées, facturées séparément\n* Assurance voyage personnelle\n",
+  "notOnBoardImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Not_included_oknzyl.png",
+  "notOnBoardImageAlt": "Éléments non compris dans l'expédition à la voile",
+  "cta": {
+    "label": "Plus d'informations",
+    "href": "https://v2.app.moguplatform.com/trips/recalibration-expedition "
+  },
+  "seo": {
+    "title": "Expédition « Recalibration » — Eagle Ray Expeditions",
+    "description": "Une expédition à la voile privée et tranquille à La Paz. Vous choisissez les dates et les participants, et nous nous occupons du reste."
+  }
+}

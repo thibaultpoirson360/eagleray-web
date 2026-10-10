@@ -1,0 +1,42 @@
+{
+  "name": "Roberto",
+  "roles": [
+    "Capitaine"
+  ],
+  "skills": [
+    "Voile",
+    "Traversées au large",
+    "Navigation de nuit",
+    "Régates"
+  ],
+  "languages": [
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Anglais"
+    },
+    {
+      "language": "Français"
+    }
+  ],
+  "certificates": [
+    "Licence en droit (UNAM)",
+    "LL.M. en droit de la mer (Université de Lund et Université maritime mondiale)"
+  ],
+  "yearsOfExperience": 11,
+  "quote": "Mon bateau est une partie de moi-même.",
+  "about": "« J'ai parcouru plus de 30 000 milles marins, dont un tour du monde entre 2016 et 2026 : j'ai traversé le Pacifique, l'océan Indien et l'Atlantique, et je suis allé de l'Alaska au Japon en passant par les Aléoutiennes et le Kamtchatka. Avant cela, j’étais juriste spécialisé dans le droit maritime : j’ai travaillé au Tribunal international du droit de la mer et participé à des négociations internationales sur le climat.\n\nÀ bord, je vous laisserai la barre si vous souhaitez apprendre, et je m’occuperai de tout si vous ne le souhaitez pas. Mes élèves disent que je garde mon calme quand les autres paniquent, et que mes histoires rendent même le nettoyage de la cale agréable. Ils disent aussi que je donne l’impression que les tempêtes font partie du programme. J’espère que nous n’aurons pas à vérifier cela. »",
+  "history": "« Une traversée transatlantique entre l’Espagne et la Barbade, prévue pour deux semaines, m’a pris 44 jours et m’a coûté plusieurs voiles déchirées. En 2020, alors que les ports fermaient partout dans le monde, j’ai mis le cap depuis le Mexique vers la Polynésie française, où l’on m’a refoulé, et j’ai continué à naviguer. Un chat nommé Demonic a traversé le Pacifique avec nous.\n\nEn naviguant de l’Alaska vers le Japon, j’ai escaladé et skié sur des volcans dans les Aléoutiennes et au Kamtchatka, avec des skis en peau de phoque et un répulsif à ours dans mon sac. Je suis arrivé au Japon avec une bôme cassée. »",
+  "why": "« Je navigue à la voile dès que le vent le permet, sans utiliser le moteur, pour que vous puissiez entendre ce que j'écoute : le silence et le bruit de la coque fendant l'eau.\n\nPour moi, la mer est un endroit où le temps semble s'écouler plus lentement et où la liberté reste intacte. À Baja, je partage cela depuis le pont d'un bateau que je connais par cœur. »",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
+  "imageAlt": "Roberto Cámara, capitaine de voilier et chef d'expédition chez Eagle Ray Expeditions",
+  "order": 8,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Capitan_Roberto_Cámara_-_Partner_Sail_in_México_xtqjir.jpg",
+    "/assets/img/crew/roberto-01.webp",
+    "/assets/img/crew/roberto-02.webp",
+    "/assets/img/crew/roberto-03.webp",
+    "/assets/img/crew/roberto-04.webp"
+  ]
+}
