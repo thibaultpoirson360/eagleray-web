@@ -1,27 +1,34 @@
 {
   "kicker": "Tu expedición",
   "title": "Nuestra flota. Un único criterio: totalmente privada, totalmente tuya.",
-  "lede": "Cinco catamaranes, todos con base en La Paz. Toca un barco para ver su distribución, capacidad y lo que incluye.",
+  "lede": "Catamaranes y monocascos de vela en La Paz, seleccionados en función de cómo quiera pasar los días tu grupo.",
   "includedHeading": "Siempre incluido",
   "included": [
-    "Catamarán privado, preparado para la vida a bordo",
+    "Barco privado, preparado para la vida a bordo",
     "Patrón profesional",
-    "Embarcación auxiliar con motor",
+    "Itinerario flexible, adaptado a las condiciones meteorológicas y a tu grupo",
     "Equipo de buceo a bordo",
-    "Permisos / pulseras de acceso a zonas protegidas",
+    "Equipo de pesca",
+    "2 tablas de paddle surf",
+    "1 kayak",
+    "Material de playa (sillas, sombrillas, etc.)",
+    "Embarcación auxiliar con motor",
+    "Wi-Fi de Starlink a bordo",
+    "Todas las comidas a bordo + bebidas sin alcohol",
+    "Permisos de navegación y tasas de acceso a los parques nacionales",
+    "Diésel",
     "Preparación y limpieza de la embarcación",
-    "Coordinación del ERE antes y durante tu viaje",
-    "Itinerario flexible, adaptado a las condiciones meteorológicas y a tu grupo"
+    "Aeropuerto de La Paz ↔ puerto deportivo, a la llegada y a la salida",
+    "Coordinación del equipo de Eagle Ray Expeditions antes y durante tu viaje"
   ],
-  "notIncludedHeading": "A la carta / no incluido",
+  "notIncludedHeading": "A la carta / No incluido",
   "notIncluded": [
-    "Comida y bebida",
-    "Consejo del capitán",
-    "WiFi / Starlink",
-    "Equipo adicional (kayak, remo, material de pesca)",
-    "Combustible consumido durante el viaje",
+    "Propinas para la tripulación (se recomienda entre el 10 % y el 15 %)",
+    "Bebidas alcohólicas, que deberán seleccionarse de una carta antes del viaje",
     "Buceo, kite y wingfoil, actividades guiadas",
-    "Seguro de viaje personal"
+    "Otras actividades guiadas, con presupuesto por separado",
+    "Seguro de viaje personal",
+    "Vuelos a La Paz"
   ],
   "cta": {
     "label": "Personalizar mi expedición",
@@ -30,12 +37,12 @@
   "labels": {
     "close": "Cerrar",
     "previous": "Foto anterior",
-    "next": "Foto siguiente",
+    "next": "Siguiente foto",
     "photo": "Foto",
-    "length": "Eslora",
-    "cabins": "Camarotes",
+    "length": "Longitud",
+    "cabins": "Cabañas",
     "bathrooms": "Baños",
-    "guests": "Pasajeros"
+    "guests": "Invitados"
   },
   "seo": {
     "title": "Embarcaciones — Eagle Ray Expeditions",

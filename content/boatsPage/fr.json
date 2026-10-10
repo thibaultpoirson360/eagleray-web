@@ -1,27 +1,34 @@
 {
   "kicker": "Votre expédition",
   "title": "Notre flotte. Une seule règle : entièrement privée, entièrement à vous.",
-  "lede": "Cinq catamarans, tous basés à La Paz. Appuyez sur un bateau pour découvrir son agencement, sa capacité d'accueil et les prestations incluses.",
+  "lede": "Catamarans et monocoques à La Paz, sélectionnés en fonction de la façon dont votre groupe souhaite passer ses journées.",
   "includedHeading": "Toujours inclus",
   "included": [
-    "Catamaran privé, aménagé pour la vie à bord",
+    "Bateau privé, aménagé pour la vie à bord",
     "Skipper professionnel",
-    "Annexe à moteur",
+    "Itinéraire flexible, adapté à la météo et à votre groupe",
     "Matériel de plongée avec tuba à bord",
-    "Permis / bracelets d'accès aux zones protégées",
+    "Kit de pêche",
+    "2 planches de paddle",
+    "1 kayak",
+    "Matériel de plage (chaises longues, parasols, etc.)",
+    "Annexe à moteur",
+    "Wi-Fi Starlink à bord",
+    "Tous les repas à bord + boissons non alcoolisées",
+    "Permis de navigation et droits d'entrée dans les parcs nationaux",
+    "Diesel",
     "Préparation et nettoyage du bateau",
-    "Coordination ERE avant et pendant votre voyage",
-    "Itinéraire flexible, adapté à la météo et à votre groupe"
+    "Aéroport de La Paz ↔ port de plaisance, à l'arrivée et au départ",
+    "Coordination de l'équipe d'Eagle Ray Expeditions avant et pendant votre voyage"
   ],
-  "notIncludedHeading": "À la carte / non compris",
+  "notIncludedHeading": "À la carte / Non compris",
   "notIncluded": [
-    "Nourriture et boissons",
-    "Conseil du skipper",
-    "Wi-Fi / Starlink",
-    "Matériel supplémentaire (kayak, pagaie, matériel de pêche)",
-    "Carburant consommé pendant le trajet",
+    "Pourboires pour le personnel (10 à 15 % recommandés)",
+    "Boissons alcoolisées, à choisir sur une carte avant le départ",
     "Plongée, kite et wingfoil, activités encadrées",
-    "Assurance voyage individuelle"
+    "Autres activités guidées, facturées séparément",
+    "Assurance voyage individuelle",
+    "Vols vers La Paz"
   ],
   "cta": {
     "label": "Personnaliser mon expédition",
@@ -34,7 +41,7 @@
     "photo": "Photo",
     "length": "Longueur",
     "cabins": "Cabines",
-    "bathrooms": "Salles de bain",
+    "bathrooms": "Salles de bains",
     "guests": "Invités"
   },
   "seo": {
