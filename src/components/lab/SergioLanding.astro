@@ -1,0 +1,259 @@
+---
+/**
+ * Markup for /<locale>/lab/sergio-torres/. Every scene is a plain, readable
+ * block with no JavaScript; src/scripts/lab-sergio.ts then adds the motion.
+ * Hooks for the script are `data-lab-*` attributes. The pinned "day on board"
+ * layout only applies while the section has `data-pinned` (desktop, motion
+ * allowed), which is what the `group-data-pinned:` classes key off.
+ */
+import Button from "../ui/Button.astro";
+import MoguProposal from "../MoguProposal.astro";
+import { cloudinaryAt, type LabSergioContent } from "../../lib/lab";
+
+interface Props {
+  content: LabSergioContent;
+  whatsappHref?: string;
+}
+
+const { content, whatsappHref } = Astro.props;
+const { hero, intro, story, sergio, route, crew, proposal } = content;
+const hide = "[.js-lab_&]:invisible";
+---
+
+<!-- 1. Hero -->
+<section class="relative isolate flex h-[100svh] min-h-[34rem] items-end overflow-hidden bg-ink text-white" data-lab-hero>
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <img
+      src={cloudinaryAt(hero.image, 1800)}
+      srcset={`${cloudinaryAt(hero.image, 900)} 900w, ${cloudinaryAt(hero.image, 1800)} 1800w`}
+      sizes="100vw"
+      alt={hero.imageAlt}
+      fetchpriority="high"
+      decoding="async"
+      class="absolute -top-[9%] left-0 h-[118%] w-full object-cover"
+      data-lab-parallax
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/45"></div>
+  </div>
+  <div class="mx-auto w-full max-w-site pr-pad pb-hero-b pl-[calc(var(--spacing-pad)+var(--rail))]">
+    <p class={`mb-6 font-mono text-[.76rem] tracking-[.14em] text-white/80 uppercase ${hide}`} data-lab-fade>{content.coords}</p>
+    <p class={`mb-6 inline-block rounded border border-white/45 px-3 py-1.5 font-mono text-[.72rem] tracking-[.14em] uppercase ${hide}`} data-lab-fade>
+      {hero.chip}
+    </p>
+    <h1 class={`max-w-[18ch] text-hero ${hide}`} data-lab-split>{hero.title}</h1>
+    <p class={`mt-6 max-w-[48ch] text-hero-sub text-white/85 ${hide}`} data-lab-fade>{hero.lede}</p>
+    <div class={`mt-8 ${hide}`} data-lab-fade>
+      <span class="inline-block" data-lab-cta><Button href={hero.cta.href} variant="primary" context="hero">{hero.cta.label}</Button></span>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Intro -->
+<section class="mx-auto max-w-site border-b border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]" data-lab-intro>
+  <div class="flex flex-col gap-4 py-section">
+    {intro.lines.map((line) => <p class={`text-h2 ${hide}`} data-lab-split-scroll>{line}</p>)}
+    <p class={`mt-8 font-serif text-quote-lead text-ink/64 italic ${hide}`} data-lab-split-scroll>{intro.closing}</p>
+  </div>
+</section>
+
+<!-- 3. A day on board (pinned on desktop) -->
+<section class="group relative bg-ink text-white" id="story" data-lab-story aria-labelledby="story-title">
+  <div class="relative overflow-hidden py-section group-data-pinned:h-screen group-data-pinned:py-0" data-lab-viewport>
+    <figure
+      class="relative mx-auto mb-8 aspect-video max-w-site overflow-hidden rounded-lg group-data-pinned:absolute group-data-pinned:inset-0 group-data-pinned:mx-0 group-data-pinned:mb-0 group-data-pinned:aspect-auto group-data-pinned:max-w-none group-data-pinned:rounded-none"
+      data-lab-photo
+    >
+      <img
+        src={cloudinaryAt(story.photo, 1600)}
+        alt={story.photoAlt}
+        loading="lazy"
+        decoding="async"
+        class="size-full object-cover"
+      />
+      <div class="absolute inset-0 bg-ink/45"></div>
+    </figure>
+    <div
+      class="absolute top-1/2 left-[68%] hidden size-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60 group-data-pinned:block"
+      aria-hidden="true"
+      data-lab-circle
+    >
+      <div class="size-full rounded-full border border-white/30" data-lab-breath></div>
+    </div>
+    <svg
+      class="absolute top-1/2 right-pad hidden h-[50vh] w-3 -translate-y-1/2 group-data-pinned:block"
+      viewBox="0 0 12 100"
+      preserveAspectRatio="none"
+      role="img"
+      aria-label={story.progressLabel}
+      data-lab-progress-svg
+    >
+      <line x1="6" y1="0" x2="6" y2="100" class="stroke-white/20" stroke-width="1"></line>
+      <line x1="6" y1="0" x2="6" y2="100" class="stroke-white" stroke-width="2" pathLength="1" data-lab-progress></line>
+    </svg>
+
+    <div class="relative mx-auto max-w-site pr-pad pl-[calc(var(--spacing-pad)+var(--rail))] group-data-pinned:absolute group-data-pinned:inset-x-0 group-data-pinned:top-[calc(var(--spacing-nav)+1rem)]">
+      <p class="mb-3 font-mono text-[.76rem] tracking-[.14em] text-white/70 uppercase">{story.kicker}</p>
+      <h2 class="text-h2" id="story-title">{story.title}</h2>
+    </div>
+
+    <div class="relative group-data-pinned:absolute group-data-pinned:inset-0">
+      {
+        story.scenes.map((scene) => (
+          <article
+            class="py-10 group-data-pinned:absolute group-data-pinned:inset-0 group-data-pinned:flex group-data-pinned:items-end group-data-pinned:py-0 group-data-pinned:pb-[12vh]"
+            data-lab-scene
+          >
+            <div class="mx-auto flex w-full max-w-site flex-col gap-3 pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+              <p class="font-mono text-[.76rem] tracking-[.14em] text-white/70 uppercase">{scene.time}</p>
+              <h3 class="max-w-[16ch] text-h2" data-lab-scene-title>{scene.title}</h3>
+              <p class="max-w-[44ch] text-lede text-white/85" data-lab-scene-body>{scene.body}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- 4. Who is Sergio -->
+<section class="mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]" data-lab-sergio>
+  <div class="grid gap-12 py-section md:grid-cols-2 md:gap-16">
+    <div class="md:sticky md:top-[calc(var(--spacing-nav)+2rem)] md:self-start">
+      <p class="mb-4 font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase">{sergio.kicker}</p>
+      <h2 class="text-h2">{sergio.title}</h2>
+      <p class="mt-6 max-w-[52ch] text-lede text-ink/74">{sergio.intro}</p>
+      <ul class="mt-8 flex flex-col gap-2.5">
+        {
+          sergio.credentials.map((item) => (
+            <li class="flex gap-2.5 text-[.95rem] text-ink/78">
+              <span aria-hidden="true">—</span>
+              {item}
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-6">
+        <a
+          href={sergio.instagram.href}
+          class="font-mono text-[.85rem] tracking-[.06em] text-ink underline underline-offset-4 hover:text-ink-hover"
+          target="_blank"
+          rel="noopener noreferrer">{sergio.instagram.label}</a
+        >
+      </p>
+      <blockquote class="mt-10 max-w-[28ch] border-l border-ink/26 pl-5 font-serif text-quote text-ink italic">
+        {sergio.quote}
+      </blockquote>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      {
+        sergio.photos.map((photo, i) => (
+          <figure
+            class={`overflow-hidden rounded-lg bg-surface ${i === 0 ? "col-span-2 aspect-[4/3]" : "aspect-[3/4]"} ${i === 2 ? "mt-10 md:mt-16" : ""} ${hide}`}
+            data-lab-stack
+          >
+            <img
+              src={cloudinaryAt(photo.image, 900)}
+              alt={photo.alt}
+              loading="lazy"
+              decoding="async"
+              class="size-full scale-[1.15] object-cover"
+              data-lab-stack-img
+            />
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<!-- 5. Route and activities -->
+<section class="border-t border-ink/8 bg-surface" data-lab-route>
+  <div class="mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+    <div class="py-section">
+      <p class="mb-4 font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase">{route.kicker}</p>
+      <h2 class="max-w-[22ch] text-h2">{route.title}</h2>
+      <svg viewBox="0 0 800 420" class="mt-10 h-auto w-full" role="img" aria-label={route.mapLabel}>
+        <path d="M60 360 C 160 340, 180 250, 280 230 S 430 200, 480 140 S 620 70, 730 60" fill="none" class="stroke-ink/14" stroke-width="2" stroke-dasharray="4 8"></path>
+        <path
+          d="M60 360 C 160 340, 180 250, 280 230 S 430 200, 480 140 S 620 70, 730 60"
+          fill="none"
+          class="stroke-ink"
+          stroke-width="3"
+          stroke-linecap="round"
+          pathLength="1"
+          data-lab-route-line
+        ></path>
+        {
+          [
+            { x: 60, y: 360 },
+            { x: 280, y: 230 },
+            { x: 730, y: 60 },
+          ].map((point, i) => (
+            <g data-lab-route-point>
+              <circle cx={point.x} cy={point.y} r="7" class="fill-ink"></circle>
+              <text x={point.x + (i === 2 ? -16 : 16)} y={point.y + 34} text-anchor={i === 2 ? "end" : "start"} class="fill-ink font-mono text-[15px] tracking-[.1em] uppercase">
+                {route.places[i]?.name}
+              </text>
+              <text x={point.x + (i === 2 ? -16 : 16)} y={point.y + 58} text-anchor={i === 2 ? "end" : "start"} class="fill-ink/64 text-[14px]">
+                {route.places[i]?.note}
+              </text>
+            </g>
+          ))
+        }
+      </svg>
+      <div class="mt-12 grid gap-6 md:grid-cols-2">
+        {
+          route.activities.map((activity) => (
+            <article class="rounded-lg border border-ink/14 bg-white p-6 md:p-8">
+              <p class="mb-3 font-mono text-[.72rem] tracking-[.14em] text-ink/64 uppercase">{activity.tag}</p>
+              <h3 class="mb-2 text-lede text-ink">{activity.title}</h3>
+              <p class="text-[.95rem] text-ink/72">{activity.body}</p>
+            </article>
+          ))
+        }
+      </div>
+      <p class="mt-6 text-[.85rem] text-ink/64">{route.note}</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Crew -->
+<section class="mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]" data-lab-crew>
+  <div class="grid gap-10 py-section md:grid-cols-2 md:gap-16">
+    <h2 class={`text-h2 ${hide}`} data-lab-split-scroll>{crew.title}</h2>
+    <div class="flex flex-col gap-5">
+      <p class="text-lede text-ink/74">{crew.body}</p>
+      <p class="text-lede text-ink/74">{crew.food}</p>
+      <p class="font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase">
+        {crew.languagesLabel}: {crew.languages.join(" / ")}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Proposal (outside the pinned section) -->
+<section class="border-t border-ink/8 bg-surface" id="proposal">
+  <div class="mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+    <div class="py-section text-center">
+      <h2 class="text-h2">{proposal.title}</h2>
+      <p class="mx-auto mt-4 max-w-[52ch] text-lede text-ink/74">{proposal.lede}</p>
+    </div>
+    <div class="overflow-hidden rounded-lg border border-ink/26 bg-white">
+      <MoguProposal tripSlug={proposal.tripSlug} height={640} title={proposal.iframeTitle} hideLogo hideTitle />
+    </div>
+    <div class="flex flex-col items-center gap-5 py-section text-center">
+      <span class="inline-block" data-lab-cta><Button href={proposal.cta.href} variant="primary" context="default">{proposal.cta.label}</Button></span>
+      {
+        whatsappHref && (
+          <p class="text-[.95rem] text-ink/74">
+            {proposal.whatsappLabel}:{" "}
+            <a href={whatsappHref} class="text-ink underline underline-offset-4 hover:text-ink-hover" target="_blank" rel="noopener noreferrer">
+              {proposal.whatsappDisplay}
+            </a>
+          </p>
+        )
+      }
+      <p class="font-serif text-quote-lead text-ink/64 italic">{content.tagline}</p>
+    </div>
+  </div>
+</section>
