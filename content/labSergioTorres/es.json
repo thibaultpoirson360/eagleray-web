@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "Noviembre en el mar de Cortés con Sergio Torres — Eagle Ray Expeditions",
+    "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre."
+  },
+  "coords": "24°12′37.6″ N · LA PAZ · B.C.S.",
+  "tagline": "Al mar de Cortés no se lo visita. Se lo navega.",
+  "hero": {
+    "chip": "Fechas limitadas · Noviembre de 2026",
+    "title": "Noviembre en el mar de Cortés, con Sergio Torres.",
+    "lede": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+    "cta": {
+      "label": "Comprobar disponibilidad",
+      "href": "#proposal"
+    },
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+    "imageAlt": "Sergio Torres, jefe de expedición de Eagle Ray Expeditions. Experiencia de navegación en La Paz"
+  },
+  "intro": {
+    "lines": [
+      "Cuerpo y respiración en cubierta.",
+      "Buceo libre y pesca submarina.",
+      "Cena en el ancla."
+    ],
+    "closing": "Hay un plan, pero no está escrito en piedra."
+  },
+  "story": {
+    "kicker": "Un día a bordo",
+    "title": "De la primera luz a la última estrella.",
+    "progressLabel": "Avance del día",
+    "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+    "photoAlt": "Sergio Torres bajo el agua",
+    "scenes": [
+      {
+        "time": "Amanecer",
+        "title": "Café en una bahía en calma",
+        "body": "El barco está quieto. Sergio guía una sesión de respiración y estiramientos en cubierta antes de que nadie diga una palabra."
+      },
+      {
+        "time": "Mañana",
+        "title": "Al agua",
+        "body": "Entrenamiento de apnea y buceo libre, a tu profundidad y a tu ritmo."
+      },
+      {
+        "time": "Mediodía",
+        "title": "A pescar con Sergio",
+        "body": "Pesca submarina donde está permitida y, de vuelta a bordo, una comida larga preparada por el chef."
+      },
+      {
+        "time": "Tarde",
+        "title": "Sin mirar el reloj",
+        "body": "Nadar, leer, dormir o navegar hasta la siguiente cala. La ruta sigue al clima y a tu grupo."
+      },
+      {
+        "time": "Atardecer",
+        "title": "La isla se vuelve ámbar",
+        "body": "Cae el ancla. La pesca de la mañana va a la parrilla."
+      },
+      {
+        "time": "Noche",
+        "title": "Cena en el ancla",
+        "body": "Estrellas, historias y un plan para mañana que quizá cambie antes del desayuno."
+      }
+    ]
+  },
+  "sergio": {
+    "kicker": "¿Quién es Sergio?",
+    "title": "Sergio Torres, «Canei».",
+    "nickname": "Canei",
+    "intro": "Ha guiado a grupos en varios países y ahora es jefe de expedición en Eagle Ray. En este viaje, él es quien marca el ritmo del día: cuándo meterse en el agua, dónde pescar y cuándo no hacer absolutamente nada.",
+    "credentials": [
+      "Ganador de «Survivor México 2025»",
+      "Ironman",
+      "Entrenador personal",
+      "PADI Open Water",
+      "Guía de grupos de 5 a 15 personas"
+    ],
+    "instagram": {
+      "label": "@sergio_torres_canei",
+      "href": "https://www.instagram.com/sergio_torres_canei/"
+    },
+    "quote": "El plan se adapta a ti, no al revés.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+        "alt": "Sergio Torres bajo el agua"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_inmersio%CC%81n_jphte8.jpg",
+        "alt": "Sergio Torres, Buceo en La Paz"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_rnxdut.jpg",
+        "alt": "Sergio Torres practicando buceo de rescate en La Paz"
+      }
+    ]
+  },
+  "route": {
+    "kicker": "Ruta y actividades",
+    "title": "Espíritu Santo, Los Islotes y el agua que hay entre ambos.",
+    "places": [
+      {
+        "name": "La Paz",
+        "note": "Salida"
+      },
+      {
+        "name": "Espíritu Santo",
+        "note": "Calas, arrecifes, fondeaderos"
+      },
+      {
+        "name": "Los Islotes",
+        "note": "Colonia de lobos marinos"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Pesca submarina con Sergio",
+        "tag": "Incluido",
+        "body": "Con la guía de Sergio, en las zonas donde está permitida."
+      },
+      {
+        "title": "Buceo con tanque y lobos marinos en Los Islotes",
+        "tag": "Opcional · precio a consultar",
+        "body": "Bucea junto a la colonia de lobos marinos, con guías certificados."
+      }
+    ],
+    "note": "Pesca submarina solo en las zonas donde está permitida.",
+    "mapLabel": "Ruta ilustrativa de La Paz a Espíritu Santo y Los Islotes"
+  },
+  "crew": {
+    "title": "Sergio cuida de ti. La tripulación de Eagle Ray cuida del barco y del mar.",
+    "body": "Un barco privado, una tripulación profesional y una ruta flexible, pensada para tu grupo.",
+    "food": "Comida local preparada por el chef a bordo.",
+    "languagesLabel": "Idiomas a bordo",
+    "languages": [
+      "ES",
+      "EN",
+      "FR"
+    ]
+  },
+  "proposal": {
+    "title": "¿Estás listo para ver la ruta?",
+    "lede": "Consulta las fechas, el barco y la propuesta completa.",
+    "iframeTitle": "Sergio Torres x Eagle Ray Expeditions",
+    "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness",
+    "cta": {
+      "label": "Echa un vistazo a la propuesta completa",
+      "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+    },
+    "whatsappLabel": "¿Dudas? Escríbenos por WhatsApp",
+    "whatsappDisplay": "+52 55 6809 0942"
+  }
+}

@@ -1,0 +1,44 @@
+---
+/**
+ * `/<locale>/lab/sergio-torres/` — animated version of the Sergio Torres
+ * Thanksgiving landing page (an experiment, so `noindex` and not in the
+ * sitemap). Copy: content/labSergioTorres/<locale>.json (plain files, no
+ * editor collection). Scroll scenes: src/scripts/lab-sergio.ts.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import SergioLanding from "../../../components/lab/SergioLanding.astro";
+import { loadLabSergio } from "../../../lib/lab";
+import { loadSiteSettings } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const content = loadLabSergio(locale);
+if (!content) throw new Error(`content/labSergioTorres/${locale}.json is missing`);
+const settings = (await loadSiteSettings()).data.siteSettings;
+const whatsappHref = settings.contact?.whatsapp ? `https://wa.me/${settings.contact.whatsapp}` : undefined;
+---
+
+<BaseLayout
+  title={content.seo.title}
+  description={content.seo.description}
+  locale={locale}
+  path="lab/sergio-torres/"
+  transparentNav={true}
+  noindex={true}
+>
+  <script is:inline>
+    // Hide what the scroll scenes will reveal, from the first paint. Without
+    // JavaScript, or with reduced motion, everything stays visible.
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("js-lab");
+  </script>
+  <main id="main">
+    <SergioLanding content={content} whatsappHref={whatsappHref} />
+  </main>
+  <script>
+    import "../../../scripts/lab-sergio";
+  </script>
+</BaseLayout>

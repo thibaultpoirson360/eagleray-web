@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "November in the Sea of Cortez with Sergio Torres — Eagle Ray Expeditions",
+    "description": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29."
+  },
+  "coords": "24°12′37.6″ N · LA PAZ · B.C.S.",
+  "tagline": "The Sea of Cortez isn't visited. It's sailed.",
+  "hero": {
+    "chip": "Limited dates · November 2026",
+    "title": "November in the Sea of Cortez, with Sergio Torres.",
+    "lede": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+    "cta": {
+      "label": "Check availability",
+      "href": "#proposal"
+    },
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+    "imageAlt": "Sergio Torres Expedition Leader de Eagle Ray Expeditions Sailing Experience in La Paz"
+  },
+  "intro": {
+    "lines": [
+      "Body and breathwork on deck.",
+      "Freediving and spearfishing.",
+      "Dinner at anchor."
+    ],
+    "closing": "There is a plan, but it is not set in stone."
+  },
+  "story": {
+    "kicker": "A day on board",
+    "title": "From first light to the last star.",
+    "progressLabel": "Progress through the day",
+    "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+    "photoAlt": "Sergio Torres underwater",
+    "scenes": [
+      {
+        "time": "Sunrise",
+        "title": "Coffee on a flat bay",
+        "body": "The boat is still. Sergio leads breathwork and a slow stretch on deck before anyone has said a word."
+      },
+      {
+        "time": "Morning",
+        "title": "Into the water",
+        "body": "Breath-hold training and freediving, at your own depth and at your own pace."
+      },
+      {
+        "time": "Midday",
+        "title": "Fish with Sergio",
+        "body": "Spearfishing where it is permitted, then back aboard for a long lunch prepared by the chef."
+      },
+      {
+        "time": "Afternoon",
+        "title": "Nothing on a clock",
+        "body": "Swim, read, sleep, or sail on to the next cove. The route follows the weather and your group."
+      },
+      {
+        "time": "Sunset",
+        "title": "The island turns amber",
+        "body": "The anchor drops. The morning's catch goes on the grill."
+      },
+      {
+        "time": "Night",
+        "title": "Dinner at anchor",
+        "body": "Stars, stories, and a plan for tomorrow that might change by breakfast."
+      }
+    ]
+  },
+  "sergio": {
+    "kicker": "Who is Sergio",
+    "title": "Sergio Torres, “Canei”.",
+    "nickname": "Canei",
+    "intro": "He has guided groups in several countries and is now an Expedition Leader at Eagle Ray. On this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.",
+    "credentials": [
+      "Survivor México 2025 champion",
+      "Ironman",
+      "Personal trainer",
+      "PADI Open Water",
+      "Group guide for 5 to 15 people"
+    ],
+    "instagram": {
+      "label": "@sergio_torres_canei",
+      "href": "https://www.instagram.com/sergio_torres_canei/"
+    },
+    "quote": "The plan adapts to you, not the other way around.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+        "alt": "Sergio Torres underwater"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_inmersio%CC%81n_jphte8.jpg",
+        "alt": "Sergio Torres Scubadiving La Paz"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_rnxdut.jpg",
+        "alt": "Sergio Torres scusadiving in La paz"
+      }
+    ]
+  },
+  "route": {
+    "kicker": "Route and activities",
+    "title": "Espíritu Santo, Los Islotes, and the water between.",
+    "places": [
+      {
+        "name": "La Paz",
+        "note": "Departure"
+      },
+      {
+        "name": "Espíritu Santo",
+        "note": "Coves, reefs, anchorages"
+      },
+      {
+        "name": "Los Islotes",
+        "note": "Sea lion colony"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Spearfishing with Sergio",
+        "tag": "Included",
+        "body": "Guided by Sergio, in the areas where it is permitted."
+      },
+      {
+        "title": "Scuba diving and sea lions at Los Islotes",
+        "tag": "Optional · price on request",
+        "body": "Dive with the sea lion colony, with certified guides."
+      }
+    ],
+    "note": "Spearfishing only in areas where it is permitted.",
+    "mapLabel": "Illustrative route from La Paz to Espíritu Santo and Los Islotes"
+  },
+  "crew": {
+    "title": "Sergio takes care of you. The Eagle Ray crew takes care of the boat and the sea.",
+    "body": "A private boat, a professional crew and a flexible route, shaped around your group.",
+    "food": "Chef-prepared local food on board.",
+    "languagesLabel": "Languages on board",
+    "languages": [
+      "ES",
+      "EN",
+      "FR"
+    ]
+  },
+  "proposal": {
+    "title": "Ready to see the route?",
+    "lede": "See the dates, the boat and the full proposal.",
+    "iframeTitle": "Sergio Torres x Eagle Ray Expeditions",
+    "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness",
+    "cta": {
+      "label": "Check out the complete proposal",
+      "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+    },
+    "whatsappLabel": "Questions? Write to us on WhatsApp",
+    "whatsappDisplay": "+52 55 6809 0942"
+  }
+}

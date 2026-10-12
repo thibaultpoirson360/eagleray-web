@@ -1,0 +1,153 @@
+{
+  "seo": {
+    "title": "Novembre dans la mer de Cortez avec Sergio Torres — Eagle Ray Expeditions",
+    "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre."
+  },
+  "coords": "24°12′37.6″ N · LA PAZ · B.C.S.",
+  "tagline": "La mer de Cortez ne se visite pas. Elle se navigue.",
+  "hero": {
+    "chip": "Dates limitées · novembre 2026",
+    "title": "Novembre dans la mer de Cortez, avec Sergio Torres.",
+    "lede": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
+    "cta": {
+      "label": "Vérifier la disponibilité",
+      "href": "#proposal"
+    },
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
+    "imageAlt": "Sergio Torres, chef d'expédition chez Eagle Ray Expeditions – Expérience de navigation à La Paz"
+  },
+  "intro": {
+    "lines": [
+      "Corps et respiration sur le pont.",
+      "Apnée et pêche sous-marine.",
+      "Dîner au mouillage."
+    ],
+    "closing": "Il y a un plan, mais il n'est pas gravé dans le marbre."
+  },
+  "story": {
+    "kicker": "Une journée à bord",
+    "title": "De la première lueur à la dernière étoile.",
+    "progressLabel": "Progression de la journée",
+    "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+    "photoAlt": "Sergio Torres sous l'eau",
+    "scenes": [
+      {
+        "time": "Lever du soleil",
+        "title": "Café dans une baie calme",
+        "body": "Le bateau est immobile. Sergio guide un moment de respiration et d'étirements sur le pont avant que quiconque ait dit un mot."
+      },
+      {
+        "time": "Matin",
+        "title": "À l'eau",
+        "body": "Entraînement à l'apnée et plongée libre, à votre profondeur et à votre rythme."
+      },
+      {
+        "time": "Midi",
+        "title": "Pêcher avec Sergio",
+        "body": "Pêche sous-marine là où elle est autorisée, puis retour à bord pour un long déjeuner préparé par le chef."
+      },
+      {
+        "time": "Après-midi",
+        "title": "Sans regarder l'heure",
+        "body": "Nager, lire, dormir ou naviguer jusqu'à la crique suivante. La route suit la météo et votre groupe."
+      },
+      {
+        "time": "Coucher du soleil",
+        "title": "L'île se teinte d'ambre",
+        "body": "L'ancre est jetée. La pêche du matin passe sur le gril."
+      },
+      {
+        "time": "Nuit",
+        "title": "Dîner au mouillage",
+        "body": "Des étoiles, des histoires et un plan pour demain qui changera peut-être avant le petit-déjeuner."
+      }
+    ]
+  },
+  "sergio": {
+    "kicker": "Qui est Sergio ?",
+    "title": "Sergio Torres, « Canei ».",
+    "nickname": "Canei",
+    "intro": "Il a guidé des groupes dans plusieurs pays et occupe désormais le poste de chef d'expédition chez Eagle Ray. Au cours de cette sortie, c'est lui qui décide du programme de la journée : quand se mettre à l'eau, où pêcher et quand ne rien faire du tout.",
+    "credentials": [
+      "Vainqueur de « Survivor México 2025 »",
+      "Ironman",
+      "Coach sportif",
+      "PADI Open Water",
+      "Guide de groupes de 5 à 15 personnes"
+    ],
+    "instagram": {
+      "label": "@sergio_torres_canei",
+      "href": "https://www.instagram.com/sergio_torres_canei/"
+    },
+    "quote": "Le plan s'adapte à vous, et non l'inverse.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+        "alt": "Sergio Torres sous l'eau"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_inmersio%CC%81n_jphte8.jpg",
+        "alt": "Sergio Torres – Plongée sous-marine à La Paz"
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_rnxdut.jpg",
+        "alt": "Sergio Torres pratique la plongée en apnée à La Paz"
+      }
+    ]
+  },
+  "route": {
+    "kicker": "Itinéraire et activités",
+    "title": "Espíritu Santo, Los Islotes, et l'eau qui les sépare.",
+    "places": [
+      {
+        "name": "La Paz",
+        "note": "Départ"
+      },
+      {
+        "name": "Espíritu Santo",
+        "note": "Criques, récifs, mouillages"
+      },
+      {
+        "name": "Los Islotes",
+        "note": "Colonie d'otaries"
+      }
+    ],
+    "activities": [
+      {
+        "title": "Pêche sous-marine avec Sergio",
+        "tag": "Inclus",
+        "body": "Guidée par Sergio, dans les zones où elle est autorisée."
+      },
+      {
+        "title": "Plongée bouteille et otaries à Los Islotes",
+        "tag": "En option · prix sur demande",
+        "body": "Plongez auprès de la colonie d'otaries, avec des guides certifiés."
+      }
+    ],
+    "note": "Pêche sous-marine uniquement dans les zones où elle est autorisée.",
+    "mapLabel": "Itinéraire illustratif de La Paz à Espíritu Santo et Los Islotes"
+  },
+  "crew": {
+    "title": "Sergio prend soin de vous. L'équipage d'Eagle Ray prend soin du bateau et de la mer.",
+    "body": "Un bateau privé, un équipage professionnel et un itinéraire flexible, pensé pour votre groupe.",
+    "food": "Cuisine locale préparée à bord par le chef.",
+    "languagesLabel": "Langues à bord",
+    "languages": [
+      "ES",
+      "EN",
+      "FR"
+    ]
+  },
+  "proposal": {
+    "title": "Prêt à découvrir l'itinéraire ?",
+    "lede": "Consultez les dates, le bateau et la proposition complète.",
+    "iframeTitle": "Sergio Torres x Eagle Ray Expeditions",
+    "tripSlug": "sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness",
+    "cta": {
+      "label": "Consultez la proposition dans son intégralité",
+      "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+    },
+    "whatsappLabel": "Des questions ? Écrivez-nous sur WhatsApp",
+    "whatsappDisplay": "+52 55 6809 0942"
+  }
+}
