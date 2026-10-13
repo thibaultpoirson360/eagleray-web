@@ -13,6 +13,7 @@ import difference from "./collections/difference";
 import { crewSection, crew } from "./collections/crew";
 import crewPage from "./collections/crewPage";
 import wildlife from "./collections/wildlife";
+import expeditionsSection from "./collections/expeditionsSection";
 import { boatsSection, boats, boatsPage } from "./collections/boats";
 import funnel from "./collections/funnel";
 import navPages from "./collections/navPages";
@@ -80,6 +81,7 @@ export default defineConfig({
       crewSection,
       crew,
       wildlife,
+      expeditionsSection,
       boatsSection,
       boats,
       boatsPage,

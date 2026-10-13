@@ -25,6 +25,7 @@ import NavPageView from "../../components/NavPageView.astro";
 import NotFoundView from "../../components/NotFoundView.astro";
 import Wildlife from "../../components/Wildlife.astro";
 import Boats from "../../components/Boats.astro";
+import ExpeditionsSection from "../../components/ExpeditionsSection.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import Funnel from "../../components/Funnel.astro";
@@ -42,6 +43,8 @@ import {
   loadNotFoundPage,
   loadWildlife,
   loadBoatsSection,
+  loadExpeditionsSection,
+  loadSailWithUsOrEnglish,
   loadBoats,
   loadNavigation,
   loadFooter,
@@ -120,6 +123,22 @@ const route = createIslandRoute({
     propsFromData: (result: unknown) => ({
       wildlife: (result as Awaited<ReturnType<typeof loadWildlife>>).data.wildlife,
     }),
+  },
+  expeditions: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const [section, sailWithUs] = await Promise.all([loadExpeditionsSection(locale), loadSailWithUsOrEnglish(locale)]);
+      return { section, sailWithUs };
+    },
+    component: ExpeditionsSection,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const { section, sailWithUs } = result as {
+        section: Awaited<ReturnType<typeof loadExpeditionsSection>>;
+        sailWithUs: Awaited<ReturnType<typeof loadSailWithUsOrEnglish>>;
+      };
+      return { expeditionsSection: section.data.expeditionsSection, sailWithUsPage: sailWithUs.data.sailWithUsPage };
+    },
   },
   boats: {
     fetch: async (_request: Request, params: URLSearchParams) => {

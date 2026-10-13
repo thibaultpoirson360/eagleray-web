@@ -1,0 +1,71 @@
+---
+/**
+ * Home section "Your expedition": the expedition cards from "Sail with us"
+ * under the usual section heading. Text from content/expeditionsSection;
+ * the cards are the Sail with us page's `expeditions` (edited there).
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import ExpeditionCards, { type ExpeditionCard } from "./ExpeditionCards.astro";
+import type { ExpeditionsSectionQuery, SailWithUsPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  expeditionsSection: ExpeditionsSectionQuery["expeditionsSection"];
+  sailWithUsPage: SailWithUsPageQuery["sailWithUsPage"];
+}
+
+const { expeditionsSection, sailWithUsPage } = Astro.props;
+const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? []).flatMap((e, i) =>
+  e?.name
+    ? [
+        {
+          id: e.name,
+          name: e.name,
+          image: e.image ?? undefined,
+          imageAlt: e.imageAlt ?? undefined,
+          href: e.href || undefined,
+          field: tinaField(sailWithUsPage, "expeditions", i),
+          description: e.description ?? undefined,
+          descriptionField: tinaField(sailWithUsPage, "expeditions", i),
+        },
+      ]
+    : []
+);
+---
+
+<section
+  class="section relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+  id="expeditions"
+  data-depth-stop={expeditionsSection.depth?.meters ?? undefined}
+  data-depth-name={expeditionsSection.depth?.name ?? undefined}
+>
+  <div class="section-head mb-section-head">
+    <p
+      class="kicker mb-[1.1rem] flex items-center gap-[.6rem] font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase"
+      data-reveal
+    >
+      {
+        expeditionsSection.kickerNumber && (
+          <span class="text-ink" data-tina-field={tinaField(expeditionsSection, "kickerNumber")}>
+            {expeditionsSection.kickerNumber}
+          </span>
+        )
+      }
+      <span data-tina-field={tinaField(expeditionsSection, "kicker")}>{expeditionsSection.kicker}</span>
+    </p>
+    <h2 class="h2 text-h2" data-reveal data-tina-field={tinaField(expeditionsSection, "title")}>
+      {expeditionsSection.title}
+      {
+        expeditionsSection.titleEmphasis && (
+          <>
+            <br />
+            <em class="not-italic text-ink" data-tina-field={tinaField(expeditionsSection, "titleEmphasis")}>
+              {expeditionsSection.titleEmphasis}
+            </em>
+          </>
+        )
+      }
+    </h2>
+  </div>
+
+  <ExpeditionCards expeditions={cards} linkLabel={expeditionsSection.cardLabel ?? ""} />
+</section>

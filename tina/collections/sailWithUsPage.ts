@@ -36,6 +36,13 @@ const sailWithUsPage: Collection = {
         { type: "string", name: "imageAlt", label: "Card photo alt text" },
         {
           type: "string",
+          name: "description",
+          label: "Short description under the card (2-3 lines)",
+          description: "Explains in a few words what this expedition is. Leave empty for no text.",
+          ui: textarea,
+        },
+        {
+          type: "string",
           name: "href",
           label: "Link to the expedition page (the whole card links here)",
           description: 'e.g. "/en/recalibration-expedition/"',

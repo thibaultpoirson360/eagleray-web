@@ -218,6 +218,28 @@ export function loadSailWithUsPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.sailWithUsPage({ relativePath: `${locale}.json` }), options);
 }
 
+/** The "Your expedition" homepage section's own text (content/expeditionsSection/<locale>.json). */
+export function loadExpeditionsSection(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.expeditionsSection({ relativePath: `${locale}.json` }), options);
+}
+
+/**
+ * The Sail with Us page for `locale`, or the English one (links pointed at
+ * `locale`) when that language has no document yet. The homepage reads its
+ * expedition cards from here.
+ */
+export async function loadSailWithUsOrEnglish(locale: Locale, options?: RequestOptions) {
+  try {
+    return await loadSailWithUsPage(locale, options);
+  } catch {
+    const result = await loadSailWithUsPage("en", options);
+    for (const card of result.data.sailWithUsPage.expeditions ?? []) {
+      if (card?.href?.startsWith("/en/")) card.href = `/${locale}/${card.href.slice(4)}`;
+    }
+    return result;
+  }
+}
+
 /** The Recalibration Expedition page (content/recalibrationPage/<locale>.json). */
 export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
