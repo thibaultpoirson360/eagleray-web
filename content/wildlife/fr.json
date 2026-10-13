@@ -5,12 +5,12 @@
   },
   "kickerNumber": "03",
   "kicker": "Où nous naviguons",
-  "title": "Un cactus sur le rivage.",
+  "title": "Un cactus au bord de l'eau.",
   "titleEmphasis": "Des otaries dans l'eau.",
   "lede": "On raconte que Cousteau aurait qualifié la mer de Cortez d’« aquarium du monde ». C’est un golfe étroit qui concentre ce que d’autres océans étalent sur des milliers de miles : des remontées d’eau froide, des îles inhabitées et une densité de vie qui surprend encore ceux qui y naviguent depuis des années. Nous naviguons de La Paz vers les îles d’Espíritu Santo, et de Loreto jusqu’à La Paz lors d’expéditions plus longues.",
   "gallery": [
     {
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/filippo-salvioni-nnXiJWBklMY-unsplash_opwllf.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/josh-withers-3lcDvNy_Zjw-unsplash_lyjc1d.jpg",
       "alt": "La Paz, Basse-Californie du Sud, Mexique ",
       "href": ""
     },
@@ -21,7 +21,7 @@
     },
     {
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/e2ieabxohwithxvsuo7m.jpg",
-      "alt": "Exemple de contenu sur la faune sauvage 2",
+      "alt": "Raies aigles",
       "href": ""
     }
   ],
