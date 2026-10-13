@@ -28,6 +28,7 @@ const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
     image: e.image ?? undefined,
     imageAlt: e.imageAlt ?? undefined,
     href: e.href || undefined,
+    description: e.description ?? undefined,
   }));
 const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
 ---

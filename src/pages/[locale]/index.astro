@@ -6,6 +6,7 @@ import Difference from "../../components/Difference.astro";
 import Crew from "../../components/Crew.astro";
 import Wildlife from "../../components/Wildlife.astro";
 import Boats from "../../components/Boats.astro";
+import ExpeditionsSection from "../../components/ExpeditionsSection.astro";
 import Funnel from "../../components/Funnel.astro";
 import {
   loadHero,
@@ -14,6 +15,8 @@ import {
   loadCrew,
   loadWildlife,
   loadBoatsSection,
+  loadExpeditionsSection,
+  loadSailWithUsOrEnglish,
   loadBoats,
   loadFunnel,
   loadSiteSettings,
@@ -31,6 +34,7 @@ const seo = heroResult.data.hero.seo;
 const differenceResult = await loadDifference(locale);
 const [crewSectionResult, crewResult] = await Promise.all([loadCrewSection(locale), loadCrew(locale)]);
 const wildlifeResult = await loadWildlife(locale);
+const [expeditionsSectionResult, sailWithUsResult] = await Promise.all([loadExpeditionsSection(locale), loadSailWithUsOrEnglish(locale)]);
 const [boatsSectionResult, boatsResult] = await Promise.all([loadBoatsSection(locale), loadBoats(locale)]);
 const boatsModalFallback = locale === "en" ? undefined : (await loadBoatsSection("en")).data.boatsSection.modal;
 const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
@@ -64,6 +68,12 @@ const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale)
     </TinaIsland>
     <TinaIsland name="wildlife" wrapper={{ tag: "div" }} params={{ locale }}>
       <Wildlife wildlife={wildlifeResult.data.wildlife} />
+    </TinaIsland>
+    <TinaIsland name="expeditions" wrapper={{ tag: "div" }} params={{ locale }}>
+      <ExpeditionsSection
+        expeditionsSection={expeditionsSectionResult.data.expeditionsSection}
+        sailWithUsPage={sailWithUsResult.data.sailWithUsPage}
+      />
     </TinaIsland>
     <TinaIsland name="boats" wrapper={{ tag: "div" }} params={{ locale }}>
       <Boats boatsSection={boatsSectionResult.data.boatsSection} boats={boatsResult.boats} modal={boatsModalFallback} />
