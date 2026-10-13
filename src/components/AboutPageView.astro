@@ -9,6 +9,8 @@ import PageHero from "./ui/PageHero.astro";
 import BodyParagraph from "./richtext/BodyParagraph.astro";
 import BodyQuote from "./richtext/BodyQuote.astro";
 import BodyImage from "./richtext/BodyImageFull.astro";
+import BodyH2 from "./richtext/BodyH2.astro";
+import BodyH3 from "./richtext/BodyH3.astro";
 import type { AboutPageQuery } from "../../tina/__generated__/types";
 
 interface Props {
@@ -16,6 +18,42 @@ interface Props {
 }
 
 const { aboutPage } = Astro.props;
+const components = { p: BodyParagraph, blockquote: BodyQuote, img: BodyImage, h2: BodyH2, h3: BodyH3 };
+
+// On desktop, a block made of a heading, a photo and its text (the Boat 1-7
+// stories) is laid out photo beside text, alternating sides. Anything else
+// (the intro, "How we work"...) stays in one narrow column. The editor still
+// writes one plain body; the layout is worked out from it here.
+type Node = { type?: string; children?: Node[]; text?: string };
+const isHeading = (node: Node) => /^h[1-6]$/.test(node.type ?? "");
+const isPhoto = (node: Node) =>
+  node.type === "p" && !!node.children?.some((c) => c.type === "img") && node.children.every((c) => c.type === "img" || (c.type === "text" && !c.text?.trim()));
+const root = (children: Node[]) => ({ type: "root", children }) as unknown as NonNullable<typeof aboutPage.body>;
+const plainText = (node: Node): string => node.text ?? (node.children ?? []).map(plainText).join("");
+
+type Segment =
+  | { kind: "single"; nodes: Node[] }
+  | { kind: "pair"; heading: string; photo: Node; text: Node[]; flip: boolean };
+
+const segments: Segment[] = [];
+const groups: Node[][] = [];
+for (const node of (aboutPage.body?.children ?? []) as Node[]) {
+  if (isHeading(node) || groups.length === 0) groups.push([node]);
+  else groups[groups.length - 1].push(node);
+}
+let pairs = 0;
+for (const group of groups) {
+  const photoAt = isHeading(group[0]) ? group.findIndex(isPhoto) : -1;
+  if (photoAt > 0) {
+    segments.push({
+      kind: "pair",
+      heading: plainText(group[0]),
+      photo: group[photoAt],
+      text: group.filter((_, i) => i !== 0 && i !== photoAt),
+      flip: pairs++ % 2 === 1,
+    });
+  } else segments.push({ kind: "single", nodes: group });
+}
 ---
 
 <PageHero
@@ -28,8 +66,24 @@ const { aboutPage } = Astro.props;
 
 {
   aboutPage.body && (
-    <section class="relative mx-auto max-w-[700px] px-5 py-section lg:px-0">
-      <TinaMarkdown content={aboutPage.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
-    </section>
+    <div class="relative py-section">
+      {segments.map((segment) =>
+        segment.kind === "single" ? (
+          <section class="mx-auto max-w-[700px] px-5 lg:px-0">
+            <TinaMarkdown content={root(segment.nodes)} components={components} />
+          </section>
+        ) : (
+          <section class="mx-auto my-16 grid max-w-[1080px] items-center gap-x-16 gap-y-8 px-5 md:my-24 md:grid-cols-2 lg:gap-x-24 lg:px-0">
+            <div class={`[&_span]:mt-0 ${segment.flip ? "md:order-2" : ""}`}>
+              <TinaMarkdown content={root([segment.photo])} components={components} />
+            </div>
+            <div>
+              <h3 class="mb-6 text-quote-lead">{segment.heading}</h3>
+              <TinaMarkdown content={root(segment.text)} components={components} />
+            </div>
+          </section>
+        )
+      )}
+    </div>
   )
 }
