@@ -46,14 +46,14 @@ for (const group of groups) {
   const headed = isHeading(group[0]);
   const photoAt = group.findIndex(isPhoto);
   // The opening text (no heading) with a photo in it also goes photo + text,
-  // with a smaller photo, so the intro stays close to its picture.
+  // with a smaller photo on the right (the first story then has its photo on the left).
   if (photoAt > 0 || (!headed && photoAt === 0)) {
     segments.push({
       kind: "pair",
       heading: headed ? plainText(group[0]) : "",
       photo: group[photoAt],
       text: group.filter((_, i) => i !== photoAt && !(headed && i === 0)),
-      flip: headed && pairs++ % 2 === 1,
+      flip: headed ? pairs++ % 2 === 1 : true,
       lead: !headed,
     });
   } else segments.push({ kind: "single", nodes: group });
@@ -79,7 +79,7 @@ for (const group of groups) {
         ) : (
           <section
             class={`mx-auto my-16 grid max-w-[1080px] items-center gap-x-16 gap-y-8 px-5 md:my-24 lg:gap-x-24 lg:px-0 ${
-              segment.lead ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]" : "md:grid-cols-2"
+              segment.lead ? "md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]" : "md:grid-cols-2"
             }`}
           >
             <div class={`[&_span]:mt-0 ${segment.flip ? "md:order-2" : ""}`}>
