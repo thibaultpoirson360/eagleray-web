@@ -33,7 +33,7 @@ const plainText = (node: Node): string => node.text ?? (node.children ?? []).map
 
 type Segment =
   | { kind: "single"; nodes: Node[] }
-  | { kind: "pair"; heading: string; photo: Node; text: Node[]; flip: boolean };
+  | { kind: "pair"; heading: string; photo: Node; text: Node[]; flip: boolean; lead: boolean };
 
 const segments: Segment[] = [];
 const groups: Node[][] = [];
@@ -43,14 +43,18 @@ for (const node of (aboutPage.body?.children ?? []) as Node[]) {
 }
 let pairs = 0;
 for (const group of groups) {
-  const photoAt = isHeading(group[0]) ? group.findIndex(isPhoto) : -1;
-  if (photoAt > 0) {
+  const headed = isHeading(group[0]);
+  const photoAt = group.findIndex(isPhoto);
+  // The opening text (no heading) with a photo in it also goes photo + text,
+  // with a smaller photo, so the intro stays close to its picture.
+  if (photoAt > 0 || (!headed && photoAt === 0)) {
     segments.push({
       kind: "pair",
-      heading: plainText(group[0]),
+      heading: headed ? plainText(group[0]) : "",
       photo: group[photoAt],
-      text: group.filter((_, i) => i !== 0 && i !== photoAt),
-      flip: pairs++ % 2 === 1,
+      text: group.filter((_, i) => i !== photoAt && !(headed && i === 0)),
+      flip: headed && pairs++ % 2 === 1,
+      lead: !headed,
     });
   } else segments.push({ kind: "single", nodes: group });
 }
@@ -73,12 +77,16 @@ for (const group of groups) {
             <TinaMarkdown content={root(segment.nodes)} components={components} />
           </section>
         ) : (
-          <section class="mx-auto my-16 grid max-w-[1080px] items-center gap-x-16 gap-y-8 px-5 md:my-24 md:grid-cols-2 lg:gap-x-24 lg:px-0">
+          <section
+            class={`mx-auto my-16 grid max-w-[1080px] items-center gap-x-16 gap-y-8 px-5 md:my-24 lg:gap-x-24 lg:px-0 ${
+              segment.lead ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]" : "md:grid-cols-2"
+            }`}
+          >
             <div class={`[&_span]:mt-0 ${segment.flip ? "md:order-2" : ""}`}>
               <TinaMarkdown content={root([segment.photo])} components={components} />
             </div>
             <div>
-              <h3 class="mb-6 text-quote-lead">{segment.heading}</h3>
+              {segment.heading && <h3 class="mb-6 text-quote-lead">{segment.heading}</h3>}
               <TinaMarkdown content={root(segment.text)} components={components} />
             </div>
           </section>
