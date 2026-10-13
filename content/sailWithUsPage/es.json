@@ -10,13 +10,22 @@
       "name": "Expedición de recalibración",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Expedición de recalibración",
+      "description": "Una expedición privada en velero para quienes desean desconectar junto a sus seres queridos, a un ritmo que nadie más marca. Tú eliges las fechas y el grupo.",
       "href": "/es/recalibration-expedition/"
     },
     {
       "name": "El Día de Acción de Gracias con Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Expedición activa",
+      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
       "href": "/es/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Expedición ad hoc",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "Expedición náutica improvisada",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
+      "href": "/es/ad-hoc-expedition/"
     }
   ],
   "seo": {
