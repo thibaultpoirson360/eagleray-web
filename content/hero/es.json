@@ -1,14 +1,14 @@
 {
   "metaLine": "24°12′37,6″ N · LA PAZ · B.C.S.",
   "title": "Aventuras en el océano dirigidas por apasionados del mar",
-  "subtitle": "Grupos pequeños. Tripulación de verdad. Catamarán privado. Sin horarios fijos.",
+  "subtitle": "Grupos reducidos. Una tripulación de verdad. Barco privado. Una ruta que se adapta a ti.",
   "primaryCta": {
     "label": "Personaliza tu expedición",
     "href": "#customize"
   },
   "secondaryCta": {
-    "label": "Qué nos hace únicos",
-    "href": "#difference"
+    "label": "Ven a conocernos",
+    "href": "/es/about-us/"
   },
   "background": {
     "videoSrc": "/assets/video/hero-loop.mp4",
