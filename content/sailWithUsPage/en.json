@@ -10,21 +10,22 @@
       "name": "Recalibration Expedition",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Recalibration Expedition",
-      "href": "/en/recalibration-expedition/",
-      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group."
+      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
+      "href": "/en/recalibration-expedition/"
     },
     {
       "name": "Thanksgiving with Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Active Expedition",
-      "href": "/en/landing/sergio-torres-thanksgiving/",
-      "description": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29."
+      "description": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+      "href": "/en/landing/sergio-torres-thanksgiving/"
     },
     {
       "name": "Ad-hoc Expedition",
-      "imageAlt": "Ad-hoc Expedition",
-      "href": "/en/ad-hoc-expedition/",
-      "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea."
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "Ad-hoc Sailing Expedition",
+      "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
+      "href": "/en/ad-hoc-expedition/"
     }
   ],
   "seo": {
