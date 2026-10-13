@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -10,21 +10,22 @@
       "name": "Expédition de recalibrage",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Expédition de recalibrage",
-      "href": "/fr/recalibration-expedition/",
-      "description": "Une expédition à la voile en privé pour ceux qui souhaitent se déconnecter entre proches, à un rythme que personne d'autre ne dicte. C'est vous qui choisissez les dates et la composition du groupe."
+      "description": "Une expédition à la voile en privé pour ceux qui souhaitent se déconnecter entre proches, à un rythme que personne d'autre ne dicte. C'est vous qui choisissez les dates et la composition du groupe.",
+      "href": "/fr/recalibration-expedition/"
     },
     {
       "name": "Thanksgiving avec Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Expédition active",
-      "href": "/fr/landing/sergio-torres-thanksgiving/",
-      "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre."
+      "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
+      "href": "/fr/landing/sergio-torres-thanksgiving/"
     },
     {
       "name": "Expédition ponctuelle",
-      "imageAlt": "Expédition ponctuelle",
-      "href": "/fr/ad-hoc-expedition/",
-      "description": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer."
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "Expédition de voile improvisée",
+      "description": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
+      "href": "/fr/ad-hoc-expedition/"
     }
   ],
   "seo": {
