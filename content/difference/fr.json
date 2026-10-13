@@ -5,9 +5,9 @@
   },
   "kickerNumber": "01",
   "kicker": "Ce que nous faisons",
-  "title": "Nous ne proposons pas de sorties en charter.",
-  "titleEmphasis": "Nous concevons des expériences en mer.",
-  "lede": "Eagle Ray Expeditions conçoit et encadre des expéditions maritimes en petit groupe, mêlant voile, plongée et rencontres avec la faune en Basse-Californie du Sud. Pensé pour ceux qui veulent bien plus qu'un bateau.",
+  "title": "Nous commençons par votre groupe.",
+  "titleEmphasis": "Le bateau vient en dernier.",
+  "lede": "Chaque expédition est organisée en tenant compte des éléments suivants : qui participe, ce que vous attendez de vos journées en mer et qui devrait vous accompagner. Ce n’est qu’ensuite que nous choisissons le bateau. Eagle Ray Expeditions part de La Paz, avec un seul groupe privé par bateau.",
   "image": "/assets/img/cierre-thibault.jpg",
   "imageAlt": "Un marin souriant à la barre d'un voilier sous un ciel bleu limpide, un drapeau rouge flottant à ses côtés",
   "comparison": {
@@ -25,12 +25,12 @@
       "Le bateau passe avant tout.",
       "Une équipe tournante, non spécialisée.",
       "Il se peut que vous partagiez le bateau avec des personnes avec lesquelles vous ne vous entendrez pas.",
-      "Des itinéraires fixes, imprimés avant votre rencontre."
+      "Des itinéraires fixes, imprimés avant même de les rencontrer."
     ]
   },
   "founderQuote": {
-    "kicker": "Ils vendent des voyages.\nNous concevons des expéditions humaines.",
-    "quote": "Je ne voulais pas vendre des bateaux. Je voulais organiser le genre de voyage auquel j'aurais moi-même envie de participer : avec des gens qui connaissent la mer, et pas seulement ceux qui savent vous remettre un trousseau de clés.",
+    "kicker": "Ils vendent des voyages.\nNous concevons des expéditions à dimension humaine.",
+    "quote": "Je ne voulais pas vendre des bateaux. Je voulais organiser le genre de voyage auquel j'aurais moi-même envie de participer, avec des gens qui connaissent la mer, et pas seulement ceux qui savent vous remettre un trousseau de clés.",
     "cite": "— Thibault Poirson De Cardon, Fondateur"
   }
 }
