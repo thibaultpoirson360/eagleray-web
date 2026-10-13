@@ -1,10 +1,12 @@
 {
   "name": "Ana",
-  "roles": [
-    "Chef Silver"
-  ],
+  "roles": [],
   "about": "Ana a créé sa propre pâtisserie à partir de rien ; elle sait donc que la magie arrive rarement par hasard. Elle vit dans le timing, la texture et le détail que personne n'avait pensé à demander. À bord, elle cuisine avec la même attention, transformant un petit-déjeuner en rituel et un dessert en histoire racontée à terre.",
+  "images": [
+    "/assets/img/crew-ana.webp",
+    "/assets/img/crew/ana-01.webp"
+  ],
   "image": "/assets/img/crew-ana.webp",
-  "imageAlt": "Ana, Silver Chef",
+  "imageAlt": "Ana, chef",
   "order": 6
 }

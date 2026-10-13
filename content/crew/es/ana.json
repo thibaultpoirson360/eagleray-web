@@ -1,10 +1,12 @@
 {
   "name": "Ana",
-  "roles": [
-    "Chef Silver"
-  ],
+  "roles": [],
   "about": "Ana creó su propio negocio de repostería desde cero, así que sabe que la magia rara vez aparece por accidente. Vive en el punto exacto, la textura y el detalle que nadie pensó en pedir. A bordo cocina con la misma atención, convirtiendo un desayuno en ritual y un postre en la historia que se cuenta al volver a tierra.",
+  "images": [
+    "/assets/img/crew-ana.webp",
+    "/assets/img/crew/ana-01.webp"
+  ],
   "image": "/assets/img/crew-ana.webp",
-  "imageAlt": "Ana, Silver Chef",
+  "imageAlt": "Ana, chef",
   "order": 6
 }
