@@ -5,9 +5,9 @@
   },
   "kickerNumber": "03",
   "kicker": "Dónde navegamos",
-  "title": "El acuario",
-  "titleEmphasis": "del mundo.",
-  "lede": "Así llamó Cousteau al Mar de Cortés. Un golfo angosto que concentra en pocas millas lo que otros océanos reparten en miles — corrientes frías que suben del fondo, islas desiertas y una densidad de vida que sigue sorprendiendo a quien lleva años navegándolo. Trabajamos el tramo entre La Paz, Espíritu Santo y Cerralvo.",
+  "title": "Cactus en la orilla.",
+  "titleEmphasis": "Leones marinos en el agua.",
+  "lede": "Se dice que Cousteau llamó al mar de Cortés «el acuario del mundo». Es un estrecho golfo que concentra lo que en otros océanos se extiende a lo largo de miles de millas: corrientes ascendentes frías, islas deshabitadas y una densidad de vida que aún sorprende a quienes llevan años navegando por él. Navegamos desde La Paz hasta las islas del Espíritu Santo y, en expediciones más largas, desde Loreto hasta La Paz.",
   "gallery": [
     {
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/wdwmnrf7rtepuusne6fm.jpg",
@@ -16,12 +16,12 @@
     },
     {
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/e2ieabxohwithxvsuo7m.jpg",
-      "alt": "Marca de posición «Fauna silvestre» 2",
+      "alt": "Marca de posición «Fauna silvestre 2»",
       "href": ""
     },
     {
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lv3fwingtwjlffngg3pv.jpg",
-      "alt": "Marca de posición «Fauna silvestre 3»",
+      "alt": "Marca de posición «Fauna silvestre» 3",
       "href": ""
     }
   ],
