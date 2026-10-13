@@ -1,0 +1,16 @@
+---
+/** Same as BodyImage, but the whole photo is shown at its own proportions
+ * instead of being cropped to 16:9. Used on the About us page. */
+interface Props {
+  url: string;
+  alt?: string;
+  caption?: string;
+}
+
+const { url, alt, caption } = Astro.props;
+---
+
+<span class="mt-12 mb-[10px] block overflow-hidden rounded-lg">
+  <img src={url} alt={alt ?? ""} loading="lazy" decoding="async" class="block h-auto w-full" />
+</span>
+{caption && <span class="mb-10 block text-[13px] text-ink/64 italic">{caption}</span>}
