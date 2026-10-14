@@ -39,6 +39,9 @@
       "_template": "cta"
     },
     {
+      "tripSlug": "eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special",
+      "hideLogo": true,
+      "hideTitle": true,
       "height": 600,
       "_template": "moguProposal"
     }
