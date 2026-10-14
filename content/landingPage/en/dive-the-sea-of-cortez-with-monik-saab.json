@@ -14,7 +14,14 @@
       "_template": "richText"
     },
     {
-      "images": [],
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
+          "alt": "Monike Saab Eagle Ray Expedition Leader before a dive "
+        },
+        {},
+        {}
+      ],
       "_template": "imageGallery"
     },
     {
