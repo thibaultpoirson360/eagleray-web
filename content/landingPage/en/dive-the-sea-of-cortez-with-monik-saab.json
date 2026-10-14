@@ -31,7 +31,11 @@
       "_template": "imageGallery"
     },
     {
-      "title": "New call to action",
+      "title": "See the full expedition",
+      "cta": {
+        "label": "See the full expedition",
+        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
+      },
       "_template": "cta"
     },
     {
