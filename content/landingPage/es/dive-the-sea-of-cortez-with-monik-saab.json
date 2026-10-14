@@ -1,0 +1,24 @@
+{
+  "title": "Bucea en el mar de Cortés con Monik Saab",
+  "blocks": [
+    {
+      "title": "Nuevo banner de héroe",
+      "_template": "hero"
+    },
+    {
+      "_template": "richText"
+    },
+    {
+      "images": [],
+      "_template": "imageGallery"
+    },
+    {
+      "title": "Nueva llamada a la acción",
+      "_template": "cta"
+    },
+    {
+      "height": 600,
+      "_template": "moguProposal"
+    }
+  ]
+}
