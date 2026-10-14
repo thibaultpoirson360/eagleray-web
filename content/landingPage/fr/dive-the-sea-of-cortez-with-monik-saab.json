@@ -10,7 +10,7 @@
       "_template": "hero"
     },
     {
-      "body": "### **QUI EST MONIK ?**\n\nMonik a grandi sur une plage au Brésil.\n\nElle a passé seize ans dans de grandes entreprises et à enseigner l'anglais. Puis elle a décidé de partir, pour s'amuser et rendre les gens aussi heureux que la mer la rend elle-même.\n\nAujourd'hui, elle est **monitrice de plongée PADI et guide d'expédition agréée au Mexique.** **Six ans de plongée en Basse-Californie du Sud**, dont un an passée à La Paz.\n\nUne licence de guide dans les îles Revillagigedo. Séjours à bord de yachts équipés d'un héliport. Briefings de plongée en anglais, espagnol, portugais ou allemand.\n\nÀ bord, elle observe avant de prendre la parole : qui est détendu, qui vérifie son équipement deux fois, qui veut aller plus loin.\n\nElle organise ensuite les plongées en fonction de ces éléments. Quel site choisir, à quelle profondeur, à quel moment se mettre à l'eau, et quand il vaut mieux rester sur le pont pour admirer la lumière du coucher de soleil.\n\nEn novembre prochain, elle emmènera un petit groupe de plongeurs en mer de Cortez avec Eagle Ray. Suivez ses plongées sur @nikdive\n\n> Dans l'océan, tout le monde s'entraide. J'aimerais bien que ce soit pareil sur la terre ferme.\n",
+      "body": "### **QUI EST MONIK ?**\n\nMonik a grandi sur une plage au Brésil.\n\nElle a passé seize ans dans de grandes entreprises et à enseigner l'anglais. Puis elle a décidé de partir, pour s'amuser et rendre les gens aussi heureux que la mer la rend elle-même.\n\nAujourd'hui, elle est **monitrice de plongée PADI et guide d'expédition agréée au Mexique.** **Six ans de plongée en Basse-Californie du Sud**, dont un an passée à La Paz.\n\nUne licence de guide dans les îles Revillagigedo. Séjours à bord de yachts équipés d'un héliport. Briefings de plongée en anglais, espagnol, portugais ou allemand.\n\nÀ bord, elle observe avant de prendre la parole : qui est détendu, qui vérifie son équipement deux fois, qui souhaite plonger plus profondément.\n\nElle organise ensuite les plongées en fonction de ces éléments. Quel site choisir, à quelle profondeur, à quel moment se mettre à l'eau, et quand il vaut mieux rester sur le pont pour admirer la lumière du coucher de soleil.\n\nEn novembre prochain, elle emmènera un petit groupe de plongeurs en mer de Cortez avec Eagle Ray. Suivez ses plongées sur @nikdive\n\n> Dans l'océan, tout le monde s'entraide. J'aimerais bien que ce soit pareil sur la terre ferme.\n",
       "_template": "richText"
     },
     {
@@ -19,7 +19,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
           "alt": "Monike Saab, responsable de l'expédition « Eagle Ray », avant une plongée "
         },
-        {},
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
+          "alt": "Monike Saab fait de la plongée à La Paz"
+        },
         {}
       ],
       "_template": "imageGallery"

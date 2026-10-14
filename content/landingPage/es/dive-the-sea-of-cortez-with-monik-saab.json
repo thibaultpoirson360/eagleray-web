@@ -4,7 +4,7 @@
     {
       "kicker": "Fechas limitadas · Noviembre de 2026",
       "title": "Bucea en el mar de Cortés con Monik Saab",
-      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeado frente a Espíritu Santo, con un pequeño grupo de hasta 8 pasajeros a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
+      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeado frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
       "imageAlt": "Monike Saab, jefa de expedición y experta en buceo en La Paz",
       "_template": "hero"
@@ -19,7 +19,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
           "alt": "Monike Saab, jefa de la expedición «Eagle Ray», antes de una inmersión "
         },
-        {},
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
+          "alt": "Monike Saab buceando en La Paz"
+        },
         {}
       ],
       "_template": "imageGallery"
