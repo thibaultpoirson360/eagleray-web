@@ -4,7 +4,7 @@
     {
       "kicker": "Fechas limitadas · Noviembre de 2026",
       "title": "Bucea en el mar de Cortés con Monik Saab",
-      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeado frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
+      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeados frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
       "imageAlt": "Monike Saab, jefa de expedición y experta en buceo en La Paz",
       "_template": "hero"
@@ -45,5 +45,11 @@
       "height": 600,
       "_template": "moguProposal"
     }
-  ]
+  ],
+  "seo": {
+    "title": "Buceo en el mar de Cortés con Monik Saab | Eagle Ray Expeditions",
+    "description": "Expediciones de buceo de 3 o 5 días para buceadores titulados en La Paz, Baja California del Sur. Bucea, navega y pasa la noche fondeados con Monik Saab. Noviembre de 2026",
+    "ogTitle": "Bucea en Baja California con Monik Saab",
+    "ogDescription": "Un grupo reducido, un velero y unos días en el mar frente a las costas de Espíritu Santo. Para buceadores certificados, del 20 al 22 y del 25 al 29 de noviembre."
+  }
 }
