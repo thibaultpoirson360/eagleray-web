@@ -10,7 +10,7 @@
       "_template": "hero"
     },
     {
-      "body": "### **QUI EST MONIK ?**\n\n\\\nElle a grandi sur une plage au Brésil et a passé seize ans à travailler dans de grandes entreprises et à enseigner l'anglais avant de faire de la mer son métier.\n\nQuand on lui demande ce qui la retient là-bas, elle résume la situation en une seule phrase :\n\n> « Dans l'océan, tout le monde s'entraide. J'aimerais bien que ce soit pareil sur la terre ferme. »\n\nMonik emmène de petits groupes de plongeurs en mer de Cortez avec Eagle Ray. À bord, elle observe avant de prendre la parole : qui est détendu, qui vérifie son équipement deux fois, qui souhaite descendre plus profond.\nElle organise ensuite les plongées en fonction de chacun. Quel site choisir, quelle profondeur, quand se mettre à l'eau, et quand il vaut mieux rester sur le pont pour admirer les jeux de lumière.\n\nElle est aujourd’hui monitrice de plongée PADI et guide d’expédition agréée au Mexique.\\\nSix ans de plongée en Basse-Californie du Sud, dont un an passé à La Paz. Titulaire d’une licence de guide pour les îles Revillagigedo.\\\nPlusieurs saisons passées sur des yachts équipés d’un héliport. Briefings de plongée en anglais, espagnol, portugais ou allemand.\n\nSuivez ses plongées sur [@nikdive](https://www.instagram.com/nikdive/)\n",
+      "body": "### **QUI EST MONIK ?**\n\n\\\nElle a grandi sur une plage au Brésil et a passé seize ans à travailler dans de grandes entreprises et à enseigner l'anglais avant de faire de la mer son métier.\n\nQuand on lui demande ce qui la retient là-bas, elle résume la situation en une seule phrase :\n\n> « Dans l'océan, tout le monde s'entraide. J'aimerais bien que ce soit pareil sur la terre ferme. »\n\nMonik emmène de petits groupes de plongeurs en mer de Cortez avec Eagle Ray. À bord, elle observe avant de prendre la parole : qui est détendu, qui vérifie son équipement deux fois, qui souhaite descendre plus profond.\nElle organise ensuite les plongées en fonction de chacun. Quel site choisir, à quelle profondeur, quand se mettre à l'eau, et quand il vaut mieux rester sur le pont pour admirer les jeux de lumière.\n\nElle est aujourd’hui monitrice de plongée PADI et guide d’expédition agréée au Mexique.\\\nSix ans de plongée en Basse-Californie du Sud, dont un an passé à La Paz. Titulaire d’une licence de guide pour les îles Revillagigedo.\\\nPlusieurs saisons passées sur des yachts équipés d’un héliport. Briefings de plongée en anglais, espagnol, portugais ou allemand.\n\nSuivez ses plongées sur [@nikdive](https://www.instagram.com/nikdive/)\n",
       "_template": "richText"
     },
     {
@@ -31,7 +31,11 @@
       "_template": "imageGallery"
     },
     {
-      "title": "Nouvel appel à l'action",
+      "title": "Découvrez l'intégralité de l'expédition",
+      "cta": {
+        "label": "Découvrez l'intégralité de l'expédition",
+        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
+      },
       "_template": "cta"
     },
     {
