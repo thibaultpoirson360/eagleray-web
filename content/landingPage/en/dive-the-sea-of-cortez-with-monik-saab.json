@@ -1,0 +1,24 @@
+{
+  "title": "Dive the Sea of Cortez with Monik Saab",
+  "blocks": [
+    {
+      "title": "New hero banner",
+      "_template": "hero"
+    },
+    {
+      "_template": "richText"
+    },
+    {
+      "images": [],
+      "_template": "imageGallery"
+    },
+    {
+      "title": "New call to action",
+      "_template": "cta"
+    },
+    {
+      "height": 600,
+      "_template": "moguProposal"
+    }
+  ]
+}
