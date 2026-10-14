@@ -2,10 +2,15 @@
   "title": "Plongez dans la mer de Cortez avec Monik Saab",
   "blocks": [
     {
-      "title": "Nouvelle bannière de héros",
+      "kicker": "Dates limitées · Novembre 2026",
+      "title": "Plongez dans la mer de Cortez avec Monik Saab",
+      "lede": "Réservé aux plongeurs certifiés. Plongez, naviguez et passez la nuit au mouillage au large d'Espíritu Santo, avec un petit groupe de 8 personnes maximum à bord. 3 ou 5 jours : du 20 au 22 novembre ou du 25 au 29 novembre.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
+      "imageAlt": "Monike Saab, responsable d'expédition et experte en plongée sous-marine à La Paz",
       "_template": "hero"
     },
     {
+      "body": "",
       "_template": "richText"
     },
     {
