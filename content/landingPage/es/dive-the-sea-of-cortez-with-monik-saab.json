@@ -23,7 +23,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
           "alt": "Monike Saab buceando en La Paz"
         },
-        {}
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Preparing_clients_for_scuba_vdbptj.avif",
+          "alt": "Monike prepara a los clientes antes de una inmersión en La Paz Eagle Ray Expeditions"
+        }
       ],
       "_template": "imageGallery"
     },
