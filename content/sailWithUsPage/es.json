@@ -24,7 +24,7 @@
       "name": "Expedición ad hoc",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Expedición náutica improvisada",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
       "href": "/es/ad-hoc-expedition/"
     }
   ],
@@ -33,5 +33,71 @@
     "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
     "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
     "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
-  }
+  },
+  "activitiesTitle": "Añade actividades a tu expedición",
+  "activitiesSubtitle": "Cada expedición se puede adaptar a las actividades marítimas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
+  "activitiesButtonLabel": "Más información",
+  "activities": [
+    {
+      "name": "Buceo",
+      "featured": true,
+      "text": "Bucea con un especialista cualificado que guíe al grupo y adapte las inmersiones a las condiciones y al nivel de certificación.",
+      "imageAlt": "Buceo",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "desde 360 USD por persona y día",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en mi expedición."
+    },
+    {
+      "name": "Cometa",
+      "featured": true,
+      "text": "Sesiones de kitesurf en las condiciones adecuadas, con un guía experimentado.",
+      "imageAlt": "Cometa",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "desde 360 USD por persona y día",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incorporar a Kite a mi expedición."
+    },
+    {
+      "name": "Buceo en apnea",
+      "text": "Sesiones guiadas en aguas abiertas, dirigidas por un instructor cualificado.",
+      "imageAlt": "Buceo en apnea",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "Precio a consultar",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en apnea en mi expedición."
+    },
+    {
+      "name": "Snorkel",
+      "text": "Fácil acceso a los arrecifes y a la vida marina, con un guía que sabe adónde ir.",
+      "imageAlt": "Snorkel",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo con esnórquel en mi expedición."
+    },
+    {
+      "name": "Pesca",
+      "text": "Pesca desde la embarcación con conocimientos locales de la zona.",
+      "imageAlt": "Pesca",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir la pesca en mi expedición."
+    },
+    {
+      "name": "Rutas de senderismo",
+      "text": "Tiempo en tierra para pasear y explorar, organizado en función del itinerario.",
+      "imageAlt": "Rutas de senderismo",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "Me gustaría recibir más información sobre cómo añadir rutas de senderismo a mi expedición."
+    },
+    {
+      "name": "Surf de remo",
+      "text": "Practica paddle surf desde la embarcación, en aguas tranquilas y a tu propio ritmo.",
+      "imageAlt": "Surf de remo",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el surf de remo en mi expedición."
+    },
+    {
+      "name": "Kayak",
+      "text": "Explora la costa a la altura del agua, a tu propio ritmo.",
+      "imageAlt": "Kayak",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
+    }
+  ]
 }
