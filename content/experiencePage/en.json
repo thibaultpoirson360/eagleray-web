@@ -1,5 +1,7 @@
 {
   "hideFromSearch": true,
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/The_Eagle_Ray_Experience_l1p59p.jpg",
+  "heroImageAlt": "The Eagle Ray Experience",
   "title": "The Eagle Ray Experience",
   "subtitle": "A higher standard of ocean adventures",
   "supportingLine": "A crew chosen for how they sail and how they host. An expedition built around your group, not around a boat's schedule. Meals cooked on board. The Sea of Cortez at the pace your people choose.",
@@ -53,10 +55,10 @@
     },
     {
       "title": "The boats",
+      "label": "Our fleet",
       "text": "Catamarans and monohulls, each one chosen against our safety, comfort and functionality standards.",
       "imageAlt": "Boat at anchor",
-      "imageNote": "[PENDIENTE]",
-      "label": "Our fleet"
+      "imageNote": "[PENDIENTE]"
     }
   ],
   "primaryCta": {
