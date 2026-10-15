@@ -3,7 +3,7 @@
   "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
   "title": "Navega con nosotros",
   "subtitle": "Excursiones privadas en velero adaptadas a tu grupo.",
-  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día para poder cambiar de planes si surge algo que merezca la pena.",
+  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
   "expeditionsLabel": "Elige la expedición",
   "expeditions": [
     {
@@ -24,7 +24,7 @@
       "name": "Expedición ad hoc",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Expedición náutica improvisada",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
       "href": "/es/ad-hoc-expedition/"
     }
   ],
@@ -55,8 +55,9 @@
     {
       "name": "Buceo en apnea",
       "text": "Sesiones guiadas en aguas abiertas, dirigidas por un instructor cualificado.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
       "imageAlt": "Buceo en apnea",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "Precio a consultar",
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en apnea en mi expedición."
     },
@@ -69,7 +70,7 @@
     },
     {
       "name": "Pesca",
-      "text": "Pesca desde la embarcación con conocimientos locales de la zona.",
+      "text": "Pesca desde la embarcación, aprovechando el conocimiento local de la zona.",
       "imageAlt": "Pesca",
       "imageNote": "[PENDIENTE]",
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir la pesca en mi expedición."
@@ -86,7 +87,7 @@
       "text": "Practica paddle surf desde la embarcación, en aguas tranquilas y a tu propio ritmo.",
       "imageAlt": "Surf de remo",
       "imageNote": "[PENDIENTE]",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el paddle surf en mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el surf de remo en mi expedición."
     },
     {
       "name": "Kayak",

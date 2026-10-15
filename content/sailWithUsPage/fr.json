@@ -55,15 +55,16 @@
     {
       "name": "Plongée en apnée",
       "text": "Séances guidées en mer, encadrées par un moniteur diplômé.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
       "imageAlt": "Plongée en apnée",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "priceNote": "Prix sur demande",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée en apnée à mon expédition."
     },
     {
-      "name": "Plongée libre",
+      "name": "Plongée avec tuba",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
-      "imageAlt": "Plongée libre",
+      "imageAlt": "Plongée avec tuba",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
@@ -76,7 +77,7 @@
     },
     {
       "name": "Randonnées",
-      "text": "Temps libre à terre pour se promener et découvrir les lieux, organisé en fonction de l'itinéraire.",
+      "text": "Du temps à terre pour se promener et explorer les environs, en fonction de l'itinéraire prévu.",
       "imageAlt": "Randonnées",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'ajouter des randonnées à mon expédition."
