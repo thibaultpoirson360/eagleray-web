@@ -88,8 +88,9 @@
     {
       "name": "Paddle surf",
       "text": "Paddle surf from the boat, in calm conditions and at your own pace.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
       "imageAlt": "Paddle surf",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "I'd like more information about adding Paddle surf to my expedition."
     },
     {
