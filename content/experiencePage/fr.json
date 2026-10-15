@@ -1,8 +1,10 @@
 {
   "hideFromSearch": true,
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/The_Eagle_Ray_Experience_l1p59p.jpg",
+  "heroImageAlt": "L'expérience Eagle Ray",
   "title": "L'expérience Eagle Ray",
   "subtitle": "Des aventures en mer d'un niveau supérieur",
-  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
+  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition conçue sur mesure pour votre groupe, et non en fonction des horaires du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
   "sliderTitle": "Ce qui est au cœur de toute expédition",
   "previousLabel": "Carte précédente",
   "nextLabel": "Carte suivante",
@@ -10,6 +12,7 @@
     {
       "title": "Des gens de la mer passionnés",
       "text": "« Des gens qui vivent au rythme de la mer et savent la faire découvrir. » Notre équipage et nos animateurs apportent une véritable expérience de la mer et un sens aigu du service ; ils savent aussi bien cerner un groupe que décrypter la météo.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/The_Eagle_Ray_Experience_l1p59p.jpg",
       "imageAlt": "Photo de l'équipe",
       "imageNote": "[EN ATTENTE]"
     },
@@ -53,10 +56,10 @@
     },
     {
       "title": "Les bateaux",
+      "label": "Notre flotte",
       "text": "Catamarans et monocoques, tous sélectionnés selon nos critères de sécurité, de confort et de fonctionnalité.",
-      "imageAlt": "Bateau à l'ancre",
-      "imageNote": "[EN ATTENTE]",
-      "label": "Notre flotte"
+      "imageAlt": "Bateau au mouillage",
+      "imageNote": "[EN ATTENTE]"
     }
   ],
   "primaryCta": {
