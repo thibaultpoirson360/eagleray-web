@@ -40,8 +40,9 @@
     {
       "title": "Ocean Activities",
       "text": "Snorkeling and fishing on every expedition. Freediving and scuba diving with a certified specialist, when you add them. Whatever your level, a guide gets you into the water.",
-      "imageAlt": "In the water",
-      "imageNote": "[PENDIENTE]",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
+      "imageAlt": "Kitesurf",
+      "imageNote": "",
       "linkLabel": "Add to your expedition",
       "linkHref": "/en/sail-with-us/#activities"
     },
