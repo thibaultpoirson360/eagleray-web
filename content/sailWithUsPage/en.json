@@ -64,8 +64,9 @@
     {
       "name": "Snorkeling",
       "text": "Easy access to reefs and marine life, with a guide who knows where to go.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
       "imageAlt": "Snorkeling",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "I'd like more information about adding Snorkeling to my expedition."
     },
     {
