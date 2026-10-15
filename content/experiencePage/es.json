@@ -4,17 +4,17 @@
   "heroImageAlt": "La experiencia con la raya águila",
   "title": "La experiencia con la raya águila",
   "subtitle": "Aventuras en el mar de un nivel superior",
-  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El Mar de Cortés al ritmo que elija tu grupo.",
+  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El mar de Cortés al ritmo que elija tu grupo.",
   "sliderTitle": "Lo que sustenta toda expedición",
   "previousLabel": "Tarjeta anterior",
   "nextLabel": "Siguiente tarjeta",
   "cards": [
     {
       "title": "Gente del mar apasionada",
-      "text": "«Gente que vive el mar y sabe cómo compartirlo». Nuestra tripulación y nuestros anfitriones aportan una auténtica experiencia marinera y una mentalidad orientada al servicio, y saben interpretar a un grupo tan bien como interpretan el tiempo.",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/The_Eagle_Ray_Experience_l1p59p.jpg",
-      "imageAlt": "Foto del equipo",
-      "imageNote": "[PENDIENTE]"
+      "text": "«Gente que vive el mar y sabe cómo compartirlo».\nNuestra tripulación y nuestros anfitriones aportan una auténtica experiencia marinera y una mentalidad orientada al servicio, y saben interpretar a un grupo tan bien como interpretan el tiempo.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "imageAlt": "Gente del mar apasionada: Expediciones Eagle Ray",
+      "imageNote": "Gente del mar apasionada: Expediciones Eagle Ray"
     },
     {
       "title": "Normas y sistema de calidad",
