@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -40,7 +40,7 @@
       "imageAlt": "Plongée sous-marine",
       "imageNote": "",
       "priceNote": "à partir de 360 USD par personne et par jour",
-      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée sous-marine à mon expédition."
+      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée sous-marine à mon expédition."
     },
     {
       "name": "Cerf-volant",
@@ -62,10 +62,11 @@
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée en apnée à mon expédition."
     },
     {
-      "name": "Plongée avec tuba",
+      "name": "Plongée libre",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
-      "imageAlt": "Plongée avec tuba",
-      "imageNote": "[EN ATTENTE]",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
+      "imageAlt": "Plongée libre",
+      "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
     {
@@ -77,7 +78,7 @@
     },
     {
       "name": "Randonnées",
-      "text": "Du temps à terre pour se promener et explorer les environs, en fonction de l'itinéraire prévu.",
+      "text": "Temps libre à terre pour se promener et découvrir les lieux, organisé en fonction de l'itinéraire.",
       "imageAlt": "Randonnées",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'ajouter des randonnées à mon expédition."
