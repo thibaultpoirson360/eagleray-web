@@ -1,0 +1,74 @@
+{
+  "hideFromSearch": true,
+  "title": "La experiencia con la raya águila",
+  "subtitle": "Aventuras oceánicas de un nivel superior",
+  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El mar de Cortés al ritmo que elija tu grupo.",
+  "sliderTitle": "Lo que sustenta toda expedición",
+  "previousLabel": "Tarjeta anterior",
+  "nextLabel": "Siguiente tarjeta",
+  "cards": [
+    {
+      "title": "Gente del mar apasionada",
+      "text": "«Gente que vive el mar y sabe cómo compartirlo». Nuestra tripulación y nuestros anfitriones aportan una auténtica experiencia marinera y una mentalidad orientada al servicio, y saben interpretar a un grupo tan bien como interpretan el tiempo.",
+      "imageAlt": "Foto del equipo",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Normas y sistema de calidad",
+      "text": "Normas rigurosas, procesos claros, mejora continua y la seguridad como eje central de cada expedición. [PENDIENTE]",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Hostelería",
+      "text": "Cálido y atento: te sientes bien atendido sin que te controlen.",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Alimentación y bebidas",
+      "text": "Alimentos frescos, cocinados a bordo por tu chef.",
+      "imageAlt": "Comida a bordo",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Actividades acuáticas",
+      "text": "Snorkel y pesca en todas las expediciones. Buceo libre y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
+      "imageAlt": "En el agua",
+      "imageNote": "[PENDIENTE]",
+      "linkLabel": "Añádelo a tu expedición",
+      "linkHref": "/en/sail-with-us/#activities"
+    },
+    {
+      "title": "Diseño de expediciones",
+      "text": "Cada expedición tiene su propio ritmo y su propia historia: aventura y descubrimiento, en armonía con la naturaleza y con el grupo.",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Experiencia del huésped y servicio de conserjería",
+      "text": "Sencillo y personalizado, desde la reserva hasta que llegues a casa, con una relación que continúa tras el viaje. [PENDIENTE]",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Los barcos",
+      "text": "Catamaranes y monocascos, todos ellos seleccionados según nuestros criterios de seguridad, comodidad y funcionalidad.",
+      "imageAlt": "Barco fondeado",
+      "imageNote": "[PENDIENTE]",
+      "label": "Nuestra flota"
+    }
+  ],
+  "primaryCta": {
+    "label": "Echa un vistazo a nuestras expediciones",
+    "href": "/es/sail-with-us/"
+  },
+  "secondaryCta": {
+    "label": "Habla con nosotros",
+    "href": "/es/contact/"
+  },
+  "seo": {
+    "title": "La experiencia Eagle Ray | Eagle Ray Expeditions",
+    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se planifica cada día con tu grupo."
+  }
+}

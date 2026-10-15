@@ -1,0 +1,74 @@
+{
+  "hideFromSearch": true,
+  "title": "L'expérience Eagle Ray",
+  "subtitle": "Des aventures en mer d'un niveau supérieur",
+  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
+  "sliderTitle": "Ce qui est au cœur de toute expédition",
+  "previousLabel": "Carte précédente",
+  "nextLabel": "Carte suivante",
+  "cards": [
+    {
+      "title": "Des gens de la mer passionnés",
+      "text": "« Des gens qui vivent au rythme de la mer et savent la faire découvrir. » Notre équipage et nos animateurs apportent une véritable expérience de la mer et un sens aigu du service ; ils savent aussi bien cerner un groupe que décrypter la météo.",
+      "imageAlt": "Photo de l'équipe",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Normes et système qualité",
+      "text": "Des normes rigoureuses, des processus clairs, une amélioration continue et la sécurité au cœur de chaque expédition. [À VÉRIFIER]",
+      "imageAlt": "",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Accueil",
+      "text": "Chaleureux, à l'écoute : on se sent pris en charge sans pour autant être contrôlé.",
+      "imageAlt": "",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Alimentation et boissons",
+      "text": "Des produits frais, préparés à bord par votre chef.",
+      "imageAlt": "Repas à bord",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Activités nautiques",
+      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès votre inscription. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
+      "imageAlt": "Dans l'eau",
+      "imageNote": "[EN ATTENTE]",
+      "linkLabel": "Ajoutez-le à votre expédition",
+      "linkHref": "/en/sail-with-us/#activities"
+    },
+    {
+      "title": "Conception d'expéditions",
+      "text": "Chaque expédition a son propre rythme et sa propre histoire : aventure et découverte, en harmonie avec la nature et le groupe.",
+      "imageAlt": "",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Parcours client et service de conciergerie",
+      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [À CONFIRMER]",
+      "imageAlt": "",
+      "imageNote": "[EN ATTENTE]"
+    },
+    {
+      "title": "Les bateaux",
+      "text": "Catamarans et monocoques, tous sélectionnés selon nos critères de sécurité, de confort et de fonctionnalité.",
+      "imageAlt": "Bateau à l'ancre",
+      "imageNote": "[EN ATTENTE]",
+      "label": "Notre flotte"
+    }
+  ],
+  "primaryCta": {
+    "label": "Découvrez nos expéditions",
+    "href": "/fr/sail-with-us/"
+  },
+  "secondaryCta": {
+    "label": "Contactez-nous",
+    "href": "/fr/contact/"
+  },
+  "seo": {
+    "title": "L'expérience Eagle Ray | Eagle Ray Expeditions",
+    "description": "Expéditions privées à la voile à La Paz, en Basse-Californie du Sud. Ce qui se cache derrière chacune d'entre elles : l'équipage, le chef à bord et l'organisation quotidienne des journées avec votre groupe."
+  }
+}
