@@ -1,8 +1,8 @@
 {
-  "title": "Contactez-nous",
-  "lede": "Pas de centre d'appels, pas de chatbot qui vous redirige vers quelqu'un d'autre. Nous lisons chaque message et y répondons dans les 48 heures.",
+  "title": "Contactez-nous directement",
+  "lede": "Parlez-nous de votre groupe et de ce que vous avez en tête. Nous lisons nous-mêmes chaque message et vous répondons dans un délai d'une journée.",
   "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Contact_Us_ipfhl9.png",
-  "photoAlt": "Le fondateur d'Eagle Ray Expeditions travaillant à bord du bateau",
+  "photoAlt": "Eagle Ray Expeditions : contactez-nous, nous vous répondrons dans un délai d'un jour.",
   "form": {
     "namePlaceholder": "Nom",
     "emailPlaceholder": "E-mail",
