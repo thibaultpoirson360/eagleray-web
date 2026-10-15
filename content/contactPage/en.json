@@ -10,8 +10,8 @@
     "messagePlaceholder": "Message",
     "submitLabel": "Send message",
     "sendingLabel": "Sending…",
-    "successMessage": "Thanks — your message is in. We read every one ourselves and reply within 48 hours.",
-    "errorMessage": "Something went wrong sending your message — please try again, or use WhatsApp below."
+    "successMessage": "Thanks! Your message is in. We read every one ourselves and reply within the same business day.",
+    "errorMessage": "Something went wrong sending your message, please try again, or use WhatsApp below."
   },
   "whatsappCard": {
     "label": "Direct WhatsApp",
