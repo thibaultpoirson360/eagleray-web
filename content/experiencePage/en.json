@@ -18,9 +18,10 @@
     },
     {
       "title": "Standards & Quality System",
-      "text": "Rigorous standards, clear processes, continuous improvement and safety at the center of every expedition. [PENDIENTE]",
-      "imageAlt": "",
-      "imageNote": "[PENDIENTE]"
+      "text": "Rigorous standards, clear processes, continuous improvement and safety at the center of every expedition.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/efe-kurnaz-Rs5BQj5zbf8-unsplash_yyb4kh.jpg",
+      "imageAlt": "Rigorous standards",
+      "imageNote": ""
     },
     {
       "title": "Hospitality",
