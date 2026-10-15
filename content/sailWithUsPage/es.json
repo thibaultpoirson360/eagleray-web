@@ -3,7 +3,7 @@
   "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
   "title": "Navega con nosotros",
   "subtitle": "Excursiones privadas en velero adaptadas a tu grupo.",
-  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día para poder cambiar de planes si surge algo que merezca la pena.",
+  "intro": "Organizamos viajes privados en velero a la medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
   "expeditionsLabel": "Elige la expedición",
   "expeditions": [
     {
@@ -28,12 +28,6 @@
       "href": "/es/ad-hoc-expedition/"
     }
   ],
-  "seo": {
-    "title": "Navega con nosotros - Eagle Ray Expeditions",
-    "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
-    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
-    "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
-  },
   "activitiesTitle": "Añade actividades a tu expedición",
   "activitiesSubtitle": "Cada expedición se puede adaptar a las actividades marítimas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
   "activitiesButtonLabel": "Más información",
@@ -42,8 +36,9 @@
       "name": "Buceo",
       "featured": true,
       "text": "Bucea con un especialista cualificado que guíe al grupo y adapte las inmersiones a las condiciones y al nivel de certificación.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
       "imageAlt": "Buceo",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "desde 360 USD por persona y día",
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en mi expedición."
     },
@@ -99,5 +94,11 @@
       "imageNote": "[PENDIENTE]",
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
     }
-  ]
+  ],
+  "seo": {
+    "title": "Navega con nosotros - Eagle Ray Expeditions",
+    "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
+    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
+    "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
+  }
 }

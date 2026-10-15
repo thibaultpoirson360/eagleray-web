@@ -3,7 +3,7 @@
   "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
-  "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
+  "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez qui participe.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
   "expeditionsLabel": "Choisissez l'expédition",
   "expeditions": [
     {
@@ -28,12 +28,6 @@
       "href": "/fr/ad-hoc-expedition/"
     }
   ],
-  "seo": {
-    "title": "Naviguez avec nous - Eagle Ray Expeditions",
-    "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
-    "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
-    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition de votre groupe, et nous nous occupons du reste."
-  },
   "activitiesTitle": "Ajoutez des activités à votre expédition",
   "activitiesSubtitle": "Chaque expédition peut être organisée en fonction des activités nautiques qui vous tiennent à cœur. Dites-nous ce que vous souhaitez et nous l'organiserons avec vous.",
   "activitiesButtonLabel": "Plus d'informations",
@@ -42,8 +36,9 @@
       "name": "Plongée sous-marine",
       "featured": true,
       "text": "Plongez avec un spécialiste diplômé qui encadre le groupe et adapte les plongées aux conditions et au niveau de certification.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
       "imageAlt": "Plongée sous-marine",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "priceNote": "à partir de 360 USD par personne et par jour",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée sous-marine à mon expédition."
     },
@@ -58,16 +53,16 @@
     },
     {
       "name": "Plongée en apnée",
-      "text": "Séances guidées en mer, encadrées par un moniteur diplômé.",
+      "text": "Séances guidées en mer, animées par un moniteur diplômé.",
       "imageAlt": "Plongée en apnée",
       "imageNote": "[EN ATTENTE]",
       "priceNote": "Prix sur demande",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée en apnée à mon expédition."
     },
     {
-      "name": "Plongée libre",
+      "name": "Plongée avec tuba",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
-      "imageAlt": "Plongée libre",
+      "imageAlt": "Plongée avec tuba",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
@@ -80,7 +75,7 @@
     },
     {
       "name": "Randonnées",
-      "text": "Du temps à terre pour se promener et explorer les environs, en fonction de l'itinéraire prévu.",
+      "text": "Temps libre à terre pour se promener et découvrir les lieux, organisé en fonction de l'itinéraire.",
       "imageAlt": "Randonnées",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'ajouter des randonnées à mon expédition."
@@ -99,5 +94,11 @@
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer le kayak à mon expédition."
     }
-  ]
+  ],
+  "seo": {
+    "title": "Naviguez avec nous - Eagle Ray Expeditions",
+    "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
+    "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
+    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition du groupe, et nous nous occupons du reste."
+  }
 }
