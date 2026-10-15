@@ -80,8 +80,9 @@
     {
       "name": "Hikes",
       "text": "Time ashore to walk and explore, planned around the route.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Hiking_sgdu07.png",
       "imageAlt": "Hikes",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "I'd like more information about adding Hikes to my expedition."
     },
     {
