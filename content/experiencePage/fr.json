@@ -4,7 +4,7 @@
   "heroImageAlt": "L'expérience Eagle Ray",
   "title": "L'expérience Eagle Ray",
   "subtitle": "Des aventures en mer d'un niveau supérieur",
-  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non en fonction des horaires du bateau. Des repas préparés à bord. La mer de Cortez, au rythme que vous choisirez.",
+  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
   "sliderTitle": "Ce qui est au cœur de toute expédition",
   "previousLabel": "Carte précédente",
   "nextLabel": "Carte suivante",
@@ -56,9 +56,9 @@
     {
       "title": "Parcours client et service de conciergerie",
       "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit même après le voyage. ",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/karl-muscat-8S9DC-GerN0-unsplash_qub9vw.jpg",
-      "imageAlt": "",
-      "imageNote": "[EN ATTENTE]"
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "imageAlt": "Gestion des invités",
+      "imageNote": ""
     },
     {
       "title": "Les bateaux",
