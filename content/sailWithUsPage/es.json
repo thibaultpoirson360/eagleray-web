@@ -24,7 +24,7 @@
       "name": "Expedición ad hoc",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Expedición náutica improvisada",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
       "href": "/es/ad-hoc-expedition/"
     }
   ],
@@ -88,9 +88,10 @@
     {
       "name": "Surf de remo",
       "text": "Practica paddle surf desde la embarcación, en aguas tranquilas y a tu propio ritmo.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
       "imageAlt": "Surf de remo",
-      "imageNote": "[PENDIENTE]",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el paddle surf en mi expedición."
+      "imageNote": "",
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el surf de remo en mi expedición."
     },
     {
       "name": "Kayak",
@@ -103,7 +104,7 @@
   "seo": {
     "title": "Navega con nosotros - Eagle Ray Expeditions",
     "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
-    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
+    "ogTitle": "Expediciones privadas en velero en La Paz, diseñadas a medida para tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
     "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
   }
 }
