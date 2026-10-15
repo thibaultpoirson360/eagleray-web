@@ -22,6 +22,10 @@
         {
           "label": "Gente del mar apasionada",
           "href": "/es/passionate-sea-people/"
+        },
+        {
+          "label": "La experiencia con la raya águila",
+          "href": "/es/the-eagle-ray-experience/"
         }
       ],
       "_template": "dropdown"
@@ -53,7 +57,7 @@
     }
   ],
   "cta": {
-    "href": "/es/contact/",
+    "href": "/es/sail-with-us/",
     "label": "Go Sailing",
     "mobileLabel": "Personaliza tu expedición"
   },

@@ -22,6 +22,10 @@
         {
           "label": "Des gens de la mer passionnés",
           "href": "/fr/passionate-sea-people/"
+        },
+        {
+          "label": "L'expérience Eagle Ray",
+          "href": "/fr/the-eagle-ray-experience/"
         }
       ],
       "_template": "dropdown"
@@ -53,7 +57,7 @@
     }
   ],
   "cta": {
-    "href": "/fr/contact/",
+    "href": "/fr/sail-with-us/",
     "label": "Go Sailing",
     "mobileLabel": "Personnalisez votre expédition"
   },
