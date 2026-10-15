@@ -33,8 +33,9 @@
     {
       "title": "Food & Beverage",
       "text": "Fresh food, cooked on board by your chef.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/asiia-zaitseva-zF-rR96njjk-unsplash_jl3zgk.jpg",
       "imageAlt": "Meal on board",
-      "imageNote": "[PENDIENTE]"
+      "imageNote": ""
     },
     {
       "title": "Ocean Activities",
