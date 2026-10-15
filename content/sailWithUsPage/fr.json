@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -40,7 +40,7 @@
       "imageAlt": "Plongée sous-marine",
       "imageNote": "",
       "priceNote": "à partir de 360 USD par personne et par jour",
-      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée sous-marine à mon expédition."
+      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée sous-marine à mon expédition."
     },
     {
       "name": "Cerf-volant",
@@ -62,18 +62,19 @@
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée en apnée à mon expédition."
     },
     {
-      "name": "Plongée libre",
+      "name": "Plongée avec tuba",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
-      "imageAlt": "Plongée libre",
+      "imageAlt": "Plongée avec tuba",
       "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
     {
       "name": "Pêche",
       "text": "Pêche en bateau grâce à une connaissance approfondie de la région.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/fishing_kr1c8z.jpg",
       "imageAlt": "Pêche",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'ajouter la pêche à mon expédition."
     },
     {
