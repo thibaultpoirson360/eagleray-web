@@ -60,7 +60,7 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
         alt={current.alt}
         loading="lazy"
         decoding="async"
-        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover object-top"}`}
+        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover object-[50%_20%]"}`}
       />
       {count > 1 && (
         <>

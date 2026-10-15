@@ -30,7 +30,7 @@ const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →
 <article
   class="crew-card relative flex w-[min(82vw,340px)] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white shadow-sm"
 >
-  <div class="relative aspect-[3/2] flex-none">
+  <div class="relative aspect-[4/5] flex-none">
     {
       cover && (
         <img
@@ -38,7 +38,7 @@ const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →
           alt={cover.alt}
           loading="lazy"
           decoding="async"
-          class="absolute inset-0 h-full w-full object-cover object-top"
+          class="absolute inset-0 h-full w-full object-cover object-[50%_20%]"
         />
       )
     }
