@@ -46,8 +46,9 @@
       "name": "Kite",
       "featured": true,
       "text": "Kite sessions in the right conditions, with an experienced guide.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
       "imageAlt": "Kite",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "from $360 USD per person per day",
       "contactMessage": "I'd like more information about adding Kite to my expedition."
     },
