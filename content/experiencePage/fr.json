@@ -13,7 +13,7 @@
       "title": "Des gens de la mer passionnés",
       "text": "« Des gens qui vivent au rythme de la mer et savent la faire découvrir. »\nNotre équipage et nos animateurs apportent une véritable expérience de la mer et un sens aigu du service ; ils savent aussi bien cerner un groupe que décrypter la météo.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
-      "imageAlt": "Des passionnés de la mer : les expéditions « Eagle Ray »",
+      "imageAlt": "Des passionnés de la mer : Eagle Ray Expeditions",
       "imageNote": "Des passionnés de la mer : Eagle Ray Expeditions"
     },
     {
@@ -40,8 +40,9 @@
     {
       "title": "Activités nautiques",
       "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès votre inscription. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
-      "imageAlt": "Dans l'eau",
-      "imageNote": "[EN ATTENTE]",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
+      "imageAlt": "Kitesurf",
+      "imageNote": "",
       "linkLabel": "Ajoutez-le à votre expédition",
       "linkHref": "/en/sail-with-us/#activities"
     },
@@ -53,7 +54,7 @@
     },
     {
       "title": "Parcours client et service de conciergerie",
-      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [À VÉRIFIER]",
+      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [EN ATTENTE]",
       "imageAlt": "",
       "imageNote": "[EN ATTENTE]"
     },

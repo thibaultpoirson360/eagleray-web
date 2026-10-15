@@ -39,9 +39,10 @@
     },
     {
       "title": "Actividades acuáticas",
-      "text": "Snorkel y pesca en todas las expediciones. Buceo libre y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
-      "imageAlt": "En el agua",
-      "imageNote": "[PENDIENTE]",
+      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
+      "imageAlt": "Kitesurf",
+      "imageNote": "",
       "linkLabel": "Añádelo a tu expedición",
       "linkHref": "/en/sail-with-us/#activities"
     },
@@ -75,6 +76,6 @@
   },
   "seo": {
     "title": "La experiencia Eagle Ray | Eagle Ray Expeditions",
-    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se planifica cada día con tu grupo."
+    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se organiza cada día con tu grupo."
   }
 }
