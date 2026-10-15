@@ -3,11 +3,11 @@
     "meters": 130,
     "name": "Planifier votre itinéraire"
   },
-  "kickerNumber": "09",
+  "kickerNumber": "06",
   "kicker": "Construisez votre expédition",
-  "title": "Personnalisez votre premier",
+  "title": "Personnalisez votre",
   "titleEmphasis": "Expédition en Basse-Californie.",
-  "lede": "4 questions rapides. À la fin, WhatsApp s'ouvre avec votre expédition déjà rédigée — Thibault reçoit le tableau complet et répond avec une vraie proposition sous 48 heures, pas un « merci de votre intérêt ».",
+  "lede": "4 questions rapides. À la fin, WhatsApp s'ouvrira avec votre demande d'expédition  déjà préremplie. Nous vous répondrons dans les 48 heures.",
   "escapeText": "Vous préférez passer tout ça ? Écrivez-nous directement sur WhatsApp →",
   "step1": {
     "legend": "Les bases du voyage",
@@ -74,7 +74,7 @@
         },
         {
           "label": "La Ventana — kitesurf et wingfoil",
-          "value": "La Ventana — kite et wingfoil"
+          "value": "La Ventana — kitesurf et wingfoil"
         },
         {
           "label": "Balandra — récif et paddle",
@@ -94,7 +94,7 @@
           "value": "Faune sauvage et plongée libre"
         },
         {
-          "label": "Kite & wingfoil",
+          "label": "Kite et wingfoil",
           "value": "Kite et wingfoil"
         },
         {

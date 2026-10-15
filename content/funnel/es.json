@@ -3,11 +3,11 @@
     "meters": 130,
     "name": "Planificar tu ruta"
   },
-  "kickerNumber": "09",
+  "kickerNumber": "06",
   "kicker": "Arma tu expedición",
-  "title": "Personaliza tu primer",
+  "title": "Personaliza tu",
   "titleEmphasis": "Expedición a Baja California.",
-  "lede": "4 preguntas breves. Al final, se abre WhatsApp con tu expedición ya redactada — Thibault recibe el panorama completo y responde con una propuesta real en 48 horas, no un \"gracias por tu interés\".",
+  "lede": "4 preguntas rápidas. Al final, se abrirá WhatsApp con tu solicitud de expedición ya redactada. Te responderemos en un plazo de 48 horas.",
   "escapeText": "¿Prefieres saltarte esto? Escríbenos directo por WhatsApp →",
   "step1": {
     "legend": "Lo básico del viaje",
@@ -15,7 +15,7 @@
       "question": "¿Cuántos días tienes en mente?",
       "options": [
         {
-          "label": "3 – 4 días",
+          "label": "3 a 4 días",
           "value": "3-4 días"
         },
         {
@@ -91,7 +91,7 @@
       "options": [
         {
           "label": "Fauna y buceo con esnórquel",
-          "value": "Fauna y buceo con esnórquel"
+          "value": "Fauna silvestre y buceo con esnórquel"
         },
         {
           "label": "Kite y wingfoil",
