@@ -10,7 +10,7 @@
     "messagePlaceholder": "Mensaje",
     "submitLabel": "Enviar mensaje",
     "sendingLabel": "Enviando…",
-    "successMessage": "Gracias, hemos recibido tu mensaje. Los leemos todos personalmente y respondemos en un plazo de 48 horas.",
+    "successMessage": "¡Gracias! Hemos recibido tu mensaje. Los leemos todos personalmente y respondemos en el mismo día laborable.",
     "errorMessage": "Ha habido un error al enviar tu mensaje. Inténtalo de nuevo o utiliza WhatsApp a continuación."
   },
   "whatsappCard": {
