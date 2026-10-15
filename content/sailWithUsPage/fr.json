@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -65,7 +65,7 @@
       "name": "Plongée avec tuba",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
-      "imageAlt": "Plongée avec tuba",
+      "imageAlt": "Plongée libre",
       "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
@@ -79,7 +79,7 @@
     },
     {
       "name": "Randonnées",
-      "text": "Temps libre à terre pour se promener et découvrir les lieux, en fonction de l'itinéraire prévu.",
+      "text": "Du temps à terre pour se promener et explorer les environs, en fonction de l'itinéraire prévu.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Hiking_sgdu07.png",
       "imageAlt": "Randonnées",
       "imageNote": "",
@@ -91,13 +91,14 @@
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
       "imageAlt": "Paddle surf",
       "imageNote": "",
-      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer le paddle surf à mon expédition."
+      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter le paddle surf à mon expédition."
     },
     {
       "name": "Kayak",
       "text": "Partez à la découverte du littoral au niveau de l'eau, à votre rythme.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/kayak_edha4e.jpg",
       "imageAlt": "Kayak",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer le kayak à mon expédition."
     }
   ],

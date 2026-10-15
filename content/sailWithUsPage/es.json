@@ -3,7 +3,7 @@
   "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
   "title": "Navega con nosotros",
   "subtitle": "Excursiones privadas en velero adaptadas a tu grupo.",
-  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día para poder cambiar de planes si surge algo que merezca la pena.",
+  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
   "expeditionsLabel": "Elige la expedición",
   "expeditions": [
     {
@@ -29,7 +29,7 @@
     }
   ],
   "activitiesTitle": "Añade actividades a tu expedición",
-  "activitiesSubtitle": "Cada expedición se puede adaptar a las actividades marítimas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
+  "activitiesSubtitle": "Cada expedición se puede adaptar a las actividades acuáticas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
   "activitiesButtonLabel": "Más información",
   "activities": [
     {
@@ -96,15 +96,16 @@
     {
       "name": "Kayak",
       "text": "Explora la costa a la altura del agua, a tu propio ritmo.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/kayak_edha4e.jpg",
       "imageAlt": "Kayak",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
     }
   ],
   "seo": {
     "title": "Navega con nosotros - Eagle Ray Expeditions",
     "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
-    "ogTitle": "Expediciones privadas en velero en La Paz, diseñadas a medida para tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
+    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
     "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
   }
 }
