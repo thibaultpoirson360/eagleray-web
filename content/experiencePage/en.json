@@ -26,8 +26,9 @@
     {
       "title": "Hospitality",
       "text": "Warm, attentive: you feel looked after without being managed.",
-      "imageAlt": "",
-      "imageNote": "[PENDIENTE]"
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Food_-_Foto_sahnr9.jpg",
+      "imageAlt": "High standard Hospitality experience",
+      "imageNote": ""
     },
     {
       "title": "Food & Beverage",
