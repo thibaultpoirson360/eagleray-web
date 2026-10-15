@@ -72,8 +72,9 @@
     {
       "name": "Fishing",
       "text": "Fishing from the boat with local knowledge of the area.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/fishing_kr1c8z.jpg",
       "imageAlt": "Fishing",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "I'd like more information about adding Fishing to my expedition."
     },
     {
