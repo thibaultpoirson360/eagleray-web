@@ -1,0 +1,77 @@
+---
+/**
+ * "Add activities to your expedition": a grid of activity cards under the
+ * expedition cards on Sail with Us (anchor #activities). Each card's button
+ * opens the contact form with that activity's message already written
+ * (`?message=`, read by ContactForm.tsx). All text comes from the page's
+ * content; the price note is shown small, only where an editor writes one.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import { localePath, type Locale } from "../i18n/config";
+import type { SailWithUsPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  page: SailWithUsPageQuery["sailWithUsPage"];
+  locale: Locale;
+}
+
+const { page, locale } = Astro.props;
+const activities = (page.activities ?? []).flatMap((activity, i) => (activity?.name ? [{ activity, i }] : []));
+// Main activities ("Large card") come first, two per row; the rest follow three per row.
+const large = activities.filter(({ activity }) => activity.featured);
+const regular = activities.filter(({ activity }) => !activity.featured);
+const contactHref = (message?: string | null) =>
+  localePath(locale, "contact/") + (message ? `?message=${encodeURIComponent(message)}` : "");
+---
+
+<section id="activities" class="mx-auto max-w-site px-5 py-section lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+  <div class="section-head mb-section-head">
+    <h2 class="text-h2" data-tina-field={tinaField(page, "activitiesTitle")}>{page.activitiesTitle}</h2>
+    {
+      page.activitiesSubtitle && (
+        <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(page, "activitiesSubtitle")}>
+          {page.activitiesSubtitle}
+        </p>
+      )
+    }
+  </div>
+
+  {
+    [
+      { items: large, columns: "md:grid-cols-2", big: true },
+      { items: regular, columns: "md:grid-cols-2 lg:grid-cols-3", big: false },
+    ].map(
+      (group) =>
+        group.items.length > 0 && (
+          <ul class={`grid gap-8 ${group.columns} ${group.big ? "" : "mt-8"}`}>
+            {group.items.map(({ activity, i }) => (
+              <li class="flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(page, "activities", i)}>
+                <div class={`relative w-full overflow-hidden bg-ink ${group.big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                  {activity.image ? (
+                    <img src={activity.image} alt={activity.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
+                  ) : (
+                    <p class="absolute inset-0 flex items-center justify-center font-mono text-[.76rem] tracking-[.14em] text-white/60">
+                      {activity.imageNote}
+                    </p>
+                  )}
+                </div>
+                <div class={`flex flex-1 flex-col ${group.big ? "p-8" : "p-6"}`}>
+                  <h3 class={`font-display ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}>{activity.name}</h3>
+                  {activity.text && (
+                    <p class={`mt-3 leading-[1.6] text-ink/74 ${group.big ? "text-[1rem]" : "text-[.92rem]"}`}>{activity.text}</p>
+                  )}
+                  {activity.priceNote && <p class="mt-3 font-display text-[.9rem] font-normal text-ink/64">{activity.priceNote}</p>}
+                  <div class="mt-auto pt-6">
+                    <Button href={contactHref(activity.contactMessage)} variant="ghost" context="default" size="sm">
+                      {page.activitiesButtonLabel}
+                    </Button>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )
+    )
+  }
+</section>

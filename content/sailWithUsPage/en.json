@@ -33,5 +33,71 @@
     "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
     "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
     "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
-  }
+  },
+  "activitiesTitle": "Add activities to your expedition",
+  "activitiesSubtitle": "Every expedition can be shaped around the ocean activities you care about. Tell us what you'd like and we'll design it with you.",
+  "activitiesButtonLabel": "More info",
+  "activities": [
+    {
+      "name": "Scuba diving",
+      "featured": true,
+      "text": "Dive with a qualified specialist who guides the group and adapts the dives to conditions and certification level.",
+      "imageAlt": "Scuba diving",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "from $360 USD per person per day",
+      "contactMessage": "I'd like more information about adding Scuba diving to my expedition."
+    },
+    {
+      "name": "Kite",
+      "featured": true,
+      "text": "Kite sessions in the right conditions, with an experienced guide.",
+      "imageAlt": "Kite",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "from $360 USD per person per day",
+      "contactMessage": "I'd like more information about adding Kite to my expedition."
+    },
+    {
+      "name": "Freediving",
+      "text": "Guided sessions in open water, led by a qualified instructor.",
+      "imageAlt": "Freediving",
+      "imageNote": "[PENDIENTE]",
+      "priceNote": "Price on request",
+      "contactMessage": "I'd like more information about adding Freediving to my expedition."
+    },
+    {
+      "name": "Snorkeling",
+      "text": "Easy access to reefs and marine life, with a guide who knows where to go.",
+      "imageAlt": "Snorkeling",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "I'd like more information about adding Snorkeling to my expedition."
+    },
+    {
+      "name": "Fishing",
+      "text": "Fishing from the boat with local knowledge of the area.",
+      "imageAlt": "Fishing",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "I'd like more information about adding Fishing to my expedition."
+    },
+    {
+      "name": "Hikes",
+      "text": "Time ashore to walk and explore, planned around the route.",
+      "imageAlt": "Hikes",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "I'd like more information about adding Hikes to my expedition."
+    },
+    {
+      "name": "Paddle surf",
+      "text": "Paddle surf from the boat, in calm conditions and at your own pace.",
+      "imageAlt": "Paddle surf",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "I'd like more information about adding Paddle surf to my expedition."
+    },
+    {
+      "name": "Kayak",
+      "text": "Explore the coastline at water level, at your own pace.",
+      "imageAlt": "Kayak",
+      "imageNote": "[PENDIENTE]",
+      "contactMessage": "I'd like more information about adding Kayak to my expedition."
+    }
+  ]
 }

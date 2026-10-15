@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
 /**
  * The "Talk with us" contact form (src/pages/en/contact.astro). No source
@@ -40,6 +40,13 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
   const [email, setEmail] = useState("");
   const [howFound, setHowFound] = useState("");
   const [message, setMessage] = useState("");
+
+  // A link such as /en/contact/?message=… (the activity buttons on Sail with
+  // us) arrives with the message box already written. Only fills an empty box.
+  useEffect(() => {
+    const preset = new URLSearchParams(window.location.search).get("message");
+    if (preset) setMessage((current) => current || preset);
+  }, []);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
