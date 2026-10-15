@@ -1,10 +1,10 @@
 {
   "hideFromSearch": true,
   "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/The_Eagle_Ray_Experience_l1p59p.jpg",
-  "heroImageAlt": "La experiencia de la raya águila",
+  "heroImageAlt": "La experiencia con la raya águila",
   "title": "La experiencia con la raya águila",
   "subtitle": "Aventuras en el mar de un nivel superior",
-  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El Mar de Cortés al ritmo que elija tu grupo.",
+  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El mar de Cortés al ritmo que elija tu grupo.",
   "sliderTitle": "Lo que sustenta toda expedición",
   "previousLabel": "Tarjeta anterior",
   "nextLabel": "Siguiente tarjeta",
@@ -64,7 +64,7 @@
       "title": "Los barcos",
       "label": "Nuestra flota",
       "text": "Catamaranes y monocascos, todos ellos seleccionados según nuestros criterios de seguridad, comodidad y funcionalidad.",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Sailing_boat_zovfvr.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/karl-muscat-8S9DC-GerN0-unsplash_qub9vw.jpg",
       "imageAlt": "Barco fondeado",
       "imageNote": ""
     }
@@ -79,6 +79,6 @@
   },
   "seo": {
     "title": "La experiencia Eagle Ray | Eagle Ray Expeditions",
-    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se planifica cada día con tu grupo."
+    "description": "Expediciones privadas en velero en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se planifica cada día con tu grupo."
   }
 }
