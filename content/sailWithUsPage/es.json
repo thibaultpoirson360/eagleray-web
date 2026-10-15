@@ -3,7 +3,7 @@
   "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
   "title": "Navega con nosotros",
   "subtitle": "Excursiones privadas en velero adaptadas a tu grupo.",
-  "intro": "Organizamos viajes privados en velero a la medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
+  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día para poder cambiar de planes si surge algo que merezca la pena.",
   "expeditionsLabel": "Elige la expedición",
   "expeditions": [
     {
@@ -24,7 +24,7 @@
       "name": "Expedición ad hoc",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Expedición náutica improvisada",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
       "href": "/es/ad-hoc-expedition/"
     }
   ],
@@ -46,8 +46,9 @@
       "name": "Cometa",
       "featured": true,
       "text": "Sesiones de kitesurf en las condiciones adecuadas, con un guía experimentado.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
       "imageAlt": "Cometa",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "desde 360 USD por persona y día",
       "contactMessage": "Me gustaría recibir más información sobre cómo incorporar a Kite a mi expedición."
     },
@@ -85,7 +86,7 @@
       "text": "Practica paddle surf desde la embarcación, en aguas tranquilas y a tu propio ritmo.",
       "imageAlt": "Surf de remo",
       "imageNote": "[PENDIENTE]",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el surf de remo en mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el paddle surf en mi expedición."
     },
     {
       "name": "Kayak",

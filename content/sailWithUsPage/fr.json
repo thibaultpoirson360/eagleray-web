@@ -3,7 +3,7 @@
   "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
-  "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez qui participe.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
+  "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
   "expeditionsLabel": "Choisissez l'expédition",
   "expeditions": [
     {
@@ -35,7 +35,7 @@
     {
       "name": "Plongée sous-marine",
       "featured": true,
-      "text": "Plongez avec un spécialiste diplômé qui encadre le groupe et adapte les plongées aux conditions et au niveau de certification.",
+      "text": "Plongez avec un spécialiste qualifié qui encadre le groupe et adapte les plongées aux conditions et au niveau de certification.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
       "imageAlt": "Plongée sous-marine",
       "imageNote": "",
@@ -46,23 +46,24 @@
       "name": "Cerf-volant",
       "featured": true,
       "text": "Des sessions de kitesurf dans des conditions idéales, accompagnées d'un guide expérimenté.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
       "imageAlt": "Cerf-volant",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "priceNote": "à partir de 360 USD par personne et par jour",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer Kite à mon expédition."
     },
     {
       "name": "Plongée en apnée",
-      "text": "Séances guidées en mer, animées par un moniteur diplômé.",
+      "text": "Séances guidées en mer, encadrées par un moniteur diplômé.",
       "imageAlt": "Plongée en apnée",
       "imageNote": "[EN ATTENTE]",
       "priceNote": "Prix sur demande",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée en apnée à mon expédition."
     },
     {
-      "name": "Plongée avec tuba",
+      "name": "Plongée libre",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
-      "imageAlt": "Plongée avec tuba",
+      "imageAlt": "Plongée libre",
       "imageNote": "[EN ATTENTE]",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
@@ -99,6 +100,6 @@
     "title": "Naviguez avec nous - Eagle Ray Expeditions",
     "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
     "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
-    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition du groupe, et nous nous occupons du reste."
+    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition de votre groupe, et nous nous occupons du reste."
   }
 }
