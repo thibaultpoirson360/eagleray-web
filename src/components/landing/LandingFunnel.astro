@@ -1,0 +1,20 @@
+---
+/**
+ * `funnel` landing block — the trip-planning form ("Build your expedition"),
+ * the same one as the homepage's #customize section and the Customize page.
+ * It reads the same funnel document, so its texts are edited in one place.
+ * Funnel.astro and FunnelForm.tsx are rendered as they are, not changed.
+ */
+import Funnel from "../Funnel.astro";
+import { loadFunnel, loadSiteSettings } from "../../lib/content";
+import type { Locale } from "../../i18n/config";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale), loadSiteSettings()]);
+---
+
+<Funnel funnel={funnelResult.data.funnel} siteSettings={siteSettingsResult.data.siteSettings} />
