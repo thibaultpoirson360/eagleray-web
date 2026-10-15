@@ -22,6 +22,10 @@
         {
           "label": "Passionate Sea People",
           "href": "/en/passionate-sea-people/"
+        },
+        {
+          "label": "The Eagle Ray Experience",
+          "href": "/en/the-eagle-ray-experience/"
         }
       ],
       "_template": "dropdown"
