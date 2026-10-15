@@ -49,7 +49,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
 ---
 
 <article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", className]}>
-  <div class:list={["relative flex-none", compact ? "aspect-[4/3]" : "aspect-[11/10]"]}>
+  <div class:list={["relative flex-none", "aspect-[4/5]"]}>
     <ImageSlider
       client:visible
       photos={memberPhotos(member)}
