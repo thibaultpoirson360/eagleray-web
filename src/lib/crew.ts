@@ -30,6 +30,17 @@ export function paragraphs(text?: string | null): string[] {
     .filter(Boolean);
 }
 
+/**
+ * The first sentence of a textarea value. Used on the home card when a member
+ * has no quote of their own: it shows a line from their own bio, without
+ * quotation marks, instead of leaving the space empty.
+ */
+export function firstSentence(text?: string | null): string {
+  const first = paragraphs(text)[0] ?? "";
+  const end = first.search(/[.!?](\s|$)/);
+  return end === -1 ? first : first.slice(0, end + 1);
+}
+
 /** Drops the null/empty entries Tina's generated list types allow. */
 export function clean(list?: (string | null)[] | null): string[] {
   return (list ?? []).filter((s): s is string => !!s && s.trim() !== "");

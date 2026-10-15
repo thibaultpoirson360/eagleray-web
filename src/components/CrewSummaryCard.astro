@@ -12,7 +12,7 @@ import { tinaField } from "@tinacms/astro/tina-field";
 import CrewFullCard from "./CrewFullCard.astro";
 import CrewModal from "./CrewModal.tsx";
 import { localePath, type Locale } from "../i18n/config";
-import { clean, memberPhotos, shortName, type CrewLabels, type CrewMember } from "../lib/crew";
+import { clean, firstSentence, memberPhotos, shortName, type CrewLabels, type CrewMember } from "../lib/crew";
 
 interface Props {
   member: NonNullable<CrewMember>;
@@ -24,6 +24,7 @@ const { member, labels, locale } = Astro.props;
 const headlineRole = clean(member.roles)[0];
 // Home card shows only the first photo; the slider is in the full card (modal).
 const cover = memberPhotos(member)[0];
+const introLine = firstSentence(member.about);
 const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →`;
 ---
 
@@ -55,10 +56,17 @@ const buttonLabel = `${labels.meetLabel ?? "Meet"} ${shortName(member.name)} →
   </div>
   <div class="flex flex-1 flex-col p-5">
     {
-      member.quote && (
+      member.quote ? (
         <blockquote class="font-serif text-[1.02rem] leading-[1.35] text-ink italic" data-tina-field={tinaField(member, "quote")}>
           “{member.quote}”
         </blockquote>
+      ) : (
+        // No quote of their own: a line from their bio, without quotation marks.
+        introLine && (
+          <p class="font-serif text-[1.02rem] leading-[1.35] text-ink italic" data-tina-field={tinaField(member, "about")}>
+            {introLine}
+          </p>
+        )
       )
     }
     <div class="mt-auto pt-5">
