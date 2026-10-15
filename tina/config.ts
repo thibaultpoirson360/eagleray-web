@@ -25,6 +25,7 @@ import laPage from "./collections/laPage";
 import aboutPage from "./collections/aboutPage";
 import sailWithUsPage from "./collections/sailWithUsPage";
 import recalibrationPage from "./collections/recalibrationPage";
+import experiencePage from "./collections/experiencePage";
 import { blogSection, blogPost } from "./collections/blog";
 import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
@@ -87,6 +88,7 @@ export default defineConfig({
       boatsPage,
       funnel,
       // pages + globals
+      experiencePage,
       navPages,
       navigation,
       footer,

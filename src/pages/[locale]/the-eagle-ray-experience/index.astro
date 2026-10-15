@@ -1,0 +1,101 @@
+---
+/**
+ * `/<locale>/the-eagle-ray-experience/` — The Eagle Ray Experience: hero, a
+ * slider of cards and two buttons. Content is content/experiencePage/<locale>.json.
+ * A language without its own document shows the title-only placeholder from
+ * navPages until its draft exists. The page stays `noindex` while the
+ * document's "draft" switch (hideFromSearch) is on.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageHero from "../../../components/ui/PageHero.astro";
+import Button from "../../../components/ui/Button.astro";
+import ExperienceSlider from "../../../components/ExperienceSlider.tsx";
+import { tinaField } from "@tinacms/astro/tina-field";
+import { loadExperiencePage, loadNavPage } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const page = (await loadExperiencePage(locale).catch(() => null))?.data.experiencePage ?? null;
+const placeholder = page ? null : (await loadNavPage(locale, "the-eagle-ray-experience")).data.navPages;
+
+const cards = (page?.cards ?? []).flatMap((card) =>
+  card?.title
+    ? [
+        {
+          title: card.title,
+          label: card.label ?? undefined,
+          text: card.text ?? undefined,
+          image: card.image ?? undefined,
+          imageAlt: card.imageAlt ?? undefined,
+          imageNote: card.imageNote ?? undefined,
+          linkLabel: card.linkLabel ?? undefined,
+          linkHref: card.linkHref ?? undefined,
+        },
+      ]
+    : []
+);
+const title = page ? (page.seo?.title ?? `${page.title} | Eagle Ray Expeditions`) : `${placeholder?.title ?? "The Eagle Ray Experience"} — Eagle Ray Expeditions`;
+---
+
+<BaseLayout
+  title={title}
+  description={page?.seo?.description ?? undefined}
+  ogTitle={page?.seo?.ogTitle ?? undefined}
+  ogDescription={page?.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path="the-eagle-ray-experience/"
+  transparentNav={!!page}
+  noindex={!page || !!page.hideFromSearch}
+>
+  <main id="main">
+    {
+      page ? (
+        <>
+          <PageHero
+            title={page.title}
+            lede={page.subtitle}
+            supporting={page.supportingLine}
+            image={page.heroImage}
+            imageAlt={page.heroImageAlt}
+            fields={{
+              title: tinaField(page, "title"),
+              lede: tinaField(page, "subtitle"),
+              supporting: tinaField(page, "supportingLine"),
+              image: tinaField(page, "heroImage"),
+            }}
+          />
+
+          <section class="relative mx-auto max-w-site px-5 pt-[calc(var(--spacing-section)*2)] pb-section lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+            <h2 class="mb-section-head text-h2" data-tina-field={tinaField(page, "sliderTitle")}>
+              {page.sliderTitle}
+            </h2>
+            <ExperienceSlider client:visible title={page.sliderTitle} cards={cards} previousLabel={page.previousLabel ?? ""} nextLabel={page.nextLabel ?? ""} />
+          </section>
+
+          {(page.primaryCta || page.secondaryCta) && (
+            <section class="flex flex-wrap items-center justify-center gap-4 px-5 pb-24 text-center">
+              {page.primaryCta && (
+                <Button href={page.primaryCta.href} variant="primary" context="default" data-tina-field={tinaField(page, "primaryCta")}>
+                  {page.primaryCta.label}
+                </Button>
+              )}
+              {page.secondaryCta && (
+                <Button href={page.secondaryCta.href} variant="ghost" context="default" data-tina-field={tinaField(page, "secondaryCta")}>
+                  {page.secondaryCta.label}
+                </Button>
+              )}
+            </section>
+          )}
+        </>
+      ) : (
+        <section class="relative mx-auto max-w-site py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]">
+          <h1 class="text-h2">{placeholder?.title}</h1>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>

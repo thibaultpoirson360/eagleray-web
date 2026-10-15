@@ -240,6 +240,11 @@ export async function loadSailWithUsOrEnglish(locale: Locale, options?: RequestO
   }
 }
 
+/** The Eagle Ray Experience page (content/experiencePage/<locale>.json). */
+export function loadExperiencePage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(databaseClient.queries.experiencePage({ relativePath: `${locale}.json` }), options);
+}
+
 /** The Recalibration Expedition page (content/recalibrationPage/<locale>.json). */
 export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
