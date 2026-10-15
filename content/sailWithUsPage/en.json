@@ -28,12 +28,6 @@
       "href": "/en/ad-hoc-expedition/"
     }
   ],
-  "seo": {
-    "title": "Sail with Us - Eagle Ray Expeditions",
-    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
-    "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
-    "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
-  },
   "activitiesTitle": "Add activities to your expedition",
   "activitiesSubtitle": "Every expedition can be shaped around the ocean activities you care about. Tell us what you'd like and we'll design it with you.",
   "activitiesButtonLabel": "More info",
@@ -42,8 +36,9 @@
       "name": "Scuba diving",
       "featured": true,
       "text": "Dive with a qualified specialist who guides the group and adapts the dives to conditions and certification level.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
       "imageAlt": "Scuba diving",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "from $360 USD per person per day",
       "contactMessage": "I'd like more information about adding Scuba diving to my expedition."
     },
@@ -99,5 +94,11 @@
       "imageNote": "[PENDIENTE]",
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
     }
-  ]
+  ],
+  "seo": {
+    "title": "Sail with Us - Eagle Ray Expeditions",
+    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
+    "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
+    "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
+  }
 }
