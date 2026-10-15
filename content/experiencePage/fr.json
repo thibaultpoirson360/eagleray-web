@@ -39,7 +39,7 @@
     },
     {
       "title": "Activités nautiques",
-      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès votre inscription. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
+      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès que vous vous inscrivez. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
       "imageAlt": "Kitesurf",
       "imageNote": "",
@@ -49,12 +49,13 @@
     {
       "title": "Conception d'expéditions",
       "text": "Chaque expédition a son propre rythme et sa propre histoire : aventure et découverte, en harmonie avec la nature et le groupe.",
-      "imageAlt": "",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Contact_Us_ipfhl9.png",
+      "imageAlt": "Conception de l'expédition : Eagle Ray Expeditions",
       "imageNote": "[EN ATTENTE]"
     },
     {
       "title": "Parcours client et service de conciergerie",
-      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [EN ATTENTE]",
+      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [À CONFIRMER]",
       "imageAlt": "",
       "imageNote": "[EN ATTENTE]"
     },

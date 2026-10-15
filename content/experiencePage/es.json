@@ -4,7 +4,7 @@
   "heroImageAlt": "La experiencia con la raya águila",
   "title": "La experiencia con la raya águila",
   "subtitle": "Aventuras en el mar de un nivel superior",
-  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El Mar de Cortés al ritmo que elija tu grupo.",
+  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El mar de Cortés al ritmo que elija tu grupo.",
   "sliderTitle": "Lo que sustenta toda expedición",
   "previousLabel": "Tarjeta anterior",
   "nextLabel": "Siguiente tarjeta",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Actividades acuáticas",
-      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
+      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a ellas. Sea cual sea tu nivel, un guía te acompañará al agua.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
       "imageAlt": "Kitesurf",
       "imageNote": "",
@@ -49,7 +49,8 @@
     {
       "title": "Diseño de expediciones",
       "text": "Cada expedición tiene su propio ritmo y su propia historia: aventura y descubrimiento, en armonía con la naturaleza y con el grupo.",
-      "imageAlt": "",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Contact_Us_ipfhl9.png",
+      "imageAlt": "Diseño de la expedición: Eagle Ray Expeditions",
       "imageNote": "[PENDIENTE]"
     },
     {
@@ -76,6 +77,6 @@
   },
   "seo": {
     "title": "La experiencia Eagle Ray | Eagle Ray Expeditions",
-    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se organiza cada día con tu grupo."
+    "description": "Expediciones náuticas privadas en La Paz, Baja California del Sur. Lo que hay detrás de cada una de ellas: la tripulación, el chef a bordo y cómo se planifica cada día con tu grupo."
   }
 }
