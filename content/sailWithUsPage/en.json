@@ -96,8 +96,9 @@
     {
       "name": "Kayak",
       "text": "Explore the coastline at water level, at your own pace.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/kayak_edha4e.jpg",
       "imageAlt": "Kayak",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
     }
   ],
