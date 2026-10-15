@@ -55,8 +55,9 @@
     {
       "name": "Freediving",
       "text": "Guided sessions in open water, led by a qualified instructor.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
       "imageAlt": "Freediving",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "priceNote": "Price on request",
       "contactMessage": "I'd like more information about adding Freediving to my expedition."
     },
