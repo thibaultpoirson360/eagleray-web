@@ -1,3 +1,20 @@
 {
-  "title": "Expédition ponctuelle"
+  "title": "Expédition ponctuelle",
+  "blocks": [
+    {
+      "_template": "hero",
+      "kicker": "Votre expédition",
+      "title": "Expédition ponctuelle",
+      "lede": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
+      "image": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
+      "imageAlt": "Des vacanciers naviguant sur un catamaran à La Paz"
+    },
+    {
+      "_template": "richText",
+      "body": "Dites-nous qui sera de la partie, quand vous souhaitez partir et comment vous aimeriez passer vos journées en mer. Notre équipe organise le bateau, l'équipage et l'itinéraire en fonction de votre groupe, et les adapte au jour le jour.\n\nRemplissez le formulaire ci-dessous et nous vous contacterons pour vous faire une proposition.\n"
+    },
+    {
+      "_template": "funnel"
+    }
+  ]
 }

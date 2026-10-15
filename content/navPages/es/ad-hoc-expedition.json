@@ -1,3 +1,20 @@
 {
-  "title": "Expedición ad hoc"
+  "title": "Expedición ad hoc",
+  "blocks": [
+    {
+      "_template": "hero",
+      "kicker": "Tu expedición",
+      "title": "Expedición ad hoc",
+      "lede": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
+      "image": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
+      "imageAlt": "Turistas navegando en un catamarán en La Paz"
+    },
+    {
+      "_template": "richText",
+      "body": "Dinos quiénes vais a venir, cuándo queréis ir y cómo os gustaría que fueran vuestros días en el mar. Nuestro equipo se encarga de organizar el barco, la tripulación y la ruta en función de vuestro grupo, y va adaptándola día a día.\n\nRellena el siguiente formulario y nos pondremos en contacto contigo para ofrecerte una propuesta.\n"
+    },
+    {
+      "_template": "funnel"
+    }
+  ]
 }
