@@ -1,3 +1,20 @@
 {
-  "title": "Ad-hoc Expedition"
+  "title": "Ad-hoc Expedition",
+  "blocks": [
+    {
+      "_template": "hero",
+      "kicker": "Your expedition",
+      "title": "Ad-hoc Expedition",
+      "lede": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
+      "image": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
+      "imageAlt": "Guests sailing on a catamaran in La Paz"
+    },
+    {
+      "_template": "richText",
+      "body": "Tell us who is coming, when you want to go and what you'd like your days at sea to look like. Our team plans the boat, the crew and the route around your group, and adapts it day by day.\n\nFill in the form below and we'll come back to you with a proposal.\n"
+    },
+    {
+      "_template": "funnel"
+    }
+  ]
 }

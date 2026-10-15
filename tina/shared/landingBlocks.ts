@@ -16,7 +16,7 @@ export const landingBlocksField = (): TinaField => (
     list: true,
     ui: {
       itemProps: (item: Record<string, any>) => ({
-        label: item?.title || item?.tripSlug || "Block",
+        label: item?.title || item?.tripSlug || (item?._template === "funnel" ? "Trip planning form" : "Block"),
       }),
     },
     templates: [
@@ -67,6 +67,20 @@ export const landingBlocksField = (): TinaField => (
           { type: "string", name: "title", label: "Heading", required: true },
           { type: "string", name: "lede", label: "Supporting line", ui: textarea },
           ctaField("cta", "Button"),
+        ],
+      },
+      {
+        name: "funnel",
+        label: "Trip planning form (the \"Build your expedition\" form)",
+        fields: [
+          {
+            type: "string",
+            name: "note",
+            label: "Note for editors (not shown on the page)",
+            description:
+              'This block shows the same form as the homepage. Its texts are edited once, under "Home / Customize funnel".',
+            ui: textarea,
+          },
         ],
       },
       {
