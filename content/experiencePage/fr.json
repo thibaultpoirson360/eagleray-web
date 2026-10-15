@@ -4,8 +4,8 @@
   "heroImageAlt": "L'expérience Eagle Ray",
   "title": "L'expérience Eagle Ray",
   "subtitle": "Des aventures en mer d'un niveau supérieur",
-  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non en fonction des horaires du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
-  "sliderTitle": "Ce qui est au cœur de chaque expédition",
+  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme que vous choisirez.",
+  "sliderTitle": "Ce qui est au cœur de toute expédition",
   "previousLabel": "Carte précédente",
   "nextLabel": "Carte suivante",
   "cards": [
@@ -33,12 +33,13 @@
     {
       "title": "Alimentation et boissons",
       "text": "Des produits frais, préparés à bord par votre chef.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/asiia-zaitseva-zF-rR96njjk-unsplash_jl3zgk.jpg",
       "imageAlt": "Repas à bord",
-      "imageNote": "[EN ATTENTE]"
+      "imageNote": ""
     },
     {
       "title": "Activités nautiques",
-      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès que vous vous inscrivez. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
+      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès votre inscription. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
       "imageAlt": "Dans l'eau",
       "imageNote": "[EN ATTENTE]",
       "linkLabel": "Ajoutez-le à votre expédition",
@@ -52,7 +53,7 @@
     },
     {
       "title": "Parcours client et service de conciergerie",
-      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [EN ATTENTE]",
+      "text": "Une expérience simple et personnalisée, de la réservation jusqu'à votre retour chez vous, avec une relation qui se poursuit après le voyage. [À VÉRIFIER]",
       "imageAlt": "",
       "imageNote": "[EN ATTENTE]"
     },
