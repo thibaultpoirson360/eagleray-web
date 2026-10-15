@@ -24,11 +24,13 @@ interface Props {
   lede?: string | null;
   image?: string | null;
   imageAlt?: string | null;
+  /** A longer line under the sub-headline. */
+  supporting?: string | null;
   cta?: { label: string; href: string } | null;
-  fields?: { title?: string; kicker?: string; lede?: string; image?: string; cta?: string };
+  fields?: { title?: string; kicker?: string; lede?: string; supporting?: string; image?: string; cta?: string };
 }
 
-const { title, kicker, lede, image, imageAlt, cta, fields = {} } = Astro.props;
+const { title, kicker, lede, image, imageAlt, supporting, cta, fields = {} } = Astro.props;
 ---
 
 <section class="relative isolate flex min-h-[60vh] items-end overflow-hidden">
@@ -61,6 +63,13 @@ const { title, kicker, lede, image, imageAlt, cta, fields = {} } = Astro.props;
       lede && (
         <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={fields.lede}>
           {lede}
+        </p>
+      )
+    }
+    {
+      supporting && (
+        <p class="mt-4 max-w-[60ch] text-lede text-white/78" data-tina-field={fields.supporting}>
+          {supporting}
         </p>
       )
     }

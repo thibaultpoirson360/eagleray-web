@@ -1,0 +1,74 @@
+{
+  "hideFromSearch": true,
+  "title": "The Eagle Ray Experience",
+  "subtitle": "A higher standard of ocean adventures",
+  "supportingLine": "A crew chosen for how they sail and how they host. An expedition built around your group, not around a boat's schedule. Meals cooked on board. The Sea of Cortez at the pace your people choose.",
+  "sliderTitle": "What every expedition stands on",
+  "previousLabel": "Previous card",
+  "nextLabel": "Next card",
+  "cards": [
+    {
+      "title": "Passionate Sea People",
+      "text": "\"People who live the ocean and know how to share it.\" Our crew and hosts bring real sea experience and a service mindset, and they read a group as well as they read the weather.",
+      "imageAlt": "Crew photo",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Standards & Quality System",
+      "text": "Rigorous standards, clear processes, continuous improvement and safety at the center of every expedition. [PENDIENTE]",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Hospitality",
+      "text": "Warm, attentive: you feel looked after without being managed.",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Food & Beverage",
+      "text": "Fresh food, cooked on board by your chef.",
+      "imageAlt": "Meal on board",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Ocean Activities",
+      "text": "Snorkeling and fishing on every expedition. Freediving and scuba diving with a certified specialist, when you add them. Whatever your level, a guide gets you into the water.",
+      "imageAlt": "In the water",
+      "imageNote": "[PENDIENTE]",
+      "linkLabel": "Add to your expedition",
+      "linkHref": "/en/sail-with-us/#activities"
+    },
+    {
+      "title": "Expedition Design",
+      "text": "Each expedition has its own rhythm and story: adventure and discovery, adapted to nature and to the group.",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "Guest Journey & Concierge",
+      "text": "Simple and personal from booking until you get home, with a relationship that continues after the trip. [PENDIENTE]",
+      "imageAlt": "",
+      "imageNote": "[PENDIENTE]"
+    },
+    {
+      "title": "The boats",
+      "text": "Catamarans and monohulls, each one chosen against our safety, comfort and functionality standards.",
+      "imageAlt": "Boat at anchor",
+      "imageNote": "[PENDIENTE]",
+      "label": "Our fleet"
+    }
+  ],
+  "primaryCta": {
+    "label": "See our expeditions",
+    "href": "/en/sail-with-us/"
+  },
+  "secondaryCta": {
+    "label": "Talk to us",
+    "href": "/en/contact/"
+  },
+  "seo": {
+    "title": "The Eagle Ray Experience | Eagle Ray Expeditions",
+    "description": "Private sailing expeditions in La Paz, Baja California Sur. What sits behind each one: the crew, the chef on board and how every day is planned with your group."
+  }
+}

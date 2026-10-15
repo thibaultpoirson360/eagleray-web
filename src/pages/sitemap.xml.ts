@@ -13,7 +13,7 @@
  */
 import type { APIRoute } from "astro";
 import { defaultLocale, liveLocales, localeHref, type Locale } from "../i18n/config";
-import { loadBlogPosts, loadLandingPages, loadNavPages } from "../lib/content";
+import { loadBlogPosts, loadExperiencePage, loadLandingPages, loadNavPages } from "../lib/content";
 
 interface Entry {
   /** Path after the language prefix, e.g. "blog/" ("" = home). */
@@ -54,6 +54,11 @@ export const GET: APIRoute = async ({ site }) => {
     for (const page of navPages) {
       if ((page.blocks?.length ?? 0) > 0) add("", page._sys.filename, locale);
     }
+  }
+  // The Eagle Ray Experience page stays out until its "draft" switch is turned off.
+  const experience = await loadExperiencePage(defaultLocale).catch(() => null);
+  if (experience && !experience.data.experiencePage.hideFromSearch) {
+    entries.push({ path: "the-eagle-ray-experience/", locales: [defaultLocale] });
   }
   entries.push(...bySlug.values());
 
