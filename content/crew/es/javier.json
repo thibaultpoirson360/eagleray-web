@@ -4,9 +4,31 @@
     "Capitán",
     "Líder de Expedición"
   ],
-  "about": "Javier hace que el océano parezca aún más grande. Yacht Master 200GT, instructor PADI e IKO, guía de apnea y pesca submarina, y piloto de dron — puede capitanear el barco, abrir el mundo submarino, encontrar el viento y filmarlo todo. Su verdadero don es transmitir confianza: los invitados dejan de mirar y preguntan qué viene después.",
+  "skills": [
+    "Buceo",
+    "Cometa",
+    "Wingfoil",
+    "E-foil",
+    "Realización cinematográfica"
+  ],
+  "languages": [
+    {
+      "language": "Español"
+    }
+  ],
+  "certificates": [
+    "Instructor PADI",
+    "IKO Kite",
+    "Yachtmaster Offshore"
+  ],
+  "quote": "Convierto el océano en mi patio de recreo.",
+  "about": "Soy capitán, instructor de buceo y un apasionado de los deportes acuáticos desde siempre. Convierto el océano en un patio de recreo, analizo con calma las condiciones del mar, ayudo a los participantes a sentirse seguros en el agua y capturo los momentos que hacen que una expedición sea inolvidable.",
   "image": "/assets/img/crew-javier.webp",
   "imageAlt": "Javier Sánchez Darder, capitán y cineasta",
-  "joiningTag": "Se incorporan en Q4 2026",
-  "order": 10
+  "joiningTag": "",
+  "order": 10,
+  "images": [
+    "/assets/img/crew-javier.webp",
+    "/assets/img/crew/javier-01.webp"
+  ]
 }
