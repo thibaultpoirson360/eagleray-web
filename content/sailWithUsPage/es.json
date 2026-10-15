@@ -71,7 +71,7 @@
     },
     {
       "name": "Pesca",
-      "text": "Pesca desde la embarcación, aprovechando el conocimiento local de la zona.",
+      "text": "Pesca desde la embarcación con conocimientos locales de la zona.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/fishing_kr1c8z.jpg",
       "imageAlt": "Pesca",
       "imageNote": "",
@@ -80,8 +80,9 @@
     {
       "name": "Rutas de senderismo",
       "text": "Tiempo en tierra para pasear y explorar, organizado en función del itinerario.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Hiking_sgdu07.png",
       "imageAlt": "Rutas de senderismo",
-      "imageNote": "[PENDIENTE]",
+      "imageNote": "",
       "contactMessage": "Me gustaría recibir más información sobre cómo añadir rutas de senderismo a mi expedición."
     },
     {
@@ -89,7 +90,7 @@
       "text": "Practica paddle surf desde la embarcación, en aguas tranquilas y a tu propio ritmo.",
       "imageAlt": "Surf de remo",
       "imageNote": "[PENDIENTE]",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el surf de remo en mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el paddle surf en mi expedición."
     },
     {
       "name": "Kayak",

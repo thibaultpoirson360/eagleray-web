@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -35,7 +35,7 @@
     {
       "name": "Plongée sous-marine",
       "featured": true,
-      "text": "Plongez avec un spécialiste qualifié qui encadre le groupe et adapte les plongées aux conditions et au niveau de certification.",
+      "text": "Plongez avec un spécialiste diplômé qui encadre le groupe et adapte les plongées aux conditions et au niveau de certification.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
       "imageAlt": "Plongée sous-marine",
       "imageNote": "",
@@ -80,8 +80,9 @@
     {
       "name": "Randonnées",
       "text": "Temps libre à terre pour se promener et découvrir les lieux, organisé en fonction de l'itinéraire.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Hiking_sgdu07.png",
       "imageAlt": "Randonnées",
-      "imageNote": "[EN ATTENTE]",
+      "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'ajouter des randonnées à mon expédition."
     },
     {
