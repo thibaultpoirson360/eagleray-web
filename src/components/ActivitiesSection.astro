@@ -46,24 +46,43 @@ const contactHref = (message?: string | null) =>
         group.items.length > 0 && (
           <ul class={`grid gap-8 ${group.columns} ${group.big ? "" : "mt-8"}`}>
             {group.items.map(({ activity, i }) => (
-              <li class="flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(page, "activities", i)}>
+              <li
+                class="group relative flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white"
+                data-tina-field={tinaField(page, "activities", i)}
+              >
+                {/* The whole photo shows. On hover or keyboard focus a white banner rises from the bottom with the explanation and the button. On touch screens (no hover) the banner sits under the photo instead. */}
                 <div class={`relative w-full overflow-hidden bg-ink ${group.big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
                   {activity.image ? (
                     <img src={activity.image} alt={activity.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
                   ) : (
-                    <p class="absolute inset-0 flex items-center justify-center font-mono text-[.76rem] tracking-[.14em] text-white/60">
+                    <p class="flex h-full items-center justify-center font-mono text-[.76rem] tracking-[.14em] text-white/60">
                       {activity.imageNote}
                     </p>
                   )}
+                  <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent [@media(hover:none)]:hidden" />
+                  <p
+                    aria-hidden="true"
+                    class={`pointer-events-none absolute right-5 bottom-5 left-5 font-display text-white [@media(hover:none)]:hidden ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}
+                  >
+                    {activity.name}
+                  </p>
                 </div>
-                <div class={`flex flex-1 flex-col ${group.big ? "p-8" : "p-6"}`}>
+                <div
+                  class={`absolute inset-x-0 bottom-0 flex translate-y-full flex-col bg-white transition-transform duration-500 ease-soft group-focus-within:translate-y-0 group-hover:translate-y-0 motion-reduce:transition-none [@media(hover:none)]:static [@media(hover:none)]:translate-y-0 ${group.big ? "p-8" : "p-6"}`}
+                >
                   <h3 class={`font-display ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}>{activity.name}</h3>
                   {activity.text && (
                     <p class={`mt-3 leading-[1.6] text-ink/74 ${group.big ? "text-[1rem]" : "text-[.92rem]"}`}>{activity.text}</p>
                   )}
                   {activity.priceNote && <p class="mt-3 font-display text-[.9rem] font-normal text-ink/64">{activity.priceNote}</p>}
-                  <div class="mt-auto pt-6">
-                    <Button href={contactHref(activity.contactMessage)} variant="ghost" context="default" size="sm">
+                  <div class="pt-5">
+                    <Button
+                      href={contactHref(activity.contactMessage)}
+                      variant="ghost"
+                      context="default"
+                      size="sm"
+                      class="border-ink! bg-transparent! text-ink transition-colors duration-500 group-focus-within:bg-ink! group-focus-within:text-white group-hover:bg-ink! group-hover:text-white hover:bg-ink-hover!"
+                    >
                       {page.activitiesButtonLabel}
                     </Button>
                   </div>
