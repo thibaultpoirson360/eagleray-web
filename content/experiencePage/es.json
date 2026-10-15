@@ -13,7 +13,7 @@
       "title": "Gente del mar apasionada",
       "text": "«Gente que vive el mar y sabe cómo compartirlo».\nNuestra tripulación y nuestros anfitriones aportan una auténtica experiencia marinera y una mentalidad orientada al servicio, y saben interpretar a un grupo tan bien como interpretan el tiempo.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
-      "imageAlt": "Gente del mar apasionada: Expediciones Eagle Ray",
+      "imageAlt": "Gente del mar apasionada: Expediciones de la raya águila",
       "imageNote": "Gente del mar apasionada: Expediciones Eagle Ray"
     },
     {
@@ -26,8 +26,9 @@
     {
       "title": "Hostelería",
       "text": "Cálido y atento: te sientes bien atendido sin que te controlen.",
-      "imageAlt": "",
-      "imageNote": "[PENDIENTE]"
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Food_-_Foto_sahnr9.jpg",
+      "imageAlt": "Experiencia hotelera de alto nivel",
+      "imageNote": ""
     },
     {
       "title": "Alimentación y bebidas",
@@ -37,7 +38,7 @@
     },
     {
       "title": "Actividades acuáticas",
-      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
+      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a ellas. Sea cual sea tu nivel, un guía te acompañará al agua.",
       "imageAlt": "En el agua",
       "imageNote": "[PENDIENTE]",
       "linkLabel": "Añádelo a tu expedición",
