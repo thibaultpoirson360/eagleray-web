@@ -4,7 +4,7 @@
   "heroImageAlt": "L'expérience Eagle Ray",
   "title": "L'expérience Eagle Ray",
   "subtitle": "Des aventures en mer d'un niveau supérieur",
-  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme choisi par votre groupe.",
+  "supportingLine": "Un équipage sélectionné pour ses compétences de navigation et son sens de l'accueil. Une expédition organisée en fonction de votre groupe, et non selon l'emploi du temps du bateau. Des repas préparés à bord. La mer de Cortez, au rythme que vous choisirez.",
   "sliderTitle": "Ce qui est au cœur de toute expédition",
   "previousLabel": "Carte précédente",
   "nextLabel": "Carte suivante",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Activités nautiques",
-      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès votre inscription. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
+      "text": "Plongée libre et pêche à chaque expédition. Plongée en apnée et plongée sous-marine avec un spécialiste certifié, dès que vous vous inscrivez. Quel que soit votre niveau, un guide vous accompagne dans l'eau.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
       "imageAlt": "Kitesurf",
       "imageNote": "",
@@ -64,8 +64,9 @@
       "title": "Les bateaux",
       "label": "Notre flotte",
       "text": "Catamarans et monocoques, tous sélectionnés selon nos critères de sécurité, de confort et de fonctionnalité.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Eagle_Ray_Expeditions_Sailing_boat_zovfvr.jpg",
       "imageAlt": "Bateau au mouillage",
-      "imageNote": "[EN ATTENTE]"
+      "imageNote": ""
     }
   ],
   "primaryCta": {
