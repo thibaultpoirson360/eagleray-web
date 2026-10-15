@@ -4,7 +4,7 @@
   "heroImageAlt": "La experiencia con la raya águila",
   "title": "La experiencia con la raya águila",
   "subtitle": "Aventuras en el mar de un nivel superior",
-  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El mar de Cortés al ritmo que elija tu grupo.",
+  "supportingLine": "Una tripulación seleccionada por su forma de navegar y de atender a los pasajeros. Una expedición organizada en función de tu grupo, no del horario del barco. Comidas preparadas a bordo. El Mar de Cortés al ritmo que elija tu grupo.",
   "sliderTitle": "Lo que sustenta toda expedición",
   "previousLabel": "Tarjeta anterior",
   "nextLabel": "Siguiente tarjeta",
@@ -39,7 +39,7 @@
     },
     {
       "title": "Actividades acuáticas",
-      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a ellas. Sea cual sea tu nivel, un guía te acompañará al agua.",
+      "text": "Snorkel y pesca en todas las expediciones. Buceo en apnea y buceo con botella con un especialista certificado, cuando te apuntes a estas actividades. Sea cual sea tu nivel, un guía te acompañará al agua.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_tfftwx.jpg",
       "imageAlt": "Kitesurf",
       "imageNote": "",
@@ -55,7 +55,8 @@
     },
     {
       "title": "Experiencia del huésped y servicio de conserjería",
-      "text": "Sencillo y personalizado, desde la reserva hasta que llegues a casa, con una relación que continúa tras el viaje. [PENDIENTE]",
+      "text": "Sencillo y personalizado, desde la reserva hasta que llegues a casa, con una relación que continúa tras el viaje. ",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/karl-muscat-8S9DC-GerN0-unsplash_qub9vw.jpg",
       "imageAlt": "",
       "imageNote": "[PENDIENTE]"
     },
