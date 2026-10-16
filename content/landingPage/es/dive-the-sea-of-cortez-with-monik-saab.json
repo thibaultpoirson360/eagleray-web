@@ -4,14 +4,15 @@
     {
       "kicker": "Fechas limitadas · Noviembre de 2026",
       "title": "Bucea en el mar de Cortés con Monik Saab",
-      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeados frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
+      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeado frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
       "imageAlt": "Monike Saab, jefa de expedición y experta en buceo en La Paz",
       "_template": "hero"
     },
     {
-      "body": "### **¿QUIÉN ES MONIK?**\n\n\\\nCreció en una playa de Brasil y pasó dieciséis años trabajando en grandes empresas y enseñando inglés antes de hacer del mar su profesión.\n\nSi le preguntas qué es lo que la mantiene allí, lo resume en una sola frase:\n\n> «En el océano, todos se ayudan entre sí. Ojalá fuera así también en tierra».\n\nMonik lleva a pequeños grupos de buceadores al mar de Cortés con Eagle Ray. A bordo, observa antes de hablar: quién está relajado, quién revisa su equipo dos veces, quién quiere descender más profundo.\nA continuación, planifica las inmersiones en función de ellos: qué lugar elegir, a qué profundidad, cuándo sumergirse y cuándo es mejor quedarse en cubierta y contemplar cómo cambia la luz.\n\nActualmente es instructora de buceo PADI y guía de expediciones titulada en México.\\\nLleva seis años buceando en Baja California del Sur, uno de ellos viviendo en La Paz. Cuenta con licencia para ejercer de guía en las islas Revillagigedo.\\\nHa trabajado durante varias temporadas en yates con cubierta para helicópteros. Imparte sesiones informativas de buceo en inglés, español, portugués o alemán.\n\nSigue sus inmersiones en [@nikdive](https://www.instagram.com/nikdive/)\n",
-      "_template": "richText"
+      "member": "Monique",
+      "body": "### **¿QUIÉN ES MONIK?**\n\n\\\nCreció en una playa de Brasil y pasó dieciséis años trabajando en grandes empresas y enseñando inglés antes de hacer del mar su profesión.\n\nSi le preguntas qué es lo que la mantiene allí, lo resume en una sola frase:\n\n> «En el océano, todos se ayudan entre sí. Ojalá fuera así también en tierra».\n\nMonik lleva a pequeños grupos de buceadores al mar de Cortés con Eagle Ray. A bordo, observa antes de hablar: quién está relajado, quién revisa su equipo dos veces, quién quiere descender más profundo.\nA continuación, planifica las inmersiones en función de ellos. Qué lugar elegir, a qué profundidad, cuándo sumergirse y cuándo es mejor quedarse en cubierta y contemplar cómo cambia la luz.\n\nActualmente es instructora de buceo PADI y guía de expediciones titulada en México.\\\nLleva seis años buceando en Baja California del Sur, uno de ellos viviendo en La Paz. Cuenta con licencia para ejercer de guía en las islas Revillagigedo.\\\nHa trabajado durante varias temporadas en yates con cubierta para helicópteros. Imparte sesiones informativas de buceo en inglés, español, portugués o alemán.\n\nSigue sus inmersiones en [@nikdive](https://www.instagram.com/nikdive/)\n",
+      "_template": "memberProfile"
     },
     {
       "images": [
@@ -48,7 +49,7 @@
   ],
   "seo": {
     "title": "Buceo en el mar de Cortés con Monik Saab | Eagle Ray Expeditions",
-    "description": "Expediciones de buceo de 3 o 5 días para buceadores titulados en La Paz, Baja California del Sur. Bucea, navega y pasa la noche fondeados con Monik Saab. Noviembre de 2026",
+    "description": "Expediciones de buceo de 3 o 5 días para buceadores titulados en La Paz, Baja California del Sur. Bucea, navega y pasa la noche fondeado con Monik Saab. Noviembre de 2026",
     "ogTitle": "Bucea en Baja California con Monik Saab",
     "ogDescription": "Un grupo reducido, un velero y unos días en el mar frente a las costas de Espíritu Santo. Para buceadores certificados, del 20 al 22 y del 25 al 29 de noviembre."
   }
