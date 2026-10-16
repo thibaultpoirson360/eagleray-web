@@ -31,10 +31,12 @@ interface Props {
   labels: CrewLabels;
   /** A shorter photo, so the whole card fits in the modal without scrolling the page. */
   compact?: boolean;
+  /** Leaves out the "about" text (and its "read more"), e.g. when it is printed next to the card. */
+  hideAbout?: boolean;
   class?: string;
 }
 
-const { member, labels, compact = false, class: className = "" } = Astro.props;
+const { member, labels, compact = false, hideAbout = false, class: className = "" } = Astro.props;
 
 const roles = clean(member.roles);
 const skills = clean(member.skills);
@@ -100,7 +102,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
   </div>
 
   {
-    about.length > 0 && (
+    !hideAbout && about.length > 0 && (
       <div
         tabindex="0"
         role="group"

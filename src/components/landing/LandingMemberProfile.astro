@@ -1,0 +1,55 @@
+---
+/**
+ * `memberProfile` landing block: the page's text on the left (followed by the
+ * member's own "about" and "read more"), and on the right the member's crew
+ * card (photos, quote, name, roles, skills, languages, certificates) without
+ * its middle "about" text. The member comes from the Crew collection, in the
+ * page's language, so it matches the rest of the site.
+ */
+import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import BodyParagraph from "../richtext/BodyParagraph.astro";
+import BodyQuote from "../richtext/BodyQuote.astro";
+import BodyImage from "../richtext/BodyImage.astro";
+import CrewFullCard from "../CrewFullCard.astro";
+import CrewStory from "../CrewStory.astro";
+import { loadCrew, loadCrewSection } from "../../lib/content";
+import type { LandingPageBlocksParent } from "./blockTypes";
+import type { Locale } from "../../i18n/config";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+const [{ members }, sectionResult] = await Promise.all([loadCrew(locale), loadCrewSection(locale)]);
+const member = members.find((m) => m._sys.filename === String(block.member ?? "").trim());
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class:list={["mx-auto grid gap-12", member ? "max-w-[1080px] lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-16" : "max-w-[700px]"]}>
+    <div class="min-w-0" data-tina-field={tinaField(block, "body")}>
+      <TinaMarkdown content={block.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
+      {
+        member && (
+          <div class="mt-8">
+            <CrewStory member={member} labels={sectionResult.data.crewSection} />
+          </div>
+        )
+      }
+    </div>
+    {
+      member && (
+        <div class="lg:sticky lg:top-[calc(var(--spacing-nav-solid)+1rem)] lg:self-start">
+          <CrewFullCard member={member} labels={sectionResult.data.crewSection} hideAbout />
+        </div>
+      )
+    }
+  </div>
+</section>

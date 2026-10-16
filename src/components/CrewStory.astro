@@ -1,0 +1,61 @@
+---
+/**
+ * A crew member's "about" text with its "read more" (history and why), laid
+ * out as plain reading text rather than inside the card. Used next to a
+ * CrewFullCard that has `hideAbout` (the team member profile landing block).
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import { paragraphs, type CrewLabels, type CrewMember } from "../lib/crew";
+
+interface Props {
+  member: NonNullable<CrewMember>;
+  labels: CrewLabels;
+}
+
+const { member, labels } = Astro.props;
+const about = paragraphs(member.about);
+const history = paragraphs(member.history);
+const why = paragraphs(member.why);
+const hasMore = history.length + why.length > 0;
+---
+
+{
+  about.length > 0 && (
+    <div class="text-[1.0625rem] leading-[1.75] text-ink/78">
+      <div class="space-y-4" data-tina-field={tinaField(member, "about")}>
+        {about.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+      {hasMore && (
+        <details class="mt-5 [&[open]>summary]:mb-5">
+          <summary class="cursor-pointer list-none text-[.95rem] font-medium text-ink underline-offset-4 hover:underline [&::-webkit-details-marker]:hidden">
+            {labels.readMoreLabel}
+          </summary>
+          <div class="space-y-6">
+            {history.length > 0 && (
+              <div data-tina-field={tinaField(member, "history")}>
+                {labels.historyLabel && <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/64 uppercase">{labels.historyLabel}</h4>}
+                <div class="space-y-4">
+                  {history.map((p) => (
+                    <p>{p}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+            {why.length > 0 && (
+              <div data-tina-field={tinaField(member, "why")}>
+                {labels.whyLabel && <h4 class="mb-2 font-mono text-[.62rem] tracking-[.16em] text-ink/64 uppercase">{labels.whyLabel}</h4>}
+                <div class="space-y-4">
+                  {why.map((p) => (
+                    <p>{p}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </details>
+      )}
+    </div>
+  )
+}
