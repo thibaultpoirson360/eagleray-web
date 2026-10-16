@@ -18,12 +18,7 @@
     "Stand-up paddleboard and two-person kayak",
     "Snorkeling gear and hikes ashore"
   ],
-  "length": "45.1 ft",
-  "cabins": "3",
-  "bathrooms": "3",
-  "guests": "up to 4",
-  "order": 1,
-  "photo": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Sun_Odyssey_44i_Jeanneau_-_Sailing_monohull_Velero_-_Sail_in_Mexico_gdxzg7.jpg",
   "photoAlt": "Sun Odyssey 44i - Jeanneau — Exterior",
   "photos": [
     {
@@ -74,5 +69,10 @@
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-12.webp",
       "alt": "Sun Odyssey 44i - Jeanneau — Interior / Baño"
     }
-  ]
+  ],
+  "length": "45.1 ft",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "up to 4",
+  "order": 1
 }
