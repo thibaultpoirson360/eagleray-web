@@ -44,7 +44,7 @@ const groups = groupDefs
   .map((g) => ({
     key: g.key,
     label: g.label ?? "",
-    members: members.filter((m) => roleGroup(m.roles) === g.key),
+    members: members.filter((m) => ((m as { roleGroupKey?: string }).roleGroupKey ?? roleGroup(m.roles)) === g.key),
   }))
   .filter((g) => g.members.length > 0);
 ---

@@ -13,7 +13,8 @@
  */
 import databaseClient from "../../tina/__generated__/databaseClient.js";
 import { requestWithMetadata, type RequestOptions } from "@tinacms/astro/data";
-import type { Locale } from "../i18n/config";
+import { defaultLocale, type Locale } from "../i18n/config";
+import { roleGroup, type CrewMember } from "./crew";
 
 /**
  * Page chrome, not a homepage section — fetched once from BaseLayout so
@@ -78,15 +79,53 @@ export function loadWildlife(locale: Locale, options?: RequestOptions) {
 
 export async function loadCrew(locale: Locale, options?: RequestOptions) {
   const result = await requestWithMetadata(databaseClient.queries.crewConnection(), options);
-  const members = (result.data.crewConnection?.edges ?? [])
+  const all = (result.data.crewConnection?.edges ?? [])
     .map((edge) => edge?.node)
-    .filter((node): node is NonNullable<typeof node> => !!node && node._sys.breadcrumbs[0] === locale)
+    .filter((node): node is NonNullable<typeof node> => !!node);
+  const english = all.filter((n) => n._sys.breadcrumbs[0] === defaultLocale);
+  // Same people, same order, same photos in every language. The English
+  // document decides who is on the team and everything that is not text
+  // (order, name, photos, numbers); another language only supplies the
+  // translated words, and falls back to the English ones where it has none.
+  const members = english
+    .map((en) => {
+      if (locale === defaultLocale) return en;
+      const own = all.find((n) => n._sys.breadcrumbs[0] === locale && n._sys.filename === en._sys.filename);
+      return own ? alignWithEnglish(own, en) : en;
+    })
     .sort((a, b) => {
       const orderA = a.order ?? Number.POSITIVE_INFINITY;
       const orderB = b.order ?? Number.POSITIVE_INFINITY;
       return orderA !== orderB ? orderA - orderB : a.name.localeCompare(b.name);
     });
   return { ...result, members };
+}
+
+/** A translated crew document with the structure of the English one (see loadCrew). */
+function alignWithEnglish(own: NonNullable<CrewMember>, en: NonNullable<CrewMember>): NonNullable<CrewMember> {
+  const text = (mine?: string | null, theirs?: string | null) => (mine && mine.trim() ? mine : theirs);
+  const list = <T,>(mine?: T[] | null, theirs?: T[] | null) => (mine && theirs && mine.length === theirs.length ? mine : theirs);
+  return {
+    ...own,
+    name: en.name,
+    order: en.order,
+    image: en.image,
+    images: en.images,
+    yearsOfExperience: en.yearsOfExperience,
+    roles: list(own.roles, en.roles),
+    skills: list(own.skills, en.skills),
+    languages: list(own.languages, en.languages),
+    certificates: list(own.certificates, en.certificates),
+    about: text(own.about, en.about),
+    quote: text(own.quote, en.quote),
+    history: text(own.history, en.history),
+    why: text(own.why, en.why),
+    joiningTag: text(own.joiningTag, en.joiningTag),
+    imageAlt: text(own.imageAlt, en.imageAlt),
+    // The Passionate Sea People page groups people by role using the English
+    // roles, whatever the language ("Capitán" would not match "captain").
+    roleGroupKey: roleGroup(en.roles),
+  } as NonNullable<CrewMember>;
 }
 
 export function loadBoatsSection(locale: Locale, options?: RequestOptions) {
@@ -117,11 +156,22 @@ export function loadFunnel(locale: Locale, options?: RequestOptions) {
   );
 }
 
-export function loadCrewPage(locale: Locale, options?: RequestOptions) {
-  return requestWithMetadata(
-    databaseClient.queries.crewPage({ relativePath: `${locale}.json` }),
-    options
-  );
+export async function loadCrewPage(locale: Locale, options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.crewPage({ relativePath: `${locale}.json` }), options);
+  if (locale !== defaultLocale) {
+    // A language still missing a role heading shows the English one, so the
+    // page keeps the same groups as the English page.
+    const en = await requestWithMetadata(databaseClient.queries.crewPage({ relativePath: `${defaultLocale}.json` }), options);
+    const labels = result.data.crewPage.roleLabels;
+    const english = en.data.crewPage.roleLabels;
+    if (english) {
+      result.data.crewPage.roleLabels = {
+        ...english,
+        ...Object.fromEntries(Object.entries(labels ?? {}).filter(([, v]) => typeof v === "string" && v.trim())),
+      } as typeof english;
+    }
+  }
+  return result;
 }
 
 /** Every placeholder nav page in a locale — same shape as loadBlogPosts (see loadCrew for why the filter is in JS). */
