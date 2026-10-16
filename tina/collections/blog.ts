@@ -112,5 +112,17 @@ export const blogPost: Collection = {
     { type: "string", name: "authorRole", label: "Author role", description: 'e.g. "Naturalist Guide"' },
     { type: "image", name: "authorAvatar", label: "Author photo" },
     { type: "rich-text", name: "body", label: "Body", required: true },
+    {
+      type: "string",
+      name: "ctaLabel",
+      label: "Button at the end of the post: words",
+      description: 'e.g. "Plan your expedition". The button only appears if both the words and the link are filled in.',
+    },
+    {
+      type: "string",
+      name: "ctaHref",
+      label: "Button at the end of the post: link",
+      description: 'e.g. "/en/customize-your-expedition/", "/en/contact/" or a full address starting with https://',
+    },
   ],
 };
