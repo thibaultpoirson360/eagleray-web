@@ -70,6 +70,20 @@ export const landingBlocksField = (): TinaField => (
         ],
       },
       {
+        name: "memberProfile",
+        label: "Team member profile (text on the left, crew card on the right)",
+        fields: [
+          {
+            type: "string",
+            name: "member",
+            label: "Crew member (file name)",
+            required: true,
+            description: 'The member\'s file name in Crew, e.g. "monique", "sergio-torres-canei", "lou". Their photos, quote and tags show on the right; their "about" text follows your text on the left.',
+          },
+          { type: "rich-text", name: "body", label: "Text on the left", required: true },
+        ],
+      },
+      {
         name: "funnel",
         label: "Trip planning form (the \"Build your expedition\" form)",
         fields: [
