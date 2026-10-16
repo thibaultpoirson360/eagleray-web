@@ -1,9 +1,9 @@
 {
   "depth": {
-    "meters": 68,
+    "meters": 41,
     "name": "Les expéditions"
   },
-  "kickerNumber": "04",
+  "kickerNumber": "03",
   "kicker": "Votre expédition",
   "title": "Choisissez votre expédition",
   "cardLabel": "En savoir plus"
