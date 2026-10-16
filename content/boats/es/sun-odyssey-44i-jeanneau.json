@@ -2,7 +2,7 @@
   "name": "Sun Odyssey 44i - Jeanneau",
   "tagline": "Monocasco de vela",
   "description": "Un monocasco de vela diseñado por Philippe Briand para navegar bien, y que aquí maneja un capitán que lo conoce al dedillo.",
-  "details": "Un monocasco diseñado por Philippe Briand para navegar bien, y tripulado aquí por un capitán que lo conoce al dedillo.\nSus velas están en buen estado y es fácil de manejar: si quieres tomar el timón o ayudar con alguna maniobra, él te enseñará cómo hacerlo.\nSi no, él se encarga de todo.\n\nA bordo no hay ninguna norma que limite la navegación a las horas diurnas. Cuando las condiciones meteorológicas lo requieren, el barco zarpa a las 4 de la madrugada mientras tú duermes, o llega al fondeadero a las 10 de la noche tras una travesía bajo las estrellas. Bajo cubierta: tres camarotes dobles, tres baños con duchas independientes, aire acondicionado y un salón luminoso donde terminar el día.",
+  "details": "Un monocasco diseñado por Philippe Briand para navegar bien, y que aquí maneja un capitán que lo conoce al dedillo.\nSus velas están en buen estado y es fácil de manejar: si quieres tomar el timón o ayudar con alguna maniobra, él te enseñará cómo hacerlo.\nSi no, él se encarga de todo.\n\nA bordo no hay ninguna norma que limite la navegación a las horas diurnas. Cuando las condiciones meteorológicas lo requieren, el barco zarpa a las 4 de la madrugada mientras tú duermes, o llega al fondeadero a las 10 de la noche tras una travesía bajo las estrellas. Bajo cubierta: tres camarotes dobles, tres baños con duchas independientes, aire acondicionado y un salón luminoso donde terminar el día.",
   "features": [
     "Monocasco de vela de 45,1 pies",
     "3 habitaciones, 3 baños",
@@ -18,12 +18,7 @@
     "Tabla de surf de remo y kayak para dos personas",
     "Equipo de buceo con esnórquel y excursiones por tierra"
   ],
-  "length": "45,1 pies",
-  "cabins": "3",
-  "bathrooms": "3",
-  "guests": "hasta 4",
-  "order": 1,
-  "photo": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Sun_Odyssey_44i_Jeanneau_-_Sailing_monohull_Velero_-_Sail_in_Mexico_gdxzg7.jpg",
   "photoAlt": "Sun Odyssey 44i - Jeanneau — Exterior",
   "photos": [
     {
@@ -74,5 +69,10 @@
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-12.webp",
       "alt": "Sun Odyssey 44i - Jeanneau — Interior / Baño"
     }
-  ]
+  ],
+  "length": "45,1 pies",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "hasta 4",
+  "order": 1
 }
