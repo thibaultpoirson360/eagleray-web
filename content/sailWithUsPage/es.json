@@ -29,7 +29,7 @@
     }
   ],
   "activitiesTitle": "Añade actividades a tu expedición",
-  "activitiesSubtitle": "Cada expedición se puede adaptar a las actividades acuáticas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
+  "activitiesSubtitle": "Nuestro equipo «Passionate Sea People» está formado por los instructores y especialistas que dirigen estas actividades marinas. Son la esencia misma de Eagle Ray Expeditions y, por tanto, de sus actividades.\nCada expedición se puede adaptar a las actividades marinas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
   "activitiesButtonLabel": "Más información",
   "activities": [
     {
@@ -63,7 +63,7 @@
     },
     {
       "name": "Snorkel",
-      "text": "Fácil acceso a los arrecifes y a la vida marina, con un guía que sabe adónde ir.",
+      "text": "Fácil acceso a los arrecifes y a la vida marina, con un guía que sabe dónde ir.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
       "imageAlt": "Snorkel",
       "imageNote": "",

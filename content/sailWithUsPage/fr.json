@@ -1,6 +1,6 @@
 {
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des passagers naviguant sur un catamaran à La Paz",
+  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
   "title": "Venez naviguer avec nous",
   "subtitle": "Des sorties en voilier privées sur mesure pour votre groupe.",
   "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
@@ -29,7 +29,7 @@
     }
   ],
   "activitiesTitle": "Ajoutez des activités à votre expédition",
-  "activitiesSubtitle": "Chaque expédition peut être organisée en fonction des activités nautiques qui vous tiennent à cœur. Dites-nous ce que vous souhaitez et nous l'organiserons avec vous.",
+  "activitiesSubtitle": "Nos « Passionate Sea People » sont les moniteurs et les spécialistes qui animent ces activités nautiques. Ils constituent l’âme même d’Eagle Ray Expeditions, et donc de ses activités.\nChaque expédition peut être conçue autour des activités nautiques qui vous tiennent à cœur. Dites-nous ce que vous souhaitez et nous l’organiserons avec vous.",
   "activitiesButtonLabel": "Plus d'informations",
   "activities": [
     {
@@ -54,7 +54,7 @@
     },
     {
       "name": "Plongée en apnée",
-      "text": "Séances guidées en mer, animées par un moniteur diplômé.",
+      "text": "Séances guidées en mer, encadrées par un moniteur diplômé.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
       "imageAlt": "Plongée en apnée",
       "imageNote": "",
@@ -65,7 +65,7 @@
       "name": "Plongée avec tuba",
       "text": "Un accès facile aux récifs et à la faune marine, avec un guide qui connaît les meilleurs endroits.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
-      "imageAlt": "Plongée libre",
+      "imageAlt": "Plongée avec tuba",
       "imageNote": "",
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter la plongée avec tuba à mon expédition."
     },
@@ -91,7 +91,7 @@
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
       "imageAlt": "Paddle surf",
       "imageNote": "",
-      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'ajouter le paddle surf à mon expédition."
+      "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer le paddle surf à mon expédition."
     },
     {
       "name": "Kayak",
