@@ -1,0 +1,139 @@
+---
+/**
+ * `departures` landing block: the trip options of a proposal as cards, in the
+ * site's own design. Each card has its photo, dates, boat, a short description
+ * and the price headline; it opens to show the price lines and how that option
+ * works. "Book now" goes to the trip on Mogu (booking and payment happen
+ * there) and the second button opens the contact form with a message ready.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
+import Button from "../ui/Button.astro";
+import ImageSlider from "../ImageSlider.tsx";
+import BodyParagraph from "../richtext/BodyParagraph.astro";
+import { moguForLocale } from "../../lib/mogu";
+import { localePath, type Locale } from "../../i18n/config";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+const options = ((block.options ?? []) as any[]).flatMap((option, i) => (option?.name ? [{ option, i }] : []));
+const photosOf = (option: any) => {
+  const list = ((option.images ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || option.name }));
+  if (list.length === 0 && option.image) list.push({ src: option.image, alt: option.imageAlt || option.name });
+  return list;
+};
+const contactHref = (message?: string | null) => localePath(locale, "contact/") + (message ? `?message=${encodeURIComponent(message)}` : "");
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class="mb-section-head">
+    <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    {
+      block.intro && (
+        <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>
+          {block.intro}
+        </p>
+      )
+    }
+  </div>
+
+  <ul class="grid gap-8 lg:grid-cols-2">
+    {
+      options.map(({ option, i }) => (
+        <li class="flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(block, "options", i)}>
+          <div class="relative aspect-[16/10] w-full overflow-hidden bg-ink">
+            {photosOf(option).length > 0 ? (
+              <ImageSlider
+                client:visible
+                photos={photosOf(option)}
+                previousLabel="Previous photo"
+                nextLabel="Next photo"
+                dotLabel="Photo"
+                dotsAt="bottom"
+                className="h-full w-full"
+              />
+            ) : (
+              <p class="absolute inset-0 flex items-center justify-center px-8 text-center font-mono text-[.76rem] tracking-[.14em] text-white/60">
+                {option.imageNote}
+              </p>
+            )}
+          </div>
+          <div class="flex flex-1 flex-col p-8">
+            {option.dates && <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">{option.dates}</p>}
+            <h3 class="mt-3 font-display text-[1.75rem]">{option.name}</h3>
+            {option.boatLine && <p class="mt-2 text-[.95rem] text-ink">{option.boatLine}</p>}
+            {option.description && <p class="mt-4 leading-[1.6] text-ink/74">{option.description}</p>}
+            {option.priceSummary && <p class="mt-6 font-display text-[1.25rem] text-ink">{option.priceSummary}</p>}
+
+            {
+              (option.priceRows?.length > 0 || option.detailsText) && (
+                <details class="group/details mt-4 border-t border-ink/10 pt-4">
+                  <summary class="cursor-pointer list-none text-[.9rem] font-medium text-ink underline-offset-4 hover:underline [&::-webkit-details-marker]:hidden">
+                    {option.detailsLabel}
+                    <span aria-hidden="true" class="ml-1 inline-block transition-transform duration-300 group-open/details:rotate-90 motion-reduce:transition-none">→</span>
+                  </summary>
+                  {option.priceRows?.length > 0 && (
+                    <dl class="mt-4 divide-y divide-ink/10 border-y border-ink/10">
+                      {option.priceRows.map((row: any) => (
+                        <div class="flex items-baseline justify-between gap-6 py-3">
+                          <dt class="text-[.92rem] text-ink/74">{row.label}</dt>
+                          <dd class="text-right font-display text-[1.05rem] text-ink">{row.amount}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                  {option.detailsText && (
+                    <div class="mt-4 space-y-3 text-[.92rem] leading-[1.65] text-ink/74">
+                      {String(option.detailsText)
+                        .split(/\n\s*\n/)
+                        .map((p) => (
+                          <p>{p}</p>
+                        ))}
+                    </div>
+                  )}
+                </details>
+              )
+            }
+
+            <div class="mt-auto flex flex-wrap items-center gap-3 pt-8">
+              {option.bookHref && option.bookLabel && (
+                <Button href={moguForLocale(locale, option.bookHref)} variant="primary" context="default" size="sm">
+                  {option.bookLabel}
+                </Button>
+              )}
+              {option.infoLabel && (
+                <Button href={contactHref(option.infoMessage)} variant="ghost" context="default" size="sm">
+                  {option.infoLabel}
+                </Button>
+              )}
+            </div>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+
+  {
+    block.bookingInfo && block.bookingLabel && (
+      <details class="group/booking mx-auto mt-10 max-w-[760px] border-y border-ink/14 py-5">
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-[1.1rem] text-ink [&::-webkit-details-marker]:hidden">
+          <span data-tina-field={tinaField(block, "bookingLabel")}>{block.bookingLabel}</span>
+          <span aria-hidden="true" class="flex-none text-ink/64 transition-transform duration-300 group-open/booking:rotate-45 motion-reduce:transition-none">+</span>
+        </summary>
+        <div class="mt-4 text-[.95rem] text-ink/74 [&_li]:mb-1.5 [&_ul]:list-disc [&_ul]:pl-5" data-tina-field={tinaField(block, "bookingInfo")}>
+          <TinaMarkdown content={block.bookingInfo} components={{ p: BodyParagraph }} />
+        </div>
+      </details>
+    )
+  }
+</section>

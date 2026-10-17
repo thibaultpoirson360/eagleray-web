@@ -16,7 +16,7 @@ const { member, labels } = Astro.props;
 const about = paragraphs(member.about);
 const history = paragraphs(member.history);
 const why = paragraphs(member.why);
-const hasMore = history.length + why.length > 0;
+const hasMore = history.length + why.length > 0 || Astro.slots.has("default");
 ---
 
 {
@@ -51,6 +51,11 @@ const hasMore = history.length + why.length > 0;
                     <p>{p}</p>
                   ))}
                 </div>
+              </div>
+            )}
+            {Astro.slots.has("default") && (
+              <div class="text-[.95rem] text-ink/78 [&_li]:mb-1.5 [&_ul]:list-disc [&_ul]:pl-5">
+                <slot />
               </div>
             )}
           </div>

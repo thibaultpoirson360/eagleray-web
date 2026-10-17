@@ -12,6 +12,7 @@
  * Gradient/typography classes are otherwise copied verbatim from Hero.astro
  * so it reads as the same design language, not a new one.
  */
+import { moguForLocale } from "../../lib/mogu";
 import Button from "../ui/Button.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
 import { homeAnchor } from "../../lib/links";
@@ -76,7 +77,7 @@ const Heading = index === 0 ? "h1" : "h2";
     {
       block.cta && (
         <div class="mt-[2.3rem]">
-          <Button href={homeAnchor(locale, block.cta.href)} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
+          <Button href={moguForLocale(locale, homeAnchor(locale, block.cta.href))} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
             {block.cta.label}
           </Button>
         </div>

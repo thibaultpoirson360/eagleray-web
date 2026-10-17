@@ -39,7 +39,13 @@ const member = members.find((m) => m._sys.filename === String(block.member ?? ""
       {
         member && (
           <div class="mt-8">
-            <CrewStory member={member} labels={sectionResult.data.crewSection} />
+            <CrewStory member={member} labels={sectionResult.data.crewSection}>
+              {block.moreText && (
+                <div data-tina-field={tinaField(block, "moreText")}>
+                  <TinaMarkdown content={block.moreText} components={{ p: BodyParagraph }} />
+                </div>
+              )}
+            </CrewStory>
           </div>
         )
       }

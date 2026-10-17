@@ -21,6 +21,12 @@ import LandingCta from "./LandingCta.astro";
 import LandingMoguProposal from "./LandingMoguProposal.astro";
 import LandingFunnel from "./LandingFunnel.astro";
 import LandingMemberProfile from "./LandingMemberProfile.astro";
+import LandingDepartures from "./LandingDepartures.astro";
+import LandingIncludes from "./LandingIncludes.astro";
+import LandingTimeline from "./LandingTimeline.astro";
+import LandingFaq from "./LandingFaq.astro";
+import LandingFeature from "./LandingFeature.astro";
+import LandingCrewShowcase from "./LandingCrewShowcase.astro";
 import MoguProposalHero from "../MoguProposalHero.astro";
 import type { LandingPageBlocksParent } from "./blockTypes";
 import type { Locale } from "../../i18n/config";
@@ -52,7 +58,13 @@ const { landingPage, locale } = Astro.props;
         {kind === "Cta" && <LandingCta block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "MemberProfile" && <LandingMemberProfile block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Funnel" && <LandingFunnel locale={locale} />}
-        {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} />}
+        {kind === "Departures" && <LandingDepartures block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "Includes" && <LandingIncludes block={block} landingPage={landingPage} index={index} />}
+        {kind === "Timeline" && <LandingTimeline block={block} landingPage={landingPage} index={index} />}
+        {kind === "Feature" && <LandingFeature block={block} landingPage={landingPage} index={index} />}
+        {kind === "CrewShowcase" && <LandingCrewShowcase block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "Faq" && <LandingFaq block={block} landingPage={landingPage} index={index} />}
+        {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "MoguHero" && <MoguProposalHero tripSlug={block.tripSlug} hideLogo={block.hideLogo ?? false} hideTitle={block.hideTitle ?? false} title={block.iframeTitle ?? undefined} />}
       </>
     );

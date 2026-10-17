@@ -62,6 +62,8 @@ const waHref = siteSettings.contact?.whatsapp ? `https://wa.me/${siteSettings.co
                 namePlaceholder: contactPage.form.namePlaceholder,
                 emailPlaceholder: contactPage.form.emailPlaceholder,
                 howFoundPlaceholder: contactPage.form.howFoundPlaceholder,
+                interestPlaceholder: contactPage.form.interestPlaceholder ?? "",
+                interestOptions: (contactPage.form.interestOptions ?? []).filter((o): o is string => !!o),
                 messagePlaceholder: contactPage.form.messagePlaceholder,
                 submitLabel: contactPage.form.submitLabel,
                 sendingLabel: contactPage.form.sendingLabel,

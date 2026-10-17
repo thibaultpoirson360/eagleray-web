@@ -22,6 +22,14 @@ const [contactPageResult, siteSettingsResult] = await Promise.all([
   loadContactPage(locale),
   loadSiteSettings(),
 ]);
+// A language that has no "I'm interested in" menu yet shows the English one,
+// so the form is the same in every language.
+const form = contactPageResult.data.contactPage.form;
+if (form && locale !== "en" && !form.interestOptions?.length) {
+  const en = (await loadContactPage("en")).data.contactPage.form;
+  form.interestPlaceholder = en?.interestPlaceholder ?? null;
+  form.interestOptions = en?.interestOptions ?? null;
+}
 ---
 
 <BaseLayout

@@ -20,6 +20,8 @@ interface FormCopy {
   namePlaceholder: string;
   emailPlaceholder: string;
   howFoundPlaceholder: string;
+  interestPlaceholder?: string;
+  interestOptions?: string[];
   messagePlaceholder: string;
   submitLabel: string;
   sendingLabel: string;
@@ -39,6 +41,7 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [howFound, setHowFound] = useState("");
+  const [interest, setInterest] = useState("");
   const [message, setMessage] = useState("");
 
   // A link such as /en/contact/?message=… (the activity buttons on Sail with
@@ -61,7 +64,7 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
       const res = await fetch(leadEndpoint, {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, howFound, message, _subject: "New contact form message" }),
+        body: JSON.stringify({ name, email, howFound, ...(interest ? { interest } : {}), message, _subject: "New contact form message" }),
       });
       if (!res.ok) throw new Error(`Formspree error ${res.status}`);
       await res.json();
@@ -98,6 +101,19 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
         onInput={(e) => setEmail((e.target as HTMLInputElement).value)}
         class={inputClass}
       />
+      {copy.interestOptions && copy.interestOptions.length > 0 && (
+        <select
+          name="interest"
+          value={interest}
+          onChange={(e) => setInterest((e.target as HTMLSelectElement).value)}
+          class={`${inputClass} ${interest ? "" : "text-ink/45"}`}
+        >
+          <option value="">{copy.interestPlaceholder}</option>
+          {copy.interestOptions.map((option) => (
+            <option value={option}>{option}</option>
+          ))}
+        </select>
+      )}
       <input
         type="text"
         name="howFound"
