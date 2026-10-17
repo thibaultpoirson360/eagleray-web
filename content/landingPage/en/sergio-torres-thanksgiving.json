@@ -4,18 +4,172 @@
     {
       "kicker": "Limited dates · November 2026",
       "title": "November in the Sea of Cortez, with Sergio Torres.",
-      "lede": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+      "lede": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
       "imageAlt": "Sergio Torres Expedition Leader de Eagle Ray Expeditions Sailing Experience in La Paz",
       "cta": {
-        "label": "Check availability",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness"
+        "label": "Book now",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
       },
       "_template": "hero"
     },
     {
+      "member": "sergio-torres-canei",
       "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
-      "_template": "richText"
+      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio_torres_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Two sailing departures in November",
+      "intro": "Prices per full boat, for the November 2026 dates. If you divide the cost per person, you can see the price per person with the boat full (that is, at its maximum capacity).",
+      "options": [
+        {
+          "name": "Open Cabins",
+          "dates": "Sunday, November 22 → Wednesday, November 25 · 3 nights",
+          "boatLine": "Lagoon 450F catamaran · 3 guest cabins · up to 6 guests",
+          "description": "Book a cabin with a partner or a friend, take one to yourself, or take the whole boat with your people.",
+          "priceSummary": "From 4,000 USD, solo cabin",
+          "detailsLabel": "Prices and how it works",
+          "priceRows": [
+            {
+              "label": "Solo cabin",
+              "amount": "4,000 USD"
+            },
+            {
+              "label": "Cabin for two",
+              "amount": "5,900 USD"
+            },
+            {
+              "label": "Whole boat",
+              "amount": "16,500 USD"
+            }
+          ],
+          "detailsText": "Back on land Wednesday afternoon, in time for Thanksgiving at home.\n\nIt’s confirmed once two cabins are booked, by October 31. If not, you get 100% of what you paid back, or a new date.",
+          "imageAlt": "The Lagoon 450F catamaran at anchor off Espíritu Santo",
+          "imageNote": "[PENDIENTE] Photo: the Lagoon 450F catamaran at anchor, with guests on the flybridge",
+          "bookLabel": "Book now",
+          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+          "infoLabel": "Contact us for more info",
+          "infoMessage": "I'd like more information about the Open Cabins departure (November 22 to 25).",
+          "images": []
+        },
+        {
+          "name": "Thanksgiving at Anchor",
+          "dates": "Thursday, November 26 → Sunday, November 29 · 3 nights",
+          "boatLine": "Beneteau Sense 55 sailboat · 2 guest suites · up to 4 guests",
+          "description": "The whole boat for your family/friends: a suite for the parents, a second one for the kids.",
+          "priceSummary": "14,500 USD, whole boat",
+          "detailsLabel": "Prices and how it works",
+          "priceRows": [
+            {
+              "label": "Whole boat (up to 4 guests)",
+              "amount": "14,500 USD (3,625 USD per person)"
+            }
+          ],
+          "detailsText": "Private boat only, for one group: your family or your friends.\n\nSpecial: Thanksgiving dinner menu at anchor on Thursday night.\n\nBook by November 4th. Your trip is confirmed once we lock the boat.",
+          "imageAlt": "The Beneteau Sense 55 sailboat under sail",
+          "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 under sail, or a Thanksgiving table on deck",
+          "bookLabel": "Book now",
+          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+          "infoLabel": "Contact us for more info",
+          "infoMessage": "I'd like more information about the Thanksgiving at Anchor departure (November 26 to 29).",
+          "images": []
+        }
+      ],
+      "_template": "departures",
+      "bookingLabel": "Info on booking",
+      "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n"
+    },
+    {
+      "title": "What is included",
+      "includedTitle": "Included",
+      "included": "**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
+      "notIncludedTitle": "Not included",
+      "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* Scuba diving, depending on number of dives and certifications\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
+      "_template": "includes",
+      "gallery": [],
+      "galleryNote": "[PENDIENTE] Photos for this slider: lunch on board, the paddleboards and kayak, the dinghy, the crew on deck"
+    },
+    {
+      "title": "The route",
+      "intro": "Both departures follow the same route: three nights between La Paz and the south of Espíritu Santo.",
+      "steps": [
+        {
+          "stepTitle": "La Paz → Caleta Lobos or Pichilingue",
+          "stepImageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+        },
+        {
+          "stepTitle": "Caleta Lobos or Pichilingue → south of Espíritu Santo",
+          "stepImageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+        },
+        {
+          "stepTitle": "South of Espíritu Santo → Bahía de La Paz",
+          "stepImageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+        },
+        {
+          "stepTitle": "Bahía de La Paz → La Paz",
+          "stepImageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+        }
+      ],
+      "footnote": "Indicative route. It depends on the sea, the wind, the permits and the captain’s call. In November, northerly winds can come in, and if they do we change the order of the coves or stay at the same anchorage.\n\nOpen Cabins: back at the marina on Wednesday afternoon.\n\nThanksgiving at Anchor: back at the marina around midday on Sunday, so you can fly home the same day. We recommend flights from 16:00.",
+      "_template": "timeline"
+    },
+    {
+      "title": "What is a day on board with Sergio like?",
+      "intro": "Each day has a structure, not a schedule. Sergio and the crew adjust it according to the wind, the group’s energy, and what each person wants to do. No one has to do everything.",
+      "steps": [
+        {
+          "stepLabel": "Sunrise",
+          "stepTitle": "Body",
+          "stepText": "Mobility and functional training on deck, before coffee."
+        },
+        {
+          "stepLabel": "Morning",
+          "stepTitle": "Breath and fishing",
+          "stepText": "The captain chooses the cove for the wind. Sergio works on breathing with the group on deck, then gets in the water with you: freediving first, then spearfishing, each at their own level. Anyone can stay with snorkeling or fish from the boat."
+        },
+        {
+          "stepLabel": "Midday",
+          "stepTitle": "Table",
+          "stepText": "Lunch cooked on board with local produce."
+        },
+        {
+          "stepLabel": "Afternoon",
+          "stepTitle": "Free",
+          "stepText": "Kayak, paddleboard, swim to shore. Or nothing at all."
+        },
+        {
+          "stepLabel": "Sunset",
+          "stepTitle": "Pause",
+          "stepText": "Stretching and breathing at the bow while the light goes down over the desert."
+        },
+        {
+          "stepLabel": "Night",
+          "stepTitle": "Anchorage",
+          "stepText": "Dinner on board. If there was a catch that day, it’s on the table."
+        }
+      ],
+      "footnote": "On Thanksgiving at Anchor, Thursday night is Thanksgiving dinner on board, Baja style.",
+      "_template": "timeline"
+    },
+    {
+      "title": "Spearfishing with Sergio",
+      "lede": "From the water to the table, the same day.",
+      "blurb": "Snorkeling is looking at the sea. Spearfishing while freediving is entering it.",
+      "photos": [],
+      "photoNote": "[PENDIENTE] Big photo: Sergio freediving with the group, or a catch on the deck",
+      "moreLabel": "More about spearfishing",
+      "more": "Spearfishing is done without a tank: one breath of air, a pair of fins, and a speargun.\n\nThat is why with Sergio it starts on deck, not in the water. First you learn how to breathe and relax the body. Then, how to go down a few meters and stay still. Only then, the speargun.\n\n**Level**\n\n* No previous experience is needed.\n* Sergio adapts the progression to each person.\n* Anyone who prefers can stick to snorkeling or fish from the boat.\n\n**Safety**\n\n* Always in pairs, never alone in the water.\n* Sergio in the water with the group and the boat nearby.\n* With the captain, certified in AIDA II freediving, there are two people on board who know how to move underwater.\n\n**Where**\n\n* In the coves the captain chooses each day, according to the wind and water visibility.\n* Only in areas where it is allowed.\n\n**What is caught**\n\n* Only permitted species and only what will be eaten that night.\n\n**Afterwards**\n\n* The chef cleans it and cooks it on board.\n* If there is no luck that day, dinner is still served.\n",
+      "_template": "feature"
+    },
+    {
+      "title": "Scuba diving (price on request)",
+      "blurb": "For those who want to go deeper than freediving. Around La Paz there are dive sites for different levels.",
+      "photos": [],
+      "photoNote": "[PENDIENTE] Big photo: divers at the Salvatierra wreck, or a school of fish",
+      "moreLabel": "More about scuba diving",
+      "more": "* Salvatierra: a 75-meter ferry that sank in 1976 after hitting a nearby reef. Today it’s an artificial reef, with groupers, schools of fish and black coral on parts of the hull. About 18 meters deep, Open Water level.\n* El Bajo: three underwater seamounts where you may see pelagic sharks, such as hammerheads and silky sharks. Because of the depth and conditions, Advanced Open Water certification is required.\n\nOrganized by number of dives and the group’s certifications. Price on request.\n",
+      "_template": "feature"
     },
     {
       "images": [
@@ -38,11 +192,113 @@
       "_template": "imageGallery"
     },
     {
-      "title": "Ready to see the route?",
-      "lede": "",
+      "title": "Sergio doesn’t sail alone,",
+      "titleEmphasis": "meet your Eagle Ray crew",
+      "blurb": "At Eagle Ray, each expedition is led by people who live the sea. Traveling with Sergio are a captain, who handles the boat, reads the sea, and chooses each anchorage according to the wind, and a chef who cooks with local products.",
+      "linkLabel": "Passionate Sea People",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking. So you can start getting familiar, these are some of the captains and chefs we sail with.",
+      "_template": "crewShowcase"
+    },
+    {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "I’m traveling solo. Can I join Open Cabins?",
+          "answer": "Yes. You get a cabin to yourself for 4,000 USD. You never share a cabin with someone you don’t know."
+        },
+        {
+          "question": "Who will I be sailing with on Open Cabins?",
+          "answer": "A small group of up to 6 guests, plus Sergio, the captain and the chef."
+        },
+        {
+          "question": "What if Open Cabins doesn’t fill up?",
+          "answer": "It’s confirmed once two cabins are booked, by October 31. If not, you get 100% of what you paid back, or a new date."
+        },
+        {
+          "question": "Can we come as friends on Thanksgiving at Anchor?",
+          "answer": "Yes. The boat is private for one group, family or friends, up to 4 guests. You decide who takes the master suite."
+        },
+        {
+          "question": "Can we bring kids?",
+          "answer": "Yes. Sergio adapts every activity to each age. Spearfishing starts at 12, always one to one with Sergio."
+        },
+        {
+          "question": "Do I need experience?",
+          "answer": "No. Sergio adapts each session to your level, and no one has to do everything."
+        },
+        {
+          "question": "What happens if the weather turns?",
+          "answer": "The captain decides the route each day with the wind and the sea. If a cove isn’t right, we go to another one or stay in a sheltered anchorage. The priority is the group’s safety and getting back to La Paz on time."
+        },
+        {
+          "question": "How much should I tip?",
+          "answer": "We recommend 10 to 15% of the trip price. Open Cabins: about 300 to 450 USD per person for a cabin for two, or 400 to 600 USD for a solo cabin. Thanksgiving at Anchor: 1,450 to 2,175 USD in total."
+        },
+        {
+          "question": "How much do I pay to book, and what if I need to cancel?",
+          "answer": "A 20% deposit books your place, and the balance is due 30 days before departure. If you book later than that, you pay in full. If you cancel, the deposit is not refunded. If we cancel, you get 100% back."
+        },
+        {
+          "question": "Do I need a fishing license?",
+          "answer": "The Sea of Cortez requires one for every adult on board. It’s included."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Good to know before you come",
+      "questions": [
+        {
+          "question": "Local currency",
+          "answer": "Mexican peso (MXN). Bills from $20 to $1,000 MXN; the $500 and $1,000 bills can sometimes be difficult to change in small shops. Hotels and most tourism businesses in La Paz accept cards, but in smaller places you will need cash. There are ATMs all over the city.\n\nYou won’t need it on board: meals and non-alcoholic drinks are included."
+        },
+        {
+          "question": "How to get there",
+          "answer": "La Paz Airport (LAP) is 20 minutes from the marina, with domestic flights and some routes to the United States.\n\nThe transfer from the airport to the marina is included.\n\nLos Cabos Airport is 2 hours away by road and is sometimes more convenient, depending on where you are flying from; if that is your case, write to us and we’ll look into it."
+        },
+        {
+          "question": "Food",
+          "answer": "La Paz cuisine revolves around the sea: chocolate clams cooked over hot stones, ceviche with a touch of mayonnaise, marlin or octopus quesadillas, and machaca, dried beef or pork, the classic that does not come from the sea. Fish tacos are an icon of the peninsula (they were born farther north, in Ensenada), but here they are just as much at home.\n\nOn board, the chef cooks with what these same waters provide, unless you ask for something else."
+        },
+        {
+          "question": "What to bring",
+          "answer": "Tip: bring less than you think.\n\nOn board you only need a dry swimsuit to change into; the crew takes care of the rest.\n\nFor everything else, light clothing made from natural fabrics for the dry heat, something for the cooler evenings, and a hat, because the desert sun hits directly."
+        },
+        {
+          "question": "Weather",
+          "answer": "Desert climate, dry almost all year round.\n\nNovember: northerly winds may come in, bringing short choppy seas. That is why the captain decides the route each day.\n\nWinter (December to February): mild, from 18 to 24 °C, the most pleasant season.\n\nSpring (April and May): the heat starts rising.\n\nSummer (June to August): hot and humid, from 28 to 31 °C.\n\nHurricane season: from May 15 to November 30, with the risk concentrated in August and September."
+        },
+        {
+          "question": "Connection",
+          "answer": "At sea, signal is limited, so expect to be disconnected for a good part of the day.\n\nIn La Paz, wifi works well. Starlink on board."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Let’s talk about your expedition",
+      "lede": "Find us directly on WhatsApp or by email: +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "Check out the complete proposal",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+        "label": "Contact us for more info",
+        "href": "/en/contact/"
+      },
+      "_template": "cta"
+    },
+    {
+      "title": "See the full proposal",
+      "lede": "Prefer everything in one place? Open the full proposal, with booking and a downloadable PDF.",
+      "cta": {
+        "label": "Open the full proposal",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness"
       },
       "_template": "cta"
     },

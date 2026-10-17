@@ -6,15 +6,18 @@
  */
 import MoguProposal from "../MoguProposal.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
+import { moguForLocale } from "../../lib/mogu";
+import type { Locale } from "../../i18n/config";
 import type { MoguProposalBlock, LandingPageBlocksParent } from "./blockTypes";
 
 interface Props {
   block: MoguProposalBlock;
   landingPage: LandingPageBlocksParent;
   index: number;
+  locale: Locale;
 }
 
-const { block, landingPage, index } = Astro.props;
+const { block, landingPage, index, locale } = Astro.props;
 ---
 
 <section
@@ -23,7 +26,7 @@ const { block, landingPage, index } = Astro.props;
 >
   <div data-tina-field={tinaField(block, "tripSlug")}>
     <MoguProposal
-      tripSlug={block.tripSlug}
+      tripSlug={moguForLocale(locale, block.tripSlug)}
       height={block.height ?? undefined}
       title={block.iframeTitle ?? undefined}
       hideLogo={block.hideLogo ?? false}

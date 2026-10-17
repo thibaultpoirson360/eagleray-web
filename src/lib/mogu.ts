@@ -29,3 +29,18 @@ export function firstBlockHasHeading(blocks: ({ __typename: string } | null | un
 export function startsWithHero(blocks: ({ __typename: string } | null | undefined)[] | null | undefined): boolean {
   return (blocks?.[0]?.__typename ?? "").endsWith("BlocksHero");
 }
+
+/**
+ * Mogu proposals could exist per language, with the page swapping in the
+ * Spanish one. For now every language points at the English proposal, so this
+ * list is empty. When a proposal has a Spanish version, add a line:
+ * "<English trip code>": "<Spanish trip code>".
+ */
+const MOGU_SPANISH: Record<string, string> = {};
+
+/** A Mogu link or trip code, in the proposal for `locale` when one exists. */
+export function moguForLocale(locale: string, value?: string | null): string {
+  if (!value) return "";
+  if (locale !== "es") return value;
+  return Object.entries(MOGU_SPANISH).reduce((out, [en, es]) => out.replaceAll(en, es), value);
+}

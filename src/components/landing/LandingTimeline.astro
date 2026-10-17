@@ -1,0 +1,71 @@
+---
+/**
+ * `timeline` landing block: an ordered list of steps with a thin line down the
+ * side. Used for a route (four stops) and for a day on board (times of day).
+ * A step's small label is its time or day; without one the steps are numbered.
+ * A step can carry a photo: on desktop it sits beside the step's text (the list
+ * stays in order, so the route still reads as one clear line); on a phone it
+ * goes under the text.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const steps = ((block.steps ?? []) as any[]).flatMap((step, i) => (step?.stepTitle ? [{ step, i }] : []));
+const hasPhotos = steps.some(({ step }) => step.stepImage || step.stepImageNote);
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class:list={["mx-auto", hasPhotos ? "max-w-[1000px]" : "max-w-[760px]"]}>
+    <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
+
+    <ol class="mt-section-head border-l border-ink/14">
+      {
+        steps.map(({ step, i }, n) => (
+          <li
+            class:list={["relative pb-12 pl-8 last:pb-0", step.stepImage || step.stepImageNote ? "md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,21rem)] md:items-center md:gap-10" : ""]}
+            data-tina-field={tinaField(block, "steps", i)}
+          >
+            <span aria-hidden="true" class="absolute top-[.55rem] -left-[4.5px] size-2 rounded-full bg-ink" />
+            <div>
+              <p class="font-mono text-[.7rem] tracking-[.14em] text-ink/64 uppercase">{step.stepLabel || String(n + 1).padStart(2, "0")}</p>
+              <h3 class="mt-1.5 font-display text-[1.3rem]">{step.stepTitle}</h3>
+              {step.stepText && <p class="mt-2 max-w-[60ch] leading-[1.65] text-ink/74">{step.stepText}</p>}
+            </div>
+            {(step.stepImage || step.stepImageNote) && (
+              <div class="relative mt-5 aspect-[4/3] overflow-hidden rounded-lg bg-ink md:mt-0">
+                {step.stepImage ? (
+                  <img src={step.stepImage} alt={step.stepImageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
+                ) : (
+                  <p class="absolute inset-0 flex items-center justify-center px-6 text-center font-mono text-[.7rem] tracking-[.14em] text-white/60">{step.stepImageNote}</p>
+                )}
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+
+    {
+      block.footnote && (
+        <div class="mt-10 max-w-[60ch] space-y-3 text-[.92rem] leading-[1.65] text-ink/64" data-tina-field={tinaField(block, "footnote")}>
+          {String(block.footnote)
+            .split(/\n\s*\n/)
+            .map((p) => (
+              <p>{p}</p>
+            ))}
+        </div>
+      )
+    }
+  </div>
+</section>

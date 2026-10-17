@@ -1,0 +1,63 @@
+---
+/**
+ * `includes` landing block: what is included and what is not, in two
+ * columns (stacked on a phone). Both lists are rich text, so bold headings and
+ * bullets are written in the editor.
+ */
+import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import BodyParagraph from "../richtext/BodyParagraph.astro";
+import ImageSlider from "../ImageSlider.tsx";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const components = { p: BodyParagraph };
+const photos = ((block.gallery ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title }));
+const showGallery = photos.length > 0 || !!block.galleryNote;
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <h2 class="h2 mb-section-head text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+  <div class="grid gap-12 md:grid-cols-2 md:gap-16">
+    <div>
+      {block.includedTitle && <h3 class="mb-6 font-mono text-[.72rem] tracking-[.14em] text-ink/64 uppercase" data-tina-field={tinaField(block, "includedTitle")}>{block.includedTitle}</h3>}
+      <div class="crew-list text-ink/78 [&_li]:mb-1.5 [&_strong]:mt-6 [&_strong]:block [&_strong]:font-display [&_strong]:text-[1.1rem] [&_strong]:font-medium [&_strong]:text-ink [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-5" data-tina-field={tinaField(block, "included")}>
+        <TinaMarkdown content={block.included} components={components} />
+      </div>
+    </div>
+    <div class="md:sticky md:top-28 md:self-start">
+      {block.notIncludedTitle && <h3 class="mb-6 font-mono text-[.72rem] tracking-[.14em] text-ink/64 uppercase" data-tina-field={tinaField(block, "notIncludedTitle")}>{block.notIncludedTitle}</h3>}
+      <div class="text-ink/64 [&_li]:mb-1.5 [&_ul]:list-disc [&_ul]:pl-5" data-tina-field={tinaField(block, "notIncluded")}>
+        <TinaMarkdown content={block.notIncluded} components={components} />
+      </div>
+      {
+        showGallery && (
+          <div class="relative mt-12 hidden aspect-[4/3] overflow-hidden rounded-lg bg-ink md:block" data-tina-field={tinaField(block, "gallery")}>
+            {photos.length > 0 ? (
+              <ImageSlider
+                client:visible
+                photos={photos}
+                previousLabel="Previous photo"
+                nextLabel="Next photo"
+                dotLabel="Photo"
+                dotsAt="bottom"
+                className="h-full w-full"
+              />
+            ) : (
+              <p class="absolute inset-0 flex items-center justify-center px-8 text-center font-mono text-[.76rem] tracking-[.14em] text-white/60">{block.galleryNote}</p>
+            )}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
