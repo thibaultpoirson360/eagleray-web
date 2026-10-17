@@ -1,0 +1,46 @@
+---
+/**
+ * `actions` landing block: a small centred row with a main button ("Book now",
+ * dark blue) and a second one ("Contact us for more info") that opens the
+ * contact form with a message already written. Placed between the longer
+ * sections of a proposal so the visitor can act without scrolling back.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "../ui/Button.astro";
+import { moguForLocale } from "../../lib/mogu";
+import { localePath, type Locale } from "../../i18n/config";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+const contactHref = localePath(locale, "contact/") + (block.secondaryMessage ? `?message=${encodeURIComponent(block.secondaryMessage)}` : "");
+---
+
+<section
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-14 text-center"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  {block.heading && <p class="mb-6 font-display text-[1.25rem] text-ink" data-tina-field={tinaField(block, "heading")}>{block.heading}</p>}
+  <div class="flex flex-wrap items-center justify-center gap-3">
+    {
+      block.primaryLabel && block.primaryHref && (
+        <Button href={moguForLocale(locale, block.primaryHref)} variant="primary" context="default" data-tina-field={tinaField(block, "primaryLabel")}>
+          {block.primaryLabel}
+        </Button>
+      )
+    }
+    {
+      block.secondaryLabel && (
+        <Button href={contactHref} variant="ghost" context="default" data-tina-field={tinaField(block, "secondaryLabel")}>
+          {block.secondaryLabel}
+        </Button>
+      )
+    }
+  </div>
+</section>
