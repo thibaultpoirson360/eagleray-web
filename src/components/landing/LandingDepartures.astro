@@ -51,7 +51,7 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
     {
       options.map(({ option, i }) => (
         <li class="flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(block, "options", i)}>
-          <div class="relative aspect-[16/10] w-full overflow-hidden bg-ink">
+          <div class="relative aspect-video w-full overflow-hidden bg-ink">
             {photosOf(option).length > 0 ? (
               <ImageSlider
                 client:visible
@@ -60,6 +60,7 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
                 nextLabel="Next photo"
                 dotLabel="Photo"
                 dotsAt="bottom"
+                fit="contain"
                 className="h-full w-full"
               />
             ) : (
