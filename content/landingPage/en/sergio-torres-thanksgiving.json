@@ -164,6 +164,13 @@
       "_template": "timeline"
     },
     {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about Sergio Torres' Thanksgiving expedition.",
+      "_template": "actions"
+    },
+    {
       "title": "Spearfishing with Sergio",
       "lede": "From the water to the table, the same day.",
       "blurb": "Snorkeling is looking at the sea. Spearfishing while freediving is entering it.",
@@ -227,6 +234,13 @@
       ],
       "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking. So you can start getting familiar, these are some of the captains and chefs we sail with.",
       "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about Sergio Torres' Thanksgiving expedition.",
+      "_template": "actions"
     },
     {
       "title": "Frequently asked questions",

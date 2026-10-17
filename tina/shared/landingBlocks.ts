@@ -16,7 +16,7 @@ export const landingBlocksField = (): TinaField => (
     list: true,
     ui: {
       itemProps: (item: Record<string, any>) => ({
-        label: item?.title || item?.tripSlug || (item?._template === "funnel" ? "Trip planning form" : "Block"),
+        label: item?.title || item?.tripSlug || item?.heading || item?.primaryLabel || (item?._template === "funnel" ? "Trip planning form" : "Block"),
       }),
     },
     templates: [
@@ -211,6 +211,17 @@ export const landingBlocksField = (): TinaField => (
             description: 'Each one is the member\'s file name in Crew, e.g. "benji", "antoine", "sergio-torres-canei".',
           },
           { type: "string", name: "note", label: "Note under the slider", ui: textarea },
+        ],
+      },
+      {
+        name: "actions",
+        label: "Two buttons (a main one and a \"more info\" one)",
+        fields: [
+          { type: "string", name: "heading", label: "Short line above the buttons (optional)" },
+          { type: "string", name: "primaryLabel", label: "Main button: words", description: 'e.g. "Book now"' },
+          { type: "string", name: "primaryHref", label: "Main button: link" },
+          { type: "string", name: "secondaryLabel", label: "Second button: words", description: 'e.g. "Contact us for more info"' },
+          { type: "string", name: "secondaryMessage", label: "Second button: message already written in the contact form", ui: textarea, description: "The second button opens the contact form with this message." },
         ],
       },
       {
