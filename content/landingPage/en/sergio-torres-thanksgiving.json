@@ -16,7 +16,7 @@
     {
       "member": "sergio-torres-canei",
       "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
-      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio_torres_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
       "_template": "memberProfile"
     },
     {
@@ -45,13 +45,14 @@
             }
           ],
           "detailsText": "Back on land Wednesday afternoon, in time for Thanksgiving at home.\n\nIt’s confirmed once two cabins are booked, by October 31. If not, you get 100% of what you paid back, or a new date.",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "The Lagoon 450F catamaran at anchor off Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo: the Lagoon 450F catamaran at anchor, with guests on the flybridge",
           "bookLabel": "Book now",
           "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
           "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Open Cabins departure (November 22 to 25).",
-          "images": []
+          "infoMessage": "I'd like more information about the Open Cabins departure (November 22 to 25)."
         },
         {
           "name": "Thanksgiving at Anchor",
@@ -67,18 +68,18 @@
             }
           ],
           "detailsText": "Private boat only, for one group: your family or your friends.\n\nSpecial: Thanksgiving dinner menu at anchor on Thursday night.\n\nBook by November 4th. Your trip is confirmed once we lock the boat.",
+          "images": [],
           "imageAlt": "The Beneteau Sense 55 sailboat under sail",
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 under sail, or a Thanksgiving table on deck",
           "bookLabel": "Book now",
           "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
           "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Thanksgiving at Anchor departure (November 26 to 29).",
-          "images": []
+          "infoMessage": "I'd like more information about the Thanksgiving at Anchor departure (November 26 to 29)."
         }
       ],
-      "_template": "departures",
       "bookingLabel": "Info on booking",
-      "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n"
+      "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n",
+      "_template": "departures"
     },
     {
       "title": "What is included",
@@ -86,9 +87,9 @@
       "included": "**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
       "notIncludedTitle": "Not included",
       "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* Scuba diving, depending on number of dives and certifications\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
-      "_template": "includes",
       "gallery": [],
-      "galleryNote": "[PENDIENTE] Photos for this slider: lunch on board, the paddleboards and kayak, the dinghy, the crew on deck"
+      "galleryNote": "[PENDIENTE] Photos for this slider: lunch on board, the paddleboards and kayak, the dinghy, the crew on deck",
+      "_template": "includes"
     },
     {
       "title": "The route",
