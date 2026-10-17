@@ -176,6 +176,7 @@ export const landingBlocksField = (): TinaField => (
         label: "Activity with a big photo and a \"more about it\" that opens",
         fields: [
           { type: "string", name: "title", label: "Heading", required: true },
+          { type: "string", name: "tag", label: "Small tag beside the heading (optional)", description: 'e.g. "Price on request · approx. 360 USD per person per day"' },
           { type: "string", name: "lede", label: "Short line under the heading (e.g. a tagline)" },
           { type: "string", name: "blurb", label: "Text (2 or 3 sentences)", ui: textarea },
           {
@@ -192,6 +193,8 @@ export const landingBlocksField = (): TinaField => (
           { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
           { type: "string", name: "moreLabel", label: "Words on the line that opens the details", description: 'e.g. "More about spearfishing"' },
           { type: "rich-text", name: "more", label: "Details (closed until the visitor opens them)" },
+          { type: "string", name: "buttonLabel", label: "Button inside the details: words (optional)", description: 'e.g. "Ask about the price". Opens the contact form.' },
+          { type: "string", name: "buttonMessage", label: "Button inside the details: message already written in the contact form", ui: textarea },
         ],
       },
       {

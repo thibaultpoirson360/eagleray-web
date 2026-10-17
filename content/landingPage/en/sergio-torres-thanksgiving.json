@@ -186,7 +186,8 @@
       "_template": "feature"
     },
     {
-      "title": "Scuba diving (price on request)",
+      "title": "Scuba diving",
+      "tag": "Price on request · approx. 360 USD per person per day",
       "blurb": "For those who want to go deeper than freediving. Around La Paz there are dive sites for different levels.",
       "photos": [
         {
@@ -197,6 +198,8 @@
       "photoNote": "divers at the Salvatierra wreck, or a school of fish",
       "moreLabel": "More about scuba diving",
       "more": "* Salvatierra: a 75-meter ferry that sank in 1976 after hitting a nearby reef. Today it’s an artificial reef, with groupers, schools of fish and black coral on parts of the hull. About 18 meters deep, Open Water level.\n* El Bajo: three underwater seamounts where you may see pelagic sharks, such as hammerheads and silky sharks. Because of the depth and conditions, Advanced Open Water certification is required.\n\nOrganized by number of dives and the group’s certifications. **Price on request.**\n",
+      "buttonLabel": "Ask about the price",
+      "buttonMessage": "I'd like to know how much it would cost to add scuba diving to Sergio Torres' Thanksgiving expedition.",
       "_template": "feature"
     },
     {

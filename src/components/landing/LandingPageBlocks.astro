@@ -62,7 +62,7 @@ const { landingPage, locale } = Astro.props;
         {kind === "Departures" && <LandingDepartures block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Includes" && <LandingIncludes block={block} landingPage={landingPage} index={index} />}
         {kind === "Timeline" && <LandingTimeline block={block} landingPage={landingPage} index={index} />}
-        {kind === "Feature" && <LandingFeature block={block} landingPage={landingPage} index={index} />}
+        {kind === "Feature" && <LandingFeature block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "CrewShowcase" && <LandingCrewShowcase block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Actions" && <LandingActions block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Faq" && <LandingFaq block={block} landingPage={landingPage} index={index} />}
