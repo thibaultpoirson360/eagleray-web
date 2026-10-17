@@ -7,6 +7,8 @@
 import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
 import ImageSlider from "../ImageSlider.tsx";
+import Button from "../ui/Button.astro";
+import { localePath, type Locale } from "../../i18n/config";
 import BodyParagraph from "../richtext/BodyParagraph.astro";
 import type { LandingPageBlocksParent } from "./blockTypes";
 
@@ -14,9 +16,11 @@ interface Props {
   block: any;
   landingPage: LandingPageBlocksParent;
   index: number;
+  locale: Locale;
 }
 
-const { block, landingPage, index } = Astro.props;
+const { block, landingPage, index, locale } = Astro.props;
+const contactHref = localePath(locale, "contact/") + (block.buttonMessage ? `?message=${encodeURIComponent(block.buttonMessage)}` : "");
 const photos = ((block.photos ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title }));
 ---
 
@@ -35,7 +39,10 @@ const photos = ((block.photos ?? []) as any[]).filter((p) => p?.image).map((p) =
   </div>
 
   <div class="mx-auto mt-10 max-w-[760px]">
-    <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    <div class="flex flex-wrap items-baseline gap-x-5 gap-y-3">
+      <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+      {block.tag && <p class="rounded-sm border border-ink/40 px-3 py-1 font-display text-[.85rem] font-normal text-ink/74" data-tina-field={tinaField(block, "tag")}>{block.tag}</p>}
+    </div>
     {block.lede && <p class="mt-3 font-serif text-quote-lead text-ink/64 italic" data-tina-field={tinaField(block, "lede")}>{block.lede}</p>}
     {block.blurb && <p class="mt-5 max-w-[60ch] text-lede leading-[1.7] text-ink/78" data-tina-field={tinaField(block, "blurb")}>{block.blurb}</p>}
 
@@ -49,6 +56,13 @@ const photos = ((block.photos ?? []) as any[]).filter((p) => p?.image).map((p) =
           <div class="mt-5 text-ink/78 [&_li]:mb-1.5 [&_strong]:mt-5 [&_strong]:block [&_strong]:font-display [&_strong]:text-[1.05rem] [&_strong]:font-medium [&_strong]:text-ink [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:pl-5" data-tina-field={tinaField(block, "more")}>
             <TinaMarkdown content={block.more} components={{ p: BodyParagraph }} />
           </div>
+          {block.buttonLabel && (
+            <div class="mt-6">
+              <Button href={contactHref} variant="primary" context="default" size="sm" data-tina-field={tinaField(block, "buttonLabel")}>
+                {block.buttonLabel}
+              </Button>
+            </div>
+          )}
         </details>
       )
     }
