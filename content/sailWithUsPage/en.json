@@ -8,26 +8,26 @@
     "href": "/en/customize-your-expedition/"
   },
   "intro": "We build private sailing trips around your group, not the other way around.\nYou choose who comes.\nOur team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
-  "expeditionsLabel": "Choose the expedition",
+  "expeditionsLabel": "Choose your expedition",
   "expeditions": [
     {
       "name": "Recalibration Expedition",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Recalibration Expedition",
-      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
-      "href": "/en/recalibration-expedition/",
       "facts": "3, 5 or 7 nights · private boat",
-      "priceNote": "From 14,500 USD, whole boat"
+      "priceNote": "From 14,500 USD, whole boat",
+      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
+      "href": "/en/recalibration-expedition/"
     },
     {
       "name": "Thanksgiving with Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Active Expedition",
-      "description": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
-      "href": "/en/landing/sergio-torres-thanksgiving/",
       "badge": "Limited dates · Nov 22 to 29",
       "facts": "2 departures · 3 nights each",
-      "priceNote": "From 4,000 USD"
+      "priceNote": "From 4,000 USD",
+      "description": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
+      "href": "/en/landing/sergio-torres-thanksgiving/"
     },
     {
       "name": "Your own expedition",
@@ -35,21 +35,6 @@
       "imageAlt": "A custom sailing expedition",
       "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
       "href": "/en/ad-hoc-expedition/"
-    }
-  ],
-  "howTitle": "How it works",
-  "howSteps": [
-    {
-      "title": "Tell us who is coming",
-      "text": "Who is coming, when you want to go and what you'd like your days at sea to look like."
-    },
-    {
-      "title": "We plan it around your group",
-      "text": "Our team plans the boat, the crew and the route around your group, and adapts it day by day."
-    },
-    {
-      "title": "We come back with a proposal",
-      "text": "Fill in the form and we'll come back to you with a proposal."
     }
   ],
   "activitiesTitle": "Add activities to your expedition",
@@ -124,6 +109,21 @@
       "imageAlt": "Kayak",
       "imageNote": "",
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
+    }
+  ],
+  "howTitle": "How it works",
+  "howSteps": [
+    {
+      "title": "Tell us who is coming",
+      "text": "Who is coming, when you want to go and what you'd like your days at sea to look like."
+    },
+    {
+      "title": "We plan it around your group",
+      "text": "Our team plans the boat, the crew and the route around your group, and adapts it day by day."
+    },
+    {
+      "title": "We come back with a proposal",
+      "text": "Fill in the form and we'll come back to you with a proposal."
     }
   ],
   "closingTitle": "Not sure which one is for you?",
