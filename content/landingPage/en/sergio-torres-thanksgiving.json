@@ -172,6 +172,13 @@
       "_template": "timeline"
     },
     {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about Sergio Torres' Thanksgiving expedition.",
+      "_template": "actions"
+    },
+    {
       "title": "Spearfishing with Sergio",
       "lede": "From the water to the table, the same day.",
       "blurb": "Snorkeling is looking at the sea. Spearfishing while freediving is entering it.",
@@ -187,7 +194,8 @@
       "_template": "feature"
     },
     {
-      "title": "Scuba diving (price on request)",
+      "title": "Scuba diving",
+      "tag": "Price on request · approx. 360 USD per person per day",
       "blurb": "For those who want to go deeper than freediving. Around La Paz there are dive sites for different levels.",
       "photos": [
         {
@@ -198,6 +206,8 @@
       "photoNote": "divers at the Salvatierra wreck, or a school of fish",
       "moreLabel": "More about scuba diving",
       "more": "* Salvatierra: a 75-meter ferry that sank in 1976 after hitting a nearby reef. Today it’s an artificial reef, with groupers, schools of fish and black coral on parts of the hull. About 18 meters deep, Open Water level.\n* El Bajo: three underwater seamounts where you may see pelagic sharks, such as hammerheads and silky sharks. Because of the depth and conditions, Advanced Open Water certification is required.\n\nOrganized by number of dives and the group’s certifications. **Price on request.**\n",
+      "buttonLabel": "More information",
+      "buttonMessage": "I'd like to know how much it would cost to add scuba diving to Sergio Torres' Thanksgiving expedition.",
       "_template": "feature"
     },
     {
@@ -236,6 +246,13 @@
       ],
       "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking. So you can start getting familiar, these are some of the captains and chefs we sail with.",
       "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about Sergio Torres' Thanksgiving expedition.",
+      "_template": "actions"
     },
     {
       "title": "Frequently asked questions",
