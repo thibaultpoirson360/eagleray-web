@@ -1,33 +1,24 @@
 name: Translate content (DeepL draft)
 
-# Trigger: a push to main that touches EN source content —
-# content/<collection>/en.json (one-doc-per-locale sections, e.g. hero,
-# funnel) or content/<collection>/en/<slug>.json (multi-doc collections,
-# e.g. crew, boats, blogPost) — see docs/translation-workflow.md for how
-# this path was confirmed against the actual Tina schema/content layout,
-# not assumed. workflow_dispatch is a manual escape hatch (e.g. to re-run
-# after adding/fixing the DEEPL_API_KEY secret), and the way to bring a whole
-# site to a new language: run it with scope "missing" (see the input below).
+# MANUAL FALLBACK ONLY. Spanish and French are normally drafted by the
+# assistant: a person runs /translate in Claude Code after a batch of editor
+# changes and reviews the resulting pull request (see
+# docs/translation-workflow.md). This workflow used to run on every push to
+# main that touched English content, and re-translated every changed file with
+# DeepL on every save. That trigger is gone; nothing runs automatically.
 #
-# This workflow commits the drafted ES/FR translations (and deletions of
-# translations whose English source was removed) straight to main — there is
-# no pull request. A push made with GITHUB_TOKEN does not start another
-# workflow run, so this cannot loop. See docs/translation-workflow.md.
+# Run it by hand (Actions > Run workflow) only if /translate is not an option.
+# It uses the DeepL API (DEEPL_API_KEY secret) and COMMITS DIRECTLY TO main
+# with no review. Scope "missing" only creates files that do not exist yet.
 on:
-  push:
-    branches: [main]
-    paths:
-      - "content/**/en.json"
-      - "content/**/en/*.json"
   workflow_dispatch:
     inputs:
       scope:
         description: >-
           What to translate. "changed" = only files changed by the last commit.
           "missing" = every EN document, but ONLY the ES/FR files that don't
-          exist yet (never touches an existing/reviewed translation) — use
-          this to bring the whole site to a language. "all" = every EN
-          document, overwriting every existing ES/FR file.
+          exist yet (never touches an existing/reviewed translation).
+          "all" = every EN document, overwriting every existing ES/FR file.
         type: choice
         options: [changed, missing, all]
         default: missing
@@ -74,16 +65,11 @@ jobs:
         id: translate
         env:
           DEEPL_API_KEY: ${{ secrets.DEEPL_API_KEY }}
-          # Diff exactly what this push changed. On a non-push trigger
-          # (workflow_dispatch) or a brand-new branch's first push (where
-          # `before` is the all-zeros SHA), the script's own git-diff error
-          # handling falls back to `HEAD^...HEAD` or, failing that, a full
-          # content rescan — see scripts/translate-content.mjs.
-          GIT_BASE_SHA: ${{ github.event_name == 'push' && github.event.before || '' }}
+          # "changed" compares the last commit (HEAD^...HEAD); the script falls
+          # back to a full rescan if that diff is not possible.
+          GIT_BASE_SHA: ''
           GIT_HEAD_SHA: ${{ github.sha }}
-          # Only a manual run can pick a wider scope; a push always
-          # translates exactly what it changed.
-          TRANSLATE_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'changed' }}
+          TRANSLATE_SCOPE: ${{ inputs.scope }}
         run: node --experimental-strip-types scripts/translate-content.mjs
 
       - name: Commit the draft translations straight to main
