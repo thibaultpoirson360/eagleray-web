@@ -15,6 +15,10 @@ export interface ExpeditionCard {
   /** Short text under the card, and its `data-tina-field`. */
   description?: string;
   descriptionField?: string;
+  /** Small badge on the photo (e.g. limited dates), a facts line and a price line under the text. */
+  badge?: string;
+  facts?: string;
+  priceNote?: string;
 }
 
 interface Props {
@@ -40,8 +44,13 @@ const columns =
           {expedition.image && (
             <img src={expedition.image} alt={expedition.imageAlt ?? ""} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />
           )}
-          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/5 to-ink/55" />
-          <p class="absolute top-4 left-4 right-4 font-display text-[1.05rem] text-white">{expedition.name}</p>
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/5 to-ink/55" />
+          <p class="absolute top-4 left-4 right-4 font-display text-[1.15rem] text-white">{expedition.name}</p>
+          {expedition.badge && (
+            <span class="absolute right-4 bottom-[4.5rem] left-4 w-fit rounded-sm bg-ink px-[.7rem] py-[.35rem] font-mono text-[.6rem] tracking-[.1em] text-white uppercase">
+              {expedition.badge}
+            </span>
+          )}
           <span class="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-sm bg-white/90 px-6 py-2.5 text-[.82rem] tracking-[.04em] whitespace-nowrap text-ink transition-colors group-hover:bg-white">
             {linkLabel}
           </span>
@@ -51,6 +60,8 @@ const columns =
             {expedition.description}
           </p>
         )}
+        {expedition.facts && <p class="mt-3 font-mono text-[.68rem] tracking-[.1em] text-ink/64 uppercase">{expedition.facts}</p>}
+        {expedition.priceNote && <p class="mt-1 font-display text-[1.05rem] text-ink">{expedition.priceNote}</p>}
       </div>
     ))
   }

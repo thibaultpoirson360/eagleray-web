@@ -17,7 +17,8 @@ interface Props {
 }
 
 const { page, locale } = Astro.props;
-const activities = (page.activities ?? []).flatMap((activity, i) => (activity?.name ? [{ activity, i }] : []));
+// Only activities that already have a photo are shown, so the page never has empty dark squares. Add a photo in the editor and the card appears.
+const activities = (page.activities ?? []).flatMap((activity, i) => (activity?.name && activity.image ? [{ activity, i }] : []));
 // Main activities ("Large card") come first, two per row; the rest follow three per row.
 const large = activities.filter(({ activity }) => activity.featured);
 const regular = activities.filter(({ activity }) => !activity.featured);
@@ -39,15 +40,20 @@ const contactHref = (message?: string | null) =>
 
   {
     [
-      { items: large, columns: "md:grid-cols-2", big: true },
-      { items: regular, columns: "md:grid-cols-2 lg:grid-cols-3", big: false },
+      { items: large, columns: large.length === 1 ? "" : "md:grid-cols-2", big: true },
+      { items: regular, columns: regular.length === 1 ? "" : regular.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3", big: false },
     ].map(
       (group) =>
         group.items.length > 0 && (
-          <ul class={`grid gap-8 ${group.columns} ${group.big ? "" : "mt-8"}`}>
+          <ul
+            class={`-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:grid md:gap-8 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden ${group.columns} ${group.big ? "" : "mt-8"}`}
+            tabindex="0"
+            role="group"
+            aria-label={page.activitiesTitle ?? undefined}
+          >
             {group.items.map(({ activity, i }) => (
               <li
-                class="group relative flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white"
+                class="group relative flex w-[82%] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white md:w-auto"
                 data-tina-field={tinaField(page, "activities", i)}
               >
                 {/* The whole photo shows. On hover or keyboard focus a white banner rises from the bottom with the explanation and the button. On touch screens (no hover) the banner sits under the photo instead. */}
@@ -60,6 +66,12 @@ const contactHref = (message?: string | null) =>
                     </p>
                   )}
                   <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/65 via-transparent to-transparent [@media(hover:none)]:hidden" />
+                  <span
+                    aria-hidden="true"
+                    class="pointer-events-none absolute top-4 right-4 flex size-8 items-center justify-center rounded-full bg-white/90 text-ink transition-opacity duration-500 group-focus-within:opacity-0 group-hover:opacity-0 [@media(hover:none)]:hidden"
+                  >
+                    +
+                  </span>
                   <p
                     aria-hidden="true"
                     class={`pointer-events-none absolute right-5 bottom-5 left-5 font-display text-white [@media(hover:none)]:hidden ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}
