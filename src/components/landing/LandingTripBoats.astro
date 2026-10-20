@@ -1,0 +1,165 @@
+---
+/**
+ * `tripBoats` landing block: the boats of a trip as big panels, photo slider
+ * on one side and the name, the departure it is for, the specs and the key
+ * features on the other (sides alternate). Photos come from the Boats
+ * collection, so they are edited once and match the Boats page. The specs,
+ * description and features can be overridden per trip (they come from the
+ * proposal and can differ from the boat's data sheet), with an "or similar"
+ * note. "See full details" opens the same pop-up as the Boats page.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import ImageSlider from "../ImageSlider.tsx";
+import BoatsModalHost from "../BoatsModalHost.tsx";
+import type { BoatCard } from "../BoatModal.tsx";
+import { loadBoats, loadBoatsSection } from "../../lib/content";
+import type { Locale } from "../../i18n/config";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+  locale: Locale;
+}
+
+const { block, landingPage, index, locale } = Astro.props;
+const [own, english] = await Promise.all([loadBoats(locale), loadBoats("en")]);
+// The pop-up and spec labels come from the language's Boats section, or the English ones until it has them.
+const ownSection = (await loadBoatsSection(locale)).data.boatsSection.modal;
+const modal = ownSection ?? (locale === "en" ? null : (await loadBoatsSection("en")).data.boatsSection.modal);
+
+const toCard = (boat: any): BoatCard => {
+  const photos = ((boat.photos ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || boat.name }));
+  if (photos.length === 0 && boat.photo) photos.push({ src: boat.photo, alt: boat.photoAlt || boat.name });
+  return {
+    id: boat._sys.filename,
+    name: boat.name,
+    tagline: boat.tagline ?? undefined,
+    description: boat.description ?? undefined,
+    details: boat.details ?? undefined,
+    features: ((boat.features ?? []) as (string | null)[]).filter((f): f is string => !!f),
+    cover: photos[0]?.src,
+    coverAlt: photos[0]?.alt,
+    length: boat.length ?? undefined,
+    cabins: boat.cabins ?? undefined,
+    bathrooms: boat.bathrooms ?? undefined,
+    guests: boat.guests ?? undefined,
+    photos,
+  };
+};
+const panels = ((block.boatItems ?? []) as any[]).flatMap((item, i) => {
+  const name = String(item?.boat ?? "").trim();
+  const boat = own.boats.find((b) => b._sys.filename === name) ?? english.boats.find((b) => b._sys.filename === name);
+  return boat ? [{ item, i, card: toCard(boat) }] : [];
+});
+const stats = (card: BoatCard) =>
+  [
+    [modal?.length, card.length],
+    [modal?.cabins, card.cabins],
+    [modal?.bathrooms, card.bathrooms],
+    [modal?.guests, card.guests],
+  ].filter((pair): pair is [string, string] => !!pair[1]);
+
+// This trip's own specs and features (from the proposal) win over the boat's data sheet.
+const specsOf = (item: any, card: BoatCard): [string, string][] => {
+  const mine = ((item.specs ?? []) as any[]).filter((s) => s?.label && s?.value).map((s) => [s.label as string, s.value as string] as [string, string]);
+  return mine.length > 0 ? mine : stats(card);
+};
+const featuresOf = (item: any, card: BoatCard): string[] => {
+  const mine = ((item.featureList ?? []) as (string | null)[]).filter((f): f is string => !!f);
+  return mine.length > 0 ? mine : (card.features ?? []).slice(0, 6);
+};
+---
+
+<section
+  id="trip-boats"
+  class="relative mx-auto max-w-site scroll-mt-28 border-t border-ink/8 px-pad py-section"
+  data-tina-field={tinaField(landingPage, "blocks", index)}
+>
+  <div class="mb-section-head">
+    <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
+  </div>
+
+  <div class="space-y-20 lg:space-y-28">
+    {
+      panels.map(({ item, i, card }, n) => (
+        <article class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16" data-tina-field={tinaField(block, "boatItems", i)}>
+          <div class:list={["relative aspect-[4/3] overflow-hidden rounded-lg border border-ink/14 bg-white", n % 2 === 1 && "lg:order-2"]}>
+            <ImageSlider
+              client:visible
+              photos={card.photos}
+              previousLabel={modal?.previous ?? ""}
+              nextLabel={modal?.next ?? ""}
+              dotLabel={modal?.photo ?? ""}
+              dotsAt="bottom"
+              fit="contain"
+              tone="light"
+              className="h-full w-full"
+            />
+          </div>
+          <div>
+            {item.tag && <p class="mb-4 w-fit rounded-sm bg-ink px-[.7rem] py-[.35rem] font-mono text-[.62rem] tracking-[.1em] text-white uppercase">{item.tag}</p>}
+            <h3 class="font-display text-[clamp(1.8rem,3.4vw,2.6rem)] leading-[1.05]">{item.displayName || card.name}</h3>
+            {(item.subtitle || card.tagline) && <p class="mt-2 font-mono text-[.72rem] tracking-[.1em] text-ink/64 uppercase">{item.subtitle || card.tagline}</p>}
+            {(item.about || card.description) && <p class="mt-5 max-w-[52ch] text-lede leading-[1.65] text-ink/74">{item.about || card.description}</p>}
+
+            <dl class="mt-8 grid grid-cols-2 gap-5 border-y border-ink/10 py-6 sm:grid-cols-4">
+              {specsOf(item, card).map(([label, value]) => (
+                <div>
+                  <dt class="mb-1 font-mono text-[.6rem] tracking-[.1em] text-ink/45 uppercase">{label}</dt>
+                  <dd class="font-display text-[1.15rem] text-ink">{value}</dd>
+                </div>
+              ))}
+            </dl>
+            {item.tripNote && <p class="mt-4 text-[.92rem] leading-[1.6] text-ink">{item.tripNote}</p>}
+            {item.similarNote && <p class="mt-3 text-[.85rem] leading-[1.6] text-ink/64">{item.similarNote}</p>}
+
+            {featuresOf(item, card).length > 0 && (
+              <ul class="mt-6 grid gap-x-6 gap-y-1.5 text-[.92rem] text-ink/74 sm:grid-cols-2">
+                {featuresOf(item, card).map((feature) => (
+                  <li class="flex gap-2">
+                    <span class="text-ink/35" aria-hidden="true">—</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {block.detailsLabel && (
+              <p class="mt-7">
+                <button
+                  type="button"
+                  data-boat-open={card.id}
+                  class="text-[.95rem] font-medium text-ink underline underline-offset-4 hover:text-ink-hover"
+                >
+                  {block.detailsLabel} →
+                </button>
+              </p>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  {
+    modal && (
+      <BoatsModalHost
+        client:idle
+        photosOnly
+        boats={panels.map((p) => p.card)}
+        labels={{
+          close: modal.close ?? "",
+          previous: modal.previous ?? "",
+          next: modal.next ?? "",
+          photo: modal.photo ?? "",
+          customize: modal.cta?.label ?? "",
+          customizeHref: modal.cta?.href ?? "",
+          stats: { length: modal.length ?? "", cabins: modal.cabins ?? "", bathrooms: modal.bathrooms ?? "", guests: modal.guests ?? "" },
+        }}
+      />
+    )
+  }
+</section>

@@ -1,40 +1,418 @@
 {
-  "title": "Dive the Sea of Cortez with Monik Saab",
+  "title": "Dive & Sail with Monik Saab",
   "blocks": [
     {
       "kicker": "Limited dates · November 2026",
-      "title": "Dive the Sea of Cortez with Monik Saab",
-      "lede": "For certified divers. Dive, sail and sleep at anchor off Espíritu Santo, with a small group of up to 8 guests on board. 3 or 5 days: November 20 to 22, or November 25 to 29.",
+      "title": "Dive & Sail with Monik Saab",
+      "lede": "A day, a night at anchor, or the Thanksgiving weekend off Espíritu Santo. Monik leads the dives, with all the gear on board. The Eagle Ray crew sails the boat, cooks, and reads the sea. For certified divers. Never dived? Ask us about a first session with Monik.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
-      "imageAlt": "Monike Saab Expedition Leader expert in scubadiving in La Paz",
+      "imageAlt": "Monik Saab, Eagle Ray Expedition Leader, scuba diving in La Paz",
+      "cta": {
+        "label": "Book now",
+        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+      },
       "_template": "hero"
     },
     {
       "member": "monique",
-      "body": "### **WHO IS MONIK**\n\n\\\nShe grew up on a beach in Brazil and spent sixteen years in large corporations and teaching English before she made the sea her work.\n\nAsk her what keeps her there and she sums it up in one line:\n\n> \"In the ocean, everybody helps everybody. I wish it were like that on land.\"\n\nMonik will take small groups of divers out on the Sea of Cortez with Eagle Ray. On board, she watches before she speaks: who is relaxed, who checks their gear twice, who wants to go deeper.\\\nThen she plans the dives around them. Which site, how deep, when to get in, and when the best thing is to stay on deck and watch the light go.\n\nToday she is a PADI dive instructor and a licensed expedition guide in Mexico.\\\nSix years diving Baja California Sur, one of them living in La Paz. A license to guide in the Revillagigedo Islands.\\\nSeasons on yachts with helicopter decks. Dive briefings in English, Spanish, Portuguese or German.\n\nFollow her dives at [@nikdive](https://www.instagram.com/nikdive/)\n",
+      "body": "## WHO IS MONIK\n\nMonik grew up on a beach in Brazil. She spent sixteen years in large corporations and teaching English, then made the sea her work.\n\nToday she is a PADI dive instructor and a licensed expedition guide in Mexico, with six years diving Baja California Sur and a license to guide in the Revillagigedo Islands.\n\nBefore the first dive, she watches: who is relaxed, who checks their gear twice, who wants to go deeper. Then she plans each dive around them. Which site, how deep, when to get in, and when the best thing is to stay on deck.\n",
+      "collapseAbout": true,
+      "moreText": "More about Monik:\n\n* PADI dive instructor\n* SECTUR-certified tour guide (NOM-09)\n* Licensed to guide in the Revillagigedo Islands\n* STCW and Seaman's Book\n* Seasons on yachts with helideck operations\n* Has organised multi-day dive trips for her own community\n* Dive briefings in English, Spanish, Portuguese or German\n\nFollow her dives and students on Instagram: [@nikdive](https://www.instagram.com/nikdive/)\n",
       "_template": "memberProfile"
+    },
+    {
+      "title": "Three ways to dive with Monik in November",
+      "intro": "All three sail from Marina Palmira, La Paz, on a Beneteau Sense 55 sailboat, with Monik, an Eagle Ray captain and an Eagle Ray chef. Dives and dive gear are included. Pick one, or join two back to back.\n\nBook a suite with a partner or a friend, or take the whole boat with your people.",
+      "options": [
+        {
+          "name": "Dive Day",
+          "dates": "Monday, November 23 · day trip · 1 dive",
+          "description": "One dive at San Rafaelito, then lunch on board, snorkeling and the rest of the day on deck. Back at the marina in the afternoon.",
+          "boatLine": "Up to 6 guests",
+          "images": [],
+          "imageAlt": "Divers at San Rafaelito, La Paz",
+          "imageNote": "[PENDIENTE] Photo: diving at San Rafaelito, or lunch on deck",
+          "bookLabel": "Book now",
+          "bookHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+          "infoLabel": "Contact us for more info",
+          "infoMessage": "I'd like more information about the Dive Day with Monik (November 23)."
+        },
+        {
+          "name": "One Night at Anchor",
+          "dates": "Tuesday, November 24 → Wednesday, November 25 · 1 night · 2 dives",
+          "description": "Sail out to the south of Espíritu Santo, dive Fang Ming, and stay for the sunset and dinner at anchor. Dive Isla Ballena the next morning, then lunch on board and back to La Paz in the afternoon.",
+          "boatLine": "2 guest suites · up to 4 guests",
+          "images": [],
+          "imageAlt": "The Beneteau Sense 55 at anchor off Espíritu Santo",
+          "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 at anchor at sunset",
+          "bookLabel": "Book now",
+          "bookHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+          "infoLabel": "Contact us for more info",
+          "infoMessage": "I'd like more information about the One Night at Anchor departure (November 24 to 25)."
+        },
+        {
+          "name": "Thanksgiving Dive Expedition",
+          "featured": true,
+          "dates": "Thursday, November 26 → Sunday, November 29 · 3 nights · 4 dives, plus a 5th if conditions and the group allow",
+          "description": "Three nights around Espíritu Santo, with time to reach the north and the sea lion colony at Los Islotes. Thanksgiving dinner at anchor on Thursday night. No dive on the last morning: a slow breakfast, a swim, and back at the marina around midday on Sunday.",
+          "boatLine": "2 guest suites · up to 4 guests",
+          "priceSummary": "From 14,500 USD, whole boat",
+          "images": [],
+          "imageAlt": "Divers with the sea lions at Los Islotes",
+          "imageNote": "[PENDIENTE] Photo: diving with the sea lions at Los Islotes",
+          "bookLabel": "Book now",
+          "bookHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+          "infoLabel": "Contact us for more info",
+          "infoMessage": "I'd like more information about the Thanksgiving Dive Expedition (November 26 to 29)."
+        }
+      ],
+      "bookingLabel": "Info on booking",
+      "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 24 for the Dive Day, October 25 for One Night at Anchor, October 27 for the Thanksgiving expedition. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn't fill or for safety, you get 100% back.\n* Each departure is confirmed once two suites are booked. If not, you get 100% of what you paid back, or a new date.\n\nWant more days, or the whole boat for your own group? Write to us.\n",
+      "_template": "departures"
+    },
+    {
+      "title": "What is included",
+      "includedTitle": "Included",
+      "included": "**Crew**\n\n* Monik Saab, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Diving**\n\n* Guided dives with Monik: 1 on the Dive Day, 2 on One Night at Anchor, 4 on the Thanksgiving expedition\n* Full dive gear: tanks, weights, BCD, regulator and wetsuit\n* Dive planning around each diver's level and logbook\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* Paddleboard and kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n* Fishing license for every adult on board\n",
+      "notIncludedTitle": "Not included",
+      "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* A first dive session for non-certified guests, quoted on request\n* The optional 5th dive on the Thanksgiving expedition\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
+      "gallery": [],
+      "_template": "includes"
+    },
+    {
+      "title": "The route",
+      "intro": "The Dive Day and One Night at Anchor leave Marina Palmira at 07:45, when the sea is calmer for sailing and diving. On the Thanksgiving Dive Expedition, guests arrive around midday and the route starts the next morning.",
+      "places": [
+        {
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina Palmira · start and finish",
+          "lat": 24.1585,
+          "lon": -110.3245
+        },
+        {
+          "key": "sanrafaelito",
+          "name": "San Rafaelito",
+          "sub": "Dive, lunch and snorkeling",
+          "lat": 24.2949,
+          "lon": -110.3408
+        },
+        {
+          "key": "fangming",
+          "name": "South of Espíritu Santo",
+          "sub": "Fang Ming dive",
+          "lat": 24.4229,
+          "lon": -110.3148
+        },
+        {
+          "key": "ballena",
+          "name": "Isla Ballena",
+          "sub": "Dive",
+          "lat": 24.4829,
+          "lon": -110.4044
+        },
+        {
+          "key": "islotes",
+          "name": "Los Islotes",
+          "sub": "Sea lion colony",
+          "lat": 24.5988,
+          "lon": -110.402
+        },
+        {
+          "key": "espwest",
+          "name": "Espíritu Santo",
+          "sub": "Roca Tintorera or Los Muellecitos",
+          "lat": 24.5042,
+          "lon": -110.4068
+        }
+      ],
+      "trips": [
+        {
+          "tab": "Dive Day",
+          "beats": [
+            {
+              "label": "Dive Day · November 23",
+              "title": "La Paz → San Rafaelito",
+              "text": "1 dive, lunch on board, snorkeling and time on deck.",
+              "from": "lapaz",
+              "to": "sanrafaelito",
+              "imageAlt": "La Paz → San Rafaelito",
+              "imageNote": "[PENDIENTE] Full-screen photo: leaving La Paz in the morning, or the dive at San Rafaelito"
+            },
+            {
+              "label": "Dive Day · November 23",
+              "title": "San Rafaelito → La Paz",
+              "text": "Back at the marina in the afternoon.",
+              "from": "sanrafaelito",
+              "to": "lapaz",
+              "imageAlt": "San Rafaelito → La Paz",
+              "imageNote": "[PENDIENTE] Full-screen photo: sailing back to La Paz in the afternoon"
+            }
+          ]
+        },
+        {
+          "tab": "One Night",
+          "beats": [
+            {
+              "label": "One Night at Anchor · November 24 to 25 · Day 1",
+              "title": "La Paz → south of Espíritu Santo",
+              "text": "Dive at Fang Ming, sunset and dinner at anchor.",
+              "night": "Night at anchor · south of Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "imageAlt": "La Paz → south of Espíritu Santo",
+              "imageNote": "[PENDIENTE] Full-screen photo: the boat at anchor at sunset"
+            },
+            {
+              "label": "One Night at Anchor · November 24 to 25 · Day 2",
+              "title": "Isla Ballena → La Paz",
+              "text": "Breakfast, dive at Isla Ballena, lunch on board, back in La Paz in the afternoon.",
+              "from": "fangming",
+              "via": [
+                "ballena"
+              ],
+              "to": "lapaz",
+              "imageAlt": "Isla Ballena → La Paz",
+              "imageNote": "[PENDIENTE] Full-screen photo: the dive at Isla Ballena"
+            }
+          ]
+        },
+        {
+          "tab": "Thanksgiving",
+          "beats": [
+            {
+              "label": "Thanksgiving Dive Expedition · November 26 to 29 · Day 1",
+              "title": "La Paz → south of Espíritu Santo",
+              "text": "Guests arrive around midday. Sail south for the first night at anchor, with Thanksgiving dinner on board.",
+              "night": "Night at anchor · south of Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "imageAlt": "La Paz → south of Espíritu Santo",
+              "imageNote": "[PENDIENTE] Full-screen photo: Thanksgiving dinner at anchor"
+            },
+            {
+              "label": "Thanksgiving Dive Expedition · Day 2",
+              "title": "Los Islotes and the north of Espíritu Santo",
+              "text": "Dive at Los Islotes with the sea lion colony, a long lunch, then a dive at El Bajito.",
+              "from": "fangming",
+              "to": "islotes",
+              "imageAlt": "Los Islotes and the north of Espíritu Santo",
+              "imageNote": "[PENDIENTE] Full-screen photo: diving with the sea lions at Los Islotes"
+            },
+            {
+              "label": "Thanksgiving Dive Expedition · Day 3",
+              "title": "Espíritu Santo",
+              "text": "Slow morning with kayak, beach and snorkeling. Dive at Roca Tintorera or Los Muellecitos, depending on conditions and the group's level. A 5th dive at Isla Ballena for groups who want more. Then sail south for the last night.",
+              "night": "Night at anchor",
+              "from": "islotes",
+              "to": "espwest",
+              "imageAlt": "Espíritu Santo",
+              "imageNote": "[PENDIENTE] Full-screen photo: a slow morning on the beach"
+            },
+            {
+              "label": "Thanksgiving Dive Expedition · Day 4",
+              "title": "Back to La Paz",
+              "text": "Breakfast, a swim, no dive. Back at the marina around midday.",
+              "from": "espwest",
+              "to": "lapaz",
+              "imageAlt": "Back to La Paz",
+              "imageNote": "[PENDIENTE] Full-screen photo: the last swim, and the marina"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Proposed route and anchorages. Final plan depends on weather. Positions are approximate. Map data © OpenStreetMap contributors.",
+      "footnote": "Indicative route. It depends on the sea, the wind, the permits and the captain's call. In November, northerly winds can come in, and if they do we change the order of the sites or stay at the same anchorage.",
+      "_template": "cinematicRoute"
+    },
+    {
+      "title": "What is a day on board with Monik like?",
+      "intro": "Each day has a structure, not a schedule. Monik and the captain adjust it to the wind, the visibility and how the group is diving. No one has to do every dive.",
+      "steps": [
+        {
+          "stepLabel": "Early morning",
+          "stepTitle": "Sail",
+          "stepText": "Coffee on deck while the captain takes the boat to the first site."
+        },
+        {
+          "stepLabel": "Morning",
+          "stepTitle": "First dive",
+          "stepText": "Monik briefs the group on deck, then you go in."
+        },
+        {
+          "stepLabel": "Midday",
+          "stepTitle": "Table",
+          "stepText": "Lunch cooked on board with local produce, and time to talk about what you saw down there."
+        },
+        {
+          "stepLabel": "Afternoon",
+          "stepTitle": "Second dive or free",
+          "stepText": "On the days with a second dive, Monik takes the group back in. On the others: kayak, paddleboard, a walk on an island beach. Or nothing at all."
+        },
+        {
+          "stepLabel": "Sunset",
+          "stepTitle": "Deck",
+          "stepText": "Logbooks, the light going down over the desert, the next day's plan."
+        },
+        {
+          "stepLabel": "Night",
+          "stepTitle": "At anchor",
+          "stepText": "Dinner on board. If there was a catch that day, it's on the table."
+        }
+      ],
+      "_template": "timeline"
+    },
+    {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about the diving expeditions with Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Diving with Monik",
+      "blurb": "The last check, the step off the boat, the surface noise gone. Then it's your breath and whatever the sea decides to show you.",
+      "photos": [],
+      "photoNote": "[PENDIENTE] Big photo: Monik diving with the group, or divers entering the water",
+      "moreLabel": "More about diving",
+      "more": "You wake up at anchor with the site close by. No drive to the marina, no ride back to a hotel. Between dives you sail, swim, eat what the chef has cooked, and talk about what you saw until it's time to go back in.\n\n**Level**\n\n* For certified divers. Monik checks certifications and logbooks before the trip and plans each dive around the group.\n* Some sites ask for Advanced Open Water.\n* Coming with someone who doesn't dive yet? Tell us before the trip and Monik prepares a first session for them, with a supplement.\n\n**Gear**\n\n* All the dive gear is on board and included. Bring your own if you prefer.\n\n**Dives**\n\n* Dive Day: 1 dive\n* One Night at Anchor: 2 dives\n* Thanksgiving expedition: 4 dives, plus a 5th if conditions and the group allow\n\n**Safety**\n\n* Always in buddy pairs, never alone in the water.\n* Monik in the water with the group, the boat nearby.\n\n**Where**\n\n* In the sites the captain and Monik choose each day: San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* We don't promise a specific site: the sea decides first.\n\n**Between dives**\n\n* Snorkeling, swimming, kayak, paddleboard, island walks, and fishing where it is allowed.\n",
+      "_template": "feature"
     },
     {
       "images": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
-          "alt": "Monike Saab Eagle Ray Expedition Leader before a dive "
+          "alt": "Monik Saab, Eagle Ray Expedition Leader, before a dive"
         },
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
-          "alt": "Monike Saab diving in La Paz"
+          "alt": "Monik Saab diving in La Paz"
         },
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Preparing_clients_for_scuba_vdbptj.avif",
-          "alt": "Monike getting clients ready before a dive in La Paz Eagle Ray Expeditions"
+          "alt": "Monik Saab getting divers ready before a dive in La Paz"
         }
       ],
       "_template": "imageGallery"
     },
     {
-      "title": "See the full expedition",
+      "title": "Monik doesn’t sail alone,",
+      "titleEmphasis": "meet your Eagle Ray crew",
+      "blurb": "At Eagle Ray, each expedition is led by people who live the sea. Traveling with Monik are a captain, who handles the boat, reads the sea and chooses each anchorage according to the wind, and a chef who cooks with local products.",
+      "linkLabel": "Passionate Sea People",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking. So you can start getting familiar, these are some of the captains and chefs we sail with.",
+      "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contact us for more info",
+      "secondaryMessage": "I'd like more information about the diving expeditions with Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Do I need to be certified?",
+          "answer": "Yes, this trip is for certified divers. If you are coming with someone who has never dived, tell us before the trip: Monik can prepare a first session for them, with a supplement."
+        },
+        {
+          "question": "Can I come with someone who doesn't dive?",
+          "answer": "Yes. They can snorkel, kayak, paddle and enjoy the boat, or try a first dive session with Monik for a supplement."
+        },
+        {
+          "question": "I'm traveling solo. Can I join?",
+          "answer": "Yes. You can book a suite to yourself. You never share a suite with someone you don't know."
+        },
+        {
+          "question": "How many people will be on board?",
+          "answer": "Up to 4 guests on the overnight departures, plus Monik, the captain and the chef."
+        },
+        {
+          "question": "Can I join two departures back to back?",
+          "answer": "Yes, write to us and we'll put them together."
+        },
+        {
+          "question": "Do I need to bring dive gear?",
+          "answer": "No, all the gear is on board and included. Bring your certification card and logbook. If you have your own mask, computer or wetsuit, you are welcome to bring them."
+        },
+        {
+          "question": "Can I fly after diving?",
+          "answer": "Yes, with margin. Monik plans the last dive so you have the hours you need before your flight. On the Thanksgiving expedition there is no dive on the last morning."
+        },
+        {
+          "question": "What happens if the weather turns?",
+          "answer": "The captain decides the route each day with the wind and the sea. If a site isn't diveable, we go to another one or stay in a sheltered anchorage. The priority is the group's safety and getting back to La Paz on time."
+        },
+        {
+          "question": "How much should I tip?",
+          "answer": "We recommend 10 to 15% of the trip price."
+        },
+        {
+          "question": "How much do I pay to book, and what if I need to cancel?",
+          "answer": "A 20% deposit books your place, and the balance is due 30 days before departure. If you book later than that, you pay in full. If you cancel, the deposit is not refunded. If we cancel, you get 100% back."
+        },
+        {
+          "question": "Do I need a fishing license?",
+          "answer": "The Sea of Cortez requires one for every adult on board. It's included."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Good to know before you come",
+      "questions": [
+        {
+          "question": "Local currency",
+          "answer": "Mexican peso (MXN). Bills from $20 to $1,000 MXN; the $500 and $1,000 bills can sometimes be difficult to change in small shops. Hotels and most tourism businesses in La Paz accept cards, but in smaller places you will need cash. There are ATMs all over the city.\n\nYou won’t need it on board: meals and non-alcoholic drinks are included."
+        },
+        {
+          "question": "How to get there",
+          "answer": "La Paz Airport (LAP) is 20 minutes from the marina, with domestic flights and some routes to the United States.\n\nThe transfer from the airport to the marina is included.\n\nLos Cabos Airport is 2 hours away by road and is sometimes more convenient, depending on where you are flying from; if that is your case, write to us and we’ll look into it."
+        },
+        {
+          "question": "Food",
+          "answer": "La Paz cuisine revolves around the sea: chocolate clams cooked over hot stones, ceviche with a touch of mayonnaise, marlin or octopus quesadillas, and machaca, dried beef or pork, the classic that does not come from the sea. Fish tacos are an icon of the peninsula (they were born farther north, in Ensenada), but here they are just as much at home.\n\nOn board, the chef cooks with what these same waters provide, unless you ask for something else."
+        },
+        {
+          "question": "What to bring",
+          "answer": "Tip: bring less than you think.\n\nOn board you only need a dry swimsuit to change into; the crew takes care of the rest.\n\nFor everything else, light clothing made from natural fabrics for the dry heat, something for the cooler evenings, and a hat, because the desert sun hits directly.\n\nFor diving: your certification card and logbook. The rest of the gear is on board."
+        },
+        {
+          "question": "Weather",
+          "answer": "Desert climate, dry almost all year round.\n\nNovember: northerly winds may come in, bringing short choppy seas. That is why the captain decides the route each day.\n\nWinter (December to February): mild, from 18 to 24 °C, the most pleasant season.\n\nSpring (April and May): the heat starts rising.\n\nSummer (June to August): hot and humid, from 28 to 31 °C.\n\nHurricane season: from May 15 to November 30, with the risk concentrated in August and September."
+        },
+        {
+          "question": "Connection",
+          "answer": "At sea, signal is limited, so expect to be disconnected for a good part of the day.\n\nIn La Paz, wifi works well. Starlink on board."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Let's talk about your expedition",
+      "lede": "Find us directly on WhatsApp or by email: +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "See the full expedition",
+        "label": "Contact us for more info",
+        "href": "/en/contact/"
+      },
+      "_template": "cta"
+    },
+    {
+      "title": "See the full proposal",
+      "lede": "Prefer everything in one place? Open the full proposal, with booking and a downloadable PDF.",
+      "cta": {
+        "label": "Open the full proposal",
         "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
       },
       "_template": "cta"
@@ -44,13 +422,14 @@
       "hideLogo": true,
       "hideTitle": true,
       "height": 600,
+      "iframeTitle": "Dive & Sail with Monik Saab",
       "_template": "moguProposal"
     }
   ],
   "seo": {
-    "title": "Sea of Cortez Diving with Monik Saab | Eagle Ray Expeditions",
-    "description": "3- or 5-day diving expeditions for certified divers in La Paz, Baja California Sur. Dive, sail and sleep at anchor with Monik Saab. November 2026",
-    "ogTitle": "Dive Baja with Monik Saab",
-    "ogDescription": "A small group, a sailboat and days at sea off Espíritu Santo. For certified divers, November 20 to 22 and 25 to 29."
+    "title": "Dive & Sail with Monik Saab | Eagle Ray Expeditions",
+    "description": "Dive a day, a night at anchor or the Thanksgiving weekend off Espíritu Santo, La Paz. Monik Saab leads the dives, with all the gear on board. For certified divers.",
+    "ogTitle": "Dive & Sail with Monik Saab",
+    "ogDescription": "A day, a night at anchor, or the Thanksgiving weekend off Espíritu Santo. For certified divers, November 2026."
   }
 }

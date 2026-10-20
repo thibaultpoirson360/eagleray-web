@@ -69,7 +69,10 @@ const Heading = index === 0 ? "h1" : "h2";
     </Heading>
     {
       block.lede && (
-        <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={tinaField(block, "lede")}>
+        <p
+          class:list={["mt-[1.3rem] text-white/86", block.lede.length > 160 ? "max-w-[58ch] text-[.95rem] leading-[1.6] sm:text-base" : "max-w-[50ch] text-hero-sub"]}
+          data-tina-field={tinaField(block, "lede")}
+        >
           {block.lede}
         </p>
       )

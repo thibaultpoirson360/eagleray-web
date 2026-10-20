@@ -23,7 +23,11 @@ interface Props {
 }
 
 const { block, landingPage, index, locale } = Astro.props;
-const options = ((block.options ?? []) as any[]).flatMap((option, i) => (option?.name ? [{ option, i }] : []));
+const allOptions = ((block.options ?? []) as any[]).flatMap((option, i) => (option?.name ? [{ option, i }] : []));
+// A large card goes first, across the full width; the rest follow, two or three per row.
+const options = [...allOptions.filter((o) => o.option.featured), ...allOptions.filter((o) => !o.option.featured)];
+const anyFeatured = options.some((o) => o.option.featured);
+const columns = !anyFeatured && options.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
 const photosOf = (option: any) => {
   const list = ((option.images ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || option.name }));
   if (list.length === 0 && option.image) list.push({ src: option.image, alt: option.imageAlt || option.name });
@@ -40,18 +44,30 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
     <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
     {
       block.intro && (
-        <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>
-          {block.intro}
-        </p>
+        <div class="mt-[1.2rem] max-w-[58ch] space-y-3 text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>
+          {String(block.intro)
+            .split(/\n\s*\n/)
+            .map((p) => (
+              <p>{p}</p>
+            ))}
+        </div>
       )
     }
   </div>
 
-  <ul class="grid gap-8 lg:grid-cols-2">
+  <ul class={`grid gap-8 ${columns}`}>
     {
       options.map(({ option, i }) => (
-        <li class="flex flex-col overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(block, "options", i)}>
-          <div class="relative aspect-video w-full overflow-hidden bg-ink">
+        <li
+          class:list={["overflow-hidden rounded-lg border border-ink/14 bg-white", option.featured ? "lg:col-span-2 lg:grid lg:grid-cols-2" : "flex flex-col"]}
+          data-tina-field={tinaField(block, "options", i)}
+        >
+          <div
+            class:list={[
+              "relative w-full overflow-hidden border-b border-ink/10 bg-white",
+              option.featured ? "aspect-video lg:aspect-auto lg:h-full lg:min-h-[26rem] lg:border-r lg:border-b-0" : "aspect-video",
+            ]}
+          >
             {photosOf(option).length > 0 ? (
               <ImageSlider
                 client:visible
@@ -61,18 +77,24 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
                 dotLabel="Photo"
                 dotsAt="bottom"
                 fit="contain"
+                tone="light"
                 className="h-full w-full"
               />
             ) : (
-              <p class="absolute inset-0 flex items-center justify-center px-8 text-center font-mono text-[.76rem] tracking-[.14em] text-white/60">
+              <p class="absolute inset-0 flex items-center justify-center px-8 text-center font-mono text-[.76rem] tracking-[.14em] text-ink/50">
                 {option.imageNote}
               </p>
             )}
           </div>
-          <div class="flex flex-1 flex-col p-8">
+          <div class:list={["flex flex-1 flex-col p-8", option.featured && "lg:p-10"]}>
             {option.dates && <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">{option.dates}</p>}
             <h3 class="mt-3 font-display text-[1.75rem]">{option.name}</h3>
             {option.boatLine && <p class="mt-2 text-[.95rem] text-ink">{option.boatLine}</p>}
+            {block.boatLinkLabel && (
+              <p class="mt-1">
+                <a href="#trip-boats" class="text-[.88rem] font-medium text-ink underline underline-offset-4 hover:text-ink-hover">{block.boatLinkLabel} ↓</a>
+              </p>
+            )}
             {option.description && <p class="mt-4 leading-[1.6] text-ink/74">{option.description}</p>}
             {option.priceSummary && <p class="mt-6 font-display text-[1.25rem] text-ink">{option.priceSummary}</p>}
 

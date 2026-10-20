@@ -80,12 +80,87 @@
       ],
       "bookingLabel": "Info on booking",
       "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n",
-      "_template": "departures"
+      "_template": "departures",
+      "boatLinkLabel": "See the boat"
+    },
+    {
+      "title": "Your floating home",
+      "intro": "Each departure sails on its own boat.",
+      "detailsLabel": "See all photos",
+      "boatItems": [
+        {
+          "boat": "bay-dreamer",
+          "tag": "Open Cabins · Nov 22 to 25",
+          "displayName": "Lagoon 450F",
+          "subtitle": "Catamaran",
+          "about": "The Lagoon 450F is the most spacious of Eagle Ray’s boats, the one that offers larger groups room to move comfortably, both on deck and inside. The cabins stay cool on their own, the shower water does not go cold halfway through the week, and the flybridge offers the crew, and anyone who wants it, an elevated place from which to watch the horizon. It is the kind of comfort you are not used to noticing, until the day you need it and it is already there.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Catamaran"
+            },
+            {
+              "label": "Guest cabins",
+              "value": "3"
+            },
+            {
+              "label": "Guests",
+              "value": "up to 6"
+            }
+          ],
+          "featureList": [
+            "Flybridge",
+            "Individual air conditioning in each cabin",
+            "Dishwasher",
+            "Two 57 HP engines",
+            "75 L/h watermaker",
+            "Onan generator",
+            "Code Zero sail",
+            "Starlink on board",
+            "15 HP tender"
+          ],
+          "similarNote": "Or a similar boat with equal or greater characteristics."
+        },
+        {
+          "boat": "beneteau-sense-55",
+          "tag": "Thanksgiving at Anchor · Nov 26 to 29",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Sailboat",
+          "about": "The Beneteau Sense 55 is the most intimate of Eagle Ray’s boats, a 60-foot monohull built for groups looking for the classic feeling of sailing, and not just a boat that happens to have sails. Thanks to its three private suites, each couple has a door they can close, and the whole group can sit together around the same table in the cockpit for dinner. A hydraulic swim platform lowers directly into the water, so for a swim or to go snorkeling there is no need to climb down a ladder. In addition, it behaves differently from a catamaran: more heel and more response at the helm, ideal for groups that want to enjoy both the sailing and the destination.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Sailboat"
+            },
+            {
+              "label": "Length",
+              "value": "60 ft"
+            },
+            {
+              "label": "Guest suites",
+              "value": "2"
+            },
+            {
+              "label": "Guests",
+              "value": "up to 4"
+            }
+          ],
+          "featureList": [
+            "60-foot monohull",
+            "3 private suites",
+            "Cockpit table with space for 10 people",
+            "Hydraulic swim platform",
+            "High-performance sail package"
+          ],
+          "similarNote": "Or a similar boat with equal or greater characteristics."
+        }
+      ],
+      "_template": "tripBoats"
     },
     {
       "title": "What is included",
       "includedTitle": "Included",
-      "included": "**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
+      "included": "**Boat**\n\n* The boat of your departure, or similar with equal or greater characteristics\n\n**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
       "notIncludedTitle": "Not included",
       "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* Scuba diving, depending on number of dives and certifications\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
       "gallery": [

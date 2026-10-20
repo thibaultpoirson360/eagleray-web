@@ -1,5 +1,5 @@
 {
-  "name": "Monik ",
+  "name": "Monik Saab",
   "roles": [
     "Expedition Leader"
   ],
@@ -9,8 +9,7 @@
     "Kayaking",
     "Stand-up paddle",
     "Trekking",
-    "Biking",
-    "Land tours"
+    "Biking"
   ],
   "languages": [
     {
@@ -33,14 +32,13 @@
     "Helideck Operations",
     "NOM-09 Tour Guide",
     "SECTUR Tourist Guide",
-    "Revillagigedo Guide License",
-    "MBA in Marketing"
+    "Revillagigedo Guide License"
   ],
   "yearsOfExperience": 20,
-  "quote": "In the ocean, everybody helps everybody.",
-  "about": "\"I grew up by the beach in Brazil. After 16 years in large corporations and teaching English, I made the sea my work. Today I'm a PADI dive instructor and licensed expedition guide, based in Cabo San Lucas, with six years in Baja California Sur.\n\nFrom the start, I watch a group's energy, comfort and personalities, and I adjust the way I lead to match. I guide in English, Spanish, Portuguese and German.\"",
-  "history": "\"I hold licenses to guide in Mexico, including in the Revillagigedo Islands, and I've worked on yachts with helicopter decks.\n\nI've guided groups of every size, from all over the world. On a sailing boat, I prefer small ones.\"",
-  "why": "\"What keeps me at sea is the life underwater, and the harmony and connection you feel down there. Ocean people are like a family: everybody helps everybody. I wish it were like that on land.\n\nLeaving my corporate life wasn't about money. It was about having fun and making people as happy as the sea makes me.\"",
+  "quote": "Underwater, everybody helps everybody. I wish it were like that on land.",
+  "about": "\"I grew up by the beach in Brazil. After 16 years in large corporations and teaching English, I made the sea my work. Today I'm a PADI dive instructor and a licensed expedition guide in Mexico. I've lived in Baja California Sur for six years, one of them in La Paz.\"",
+  "history": "\"I've guided groups of every size, from all over the world. On a sailboat, I prefer small ones. From the first briefing, I watch how each diver moves, who is relaxed and who is nervous, and I plan the dives around them.\"",
+  "why": "\"What keeps me at sea is the life underwater. Ocean people are like a family: everybody helps everybody. I left corporate life to have fun and to make people as happy as the sea makes me.\"",
   "images": [
     "/assets/img/crew-monique.png",
     "/assets/img/crew/monique-01.webp",
@@ -50,6 +48,6 @@
     "/assets/img/crew/monique-05.webp"
   ],
   "image": "/assets/img/crew-monique.png",
-  "imageAlt": "Monique, expedition leader with Eagle Ray Expeditions",
+  "imageAlt": "Monik, expedition leader with Eagle Ray Expeditions",
   "order": 4
 }
