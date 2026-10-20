@@ -8,9 +8,11 @@ import BoatModal, { type BoatCard, type BoatModalLabels } from "./BoatModal.tsx"
 interface Props {
   boats: BoatCard[];
   labels: BoatModalLabels;
+  /** Show only the photos in the pop-up. */
+  photosOnly?: boolean;
 }
 
-export default function BoatsModalHost({ boats, labels }: Props) {
+export default function BoatsModalHost({ boats, labels, photosOnly = false }: Props) {
   const [active, setActive] = useState<BoatCard | null>(null);
 
   useEffect(() => {
@@ -24,5 +26,5 @@ export default function BoatsModalHost({ boats, labels }: Props) {
     return () => document.removeEventListener("click", onClick);
   }, [boats]);
 
-  return <BoatModal boat={active} labels={labels} onClose={() => setActive(null)} />;
+  return <BoatModal boat={active} labels={labels} onClose={() => setActive(null)} photosOnly={photosOnly} />;
 }

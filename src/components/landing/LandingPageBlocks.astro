@@ -26,6 +26,8 @@ import LandingIncludes from "./LandingIncludes.astro";
 import LandingTimeline from "./LandingTimeline.astro";
 import LandingFaq from "./LandingFaq.astro";
 import LandingActions from "./LandingActions.astro";
+import LandingCinematicRoute from "./LandingCinematicRoute.astro";
+import LandingTripBoats from "./LandingTripBoats.astro";
 import LandingFeature from "./LandingFeature.astro";
 import LandingCrewShowcase from "./LandingCrewShowcase.astro";
 import MoguProposalHero from "../MoguProposalHero.astro";
@@ -64,6 +66,8 @@ const { landingPage, locale } = Astro.props;
         {kind === "Timeline" && <LandingTimeline block={block} landingPage={landingPage} index={index} />}
         {kind === "Feature" && <LandingFeature block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "CrewShowcase" && <LandingCrewShowcase block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "TripBoats" && <LandingTripBoats block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "CinematicRoute" && <LandingCinematicRoute block={block} landingPage={landingPage} index={index} />}
         {kind === "Actions" && <LandingActions block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Faq" && <LandingFaq block={block} landingPage={landingPage} index={index} />}
         {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} locale={locale} />}

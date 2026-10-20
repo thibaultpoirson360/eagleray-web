@@ -23,9 +23,14 @@ interface Props {
    * ratios, like the Boats modal, where cropping would cut off part of some.
    */
   fit?: "cover" | "contain";
+  /**
+   * "light" gives the frame a white background and dark dots, for a photo
+   * shown whole (fit="contain") on a white page; the default is the dark frame.
+   */
+  tone?: "dark" | "light";
 }
 
-export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom", fit = "cover" }: Props) {
+export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom", fit = "cover", tone = "dark" }: Props) {
   const [index, setIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   if (photos.length === 0) return null;
@@ -54,7 +59,7 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
   };
 
   return (
-    <div class={`group relative touch-pan-y overflow-hidden bg-ink ${className}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+    <div class={`group relative touch-pan-y overflow-hidden ${tone === "light" ? "bg-white" : "bg-ink"} ${className}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
       <img
         src={current.src}
         alt={current.alt}
@@ -91,7 +96,7 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
                 aria-label={`${dotLabel} ${i + 1}`}
                 aria-current={i === index ? "true" : undefined}
                 onClick={() => setIndex(i)}
-                class={`size-2 rounded-full transition-colors ${i === index ? "bg-white" : "bg-white/50 hover:bg-white/80"}`}
+                class={`size-2 rounded-full transition-colors ${tone === "light" ? (i === index ? "bg-ink" : "bg-ink/30 hover:bg-ink/60") : i === index ? "bg-white" : "bg-white/50 hover:bg-white/80"}`}
               />
             ))}
           </div>

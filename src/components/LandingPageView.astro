@@ -19,6 +19,7 @@
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import LandingPageBlocks from "./landing/LandingPageBlocks.astro";
+import PendingMarkers from "./landing/PendingMarkers.astro";
 import type { Locale } from "../i18n/config";
 import { firstBlockHasHeading } from "../lib/mogu";
 import type { LandingPageQuery } from "../../tina/__generated__/types";
@@ -39,4 +40,6 @@ const firstIsHero = firstBlockHasHeading(landingPage.blocks);
     </h1>
   )
 }
-<LandingPageBlocks landingPage={landingPage} locale={locale} />
+<PendingMarkers>
+  <LandingPageBlocks landingPage={landingPage} locale={locale} />
+</PendingMarkers>
