@@ -26,6 +26,9 @@ const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? []).flatMap((e, i
           field: tinaField(sailWithUsPage, "expeditions", i),
           description: e.description ?? undefined,
           descriptionField: tinaField(sailWithUsPage, "expeditions", i),
+          badge: e.badge ?? undefined,
+          facts: e.facts ?? undefined,
+          priceNote: e.priceNote ?? undefined,
         },
       ]
     : []

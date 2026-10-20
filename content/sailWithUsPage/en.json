@@ -2,14 +2,20 @@
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
   "heroImageAlt": "Guests sailing on a catamaran in La Paz",
   "title": "Sail with us",
-  "subtitle": "Private sailing trips built around your group.",
+  "subtitle": "Private sailing trips in La Paz, Baja California Sur, built around your group.",
+  "heroCta": {
+    "label": "Plan your trip",
+    "href": "/en/customize-your-expedition/"
+  },
   "intro": "We build private sailing trips around your group, not the other way around.\nYou choose who comes.\nOur team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
-  "expeditionsLabel": "Choose the expedition",
+  "expeditionsLabel": "Choose your expedition",
   "expeditions": [
     {
       "name": "Recalibration Expedition",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Recalibration Expedition",
+      "facts": "3, 5 or 7 nights · private boat",
+      "priceNote": "From 14,500 USD, whole boat",
       "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
       "href": "/en/recalibration-expedition/"
     },
@@ -17,20 +23,23 @@
       "name": "Thanksgiving with Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Active Expedition",
-      "description": "Spearfishing, freediving and days at sea with your own people. Private boat, 3 to 7 nights, ending Sunday, November 29.",
+      "badge": "Limited dates · Nov 22 to 29",
+      "facts": "2 departures · 3 nights each",
+      "priceNote": "From 4,000 USD",
+      "description": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
       "href": "/en/landing/sergio-torres-thanksgiving/"
     },
     {
-      "name": "Ad-hoc Expedition",
+      "name": "Your own expedition",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
-      "imageAlt": "Ad-hoc Sailing Expedition",
+      "imageAlt": "A custom sailing expedition",
       "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
       "href": "/en/ad-hoc-expedition/"
     }
   ],
   "activitiesTitle": "Add activities to your expedition",
-  "activitiesSubtitle": "Our Passionate Sea People are the instructors and specialists behind these ocean activities. They’re the key essence of Eagle Ray Expeditions, so, their activities.\nEvery expedition can be shaped around the ocean activities you care about. Tell us what you'd like and we'll design it with you.",
-  "activitiesButtonLabel": "More info",
+  "activitiesSubtitle": "Our Passionate Sea People are the instructors and specialists behind these ocean activities. Every expedition can be shaped around the ones you care about. Tell us what you'd like and we'll design it with you.",
+  "activitiesButtonLabel": "Contact us for more info",
   "activities": [
     {
       "name": "Scuba diving",
@@ -102,8 +111,33 @@
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
     }
   ],
+  "howTitle": "How it works",
+  "howSteps": [
+    {
+      "title": "Tell us who is coming",
+      "text": "Who is coming, when you want to go and what you'd like your days at sea to look like."
+    },
+    {
+      "title": "We plan it around your group",
+      "text": "Our team plans the boat, the crew and the route around your group, and adapts it day by day."
+    },
+    {
+      "title": "We come back with a proposal",
+      "text": "Fill in the form and we'll come back to you with a proposal."
+    }
+  ],
+  "closingTitle": "Not sure which one is for you?",
+  "closingText": "Tell us about your group and we will point you to the right expedition.",
+  "closingPrimaryCta": {
+    "label": "Plan your trip",
+    "href": "/en/customize-your-expedition/"
+  },
+  "closingSecondaryCta": {
+    "label": "Contact us",
+    "href": "/en/contact/"
+  },
   "seo": {
-    "title": "Sail with Us - Eagle Ray Expeditions",
+    "title": "Private sailing trips in La Paz | Eagle Ray Expeditions",
     "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
     "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
     "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
