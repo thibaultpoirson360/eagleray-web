@@ -24,7 +24,7 @@ const { block, landingPage, index } = Astro.props;
 ---
 
 <section
-  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-[calc(var(--spacing-section)*1.5)]"
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
   <div class="mx-auto max-w-[700px]" data-tina-field={tinaField(block, "body")}>

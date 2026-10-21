@@ -80,15 +80,15 @@ const vb = trips.length
 {
   trips.length > 0 && (
     <section class="relative border-t border-ink/8" data-tina-field={tinaField(landingPage, "blocks", index)}>
-      <div class="mx-auto max-w-site px-pad py-section">
+      <div class="mx-auto max-w-site px-pad py-[calc(var(--spacing-section)*1.5)]">
         <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
-        {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
+        {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-[.95rem] text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
       </div>
 
       <CinematicRoute client:visible trips={trips} land={LAND} viewBox={vb} mapNote={block.mapNote ?? ""} heading={block.title} />
 
       <noscript>
-        <div class="mx-auto max-w-site px-pad pb-section">
+        <div class="mx-auto max-w-site px-pad pb-[calc(var(--spacing-section)*1.5)]">
           {trips.map((trip) => (
             <div class="mb-8">
               <h3 class="font-display text-[1.3rem]">{trip.tab}</h3>
