@@ -91,9 +91,14 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
             {option.dates && <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">{option.dates}</p>}
             <h3 class="mt-3 font-display text-[1.75rem]">{option.name}</h3>
             {option.boatLine && <p class="mt-2 text-[.95rem] text-ink">{option.boatLine}</p>}
-            {block.boatLinkLabel && (
-              <p class="mt-1">
-                <a href="#trip-boats" class="text-[.88rem] font-medium text-ink underline underline-offset-4 hover:text-ink-hover">{block.boatLinkLabel} ↓</a>
+            {(block.boatLinkLabel || block.includesLinkLabel) && (
+              <p class="mt-1 flex flex-wrap gap-x-5 gap-y-1">
+                {block.boatLinkLabel && (
+                  <a href="#trip-boats" class="text-[.88rem] font-medium text-ink underline underline-offset-4 hover:text-ink-hover">{block.boatLinkLabel} ↓</a>
+                )}
+                {block.includesLinkLabel && (
+                  <a href="#included" class="text-[.88rem] font-medium text-ink underline underline-offset-4 hover:text-ink-hover">{block.includesLinkLabel} ↓</a>
+                )}
               </p>
             )}
             {option.description && <p class="mt-4 leading-[1.6] text-ink/74">{option.description}</p>}
