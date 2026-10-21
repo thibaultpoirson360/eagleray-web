@@ -27,8 +27,8 @@
         {
           "name": "Dive Day",
           "dates": "Monday, November 23 · day trip · 1 dive",
-          "description": "One dive at San Rafaelito, then lunch on board, snorkeling and the rest of the day on deck. Back at the marina in the afternoon.",
           "boatLine": "Up to 6 guests",
+          "description": "One dive at San Rafaelito, then lunch on board, snorkeling and the rest of the day on deck. Back at the marina in the afternoon.",
           "images": [],
           "imageAlt": "Divers at San Rafaelito, La Paz",
           "imageNote": "[PENDIENTE] Photo: diving at San Rafaelito, or lunch on deck",
@@ -40,8 +40,8 @@
         {
           "name": "One Night at Anchor",
           "dates": "Tuesday, November 24 → Wednesday, November 25 · 1 night · 2 dives",
-          "description": "Sail out to the south of Espíritu Santo, dive Fang Ming, and stay for the sunset and dinner at anchor. Dive Isla Ballena the next morning, then lunch on board and back to La Paz in the afternoon.",
           "boatLine": "2 guest suites · up to 4 guests",
+          "description": "Sail out to the south of Espíritu Santo, dive Fang Ming, and stay for the sunset and dinner at anchor. Dive Isla Ballena the next morning, then lunch on board and back to La Paz in the afternoon.",
           "images": [],
           "imageAlt": "The Beneteau Sense 55 at anchor off Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 at anchor at sunset",
@@ -54,8 +54,8 @@
           "name": "Thanksgiving Dive Expedition",
           "featured": true,
           "dates": "Thursday, November 26 → Sunday, November 29 · 3 nights · 4 dives, plus a 5th if conditions and the group allow",
-          "description": "Three nights around Espíritu Santo, with time to reach the north and the sea lion colony at Los Islotes. Thanksgiving dinner at anchor on Thursday night. No dive on the last morning: a slow breakfast, a swim, and back at the marina around midday on Sunday.",
           "boatLine": "2 guest suites · up to 4 guests",
+          "description": "Three nights around Espíritu Santo, with time to reach the north and the sea lion colony at Los Islotes. Thanksgiving dinner at anchor on Thursday night. No dive on the last morning: a slow breakfast, a swim, and back at the marina around midday on Sunday.",
           "priceSummary": "From 14,500 USD, whole boat",
           "images": [],
           "imageAlt": "Divers with the sea lions at Los Islotes",
@@ -281,7 +281,7 @@
     {
       "images": [
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_seiwxx.jpg",
           "alt": "Monik Saab, Eagle Ray Expedition Leader, before a dive"
         },
         {
