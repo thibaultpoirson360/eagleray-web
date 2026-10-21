@@ -14,13 +14,6 @@
       "_template": "hero"
     },
     {
-      "member": "sergio-torres-canei",
-      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
-      "collapseAbout": true,
-      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
-      "_template": "memberProfile"
-    },
-    {
       "title": "Two sailing departures in November",
       "intro": "Prices per full boat, for the November 2026 dates. If you divide the cost per person, you can see the price per person with the boat full (that is, at its maximum capacity).",
       "options": [
@@ -84,6 +77,13 @@
       "_template": "departures",
       "boatLinkLabel": "See the boat",
       "includesLinkLabel": "See what is included"
+    },
+    {
+      "member": "sergio-torres-canei",
+      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
+      "collapseAbout": true,
+      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "_template": "memberProfile"
     },
     {
       "title": "Your floating home",
