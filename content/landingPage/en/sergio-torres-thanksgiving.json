@@ -179,34 +179,82 @@
     {
       "title": "The route",
       "intro": "Both departures follow the same route: three nights between La Paz and the south of Espíritu Santo.",
-      "steps": [
+      "places": [
         {
-          "stepTitle": "La Paz → Caleta Lobos or Pichilingue",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
-          "stepImageAlt": "Caleta Lobos La Paz",
-          "stepImageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina · start and finish",
+          "lat": 24.1585,
+          "lon": -110.3245
         },
         {
-          "stepTitle": "Caleta Lobos or Pichilingue → south of Espíritu Santo",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
-          "stepImageAlt": "Sur de espíritu santo, La Paz",
-          "stepImageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+          "key": "pichilingue",
+          "name": "Caleta Lobos or Pichilingue",
+          "sub": "First anchorage",
+          "lat": 24.2745,
+          "lon": -110.343
         },
         {
-          "stepTitle": "South of Espíritu Santo → Bahía de La Paz",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
-          "stepImageAlt": "bahía de la paz",
-          "stepImageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+          "key": "southes",
+          "name": "South of Espíritu Santo",
+          "sub": "Anchorage",
+          "lat": 24.3925,
+          "lon": -110.3486
         },
         {
-          "stepTitle": "Bahía de La Paz → La Paz",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
-          "stepImageAlt": "la paz, baja california sur",
-          "stepImageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+          "key": "bahia",
+          "name": "Bahía de La Paz",
+          "sub": "On the way back",
+          "lat": 24.152,
+          "lon": -110.342
         }
       ],
+      "trips": [
+        {
+          "tab": "The route",
+          "beats": [
+            {
+              "label": "Both departures · 1 of 4",
+              "title": "La Paz → Caleta Lobos or Pichilingue",
+              "from": "lapaz",
+              "to": "pichilingue",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
+              "imageAlt": "Caleta Lobos La Paz",
+              "imageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+            },
+            {
+              "label": "Both departures · 2 of 4",
+              "title": "Caleta Lobos or Pichilingue → south of Espíritu Santo",
+              "from": "pichilingue",
+              "to": "southes",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
+              "imageAlt": "Sur de espíritu santo, La Paz",
+              "imageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+            },
+            {
+              "label": "Both departures · 3 of 4",
+              "title": "South of Espíritu Santo → Bahía de La Paz",
+              "from": "southes",
+              "to": "bahia",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
+              "imageAlt": "bahía de la paz",
+              "imageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+            },
+            {
+              "label": "Both departures · 4 of 4",
+              "title": "Bahía de La Paz → La Paz",
+              "from": "bahia",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "la paz, baja california sur",
+              "imageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Proposed route and anchorages. Final plan depends on weather. Positions are approximate. Map data © OpenStreetMap contributors.",
       "footnote": "Indicative route. It depends on the sea, the wind, the permits and the captain’s call. In November, northerly winds can come in, and if they do we change the order of the coves or stay at the same anchorage.\n\nOpen Cabins: back at the marina on Wednesday afternoon.\n\nThanksgiving at Anchor: back at the marina around midday on Sunday, so you can fly home the same day. We recommend flights from 16:00.",
-      "_template": "timeline"
+      "_template": "cinematicRoute"
     },
     {
       "title": "What is a day on board with Sergio like?",
