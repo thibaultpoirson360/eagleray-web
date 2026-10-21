@@ -276,8 +276,13 @@
     {
       "title": "Diving with Monik",
       "blurb": "The last check, the step off the boat, the surface noise gone. Then it's your breath and whatever the sea decides to show you.",
-      "photos": [],
-      "photoNote": "[PENDIENTE] Big photo: Monik diving with the group, or divers entering the water",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.29_6_fkcump.jpg",
+          "alt": "Monik witha group of scuba in la paz"
+        }
+      ],
+      "photoNote": "Big photo: Monik diving with the group, or divers entering the water",
       "moreLabel": "More about diving",
       "more": "You wake up at anchor with the site close by. No drive to the marina, no ride back to a hotel. Between dives you sail, swim, eat what the chef has cooked, and talk about what you saw until it's time to go back in.\n\n**Level**\n\n* For certified divers. Monik checks certifications and logbooks before the trip and plans each dive around the group.\n* Some sites ask for Advanced Open Water.\n* Coming with someone who doesn't dive yet? Tell us before the trip and Monik prepares a first session for them, with a supplement.\n\n**Gear**\n\n* All the dive gear is on board and included. Bring your own if you prefer.\n\n**Dives**\n\n* Dive Day: 1 dive\n* One Night at Anchor: 2 dives\n* Thanksgiving expedition: 4 dives, plus a 5th if conditions and the group allow\n\n**Safety**\n\n* Always in buddy pairs, never alone in the water.\n* Monik in the water with the group, the boat nearby.\n\n**Where**\n\n* In the sites the captain and Monik choose each day: San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* We don't promise a specific site: the sea decides first.\n\n**Between dives**\n\n* Snorkeling, swimming, kayak, paddleboard, island walks, and fishing where it is allowed.\n",
       "_template": "feature"
