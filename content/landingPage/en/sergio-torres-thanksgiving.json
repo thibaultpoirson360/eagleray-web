@@ -82,7 +82,8 @@
       "bookingLabel": "Info on booking",
       "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n",
       "_template": "departures",
-      "boatLinkLabel": "See the boat"
+      "boatLinkLabel": "See the boat",
+      "includesLinkLabel": "See what is included"
     },
     {
       "title": "Your floating home",
