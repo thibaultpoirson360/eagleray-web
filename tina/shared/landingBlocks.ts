@@ -118,6 +118,8 @@ export const landingBlocksField = (): TinaField => (
               { type: "string", name: "imageNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
               { type: "string", name: "bookLabel", label: "Main button: words", description: 'e.g. "Book now"' },
               { type: "string", name: "bookHref", label: "Main button: link", description: "The trip's page on Mogu, where booking and payment happen." },
+              { type: "string", name: "reserveLabel", label: "Reserve button: words (optional)", description: 'e.g. "Reserve now". Goes to the trip\'s online booking page.' },
+              { type: "string", name: "reserveHref", label: "Reserve button: link", description: "The trip's booking page, where payment happens." },
               { type: "string", name: "infoLabel", label: "Second button: words", description: 'e.g. "Contact us for more info"' },
               { type: "string", name: "infoMessage", label: "Second button: message already written in the contact form", ui: textarea },
             ],

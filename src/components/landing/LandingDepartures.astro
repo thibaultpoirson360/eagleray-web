@@ -141,6 +141,11 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
                   {option.bookLabel}
                 </Button>
               )}
+              {option.reserveLabel && option.reserveHref && (
+                <Button href={moguForLocale(locale, option.reserveHref)} variant="ghost" context="default" size="sm">
+                  {option.reserveLabel}
+                </Button>
+              )}
               {option.infoLabel && (
                 <Button href={contactHref(option.infoMessage)} variant="ghost" context="default" size="sm">
                   {option.infoLabel}
