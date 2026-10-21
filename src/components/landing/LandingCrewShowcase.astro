@@ -8,6 +8,7 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import CrewSummaryCard from "../CrewSummaryCard.astro";
 import SliderDots from "../SliderDots.tsx";
+import ImageSlider from "../ImageSlider.tsx";
 import { loadCrew, loadCrewSection } from "../../lib/content";
 import type { LandingPageBlocksParent } from "./blockTypes";
 import type { Locale } from "../../i18n/config";
@@ -23,6 +24,8 @@ const { block, landingPage, index, locale } = Astro.props;
 const [{ members }, sectionResult] = await Promise.all([loadCrew(locale), loadCrewSection(locale)]);
 const wanted = ((block.members ?? []) as (string | null)[]).map((m) => String(m ?? "").trim()).filter(Boolean);
 const chosen = wanted.flatMap((name) => members.filter((m) => m._sys.filename === name));
+const photos = ((block.photos ?? []) as any[]).filter((x) => x?.image).map((x) => ({ src: x.image as string, alt: (x.alt as string) || block.title }));
+const showPhotos = photos.length > 0 || (chosen.length === 0 && !!block.photoNote);
 ---
 
 <section
@@ -49,10 +52,24 @@ const chosen = wanted.flatMap((name) => members.filter((m) => m._sys.filename ==
     </div>
 
     <div class="min-w-0">
-      <div class="-mx-pad flex snap-x snap-mandatory gap-5 overflow-x-auto px-pad pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden" data-crew-showcase tabindex="0" role="group" aria-label={block.title}>
-        {chosen.map((member) => <CrewSummaryCard member={member} labels={sectionResult.data.crewSection} locale={locale} />)}
-      </div>
-      <SliderDots client:visible sliderSelector="[data-crew-showcase]" cardSelector=".crew-card" count={chosen.length} labelPrefix={sectionResult.data.crewSection.dotsLabel ?? "Go to crew member"} />
+      {
+        showPhotos ? (
+          <div class="relative aspect-[4/3] overflow-hidden rounded-lg border border-ink/14 bg-white" data-tina-field={tinaField(block, "photos")}>
+            {photos.length > 0 ? (
+              <ImageSlider client:visible photos={photos} previousLabel="Previous photo" nextLabel="Next photo" dotLabel="Photo" dotsAt="bottom" fit="contain" tone="light" className="h-full w-full" />
+            ) : (
+              <p class="absolute inset-0 flex items-center justify-center px-8 text-center font-mono text-[.76rem] tracking-[.14em] text-ink/50">{block.photoNote}</p>
+            )}
+          </div>
+        ) : (
+          <>
+            <div class="-mx-pad flex snap-x snap-mandatory gap-5 overflow-x-auto px-pad pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden" data-crew-showcase tabindex="0" role="group" aria-label={block.title}>
+              {chosen.map((member) => <CrewSummaryCard member={member} labels={sectionResult.data.crewSection} locale={locale} />)}
+            </div>
+            <SliderDots client:visible sliderSelector="[data-crew-showcase]" cardSelector=".crew-card" count={chosen.length} labelPrefix={sectionResult.data.crewSection.dotsLabel ?? "Go to crew member"} />
+          </>
+        )
+      }
       {block.note && <p class="mt-6 max-w-[60ch] text-[.92rem] leading-[1.65] text-ink/64" data-tina-field={tinaField(block, "note")}>{block.note}</p>}
     </div>
   </div>

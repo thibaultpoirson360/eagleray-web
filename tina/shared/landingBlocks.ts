@@ -87,6 +87,7 @@ export const landingBlocksField = (): TinaField => (
               { type: "string", name: "dates", label: "Dates", description: 'e.g. "Sunday, November 22 → Wednesday, November 25 · 3 nights"' },
               { type: "string", name: "boatLine", label: "Boat line", description: 'e.g. "Lagoon 450F catamaran · 3 guest cabins · up to 6 guests"' },
               { type: "string", name: "description", label: "Short description (2 sentences)", ui: textarea },
+              { type: "string", name: "deadline", label: "Booking deadline line (optional)", description: 'e.g. "Book by November 5". Shown under the price.' },
               { type: "string", name: "priceSummary", label: "Price shown on the card", description: 'e.g. "From 4,000 USD, solo cabin"' },
               { type: "string", name: "detailsLabel", label: "Words on the opening line", description: 'e.g. "Prices and how it works"' },
               {
@@ -217,6 +218,19 @@ export const landingBlocksField = (): TinaField => (
             list: true,
             description: 'Each one is the member\'s file name in Crew, e.g. "benji", "antoine", "sergio-torres-canei".',
           },
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos in the slider instead of crew cards (optional)",
+            list: true,
+            description: "When photos are added, the slider shows them and the crew cards are not shown.",
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+            ],
+          },
+          { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
           { type: "string", name: "note", label: "Note under the slider", ui: textarea },
         ],
       },
