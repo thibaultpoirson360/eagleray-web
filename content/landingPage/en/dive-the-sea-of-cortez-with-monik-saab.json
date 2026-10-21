@@ -23,6 +23,7 @@
     {
       "title": "Three ways to dive with Monik in November",
       "intro": "All three sail from Marina Palmira, La Paz, on a Beneteau Sense 55 sailboat, with Monik, an Eagle Ray captain and an Eagle Ray chef. Dives and dive gear are included. Pick one, or join two back to back.\n\nBook a suite with a partner or a friend, or take the whole boat with your people.",
+      "fillPhotos": true,
       "options": [
         {
           "name": "Dive Day",
@@ -141,8 +142,7 @@
               "from": "lapaz",
               "to": "sanrafaelito",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_San_Rafaelito_cazls3.jpg",
-              "imageAlt": "La Paz → San Rafaelito",
-              "imageNote": "[PENDIENTE] Full-screen photo: leaving La Paz in the morning, or the dive at San Rafaelito"
+              "imageAlt": "La Paz → San Rafaelito"
             },
             {
               "label": "Dive Day · November 23",
@@ -150,8 +150,7 @@
               "text": "Back at the marina in the afternoon.",
               "from": "sanrafaelito",
               "to": "lapaz",
-              "imageAlt": "San Rafaelito → La Paz",
-              "imageNote": "[PENDIENTE] Full-screen photo: sailing back to La Paz in the afternoon"
+              "imageAlt": "San Rafaelito → La Paz"
             }
           ]
         },
@@ -165,8 +164,7 @@
               "night": "Night at anchor · south of Espíritu Santo",
               "from": "lapaz",
               "to": "fangming",
-              "imageAlt": "La Paz → south of Espíritu Santo",
-              "imageNote": "[PENDIENTE] Full-screen photo: the boat at anchor at sunset"
+              "imageAlt": "La Paz → south of Espíritu Santo"
             },
             {
               "label": "One Night at Anchor · November 24 to 25 · Day 2",
@@ -177,8 +175,7 @@
                 "ballena"
               ],
               "to": "lapaz",
-              "imageAlt": "Isla Ballena → La Paz",
-              "imageNote": "[PENDIENTE] Full-screen photo: the dive at Isla Ballena"
+              "imageAlt": "Isla Ballena → La Paz"
             }
           ]
         },
@@ -192,8 +189,7 @@
               "night": "Night at anchor · south of Espíritu Santo",
               "from": "lapaz",
               "to": "fangming",
-              "imageAlt": "La Paz → south of Espíritu Santo",
-              "imageNote": "[PENDIENTE] Full-screen photo: Thanksgiving dinner at anchor"
+              "imageAlt": "La Paz → south of Espíritu Santo"
             },
             {
               "label": "Thanksgiving Dive Expedition · Day 2",
@@ -201,8 +197,7 @@
               "text": "Dive at Los Islotes with the sea lion colony, a long lunch, then a dive at El Bajito.",
               "from": "fangming",
               "to": "islotes",
-              "imageAlt": "Los Islotes and the north of Espíritu Santo",
-              "imageNote": "[PENDIENTE] Full-screen photo: diving with the sea lions at Los Islotes"
+              "imageAlt": "Los Islotes and the north of Espíritu Santo"
             },
             {
               "label": "Thanksgiving Dive Expedition · Day 3",
@@ -211,8 +206,7 @@
               "night": "Night at anchor",
               "from": "islotes",
               "to": "espwest",
-              "imageAlt": "Espíritu Santo",
-              "imageNote": "[PENDIENTE] Full-screen photo: a slow morning on the beach"
+              "imageAlt": "Espíritu Santo"
             },
             {
               "label": "Thanksgiving Dive Expedition · Day 4",
@@ -220,8 +214,7 @@
               "text": "Breakfast, a swim, no dive. Back at the marina around midday.",
               "from": "espwest",
               "to": "lapaz",
-              "imageAlt": "Back to La Paz",
-              "imageNote": "[PENDIENTE] Full-screen photo: the last swim, and the marina"
+              "imageAlt": "Back to La Paz"
             }
           ]
         }
