@@ -92,6 +92,8 @@
       "boatItems": [
         {
           "boat": "bay-dreamer",
+          "banner": "/assets/img/boats/bay-dreamer-09.webp",
+          "bannerAlt": "The Lagoon 450F catamaran at anchor",
           "tag": "Open Cabins · Nov 22 to 25",
           "displayName": "Lagoon 450F",
           "subtitle": "Catamaran",
@@ -125,6 +127,8 @@
         },
         {
           "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "The cockpit lounge of the Beneteau Sense 55",
           "tag": "Thanksgiving at Anchor · Nov 26 to 29",
           "displayName": "Beneteau Sense 55",
           "subtitle": "Sailboat",

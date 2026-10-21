@@ -314,8 +314,8 @@
       "_template": "timeline"
     },
     {
-      "primaryLabel": "Book a call",
-      "primaryHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
       "secondaryLabel": "Contact us for more info",
       "secondaryMessage": "I'd like more information about the diving expeditions with Monik Saab.",
       "_template": "actions"
@@ -369,8 +369,8 @@
       "_template": "crewShowcase"
     },
     {
-      "primaryLabel": "Book a call",
-      "primaryHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+      "primaryLabel": "Book now",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
       "secondaryLabel": "Contact us for more info",
       "secondaryMessage": "I'd like more information about the diving expeditions with Monik Saab.",
       "_template": "actions"
