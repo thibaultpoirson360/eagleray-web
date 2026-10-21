@@ -28,9 +28,11 @@ interface Props {
    * shown whole (fit="contain") on a white page; the default is the dark frame.
    */
   tone?: "dark" | "light";
+  /** With fit="cover": which part of the photo stays in view. The default favours the top (faces); "center" centres the photo. */
+  focus?: "top" | "center";
 }
 
-export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom", fit = "cover", tone = "dark" }: Props) {
+export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel, className = "", dotsAt = "bottom", fit = "cover", tone = "dark", focus = "top" }: Props) {
   const [index, setIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   if (photos.length === 0) return null;
@@ -65,7 +67,7 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
         alt={current.alt}
         loading="lazy"
         decoding="async"
-        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : "object-cover object-[50%_20%]"}`}
+        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : (focus === "center" ? "object-cover object-center" : "object-cover object-[50%_20%]")}`}
       />
       {count > 1 && (
         <>

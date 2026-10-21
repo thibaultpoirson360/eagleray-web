@@ -121,6 +121,7 @@ export const landingBlocksField = (): TinaField => (
               { type: "string", name: "infoMessage", label: "Second button: message already written in the contact form", ui: textarea },
             ],
           },
+          { type: "boolean", name: "fillPhotos", label: "Photos fill the whole frame (centred, edges may be cropped)", description: "Off: the whole photo is shown with a white border when it does not fit." },
           { type: "string", name: "boatLinkLabel", label: "Link under the boat line to the boats section (optional)", description: 'e.g. "See the boat". Needs a "The boats of the trip" block on the page.' },
           { type: "string", name: "bookingLabel", label: "Booking information: words on the opening line", description: 'e.g. "Info on booking"' },
           { type: "rich-text", name: "bookingInfo", label: "Booking information (deposit, payment dates, cancellation)" },

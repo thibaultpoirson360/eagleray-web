@@ -76,7 +76,8 @@ const contactHref = (message?: string | null) => localePath(locale, "contact/") 
                 nextLabel="Next photo"
                 dotLabel="Photo"
                 dotsAt="bottom"
-                fit="contain"
+                fit={block.fillPhotos ? "cover" : "contain"}
+                focus="center"
                 tone="light"
                 className="h-full w-full"
               />
