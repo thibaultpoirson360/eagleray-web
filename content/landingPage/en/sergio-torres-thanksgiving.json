@@ -50,10 +50,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "The Lagoon 450F catamaran at anchor off Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo: the Lagoon 450F catamaran at anchor, with guests on the flybridge",
-          "bookLabel": "Book now",
-          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Open Cabins departure (November 22 to 25)."
+          "bookLabel": "Book a call",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         },
         {
           "name": "Thanksgiving at Anchor",
@@ -73,10 +73,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
           "imageAlt": "The Beneteau Sense 55 sailboat under sail",
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 under sail, or a Thanksgiving table on deck",
-          "bookLabel": "Book now",
-          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Thanksgiving at Anchor departure (November 26 to 29)."
+          "bookLabel": "Book a call",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         }
       ],
       "bookingLabel": "Info on booking",
@@ -461,15 +461,6 @@
       "cta": {
         "label": "Contact us for more info",
         "href": "/en/contact/"
-      },
-      "_template": "cta"
-    },
-    {
-      "title": "See the full proposal",
-      "lede": "Prefer everything in one place? Open the full proposal, with booking and a downloadable PDF.",
-      "cta": {
-        "label": "Open the full proposal",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness"
       },
       "_template": "cta"
     },

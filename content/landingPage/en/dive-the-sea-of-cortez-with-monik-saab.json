@@ -31,8 +31,8 @@
           "imageNote": "[PENDIENTE] Photo: diving at San Rafaelito, or lunch on deck",
           "bookLabel": "Book a call",
           "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Dive Day with Monik (November 23)."
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         },
         {
           "name": "One Night at Anchor",
@@ -47,8 +47,8 @@
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 at anchor at sunset",
           "bookLabel": "Book a call",
           "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the One Night at Anchor departure (November 24 to 25)."
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         },
         {
           "name": "Thanksgiving Dive Expedition",
@@ -64,8 +64,8 @@
           "imageNote": "[PENDIENTE] Photo: diving with the sea lions at Los Islotes",
           "bookLabel": "Book a call",
           "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Thanksgiving Dive Expedition (November 26 to 29)."
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         }
       ],
       "bookingLabel": "Info on booking",
@@ -465,15 +465,6 @@
       "cta": {
         "label": "Contact us for more info",
         "href": "/en/contact/"
-      },
-      "_template": "cta"
-    },
-    {
-      "title": "See the full proposal",
-      "lede": "Prefer everything in one place? Open the full proposal, with online booking and a downloadable PDF.",
-      "cta": {
-        "label": "Open the full proposal",
-        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
       },
       "_template": "cta"
     },
