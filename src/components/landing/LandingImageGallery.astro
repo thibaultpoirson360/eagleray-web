@@ -32,7 +32,7 @@ const imgClass = "block h-[50vh] w-full rounded object-cover sm:h-[500px]";
 {
   block.images && block.images.length > 0 && (
     <section
-      class="relative mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
+      class="relative mx-auto max-w-site border-t border-ink/8 py-[calc(var(--spacing-section)*1.5)] pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]"
       data-tina-field={tinaField(landingPage, "blocks", index)}
     >
       <div tabindex="0" role="group" aria-label={galleryLabel} class="scrollbar-none -mx-pad flex snap-x snap-mandatory gap-4 overflow-x-auto px-pad [-webkit-overflow-scrolling:touch] sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:snap-none [&::-webkit-scrollbar]:hidden">

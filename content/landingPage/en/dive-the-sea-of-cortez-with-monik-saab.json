@@ -357,10 +357,15 @@
       "blurb": "At Eagle Ray, each expedition is led by people who live the sea. Traveling with Monik are a captain, who handles the boat, reads the sea and chooses each anchorage according to the wind, and a chef who cooks with local products.",
       "linkLabel": "Passionate Sea People",
       "linkHref": "/en/passionate-sea-people/",
-      "members": [],
-      "photos": [],
-      "photoNote": "[PENDIENTE] Photos: dishes cooked on board, and Monik with the crew",
-      "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking.",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "The team is assigned according to the boat and the dates; we confirm the Eagle Ray team when you make the final pre-booking. So you can start getting familiar, these are some of the captains and chefs we sail with.",
       "_template": "crewShowcase"
     },
     {

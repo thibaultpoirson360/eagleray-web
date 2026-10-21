@@ -29,7 +29,7 @@ const showPhotos = photos.length > 0 || (chosen.length === 0 && !!block.photoNot
 ---
 
 <section
-  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-[calc(var(--spacing-section)*1.5)]"
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
   <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
@@ -43,7 +43,7 @@ const showPhotos = photos.length > 0 || (chosen.length === 0 && !!block.photoNot
           </>
         )}
       </h2>
-      {block.blurb && <p class="mt-6 max-w-[48ch] text-lede leading-[1.7] text-ink/74" data-tina-field={tinaField(block, "blurb")}>{block.blurb}</p>}
+      {block.blurb && <p class="mt-6 max-w-[48ch] text-[.95rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(block, "blurb")}>{block.blurb}</p>}
       {block.linkLabel && block.linkHref && (
         <p class="mt-5">
           <a href={block.linkHref} class="text-[.95rem] font-medium text-ink underline underline-offset-4">{block.linkLabel}</a>

@@ -33,10 +33,12 @@ interface Props {
   compact?: boolean;
   /** Leaves out the "about" text (and its "read more"), e.g. when it is printed next to the card. */
   hideAbout?: boolean;
+  /** Wide card: photo on the left, the rest on the right (on large screens). */
+  horizontal?: boolean;
   class?: string;
 }
 
-const { member, labels, compact = false, hideAbout = false, class: className = "" } = Astro.props;
+const { member, labels, compact = false, hideAbout = false, horizontal = false, class: className = "" } = Astro.props;
 
 const roles = clean(member.roles);
 const skills = clean(member.skills);
@@ -50,8 +52,8 @@ const years = member.yearsOfExperience;
 const showFooter = skills.length + languages.length + certificates.length > 0 || years != null;
 ---
 
-<article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", className]}>
-  <div class:list={["relative flex-none", compact ? "aspect-square" : "aspect-[4/5]"]}>
+<article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", horizontal && "lg:flex-row", className]}>
+  <div class:list={["relative flex-none", compact ? "aspect-square" : "aspect-[4/5]", horizontal && "lg:aspect-auto lg:min-h-[24rem] lg:w-[42%]"]}>
     <ImageSlider
       client:visible
       photos={memberPhotos(member)}
@@ -86,6 +88,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
     }
   </div>
 
+  <div class:list={["flex min-w-0 flex-1 flex-col", horizontal && "lg:justify-center"]}>
   <div class="flex-none px-6 pt-6 pb-4">
     <h3 class="font-display text-[1.6rem]" data-tina-field={tinaField(member, "name")}>{member.name}</h3>
     {
@@ -191,4 +194,5 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
       </div>
     )
   }
+  </div>
 </article>
