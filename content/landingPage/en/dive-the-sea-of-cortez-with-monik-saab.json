@@ -24,6 +24,7 @@
       "title": "Three ways to dive with Monik in November",
       "intro": "All three sail from Marina Palmira, La Paz, on a Beneteau Sense 55 sailboat, with Monik, an Eagle Ray captain and an Eagle Ray chef. Dives and dive gear are included. Pick one, or join two back to back.\n\nBook a suite with a partner or a friend, or take the whole boat with your people.",
       "fillPhotos": true,
+      "boatLinkLabel": "See the boat",
       "options": [
         {
           "name": "Dive Day",
@@ -76,9 +77,51 @@
       "_template": "departures"
     },
     {
+      "title": "Your floating home",
+      "intro": "All three departures sail on the same boat.",
+      "detailsLabel": "See all photos",
+      "boatItems": [
+        {
+          "boat": "beneteau-sense-55",
+          "tag": "All three departures",
+          "tripNote": "Overnight departures: 2 guest suites · up to 4 guests. Dive Day: up to 6 guests.",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Sailboat",
+          "about": "The Beneteau Sense 55 is the most intimate of Eagle Ray’s boats, a 60-foot monohull built for groups looking for the classic feeling of sailing, and not just a boat that happens to have sails. Thanks to its three private suites, each couple has a door they can close, and the whole group can sit together around the same table in the cockpit for dinner. A hydraulic swim platform lowers directly into the water, so for a swim or to go snorkeling there is no need to climb down a ladder. In addition, it behaves differently from a catamaran: more heel and more response at the helm, ideal for groups that want to enjoy both the sailing and the destination.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Sailboat"
+            },
+            {
+              "label": "Length",
+              "value": "60 ft"
+            },
+            {
+              "label": "Guest suites",
+              "value": "2"
+            },
+            {
+              "label": "Guests",
+              "value": "up to 4"
+            }
+          ],
+          "featureList": [
+            "60-foot monohull",
+            "3 private suites",
+            "Cockpit table with space for 10 people",
+            "Hydraulic swim platform",
+            "High-performance sail package"
+          ],
+          "similarNote": "Or a similar boat with equal or greater characteristics."
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
       "title": "What is included",
       "includedTitle": "Included",
-      "included": "**Crew**\n\n* Monik Saab, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Diving**\n\n* Guided dives with Monik: 1 on the Dive Day, 2 on One Night at Anchor, 4 on the Thanksgiving expedition\n* Full dive gear: tanks, weights, BCD, regulator and wetsuit\n* Dive planning around each diver's level and logbook\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* Paddleboard and kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n* Fishing license for every adult on board\n",
+      "included": "**Boat**\n\n* The boat of your departure, or similar with equal or greater characteristics\n\n**Crew**\n\n* Monik Saab, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Diving**\n\n* Guided dives with Monik: 1 on the Dive Day, 2 on One Night at Anchor, 4 on the Thanksgiving expedition\n* Full dive gear: tanks, weights, BCD, regulator and wetsuit\n* Dive planning around each diver's level and logbook\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* Paddleboard and kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n* Fishing license for every adult on board\n",
       "notIncludedTitle": "Not included",
       "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* A first dive session for non-certified guests, quoted on request\n* The optional 5th dive on the Thanksgiving expedition\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
       "gallery": [],
