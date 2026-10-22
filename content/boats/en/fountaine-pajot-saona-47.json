@@ -17,5 +17,74 @@
   "cabins": "5",
   "bathrooms": "5",
   "guests": "up to 8",
-  "order": 6
+  "order": 6,
+  "photo": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+  "photoAlt": "Fountaine Pajot Saona 47 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-02.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-03.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-video-01.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran",
+      "video": "/assets/video/boats/fountaine-pajot-saona-47-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-04.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-05.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-06.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-07.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-08.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-09.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-10.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-11.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-12.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-13.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-14.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-15.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    }
+  ]
 }

@@ -17,5 +17,73 @@
   "cabins": "4",
   "bathrooms": "4",
   "guests": "up to 8",
-  "order": 9
+  "order": 9,
+  "photo": "/assets/img/boats/fountaine-pajot-helia-44-01.webp",
+  "photoAlt": "Fountaine Pajot Helia 44 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-01.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-02.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-03.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-04.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-05.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-06.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-07.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-08.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-09.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-10.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-11.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-12.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-13.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-14.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-15.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-16.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    }
+  ]
 }

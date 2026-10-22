@@ -17,5 +17,79 @@
   "cabins": "6",
   "bathrooms": "6",
   "guests": "up to 10",
-  "order": 5
+  "order": 5,
+  "photo": "/assets/img/boats/lagoon-52-01.webp",
+  "photoAlt": "Lagoon 52 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-52-01.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-02.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-03.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-01.webp",
+      "alt": "Lagoon 52 catamaran",
+      "video": "/assets/video/boats/lagoon-52-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-04.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-05.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-06.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-07.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-08.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-02.webp",
+      "alt": "Lagoon 52 catamaran",
+      "video": "/assets/video/boats/lagoon-52-02.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-09.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-10.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-11.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-12.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-13.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-14.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-15.webp",
+      "alt": "Lagoon 52 catamaran"
+    }
+  ]
 }
