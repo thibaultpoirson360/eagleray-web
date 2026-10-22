@@ -18,7 +18,7 @@ interface Props {
 
 const { block, landingPage, index } = Astro.props;
 const components = { p: BodyParagraph };
-const photos = ((block.gallery ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title }));
+const photos = ((block.gallery ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title, video: (p.video as string) || undefined }));
 const showGallery = photos.length > 0 || !!block.galleryNote;
 ---
 

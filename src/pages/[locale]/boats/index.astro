@@ -23,9 +23,9 @@ const boats = boatsPage ? (await loadBoats(locale)).boats : [];
 const placeholder = boatsPage ? null : (await loadNavPage(locale, "boats")).data.navPages;
 
 const cards: BoatCard[] = boats.map((boat) => {
-  const photos = (boat.photos ?? [])
+  const photos: { src: string; alt: string; video?: string }[] = (boat.photos ?? [])
     .filter((p): p is NonNullable<typeof p> => !!p?.image)
-    .map((p) => ({ src: p.image as string, alt: p.alt || boat.name }));
+    .map((p) => ({ src: p.image as string, alt: p.alt || boat.name, video: p.video || undefined }));
   if (photos.length === 0 && boat.photo) photos.push({ src: boat.photo, alt: boat.photoAlt || boat.name });
   return {
     id: boat._sys.filename,

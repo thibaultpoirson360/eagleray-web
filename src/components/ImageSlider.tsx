@@ -6,7 +6,7 @@ import { useRef, useState } from "preact/hooks";
  * arrows). Each dot and arrow is a real button with a label.
  */
 interface Props {
-  photos: { src: string; alt: string }[];
+  photos: { src: string; alt: string; video?: string }[];
   /** Accessible names for the controls. */
   previousLabel: string;
   nextLabel: string;
@@ -36,6 +36,8 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
   const [index, setIndex] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
   if (photos.length === 0) return null;
+  // With "reduce motion" on, a video does not start by itself: it shows its photo and a play control.
+  const reducedMotion = typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
   const count = photos.length;
   const current = photos[Math.min(index, count - 1)];
   const go = (n: number) => setIndex((n + count) % count);
@@ -62,13 +64,29 @@ export default function ImageSlider({ photos, previousLabel, nextLabel, dotLabel
 
   return (
     <div class={`group relative touch-pan-y overflow-hidden ${tone === "light" ? "bg-white" : "bg-ink"} ${className}`} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-      <img
-        src={current.src}
-        alt={current.alt}
-        loading="lazy"
-        decoding="async"
-        class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : (focus === "center" ? "object-cover object-center" : "object-cover object-[50%_20%]")}`}
-      />
+      {current.video ? (
+        <video
+          key={current.video}
+          src={current.video}
+          poster={current.src}
+          aria-label={current.alt}
+          autoplay={!reducedMotion}
+          controls={reducedMotion}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : (focus === "center" ? "object-cover object-center" : "object-cover object-[50%_20%]")}`}
+        />
+      ) : (
+        <img
+          src={current.src}
+          alt={current.alt}
+          loading="lazy"
+          decoding="async"
+          class={`absolute inset-0 h-full w-full ${fit === "contain" ? "object-contain" : (focus === "center" ? "object-cover object-center" : "object-cover object-[50%_20%]")}`}
+        />
+      )}
       {count > 1 && (
         <>
           <button

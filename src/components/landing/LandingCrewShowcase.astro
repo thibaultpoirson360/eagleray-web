@@ -24,7 +24,7 @@ const { block, landingPage, index, locale } = Astro.props;
 const [{ members }, sectionResult] = await Promise.all([loadCrew(locale), loadCrewSection(locale)]);
 const wanted = ((block.members ?? []) as (string | null)[]).map((m) => String(m ?? "").trim()).filter(Boolean);
 const chosen = wanted.flatMap((name) => members.filter((m) => m._sys.filename === name));
-const photos = ((block.photos ?? []) as any[]).filter((x) => x?.image).map((x) => ({ src: x.image as string, alt: (x.alt as string) || block.title }));
+const photos = ((block.photos ?? []) as any[]).filter((x) => x?.image).map((x) => ({ src: x.image as string, alt: (x.alt as string) || block.title, video: (x.video as string) || undefined }));
 const showPhotos = photos.length > 0 || (chosen.length === 0 && !!block.photoNote);
 ---
 

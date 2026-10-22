@@ -111,6 +111,7 @@ export const landingBlocksField = (): TinaField => (
                 fields: [
                   { type: "image", name: "image", label: "Photo" },
                   { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+                  { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
                 ],
               },
               { type: "image", name: "image", label: "Photo (old single photo; use the list above)" },
@@ -149,6 +150,7 @@ export const landingBlocksField = (): TinaField => (
             fields: [
               { type: "image", name: "image", label: "Photo" },
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
             ],
           },
           { type: "string", name: "galleryNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
@@ -195,6 +197,7 @@ export const landingBlocksField = (): TinaField => (
             fields: [
               { type: "image", name: "image", label: "Photo" },
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
             ],
           },
           { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
@@ -230,6 +233,7 @@ export const landingBlocksField = (): TinaField => (
             fields: [
               { type: "image", name: "image", label: "Photo" },
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
             ],
           },
           { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
