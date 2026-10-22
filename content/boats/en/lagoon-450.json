@@ -14,6 +14,11 @@
     "Double kayak and 2 paddleboards",
     "Snorkeling gear and fishing rods"
   ],
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Lagoon_450_-_Catamaran_-_Bahari_-_Bahari_Popa_completa_olhesp.jpg",
+  "photoAlt": "Lagoon 450 - Catamaran Sailing Eagle Ray Expeditions La Paz",
+  "photos": [
+    {}
+  ],
   "length": "45 ft",
   "cabins": "4",
   "bathrooms": "4",
