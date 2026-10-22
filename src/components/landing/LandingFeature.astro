@@ -21,7 +21,7 @@ interface Props {
 
 const { block, landingPage, index, locale } = Astro.props;
 const contactHref = localePath(locale, "contact/") + (block.buttonMessage ? `?message=${encodeURIComponent(block.buttonMessage)}` : "");
-const photos = ((block.photos ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title }));
+const photos = ((block.photos ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || block.title, video: (p.video as string) || undefined }));
 ---
 
 <section

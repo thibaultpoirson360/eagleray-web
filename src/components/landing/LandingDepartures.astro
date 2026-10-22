@@ -29,7 +29,7 @@ const options = [...allOptions.filter((o) => o.option.featured), ...allOptions.f
 const anyFeatured = options.some((o) => o.option.featured);
 const columns = !anyFeatured && options.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
 const photosOf = (option: any) => {
-  const list = ((option.images ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || option.name }));
+  const list: { src: string; alt: string; video?: string }[] = ((option.images ?? []) as any[]).filter((p) => p?.image).map((p) => ({ src: p.image as string, alt: (p.alt as string) || option.name, video: (p.video as string) || undefined }));
   if (list.length === 0 && option.image) list.push({ src: option.image, alt: option.imageAlt || option.name });
   return list;
 };

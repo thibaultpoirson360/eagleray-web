@@ -103,6 +103,7 @@ export const boats: Collection = {
       fields: [
         { type: "image", name: "image", label: "Photo", required: true },
         { type: "string", name: "alt", label: "Alt text" },
+        { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
       ],
     },
     { type: "string", name: "length", label: "Length (e.g. 13.72 m)" },

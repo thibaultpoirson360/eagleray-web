@@ -20,7 +20,7 @@ export interface BoatCard {
   cabins?: string;
   bathrooms?: string;
   guests?: string;
-  photos: { src: string; alt: string }[];
+  photos: { src: string; alt: string; video?: string }[];
 }
 
 export interface BoatModalLabels {
