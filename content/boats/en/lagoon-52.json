@@ -1,0 +1,21 @@
+{
+  "name": "Lagoon 52",
+  "tagline": "Catamaran",
+  "description": "Five double cabins, so nobody in the group ends up on a sofa bed, and a sixth cabin with bunk beds if you're bringing kids. The flybridge is where everyone gathers to watch the next island get closer. At the stern, a grill, an outside shower and a kayak ready to go in the water. Refitted in 2024.",
+  "details": "Five double cabins, so nobody in the group ends up on a sofa bed, and a sixth cabin with bunk beds if you're bringing kids. The flybridge is where everyone gathers to watch the next island get closer. At the stern, a grill, an outside shower and a kayak ready to go in the water. Refitted in 2024.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "length": "52 ft",
+  "cabins": "6",
+  "bathrooms": "6",
+  "guests": "up to 10",
+  "order": 5
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Lagoon 450",
+  "tagline": "Catamaran",
+  "description": "Four double cabins and four bathrooms, built in 2018 and refitted in 2024. The afternoons happen outside: a hammock, an inflatable dock to step off into the water, a double kayak to go and see what's in the next cove. Dinner comes off the grill on deck. Starlink is on board, if anyone needs to stay reachable.",
+  "details": "Four double cabins and four bathrooms, built in 2018 and refitted in 2024. The afternoons happen outside: a hammock, an inflatable dock to step off into the water, a double kayak to go and see what's in the next cove. Dinner comes off the grill on deck. Starlink is on board, if anyone needs to stay reachable.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Hammock and inflatable dock",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "length": "45 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 7
+}
