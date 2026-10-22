@@ -14,10 +14,74 @@
     "Double kayak and 2 paddleboards",
     "Snorkeling gear and fishing rods"
   ],
-  "photo": "",
-  "photoAlt": "",
+  "photo": "/assets/img/boats/lagoon-450-2018-01.webp",
+  "photoAlt": "Lagoon 450 catamaran",
   "photos": [
-    {}
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-01.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-02.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-03.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-video-01.webp",
+      "alt": "Lagoon 450 catamaran",
+      "video": "/assets/video/boats/lagoon-450-2018-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-04.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-05.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-06.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-07.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-08.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-09.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-10.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-11.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-12.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-13.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-14.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-15.webp",
+      "alt": "Lagoon 450 catamaran"
+    }
   ],
   "length": "45 ft",
   "cabins": "4",

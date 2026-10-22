@@ -18,5 +18,66 @@
   "cabins": "4",
   "bathrooms": "4",
   "guests": "up to 8",
-  "order": 8
+  "order": 8,
+  "photo": "/assets/img/boats/lagoon-450-2014-01.webp",
+  "photoAlt": "Lagoon 450 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-01.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-02.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-03.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-video-01.webp",
+      "alt": "Lagoon 450 catamaran",
+      "video": "/assets/video/boats/lagoon-450-2014-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-04.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-05.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-06.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-07.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-08.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-09.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-10.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-11.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-12.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-13.webp",
+      "alt": "Lagoon 450 catamaran"
+    }
+  ]
 }
