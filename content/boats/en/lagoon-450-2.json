@@ -1,0 +1,22 @@
+{
+  "name": "Lagoon 450",
+  "tagline": "Catamaran",
+  "description": "Four double cabins and four bathrooms, built in 2014 and refitted since. There's a hammock on deck for the hour after lunch, and a flybridge above the saloon for the first coffee of the day. Paddleboards, a kayak and snorkel gear are always ready, and the watermaker keeps fresh water coming between anchorages.",
+  "details": "Four double cabins and four bathrooms, built in 2014 and refitted since. There's a hammock on deck for the hour after lunch, and a flybridge above the saloon for the first coffee of the day. Paddleboards, a kayak and snorkel gear are always ready, and the watermaker keeps fresh water coming between anchorages.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Hammock and inflatable dock",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "length": "45 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 8
+}
