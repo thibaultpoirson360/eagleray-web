@@ -42,7 +42,10 @@
       ],
       "note": "And a surprise for everyone who joins us at NIV.",
       "photos": [
-        {},
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/igexport-DSyIewxkUby_l9zqgu.jpg",
+          "alt": "Wine in NIV Condesa with eagle ray"
+        },
         {},
         {}
       ],
