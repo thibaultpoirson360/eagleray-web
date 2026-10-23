@@ -82,7 +82,8 @@ export async function loadCrew(locale: Locale, options?: RequestOptions) {
   const all = (result.data.crewConnection?.edges ?? [])
     .map((edge) => edge?.node)
     .filter((node): node is NonNullable<typeof node> => !!node);
-  const english = all.filter((n) => n._sys.breadcrumbs[0] === defaultLocale);
+  // A member marked "Hide from the website" stays out of every crew list.
+  const english = all.filter((n) => n._sys.breadcrumbs[0] === defaultLocale && !n.hidden);
   // Same people, same order, same photos in every language. The English
   // document decides who is on the team and everything that is not text
   // (order, name, photos, numbers); another language only supplies the
