@@ -3,9 +3,11 @@
   "hideFromSearch": true,
   "blocks": [
     {
-      "kicker": "PRIVATE PREVIEW · MEXICO CITY",
+      "kicker": "PRIVATE PREVIEW · CONDESA · MEXICO CITY ",
       "title": "Drinks at NIV with Eagle Ray Expeditions",
       "lede": "Wednesday, October 28 · 6:00 to 7:30 pm",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/La_Paz_Baja_California_Sur_Eagle_Ray_Expeditions_avgp21.jpg",
+      "imageAlt": "La Paz baja california sailing trip",
       "cta": {
         "label": "Confirm your place",
         "href": "#confirm"
@@ -16,9 +18,18 @@
     },
     {
       "photos": [
-        {},
-        {},
-        {}
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Bar_Eagle_Ray_mwf9jn.jpg",
+          "alt": "Niv Bar & Eagle Ray Wine Bar"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Landscape_-_Foto_-_225_vz5otl.jpg",
+          "alt": "Sailing with Eagle Ray in La Paz"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Food_nqylbl.jpg",
+          "alt": "NIV Wine Bar condesa"
+        }
       ],
       "title": "Private sailing in the Sea of Cortez",
       "text": "Your own group, your own boat. The crew runs the sea, the day is yours: diving in, learning the wind, a kite session, a long lunch from the chef, or nothing at all.",
@@ -30,23 +41,37 @@
         "Meet our founder and hear the story behind Eagle Ray."
       ],
       "note": "And a surprise for everyone who joins us at NIV.",
-      "_template": "eventEvening",
       "photos": [
-        {},
-        {},
-        {}
-      ]
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/igexport-DSyIewxkUby_l9zqgu.jpg",
+          "alt": "Wine in NIV Condesa with eagle ray"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_Content_from_Thibault_for_Mktg_use_8_y3adig.jpg",
+          "alt": "Thibault Poirson, Founder of Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_146_bvg1ks.jpg",
+          "alt": "Sailing la paz"
+        }
+      ],
+      "_template": "eventEvening"
     },
     {
       "title": "Ocean adventures led by passionate sea people",
+      "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything that Eagle Ray is starts with them.",
       "people": [
         {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
+          "alt": "Lou Capitan of Eagle Ray",
           "name": "Lou",
           "role": "Captain & Expedition Leader",
           "text": "15 years sailing the world, from the Bahamas to Polynesia. Master 200 GT captain and certified marine engineer: he has skippered catamarans from 41 to 62 feet and knows the boat from the helm to the engine room.",
           "quote": "\"I read the sea and the group, and adjust the day as it goes. If it's your first time at sea, you're in the right place.\""
         },
         {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Profile_selfie_z40j1w.jpg",
+          "alt": "Monik Saab Expedition Leader Eagle Ray",
           "name": "Monik",
           "role": "Expedition Leader",
           "text": "Dive instructor who guides in four languages, with six years in Baja. Licensed to guide in the Revillagigedo Islands, she has also worked on yachts with helicopter decks.",
@@ -65,14 +90,15 @@
           "quote": "\"I start every trip with questions: what's your name, have you been in these waters before, what do you definitely want to live? Then I plan around your answers.\""
         },
         {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+          "alt": "Andrea Gutierrez, Eagle Ray Expeditions ",
           "name": "Andrea",
           "role": "Expedition Leader",
           "text": "She crossed the Atlantic in a rowing boat. Five years guiding groups at sea in Mexico, with STCW and RYA safety training.",
           "quote": "\"On day one, I watch how each person arrives: their energy, their confidence. My job is to show you what you're capable of, without unnecessary risks.\""
         }
       ],
-      "_template": "eventPeople",
-      "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything that Eagle Ray is starts with them."
+      "_template": "eventPeople"
     },
     {
       "cards": [
@@ -97,10 +123,10 @@
       "anchor": "confirm",
       "title": "Confirm your place",
       "line": "This invitation is personal and places are limited.",
+      "tallyUrl": "https://tally.so/r/EqkAxr",
       "formTitle": "Confirm your place",
       "height": 1100,
-      "_template": "eventRsvp",
-      "tallyUrl": "https://tally.so/r/EqkAxr"
+      "_template": "eventRsvp"
     },
     {
       "label": "THE PLACE",
