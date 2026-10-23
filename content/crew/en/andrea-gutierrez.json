@@ -37,7 +37,7 @@
   "why": "\"The sea is a teacher: you're the one who learns to adapt to it. I find freedom there, and it asks for humility. It reminds you how small you are, and shows you what you're capable of.\n\nSharing it means adapting to the conditions so each person can live it their own way. The sea is our road and our way of getting here, so we enjoy it, respect it and leave as little trace as possible, for whoever comes next.\"",
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
   "imageAlt": "Andrea, expedition leader with Eagle Ray Expeditions",
-  "hidden": true,
+  "hidden": false,
   "order": 9,
   "images": [
     "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png"
