@@ -22,8 +22,8 @@
   "photoAlt": "Sun Odyssey 44i - Jeanneau — Exterior",
   "photos": [
     {
-      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
-      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-09.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Cocina"
     },
     {
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-02.webp",
@@ -35,6 +35,10 @@
     },
     {
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-04.webp",
+      "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
+    },
+    {
+      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
       "alt": "Sun Odyssey 44i - Jeanneau — Exterior"
     },
     {
@@ -52,10 +56,6 @@
     {
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-08.webp",
       "alt": "Sun Odyssey 44i - Jeanneau — Interior / Salón"
-    },
-    {
-      "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-09.webp",
-      "alt": "Sun Odyssey 44i - Jeanneau — Interior / Cocina"
     },
     {
       "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-10.webp",
