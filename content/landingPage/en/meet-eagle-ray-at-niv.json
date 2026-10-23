@@ -17,6 +17,12 @@
       "_template": "hero"
     },
     {
+      "label": "ABOUT EAGLE RAY EXPEDITIONS",
+      "text": "Private sailing in the Sea of Cortez, from La Paz. The boat is how we get there, and we choose it as carefully as the crew: catamarans and monohulls with all comforts, a flybridge, Starlink and everything for day & night in the water, from paddleboards to snorkel gear. What our clients take home are days at sea with their own people, and a crew chosen for how they sail and how they look after a guest. No unbreakable agenda, nothing for them to organise.",
+      "closing": "The kind of trip they come back from and never forget.",
+      "_template": "eventIntro"
+    },
+    {
       "photos": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Bar_Eagle_Ray_mwf9jn.jpg",

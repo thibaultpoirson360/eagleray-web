@@ -30,6 +30,7 @@ import LandingCinematicRoute from "./LandingCinematicRoute.astro";
 import LandingTripBoats from "./LandingTripBoats.astro";
 import LandingFeature from "./LandingFeature.astro";
 import LandingCrewShowcase from "./LandingCrewShowcase.astro";
+import LandingEventIntro from "./LandingEventIntro.astro";
 import LandingEventEvening from "./LandingEventEvening.astro";
 import LandingEventPhotoStrip from "./LandingEventPhotoStrip.astro";
 import LandingEventPeople from "./LandingEventPeople.astro";
@@ -76,6 +77,7 @@ const { landingPage, locale } = Astro.props;
         {kind === "CinematicRoute" && <LandingCinematicRoute block={block} landingPage={landingPage} index={index} />}
         {kind === "Actions" && <LandingActions block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Faq" && <LandingFaq block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventIntro" && <LandingEventIntro block={block} landingPage={landingPage} index={index} />}
         {kind === "EventEvening" && <LandingEventEvening block={block} landingPage={landingPage} index={index} />}
         {kind === "EventPhotoStrip" && <LandingEventPhotoStrip block={block} landingPage={landingPage} index={index} />}
         {kind === "EventPeople" && <LandingEventPeople block={block} landingPage={landingPage} index={index} />}
