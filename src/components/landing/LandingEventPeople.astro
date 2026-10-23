@@ -21,15 +21,17 @@ const people = ((block.people ?? []) as any[]).filter(Boolean);
   {block.text && <p class="mx-auto mt-8 max-w-[56ch] text-center text-[.84rem] leading-[1.8] text-ink/74" data-tina-field={tinaField(block, "text")}>{block.text}</p>}
   {
     block.sliderTitle && (
-      <div class="mt-[calc(var(--spacing-section-head)*1.4)] flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
-        <h3 class="font-display text-[clamp(1.1rem,1.8vw,1.35rem)] font-light text-ink" data-tina-field={tinaField(block, "sliderTitle")}>{block.sliderTitle}</h3>
-        {block.moreLabel && block.moreHref && (
-          <a href={block.moreHref} class="text-[.78rem] font-medium text-ink underline underline-offset-4" data-tina-field={tinaField(block, "moreLabel")}>{block.moreLabel}</a>
-        )}
-      </div>
+      <h3 class="mt-[calc(var(--spacing-section-head)*1.4)] text-center font-display text-[1rem] font-light text-ink" data-tina-field={tinaField(block, "sliderTitle")}>{block.sliderTitle}</h3>
     )
   }
   <div class:list={[block.sliderTitle ? "mt-8" : "mt-[calc(var(--spacing-section-head)*1.4)]"]} data-tina-field={tinaField(block, "people")}>
     <PeopleSlider client:visible people={people} label={block.title} previousLabel="Previous" nextLabel="Next" />
   </div>
+  {
+    block.moreLabel && block.moreHref && (
+      <p class="mt-6 text-center">
+        <a href={block.moreHref} class="text-[.78rem] font-medium text-ink underline underline-offset-4" data-tina-field={tinaField(block, "moreLabel")}>{block.moreLabel}</a>
+      </p>
+    )
+  }
 </section>
