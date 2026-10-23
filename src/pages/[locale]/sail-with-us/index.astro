@@ -65,7 +65,7 @@ const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
                 {page.expeditionsLabel}
               </p>
             )}
-            <ExpeditionCards expeditions={expeditions} linkLabel="Learn more" />
+            <ExpeditionCards expeditions={expeditions} linkLabel="Learn more" featured={2} />
           </section>
 
           {page.howTitle && (page.howSteps?.length ?? 0) > 0 && (

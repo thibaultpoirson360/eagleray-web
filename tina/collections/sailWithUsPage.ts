@@ -28,7 +28,7 @@ const sailWithUsPage: Collection = {
     {
       type: "object",
       name: "expeditions",
-      label: "Expedition cards (each links to its page; up to 3 in one row on desktop)",
+      label: "Expedition cards (each links to its page; the first two are shown wide, the rest smaller below)",
       list: true,
       ui: { itemProps: (item: Record<string, any>) => ({ label: item?.name || "Expedition" }) },
       fields: [
@@ -44,6 +44,12 @@ const sailWithUsPage: Collection = {
           label: "Short description under the card (2-3 lines)",
           description: "Explains in a few words what this expedition is. Leave empty for no text.",
           ui: textarea,
+        },
+        {
+          type: "boolean",
+          name: "hideOnHome",
+          label: "Show only on the Sail with Us page",
+          description: "Turn on to keep this card off the homepage's \"Your expedition\" section.",
         },
         {
           type: "string",

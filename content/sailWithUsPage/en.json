@@ -11,15 +11,6 @@
   "expeditionsLabel": "Choose your expedition",
   "expeditions": [
     {
-      "name": "Recalibration Expedition",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
-      "imageAlt": "Recalibration Expedition",
-      "facts": "3, 5 or 7 nights · private boat",
-      "priceNote": "From 14,500 USD, whole boat",
-      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
-      "href": "/en/recalibration-expedition/"
-    },
-    {
       "name": "Thanksgiving with Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Active Expedition",
@@ -28,6 +19,24 @@
       "priceNote": "From 4,000 USD",
       "description": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
       "href": "/en/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Dive & Sail with Monik Saab",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
+      "imageAlt": "Monik Saab, Eagle Ray Expedition Leader, scuba diving in La Paz",
+      "badge": "Limited dates · November 2026",
+      "description": "A day, a night at anchor, or the Thanksgiving weekend off Espíritu Santo. Monik leads the dives, with all the gear on board.",
+      "hideOnHome": true,
+      "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Recalibration Expedition",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "Recalibration Expedition",
+      "facts": "3, 5 or 7 nights · private boat",
+      "priceNote": "From 14,500 USD, whole boat",
+      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
+      "href": "/en/recalibration-expedition/"
     },
     {
       "name": "Your own expedition",
