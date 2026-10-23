@@ -1,0 +1,39 @@
+---
+/**
+ * `eventEvening` landing block: the plan of the evening as short lines on the
+ * left (with a smaller italic line under them) and, on the right, a mosaic of
+ * photos (the place, the dishes, the wine). On a phone the photos go under the text.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const lines = ((block.lines ?? []) as (string | null)[]).filter(Boolean);
+// Always three slots so the layout holds its shape while photos are still missing.
+const photos = Array.from({ length: 3 }, (_, i) => (block.photos ?? [])[i] ?? {});
+---
+
+<section class="relative mx-auto max-w-site px-pad py-[calc(var(--spacing-section)*1.8)]" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="grid items-center gap-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-24">
+    <div>
+      <div class="flex flex-col gap-8" data-tina-field={tinaField(block, "lines")}>
+        {lines.map((line) => <p class="max-w-[28ch] font-display text-[clamp(1.35rem,2.4vw,1.9rem)] leading-[1.35] font-light text-ink">{line}</p>)}
+      </div>
+      {block.note && <p class="mt-14 max-w-[40ch] font-serif text-[1rem] leading-[1.7] text-ink/64 italic" data-tina-field={tinaField(block, "note")}>{block.note}</p>}
+    </div>
+
+    <div class="grid grid-cols-2 gap-3 sm:gap-4" data-tina-field={tinaField(block, "photos")}>
+      {photos.map((photo, i) => (
+        <div class:list={["overflow-hidden rounded-sm bg-surface", i === 0 ? "row-span-2 aspect-[3/5]" : "aspect-square"]}>
+          {photo.image && <img src={photo.image} alt={photo.alt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

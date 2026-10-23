@@ -1,0 +1,36 @@
+---
+/**
+ * `eventCards` landing block: two large image cards of the same size, each with a title and a button over the photo.
+ */
+import Button from "../ui/Button.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const cards = ((block.cards ?? []) as any[]).filter(Boolean).slice(0, 2);
+---
+
+<section class="relative mx-auto max-w-site px-pad pb-[calc(var(--spacing-section)*1.8)]" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="grid gap-6 md:grid-cols-2 md:gap-8" data-tina-field={tinaField(block, "cards")}>
+    {cards.map((card) => (
+      <div class="relative isolate flex aspect-[4/5] items-end overflow-hidden rounded-lg bg-ink">
+        {card.image && <img src={card.image} alt={card.alt ?? ""} loading="lazy" decoding="async" class="absolute inset-0 -z-10 h-full w-full object-cover" />}
+        <div class="absolute inset-0 -z-10 bg-linear-to-b from-ink/0 via-ink/20 to-ink/70"></div>
+        <div class="w-full p-6 text-white sm:p-8">
+          <h2 class="max-w-[14ch] font-display text-[clamp(1.35rem,2.4vw,1.9rem)] font-light text-white">{card.title}</h2>
+          {card.cta?.label && (
+            <div class="mt-8">
+              <Button href={card.cta.href} variant="ghost" context="hero">{card.cta.label}</Button>
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

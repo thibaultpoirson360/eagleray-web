@@ -1,0 +1,102 @@
+{
+  "title": "Drinks at NIV",
+  "hideFromSearch": true,
+  "blocks": [
+    {
+      "kicker": "PRIVATE PREVIEW · MEXICO CITY",
+      "title": "Drinks at NIV with Eagle Ray Expeditions",
+      "lede": "Wednesday afterwork from 18:00 to 19:30",
+      "cta": {
+        "label": "Confirm your place",
+        "href": "#confirm"
+      },
+      "calm": true,
+      "ctaOnThisPage": true,
+      "_template": "hero"
+    },
+    {
+      "photos": [
+        {},
+        {},
+        {}
+      ],
+      "title": "Private sailing in the Sea of Cortez",
+      "text": "Your own group, your own boat. The crew runs the sea, the day is yours: diving in, learning the wind, a kite session, scubadiving, enjoying a good wine with delicious food by our chefs, or nothing at all.",
+      "_template": "eventPhotoStrip"
+    },
+    {
+      "lines": [
+        "Wine and bites from NIV.",
+        "Meet our founder and hear the story behind Eagle Ray."
+      ],
+      "note": "And a surprise for everyone who joins us at NIV.",
+      "_template": "eventEvening",
+      "photos": [
+        {},
+        {},
+        {}
+      ]
+    },
+    {
+      "title": "Ocean adventures led by passionate sea people",
+      "people": [
+        {
+          "name": "Lou",
+          "role": "Captain & Expedition Leader"
+        },
+        {
+          "name": "Monik",
+          "role": "Expedition Leader"
+        },
+        {
+          "name": "Juan Carlos",
+          "role": "Expedition Leader"
+        }
+      ],
+      "_template": "eventPeople",
+      "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything Eagle Ray is, starts with them."
+    },
+    {
+      "cards": [
+        {
+          "title": "Travel with us",
+          "cta": {
+            "label": "Plan my expedition →",
+            "href": "#"
+          }
+        },
+        {
+          "title": "Offer Eagle Ray to your clients",
+          "cta": {
+            "label": "Become a partner →",
+            "href": "#"
+          }
+        }
+      ],
+      "_template": "eventCards"
+    },
+    {
+      "anchor": "confirm",
+      "title": "Confirm your place",
+      "line": "This invitation is personal and places are limited.",
+      "formTitle": "Confirm your place",
+      "height": 1100,
+      "_template": "eventRsvp",
+      "tallyUrl": "https://tally.so/r/EqkAxr"
+    },
+    {
+      "label": "THE PLACE",
+      "name": "NIV · Wine bar",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32",
+      "_template": "eventPlace"
+    }
+  ],
+  "seo": {
+    "title": "A private preview of Eagle Ray Expeditions",
+    "description": "Wednesday, October 28 · 6:00 to 7:30 pm · NIV, Condesa, Mexico City",
+    "ogTitle": "A private preview of Eagle Ray Expeditions",
+    "ogDescription": "Wednesday, October 28 · 6:00 to 7:30 pm · NIV, Condesa, Mexico City"
+  }
+}
