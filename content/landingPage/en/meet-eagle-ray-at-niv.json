@@ -107,7 +107,10 @@
           "quote": "\"On day one, I watch how each person arrives: their energy, their confidence. My job is to show you what you're capable of, without unnecessary risks.\""
         }
       ],
-      "_template": "eventPeople"
+      "_template": "eventPeople",
+      "sliderTitle": "Meet some of our passionate sea people",
+      "moreLabel": "Meet more of our crew",
+      "moreHref": "/en/passionate-sea-people/"
     },
     {
       "cards": [
@@ -115,14 +118,14 @@
           "title": "Travel with us",
           "cta": {
             "label": "Plan my expedition →",
-            "href": "#"
+            "href": "/en/sail-with-us/"
           }
         },
         {
           "title": "Offer Eagle Ray to your clients",
           "cta": {
             "label": "Become a partner →",
-            "href": "#"
+            "href": "/en/contact/?message=I%20would%20like%20to%20book%20a%20call%20to%20become%20a%20partner%20and%20offer%20Sailing%20Expeditions%20in%20Baja%20for%20my%20clients"
           }
         }
       ],
