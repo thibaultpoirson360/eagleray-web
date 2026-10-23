@@ -62,6 +62,8 @@
       "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything Eagle Ray is, starts with them.",
       "people": [
         {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
+          "alt": "Lou Capitan of Eagle Ray",
           "name": "Lou",
           "role": "Captain & Expedition Leader"
         },
