@@ -177,9 +177,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
             <ul data-tina-field={tinaField(member, "languages")}>
               {languages.map((l) => (
                 <li>
-                  {l.flag && <span aria-hidden="true">{l.flag} </span>}
                   {l.language}
-                  {l.level && <span class="text-ink/64"> ({l.level})</span>}
                 </li>
               ))}
             </ul>

@@ -14,13 +14,10 @@
   ],
   "languages": [
     {
-      "language": "English",
-      "level": "fluent"
+      "language": "English"
     },
     {
-      "language": "Spanish",
-      "level": "fluent",
-      "flag": " 🇪🇸"
+      "language": "Spanish"
     },
     {
       "language": "French"
