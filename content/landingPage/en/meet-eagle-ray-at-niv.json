@@ -47,6 +47,9 @@
         "Meet our founder and hear the story behind Eagle Ray."
       ],
       "note": "And a surprise for everyone who joins us at NIV.",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32",
       "photos": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/igexport-DSyIewxkUby_l9zqgu.jpg",
@@ -61,14 +64,14 @@
           "alt": "Sailing la paz"
         }
       ],
-      "_template": "eventEvening",
-      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
-      "linkLabel": "Open in Google Maps →",
-      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32"
+      "_template": "eventEvening"
     },
     {
       "title": "Ocean adventures led by passionate sea people",
       "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything that Eagle Ray is starts with them.",
+      "sliderTitle": "Meet some of our passionate sea people",
+      "moreLabel": "Meet more passionate sea people",
+      "moreHref": "/en/passionate-sea-people/",
       "people": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
@@ -107,14 +110,13 @@
           "quote": "\"On day one, I watch how each person arrives: their energy, their confidence. My job is to show you what you're capable of, without unnecessary risks.\""
         }
       ],
-      "_template": "eventPeople",
-      "sliderTitle": "Meet some of our passionate sea people",
-      "moreLabel": "Meet more passionate sea people",
-      "moreHref": "/en/passionate-sea-people/"
+      "_template": "eventPeople"
     },
     {
       "cards": [
         {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_088_t76wxw.jpg",
+          "alt": "We organize your sailing trip in La Paz",
           "title": "Travel with us",
           "cta": {
             "label": "Plan my expedition →",
