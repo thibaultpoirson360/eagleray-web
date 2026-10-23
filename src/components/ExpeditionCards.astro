@@ -24,22 +24,26 @@ export interface ExpeditionCard {
 interface Props {
   expeditions: ExpeditionCard[];
   linkLabel: string;
+  /** The first N cards are shown wide (two to a row, landscape) and the rest smaller and centred below. 0 keeps every card the same. */
+  featured?: number;
 }
 
-const { expeditions, linkLabel } = Astro.props;
+const { expeditions, linkLabel, featured = 0 } = Astro.props;
+const featuredLayout = featured > 0 && expeditions.length > featured;
 // Cards fill the row: 1 card full width, 2 cards split it, 3 or more use three columns.
-const columns =
-  expeditions.length === 1 ? "grid-cols-1" : expeditions.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
+const columns = featuredLayout
+  ? "md:grid-cols-2 lg:grid-cols-6"
+  : expeditions.length === 1 ? "grid-cols-1" : expeditions.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
 ---
 
 <div class={`grid gap-8 ${columns}`}>
   {
-    expeditions.map((expedition) => (
-      <div>
+    expeditions.map((expedition, i) => (
+      <div class:list={[featuredLayout && (i < featured ? "lg:col-span-3" : "lg:col-span-2"), featuredLayout && i === featured && "lg:col-start-2"]}>
         <a
           href={expedition.href || "#"}
           data-tina-field={expedition.field}
-          class="group relative block aspect-square overflow-hidden rounded-lg bg-ink transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgb(14_27_43/0.14)]"
+          class:list={["group relative block overflow-hidden rounded-lg bg-ink transition duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgb(14_27_43/0.14)]", featuredLayout && i < featured ? "aspect-square lg:aspect-[4/3]" : "aspect-square"]}
         >
           {expedition.image && (
             <img src={expedition.image} alt={expedition.imageAlt ?? ""} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover" />

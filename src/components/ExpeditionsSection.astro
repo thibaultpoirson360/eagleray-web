@@ -15,7 +15,7 @@ interface Props {
 
 const { expeditionsSection, sailWithUsPage } = Astro.props;
 const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? []).flatMap((e, i) =>
-  e?.name
+  e?.name && !e.hideOnHome
     ? [
         {
           id: e.name,
