@@ -50,7 +50,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_Content_from_Thibault_for_Mktg_use_8_y3adig.jpg",
           "alt": "Thibault Poirson, Founder of Eagle Ray Expeditions"
         },
-        {}
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_146_bvg1ks.jpg",
+          "alt": "Sailing la paz"
+        }
       ],
       "_template": "eventEvening"
     },
