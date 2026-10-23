@@ -74,7 +74,9 @@
           "role": "Expedition Leader"
         },
         {
-          "name": "Juan Carlos",
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+          "alt": "Andrea Gutierrez, Eagle Ray Expeditions ",
+          "name": "Andrea Gutierrez",
           "role": "Expedition Leader"
         }
       ],
