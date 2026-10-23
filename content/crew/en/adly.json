@@ -13,19 +13,13 @@
   ],
   "languages": [
     {
-      "language": "Arabic",
-      "level": "native",
-      "flag": "🇪🇬"
+      "language": "Arabic"
     },
     {
-      "language": "English",
-      "level": "fluent",
-      "flag": "🇬🇧"
+      "language": "English"
     },
     {
-      "language": "Spanish",
-      "level": "intermediate",
-      "flag": "🇪🇸"
+      "language": "Spanish"
     }
   ],
   "certificates": [
