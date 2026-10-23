@@ -11,14 +11,13 @@
     "Hydraulic swim platform",
     "Performance sails"
   ],
-  "length": "58.3 ft",
-  "cabins": "3",
-  "bathrooms": "3",
-  "guests": "up to 6",
-  "order": 2,
-  "photo": "/assets/img/boats/beneteau-sense-55-12.webp",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/beneteau-sense-55-08_c3eurf.webp",
   "photoAlt": "Beneteau Sense 55",
   "photos": [
+    {
+      "image": "/assets/img/boats/beneteau-sense-55-08.webp",
+      "alt": "Beneteau Sense 55"
+    },
     {
       "image": "/assets/img/boats/beneteau-sense-55-12.webp",
       "alt": "Beneteau Sense 55"
@@ -52,10 +51,6 @@
       "alt": "Beneteau Sense 55"
     },
     {
-      "image": "/assets/img/boats/beneteau-sense-55-08.webp",
-      "alt": "Beneteau Sense 55"
-    },
-    {
       "image": "/assets/img/boats/beneteau-sense-55-09.webp",
       "alt": "Beneteau Sense 55"
     },
@@ -67,5 +62,10 @@
       "image": "/assets/img/boats/beneteau-sense-55-11.webp",
       "alt": "Beneteau Sense 55"
     }
-  ]
+  ],
+  "length": "58.3 ft",
+  "cabins": "3",
+  "bathrooms": "3",
+  "guests": "up to 6",
+  "order": 2
 }
