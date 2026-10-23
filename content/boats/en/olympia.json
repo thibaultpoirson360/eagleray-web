@@ -1,8 +1,8 @@
 {
-  "name": "Olympia",
-  "tagline": "Downeast 38 - Sailing monohull, built in 1977",
-  "description": "Olympia has been sailing since 1977. She is a 38-foot monohull with one cabin and one bathroom, which makes her a boat for two.",
-  "details": "Olympia has been sailing since 1977. She is a 38-foot monohull with one cabin and one bathroom, which makes her a boat for two: a honeymoon, an anniversary, or a few days with nobody else's plans to follow.\n\nOn a day sail, her deck takes ten or twelve people. For two, that's all the space you want: to lie in the sun, to eat outside, to watch the anchorage go quiet at night. Below deck, a single cabin with a warm interior.",
+  "name": "Downeast 38",
+  "tagline": "Sailing monohull",
+  "description": "This Sailing Monohull has been sailing since 1977. She is a 38-foot monohull with one cabin and one bathroom, which makes her a boat for two.",
+  "details": "This Sailing Monohull has been sailing since 1977. She is a 38-foot monohull with one cabin and one bathroom, which makes her a boat for two: a honeymoon, an anniversary, or a few days with nobody else's plans to follow.\n\nOn a day sail, her deck takes ten or twelve people. For two, that's all the space you want: to lie in the sun, to eat outside, to watch the anchorage go quiet at night. Below deck, a single cabin with a warm interior.",
   "features": [
     "38 ft sailing monohull, built in 1977",
     "1 cabin, 1 bathroom",
@@ -11,8 +11,8 @@
     "Warm interior fit-out",
     "Trips from one night"
   ],
-  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boat_ERE_Icon_Olympia5_gcwzyk.jpg",
-  "photoAlt": "Olympia",
+  "photo": "/assets/img/boats/olympia-09.webp",
+  "photoAlt": "Downeast 38",
   "photos": [
     {
       "image": "/assets/img/boats/olympia-05.webp",
