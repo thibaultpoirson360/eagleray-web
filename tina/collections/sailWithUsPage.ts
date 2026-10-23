@@ -46,6 +46,12 @@ const sailWithUsPage: Collection = {
           ui: textarea,
         },
         {
+          type: "number",
+          name: "homeOrder",
+          label: "Position on the homepage slider (1 = first)",
+          description: "Numbered cards come first, in this order. Cards without a number follow in the same order as on this page.",
+        },
+        {
           type: "boolean",
           name: "hideOnHome",
           label: "Show only on the Sail with Us page",

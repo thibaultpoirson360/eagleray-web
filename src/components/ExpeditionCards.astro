@@ -2,8 +2,10 @@
 /**
  * The expedition cards on the Sail with Us page (Sail With Us.dc.html): a
  * photo with the name over it. Each card links to its expedition's page.
- * Plain links, so no JavaScript is needed.
+ * Plain links, so no JavaScript is needed (the slider's dots are the only script).
  */
+import SliderDots from "./SliderDots.tsx";
+
 export interface ExpeditionCard {
   id: string;
   name: string;
@@ -24,20 +26,30 @@ export interface ExpeditionCard {
 interface Props {
   expeditions: ExpeditionCard[];
   linkLabel: string;
+  /** One row that scrolls sideways (cards keep the same size as in the grid) instead of a grid. */
+  slider?: boolean;
+  /** Accessible name of the slider. */
+  sliderLabel?: string;
 }
 
-const { expeditions, linkLabel } = Astro.props;
+const { expeditions, linkLabel, slider = false, sliderLabel } = Astro.props;
 // Cards fill the row: 1 card full width, 2 cards split it, 4 cards go two by two
 // (wider, all the same size), 3 or 5 or more use three columns.
-const twoByTwo = expeditions.length === 4;
+const twoByTwo = !slider && expeditions.length === 4;
 const columns =
   expeditions.length === 1 ? "grid-cols-1" : expeditions.length === 2 || twoByTwo ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
 ---
 
-<div class={`grid gap-8 ${columns}`}>
+<div
+  class:list={slider ? "-mx-1 -mt-2 flex snap-x snap-mandatory gap-8 overflow-x-auto px-1 pt-2 pb-6 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden" : `grid gap-8 ${columns}`}
+  data-expeditions-slider={slider ? "" : undefined}
+  tabindex={slider ? 0 : undefined}
+  role={slider ? "group" : undefined}
+  aria-label={slider ? sliderLabel : undefined}
+>
   {
     expeditions.map((expedition) => (
-      <div>
+      <div class:list={[slider && "expedition-card w-full shrink-0 snap-start sm:w-[calc((100%-2rem)/2)] lg:w-[calc((100%-4rem)/3)]"]}>
         <a
           href={expedition.href || "#"}
           data-tina-field={expedition.field}
@@ -68,3 +80,5 @@ const columns =
     ))
   }
 </div>
+{slider && expeditions.length > 1 && <SliderDots client:visible sliderSelector="[data-expeditions-slider]" cardSelector=".expedition-card" count={expeditions.length} labelPrefix="Go to expedition" />}
+
