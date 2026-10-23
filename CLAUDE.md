@@ -9,7 +9,7 @@ This repo is the Eagle Ray Expeditions marketing site. It is built with Astro (s
 - `AGENTS.md`: the rules for working in this repo. Follow them over anything else in this file.
 - `docs/design-system.md`: colours, type, spacing, buttons and heroes. Use the tokens; do not add new colours or sizes.
 - `docs/tina-setup.md`: accounts, environment variables, deploys, and the editors list.
-- `docs/translation-workflow.md`: how the Spanish and French drafts are made and reviewed.
+- `docs/translation-workflow.md`: how the Spanish and French drafts are made (with `/translate`) and reviewed.
 - `docs/launch-checklist.md`: what is still open before the domain moves.
 - `docs/migration-history.md`: the original migration spec. It is history, not a rulebook.
 
@@ -20,6 +20,7 @@ This repo is the Eagle Ray Expeditions marketing site. It is built with Astro (s
 - `npm run design-system`: rebuilds `design-system/styles.css` from the tokens in `src/styles/global.css`.
 - `npm run build`: the production build. It needs the deployed environment variables, so use it only for checks that do not touch the database.
 - `npx playwright test`: the end-to-end tests. Start `npm run tina:dev` first.
+- `/translate`: drafts Spanish and French for the English text that changed since the last translation, then (if you say yes) opens a pull request. Run it once after a batch of editor changes. Helpers: `npm run translate:prepare`, `npm run translate:apply`, `npm run translate:status`; tests: `npm run test:translation`. See `docs/translation-workflow.md`.
 
 ## Working here
 

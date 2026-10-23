@@ -56,16 +56,15 @@ const { loadTinaSchema } = await import("./lib/tina-schema.mjs");
 const { translateDocument, collectTranslationUnits } = await import("./lib/translatable-content.mjs");
 const { translateBatch } = await import("./lib/deepl.mjs");
 
-const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const TARGET_LOCALES = ["es", "fr"];
-
-const MEMORY_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "translation-memory.json");
-/** { es: { "<English>": "<approved>" }, fr: {...} } — empty if the file is missing. */
-function loadMemory() {
-  if (!existsSync(MEMORY_PATH)) return { es: {}, fr: {} };
-  const memory = JSON.parse(readFileSync(MEMORY_PATH, "utf8"));
-  return { es: memory.es ?? {}, fr: memory.fr ?? {} };
-}
+// Shared with the /translate scripts (translate-prepare.mjs, translate-apply.mjs).
+const {
+  REPO_ROOT,
+  TARGET_LOCALES,
+  loadMemory,
+  listEnglishFiles,
+  outputPathFor,
+  pruneOrphanTranslations: pruneOrphans,
+} = await import("./lib/translation-files.mjs");
 
 // content/<folder>/en.json  (one document per locale, e.g. hero, funnel)
 const SINGLE_DOC_RE = /^content\/([^/]+)\/en\.json$/;
@@ -100,27 +99,8 @@ function runGitDiff(base, head) {
     .filter(Boolean);
 }
 
-/** Every `content/<folder>/en.json` and `content/<folder>/en/<slug>.json` in the repo. */
 function fullRescan() {
-  const contentDir = path.join(REPO_ROOT, "content");
-  const files = [];
-  if (!existsSync(contentDir)) return files;
-
-  for (const entry of readdirSync(contentDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const folder = entry.name;
-
-    const singleDoc = path.join("content", folder, "en.json");
-    if (existsSync(path.join(REPO_ROOT, singleDoc))) files.push(singleDoc);
-
-    const multiDocDir = path.join(REPO_ROOT, "content", folder, "en");
-    if (existsSync(multiDocDir) && statSync(multiDocDir).isDirectory()) {
-      for (const f of readdirSync(multiDocDir)) {
-        if (f.endsWith(".json")) files.push(path.join("content", folder, "en", f));
-      }
-    }
-  }
-  return files;
+  return listEnglishFiles(REPO_ROOT);
 }
 
 /**
@@ -157,10 +137,6 @@ export function resolveChangedEnFiles(explicitFiles = [], scope = "changed") {
     parsed.push(info);
   }
   return parsed;
-}
-
-function outputPathFor(folder, slug, locale) {
-  return slug ? path.join("content", folder, locale, `${slug}.json`) : path.join("content", folder, `${locale}.json`);
 }
 
 /**
@@ -238,40 +214,9 @@ export function applyMemoryToFile(entry, schema, memory) {
   return { changed, skipped };
 }
 
-/**
- * Removes ES/FR files whose English source no longer exists, so deleting a
- * document in English (e.g. a blog post in the editor) also removes its
- * translations. Only multi-document collections (`content/<folder>/en/<slug>.json`)
- * are pruned — a single-document file like `en.json` is never deleted by the
- * editor. Safety: a folder is only pruned when `content/<folder>/en/` still
- * holds at least one file, so a missing or emptied English folder can never
- * wipe every translation. Deletions end up in the reviewed pull request, and
- * git history keeps the files if a deletion was a mistake.
- * Returns the repo-relative paths removed.
- */
+/** See scripts/lib/translation-files.mjs — kept exported here for the DeepL path and older callers. */
 export function pruneOrphanTranslations() {
-  const contentDir = path.join(REPO_ROOT, "content");
-  const removed = [];
-  if (!existsSync(contentDir)) return removed;
-
-  for (const entry of readdirSync(contentDir, { withFileTypes: true })) {
-    if (!entry.isDirectory()) continue;
-    const enDir = path.join(contentDir, entry.name, "en");
-    if (!existsSync(enDir) || !statSync(enDir).isDirectory()) continue;
-    const enSlugs = new Set(readdirSync(enDir).filter((f) => f.endsWith(".json")));
-    if (enSlugs.size === 0) continue;
-
-    for (const locale of TARGET_LOCALES) {
-      const localeDir = path.join(contentDir, entry.name, locale);
-      if (!existsSync(localeDir) || !statSync(localeDir).isDirectory()) continue;
-      for (const file of readdirSync(localeDir)) {
-        if (!file.endsWith(".json") || enSlugs.has(file)) continue;
-        rmSync(path.join(localeDir, file));
-        removed.push(path.join("content", entry.name, locale, file));
-      }
-    }
-  }
-  return removed;
+  return pruneOrphans(REPO_ROOT);
 }
 
 function setGithubOutput(name, value) {

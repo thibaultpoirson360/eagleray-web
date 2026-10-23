@@ -15,6 +15,10 @@
     "tina:build": "tinacms build --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
     "tina:build:local": "TINA_PUBLIC_IS_LOCAL=true tinacms build --local --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
     "test:e2e": "playwright test",
+    "translate:prepare": "node --experimental-strip-types --no-warnings scripts/translate-prepare.mjs",
+    "translate:apply": "node --experimental-strip-types --no-warnings scripts/translate-apply.mjs",
+    "translate:status": "node --experimental-strip-types --no-warnings scripts/translate-prepare.mjs --status",
+    "test:translation": "node --experimental-strip-types --no-warnings --test scripts/test/translation.test.mjs",
     "design-system": "node scripts/build-design-system.mjs"
   },
   "dependencies": {

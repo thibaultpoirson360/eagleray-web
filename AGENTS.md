@@ -15,7 +15,7 @@ For migration history and setup, see `docs/migration-history.md` (how the site w
 
 **Most changes need no assistant at all.** If you want to change words, photos, links, menu items or add an article, a crew member or a landing page, use the editor (`/admin`). The step-by-step is in the *Website Editor Guide*. Only use the assistant for things the editor can't do: a new kind of page, a new layout, a new feature.
 
-**Before you build a page with the assistant, try the Landing page builder.** In the editor, *Landing pages* lets you put together a page from ready-made blocks (hero banner, rich text, image gallery, call-to-action banner, trip proposal). No code, and the translation robot picks it up automatically.
+**Before you build a page with the assistant, try the Landing page builder.** In the editor, *Landing pages* lets you put together a page from ready-made blocks (hero banner, rich text, image gallery, call-to-action banner, trip proposal). No code. When you have finished a batch of edits, ask the assistant to run /translate so Spanish and French catch up (see "Translations" below).
 
 **How work is kept safe.** Every change goes through four steps: the assistant works on a **branch** (a private copy), you look at the **preview** it produces, you tick the checklist at the bottom of this file, and only then does it get **merged** into the live site. If you skip the preview, you are testing on real visitors.
 
@@ -40,14 +40,26 @@ The site's whole point is that the marketing team edits it by clicking on the pa
 - Every field needs a plain-English `label` and, when it isn't obvious, a `description` an editor will understand. No jargon.
 
 ### 3. Three languages, always
-The site is English, Spanish and French. English is the source; Spanish and French are drafted automatically (DeepL) and reviewed by a person.
+The site is English, Spanish and French. English is the source. Spanish and French are drafted by the assistant when a person runs /translate, and reviewed by a person in a pull request. Nothing is translated automatically when someone saves in the editor.
 
-- Every new page or section needs **content in English** (`content/<collection>/en.json` or `.../en/<slug>.json`). Don't hand-write Spanish or French for new content; the workflow drafts it.
+- Every new page or section needs **content in English** (`content/<collection>/en.json` or `.../en/<slug>.json`). Don't hand-write Spanish or French for new content; /translate drafts it.
 - **Build pages under `src/pages/[locale]/`** and enumerate locales with `liveLocales` in `getStaticPaths` (copy `src/pages/[locale]/contact.astro`). Never create a page under `src/pages/en/`.
 - **Never write `/en/...` in code.** Use `localePath(locale, "some/path/")` from `src/i18n/config.ts`. In content, an `href` written as `/en/...` is rewritten for other languages automatically.
 - Anything that is a proper noun and must not be translated (a person's name, a boat name) needs `ui: doNotTranslate` on its field (see `tina/shared/fields.ts`).
-- **Approved translations are protected.** `scripts/translation-memory.json` holds the human-written (or human-corrected) Spanish and French for English strings; the translation robot uses it instead of DeepL. When a native reviewer corrects a translation, add the corrected pair there (`"<exact English>": "<approved text>"`), otherwise the next redraft can undo it.
+- **Approved translations are protected.** `scripts/translation-memory.json` holds the human-written (or human-corrected) Spanish and French for English strings, and /translate always uses it first. Names and fixed phrases live in `scripts/translation-glossary.md`. When a native reviewer corrects a translation, add the corrected pair to the memory file (`"<exact English>": "<approved text>"`). A correction made in the editor is also kept for as long as that English string does not change.
 - Which languages are public is one setting, `PUBLIC_LIVE_LOCALES`. Don't change it as part of building something.
+
+### Translations (/translate)
+
+Whoever finishes a batch of English edits runs /translate in Claude Code (once per batch, not once per save). Until then, Spanish and French show their last reviewed text.
+
+The assistant, when running /translate:
+
+- Translates only the strings the prepare script lists. It never edits `en` files, and never edits `es` or `fr` files by hand; the apply script writes them.
+- Follows the glossary and the tone of the approved translations. It says what tone it inferred.
+- Keeps links, markdown and line breaks exactly as in the English, and never translates names or `doNotTranslate` fields.
+- Reports how many strings it translated, how many it reused, any validation warnings, and any open question for a native reviewer.
+- Commits only when asked, on a branch named `translations-YYYY-MM-DD`, then opens a pull request. A person reviews the Spanish and French pull request before it is merged. The same person who ran /translate does not merge it alone: the other of Thibault and the marketing lead approves it.
 
 ### 4. Use the design system. Don't invent one.
 - **Colours are only** `ink`, `ink-hover`, `surface`, `white`, and opacity versions of those (`text-ink/74`, `border-ink/14`). No other colour, no hex codes in components.
@@ -76,7 +88,8 @@ The site is English, Spanish and French. English is the source; Spanish and Fren
 | `src/components/FunnelForm.tsx`, `Funnel.astro` | The trip-planning form. It captures partial leads when someone leaves a field or closes the tab, autosaves drafts, and builds the WhatsApp message. Small changes break lead capture silently. |
 | `content/settings/`, `content/editors/` | The WhatsApp number/email/lead endpoint, and who is allowed to log in. |
 | `tina/database.ts`, `tina/config.ts` (auth, media, branch), `api/` | Logins, storage, image uploads. |
-| `.github/workflows/`, `scripts/`, `vercel.json` | Deployment and the translation robot. (`scripts/translation-memory.json` is the one file here a reviewer may edit — see "Approved translations" above.) |
+| `.github/workflows/`, `scripts/`, `vercel.json` | Deployment and the translation scripts. (`scripts/translation-memory.json` and `scripts/translation-glossary.md` are the files a reviewer may edit: see "Approved translations" above.) |
+| `.claude/skills/translate/`, `.translation-work/`, `scripts/translation-state.json` | The /translate command and its working files. The state file records what is already translated; deleting or hand-editing it makes /translate re-send everything. |
 | `public/terms.html`, `privacy.html`, `creditos.html`, `styles.css`, `lib/` | The old legal pages, served as-is until they are rebuilt as editable pages. Don't restyle them, and don't build new pages on top of the old `styles.css`. |
 | `.env*` | Secrets. Never read out, print, commit or paste them anywhere. |
 | `tina/__generated__/`, `public/admin/`, `tina/tina-lock.json` | Generated. Never edit by hand. |
@@ -153,7 +166,7 @@ Only after confirming the Landing page builder can't do the job.
 6. **Add the island entry** in `src/pages/tina-island/[name].ts` (copy the `contactPage` one).
 7. **Link it** from *Site Navigation* (`content/navigation/en.json`) using `/en/<url>/`.
 8. **Run the checks** below, then look at the preview in three languages at phone and laptop width.
-9. When the pull request is merged, the translation robot opens a second pull request with the Spanish and French drafts. A person reviews those before they go live. Don't merge that one yourself.
+9. When the pull request is merged, run /translate. It drafts the Spanish and French and opens a second pull request. A person reviews those before they go live. Don't merge that one yourself.
 
 ### Checks the assistant runs (and reports)
 ```
@@ -190,6 +203,7 @@ Things to be suspicious of: an answer that says "done" without saying what was t
 - [ ] The **header** is readable at the top of the page (see-through over a photo, white on plain pages).
 - [ ] The trip-planning form on the homepage still opens, and its last step still shows the WhatsApp button.
 - [ ] The assistant told me what it **checked and didn't check**, and nothing surprising changed (no new tracking, no new packages).
+- [ ] If this change adds or edits English text, I ran /translate (or I know it will run before the next language review), and I looked at the Spanish and French pull request.
 
 ## Undo
 
@@ -212,10 +226,10 @@ src/i18n/           Language settings
 src/scripts/        Small page-wide effects (scroll reveal, header, depth gauge)
 src/styles/         The design tokens (global.css)
 tina/collections/   Describes each kind of content and its fields for the editor
-scripts/, .github/  The translation robot
+scripts/, .github/  The translation scripts and the /translate command's helpers
 docs/               Setup, translation flow, launch checklist
 ```
 
-**Words to know.** *Branch:* a private copy of the site to work on. *Preview:* a temporary live copy of a branch. *Merge:* accept a branch into the live site. *Collection:* one kind of content (blog posts, crew). *Locale:* a language (`en`, `es`, `fr`). *Island:* a piece of a page the editor can refresh live.
+**Words to know.** *Branch:* a private copy of the site to work on. *Preview:* a temporary live copy of a branch. *Merge:* accept a branch into the live site. *Collection:* one kind of content (blog posts, crew). *Locale:* a language (`en`, `es`, `fr`). *Island:* a piece of a page the editor can refresh live. */translate:* the assistant command that drafts Spanish and French for whatever English text changed since the last translation.
 
 **Who to ask:** Kinich — hosting, logins, translation robot, anything in the "protected areas" table.
