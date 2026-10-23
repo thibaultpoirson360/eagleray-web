@@ -18,7 +18,10 @@
     },
     {
       "photos": [
-        {},
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Bar_Eagle_Ray_mwf9jn.jpg",
+          "alt": "Niv Bar & Eagle Ray Wine Bar"
+        },
         {},
         {}
       ],
