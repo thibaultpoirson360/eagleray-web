@@ -65,6 +65,12 @@ const landingPage: Collection = {
       isTitle: true,
       description: "Browser tab title, and the page's own visible heading shown above the block list.",
     },
+    {
+      type: "boolean",
+      name: "hideFromSearch",
+      label: "Hide from Google and the sitemap",
+      description: "Turn on for private pages (invitations, events). The page still opens for anyone who has the link.",
+    },
     landingBlocksField(),
     seoField(),
   ],

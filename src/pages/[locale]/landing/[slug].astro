@@ -54,6 +54,7 @@ const transparentNav = startsWithHero(landingPage.blocks);
   locale={locale}
   path={`landing/${slug}/`}
   transparentNav={transparentNav}
+  noindex={landingPage.hideFromSearch ?? false}
 >
   <main id="main">
     <TinaIsland name="landingPage" wrapper={{ tag: "div" }} params={{ locale, slug }}>

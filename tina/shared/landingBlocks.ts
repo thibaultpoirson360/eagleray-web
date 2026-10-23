@@ -1,5 +1,5 @@
 import type { TinaField } from "tinacms";
-import { ctaField, textarea } from "./fields";
+import { ctaField, doNotTranslate, textarea } from "./fields";
 
 /**
  * The page-builder "blocks" field (hero, rich text, image gallery, call to
@@ -31,6 +31,18 @@ export const landingBlocksField = (): TinaField => (
           { type: "image", name: "image", label: "Background image" },
           { type: "string", name: "imageAlt", label: "Background image alt text" },
           ctaField("cta", "Button"),
+          {
+            type: "boolean",
+            name: "calm",
+            label: "Calm style: full screen, text centered",
+            description: "For invitations and events. Leave off for the usual banner with the text at the bottom left.",
+          },
+          {
+            type: "boolean",
+            name: "ctaOnThisPage",
+            label: 'Button goes to a section of this page (link like "#confirm")',
+            description: "Turn on when the button link starts with # and points to a section of this same page.",
+          },
         ],
       },
       {
@@ -401,6 +413,120 @@ export const landingBlocksField = (): TinaField => (
               'This block shows the same form as the homepage. Its texts are edited once, under "Home / Customize funnel".',
             ui: textarea,
           },
+        ],
+      },
+      {
+        name: "eventEvening",
+        label: "Event: the evening (text on the left, photos on the right)",
+        fields: [
+          { type: "string", name: "lines", label: "Lines (one under the other)", list: true },
+          { type: "string", name: "note", label: "Smaller line in italics under them", ui: textarea },
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos on the right (the place, the dishes, the wine)",
+            list: true,
+            description: "Up to 3. The first one is shown larger.",
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventPhotoStrip",
+        label: "Event: three photos side by side, with a title and text",
+        fields: [
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos (three, edge to edge)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+            ],
+          },
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "text", label: "Text (2 or 3 lines)", ui: textarea },
+        ],
+      },
+      {
+        name: "eventPeople",
+        label: "Event: people cards (photo, first name, role)",
+        fields: [
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "text", label: "Text under the title (2 to 4 lines)", ui: textarea },
+          {
+            type: "object",
+            name: "people",
+            label: "People",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.name || "Person" }) },
+            fields: [
+              { type: "image", name: "image", label: "Portrait photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "string", name: "name", label: "First name", required: true, ui: doNotTranslate },
+              { type: "string", name: "role", label: "Role" },
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventCards",
+        label: "Event: two large image cards with a button",
+        fields: [
+          {
+            type: "object",
+            name: "cards",
+            label: "Cards (two)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.title || "Card" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "string", name: "title", label: "Title", required: true },
+              ctaField("cta", "Button"),
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventRsvp",
+        label: "Event: confirm your place (Tally form)",
+        fields: [
+          { type: "string", name: "anchor", label: "Section name used by the hero button", description: 'Without the #. If the hero button links to "#confirm", write "confirm".' },
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "line", label: "Line under the title" },
+          {
+            type: "string",
+            name: "tallyUrl",
+            label: "Tally form link",
+            description: "The share link of the form in Tally (tally.so/r/...). Answers go to the spreadsheet connected to that form. Nothing shows until a link is set.",
+            validate: (value: string | undefined) => {
+              if (value && !/^https:\/\/tally\.so\/(r|embed)\/[A-Za-z0-9]+/.test(value.trim())) {
+                return "Paste the Tally link, which starts with https://tally.so/r/";
+              }
+            },
+          },
+          { type: "string", name: "formTitle", label: "Form name (read by screen readers)" },
+          { type: "number", name: "height", label: "Form height (px)", description: "Defaults to 1100. Make it taller if the form is cut off." },
+        ],
+      },
+      {
+        name: "eventPlace",
+        label: "Event: the place (full-width photo, address and map link)",
+        fields: [
+          { type: "image", name: "image", label: "Photo" },
+          { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+          { type: "string", name: "label", label: "Small label" },
+          { type: "string", name: "name", label: "Name of the place" },
+          { type: "string", name: "address", label: "Address", ui: textarea },
+          { type: "string", name: "linkLabel", label: "Map link: words" },
+          { type: "string", name: "linkHref", label: "Map link: address" },
         ],
       },
       {
