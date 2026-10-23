@@ -13,14 +13,13 @@
     "Double kayak and 2 paddleboards",
     "Snorkeling gear and fishing rods"
   ],
-  "length": "44 ft",
-  "cabins": "4",
-  "bathrooms": "4",
-  "guests": "up to 8",
-  "order": 9,
-  "photo": "/assets/img/boats/fountaine-pajot-helia-44-01.webp",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kailani_comedor_exterior_gtbfhi.jpg",
   "photoAlt": "Fountaine Pajot Helia 44 catamaran",
   "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-10.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
     {
       "image": "/assets/img/boats/fountaine-pajot-helia-44-01.webp",
       "alt": "Fountaine Pajot Helia 44 catamaran"
@@ -58,10 +57,6 @@
       "alt": "Fountaine Pajot Helia 44 catamaran"
     },
     {
-      "image": "/assets/img/boats/fountaine-pajot-helia-44-10.webp",
-      "alt": "Fountaine Pajot Helia 44 catamaran"
-    },
-    {
       "image": "/assets/img/boats/fountaine-pajot-helia-44-11.webp",
       "alt": "Fountaine Pajot Helia 44 catamaran"
     },
@@ -85,5 +80,10 @@
       "image": "/assets/img/boats/fountaine-pajot-helia-44-16.webp",
       "alt": "Fountaine Pajot Helia 44 catamaran"
     }
-  ]
+  ],
+  "length": "44 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 9
 }
