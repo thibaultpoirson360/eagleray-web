@@ -472,6 +472,9 @@ export const landingBlocksField = (): TinaField => (
         fields: [
           { type: "string", name: "title", label: "Title", required: true },
           { type: "string", name: "text", label: "Text under the title (2 to 4 lines)", ui: textarea },
+          { type: "string", name: "sliderTitle", label: "Heading above the slider (optional)" },
+          { type: "string", name: "moreLabel", label: "Small link beside that heading: words (optional)" },
+          { type: "string", name: "moreHref", label: "Small link beside that heading: address (optional)", description: 'e.g. "/en/passionate-sea-people/"' },
           {
             type: "object",
             name: "people",

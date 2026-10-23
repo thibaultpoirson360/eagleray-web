@@ -76,7 +76,7 @@ export default function PeopleSlider({ people, label, previousLabel, nextLabel }
                   {person.quote && <span class="font-serif text-[.95rem] leading-[1.65] text-white italic">{person.quote}</span>}
                 </span>
               </button>
-              <h3 class="mt-5 font-display text-[1.15rem] font-light text-ink">{person.name}</h3>
+              <h4 class="mt-5 font-display text-[1.15rem] font-light text-ink">{person.name}</h4>
               {person.role && <p class="mt-1 font-mono text-[.68rem] leading-[1.5] tracking-[.1em] text-ink/64">{person.role}</p>}
             </div>
           );
