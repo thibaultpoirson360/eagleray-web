@@ -421,6 +421,9 @@ export const landingBlocksField = (): TinaField => (
         fields: [
           { type: "string", name: "lines", label: "Lines (one under the other)", list: true },
           { type: "string", name: "note", label: "Smaller line in italics under them", ui: textarea },
+          { type: "string", name: "address", label: "Small address line under the text (optional)", ui: textarea },
+          { type: "string", name: "linkLabel", label: "Address line: map link words (optional)" },
+          { type: "string", name: "linkHref", label: "Address line: map link address (optional)" },
           {
             type: "object",
             name: "photos",
