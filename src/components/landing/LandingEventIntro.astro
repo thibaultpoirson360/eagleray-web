@@ -1,0 +1,23 @@
+---
+/**
+ * `eventIntro` landing block: a centered text with a lot of space around it and
+ * no image: a small label, a short paragraph and a closing line that is a
+ * little larger and stands on its own.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+---
+
+<section class="relative mx-auto max-w-site px-pad py-[calc(var(--spacing-section)*1.8)] text-center" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  {block.label && <p class="font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase" data-tina-field={tinaField(block, "label")}>{block.label}</p>}
+  {block.text && <p class="mx-auto mt-10 max-w-[60ch] text-[.95rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(block, "text")}>{block.text}</p>}
+  {block.closing && <p class="mx-auto mt-14 max-w-[32ch] font-display text-[clamp(1.2rem,2.2vw,1.6rem)] leading-[1.4] font-light text-ink" data-tina-field={tinaField(block, "closing")}>{block.closing}</p>}
+</section>

@@ -416,6 +416,15 @@ export const landingBlocksField = (): TinaField => (
         ],
       },
       {
+        name: "eventIntro",
+        label: "Event: about us (small label, centered text, closing line)",
+        fields: [
+          { type: "string", name: "label", label: "Small label above the text" },
+          { type: "string", name: "text", label: "Text", ui: textarea },
+          { type: "string", name: "closing", label: "Last line, slightly larger, on its own", ui: textarea },
+        ],
+      },
+      {
         name: "eventEvening",
         label: "Event: the evening (text on the left, photos on the right)",
         fields: [
