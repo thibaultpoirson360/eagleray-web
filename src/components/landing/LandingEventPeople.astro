@@ -1,7 +1,8 @@
 ---
 /**
- * `eventPeople` landing block: a title and a row of portrait cards, each with only a first name and a role.
+ * `eventPeople` landing block: a title, a short text and a slider of portrait cards (first name and role; a text and a quote appear over the photo on hover or tap).
  */
+import PeopleSlider from "../PeopleSlider.tsx";
 import { tinaField } from "@tinacms/astro/tina-field";
 import type { LandingPageBlocksParent } from "./blockTypes";
 
@@ -18,15 +19,7 @@ const people = ((block.people ?? []) as any[]).filter(Boolean);
 <section class="relative mx-auto max-w-site px-pad pb-[calc(var(--spacing-section)*1.8)]" data-tina-field={tinaField(landingPage, "blocks", index)}>
   <h2 class="mx-auto max-w-[20ch] text-center font-display text-[clamp(1.35rem,2.4vw,1.9rem)] font-light text-ink" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
   {block.text && <p class="mx-auto mt-8 max-w-[56ch] text-center text-[.84rem] leading-[1.8] text-ink/74" data-tina-field={tinaField(block, "text")}>{block.text}</p>}
-  <div class="mt-[calc(var(--spacing-section-head)*1.4)] grid grid-cols-3 gap-3 sm:gap-6" data-tina-field={tinaField(block, "people")}>
-    {people.map((person) => (
-      <div>
-        <div class="aspect-[3/4] overflow-hidden rounded-sm bg-surface">
-          {person.image && <img src={person.image} alt={person.alt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />}
-        </div>
-        <h3 class="mt-4 font-display text-[.95rem] font-light text-ink sm:text-[1.05rem]">{person.name}</h3>
-        {person.role && <p class="mt-1 font-mono text-[.56rem] leading-[1.5] tracking-[.1em] text-ink/64 sm:text-[.64rem]">{person.role}</p>}
-      </div>
-    ))}
+  <div class="mt-[calc(var(--spacing-section-head)*1.4)]" data-tina-field={tinaField(block, "people")}>
+    <PeopleSlider client:visible people={people} label={block.title} previousLabel="Previous" nextLabel="Next" />
   </div>
 </section>

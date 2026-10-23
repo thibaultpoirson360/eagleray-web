@@ -456,7 +456,7 @@ export const landingBlocksField = (): TinaField => (
       },
       {
         name: "eventPeople",
-        label: "Event: people cards (photo, first name, role)",
+        label: "Event: people slider (photo, first name, role; text and quote over the photo)",
         fields: [
           { type: "string", name: "title", label: "Title", required: true },
           { type: "string", name: "text", label: "Text under the title (2 to 4 lines)", ui: textarea },
@@ -471,6 +471,8 @@ export const landingBlocksField = (): TinaField => (
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
               { type: "string", name: "name", label: "First name", required: true, ui: doNotTranslate },
               { type: "string", name: "role", label: "Role" },
+              { type: "string", name: "text", label: "Text shown over the photo (hover or tap)", ui: textarea },
+              { type: "string", name: "quote", label: "Quote shown over the photo (hover or tap)", ui: textarea },
             ],
           },
         ],
