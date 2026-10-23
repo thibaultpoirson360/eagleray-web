@@ -1,7 +1,7 @@
 ---
 /**
  * `eventEvening` landing block: the plan of the evening as short lines on the
- * left (with a smaller italic line under them) and, on the right, photos shown whole (the place, the dishes, the wine). On a phone the photos go under the text.
+ * left (with a smaller italic line and a small address line under them) and, on the right, photos shown whole (the place, the dishes, the wine). On a phone the photos go under the text.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import type { LandingPageBlocksParent } from "./blockTypes";
@@ -25,6 +25,17 @@ const photos = Array.from({ length: 3 }, (_, i) => (block.photos ?? [])[i] ?? {}
         {lines.map((line) => <p class="max-w-[28ch] font-display text-[clamp(1.35rem,2.4vw,1.9rem)] leading-[1.35] font-light text-ink">{line}</p>)}
       </div>
       {block.note && <p class="mt-14 max-w-[40ch] font-serif text-[1rem] leading-[1.7] text-ink/64 italic" data-tina-field={tinaField(block, "note")}>{block.note}</p>}
+      {(block.address || (block.linkLabel && block.linkHref)) && (
+        <p class="mt-10 max-w-[40ch] text-[.78rem] leading-[1.7] text-ink/64">
+          {block.address && <span data-tina-field={tinaField(block, "address")}>{block.address}</span>}
+          {block.linkLabel && block.linkHref && (
+            <>
+              {block.address && " "}
+              <a href={block.linkHref} target="_blank" rel="noopener noreferrer" class="font-medium whitespace-nowrap text-ink underline underline-offset-4" data-tina-field={tinaField(block, "linkLabel")}>{block.linkLabel}</a>
+            </>
+          )}
+        </p>
+      )}
     </div>
 
     <div class="grid grid-cols-2 items-start gap-3 sm:gap-4" data-tina-field={tinaField(block, "photos")}>

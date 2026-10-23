@@ -55,7 +55,10 @@
           "alt": "Sailing la paz"
         }
       ],
-      "_template": "eventEvening"
+      "_template": "eventEvening",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32"
     },
     {
       "title": "Ocean adventures led by passionate sea people",
