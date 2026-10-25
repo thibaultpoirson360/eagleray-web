@@ -54,7 +54,10 @@ const column = "mx-auto max-w-site pr-pad pl-[calc(var(--spacing-pad)+var(--rail
         .map((p) => ({ src: p!.image as string, alt: p!.alt ?? "" }));
       return (
         <article>
-          <div class="relative isolate flex min-h-[92vh] items-end overflow-hidden bg-ink">
+          <div
+            class="relative isolate flex min-h-[92vh] items-end overflow-hidden bg-ink"
+            data-tina-field={story.heroImage ? undefined : tinaField(story, "heroImage")}
+          >
             {story.heroImage && (
               <img
                 src={story.heroImage}
