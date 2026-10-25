@@ -1,0 +1,130 @@
+{
+  "title": "Guest Stories",
+  "lede": "Find out more about our guests experience. Their photos, their words.",
+  "stories": [
+    {
+      "heroImage": "",
+      "heroImageAlt": "",
+      "shortQuote": "“They let us plan a sailing trip with our eyes closed.”",
+      "name": "Clémence",
+      "group": "[GROUP]",
+      "place": "Baja California Sur",
+      "nights": "[NIGHTS]",
+      "monthYear": "[MONTH YEAR]",
+      "fullQuote": "“I highly recommend Eagle Ray. They let us plan a sailing trip with our eyes closed when it came to the organization. The team is responsive and very professional. They know exactly what they're doing, and it makes everything easy. Roberto, our skipper, put us at ease and made us feel completely safe. He was really great.”",
+      "photos": [
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "heroImage": "",
+      "heroImageAlt": "",
+      "shortQuote": "“Not a spectator, but part of how the boat ran.”",
+      "name": "Gabriel",
+      "group": "[GROUP]",
+      "place": "Baja California Sur",
+      "nights": "[NIGHTS]",
+      "monthYear": "July 2026",
+      "fullQuote": "“What stood out was how close the crew was to us. I loved the long talks around the table after meals, learning to sail, and that real feeling of not being a spectator but actually part of how the boat ran. The human side is, without a doubt, Eagle Ray's biggest asset and what sets it apart.”",
+      "photos": [
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "heroImage": "",
+      "heroImageAlt": "",
+      "shortQuote": "“PLACEHOLDER — short quote from a guest who sailed in the British Virgin Islands.”",
+      "name": "[NAME]",
+      "group": "Friends",
+      "place": "British Virgin Islands",
+      "nights": "[NIGHTS]",
+      "monthYear": "[MONTH YEAR]",
+      "fullQuote": "“PLACEHOLDER — full quote. This story is provisional: replace the name, the quotes, the details above and the photos in the editor before it goes live.”",
+      "photos": [
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "",
+          "alt": ""
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "previousLabel": "Previous photo",
+    "nextLabel": "Next photo",
+    "dotLabel": "Photo"
+  },
+  "cta": {
+    "title": "Tell us who's coming.",
+    "text": "We build the expedition around your group, starting with the people on board.",
+    "button": {
+      "label": "Plan your expedition",
+      "href": "/en/contact/"
+    }
+  }
+}

@@ -1,0 +1,142 @@
+---
+/**
+ * `/<locale>/about-us/guest-stories/` — the Guest Stories page. Its own
+ * component (not inlined in the route) so the on-demand island-refresh route
+ * (src/pages/tina-island/[name].ts) can re-render it, like ContactPage.
+ *
+ * Layout per story: a full-width photo (80% of the screen) with the short
+ * quote and a meta line over a soft gradient at the bottom; below it, the
+ * full quote (40%) next to a photo slider (60%). On a phone they stack.
+ * A story's empty photo slots are skipped, so a story with no photos yet
+ * still reads cleanly (and shows a dashed frame the editor can click).
+ */
+import ImageSlider from "./ImageSlider.tsx";
+import Button from "./ui/Button.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { GuestStoriesPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  guestStoriesPage: GuestStoriesPageQuery["guestStoriesPage"];
+}
+
+const { guestStoriesPage } = Astro.props;
+const stories = guestStoriesPage.stories ?? [];
+const controls = guestStoriesPage.controls;
+const cta = guestStoriesPage.cta;
+// Same left edge as the rest of the site: page padding plus the depth-gauge rail.
+const column = "mx-auto max-w-site pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]";
+---
+
+<section class="bg-surface py-32 text-center lg:py-44">
+  <div class:list={[column]}>
+   <div class="mx-auto max-w-[44ch]">
+    <h1 class="text-h2" data-tina-field={tinaField(guestStoriesPage, "title")}>{guestStoriesPage.title}</h1>
+    {
+      guestStoriesPage.lede && (
+        <p class="mt-8 text-lede text-ink/74" data-tina-field={tinaField(guestStoriesPage, "lede")}>
+          {guestStoriesPage.lede}
+        </p>
+      )
+    }
+   </div>
+  </div>
+</section>
+
+<div class="mt-24 flex flex-col gap-40 pb-40 lg:mt-36 lg:gap-60 lg:pb-60">
+  {
+    stories.map((story) => {
+      if (!story) return null;
+      const meta = (["name", "group", "place", "nights", "monthYear"] as const)
+        .map((field) => ({ field, value: story[field] }))
+        .filter((part) => part.value);
+      const photos = (story.photos ?? [])
+        .filter((p) => p?.image)
+        .map((p) => ({ src: p!.image as string, alt: p!.alt ?? "" }));
+      return (
+        <article>
+          <div class="relative isolate flex min-h-[92vh] items-end overflow-hidden bg-ink">
+            {story.heroImage && (
+              <img
+                src={story.heroImage}
+                alt={story.heroImageAlt ?? ""}
+                loading="lazy"
+                decoding="async"
+                class="absolute inset-0 z-[-2] h-full w-full object-cover"
+                data-tina-field={tinaField(story, "heroImage")}
+              />
+            )}
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 z-[-1] h-3/5 bg-gradient-to-t from-ink/80 to-transparent" />
+            <div class:list={[column, "w-full pb-20 lg:pb-28"]}>
+              <blockquote>
+                <h2 class="max-w-[32ch] font-serif text-quote text-surface/90 italic leading-[1.3]" data-tina-field={tinaField(story, "shortQuote")}>
+                  {story.shortQuote}
+                </h2>
+              </blockquote>
+              <p class="mt-8 font-mono text-xs leading-relaxed tracking-[.14em] text-surface/64 uppercase">
+                {meta.map((part, i) => (
+                  <>
+                    {i > 0 && " · "}
+                    <span data-tina-field={tinaField(story, part.field)}>{part.value}</span>
+                  </>
+                ))}
+              </p>
+            </div>
+          </div>
+
+          <div class:list={[column, "mt-20 grid gap-14 lg:mt-32 lg:grid-cols-[2fr_3fr] lg:gap-28"]}>
+            <div>
+              <blockquote class="font-serif text-lede leading-[1.9] text-ink/74 italic" data-tina-field={tinaField(story, "fullQuote")}>
+                <p>{story.fullQuote}</p>
+              </blockquote>
+              <p class="mt-10 font-mono text-xs tracking-[.14em] text-ink/64 uppercase" data-tina-field={tinaField(story, "name")}>
+                {story.name}
+              </p>
+            </div>
+            {photos.length > 0 ? (
+              <div data-tina-field={tinaField(story, "photos")}>
+                <ImageSlider
+                  client:visible
+                  photos={photos}
+                  previousLabel={controls?.previousLabel ?? "Previous photo"}
+                  nextLabel={controls?.nextLabel ?? "Next photo"}
+                  dotLabel={controls?.dotLabel ?? "Photo"}
+                  className="aspect-[3/2] w-full rounded-lg"
+                  focus="center"
+                />
+              </div>
+            ) : (
+              <div
+                class="aspect-[3/2] w-full rounded-lg border border-dashed border-ink/26"
+                data-tina-field={tinaField(story, "photos")}
+              />
+            )}
+          </div>
+        </article>
+      );
+    })
+  }
+</div>
+
+{
+  cta && (
+    <section class="bg-ink py-32 text-center text-white lg:py-44">
+      <div class:list={[column]}>
+        <div class="mx-auto max-w-[44ch]">
+          <h2 class="text-h2 text-white" data-tina-field={tinaField(cta, "title")}>{cta.title}</h2>
+          {cta.text && (
+            <p class="mt-8 text-lede text-white/82" data-tina-field={tinaField(cta, "text")}>
+              {cta.text}
+            </p>
+          )}
+          {cta.button && (
+            <div class="mt-12">
+              <Button href={cta.button.href} variant="primary" context="hero" data-tina-field={tinaField(cta, "button")}>
+                {cta.button.label}
+              </Button>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )
+}

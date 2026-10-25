@@ -1,0 +1,37 @@
+---
+/**
+ * `/<locale>/about-us/guest-stories/` — Guest Stories, under About Us in the
+ * menu. A language without its own document shows the English page (see
+ * loadGuestStoriesPage). Thin wrapper, like contact.astro: load the data and
+ * wrap the real component in a <TinaIsland> for visual editing.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import GuestStoriesPage from "../../../components/GuestStoriesPage.astro";
+import { loadGuestStoriesPage } from "../../../lib/content";
+import { liveLocales, type Locale } from "../../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const { data } = await loadGuestStoriesPage(locale);
+const page = data.guestStoriesPage;
+---
+
+<BaseLayout
+  title={page.seo?.title ?? `${page.title} — Eagle Ray Expeditions`}
+  description={page.seo?.description ?? page.lede ?? undefined}
+  ogTitle={page.seo?.ogTitle ?? undefined}
+  ogDescription={page.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path="about-us/guest-stories/"
+  transparentNav={false}
+>
+  <main id="main">
+    <TinaIsland name="guestStoriesPage" wrapper={{ tag: "div" }} params={{ locale }}>
+      <GuestStoriesPage guestStoriesPage={page} />
+    </TinaIsland>
+  </main>
+</BaseLayout>
