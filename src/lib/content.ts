@@ -301,6 +301,22 @@ export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) 
   return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
 }
 
+/**
+ * The Guest Stories page (content/guestStoriesPage/<locale>.json), or the
+ * English one (with its links pointed at `locale`) when that language has no
+ * document yet, so the menu link never leads to a missing page.
+ */
+export async function loadGuestStoriesPage(locale: Locale, options?: RequestOptions) {
+  // A missing document does not always throw: the query can come back with no
+  // data, so check for the page itself before trusting the result.
+  const own = await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: `${locale}.json` }), options).catch(() => null);
+  if (own?.data?.guestStoriesPage) return own;
+  const result = await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: "en.json" }), options);
+  const button = result.data.guestStoriesPage.cta?.button;
+  if (button?.href?.startsWith("/en/")) button.href = `/${locale}/${button.href.slice(4)}`;
+  return result;
+}
+
 /** The About Us ("Our story") page (content/aboutPage/<locale>.json). */
 export function loadAboutPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.aboutPage({ relativePath: `${locale}.json` }), options);
