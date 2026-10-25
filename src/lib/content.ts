@@ -301,22 +301,6 @@ export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) 
   return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
 }
 
-/**
- * The Guest Stories page (content/guestStoriesPage/<locale>.json), or the
- * English one (with its links pointed at `locale`) when that language has no
- * document yet, so the menu link never leads to a missing page.
- */
-export async function loadGuestStoriesPage(locale: Locale, options?: RequestOptions) {
-  try {
-    return await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: `${locale}.json` }), options);
-  } catch {
-    const result = await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: "en.json" }), options);
-    const button = result.data.guestStoriesPage.cta?.button;
-    if (button?.href?.startsWith("/en/")) button.href = `/${locale}/${button.href.slice(4)}`;
-    return result;
-  }
-}
-
 /** The About Us ("Our story") page (content/aboutPage/<locale>.json). */
 export function loadAboutPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.aboutPage({ relativePath: `${locale}.json` }), options);

@@ -20,7 +20,6 @@ import navPages from "./collections/navPages";
 import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
-import guestStoriesPage from "./collections/guestStoriesPage";
 import notFoundPage from "./collections/notFoundPage";
 import laPage from "./collections/laPage";
 import aboutPage from "./collections/aboutPage";
@@ -97,7 +96,6 @@ export default defineConfig({
       notFoundPage,
       laPage,
       aboutPage,
-      guestStoriesPage,
       sailWithUsPage,
       recalibrationPage,
       crewPage,

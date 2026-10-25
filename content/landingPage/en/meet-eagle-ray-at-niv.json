@@ -47,9 +47,6 @@
         "Meet our founder and hear the story behind Eagle Ray."
       ],
       "note": "And a surprise for everyone who joins us at NIV.",
-      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
-      "linkLabel": "Open in Google Maps →",
-      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32",
       "photos": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/igexport-DSyIewxkUby_l9zqgu.jpg",
@@ -64,14 +61,14 @@
           "alt": "Sailing la paz"
         }
       ],
-      "_template": "eventEvening"
+      "_template": "eventEvening",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32"
     },
     {
       "title": "Ocean adventures led by passionate sea people",
       "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything that Eagle Ray is starts with them.",
-      "sliderTitle": "Meet some of our passionate sea people",
-      "moreLabel": "Meet more passionate sea people",
-      "moreHref": "/en/passionate-sea-people/",
       "people": [
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
@@ -90,16 +87,12 @@
           "quote": "\"From the start, I watch the group's energy and how each person feels, and I adapt the way I lead to you.\""
         },
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_kgem3y.jpg",
-          "alt": "Sergio Torres x Eagle Ray",
           "name": "Sergio",
           "role": "Expedition Leader",
           "text": "Survivor México champion and Ironman. He has led groups through Iceland, Hawaii and Guatemala's volcanoes, and guides freediving, spearfishing and open water swimming.",
           "quote": "\"From the first moment, I watch how each person arrives. If someone needs to slow down, we slow down.\""
         },
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_salpye.jpg",
-          "alt": "Juan carlos",
           "name": "Juan Carlos",
           "role": "Expedition Leader",
           "text": "Dive instructor at 21, now a PADI Master Scuba Diver Trainer and TDI cave diver. He has taught in the Maldives and Indonesia, spent 30 days straight on a liveaboard to the Socorro Islands, and most recently sailed solo from Loreto to La Paz.",
@@ -114,13 +107,14 @@
           "quote": "\"On day one, I watch how each person arrives: their energy, their confidence. My job is to show you what you're capable of, without unnecessary risks.\""
         }
       ],
-      "_template": "eventPeople"
+      "_template": "eventPeople",
+      "sliderTitle": "Meet some of our passionate sea people",
+      "moreLabel": "Meet more passionate sea people",
+      "moreHref": "/en/passionate-sea-people/"
     },
     {
       "cards": [
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_088_t76wxw.jpg",
-          "alt": "We organize your sailing trip in La Paz",
           "title": "Travel with us",
           "cta": {
             "label": "Plan my expedition →",
@@ -128,8 +122,6 @@
           }
         },
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_sunset_licttx.jpg",
-          "alt": "Offer Eagle Ray to your clients",
           "title": "Offer Eagle Ray to your clients",
           "cta": {
             "label": "Become a partner →",
