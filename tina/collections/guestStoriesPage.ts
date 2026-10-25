@@ -31,8 +31,8 @@ const guestStoriesPage: Collection = {
         itemProps: (item: Record<string, string>) => ({ label: item?.name || "New story" }),
       },
       fields: [
-        { type: "image", name: "heroImage", label: "Big photo (full width, top of the story)" },
-        { type: "string", name: "heroImageAlt", label: "Big photo alt text", description: "Describe the photo for someone who cannot see it." },
+        { type: "image", name: "heroImage", label: "Hero photo (full width, top of the story)" },
+        { type: "string", name: "heroImageAlt", label: "Hero photo alt text", description: "Describe the photo for someone who cannot see it." },
         { type: "string", name: "shortQuote", label: "Short quote (over the big photo)", required: true, ui: textarea },
         {
           type: "string",
