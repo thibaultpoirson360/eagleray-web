@@ -21,6 +21,8 @@ const guestStoriesPage: Collection = {
   fields: [
     { type: "string", name: "title", label: "Heading (h1)", required: true },
     { type: "string", name: "lede", label: "Introduction text", ui: textarea },
+    { type: "image", name: "heroImage", label: "Hero photo (behind the heading at the top of the page)" },
+    { type: "string", name: "heroImageAlt", label: "Hero photo alt text", description: "Describe the photo for someone who cannot see it." },
     {
       type: "object",
       name: "stories",
