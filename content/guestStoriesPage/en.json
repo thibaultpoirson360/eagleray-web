@@ -1,6 +1,8 @@
 {
   "title": "Guest Stories",
   "lede": "Find out more about our guests experience. Their photos, their words.",
+  "heroImage": "",
+  "heroImageAlt": "",
   "stories": [
     {
       "heroImage": "",
