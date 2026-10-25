@@ -35,11 +35,13 @@
   "about": "\"I'm Andrea, a sailor and an adventurer. I crossed the Atlantic by rowing boat with Oceanida, and it taught me that you don't always need to feel ready to face the unknown: you trust, you adapt and you keep going, one stroke at a time.\n\nI've spent five years on boats, charters and tours in Mexico, with small and medium groups of every age and level: welcoming guests, coordinating activities, keeping them safe and adapting the day to the group. On board, I guide kayaking, snorkeling and hikes ashore.\"",
   "history": "\"In Cozumel, I guided a family whose parents had never properly learned to swim. They wanted to get in the water and were terrified of it. After the safety briefing, I went to them to understand what scared them. We moved to a calmer, sheltered spot, I gave them the right safety gear and stayed close until, little by little, they got in. Then I took the rest of the group snorkeling on the reef. At the end, the parents came to thank me.\n\nBefore all this, I worked in set design and sold boat tours in Puerto Aventuras. I watched the boats leave every day and asked myself why I wasn't on them. I went looking for work at sea, learned as I went, and a few years later I rowed across the Atlantic.\"",
   "why": "\"The sea is a teacher: you're the one who learns to adapt to it. I find freedom there, and it asks for humility. It reminds you how small you are, and shows you what you're capable of.\n\nSharing it means adapting to the conditions so each person can live it their own way. The sea is our road and our way of getting here, so we enjoy it, respect it and leave as little trace as possible, for whoever comes next.\"",
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_2_phmnnn.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_Preparing_material_xtqzbx.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_hnswzp.jpg"
+  ],
   "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
   "imageAlt": "Andrea, expedition leader with Eagle Ray Expeditions",
-  "hidden": false,
-  "order": 9,
-  "images": [
-    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png"
-  ]
+  "order": 9
 }
