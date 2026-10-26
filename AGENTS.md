@@ -40,7 +40,7 @@ The site's whole point is that the marketing team edits it by clicking on the pa
 - Every field needs a plain-English `label` and, when it isn't obvious, a `description` an editor will understand. No jargon.
 
 ### 3. Three languages, always
-The site is English, Spanish and French. English is the source. Spanish and French are drafted by the assistant when a person runs /translate, and reviewed by a person in a pull request. Nothing is translated automatically when someone saves in the editor.
+The site is English, Spanish and French. English is the source. Spanish and French are drafted by the assistant when a person runs /translate, on a separate branch, and checked by that person on the local site before anything is merged. Nothing is translated automatically when someone saves in the editor.
 
 - Every new page or section needs **content in English** (`content/<collection>/en.json` or `.../en/<slug>.json`). Don't hand-write Spanish or French for new content; /translate drafts it.
 - **Build pages under `src/pages/[locale]/`** and enumerate locales with `liveLocales` in `getStaticPaths` (copy `src/pages/[locale]/contact.astro`). Never create a page under `src/pages/en/`.
@@ -59,7 +59,9 @@ The assistant, when running /translate:
 - Follows the glossary and the tone of the approved translations. It says what tone it inferred.
 - Keeps links, markdown and line breaks exactly as in the English, and never translates names or `doNotTranslate` fields.
 - Reports how many strings it translated, how many it reused, any validation warnings, and any open question for a native reviewer.
-- Commits only when asked, on a branch named `translations-YYYY-MM-DD`, then opens a pull request. A person reviews the Spanish and French pull request before it is merged. The same person who ran /translate does not merge it alone: the other of Thibault and the marketing lead approves it.
+- Works on a new branch named `translations-YYYY-MM-DD`, never on `main`. Running /translate is the permission to commit on that branch and push it as a backup; it opens no pull request.
+- Starts the local site and gives the links to the pages that changed, in Spanish and French, so the person can check them.
+- Applies the person's corrections on the branch. Merges to `main` and pushes `main` only after the person clearly says to ("approved", "merge it"). If they say no or are unsure, `main` is not touched. The person who ran /translate is the one who approves; having a Spanish and a French speaker read the text first is recommended.
 
 ### 4. Use the design system. Don't invent one.
 - **Colours are only** `ink`, `ink-hover`, `surface`, `white`, and opacity versions of those (`text-ink/74`, `border-ink/14`). No other colour, no hex codes in components.
@@ -166,7 +168,7 @@ Only after confirming the Landing page builder can't do the job.
 6. **Add the island entry** in `src/pages/tina-island/[name].ts` (copy the `contactPage` one).
 7. **Link it** from *Site Navigation* (`content/navigation/en.json`) using `/en/<url>/`.
 8. **Run the checks** below, then look at the preview in three languages at phone and laptop width.
-9. When the pull request is merged, run /translate. It drafts the Spanish and French and opens a second pull request. A person reviews those before they go live. Don't merge that one yourself.
+9. When your pull request is merged, run /translate. It drafts the Spanish and French on a separate branch and starts the local site so you can check them. Nothing is merged to `main` until you approve it.
 
 ### Checks the assistant runs (and reports)
 ```
@@ -203,7 +205,7 @@ Things to be suspicious of: an answer that says "done" without saying what was t
 - [ ] The **header** is readable at the top of the page (see-through over a photo, white on plain pages).
 - [ ] The trip-planning form on the homepage still opens, and its last step still shows the WhatsApp button.
 - [ ] The assistant told me what it **checked and didn't check**, and nothing surprising changed (no new tracking, no new packages).
-- [ ] If this change adds or edits English text, I ran /translate (or I know it will run before the next language review), and I looked at the Spanish and French pull request.
+- [ ] If this change adds or edits English text, I ran /translate (or I know it will run before the next language review), and I checked the Spanish and French on the local site before approving the merge.
 
 ## Undo
 

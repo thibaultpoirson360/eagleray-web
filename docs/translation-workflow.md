@@ -2,8 +2,11 @@
 
 How the Spanish and French text is made and reviewed. English is the source;
 Spanish and French are drafted by the assistant when a person runs `/translate`
-in Claude Code, and reviewed by a person in a pull request. **Nothing is
-translated automatically when someone saves in the editor.**
+in Claude Code on a separate branch, and checked by that person on the local
+site before anything is merged. **Nothing is translated automatically when
+someone saves in the editor.**
+
+> **Step-by-step for non-developers: `docs/how-to-translate.md`.**
 
 ## Who runs it, and when
 
@@ -43,10 +46,17 @@ in sync with.
 4. **The assistant reports** the files written, how many strings were
    translated / reused / taken from the memory, the warnings and any open
    question for a native reviewer.
-5. **Only if the person says yes**, the assistant commits on a branch named
-   `translations-YYYY-MM-DD` and opens a pull request. The person who ran
-   `/translate` does not merge it alone: the other of Thibault and the
-   marketing lead approves it.
+5. **The assistant commits on a branch** named `translations-YYYY-MM-DD` (made
+   from an up-to-date `main` at the start) and pushes it as a backup. It opens
+   no pull request.
+6. **The person checks locally.** The assistant starts the local site and lists
+   the pages that changed in Spanish and French. Corrections are made on the
+   branch (through the editor or by asking the assistant).
+7. **Only when the person clearly approves**, the assistant merges the branch
+   into `main`, pushes `main` and deletes the branch. If the person says no or
+   is unsure, `main` is untouched and the branch stays. The person who ran
+   `/translate` is the one who approves; having a Spanish and a French speaker
+   read the text first is recommended.
 
 `npm run translate:status` lists the English files that are out of date without
 writing anything. The first ever run (no `scripts/translation-state.json`)
@@ -74,7 +84,7 @@ them closely.
 
 ## Correcting a translation (reviewers)
 
-- **In the editor, or in the pull request**: a correction stays for as long as
+- **In the editor on the branch, or by asking the assistant**: a correction stays for as long as
   that English string does not change.
 - **In `scripts/translation-memory.json`** (`"<exact English>": "<approved text>"`):
   for wording that must survive an English change, or that should be used
@@ -140,11 +150,11 @@ without the mistake being obvious in a smoke test).
 When an English document in a multi-document collection
 (`content/<collection>/en/<slug>.json`: blog posts, crew, boats, landing pages)
 is deleted, `translate:apply` also deletes
-`content/<collection>/{es,fr}/<slug>.json`, and the deletions appear in the
-pull request. Safety: a collection is only pruned while its `en/` folder still
+`content/<collection>/{es,fr}/<slug>.json`, and the assistant lists the deletions
+in its report. Safety: a collection is only pruned while its `en/` folder still
 contains at least one file. If an English file was deleted by mistake, restore
-it in git **and** its translations from the previous commit; do not merge the
-pull request that deletes them.
+it in git **and** its translations from the previous commit; do not approve the
+merge of a branch that deletes them.
 
 ## Going live: enabling a language
 
@@ -158,7 +168,7 @@ language.
 To bring the site to Spanish and French the first time:
 
 1. Run `/translate` (a language with no files yet gets every string drafted) and
-   review the pull request.
+   check the result on the local site before approving the merge.
 2. Set `PUBLIC_LIVE_LOCALES=en,es,fr` in Vercel for *Preview* first, check
    home, contact, blog, landing pages, nav and footer in both languages, then
    set it for *Production* and redeploy. One language at a time works too

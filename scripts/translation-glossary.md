@@ -45,7 +45,8 @@ Warm, direct, calm. No exclamation marks unless the English has one. Keep headin
 | Contact us | Contáctanos | Nous contacter | Menu label |
 | About us | Quiénes somos | À propos de nous | Menu label |
 | Sail with us | Navega con nosotros | Venez naviguer avec nous | Menu label |
-| Freediving | Buceo libre | Plongée en apnée | |
+| Freediving | Buceo libre | Plongée en apnée | Never "buceo en apnea" in Spanish. Confirmed by a reviewer |
+| Kite / kitesurfing | Kitesurf | Kitesurf | Never "Cometa" (a literal translation of "kite"). Confirmed by a reviewer |
 | Spearfishing | Pesca submarina | Pêche sous-marine | |
 | Scuba diving | Buceo con tanque | Plongée bouteille | **guess** |
 | Sea lions | Lobos marinos | Otaries | **guess** |

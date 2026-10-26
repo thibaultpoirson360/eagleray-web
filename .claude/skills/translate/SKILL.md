@@ -1,6 +1,6 @@
 ---
 name: translate
-description: Draft the Spanish and French for whatever English text changed since the last translation, then open a pull request for review. Run it once after a batch of editor changes. Use when someone says "translate", "run /translate", "update the Spanish and French".
+description: Draft the Spanish and French for whatever English text changed since the last translation, on a separate branch, check it on the local site, and merge to main once the person approves. Run it once after a batch of editor changes. Run it once after a batch of editor changes. Use when someone says "translate", "run /translate", "update the Spanish and French".
 ---
 
 # /translate
@@ -11,6 +11,7 @@ Read `AGENTS.md` section 3 ("Translations") first if you have not this session.
 
 ## Steps
 
+0. **Branch.** Make sure you are on `main` and it is up to date (`git pull`). If there are uncommitted changes, tell the person and stop. Then `git checkout -b translations-YYYY-MM-DD` (today's date; add `-2` if the branch already exists). Everything below happens on this branch; never on `main`.
 1. **Prepare.** Run `npm run translate:prepare`.
    - If it says nothing needs translating, tell the person that Spanish and French are up to date and stop.
    - If it stops because English files have uncommitted changes, tell the person to commit or discard them first. Do not commit for them.
@@ -31,7 +32,14 @@ Read `AGENTS.md` section 3 ("Translations") first if you have not this session.
    - every warning from the apply script;
    - the tone you inferred for each language;
    - any open question for a native reviewer (a term not in the glossary, a guess you made). Add new fixed terms you chose to `scripts/translation-glossary.md`, marked **guess**.
-7. **Only if the person says yes:** `git checkout -b translations-YYYY-MM-DD` (today's date), commit the changed `content/**` files and `scripts/translation-state.json` (never `.translation-work/`), push, and open a pull request with `gh pr create`. If `gh` is missing, print the GitHub compare link for the branch instead. In the pull request say that Spanish and French need review, and that the person who ran `/translate` should not merge it alone: the other of Thibault and the marketing lead approves it. Never push to `main`.
+7. **Commit and back up.** Commit the changed `content/**` files and `scripts/translation-state.json` on the branch (never `.translation-work/` or `.translation-report.md`). Push the branch as a backup (`git push -u origin <branch>`). Do not open a pull request.
+8. **Check locally.** Start the local site so the person can read the drafts:
+   - make sure ports 9000, 4001 and 4321 are free (stop anything else the person agrees to stop);
+   - run `TINA_PUBLIC_IS_LOCAL=true npx tinacms dev` in the background, wait about 20 seconds, then `TINA_PUBLIC_IS_LOCAL=true npx astro dev --background` (`npm run tina:dev` can exit early in this setup);
+   - give the person links for the pages that changed, in Spanish and French: `hero`, `difference`, `wildlife`, `funnel`, `crewSection` and similar are the home page `/es/`; `boats/<slug>` is `/es/boats/`; `crew/<slug>` and `crewPage` are `/es/passionate-sea-people/`; `blogPost/<slug>` is `/es/blog/<slug>/`; `landingPage/<slug>` is `/es/landing/<slug>/`; `contactPage` is `/es/contact/`; `aboutPage` is `/es/about-us/`; `guestStoriesPage` is `/es/about-us/guest-stories/`; `sailWithUsPage` is `/es/sail-with-us/`; `navigation` and `footer` show on every page (replace `es` with `fr`). The editor is at http://localhost:4001/admin;
+   - say you have only checked that each page returns a response, not how it looks.
+9. **Corrections.** If the person wants a wording changed, change that value in the Spanish or French file as they ask (this is the one case where you edit those files), commit it on the branch and push. If the wording must survive future English edits, also add it to `scripts/translation-memory.json`, and fixed terms to `scripts/translation-glossary.md`.
+10. **Only after the person clearly says to merge** (for example "approved", "merge it"): stop the local servers, then `git checkout main`, `git pull`, `git merge --no-ff <branch>`, `git push origin main`, and delete the branch locally and on GitHub. Tell the person that the pages go live when `main` deploys, and only in the languages listed in `PUBLIC_LIVE_LOCALES`. If they say no, or are not sure, leave the branch as it is and do not touch `main`. Never merge or push `main` on your own judgement.
 
 ## Rules
 

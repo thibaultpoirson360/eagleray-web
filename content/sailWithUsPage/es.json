@@ -65,23 +65,23 @@
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en mi expedición."
     },
     {
-      "name": "Cometa",
+      "name": "Kitesurf",
       "featured": true,
       "text": "Sesiones de kitesurf en las condiciones adecuadas, con un guía experimentado.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
-      "imageAlt": "Cometa",
+      "imageAlt": "Kitesurf",
       "imageNote": "",
       "priceNote": "desde 360 USD por persona y día",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incorporar a Kite a mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incorporar kitesurf a mi expedición."
     },
     {
-      "name": "Buceo en apnea",
+      "name": "Buceo libre",
       "text": "Sesiones guiadas en aguas abiertas, dirigidas por un instructor cualificado.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
-      "imageAlt": "Buceo en apnea",
+      "imageAlt": "Buceo libre",
       "imageNote": "",
       "priceNote": "Precio a consultar",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en apnea en mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo libre en mi expedición."
     },
     {
       "name": "Snorkel",
