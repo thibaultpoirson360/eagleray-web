@@ -8,7 +8,8 @@
     "Cometa",
     "Snorkel",
     "Buceo en apnea",
-    "Kayak"
+    "Kayak",
+    "Foil"
   ],
   "languages": [
     {
@@ -29,7 +30,16 @@
   "yearsOfExperience": 5,
   "quote": "Quizá yo sea la razón por la que alguien se enamora del mar.",
   "about": "Thibault conoció a Adly mientras aprendía kite en La Ventana, el legendario patio de juegos del viento en México. Originario de Egipto, Adly pronto lo invitó a devolverle la visita en el Mar Rojo. Ingeniero de formación, hoy es instructor IKO y PADI, con más de 1.500 inmersiones, más de 80 alumnos y experiencia como tripulante en cuatro continentes. Adly lee el viento, la corriente y la energía del grupo de una sola mirada. Sabe cuándo impulsar una inmersión más, y cuándo no hacer nada fondeados es justo la aventura que todos necesitan.",
-  "image": "/assets/img/crew-adly.webp",
+  "history": "\"En Tanzania, con un grupo de buceadores principiantes, la corriente subió más fuerte de lo previsto. Vi la duda durante el briefing y cambié de sitio en el acto: aguas más tranquilas, la misma vida marina. Una buceadora salió a la superficie diciendo que había sido la mejor inmersión de su vida. Todo el barco estaba eufórico.\n\nAntes de Baja, dirigí grupos de buceo de cuatro a ocho personas y programas al aire libre para grupos de estudiantes.\"",
+  "why": "\"La primera vez que me metí, el océano me mostró de lo que era capaz: la vida, el silencio, la sensación de formar parte de algo mucho más grande. Quería que otras personas lo sintieran, no como algo que tachar de una lista, sino como algo que cambia su forma de ver el mundo.\n\nLo que más me gusta es ver cómo alguien que se quedó en el barco pensando que no podría hacerlo descubre que es más valiente de lo que creía.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Mohamed_Elsdly_Adly_Profile_dosvz1.jpg",
   "imageAlt": "Adly, Líder de expedición",
-  "order": 4
+  "order": 4,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Mohamed_Elsdly_Adly_Profile_dosvz1.jpg",
+    "/assets/img/crew/adly-01.webp",
+    "/assets/img/crew/adly-02.webp",
+    "/assets/img/crew/adly-03.webp",
+    "/assets/img/crew/adly-04.webp"
+  ]
 }

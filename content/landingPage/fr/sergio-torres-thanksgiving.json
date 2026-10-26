@@ -4,18 +4,340 @@
     {
       "kicker": "Dates limitées · novembre 2026",
       "title": "Novembre dans la mer de Cortez, avec Sergio Torres.",
-      "lede": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
+      "lede": "Pêche sous-marine, apnée et journées en mer avec vos proches. Deux départs à la voile en novembre, de 3 nuits chacun.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
       "imageAlt": "Sergio Torres, chef d'expédition chez Eagle Ray Expeditions – Expérience de navigation à La Paz",
       "cta": {
-        "label": "Vérifier la disponibilité",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+        "label": "Réservez maintenant",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
       },
       "_template": "hero"
     },
     {
+      "title": "Deux départs à la voile en novembre",
+      "intro": "Prix par bateau entier, pour les dates de novembre 2026. En divisant le coût par personne, vous obtenez le prix par personne avec le bateau complet (c'est-à-dire à sa capacité maximale).",
+      "options": [
+        {
+          "name": "Cabines ouvertes",
+          "dates": "Dimanche 22 novembre → mercredi 25 novembre · 3 nuits",
+          "boatLine": "Catamaran Lagoon 450F · 3 cabines invités · jusqu'à 6 invités",
+          "description": "Réservez une cabine avec votre conjoint ou un ami, prenez-en une pour vous seul, ou prenez tout le bateau avec vos proches.",
+          "priceSummary": "À partir de 4 000 USD, cabine individuelle",
+          "detailsLabel": "Prix et fonctionnement",
+          "priceRows": [
+            {
+              "label": "Cabine individuelle",
+              "amount": "4 000 USD"
+            },
+            {
+              "label": "Cabine pour deux",
+              "amount": "5 900 USD"
+            },
+            {
+              "label": "Bateau entier",
+              "amount": "Sur demande"
+            }
+          ],
+          "detailsText": "De retour à terre mercredi après-midi, à temps pour Thanksgiving à la maison.\n\nLe départ est confirmé dès que deux cabines sont réservées, avant le 31 octobre. Sinon, vous êtes remboursé à 100 % ou nous vous proposons une nouvelle date.",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
+          "imageAlt": "Le catamaran Lagoon 450F au mouillage au large d'Espíritu Santo",
+          "imageNote": "[PENDIENTE] Photo : le catamaran Lagoon 450F au mouillage, avec des invités sur le flybridge",
+          "bookLabel": "Réserver un appel",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Réservez maintenant",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
+        },
+        {
+          "name": "Thanksgiving au mouillage",
+          "dates": "Jeudi 26 novembre → dimanche 29 novembre · 3 nuits",
+          "boatLine": "Voilier Beneteau Sense 55 · 2 suites invités · jusqu'à 4 invités",
+          "description": "Tout le bateau pour votre famille ou vos amis : une suite pour les parents, une seconde pour les enfants.",
+          "priceSummary": "14 500 USD, bateau entier",
+          "detailsLabel": "Prix et fonctionnement",
+          "priceRows": [
+            {
+              "label": "Bateau entier (jusqu'à 4 invités)",
+              "amount": "14 500 USD (3 625 USD par personne)"
+            }
+          ],
+          "detailsText": "Bateau privé uniquement, pour un seul groupe : votre famille ou vos amis.\n\nSpécial : menu de dîner de Thanksgiving au mouillage le jeudi soir.\n\nRéservez avant le 4 novembre. Votre voyage est confirmé dès que nous bloquons le bateau.",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
+          "imageAlt": "Le voilier Beneteau Sense 55 sous voiles",
+          "imageNote": "[PENDIENTE] Photo : le Beneteau Sense 55 sous voiles, ou une table de Thanksgiving sur le pont",
+          "bookLabel": "Réserver un appel",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Réservez maintenant",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
+        }
+      ],
+      "bookingLabel": "Infos sur la réservation",
+      "bookingInfo": "* Acompte de 20 % pour réserver.\n* Le solde est dû 30 jours avant le départ : le 23 octobre pour Cabines ouvertes, le 27 octobre pour Thanksgiving au mouillage. Si vous réservez après cette date, vous payez la totalité au moment de la réservation.\n* Si vous annulez, l'acompte n'est pas remboursé.\n* Si nous annulons, parce que le départ n'est pas complet ou pour des raisons de sécurité, vous êtes remboursé à 100 %.\n\nVous voulez toute la semaine sur un bateau privé ? Écrivez-nous.\n",
+      "_template": "departures",
+      "boatLinkLabel": "Voir le bateau",
+      "includesLinkLabel": "Voir ce qui est inclus"
+    },
+    {
+      "member": "sergio-torres-canei",
       "body": "## QUI EST SERGIO ?\n\nVainqueur de « Survivor México 2025 », Ironman et coach sportif.\n\nIl a guidé des groupes dans plusieurs pays et occupe désormais le poste de chef d'expédition chez Eagle Ray.\n\nAu cours de cette sortie, c'est lui qui décide du programme de la journée : quand se mettre à l'eau, où pêcher et quand ne rien faire du tout.\n",
-      "_template": "richText"
+      "collapseAbout": true,
+      "moreText": "En savoir plus sur Sergio :\n\n* Vainqueur de Survivor México 2025\n* Ironman\n* Coach sportif à Cancún : entraînement fonctionnel et callisthénie\n* Ambassadeur de Zondela Travel\n* Expert des voyages de groupe guidés de 5 à 15 personnes\n* Guide d'apnée, de pêche sous-marine, de snorkeling, de nage en eau libre, de kayak, de méditation et d'étirements\n* Certification PADI Open Water\n\nRetrouvez plus d'informations sur ses aventures sur son Instagram : [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Votre maison flottante",
+      "intro": "Chaque départ navigue sur son propre bateau.",
+      "detailsLabel": "Voir toutes les photos",
+      "boatItems": [
+        {
+          "boat": "bay-dreamer",
+          "banner": "/assets/img/boats/bay-dreamer-09.webp",
+          "bannerAlt": "Le catamaran Lagoon 450F au mouillage",
+          "tag": "Cabines ouvertes · 22 au 25 nov.",
+          "displayName": "Lagoon 450F",
+          "subtitle": "Catamaran",
+          "about": "Le Lagoon 450F est le plus spacieux des bateaux d'Eagle Ray, celui qui offre aux groupes plus nombreux l'espace de se déplacer confortablement, sur le pont comme à l'intérieur. Les cabines restent fraîches d'elles-mêmes, l'eau de la douche ne refroidit pas en milieu de semaine, et le flybridge offre à l'équipage, et à qui le souhaite, un endroit en hauteur d'où contempler l'horizon. C'est le genre de confort que l'on ne remarque pas, jusqu'au jour où l'on en a besoin et où il est déjà là.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Catamaran"
+            },
+            {
+              "label": "Cabines invités",
+              "value": "3"
+            },
+            {
+              "label": "Invités",
+              "value": "jusqu'à 6"
+            }
+          ],
+          "featureList": [
+            "Flybridge",
+            "Climatisation individuelle dans chaque cabine",
+            "Lave-vaisselle",
+            "Deux moteurs de 57 CV",
+            "Dessalinisateur de 75 L/h",
+            "Groupe électrogène Onan",
+            "Voile Code Zero",
+            "Starlink à bord",
+            "Annexe de 15 CV"
+          ],
+          "similarNote": "Ou un bateau similaire aux caractéristiques égales ou supérieures."
+        },
+        {
+          "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "Le coin salon du cockpit du Beneteau Sense 55",
+          "tag": "Thanksgiving au mouillage · 26 au 29 nov.",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Voilier",
+          "about": "Le Beneteau Sense 55 est le plus intime des bateaux d'Eagle Ray, un monocoque de 60 pieds conçu pour les groupes qui recherchent la sensation classique de la voile, et pas seulement un bateau qui se trouve avoir des voiles. Grâce à ses trois suites privées, chaque couple dispose d'une porte qu'il peut fermer, et tout le groupe peut s'asseoir ensemble autour de la même table dans le cockpit pour dîner. Une plateforme de bain hydraulique descend directement dans l'eau : pour se baigner ou faire du snorkeling, nul besoin de descendre par une échelle. De plus, il se comporte différemment d'un catamaran : plus de gîte et plus de réponse à la barre, idéal pour les groupes qui veulent profiter autant de la navigation que de la destination.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Voilier"
+            },
+            {
+              "label": "Longueur",
+              "value": "60 pieds"
+            },
+            {
+              "label": "Suites invités",
+              "value": "2"
+            },
+            {
+              "label": "Invités",
+              "value": "jusqu'à 4"
+            }
+          ],
+          "featureList": [
+            "Monocoque de 60 pieds",
+            "3 suites privées",
+            "Table dans le cockpit pour 10 personnes",
+            "Plateforme de bain hydraulique",
+            "Jeu de voiles hautes performances"
+          ],
+          "similarNote": "Ou un bateau similaire aux caractéristiques égales ou supérieures."
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Ce qui est inclus",
+      "includedTitle": "Inclus",
+      "included": "**Bateau**\n\n* Le bateau de votre départ, ou un bateau similaire aux caractéristiques égales ou supérieures\n\n**Équipage**\n\n* Sergio Torres, chef d'expédition Eagle Ray\n* Capitaine Eagle Ray\n* Chef Eagle Ray\n\n**Programme**\n\n* Programme quotidien de Sergio, adapté à la condition physique et à l'humeur du groupe\n* Pêche sous-marine avec Sergio dans les zones autorisées\n\n**Équipement**\n\n* Matériel de snorkeling\n* Kit de pêche\n* 2 paddles\n* 1 kayak\n* 1 annexe\n* Équipement de plage (chaises, auvent, etc.)\n\n**Repas et boissons**\n\n* Tous les repas à bord\n* Boissons sans alcool\n\n**Transfert**\n\n* Aéroport de La Paz ↔ marina, à l'arrivée et au départ\n\n**Extras**\n\n* Gazole\n* Permis de navigation et entrée dans les parcs nationaux\n* Wifi Starlink à bord\n",
+      "notIncludedTitle": "Non inclus",
+      "notIncluded": "* Vols vers La Paz\n* Boissons alcoolisées, choisies sur un menu avant le voyage\n* Plongée bouteille, selon le nombre de plongées et les certifications\n* Autres activités guidées, facturées séparément\n* Pourboires de l'équipage (10 à 15 % recommandés)\n* Assurance voyage\n",
+      "gallery": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
+          "alt": "paddle"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
+          "alt": "snorkeling"
+        }
+      ],
+      "galleryNote": "[PENDIENTE] Photos pour ce carrousel : déjeuner à bord, les paddles et le kayak, l'annexe, l'équipage sur le pont",
+      "_template": "includes"
+    },
+    {
+      "title": "Le parcours",
+      "intro": "Les deux départs suivent le même itinéraire : trois nuits entre La Paz et le sud d'Espíritu Santo.",
+      "places": [
+        {
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina · départ et arrivée",
+          "lat": 24.1585,
+          "lon": -110.3245
+        },
+        {
+          "key": "pichilingue",
+          "name": "Caleta Lobos ou Pichilingue",
+          "sub": "Premier mouillage",
+          "lat": 24.2745,
+          "lon": -110.343
+        },
+        {
+          "key": "southes",
+          "name": "Sud d'Espíritu Santo",
+          "sub": "Mouillage",
+          "lat": 24.3925,
+          "lon": -110.3486
+        },
+        {
+          "key": "bahia",
+          "name": "Bahía de La Paz",
+          "sub": "Au retour",
+          "lat": 24.152,
+          "lon": -110.342
+        }
+      ],
+      "trips": [
+        {
+          "tab": "Le parcours",
+          "beats": [
+            {
+              "label": "Les deux départs · 1 sur 4",
+              "title": "La Paz → Caleta Lobos ou Pichilingue",
+              "from": "lapaz",
+              "to": "pichilingue",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
+              "imageAlt": "Caleta Lobos, La Paz",
+              "imageNote": "[PENDIENTE] Photo : Caleta Lobos ou Pichilingue, le premier mouillage"
+            },
+            {
+              "label": "Les deux départs · 2 sur 4",
+              "title": "Caleta Lobos ou Pichilingue → sud d'Espíritu Santo",
+              "from": "pichilingue",
+              "to": "southes",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
+              "imageAlt": "Sud d'Espíritu Santo, La Paz",
+              "imageNote": "[PENDIENTE] Photo : le sud d'Espíritu Santo, avec ses criques et son eau claire"
+            },
+            {
+              "label": "Les deux départs · 3 sur 4",
+              "title": "Sud d'Espíritu Santo → Bahía de La Paz",
+              "from": "southes",
+              "to": "bahia",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
+              "imageAlt": "Bahía de La Paz",
+              "imageNote": "[PENDIENTE] Photo : Bahía de La Paz, au retour"
+            },
+            {
+              "label": "Les deux départs · 4 sur 4",
+              "title": "Bahía de La Paz → La Paz",
+              "from": "bahia",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "La Paz, Basse-Californie du Sud",
+              "imageNote": "[PENDIENTE] Photo : la marina de La Paz, où se termine le voyage"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Itinéraire et mouillages proposés. Le plan final dépend de la météo. Les positions sont approximatives. Données cartographiques © contributeurs d'OpenStreetMap.",
+      "footnote": "Itinéraire indicatif. Il dépend de la mer, du vent, des permis et de la décision du capitaine. En novembre, des vents du nord peuvent se lever, et dans ce cas nous changeons l'ordre des criques ou restons au même mouillage.\n\nCabines ouvertes : retour à la marina mercredi après-midi.\n\nThanksgiving au mouillage : retour à la marina vers midi le dimanche, pour que vous puissiez rentrer chez vous le jour même. Nous recommandons des vols à partir de 16h00.",
+      "_template": "cinematicRoute"
+    },
+    {
+      "title": "Comment se passe une journée à bord avec Sergio ?",
+      "intro": "Chaque journée a une structure, pas un horaire. Sergio et l'équipage l'ajustent selon le vent, l'énergie du groupe et ce que chacun veut faire. Personne n'est obligé de tout faire.",
+      "steps": [
+        {
+          "stepLabel": "Lever du soleil",
+          "stepTitle": "Corps",
+          "stepText": "Mobilité et entraînement fonctionnel sur le pont, avant le café."
+        },
+        {
+          "stepLabel": "Matin",
+          "stepTitle": "Respiration et pêche",
+          "stepText": "Le capitaine choisit la crique en fonction du vent. Sergio travaille la respiration avec le groupe sur le pont, puis se met à l'eau avec vous : d'abord l'apnée, puis la pêche sous-marine, chacun à son niveau. Chacun peut rester au snorkeling ou pêcher depuis le bateau."
+        },
+        {
+          "stepLabel": "Midi",
+          "stepTitle": "À table",
+          "stepText": "Déjeuner cuisiné à bord avec des produits locaux."
+        },
+        {
+          "stepLabel": "Après-midi",
+          "stepTitle": "Libre",
+          "stepText": "Kayak, paddle, nage jusqu'au rivage. Ou rien du tout."
+        },
+        {
+          "stepLabel": "Coucher du soleil",
+          "stepTitle": "Pause",
+          "stepText": "Étirements et respiration à la proue pendant que la lumière baisse sur le désert."
+        },
+        {
+          "stepLabel": "Nuit",
+          "stepTitle": "Mouillage",
+          "stepText": "Dîner à bord. S'il y a eu une prise ce jour-là, elle est sur la table."
+        }
+      ],
+      "footnote": "Pendant Thanksgiving au mouillage, le jeudi soir est le dîner de Thanksgiving à bord, façon Baja.",
+      "_template": "timeline"
+    },
+    {
+      "primaryLabel": "Réservez maintenant",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contactez-nous pour en savoir plus",
+      "secondaryMessage": "J'aimerais avoir plus d'informations sur l'expédition de Thanksgiving de Sergio Torres.",
+      "_template": "actions"
+    },
+    {
+      "title": "Pêche sous-marine avec Sergio",
+      "lede": "De l'eau à la table, le jour même.",
+      "blurb": "Le snorkeling, c'est regarder la mer. La pêche sous-marine en apnée, c'est y entrer.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/spearfishing_kdo3fc.png",
+          "alt": "pêche sous-marine à La Paz avec Eagle Ray Expeditions"
+        }
+      ],
+      "photoNote": "[PENDIENTE] Grande photo : Sergio en apnée avec le groupe, ou une prise sur le pont",
+      "moreLabel": "En savoir plus sur la pêche sous-marine",
+      "more": "La pêche sous-marine se pratique sans bouteille : une inspiration, une paire de palmes et un fusil harpon.\n\nC'est pourquoi, avec Sergio, tout commence sur le pont, pas dans l'eau. D'abord, vous apprenez à respirer et à relâcher le corps. Ensuite, à descendre de quelques mètres et à rester immobile. Et seulement alors, le fusil harpon.\n\n**Niveau**\n\n* Aucune expérience préalable n'est nécessaire.\n* Sergio adapte la progression à chacun.\n* Ceux qui préfèrent peuvent s'en tenir au snorkeling ou pêcher depuis le bateau.\n\n**Sécurité**\n\n* Toujours en binôme, jamais seul dans l'eau.\n* Sergio dans l'eau avec le groupe et le bateau à proximité.\n* Avec le capitaine, certifié apnée AIDA II, il y a deux personnes à bord qui savent évoluer sous l'eau.\n\n**Où**\n\n* Dans les criques que le capitaine choisit chaque jour, selon le vent et la visibilité de l'eau.\n* Uniquement dans les zones où c'est autorisé.\n\n**Ce qui est pêché**\n\n* Uniquement des espèces autorisées et uniquement ce qui sera mangé le soir même.\n\n**Ensuite**\n\n* Le chef la nettoie et la cuisine à bord.\n* Si la chance n'est pas au rendez-vous, le dîner est servi quand même.\n",
+      "_template": "feature"
+    },
+    {
+      "title": "Plongée bouteille",
+      "tag": "Prix sur demande · env. 360 USD par personne et par jour",
+      "blurb": "Pour ceux qui veulent aller plus profond qu'en apnée. Autour de La Paz, il y a des sites de plongée pour différents niveaux.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_APR2026_-_Baja_-_Dive___People___Sealife_-_Foto_-_012_eqscql.jpg",
+          "alt": "plongeurs"
+        }
+      ],
+      "photoNote": "plongeurs sur l'épave du Salvatierra, ou un banc de poissons",
+      "moreLabel": "En savoir plus sur la plongée bouteille",
+      "more": "* Salvatierra : un ferry de 75 mètres qui a coulé en 1976 après avoir heurté un récif voisin. Aujourd'hui, c'est un récif artificiel, avec des mérous, des bancs de poissons et du corail noir sur certaines parties de la coque. Environ 18 mètres de profondeur, niveau Open Water.\n* El Bajo : trois monts sous-marins où l'on peut voir des requins pélagiques, comme les requins-marteaux et les requins soyeux. En raison de la profondeur et des conditions, la certification Advanced Open Water est requise.\n\nOrganisé selon le nombre de plongées et les certifications du groupe. **Prix sur demande.**\n",
+      "buttonLabel": "Plus d'informations",
+      "buttonMessage": "J'aimerais savoir combien coûterait l'ajout de la plongée bouteille à l'expédition de Thanksgiving de Sergio Torres.",
+      "_template": "feature"
     },
     {
       "images": [
@@ -38,11 +360,111 @@
       "_template": "imageGallery"
     },
     {
-      "title": "Prêt à découvrir l'itinéraire ?",
-      "lede": "",
+      "title": "Sergio ne navigue pas seul,",
+      "titleEmphasis": "faites connaissance avec votre équipage Eagle Ray",
+      "blurb": "Chez Eagle Ray, chaque expédition est menée par des gens qui vivent la mer. Avec Sergio voyagent un capitaine, qui manœuvre le bateau, lit la mer et choisit chaque mouillage selon le vent, et un chef qui cuisine avec des produits locaux.",
+      "linkLabel": "Des gens de la mer passionnés",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "L'équipe est attribuée selon le bateau et les dates ; nous confirmons l'équipe Eagle Ray lors de votre pré-réservation finale. Pour que vous puissiez commencer à les connaître, voici quelques-uns des capitaines et chefs avec qui nous naviguons.",
+      "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Réservez maintenant",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contactez-nous pour en savoir plus",
+      "secondaryMessage": "J'aimerais avoir plus d'informations sur l'expédition de Thanksgiving de Sergio Torres.",
+      "_template": "actions"
+    },
+    {
+      "title": "Questions fréquentes",
+      "questions": [
+        {
+          "question": "Je voyage seul. Puis-je rejoindre Cabines ouvertes ?",
+          "answer": "Oui. Vous avez une cabine pour vous seul pour 4 000 USD. Vous ne partagez jamais une cabine avec quelqu'un que vous ne connaissez pas."
+        },
+        {
+          "question": "Avec qui naviguerai-je sur Cabines ouvertes ?",
+          "answer": "Un petit groupe d'au plus 6 invités, plus Sergio, le capitaine et le chef."
+        },
+        {
+          "question": "Et si Cabines ouvertes n'est pas complet ?",
+          "answer": "Le départ est confirmé dès que deux cabines sont réservées, avant le 31 octobre. Sinon, vous êtes remboursé à 100 % ou nous vous proposons une nouvelle date."
+        },
+        {
+          "question": "Pouvons-nous venir entre amis pour Thanksgiving au mouillage ?",
+          "answer": "Oui. Le bateau est privé pour un seul groupe, famille ou amis, jusqu'à 4 invités. Vous décidez qui prend la suite principale."
+        },
+        {
+          "question": "Pouvons-nous venir avec des enfants ?",
+          "answer": "Oui. Sergio adapte chaque activité à chaque âge. La pêche sous-marine commence à 12 ans, toujours en tête-à-tête avec Sergio."
+        },
+        {
+          "question": "Ai-je besoin d'expérience ?",
+          "answer": "Non. Sergio adapte chaque séance à votre niveau, et personne n'est obligé de tout faire."
+        },
+        {
+          "question": "Que se passe-t-il si le temps tourne ?",
+          "answer": "Le capitaine décide de l'itinéraire chaque jour selon le vent et la mer. Si une crique ne convient pas, nous allons vers une autre ou restons dans un mouillage abrité. La priorité est la sécurité du groupe et de rentrer à La Paz à l'heure."
+        },
+        {
+          "question": "Quel pourboire laisser ?",
+          "answer": "Nous recommandons 10 à 15 % du prix du voyage. Cabines ouvertes : environ 300 à 450 USD par personne pour une cabine pour deux, ou 400 à 600 USD pour une cabine individuelle. Thanksgiving au mouillage : 1 450 à 2 175 USD au total."
+        },
+        {
+          "question": "Combien dois-je payer pour réserver, et que se passe-t-il si je dois annuler ?",
+          "answer": "Un acompte de 20 % réserve votre place, et le solde est dû 30 jours avant le départ. Si vous réservez plus tard, vous payez la totalité. Si vous annulez, l'acompte n'est pas remboursé. Si nous annulons, vous êtes remboursé à 100 %."
+        },
+        {
+          "question": "Ai-je besoin d'une licence de pêche ?",
+          "answer": "La mer de Cortez l'exige pour chaque adulte à bord. Elle est incluse."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Bon à savoir avant de venir",
+      "questions": [
+        {
+          "question": "Monnaie locale",
+          "answer": "Peso mexicain (MXN). Billets de 20 à 1 000 MXN ; les billets de 500 et 1 000 peuvent parfois être difficiles à changer dans les petites boutiques. Les hôtels et la plupart des entreprises touristiques de La Paz acceptent les cartes, mais dans les endroits plus petits il vous faudra des espèces. Il y a des distributeurs partout dans la ville.\n\nVous n'en aurez pas besoin à bord : les repas et les boissons sans alcool sont inclus."
+        },
+        {
+          "question": "Comment venir",
+          "answer": "L'aéroport de La Paz (LAP) est à 20 minutes de la marina, avec des vols intérieurs et quelques liaisons vers les États-Unis.\n\nLe transfert de l'aéroport à la marina est inclus.\n\nL'aéroport de Los Cabos est à 2 heures de route et est parfois plus pratique, selon votre ville de départ ; si c'est votre cas, écrivez-nous et nous regarderons cela."
+        },
+        {
+          "question": "Cuisine",
+          "answer": "La cuisine de La Paz tourne autour de la mer : palourdes chocolatas cuites sur des pierres chaudes, ceviche avec une touche de mayonnaise, quesadillas au marlin ou au poulpe, et machaca, bœuf ou porc séché, le classique qui ne vient pas de la mer. Les tacos de poisson sont une icône de la péninsule (ils sont nés plus au nord, à Ensenada), mais ici ils sont tout aussi chez eux.\n\nÀ bord, le chef cuisine avec ce que ces mêmes eaux offrent, sauf si vous demandez autre chose."
+        },
+        {
+          "question": "Que apporter",
+          "answer": "Conseil : apportez moins que ce que vous pensez.\n\nÀ bord, vous n'avez besoin que d'un maillot de bain sec pour vous changer ; l'équipage s'occupe du reste.\n\nPour le reste, des vêtements légers en tissus naturels pour la chaleur sèche, quelque chose pour les soirées plus fraîches et un chapeau, car le soleil du désert tape directement."
+        },
+        {
+          "question": "Météo",
+          "answer": "Climat désertique, sec presque toute l'année.\n\nNovembre : des vents du nord peuvent se lever, avec une mer courte et agitée. C'est pourquoi le capitaine décide de l'itinéraire chaque jour.\n\nHiver (de décembre à février) : doux, de 18 à 24 °C, la saison la plus agréable.\n\nPrintemps (avril et mai) : la chaleur commence à monter.\n\nÉté (de juin à août) : chaud et humide, de 28 à 31 °C.\n\nSaison des ouragans : du 15 mai au 30 novembre, avec un risque concentré en août et en septembre."
+        },
+        {
+          "question": "Connexion",
+          "answer": "En mer, le signal est limité : attendez-vous à être déconnecté une bonne partie de la journée.\n\nÀ La Paz, le wifi fonctionne bien. Starlink à bord."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Parlons de votre expédition",
+      "lede": "Retrouvez-nous directement sur WhatsApp ou par e-mail : +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "Consultez la proposition dans son intégralité",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+        "label": "Contactez-nous pour en savoir plus",
+        "href": "/fr/contact/"
       },
       "_template": "cta"
     },

@@ -1,10 +1,53 @@
 {
-  "name": "Monique",
+  "name": "Monik Saab",
   "roles": [
     "Leader d'expédition"
   ],
-  "about": "Avant de lire un bateau rempli de plongeurs, Monique a passé des années à décoder les salles de réunion du marketing. Puis cette instructrice brésilienne a troqué le bureau pour la Baja, où elle apprend depuis six ans à connaître ses eaux et ses habitants. Elle repère très tôt le courant, l'hésitation et l'humeur du groupe, sans jamais donner l'impression de diriger.",
+  "skills": [
+    "Plongée bouteille",
+    "Plongée libre",
+    "Kayak",
+    "Stand-up paddle",
+    "Trekking",
+    "Le vélo"
+  ],
+  "languages": [
+    {
+      "language": "Anglais"
+    },
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Portugais"
+    },
+    {
+      "language": "Allemand"
+    }
+  ],
+  "certificates": [
+    "Instructrice PADI",
+    "STCW",
+    "Livret de marin type A",
+    "Opérations sur hélisurface",
+    "Guide touristique NOM-09",
+    "Guide touristique SECTUR",
+    "Licence de guide de Revillagigedo"
+  ],
+  "yearsOfExperience": 20,
+  "quote": "Sous l'eau, tout le monde s'entraide. J'aimerais que ce soit pareil sur terre.",
+  "about": "\"J'ai grandi au bord de la plage au Brésil. Après 16 ans dans de grandes entreprises et à enseigner l'anglais, j'ai fait de la mer mon métier. Aujourd'hui, je suis monitrice de plongée PADI et guide d'expédition agréée au Mexique. Je vis en Basse-Californie du Sud depuis six ans, dont un à La Paz.\"",
+  "history": "\"J'ai guidé des groupes de toutes tailles, venus du monde entier. Sur un voilier, je préfère les petits. Dès le premier briefing, j'observe comment chaque plongeur se déplace, qui est détendu et qui est nerveux, et je planifie les plongées en fonction d'eux.\"",
+  "why": "\"Ce qui me retient en mer, c'est la vie sous l'eau. Les gens de l'océan sont comme une famille : tout le monde s'entraide. J'ai quitté la vie d'entreprise pour m'amuser et rendre les gens aussi heureux que la mer me rend.\"",
+  "images": [
+    "/assets/img/crew-monique.png",
+    "/assets/img/crew/monique-01.webp",
+    "/assets/img/crew/monique-02.webp",
+    "/assets/img/crew/monique-03.webp",
+    "/assets/img/crew/monique-04.webp",
+    "/assets/img/crew/monique-05.webp"
+  ],
   "image": "/assets/img/crew-monique.png",
-  "imageAlt": "Monique, responsable de l'expédition",
-  "order": 7
+  "imageAlt": "Monik, cheffe d'expédition chez Eagle Ray Expeditions",
+  "order": 4
 }

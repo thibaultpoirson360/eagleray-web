@@ -1,10 +1,10 @@
 {
-  "title": "Expedición ad hoc",
+  "title": "Tu propia expedición",
   "blocks": [
     {
       "_template": "hero",
       "kicker": "Tu expedición",
-      "title": "Expedición ad hoc",
+      "title": "Tu propia expedición",
       "lede": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que quieres hacer durante tus días en el mar.",
       "image": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
       "imageAlt": "Turistas navegando en un catamarán en La Paz"

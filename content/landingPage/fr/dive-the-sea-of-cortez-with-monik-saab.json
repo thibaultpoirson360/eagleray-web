@@ -1,41 +1,470 @@
 {
-  "title": "Plongez dans la mer de Cortez avec Monik Saab",
+  "title": "Plongez et naviguez avec Monik Saab",
   "blocks": [
     {
       "kicker": "Dates limitées · novembre 2026",
-      "title": "Plongez dans la mer de Cortez avec Monik Saab",
-      "lede": "Réservé aux plongeurs certifiés. Plongez, naviguez et passez la nuit au mouillage au large d'Espíritu Santo, avec un petit groupe de 8 personnes maximum à bord. 3 ou 5 jours : du 20 au 22 novembre, ou du 25 au 29 novembre.",
+      "title": "Plongez et naviguez avec Monik Saab",
+      "lede": "Une journée, une nuit au mouillage ou le week-end de Thanksgiving au large d'Espíritu Santo. Monik dirige les plongées, avec tout le matériel à bord. L'équipage d'Eagle Ray navigue, cuisine et lit la mer. Pour plongeurs certifiés. Vous n'avez jamais plongé ? Demandez-nous une première séance avec Monik.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
-      "imageAlt": "Monike Saab, responsable d'expédition et experte en plongée sous-marine à La Paz",
+      "imageAlt": "Monik Saab, cheffe d'expédition chez Eagle Ray, en plongée à La Paz",
+      "cta": {
+        "label": "Réserver un appel",
+        "href": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab."
+      },
       "_template": "hero"
     },
     {
+      "title": "Trois façons de plonger avec Monik en novembre",
+      "intro": "Les trois partent de la Marina Palmira, à La Paz, à bord d'un voilier Beneteau Sense 55, avec Monik, un capitaine Eagle Ray et un chef Eagle Ray. Chacune est un charter privé du bateau entier, pour votre groupe. Les plongées et le matériel de plongée sont inclus. Choisissez-en une, ou enchaînez-en deux.\n\nVous ne savez pas laquelle convient à votre groupe ? Réservez un appel avec Monik ou l'équipe Eagle Ray et nous répondons à vos questions avant que vous réserviez.",
+      "options": [
+        {
+          "name": "Journée plongée",
+          "dates": "Lundi 23 novembre · sortie à la journée · 1 plongée",
+          "boatLine": "Jusqu'à 6 invités",
+          "description": "Une plongée à San Rafaelito, puis déjeuner à bord, snorkeling et le reste de la journée sur le pont. Retour à la marina dans l'après-midi.",
+          "priceSummary": "5 500 USD · bateau entier",
+          "deadline": "Réservez avant le 5 novembre",
+          "priceRows": [],
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
+          "imageAlt": "Plongeurs à San Rafaelito, La Paz",
+          "imageNote": "[PENDIENTE] Photo : plongée à San Rafaelito ou déjeuner sur le pont",
+          "bookLabel": "Réserver un appel",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Réservez maintenant",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        },
+        {
+          "name": "Une nuit au mouillage",
+          "dates": "Mardi 24 novembre → mercredi 25 novembre · 1 nuit · 2 plongées",
+          "boatLine": "2 cabines invités (une principale, une standard) · jusqu'à 4 invités",
+          "description": "Cap au sud d'Espíritu Santo, plongée à Fang Ming, puis le coucher du soleil et le dîner au mouillage. Le lendemain matin, plongée à Isla Ballena, puis déjeuner à bord et retour à La Paz dans l'après-midi.",
+          "priceSummary": "8 500 USD · bateau entier",
+          "deadline": "Réservez avant le 5 novembre",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
+          "imageAlt": "Le Beneteau Sense 55 au mouillage au large d'Espíritu Santo",
+          "imageNote": "[PENDIENTE] Photo : le Beneteau Sense 55 au mouillage au coucher du soleil",
+          "bookLabel": "Réserver un appel",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Réservez maintenant",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        },
+        {
+          "name": "Expédition plongée Thanksgiving",
+          "featured": true,
+          "dates": "Jeudi 26 novembre → dimanche 29 novembre · 3 nuits · 4 plongées, plus une 5e si les conditions et le groupe le permettent",
+          "boatLine": "2 cabines invités (une principale, une standard) · jusqu'à 4 invités",
+          "description": "Trois nuits autour d'Espíritu Santo, avec le temps d'atteindre le nord et la colonie d'otaries de Los Islotes. Dîner de Thanksgiving au mouillage le jeudi soir. Pas de plongée le dernier matin : un petit-déjeuner tranquille, une baignade, et retour à la marina vers midi le dimanche.",
+          "priceSummary": "14 500 USD · bateau entier, plongée incluse",
+          "deadline": "Réservez avant le 5 novembre",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
+          "imageAlt": "Plongeurs pour Thanksgiving à La Paz",
+          "imageNote": "[PENDIENTE] Photo : plongée avec les otaries à Los Islotes",
+          "bookLabel": "Réserver un appel",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Réservez maintenant",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        }
+      ],
+      "bookingLabel": "Infos sur la réservation",
+      "bookingInfo": "* Réservez avant le 5 novembre.\n* Chaque départ est un charter privé du bateau entier, pour votre groupe.\n* Commencez par un appel : Monik et l'équipe Eagle Ray répondent à vos questions avant que vous réserviez.\n* Les conditions de paiement et d'annulation vous sont confirmées avant la réservation.\n\nVous voulez plus de jours, ou une autre date pour votre propre groupe ? Écrivez-nous.\n",
+      "_template": "departures",
+      "fillPhotos": true,
+      "boatLinkLabel": "Voir le bateau",
+      "includesLinkLabel": "Voir ce qui est inclus"
+    },
+    {
       "member": "Monique",
-      "body": "### **QUI EST MONIK ?**\n\n\\\nElle a grandi sur une plage au Brésil et a passé seize ans à travailler dans de grandes entreprises et à enseigner l'anglais avant de faire de la mer son métier.\n\nQuand on lui demande ce qui la retient là-bas, elle résume la situation en une seule phrase :\n\n> « Dans l'océan, tout le monde s'entraide. J'aimerais bien que ce soit pareil sur la terre ferme. »\n\nMonik emmène de petits groupes de plongeurs en mer de Cortez avec Eagle Ray. À bord, elle observe avant de prendre la parole : qui est détendu, qui vérifie son équipement deux fois, qui souhaite descendre plus profond.\nElle organise ensuite les plongées en fonction de chacun. Quel site choisir, quelle profondeur, quand se mettre à l'eau, et quand il vaut mieux rester sur le pont pour admirer les jeux de lumière.\n\nElle est aujourd’hui monitrice de plongée PADI et guide d’expédition agréée au Mexique.\\\nSix ans de plongée en Basse-Californie du Sud, dont un an passé à La Paz. Titulaire d’une licence de guide pour les îles Revillagigedo.\\\nPlusieurs saisons passées sur des yachts équipés d’un héliport. Briefings de plongée en anglais, espagnol, portugais ou allemand.\n\nSuivez ses plongées sur [@nikdive](https://www.instagram.com/nikdive/)\n",
+      "body": "## QUI EST MONIK ?\n\nMonik a grandi au bord d'une plage au Brésil. Elle a passé seize ans dans de grandes entreprises et à enseigner l'anglais, puis a fait de la mer son métier.\n\nAujourd'hui, elle est monitrice de plongée PADI et guide d'expédition agréée au Mexique, avec six ans de plongée en Basse-Californie du Sud et une licence pour guider dans les îles Revillagigedo.\n\nAvant la première plongée, elle observe : qui est détendu, qui vérifie son matériel deux fois, qui veut aller plus profond. Ensuite, elle planifie chaque plongée en fonction d'eux. Quel site, quelle profondeur, quand se mettre à l'eau, et quand le mieux est de rester sur le pont.\n",
+      "collapseAbout": true,
+      "moreText": "En savoir plus sur Monik :\n\n* Monitrice de plongée PADI\n* Guide touristique certifiée SECTUR (NOM-09)\n* Agréée pour guider dans les îles Revillagigedo\n* STCW et livret de marin\n* Saisons sur des yachts avec opérations sur hélisurface\n* A organisé des voyages de plongée de plusieurs jours pour sa propre communauté\n* Briefings de plongée en anglais, espagnol, portugais ou allemand\n\nSuivez ses plongées et ses élèves sur Instagram : [@nikdive](https://www.instagram.com/nikdive/)\n",
       "_template": "memberProfile"
+    },
+    {
+      "title": "Votre maison flottante",
+      "intro": "Les trois départs naviguent sur le même bateau.",
+      "detailsLabel": "Voir toutes les photos",
+      "boatItems": [
+        {
+          "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "Le coin salon du cockpit du Beneteau Sense 55",
+          "tag": "Les trois départs",
+          "tripNote": "Départs avec nuit : 2 cabines invités (une principale, une standard) · jusqu'à 4 invités. La troisième cabine est réservée à Monik. Journée plongée : jusqu'à 6 invités.",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Voilier",
+          "about": "Le Beneteau Sense 55 est le plus intime des bateaux d'Eagle Ray, un monocoque de 60 pieds conçu pour les groupes qui recherchent la sensation classique de la voile, et pas seulement un bateau qui se trouve avoir des voiles. Grâce à ses trois suites privées, chaque couple dispose d'une porte qu'il peut fermer, et tout le groupe peut s'asseoir ensemble autour de la même table dans le cockpit pour dîner. Une plateforme de bain hydraulique descend directement dans l'eau : pour se baigner ou faire du snorkeling, nul besoin de descendre par une échelle. De plus, il se comporte différemment d'un catamaran : plus de gîte et plus de réponse à la barre, idéal pour les groupes qui veulent profiter autant de la navigation que de la destination.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Voilier"
+            },
+            {
+              "label": "Longueur",
+              "value": "60 pieds"
+            },
+            {
+              "label": "Cabines invités",
+              "value": "2"
+            },
+            {
+              "label": "Invités",
+              "value": "jusqu'à 4"
+            }
+          ],
+          "featureList": [
+            "Monocoque de 60 pieds",
+            "3 suites privées",
+            "Table dans le cockpit pour 10 personnes",
+            "Plateforme de bain hydraulique",
+            "Jeu de voiles hautes performances"
+          ],
+          "similarNote": "Ou un bateau similaire aux caractéristiques égales ou supérieures."
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Ce qui est inclus",
+      "includedTitle": "Inclus",
+      "included": "**Bateau**\n\n* Le bateau de votre départ, ou un bateau similaire aux caractéristiques égales ou supérieures\n* Charter privé du bateau entier, pour votre groupe\n\n**Équipage**\n\n* Monik Saab, cheffe d'expédition Eagle Ray\n* Capitaine Eagle Ray\n* Chef Eagle Ray\n\n**Plongée**\n\n* Plongées guidées avec Monik pour plongeurs certifiés : 1 pour la Journée plongée, 2 pour Une nuit au mouillage, 4 pour l'expédition Thanksgiving\n* Matériel de plongée complet : blocs, lest, gilet, détendeur et combinaison\n* Planification des plongées selon le niveau et le carnet de plongée de chacun\n* Logistique de plongée selon l'itinéraire\n\n**Équipement**\n\n* Matériel de snorkeling\n* Kit de pêche\n* 2 paddles\n* 1 kayak\n* 1 annexe\n* Équipement de plage (chaises, auvent, etc.)\n\n**Repas et boissons**\n\n* Tous les repas à bord\n* Boissons sans alcool\n\n**Transfert**\n\n* Aéroport de La Paz ↔ marina, à l'arrivée et au départ, sur les trois départs\n* Les transferts depuis n'importe où en Basse-Californie du Sud jusqu'à la marina peuvent aussi être organisés avec Eagle Ray, sur demande\n\n**Extras**\n\n* Gazole\n* Permis de navigation et entrée dans les parcs nationaux\n* Wifi Starlink à bord\n* Licence de pêche pour chaque adulte à bord\n",
+      "notIncludedTitle": "Non inclus",
+      "notIncluded": "* Vols vers La Paz\n* Boissons alcoolisées, choisies sur un menu avant le voyage\n* Une première séance de plongée pour les invités non certifiés (Discover Scuba) : disponible en expérience supplémentaire, prix sur demande\n* La 5e plongée de l'expédition Thanksgiving : prix sur demande\n* Autres activités guidées, facturées séparément\n* Pourboires de l'équipage (10 à 15 % recommandés)\n* Assurance voyage\n",
+      "gallery": [],
+      "_template": "includes"
+    },
+    {
+      "title": "Le parcours",
+      "intro": "La Journée plongée et Une nuit au mouillage quittent la Marina Palmira à 07h45, quand la mer est plus calme pour naviguer et plonger. Pour l'Expédition plongée Thanksgiving, les invités arrivent vers midi et le parcours commence le lendemain matin.",
+      "places": [
+        {
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina Palmira · départ et arrivée",
+          "lat": 24.1585,
+          "lon": -110.3245
+        },
+        {
+          "key": "sanrafaelito",
+          "name": "San Rafaelito",
+          "sub": "Plongée, déjeuner et snorkeling",
+          "lat": 24.2949,
+          "lon": -110.3408
+        },
+        {
+          "key": "fangming",
+          "name": "Sud d'Espíritu Santo",
+          "sub": "Plongée à Fang Ming",
+          "lat": 24.4229,
+          "lon": -110.3148
+        },
+        {
+          "key": "ballena",
+          "name": "Isla Ballena",
+          "sub": "Plongée",
+          "lat": 24.4829,
+          "lon": -110.4044
+        },
+        {
+          "key": "islotes",
+          "name": "Los Islotes",
+          "sub": "Colonie d'otaries",
+          "lat": 24.5988,
+          "lon": -110.402
+        },
+        {
+          "key": "espwest",
+          "name": "Espíritu Santo",
+          "sub": "Roca Tintorera ou Los Muellecitos",
+          "lat": 24.5042,
+          "lon": -110.4068
+        }
+      ],
+      "trips": [
+        {
+          "tab": "Journée plongée",
+          "beats": [
+            {
+              "label": "Journée plongée · 23 novembre",
+              "title": "La Paz → San Rafaelito",
+              "text": "1 plongée, déjeuner à bord, snorkeling et temps sur le pont.",
+              "from": "lapaz",
+              "to": "sanrafaelito",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_San_Rafaelito_cazls3.jpg",
+              "imageAlt": "La Paz → San Rafaelito"
+            },
+            {
+              "label": "Journée plongée · 23 novembre",
+              "title": "San Rafaelito → La Paz",
+              "text": "Retour à la marina dans l'après-midi.",
+              "from": "sanrafaelito",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "San Rafaelito → La Paz"
+            }
+          ]
+        },
+        {
+          "tab": "Une nuit",
+          "beats": [
+            {
+              "label": "Une nuit au mouillage · du 24 au 25 novembre · Jour 1",
+              "title": "La Paz → sud d'Espíritu Santo",
+              "text": "Plongée à Fang Ming, coucher du soleil et dîner au mouillage.",
+              "night": "Nuit au mouillage · sud d'Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_Espíritu_santo_fgfljy.jpg",
+              "imageAlt": "La Paz → sud d'Espíritu Santo"
+            },
+            {
+              "label": "Une nuit au mouillage · du 24 au 25 novembre · Jour 2",
+              "title": "Isla Ballena → La Paz",
+              "text": "Petit-déjeuner, plongée à Isla Ballena, déjeuner à bord, retour à La Paz dans l'après-midi.",
+              "from": "fangming",
+              "via": [
+                "ballena"
+              ],
+              "to": "lapaz",
+              "imageAlt": "Isla Ballena → La Paz"
+            }
+          ]
+        },
+        {
+          "tab": "Thanksgiving",
+          "beats": [
+            {
+              "label": "Expédition plongée Thanksgiving · du 26 au 29 novembre · Jour 1",
+              "title": "La Paz → sud d'Espíritu Santo",
+              "text": "Les invités arrivent vers midi. Cap au sud pour la première nuit au mouillage, avec le dîner de Thanksgiving à bord.",
+              "night": "Nuit au mouillage · sud d'Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "imageAlt": "La Paz → sud d'Espíritu Santo"
+            },
+            {
+              "label": "Expédition plongée Thanksgiving · Jour 2",
+              "title": "Los Islotes et le nord d'Espíritu Santo",
+              "text": "Plongée à Los Islotes avec la colonie d'otaries, un long déjeuner, puis une plongée à El Bajito.",
+              "from": "fangming",
+              "to": "islotes",
+              "imageAlt": "Los Islotes et le nord d'Espíritu Santo"
+            },
+            {
+              "label": "Expédition plongée Thanksgiving · Jour 3",
+              "title": "Espíritu Santo",
+              "text": "Matinée tranquille avec kayak, plage et snorkeling. Plongée à Roca Tintorera ou Los Muellecitos, selon les conditions et le niveau du groupe. Une 5e plongée à Isla Ballena pour les groupes qui en veulent plus. Puis cap au sud pour la dernière nuit.",
+              "night": "Nuit au mouillage",
+              "from": "islotes",
+              "to": "espwest",
+              "imageAlt": "Espíritu Santo"
+            },
+            {
+              "label": "Expédition plongée Thanksgiving · Jour 4",
+              "title": "Retour à La Paz",
+              "text": "Petit-déjeuner, une baignade, pas de plongée. Retour à la marina vers midi.",
+              "from": "espwest",
+              "to": "lapaz",
+              "imageAlt": "Retour à La Paz"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Itinéraire et mouillages proposés. Le plan final dépend de la météo. Les positions sont approximatives. Données cartographiques © contributeurs d'OpenStreetMap.",
+      "footnote": "Itinéraire indicatif. Il dépend de la mer, du vent, des permis et de la décision du capitaine. En novembre, des vents du nord peuvent se lever, et dans ce cas nous changeons l'ordre des sites ou restons au même mouillage.",
+      "_template": "cinematicRoute"
+    },
+    {
+      "title": "Comment se passe une journée à bord avec Monik ?",
+      "intro": "Chaque journée a une structure, pas un horaire. Monik et le capitaine l'ajustent au vent, à la visibilité et à la façon dont le groupe plonge. Personne n'est obligé de faire toutes les plongées.",
+      "steps": [
+        {
+          "stepLabel": "Petit matin",
+          "stepTitle": "Navigation",
+          "stepText": "Café sur le pont pendant que le capitaine emmène le bateau jusqu'au premier site."
+        },
+        {
+          "stepLabel": "Matin",
+          "stepTitle": "Première plongée",
+          "stepText": "Monik fait le briefing du groupe sur le pont, puis vous passez à l'eau."
+        },
+        {
+          "stepLabel": "Midi",
+          "stepTitle": "À table",
+          "stepText": "Déjeuner cuisiné à bord avec des produits locaux, et du temps pour parler de ce que vous avez vu là-dessous."
+        },
+        {
+          "stepLabel": "Après-midi",
+          "stepTitle": "Deuxième plongée ou temps libre",
+          "stepText": "Les jours avec une deuxième plongée, Monik remet le groupe à l'eau. Les autres jours : kayak, paddle, une promenade sur une plage d'île. Ou rien du tout."
+        },
+        {
+          "stepLabel": "Coucher du soleil",
+          "stepTitle": "Pont",
+          "stepText": "Les carnets de plongée, la lumière qui baisse sur le désert, le plan du lendemain."
+        },
+        {
+          "stepLabel": "Nuit",
+          "stepTitle": "Au mouillage",
+          "stepText": "Dîner à bord. S'il y a eu une prise ce jour-là, elle est sur la table."
+        }
+      ],
+      "_template": "timeline"
+    },
+    {
+      "primaryLabel": "Réservez maintenant",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contactez-nous pour en savoir plus",
+      "secondaryMessage": "J'aimerais avoir plus d'informations sur les expéditions de plongée avec Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Plonger avec Monik",
+      "blurb": "Le dernier contrôle, le pas hors du bateau, le bruit de la surface qui disparaît. Ensuite, il ne reste que votre souffle et ce que la mer décide de vous montrer.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.29_6_fkcump.jpg",
+          "alt": "Monik avec un groupe de plongeurs à La Paz"
+        }
+      ],
+      "photoNote": "[PENDIENTE] Photos : Monik en plongée avec le groupe, et la panga de plongée",
+      "moreLabel": "En savoir plus sur la plongée",
+      "more": "Vous vous réveillez au mouillage avec le site de plongée tout proche. Pas de trajet jusqu'à la marina, pas de retour à l'hôtel. Entre les plongées, vous naviguez, vous nagez, vous mangez ce que le chef a cuisiné, et vous parlez de ce que vous avez vu jusqu'à ce qu'il soit temps de retourner à l'eau.\n\n**Niveau**\n\n* Pour plongeurs certifiés. Monik vérifie les certifications et les carnets de plongée avant le voyage et planifie chaque plongée en fonction du groupe.\n* Certains sites exigent l'Advanced Open Water.\n* Vous venez avec quelqu'un qui ne plonge pas encore ? Dites-le-nous avant le voyage et Monik lui prépare une première séance, avec un supplément.\n\n**Matériel**\n\n* Tout le matériel de plongée est à bord et inclus. Apportez le vôtre si vous préférez.\n* Les plongées partent de notre panga de plongée, avec l'équipage d'Eagle Ray.\n\n**Plongées**\n\n* Journée plongée : 1 plongée\n* Une nuit au mouillage : 2 plongées\n* Expédition Thanksgiving : 4 plongées, plus une 5e si les conditions et le groupe le permettent\n\n**Sécurité**\n\n* Toujours en binôme, jamais seul dans l'eau.\n* Monik dans l'eau avec le groupe, le bateau à proximité.\n\n**Où**\n\n* Sur les sites que le capitaine et Monik choisissent chaque jour : San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* Nous ne promettons pas un site précis : la mer décide d'abord.\n\n**Entre les plongées**\n\n* Snorkeling, baignade, kayak, paddle, promenades sur les îles et pêche là où elle est autorisée.\n",
+      "_template": "feature"
     },
     {
       "images": [
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
-          "alt": "Monike Saab, responsable de l'expédition « Eagle Ray », avant une plongée "
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_seiwxx.jpg",
+          "alt": "Monik Saab, cheffe d'expédition chez Eagle Ray, avant une plongée"
         },
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
-          "alt": "Monike Saab fait de la plongée à La Paz"
+          "alt": "Monik Saab en plongée à La Paz"
         },
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Preparing_clients_for_scuba_vdbptj.avif",
-          "alt": "Monike prépare les clients avant une plongée à La Paz, avec Eagle Ray Expeditions"
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Monik_Saab_-_WITH_CLIENTS_wx5hxs.jpg",
+          "alt": "Monik Saab préparant des plongeurs avant une plongée à La Paz"
         }
       ],
       "_template": "imageGallery"
     },
     {
-      "title": "Découvrez l'intégralité de l'expédition",
+      "title": "Monik ne navigue pas seule,",
+      "titleEmphasis": "faites connaissance avec votre équipage Eagle Ray",
+      "blurb": "Chez Eagle Ray, chaque expédition est menée par des gens qui vivent la mer. Avec Monik voyagent un capitaine, qui manœuvre le bateau, lit la mer et choisit chaque mouillage selon le vent, et un chef qui cuisine avec des produits locaux.",
+      "linkLabel": "Des gens de la mer passionnés",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "L'équipe est attribuée selon le bateau et les dates ; nous confirmons l'équipe Eagle Ray lors de votre pré-réservation finale. Pour que vous puissiez commencer à les connaître, voici quelques-uns des capitaines et chefs avec qui nous naviguons.",
+      "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Réservez maintenant",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contactez-nous pour en savoir plus",
+      "secondaryMessage": "J'aimerais avoir plus d'informations sur les expéditions de plongée avec Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Questions fréquentes",
+      "questions": [
+        {
+          "question": "Dois-je être certifié ?",
+          "answer": "Oui, ce voyage est destiné aux plongeurs certifiés. Si vous venez avec quelqu'un qui n'a jamais plongé, dites-le-nous avant le voyage : Monik peut lui préparer une première séance, disponible en expérience supplémentaire, prix sur demande."
+        },
+        {
+          "question": "Puis-je venir avec quelqu'un qui ne plonge pas ?",
+          "answer": "Oui. Elle ou il peut faire du snorkeling, du kayak, du paddle et profiter du bateau, ou essayer une première séance de plongée avec Monik en expérience supplémentaire, prix sur demande. Le prix du charter est le même."
+        },
+        {
+          "question": "Vais-je partager le bateau avec d'autres invités ?",
+          "answer": "Non. Chaque départ est un charter privé du bateau entier, pour votre groupe."
+        },
+        {
+          "question": "Combien de personnes seront à bord ?",
+          "answer": "Jusqu'à 4 invités sur les départs avec nuit et jusqu'à 6 sur la Journée plongée, plus Monik, le capitaine et le chef."
+        },
+        {
+          "question": "Comment réserver ?",
+          "answer": "Réservez un appel avec nous sur WhatsApp. Monik ou l'équipe Eagle Ray répondent d'abord à vos questions, puis vous pouvez réserver et payer en ligne."
+        },
+        {
+          "question": "Puis-je enchaîner deux départs ?",
+          "answer": "Oui, parlez-nous-en et nous les combinerons."
+        },
+        {
+          "question": "Dois-je apporter du matériel de plongée ?",
+          "answer": "Non, tout le matériel est à bord et inclus. Apportez votre carte de certification et votre carnet de plongée. Si vous avez votre propre masque, ordinateur ou combinaison, vous pouvez les apporter."
+        },
+        {
+          "question": "Puis-je prendre l'avion après avoir plongé ?",
+          "answer": "Oui, avec une marge. Monik planifie la dernière plongée pour que vous ayez les heures nécessaires avant votre vol. Pendant l'expédition Thanksgiving, il n'y a pas de plongée le dernier matin."
+        },
+        {
+          "question": "Que se passe-t-il si le temps tourne ?",
+          "answer": "Le capitaine décide de l'itinéraire chaque jour selon le vent et la mer. Si un site n'est pas plongeable, nous allons vers un autre ou restons dans un mouillage abrité. La priorité est la sécurité du groupe et de rentrer à La Paz à l'heure."
+        },
+        {
+          "question": "Quel pourboire laisser ?",
+          "answer": "Nous recommandons 10 à 15 % du prix du voyage."
+        },
+        {
+          "question": "Combien dois-je payer pour réserver, et que se passe-t-il si je dois annuler ?",
+          "answer": "Réservez avant le 5 novembre, après un appel avec Monik ou l'équipe Eagle Ray. Nous confirmons avec vous les conditions de paiement et d'annulation avant que vous réserviez."
+        },
+        {
+          "question": "Ai-je besoin d'une licence de pêche ?",
+          "answer": "La mer de Cortez l'exige pour chaque adulte à bord. Elle est incluse."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Bon à savoir avant de venir",
+      "questions": [
+        {
+          "question": "Monnaie locale",
+          "answer": "Peso mexicain (MXN). Billets de 20 à 1 000 MXN ; les billets de 500 et 1 000 peuvent parfois être difficiles à changer dans les petites boutiques. Les hôtels et la plupart des entreprises touristiques de La Paz acceptent les cartes, mais dans les endroits plus petits il vous faudra des espèces. Il y a des distributeurs partout dans la ville.\n\nVous n'en aurez pas besoin à bord : les repas et les boissons sans alcool sont inclus."
+        },
+        {
+          "question": "Comment venir",
+          "answer": "L'aéroport de La Paz (LAP) est à 20 minutes de la marina, avec des vols intérieurs et quelques liaisons vers les États-Unis.\n\nLe transfert de l'aéroport à la marina est inclus.\n\nL'aéroport de Los Cabos est à 2 heures de route et est parfois plus pratique, selon votre ville de départ ; si c'est votre cas, écrivez-nous et nous regarderons cela."
+        },
+        {
+          "question": "Cuisine",
+          "answer": "La cuisine de La Paz tourne autour de la mer : palourdes chocolatas cuites sur des pierres chaudes, ceviche avec une touche de mayonnaise, quesadillas au marlin ou au poulpe, et machaca, bœuf ou porc séché, le classique qui ne vient pas de la mer. Les tacos de poisson sont une icône de la péninsule (ils sont nés plus au nord, à Ensenada), mais ici ils sont tout aussi chez eux.\n\nÀ bord, le chef cuisine avec ce que ces mêmes eaux offrent, sauf si vous demandez autre chose."
+        },
+        {
+          "question": "Que apporter",
+          "answer": "Conseil : apportez moins que ce que vous pensez.\n\nÀ bord, vous n'avez besoin que d'un maillot de bain sec pour vous changer ; l'équipage s'occupe du reste.\n\nPour le reste, des vêtements légers en tissus naturels pour la chaleur sèche, quelque chose pour les soirées plus fraîches et un chapeau, car le soleil du désert tape directement.\n\nPour la plongée : votre carte de certification et votre carnet de plongée. Le reste du matériel est à bord."
+        },
+        {
+          "question": "Météo",
+          "answer": "Climat désertique, sec presque toute l'année.\n\nNovembre : des vents du nord peuvent se lever, avec une mer courte et agitée. C'est pourquoi le capitaine décide de l'itinéraire chaque jour.\n\nHiver (de décembre à février) : doux, de 18 à 24 °C, la saison la plus agréable.\n\nPrintemps (avril et mai) : la chaleur commence à monter.\n\nÉté (de juin à août) : chaud et humide, de 28 à 31 °C.\n\nSaison des ouragans : du 15 mai au 30 novembre, avec un risque concentré en août et en septembre."
+        },
+        {
+          "question": "Connexion",
+          "answer": "En mer, le signal est limité : attendez-vous à être déconnecté une bonne partie de la journée.\n\nÀ La Paz, le wifi fonctionne bien. Starlink à bord."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Parlons de votre expédition",
+      "lede": "Retrouvez-nous directement sur WhatsApp ou par e-mail : +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "Découvrez l'intégralité de l'expédition",
-        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
+        "label": "Contactez-nous pour en savoir plus",
+        "href": "/fr/contact/"
       },
       "_template": "cta"
     },
@@ -44,13 +473,14 @@
       "hideLogo": true,
       "hideTitle": true,
       "height": 600,
+      "iframeTitle": "Plongez et naviguez avec Monik Saab",
       "_template": "moguProposal"
     }
   ],
   "seo": {
-    "title": "Plongée dans la mer de Cortez avec Monik Saab | Eagle Ray Expeditions",
-    "description": "Expéditions de plongée de 3 ou 5 jours pour plongeurs certifiés à La Paz, en Basse-Californie du Sud. Plongez, naviguez et passez la nuit au mouillage avec Monik Saab. Novembre 2026",
-    "ogTitle": "Plongez en Basse-Californie avec Monik Saab",
-    "ogDescription": "Un petit groupe, un voilier et quelques jours en mer au large d'Espíritu Santo. Pour les plongeurs certifiés, du 20 au 22 et du 25 au 29 novembre."
+    "title": "Plongez et naviguez avec Monik Saab | Eagle Ray Expeditions",
+    "description": "Plongez une journée, une nuit au mouillage ou le week-end de Thanksgiving au large d'Espíritu Santo, La Paz. Monik Saab dirige les plongées, avec tout le matériel à bord. Pour plongeurs certifiés.",
+    "ogTitle": "Plongez et naviguez avec Monik Saab",
+    "ogDescription": "Une journée, une nuit au mouillage ou le week-end de Thanksgiving au large d'Espíritu Santo. Pour plongeurs certifiés, novembre 2026."
   }
 }

@@ -3,8 +3,43 @@
   "roles": [
     "Líder de Expedición"
   ],
+  "skills": [
+    "Buceo con tanque",
+    "Snorkel",
+    "Buceo en apnea",
+    "Paddleboard",
+    "Kayak",
+    "Senderismo",
+    "Camping"
+  ],
+  "languages": [
+    {
+      "language": "Español"
+    },
+    {
+      "language": "Inglés"
+    }
+  ],
+  "certificates": [
+    "PADI Master Scuba Diver Trainer",
+    "STCW Marinero de cubierta",
+    "TDI Tech Diver",
+    "TDI Cave Diver"
+  ],
+  "yearsOfExperience": 10,
+  "quote": "Está en todas partes: misterioso, poderoso, en calma, con vida por todas partes.",
   "about": "Juan Carlos es instructor de buceo desde los veinte años, trabajó en liveaboards de las islas Revillagigedo y navegó solo de Loreto a La Paz. Lleva una experiencia que nunca necesita anunciarse. Sabe cuándo el agua exige respeto y cuándo un grupo está preparado para bajar más profundo. Cerca de él, el valor se vuelve contagioso, nunca temerario.",
-  "image": "/assets/img/crew-juancarlos.png",
+  "history": "\"Hace poco navegué en solitario de Loreto a La Paz. Antes pasé más de 30 días seguidos como marinero de cubierta en un liveaboard a las islas Socorro.\n\nHe dirigido grupos de buceo de hasta ocho personas en condiciones difíciles, buceadores y practicantes de snorkel principiantes, grupos de senderismo y camping, y chárteres a vela como guía y marinero de cubierta.\"",
+  "why": "\"Todo empezó la primera vez que fui a bucear, cuando alguien me dijo que podía dedicarme a esto y viajar por el mundo.\n\nLo que me gusta de compartir el mar cabe en una lista: intimidad, confianza, aprender nuevas habilidades, enfrentarse a los miedos, encuentros inesperados. Y confianza.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
   "imageAlt": "Juan Carlos, jefe de expedición",
-  "order": 8
+  "order": 8,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
+    "/assets/img/crew/juan-carlos-01.webp",
+    "/assets/img/crew/juan-carlos-02.webp",
+    "/assets/img/crew/juan-carlos-03.webp",
+    "/assets/img/crew/juan-carlos-04.webp",
+    "/assets/img/crew/juan-carlos-05.webp"
+  ]
 }

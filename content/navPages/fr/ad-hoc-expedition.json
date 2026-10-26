@@ -1,10 +1,10 @@
 {
-  "title": "Expédition ponctuelle",
+  "title": "Votre propre expédition",
   "blocks": [
     {
       "_template": "hero",
       "kicker": "Votre expédition",
-      "title": "Expédition ponctuelle",
+      "title": "Votre propre expédition",
       "lede": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
       "image": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
       "imageAlt": "Des vacanciers naviguant sur un catamaran à La Paz"

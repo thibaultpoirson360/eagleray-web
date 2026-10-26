@@ -3,8 +3,43 @@
   "roles": [
     "Leader d'expédition"
   ],
+  "skills": [
+    "Plongée bouteille",
+    "Plongée libre",
+    "Plongée en apnée",
+    "Paddle",
+    "Kayak",
+    "Randonnée",
+    "Camping"
+  ],
+  "languages": [
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Anglais"
+    }
+  ],
+  "certificates": [
+    "PADI Master Scuba Diver Trainer",
+    "STCW Matelot de pont",
+    "TDI Tech Diver",
+    "TDI Cave Diver"
+  ],
+  "yearsOfExperience": 10,
+  "quote": "Il est partout : mystérieux, puissant, calme, la vie partout.",
   "about": "Juan Carlos est instructeur de plongée depuis ses vingt ans, a travaillé sur des liveaboards aux îles Revillagigedo et navigué seul de Loreto à La Paz. Il porte une expérience qui n'a jamais besoin de s'annoncer. Il sait quand l'eau exige du respect et quand un groupe est prêt à aller plus profond. Près de lui, le courage devient contagieux, jamais téméraire.",
-  "image": "/assets/img/crew-juancarlos.png",
+  "history": "\"Tout récemment, j'ai navigué en solitaire de Loreto à La Paz. Avant cela, j'ai passé plus de 30 jours d'affilée comme matelot de pont sur un liveaboard vers les îles Socorro.\n\nJ'ai encadré des groupes de plongée jusqu'à huit personnes dans des conditions difficiles, des plongeurs et des adeptes du snorkeling débutants, des groupes de randonnée et de camping, ainsi que des charters à voile en tant que guide et matelot de pont.\"",
+  "why": "\"Tout a commencé la première fois que je suis allé plonger, quand quelqu'un m'a dit que je pouvais en faire mon métier et voyager à travers le monde.\n\nCe que j'aime dans le partage de la mer tient en une liste : l'intimité, la confiance, apprendre de nouvelles compétences, affronter ses peurs, les rencontres inattendues. Et la confiance.\"",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
   "imageAlt": "Juan Carlos, chef d'expédition",
-  "order": 8
+  "order": 8,
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_whqadz.jpg",
+    "/assets/img/crew/juan-carlos-01.webp",
+    "/assets/img/crew/juan-carlos-02.webp",
+    "/assets/img/crew/juan-carlos-03.webp",
+    "/assets/img/crew/juan-carlos-04.webp",
+    "/assets/img/crew/juan-carlos-05.webp"
+  ]
 }

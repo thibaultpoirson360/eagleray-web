@@ -1,10 +1,53 @@
 {
-  "name": "Monique",
+  "name": "Monik Saab",
   "roles": [
     "Líder de Expedición"
   ],
-  "about": "Antes de leer un barco lleno de buceadores, Monique pasó años leyendo salas en marketing corporativo. Después, esta instructora brasileña cambió la oficina por Baja, donde lleva seis años conociendo sus aguas y su gente. Detecta pronto la corriente, la duda y el ánimo del grupo, sin hacer que los invitados se sientan dirigidos.",
+  "skills": [
+    "Buceo con tanque",
+    "Snorkel",
+    "Kayak",
+    "Stand-up paddle",
+    "Trekking",
+    "Ciclismo"
+  ],
+  "languages": [
+    {
+      "language": "Inglés"
+    },
+    {
+      "language": "Español"
+    },
+    {
+      "language": "Portugués"
+    },
+    {
+      "language": "Alemán"
+    }
+  ],
+  "certificates": [
+    "Instructora PADI",
+    "STCW",
+    "Libreta de Mar tipo A",
+    "Operaciones en helipuerto",
+    "Guía de turistas NOM-09",
+    "Guía de turistas SECTUR",
+    "Licencia de guía de Revillagigedo"
+  ],
+  "yearsOfExperience": 20,
+  "quote": "Bajo el agua, todos se ayudan entre sí. Ojalá fuera así en tierra firme.",
+  "about": "\"Crecí junto a la playa en Brasil. Después de 16 años en grandes empresas y dando clases de inglés, hice del mar mi trabajo. Hoy soy instructora de buceo PADI y guía de expediciones con licencia en México. Llevo seis años viviendo en Baja California Sur, uno de ellos en La Paz.\"",
+  "history": "\"He guiado grupos de todos los tamaños, de todo el mundo. En un velero prefiero los pequeños. Desde el primer briefing observo cómo se mueve cada buceador, quién está relajado y quién nervioso, y planifico las inmersiones en torno a ellos.\"",
+  "why": "\"Lo que me mantiene en el mar es la vida bajo el agua. La gente del océano es como una familia: todos se ayudan entre sí. Dejé la vida corporativa para divertirme y hacer a la gente tan feliz como el mar me hace a mí.\"",
+  "images": [
+    "/assets/img/crew-monique.png",
+    "/assets/img/crew/monique-01.webp",
+    "/assets/img/crew/monique-02.webp",
+    "/assets/img/crew/monique-03.webp",
+    "/assets/img/crew/monique-04.webp",
+    "/assets/img/crew/monique-05.webp"
+  ],
   "image": "/assets/img/crew-monique.png",
-  "imageAlt": "Monique, jefa de expedición",
-  "order": 7
+  "imageAlt": "Monik, líder de expedición de Eagle Ray Expeditions",
+  "order": 4
 }

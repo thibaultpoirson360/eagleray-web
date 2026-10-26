@@ -1,0 +1,95 @@
+{
+  "name": "Lagoon 52",
+  "tagline": "Catamarán",
+  "description": "Cinco camarotes dobles, para que nadie del grupo acabe en un sofá cama, y un sexto camarote con literas si viajas con niños. El flybridge es donde todos se reúnen para ver cómo se acerca la siguiente isla. En popa, una parrilla, una ducha exterior y un kayak listo para echar al agua. Reformado en 2024.",
+  "details": "Cinco camarotes dobles, para que nadie del grupo acabe en un sofá cama, y un sexto camarote con literas si viajas con niños. El flybridge es donde todos se reúnen para ver cómo se acerca la siguiente isla. En popa, una parrilla, una ducha exterior y un kayak listo para echar al agua. Reformado en 2024.",
+  "features": [
+    "Aire acondicionado en cada camarote y en el salón",
+    "Wifi Starlink a bordo",
+    "Generador",
+    "Potabilizadora (agua dulce producida a bordo)",
+    "Flybridge",
+    "Parrilla exterior y ducha exterior",
+    "Kayak doble y 2 tablas de paddle",
+    "Equipo de snorkel y cañas de pescar"
+  ],
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Vayu_comedor_Popa2_fjr1fe.jpg",
+  "photoAlt": "Catamarán Lagoon 52",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-52-11.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-01.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-02.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-03.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-01.webp",
+      "alt": "Catamarán Lagoon 52",
+      "video": "/assets/video/boats/lagoon-52-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-04.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-05.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-06.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-07.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-08.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-02.webp",
+      "alt": "Catamarán Lagoon 52",
+      "video": "/assets/video/boats/lagoon-52-02.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-09.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-10.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-12.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-13.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-14.webp",
+      "alt": "Catamarán Lagoon 52"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-15.webp",
+      "alt": "Catamarán Lagoon 52"
+    }
+  ],
+  "length": "52 pies",
+  "cabins": "6",
+  "bathrooms": "6",
+  "guests": "hasta 10",
+  "order": 5
+}

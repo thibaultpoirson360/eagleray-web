@@ -4,18 +4,340 @@
     {
       "kicker": "Fechas limitadas · Noviembre de 2026",
       "title": "Noviembre en el mar de Cortés, con Sergio Torres.",
-      "lede": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+      "lede": "Pesca submarina, buceo libre y días en el mar con tu propia gente. Dos salidas en velero en noviembre, de 3 noches cada una.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Collage_Sergio_Canei_hrc65m.png",
       "imageAlt": "Sergio Torres, jefe de expedición de Eagle Ray Expeditions. Experiencia de navegación en La Paz",
       "cta": {
-        "label": "Comprobar disponibilidad",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+        "label": "Reserva ahora",
+        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
       },
       "_template": "hero"
     },
     {
+      "title": "Dos salidas en velero en noviembre",
+      "intro": "Precios por barco completo, para las fechas de noviembre de 2026. Si divides el costo entre personas, verás el precio por persona con el barco lleno (es decir, a su capacidad máxima).",
+      "options": [
+        {
+          "name": "Camarotes abiertos",
+          "dates": "Domingo 22 de noviembre → miércoles 25 de noviembre · 3 noches",
+          "boatLine": "Catamarán Lagoon 450F · 3 camarotes para huéspedes · hasta 6 huéspedes",
+          "description": "Reserva un camarote con tu pareja o un amigo, quédate con uno para ti solo o toma todo el barco con tu gente.",
+          "priceSummary": "Desde 4,000 USD, camarote individual",
+          "detailsLabel": "Precios y cómo funciona",
+          "priceRows": [
+            {
+              "label": "Camarote individual",
+              "amount": "4,000 USD"
+            },
+            {
+              "label": "Camarote para dos",
+              "amount": "5,900 USD"
+            },
+            {
+              "label": "Barco completo",
+              "amount": "Bajo petición"
+            }
+          ],
+          "detailsText": "De vuelta en tierra el miércoles por la tarde, a tiempo para el Día de Acción de Gracias en casa.\n\nSe confirma cuando se reservan dos camarotes, antes del 31 de octubre. Si no, te devolvemos el 100 % de lo que pagaste o te ofrecemos una nueva fecha.",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
+          "imageAlt": "El catamarán Lagoon 450F al ancla frente a Espíritu Santo",
+          "imageNote": "[PENDIENTE] Foto: el catamarán Lagoon 450F al ancla, con huéspedes en el flybridge",
+          "bookLabel": "Reserva una llamada",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserva ahora",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
+        },
+        {
+          "name": "Acción de Gracias al ancla",
+          "dates": "Jueves 26 de noviembre → domingo 29 de noviembre · 3 noches",
+          "boatLine": "Velero Beneteau Sense 55 · 2 suites para huéspedes · hasta 4 huéspedes",
+          "description": "Todo el barco para tu familia o tus amigos: una suite para los padres y otra para los niños.",
+          "priceSummary": "14,500 USD, barco completo",
+          "detailsLabel": "Precios y cómo funciona",
+          "priceRows": [
+            {
+              "label": "Barco completo (hasta 4 huéspedes)",
+              "amount": "14,500 USD (3,625 USD por persona)"
+            }
+          ],
+          "detailsText": "Solo barco privado, para un único grupo: tu familia o tus amigos.\n\nEspecial: menú de cena de Acción de Gracias al ancla el jueves por la noche.\n\nReserva antes del 4 de noviembre. Tu viaje queda confirmado en cuanto bloqueamos el barco.",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
+          "imageAlt": "El velero Beneteau Sense 55 navegando",
+          "imageNote": "[PENDIENTE] Foto: el Beneteau Sense 55 navegando o una mesa de Acción de Gracias en cubierta",
+          "bookLabel": "Reserva una llamada",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserva ahora",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
+        }
+      ],
+      "bookingLabel": "Información sobre la reserva",
+      "bookingInfo": "* Anticipo del 20 % para reservar.\n* El saldo vence 30 días antes de la salida: el 23 de octubre para Camarotes abiertos y el 27 de octubre para Acción de Gracias al ancla. Si reservas después de esa fecha, pagas el importe total al reservar.\n* Si cancelas, el anticipo no se reembolsa.\n* Si cancelamos nosotros, porque la salida no se llena o por seguridad, te devolvemos el 100 %.\n\n¿Quieres la semana entera en un barco privado? Escríbenos.\n",
+      "_template": "departures",
+      "boatLinkLabel": "Ver el barco",
+      "includesLinkLabel": "Ver qué está incluido"
+    },
+    {
+      "member": "sergio-torres-canei",
       "body": "## ¿QUIÉN ES SERGIO?\n\nGanador de «Survivor México 2025», Ironman y entrenador personal.\n\nHa guiado a grupos en varios países y ahora es jefe de expedición en Eagle Ray.\n\nEn este viaje, él es quien marca el ritmo del día: cuándo meterse en el agua, dónde pescar y cuándo no hacer absolutamente nada.\n",
-      "_template": "richText"
+      "collapseAbout": true,
+      "moreText": "Más sobre Sergio:\n\n* Campeón de Survivor México 2025\n* Ironman\n* Entrenador personal en Cancún: entrenamiento funcional y calistenia\n* Embajador de Zondela Travel\n* Experto en viajes guiados para grupos de 5 a 15 personas\n* Guía de buceo libre, pesca submarina, snorkel, natación en aguas abiertas, kayak, meditación y estiramientos\n* Certificación PADI Open Water\n\nEncuentra más información sobre sus aventuras en su Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Tu casa flotante",
+      "intro": "Cada salida navega en su propio barco.",
+      "detailsLabel": "Ver todas las fotos",
+      "boatItems": [
+        {
+          "boat": "bay-dreamer",
+          "banner": "/assets/img/boats/bay-dreamer-09.webp",
+          "bannerAlt": "El catamarán Lagoon 450F al ancla",
+          "tag": "Camarotes abiertos · 22 al 25 de nov.",
+          "displayName": "Lagoon 450F",
+          "subtitle": "Catamarán",
+          "about": "El Lagoon 450F es el más espacioso de los barcos de Eagle Ray, el que ofrece a los grupos más grandes espacio para moverse con comodidad, tanto en cubierta como en el interior. Los camarotes se mantienen frescos por sí solos, el agua de la ducha no se enfría a mitad de semana y el flybridge ofrece a la tripulación, y a quien lo quiera, un lugar elevado desde el que mirar el horizonte. Es ese tipo de comodidad en la que no sueles fijarte, hasta el día en que la necesitas y ya está ahí.",
+          "specs": [
+            {
+              "label": "Tipo",
+              "value": "Catamarán"
+            },
+            {
+              "label": "Camarotes para huéspedes",
+              "value": "3"
+            },
+            {
+              "label": "Invitados",
+              "value": "hasta 6"
+            }
+          ],
+          "featureList": [
+            "Flybridge",
+            "Aire acondicionado individual en cada camarote",
+            "Lavavajillas",
+            "Dos motores de 57 HP",
+            "Potabilizadora de 75 L/h",
+            "Generador Onan",
+            "Vela Code Zero",
+            "Starlink a bordo",
+            "Auxiliar de 15 HP"
+          ],
+          "similarNote": "O un barco similar con características iguales o superiores."
+        },
+        {
+          "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "La zona de descanso del cockpit del Beneteau Sense 55",
+          "tag": "Acción de Gracias al ancla · 26 al 29 de nov.",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Velero",
+          "about": "El Beneteau Sense 55 es el más íntimo de los barcos de Eagle Ray, un monocasco de 60 pies construido para grupos que buscan la sensación clásica de navegar, y no solo un barco que tiene velas. Gracias a sus tres suites privadas, cada pareja tiene una puerta que puede cerrar, y todo el grupo puede sentarse junto alrededor de la misma mesa en el cockpit para cenar. Una plataforma de baño hidráulica desciende directamente al agua, así que para nadar o hacer snorkel no hace falta bajar por una escalera. Además, se comporta distinto que un catamarán: más escora y más respuesta al timón, ideal para grupos que quieren disfrutar tanto de la navegación como del destino.",
+          "specs": [
+            {
+              "label": "Tipo",
+              "value": "Velero"
+            },
+            {
+              "label": "Eslora",
+              "value": "60 pies"
+            },
+            {
+              "label": "Suites para huéspedes",
+              "value": "2"
+            },
+            {
+              "label": "Invitados",
+              "value": "hasta 4"
+            }
+          ],
+          "featureList": [
+            "Monocasco de 60 pies",
+            "3 suites privadas",
+            "Mesa en el cockpit con espacio para 10 personas",
+            "Plataforma de baño hidráulica",
+            "Paquete de velas de alto rendimiento"
+          ],
+          "similarNote": "O un barco similar con características iguales o superiores."
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Qué está incluido",
+      "includedTitle": "Incluido",
+      "included": "**Barco**\n\n* El barco de tu salida, o uno similar con características iguales o superiores\n\n**Tripulación**\n\n* Sergio Torres, líder de expedición de Eagle Ray\n* Capitán de Eagle Ray\n* Chef de Eagle Ray\n\n**Programa**\n\n* Programa diario de Sergio, adaptado a la condición física y al ánimo del grupo\n* Pesca submarina con Sergio en zonas autorizadas\n\n**Equipo**\n\n* Equipo de snorkel\n* Kit de pesca\n* 2 tablas de paddle\n* 1 kayak\n* 1 auxiliar\n* Equipo de playa (sillas, toldo, etc.)\n\n**Comidas y bebidas**\n\n* Todas las comidas a bordo\n* Bebidas sin alcohol\n\n**Traslado**\n\n* Aeropuerto de La Paz ↔ marina, a la llegada y a la salida\n\n**Extras**\n\n* Diésel\n* Permisos de navegación y entrada a parques nacionales\n* Wifi Starlink a bordo\n",
+      "notIncludedTitle": "No incluido",
+      "notIncluded": "* Vuelos a La Paz\n* Bebidas alcohólicas, elegidas de un menú antes del viaje\n* Buceo con tanque, según el número de inmersiones y las certificaciones\n* Otras actividades guiadas, cotizadas por separado\n* Propinas a la tripulación (se recomienda entre el 10 y el 15 %)\n* Seguro de viaje\n",
+      "gallery": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/paddelsurf_aojuxl.jpg",
+          "alt": "paddle surf"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/snorkeling_in_baja_a6twaz.jpg",
+          "alt": "snorkel"
+        }
+      ],
+      "galleryNote": "[PENDIENTE] Fotos para este carrusel: comida a bordo, las tablas de paddle y el kayak, la auxiliar, la tripulación en cubierta",
+      "_template": "includes"
+    },
+    {
+      "title": "La ruta",
+      "intro": "Las dos salidas siguen la misma ruta: tres noches entre La Paz y el sur de Espíritu Santo.",
+      "places": [
+        {
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina · salida y llegada",
+          "lat": 24.1585,
+          "lon": -110.3245
+        },
+        {
+          "key": "pichilingue",
+          "name": "Caleta Lobos o Pichilingue",
+          "sub": "Primer fondeadero",
+          "lat": 24.2745,
+          "lon": -110.343
+        },
+        {
+          "key": "southes",
+          "name": "Sur de Espíritu Santo",
+          "sub": "Fondeadero",
+          "lat": 24.3925,
+          "lon": -110.3486
+        },
+        {
+          "key": "bahia",
+          "name": "Bahía de La Paz",
+          "sub": "De regreso",
+          "lat": 24.152,
+          "lon": -110.342
+        }
+      ],
+      "trips": [
+        {
+          "tab": "La ruta",
+          "beats": [
+            {
+              "label": "Las dos salidas · 1 de 4",
+              "title": "La Paz → Caleta Lobos o Pichilingue",
+              "from": "lapaz",
+              "to": "pichilingue",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
+              "imageAlt": "Caleta Lobos, La Paz",
+              "imageNote": "[PENDIENTE] Foto: Caleta Lobos o Pichilingue, el primer fondeadero"
+            },
+            {
+              "label": "Las dos salidas · 2 de 4",
+              "title": "Caleta Lobos o Pichilingue → sur de Espíritu Santo",
+              "from": "pichilingue",
+              "to": "southes",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
+              "imageAlt": "Sur de Espíritu Santo, La Paz",
+              "imageNote": "[PENDIENTE] Foto: el sur de Espíritu Santo, con sus calas y su agua cristalina"
+            },
+            {
+              "label": "Las dos salidas · 3 de 4",
+              "title": "Sur de Espíritu Santo → Bahía de La Paz",
+              "from": "southes",
+              "to": "bahia",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
+              "imageAlt": "Bahía de La Paz",
+              "imageNote": "[PENDIENTE] Foto: Bahía de La Paz, de regreso"
+            },
+            {
+              "label": "Las dos salidas · 4 de 4",
+              "title": "Bahía de La Paz → La Paz",
+              "from": "bahia",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "La Paz, Baja California Sur",
+              "imageNote": "[PENDIENTE] Foto: la marina de La Paz, donde termina el viaje"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Ruta y fondeaderos propuestos. El plan final depende del clima. Las posiciones son aproximadas. Datos del mapa © colaboradores de OpenStreetMap.",
+      "footnote": "Ruta indicativa. Depende del mar, del viento, de los permisos y de la decisión del capitán. En noviembre pueden entrar vientos del norte y, si lo hacen, cambiamos el orden de las calas o nos quedamos en el mismo fondeadero.\n\nCamarotes abiertos: de vuelta en la marina el miércoles por la tarde.\n\nAcción de Gracias al ancla: de vuelta en la marina hacia el mediodía del domingo, para que puedas volar a casa ese mismo día. Recomendamos vuelos a partir de las 16:00.",
+      "_template": "cinematicRoute"
+    },
+    {
+      "title": "¿Cómo es un día a bordo con Sergio?",
+      "intro": "Cada día tiene una estructura, no un horario. Sergio y la tripulación la ajustan según el viento, la energía del grupo y lo que cada persona quiere hacer. Nadie tiene que hacerlo todo.",
+      "steps": [
+        {
+          "stepLabel": "Amanecer",
+          "stepTitle": "Cuerpo",
+          "stepText": "Movilidad y entrenamiento funcional en cubierta, antes del café."
+        },
+        {
+          "stepLabel": "Mañana",
+          "stepTitle": "Respiración y pesca",
+          "stepText": "El capitán elige la cala según el viento. Sergio trabaja la respiración con el grupo en cubierta y luego se mete al agua contigo: primero buceo libre, después pesca submarina, cada quien a su nivel. Cualquiera puede quedarse con el snorkel o pescar desde el barco."
+        },
+        {
+          "stepLabel": "Mediodía",
+          "stepTitle": "Mesa",
+          "stepText": "Comida preparada a bordo con productos locales."
+        },
+        {
+          "stepLabel": "Tarde",
+          "stepTitle": "Libre",
+          "stepText": "Kayak, paddleboard, nadar hasta la orilla. O nada en absoluto."
+        },
+        {
+          "stepLabel": "Atardecer",
+          "stepTitle": "Pausa",
+          "stepText": "Estiramientos y respiración en la proa mientras la luz cae sobre el desierto."
+        },
+        {
+          "stepLabel": "Noche",
+          "stepTitle": "Fondeadero",
+          "stepText": "Cena a bordo. Si ese día hubo pesca, está en la mesa."
+        }
+      ],
+      "footnote": "En Acción de Gracias al ancla, la noche del jueves es la cena de Acción de Gracias a bordo, al estilo Baja.",
+      "_template": "timeline"
+    },
+    {
+      "primaryLabel": "Reserva ahora",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contáctanos para más información",
+      "secondaryMessage": "Me gustaría recibir más información sobre la expedición de Acción de Gracias de Sergio Torres.",
+      "_template": "actions"
+    },
+    {
+      "title": "Pesca submarina con Sergio",
+      "lede": "Del agua a la mesa, el mismo día.",
+      "blurb": "Hacer snorkel es mirar el mar. Pescar bajo el agua haciendo buceo libre es entrar en él.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/spearfishing_kdo3fc.png",
+          "alt": "pesca submarina en La Paz con Eagle Ray Expeditions"
+        }
+      ],
+      "photoNote": "[PENDIENTE] Foto grande: Sergio haciendo buceo libre con el grupo o una captura en cubierta",
+      "moreLabel": "Más sobre la pesca submarina",
+      "more": "La pesca submarina se practica sin tanque: una bocanada de aire, un par de aletas y un arpón.\n\nPor eso con Sergio empieza en cubierta, no en el agua. Primero aprendes a respirar y a relajar el cuerpo. Después, a bajar unos metros y quedarte quieto. Solo entonces, el arpón.\n\n**Nivel**\n\n* No se necesita experiencia previa.\n* Sergio adapta la progresión a cada persona.\n* Quien prefiera puede quedarse con el snorkel o pescar desde el barco.\n\n**Seguridad**\n\n* Siempre en parejas, nunca solo en el agua.\n* Sergio en el agua con el grupo y el barco cerca.\n* Con el capitán, certificado en buceo libre AIDA II, hay dos personas a bordo que saben moverse bajo el agua.\n\n**Dónde**\n\n* En las calas que el capitán elige cada día, según el viento y la visibilidad del agua.\n* Solo en zonas donde está permitido.\n\n**Qué se pesca**\n\n* Solo especies permitidas y solo lo que se comerá esa noche.\n\n**Después**\n\n* El chef la limpia y la cocina a bordo.\n* Si ese día no hay suerte, la cena se sirve igual.\n",
+      "_template": "feature"
+    },
+    {
+      "title": "Buceo con tanque",
+      "tag": "Precio bajo petición · aprox. 360 USD por persona al día",
+      "blurb": "Para quienes quieren ir más profundo que con el buceo libre. Alrededor de La Paz hay sitios de buceo para distintos niveles.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_APR2026_-_Baja_-_Dive___People___Sealife_-_Foto_-_012_eqscql.jpg",
+          "alt": "buceadores"
+        }
+      ],
+      "photoNote": "buceadores en el naufragio del Salvatierra o un banco de peces",
+      "moreLabel": "Más sobre el buceo con tanque",
+      "more": "* Salvatierra: un ferri de 75 metros que se hundió en 1976 tras chocar con un arrecife cercano. Hoy es un arrecife artificial, con meros, bancos de peces y coral negro en partes del casco. A unos 18 metros de profundidad, nivel Open Water.\n* El Bajo: tres montes submarinos donde puedes ver tiburones pelágicos, como martillo y sedoso. Por la profundidad y las condiciones, se requiere certificación Advanced Open Water.\n\nOrganizado según el número de inmersiones y las certificaciones del grupo. **Precio bajo petición.**\n",
+      "buttonLabel": "Más información",
+      "buttonMessage": "Me gustaría saber cuánto costaría añadir buceo con tanque a la expedición de Acción de Gracias de Sergio Torres.",
+      "_template": "feature"
     },
     {
       "images": [
@@ -38,11 +360,111 @@
       "_template": "imageGallery"
     },
     {
-      "title": "¿Estás listo para ver la ruta?",
-      "lede": "",
+      "title": "Sergio no navega solo,",
+      "titleEmphasis": "conoce a tu tripulación de Eagle Ray",
+      "blurb": "En Eagle Ray, cada expedición está dirigida por personas que viven el mar. Con Sergio viajan un capitán, que maneja el barco, lee el mar y elige cada fondeadero según el viento, y un chef que cocina con productos locales.",
+      "linkLabel": "Gente del mar apasionada",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "El equipo se asigna según el barco y las fechas; confirmamos al equipo de Eagle Ray cuando haces la preinscripción final. Para que vayas conociéndolos, estos son algunos de los capitanes y chefs con los que navegamos.",
+      "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Reserva ahora",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
+      "secondaryLabel": "Contáctanos para más información",
+      "secondaryMessage": "Me gustaría recibir más información sobre la expedición de Acción de Gracias de Sergio Torres.",
+      "_template": "actions"
+    },
+    {
+      "title": "Preguntas frecuentes",
+      "questions": [
+        {
+          "question": "Viajo solo. ¿Puedo unirme a Camarotes abiertos?",
+          "answer": "Sí. Tienes un camarote para ti por 4,000 USD. Nunca compartes camarote con alguien que no conoces."
+        },
+        {
+          "question": "¿Con quién navegaré en Camarotes abiertos?",
+          "answer": "Un grupo pequeño de hasta 6 huéspedes, además de Sergio, el capitán y el chef."
+        },
+        {
+          "question": "¿Y si Camarotes abiertos no se llena?",
+          "answer": "Se confirma cuando se reservan dos camarotes, antes del 31 de octubre. Si no, te devolvemos el 100 % de lo que pagaste o te ofrecemos una nueva fecha."
+        },
+        {
+          "question": "¿Podemos venir como amigos a Acción de Gracias al ancla?",
+          "answer": "Sí. El barco es privado para un solo grupo, familia o amigos, hasta 4 huéspedes. Tú decides quién se queda con la suite principal."
+        },
+        {
+          "question": "¿Podemos llevar niños?",
+          "answer": "Sí. Sergio adapta cada actividad a cada edad. La pesca submarina empieza a los 12 años, siempre uno a uno con Sergio."
+        },
+        {
+          "question": "¿Necesito experiencia?",
+          "answer": "No. Sergio adapta cada sesión a tu nivel y nadie tiene que hacerlo todo."
+        },
+        {
+          "question": "¿Qué pasa si cambia el clima?",
+          "answer": "El capitán decide la ruta cada día según el viento y el mar. Si una cala no es la adecuada, vamos a otra o nos quedamos en un fondeadero protegido. La prioridad es la seguridad del grupo y volver a La Paz a tiempo."
+        },
+        {
+          "question": "¿Cuánta propina debo dar?",
+          "answer": "Recomendamos entre el 10 y el 15 % del precio del viaje. Camarotes abiertos: unos 300 a 450 USD por persona en un camarote para dos, o de 400 a 600 USD en un camarote individual. Acción de Gracias al ancla: de 1,450 a 2,175 USD en total."
+        },
+        {
+          "question": "¿Cuánto pago para reservar y qué pasa si necesito cancelar?",
+          "answer": "Un anticipo del 20 % reserva tu plaza y el saldo vence 30 días antes de la salida. Si reservas más tarde, pagas el total. Si cancelas, el anticipo no se reembolsa. Si cancelamos nosotros, te devolvemos el 100 %."
+        },
+        {
+          "question": "¿Necesito licencia de pesca?",
+          "answer": "El mar de Cortés la exige para cada adulto a bordo. Está incluida."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Conviene saber antes de venir",
+      "questions": [
+        {
+          "question": "Moneda local",
+          "answer": "Peso mexicano (MXN). Billetes de $20 a $1,000 MXN; los de $500 y $1,000 a veces son difíciles de cambiar en tiendas pequeñas. Los hoteles y la mayoría de los negocios turísticos de La Paz aceptan tarjeta, pero en lugares más pequeños necesitarás efectivo. Hay cajeros automáticos por toda la ciudad.\n\nNo lo necesitarás a bordo: las comidas y las bebidas sin alcohol están incluidas."
+        },
+        {
+          "question": "Cómo llegar",
+          "answer": "El aeropuerto de La Paz (LAP) está a 20 minutos de la marina, con vuelos nacionales y algunas rutas a Estados Unidos.\n\nEl traslado del aeropuerto a la marina está incluido.\n\nEl aeropuerto de Los Cabos está a 2 horas por carretera y a veces es más conveniente, según desde dónde vueles; si es tu caso, escríbenos y lo vemos."
+        },
+        {
+          "question": "Comida",
+          "answer": "La cocina de La Paz gira en torno al mar: almejas chocolata cocinadas sobre piedras calientes, ceviche con un toque de mayonesa, quesadillas de marlín o de pulpo y machaca, carne de res o de cerdo seca, el clásico que no viene del mar. Los tacos de pescado son un icono de la península (nacieron más al norte, en Ensenada), pero aquí están igual de en casa.\n\nA bordo, el chef cocina con lo que ofrecen estas mismas aguas, salvo que pidas otra cosa."
+        },
+        {
+          "question": "Qué llevar",
+          "answer": "Consejo: lleva menos de lo que crees.\n\nA bordo solo necesitas un traje de baño seco para cambiarte; la tripulación se encarga del resto.\n\nPara todo lo demás, ropa ligera de tejidos naturales para el calor seco, algo para las tardes más frescas y un sombrero, porque el sol del desierto pega directo."
+        },
+        {
+          "question": "Clima",
+          "answer": "Clima desértico, seco casi todo el año.\n\nNoviembre: pueden entrar vientos del norte, que traen un mar corto y picado. Por eso el capitán decide la ruta cada día.\n\nInvierno (de diciembre a febrero): suave, de 18 a 24 °C, la temporada más agradable.\n\nPrimavera (abril y mayo): el calor empieza a subir.\n\nVerano (de junio a agosto): caluroso y húmedo, de 28 a 31 °C.\n\nTemporada de huracanes: del 15 de mayo al 30 de noviembre, con el riesgo concentrado en agosto y septiembre."
+        },
+        {
+          "question": "Conexión",
+          "answer": "En el mar la señal es limitada, así que cuenta con estar desconectado buena parte del día.\n\nEn La Paz el wifi funciona bien. Starlink a bordo."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Hablemos de tu expedición",
+      "lede": "Encuéntranos directamente por WhatsApp o por correo: +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "Echa un vistazo a la propuesta completa",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-pesca-bienestar"
+        "label": "Contáctanos para más información",
+        "href": "/es/contact/"
       },
       "_template": "cta"
     },

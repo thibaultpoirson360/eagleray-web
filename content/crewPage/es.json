@@ -7,5 +7,12 @@
     "imageAlt": "Eagle Ray Expeditions Expedciones de mar"
   },
   "intro": "Seleccionamos a nuestra tripulación basándonos en dos aspectos: 1. Cómo manejan el barco: la seguridad es lo primero, una cubierta limpia, todo en su sitio; 2. y cómo hacen que la gente se sienta bienvenida a bordo. Nunca contratamos a nadie sin que cumpla ambos requisitos.\n\nConocen este mar, lo respetan y te enseñarán a interpretarlo. A continuación, cada uno de ellos en sus propias palabras. Dinos a quién te gustaría tener a bordo y haremos todo lo posible por ajustarnos a su disponibilidad, aunque no siempre podemos garantizarlo.",
-  "gridTitle": "Te presentamos el equipo Eagle Ray Expeditions"
+  "gridTitle": "Te presentamos el equipo Eagle Ray Expeditions",
+  "roleLabels": {
+    "founder": "Fundador",
+    "captain": "Capitanes",
+    "expeditionLeader": "Líderes de expedición",
+    "chef": "Chefs",
+    "other": "Tripulación"
+  }
 }
