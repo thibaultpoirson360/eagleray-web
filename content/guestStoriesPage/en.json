@@ -1,8 +1,8 @@
 {
   "title": "Guest Stories",
   "lede": "Find out more about our guests experience. Their photos, their words.",
-  "heroImage": "",
-  "heroImageAlt": "",
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/uliana-semenova-O25yy6fwl08-unsplash_2_gquy9c.jpg",
+  "heroImageAlt": "guest reviews to eagle ray expeditions",
   "stories": [
     {
       "heroImage": "",
