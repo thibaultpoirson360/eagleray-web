@@ -1,0 +1,30 @@
+---
+/**
+ * `eventPhotoStrip` landing block: three photos side by side, edge to edge, with a centered title and short text below.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const photos = ((block.photos ?? []) as any[]).slice(0, 3);
+---
+
+<section class="relative" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="grid grid-cols-3" data-tina-field={tinaField(block, "photos")}>
+    {photos.map((photo) => (
+      <div class="aspect-[3/5] overflow-hidden bg-surface md:aspect-[4/5]">
+        {photo?.image && <img src={photo.image} alt={photo.alt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />}
+      </div>
+    ))}
+  </div>
+  <div class="mx-auto max-w-[44rem] px-pad py-[calc(var(--spacing-section)*1.4)] text-center">
+    <h2 class="font-display text-[clamp(1.35rem,2.4vw,1.9rem)] font-light text-ink" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    {block.text && <p class="mx-auto mt-10 max-w-[52ch] text-[.84rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(block, "text")}>{block.text}</p>}
+  </div>
+</section>

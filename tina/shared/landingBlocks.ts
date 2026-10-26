@@ -1,5 +1,5 @@
 import type { TinaField } from "tinacms";
-import { ctaField, textarea } from "./fields";
+import { ctaField, doNotTranslate, textarea } from "./fields";
 
 /**
  * The page-builder "blocks" field (hero, rich text, image gallery, call to
@@ -31,6 +31,18 @@ export const landingBlocksField = (): TinaField => (
           { type: "image", name: "image", label: "Background image" },
           { type: "string", name: "imageAlt", label: "Background image alt text" },
           ctaField("cta", "Button"),
+          {
+            type: "boolean",
+            name: "calm",
+            label: "Calm style: full screen, text centered",
+            description: "For invitations and events. Leave off for the usual banner with the text at the bottom left.",
+          },
+          {
+            type: "boolean",
+            name: "ctaOnThisPage",
+            label: 'Button goes to a section of this page (link like "#confirm")',
+            description: "Turn on when the button link starts with # and points to a section of this same page.",
+          },
         ],
       },
       {
@@ -83,9 +95,11 @@ export const landingBlocksField = (): TinaField => (
             ui: { itemProps: (item: Record<string, any>) => ({ label: item?.name || "Option" }) },
             fields: [
               { type: "string", name: "name", label: "Name", required: true },
+              { type: "boolean", name: "featured", label: "Large card (shown first, across the full width, photo beside the text)", description: "Use it for the main option. With no large card and three options, the cards sit side by side." },
               { type: "string", name: "dates", label: "Dates", description: 'e.g. "Sunday, November 22 → Wednesday, November 25 · 3 nights"' },
               { type: "string", name: "boatLine", label: "Boat line", description: 'e.g. "Lagoon 450F catamaran · 3 guest cabins · up to 6 guests"' },
               { type: "string", name: "description", label: "Short description (2 sentences)", ui: textarea },
+              { type: "string", name: "deadline", label: "Booking deadline line (optional)", description: 'e.g. "Book by November 5". Shown under the price.' },
               { type: "string", name: "priceSummary", label: "Price shown on the card", description: 'e.g. "From 4,000 USD, solo cabin"' },
               { type: "string", name: "detailsLabel", label: "Words on the opening line", description: 'e.g. "Prices and how it works"' },
               {
@@ -109,6 +123,7 @@ export const landingBlocksField = (): TinaField => (
                 fields: [
                   { type: "image", name: "image", label: "Photo" },
                   { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+                  { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
                 ],
               },
               { type: "image", name: "image", label: "Photo (old single photo; use the list above)" },
@@ -116,10 +131,15 @@ export const landingBlocksField = (): TinaField => (
               { type: "string", name: "imageNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
               { type: "string", name: "bookLabel", label: "Main button: words", description: 'e.g. "Book now"' },
               { type: "string", name: "bookHref", label: "Main button: link", description: "The trip's page on Mogu, where booking and payment happen." },
+              { type: "string", name: "reserveLabel", label: "Reserve button: words (optional)", description: 'e.g. "Reserve now". Goes to the trip\'s online booking page.' },
+              { type: "string", name: "reserveHref", label: "Reserve button: link", description: "The trip's booking page, where payment happens." },
               { type: "string", name: "infoLabel", label: "Second button: words", description: 'e.g. "Contact us for more info"' },
               { type: "string", name: "infoMessage", label: "Second button: message already written in the contact form", ui: textarea },
             ],
           },
+          { type: "boolean", name: "fillPhotos", label: "Photos fill the whole frame (centred, edges may be cropped)", description: "Off: the whole photo is shown with a white border when it does not fit." },
+          { type: "string", name: "boatLinkLabel", label: "Link under the boat line to the boats section (optional)", description: 'e.g. "See the boat". Needs a "The boats of the trip" block on the page.' },
+          { type: "string", name: "includesLinkLabel", label: 'Link next to the boat link, to "What is included" (optional)', description: 'e.g. "See what is included". Needs a "What is included" block on the page.' },
           { type: "string", name: "bookingLabel", label: "Booking information: words on the opening line", description: 'e.g. "Info on booking"' },
           { type: "rich-text", name: "bookingInfo", label: "Booking information (deposit, payment dates, cancellation)" },
         ],
@@ -142,6 +162,7 @@ export const landingBlocksField = (): TinaField => (
             fields: [
               { type: "image", name: "image", label: "Photo" },
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
             ],
           },
           { type: "string", name: "galleryNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
@@ -188,6 +209,7 @@ export const landingBlocksField = (): TinaField => (
             fields: [
               { type: "image", name: "image", label: "Photo" },
               { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
             ],
           },
           { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
@@ -213,6 +235,20 @@ export const landingBlocksField = (): TinaField => (
             list: true,
             description: 'Each one is the member\'s file name in Crew, e.g. "benji", "antoine", "sergio-torres-canei".',
           },
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos in the slider instead of crew cards (optional)",
+            list: true,
+            description: "When photos are added, the slider shows them and the crew cards are not shown.",
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "image", name: "video", label: "Video (optional, MP4)", description: "Short, silent, a few MB. It plays in the slider in place of this photo; the photo shows while it loads." },
+            ],
+          },
+          { type: "string", name: "photoNote", label: "Text shown while there are no photos", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
           { type: "string", name: "note", label: "Note under the slider", ui: textarea },
         ],
       },
@@ -225,6 +261,100 @@ export const landingBlocksField = (): TinaField => (
           { type: "string", name: "primaryHref", label: "Main button: link" },
           { type: "string", name: "secondaryLabel", label: "Second button: words", description: 'e.g. "Contact us for more info"' },
           { type: "string", name: "secondaryMessage", label: "Second button: message already written in the contact form", ui: textarea, description: "The second button opens the contact form with this message." },
+        ],
+      },
+      {
+        name: "tripBoats",
+        label: "The boats of the trip (big photos, specs and features)",
+        fields: [
+          { type: "string", name: "title", label: "Heading", required: true },
+          { type: "string", name: "intro", label: "Text under the heading", ui: textarea },
+          { type: "string", name: "detailsLabel", label: "Button that opens the full boat details", description: 'e.g. "See full details"' },
+          {
+            type: "object",
+            name: "boatItems",
+            label: "Boats (one panel each, in this order)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.boat || "Boat" }) },
+            fields: [
+              { type: "string", name: "boat", label: "Boat (file name in Boats)", required: true, description: 'e.g. "bay-dreamer" (the Lagoon 450F) or "beneteau-sense-55". Its photos, specs and features come from the Boats collection.' },
+              { type: "string", name: "tag", label: "Which departure it is for", description: 'e.g. "Open Cabins · Nov 22 to 25"' },
+              { type: "string", name: "tripNote", label: "What applies on this trip (optional)", description: 'e.g. "On this departure: 3 guest cabins · up to 6 guests"' },
+              { type: "image", name: "banner", label: "Big wide photo shown first (optional)", description: "A landscape photo across the full width. When set, the slider with all the photos and the information sit below it." },
+              { type: "string", name: "bannerAlt", label: "Big wide photo alt text" },
+              { type: "string", name: "displayName", label: "Name shown (optional)", description: "Leave empty to use the boat's own name." },
+              { type: "string", name: "subtitle", label: "Small line under the name (optional)", description: 'e.g. "Catamaran"' },
+              { type: "string", name: "about", label: "Description for this trip (optional)", ui: textarea, description: "Leave empty to use the boat's own description." },
+              {
+                type: "object",
+                name: "specs",
+                label: "Specs for this trip (optional)",
+                list: true,
+                description: "When filled, these replace the boat's own specs. Use them when the trip differs from the boat's data sheet.",
+                ui: { itemProps: (item: Record<string, any>) => ({ label: item?.label || "Spec" }) },
+                fields: [
+                  { type: "string", name: "label", label: "Label", required: true },
+                  { type: "string", name: "value", label: "Value", required: true },
+                ],
+              },
+              { type: "string", name: "featureList", label: "Features for this trip (optional)", list: true, description: "When filled, these replace the boat's own features." },
+              { type: "string", name: "similarNote", label: "Note under the specs (optional)", description: 'e.g. "Or a similar boat with equal or greater characteristics."' },
+            ],
+          },
+        ],
+      },
+      {
+        name: "cinematicRoute",
+        label: "Route with a map (full-screen photos that change as you scroll)",
+        fields: [
+          { type: "string", name: "title", label: "Heading", required: true },
+          { type: "string", name: "intro", label: "Text under the heading", ui: textarea },
+          {
+            type: "object",
+            name: "places",
+            label: "Places on the map",
+            list: true,
+            description: "Each place has a latitude and longitude. The route is drawn through the water between them.",
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.name || "Place" }) },
+            fields: [
+              { type: "string", name: "key", label: "Short code (no spaces)", required: true, description: 'e.g. "lapaz". The steps below use it.' },
+              { type: "string", name: "name", label: "Name", required: true },
+              { type: "string", name: "sub", label: "Small line under the name", description: 'e.g. "Start and finish"' },
+              { type: "number", name: "lat", label: "Latitude", required: true, description: "e.g. 24.158" },
+              { type: "number", name: "lon", label: "Longitude", required: true, description: "e.g. -110.3245 (negative)" },
+            ],
+          },
+          {
+            type: "object",
+            name: "trips",
+            label: "Trips (one tab each)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.tab || "Trip" }) },
+            fields: [
+              { type: "string", name: "tab", label: "Tab name", required: true, description: 'e.g. "Dive Day"' },
+              {
+                type: "object",
+                name: "beats",
+                label: "Steps (one full-screen scene each, in order)",
+                list: true,
+                ui: { itemProps: (item: Record<string, any>) => ({ label: item?.title || "Step" }) },
+                fields: [
+                  { type: "string", name: "label", label: "Small line above the title", description: 'e.g. "Dive Day · November 23"' },
+                  { type: "string", name: "title", label: "Title", required: true },
+                  { type: "string", name: "text", label: "Text", ui: textarea },
+                  { type: "string", name: "night", label: "Night line (optional)", description: 'e.g. "Night at anchor · south of Espíritu Santo"' },
+                  { type: "string", name: "from", label: "Starts at (place code)", required: true },
+                  { type: "string", name: "via", label: "Passes by (place codes, in order, optional)", list: true },
+                  { type: "string", name: "to", label: "Ends at (place code)", required: true },
+                  { type: "image", name: "image", label: "Full-screen photo" },
+                  { type: "string", name: "imageAlt", label: "Photo alt text" },
+                  { type: "string", name: "imageNote", label: "Text shown while there is no photo", description: 'e.g. "[PENDIENTE]". Not shown once a photo is set.' },
+                ],
+              },
+            ],
+          },
+          { type: "string", name: "mapNote", label: "Note under the map", description: 'e.g. "Proposed route and anchorages. Final plan depends on weather."' },
+          { type: "string", name: "footnote", label: "Note under the section", ui: textarea },
         ],
       },
       {
@@ -258,6 +388,12 @@ export const landingBlocksField = (): TinaField => (
           },
           { type: "rich-text", name: "body", label: "Text on the left", required: true },
           {
+            type: "boolean",
+            name: "collapseAbout",
+            label: 'Short version: show only the text above, and put everything else inside "Keep reading"',
+            description: "Off: the member's own about text is shown, and \"Keep reading\" opens their history and reasons. On: only your short text is shown.",
+          },
+          {
             type: "rich-text",
             name: "moreText",
             label: 'Extra text at the end of "Keep reading" (optional)',
@@ -277,6 +413,137 @@ export const landingBlocksField = (): TinaField => (
               'This block shows the same form as the homepage. Its texts are edited once, under "Home / Customize funnel".',
             ui: textarea,
           },
+        ],
+      },
+      {
+        name: "eventIntro",
+        label: "Event: about us (small label, centered text, closing line)",
+        fields: [
+          { type: "string", name: "label", label: "Small label above the text" },
+          { type: "string", name: "text", label: "Text", ui: textarea },
+          { type: "string", name: "closing", label: "Last line, slightly larger, on its own", ui: textarea },
+        ],
+      },
+      {
+        name: "eventEvening",
+        label: "Event: the evening (text on the left, photos on the right)",
+        fields: [
+          { type: "string", name: "lines", label: "Lines (one under the other)", list: true },
+          { type: "string", name: "note", label: "Smaller line in italics under them", ui: textarea },
+          { type: "string", name: "address", label: "Small address line under the text (optional)", ui: textarea },
+          { type: "string", name: "linkLabel", label: "Address line: map link words (optional)" },
+          { type: "string", name: "linkHref", label: "Address line: map link address (optional)" },
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos on the right (the place, the dishes, the wine)",
+            list: true,
+            description: "Up to 3. The first one is shown larger.",
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventPhotoStrip",
+        label: "Event: three photos side by side, with a title and text",
+        fields: [
+          {
+            type: "object",
+            name: "photos",
+            label: "Photos (three, edge to edge)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.alt || "Photo" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+            ],
+          },
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "text", label: "Text (2 or 3 lines)", ui: textarea },
+        ],
+      },
+      {
+        name: "eventPeople",
+        label: "Event: people slider (photo, first name, role; text and quote over the photo)",
+        fields: [
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "text", label: "Text under the title (2 to 4 lines)", ui: textarea },
+          { type: "string", name: "sliderTitle", label: "Heading above the slider (optional)" },
+          { type: "string", name: "moreLabel", label: "Small link beside that heading: words (optional)" },
+          { type: "string", name: "moreHref", label: "Small link beside that heading: address (optional)", description: 'e.g. "/en/passionate-sea-people/"' },
+          {
+            type: "object",
+            name: "people",
+            label: "People",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.name || "Person" }) },
+            fields: [
+              { type: "image", name: "image", label: "Portrait photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "string", name: "name", label: "First name", required: true, ui: doNotTranslate },
+              { type: "string", name: "role", label: "Role" },
+              { type: "string", name: "text", label: "Text shown over the photo (hover or tap)", ui: textarea },
+              { type: "string", name: "quote", label: "Quote shown over the photo (hover or tap)", ui: textarea },
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventCards",
+        label: "Event: two large image cards with a button",
+        fields: [
+          {
+            type: "object",
+            name: "cards",
+            label: "Cards (two)",
+            list: true,
+            ui: { itemProps: (item: Record<string, any>) => ({ label: item?.title || "Card" }) },
+            fields: [
+              { type: "image", name: "image", label: "Photo" },
+              { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+              { type: "string", name: "title", label: "Title", required: true },
+              ctaField("cta", "Button"),
+            ],
+          },
+        ],
+      },
+      {
+        name: "eventRsvp",
+        label: "Event: confirm your place (Tally form)",
+        fields: [
+          { type: "string", name: "anchor", label: "Section name used by the hero button", description: 'Without the #. If the hero button links to "#confirm", write "confirm".' },
+          { type: "string", name: "title", label: "Title", required: true },
+          { type: "string", name: "line", label: "Line under the title" },
+          {
+            type: "string",
+            name: "tallyUrl",
+            label: "Tally form link",
+            description: "The share link of the form in Tally (tally.so/r/...). Answers go to the spreadsheet connected to that form. Nothing shows until a link is set.",
+            validate: (value: string | undefined) => {
+              if (value && !/^https:\/\/tally\.so\/(r|embed)\/[A-Za-z0-9]+/.test(value.trim())) {
+                return "Paste the Tally link, which starts with https://tally.so/r/";
+              }
+            },
+          },
+          { type: "string", name: "formTitle", label: "Form name (read by screen readers)" },
+          { type: "number", name: "height", label: "Form height (px)", description: "Defaults to 1100. Make it taller if the form is cut off." },
+        ],
+      },
+      {
+        name: "eventPlace",
+        label: "Event: the place (full-width photo, address and map link)",
+        fields: [
+          { type: "image", name: "image", label: "Photo" },
+          { type: "string", name: "alt", label: "Alt text (describe the photo)" },
+          { type: "string", name: "label", label: "Small label" },
+          { type: "string", name: "name", label: "Name of the place" },
+          { type: "string", name: "address", label: "Address", ui: textarea },
+          { type: "string", name: "linkLabel", label: "Map link: words" },
+          { type: "string", name: "linkHref", label: "Map link: address" },
         ],
       },
       {

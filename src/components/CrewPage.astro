@@ -11,6 +11,9 @@
  * The hero is the shared PageHero (ui/PageHero.astro). The page starts with
  * a dark hero, so it uses the transparent nav (BaseLayout's default).
  *
+ * The founder's card is one wide card across the page (photo on the left, the
+ * rest on the right) instead of a lone card in a mostly empty row.
+ *
  * Each card has an `id` (the member's filename) so the home slider's
  * no-JavaScript "Meet <name>" link can land on the right card.
  */
@@ -89,10 +92,10 @@ const groups = groupDefs
         <h3 class="mb-8 font-display text-[clamp(22px,2.6vw,28px)] text-ink" data-tina-field={tinaField(crewPage.roleLabels, group.key)}>
           {group.label}
         </h3>
-        <div class="grid gap-8 [grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))]">
+        <div class:list={["grid gap-8", group.key === "founder" ? "grid-cols-1" : "[grid-template-columns:repeat(auto-fill,minmax(min(100%,21rem),1fr))]"]}>
           {group.members.map((member) => (
             <div id={member._sys.filename} class="scroll-mt-[calc(var(--spacing-nav-solid)+1rem)]">
-              <CrewFullCard member={member} labels={crewSection} />
+              <CrewFullCard member={member} labels={crewSection} horizontal={group.key === "founder"} />
             </div>
           ))}
         </div>

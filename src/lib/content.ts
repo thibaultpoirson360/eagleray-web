@@ -82,7 +82,8 @@ export async function loadCrew(locale: Locale, options?: RequestOptions) {
   const all = (result.data.crewConnection?.edges ?? [])
     .map((edge) => edge?.node)
     .filter((node): node is NonNullable<typeof node> => !!node);
-  const english = all.filter((n) => n._sys.breadcrumbs[0] === defaultLocale);
+  // A member marked "Hide from the website" stays out of every crew list.
+  const english = all.filter((n) => n._sys.breadcrumbs[0] === defaultLocale && !n.hidden);
   // Same people, same order, same photos in every language. The English
   // document decides who is on the team and everything that is not text
   // (order, name, photos, numbers); another language only supplies the
@@ -298,6 +299,22 @@ export function loadExperiencePage(locale: Locale, options?: RequestOptions) {
 /** The Recalibration Expedition page (content/recalibrationPage/<locale>.json). */
 export function loadRecalibrationPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.recalibrationPage({ relativePath: `${locale}.json` }), options);
+}
+
+/**
+ * The Guest Stories page (content/guestStoriesPage/<locale>.json), or the
+ * English one (with its links pointed at `locale`) when that language has no
+ * document yet, so the menu link never leads to a missing page.
+ */
+export async function loadGuestStoriesPage(locale: Locale, options?: RequestOptions) {
+  // A missing document does not always throw: the query can come back with no
+  // data, so check for the page itself before trusting the result.
+  const own = await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: `${locale}.json` }), options).catch(() => null);
+  if (own?.data?.guestStoriesPage) return own;
+  const result = await requestWithMetadata(databaseClient.queries.guestStoriesPage({ relativePath: "en.json" }), options);
+  const button = result.data.guestStoriesPage.cta?.button;
+  if (button?.href?.startsWith("/en/")) button.href = `/${locale}/${button.href.slice(4)}`;
+  return result;
 }
 
 /** The About Us ("Our story") page (content/aboutPage/<locale>.json). */

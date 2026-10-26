@@ -1,0 +1,89 @@
+{
+  "name": "Fountaine Pajot Helia 44",
+  "tagline": "Catamaran",
+  "description": "Four double cabins and four bathrooms, refitted in 2025. Breakfast on the flybridge, the afternoon on the paddleboards, dinner from the grill on the aft deck. Air conditioning in every cabin for the nights.",
+  "details": "Four double cabins and four bathrooms, refitted in 2025. Breakfast on the flybridge, the afternoon on the paddleboards, dinner from the grill on the aft deck. Air conditioning in every cabin for the nights.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kailani_comedor_exterior_gtbfhi.jpg",
+  "photoAlt": "Fountaine Pajot Helia 44 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-10.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-01.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-02.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-03.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-04.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-05.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-06.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-07.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-08.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-09.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-11.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-12.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-13.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-14.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-15.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-helia-44-16.webp",
+      "alt": "Fountaine Pajot Helia 44 catamaran"
+    }
+  ],
+  "length": "44 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 9
+}

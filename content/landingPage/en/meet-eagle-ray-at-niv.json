@@ -1,0 +1,166 @@
+{
+  "title": "Drinks at NIV",
+  "hideFromSearch": true,
+  "blocks": [
+    {
+      "kicker": "PRIVATE PREVIEW · CONDESA · MEXICO CITY ",
+      "title": "Drinks at NIV with Eagle Ray Expeditions",
+      "lede": "Wednesday, October 28 · 6:00 to 7:30 pm",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/La_Paz_Baja_California_Sur_Eagle_Ray_Expeditions_avgp21.jpg",
+      "imageAlt": "La Paz baja california sailing trip",
+      "cta": {
+        "label": "Confirm your place",
+        "href": "#confirm"
+      },
+      "calm": true,
+      "ctaOnThisPage": true,
+      "_template": "hero"
+    },
+    {
+      "label": "ABOUT EAGLE RAY EXPEDITIONS",
+      "text": "Private sailing in the Sea of Cortez, from La Paz. The boat is how we get there, and we choose it as carefully as the crew: catamarans and monohulls with all comforts, a flybridge, Starlink and everything for day & night in the water, from paddleboards to snorkel gear. What our clients take home are days at sea with their own people, and a crew chosen for how they sail and how they look after a guest. No unbreakable agenda, nothing for them to organise.",
+      "closing": "The kind of trip they come back from and never forget.",
+      "_template": "eventIntro"
+    },
+    {
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Bar_Eagle_Ray_mwf9jn.jpg",
+          "alt": "Niv Bar & Eagle Ray Wine Bar"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Landscape_-_Foto_-_225_vz5otl.jpg",
+          "alt": "Sailing with Eagle Ray in La Paz"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/NIV_Food_nqylbl.jpg",
+          "alt": "NIV Wine Bar condesa"
+        }
+      ],
+      "title": "Private sailing in the Sea of Cortez",
+      "text": "Your own group, your own boat. The crew runs the sea, the day is yours: diving in, learning the wind, a kite session, a long lunch from the chef, or nothing at all.",
+      "_template": "eventPhotoStrip"
+    },
+    {
+      "lines": [
+        "Wine and bites from NIV.",
+        "Meet our founder and hear the story behind Eagle Ray."
+      ],
+      "note": "And a surprise for everyone who joins us at NIV.",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/igexport-DSyIewxkUby_l9zqgu.jpg",
+          "alt": "Wine in NIV Condesa with eagle ray"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_Content_from_Thibault_for_Mktg_use_8_y3adig.jpg",
+          "alt": "Thibault Poirson, Founder of Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_146_bvg1ks.jpg",
+          "alt": "Sailing la paz"
+        }
+      ],
+      "_template": "eventEvening"
+    },
+    {
+      "title": "Ocean adventures led by passionate sea people",
+      "text": "We don’t hire crews. We choose people: passionate sea people who can’t stay away from the water, who notice before you ask, and who know when a group needs a dive or a nap. Everything that Eagle Ray is starts with them.",
+      "sliderTitle": "Meet some of our passionate sea people",
+      "moreLabel": "Meet more passionate sea people",
+      "moreHref": "/en/passionate-sea-people/",
+      "people": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
+          "alt": "Lou Capitan of Eagle Ray",
+          "name": "Lou",
+          "role": "Captain & Expedition Leader",
+          "text": "15 years sailing the world, from the Bahamas to Polynesia. Master 200 GT captain and certified marine engineer: he has skippered catamarans from 41 to 62 feet and knows the boat from the helm to the engine room.",
+          "quote": "\"I read the sea and the group, and adjust the day as it goes. If it's your first time at sea, you're in the right place.\""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Profile_selfie_z40j1w.jpg",
+          "alt": "Monik Saab Expedition Leader Eagle Ray",
+          "name": "Monik",
+          "role": "Expedition Leader",
+          "text": "Dive instructor who guides in four languages, with six years in Baja. Licensed to guide in the Revillagigedo Islands, she has also worked on yachts with helicopter decks.",
+          "quote": "\"From the start, I watch the group's energy and how each person feels, and I adapt the way I lead to you.\""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Pre_inmersión_kgem3y.jpg",
+          "alt": "Sergio Torres x Eagle Ray",
+          "name": "Sergio",
+          "role": "Expedition Leader",
+          "text": "Survivor México champion and Ironman. He has led groups through Iceland, Hawaii and Guatemala's volcanoes, and guides freediving, spearfishing and open water swimming.",
+          "quote": "\"From the first moment, I watch how each person arrives. If someone needs to slow down, we slow down.\""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Captain_-_Expedition_Leader_-_Juan_Carlos_-_Scuba_salpye.jpg",
+          "alt": "Juan carlos",
+          "name": "Juan Carlos",
+          "role": "Expedition Leader",
+          "text": "Dive instructor at 21, now a PADI Master Scuba Diver Trainer and TDI cave diver. He has taught in the Maldives and Indonesia, spent 30 days straight on a liveaboard to the Socorro Islands, and most recently sailed solo from Loreto to La Paz.",
+          "quote": "\"I start every trip with questions: what's your name, have you been in these waters before, what do you definitely want to live? Then I plan around your answers.\""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+          "alt": "Andrea Gutiérrez Ramírez, Eagle Ray Expeditions",
+          "name": "Andrea",
+          "role": "Expedition Leader",
+          "text": "She crossed the Atlantic in a rowing boat. Five years guiding groups at sea in Mexico, with STCW and RYA safety training.",
+          "quote": "\"On day one, I watch how each person arrives: their energy, their confidence. My job is to show you what you're capable of, without unnecessary risks.\""
+        }
+      ],
+      "_template": "eventPeople"
+    },
+    {
+      "cards": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_088_t76wxw.jpg",
+          "alt": "We organize your sailing trip in La Paz",
+          "title": "Travel with us",
+          "cta": {
+            "label": "Plan my expedition →",
+            "href": "/en/sail-with-us/"
+          }
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_sunset_licttx.jpg",
+          "alt": "Offer Eagle Ray to your clients",
+          "title": "Offer Eagle Ray to your clients",
+          "cta": {
+            "label": "Become a partner →",
+            "href": "/en/contact/?message=I%20would%20like%20to%20book%20a%20call%20to%20become%20a%20partner%20and%20offer%20Sailing%20Expeditions%20in%20Baja%20for%20my%20clients"
+          }
+        }
+      ],
+      "_template": "eventCards"
+    },
+    {
+      "anchor": "confirm",
+      "title": "Confirm your place",
+      "line": "This invitation is personal and places are limited.",
+      "tallyUrl": "https://tally.so/r/EqkAxr",
+      "formTitle": "Confirm your place",
+      "height": 1100,
+      "_template": "eventRsvp"
+    },
+    {
+      "label": "THE PLACE",
+      "name": "NIV · Wine bar",
+      "address": "C. Atlixco 132, Hipódromo Condesa, Cuauhtémoc, 06170 Mexico City",
+      "linkLabel": "Open in Google Maps →",
+      "linkHref": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x85d1ff74c4dd1da7:0x81d5fdde01a06e32",
+      "_template": "eventPlace"
+    }
+  ],
+  "seo": {
+    "title": "A private preview of Eagle Ray Expeditions",
+    "description": "Wednesday, October 28 · 6:00 to 7:30 pm · NIV, Condesa, Mexico City",
+    "ogTitle": "A private preview of Eagle Ray Expeditions",
+    "ogDescription": "Wednesday, October 28 · 6:00 to 7:30 pm · NIV, Condesa, Mexico City"
+  }
+}

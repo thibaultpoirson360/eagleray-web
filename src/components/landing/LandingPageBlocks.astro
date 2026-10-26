@@ -26,8 +26,17 @@ import LandingIncludes from "./LandingIncludes.astro";
 import LandingTimeline from "./LandingTimeline.astro";
 import LandingFaq from "./LandingFaq.astro";
 import LandingActions from "./LandingActions.astro";
+import LandingCinematicRoute from "./LandingCinematicRoute.astro";
+import LandingTripBoats from "./LandingTripBoats.astro";
 import LandingFeature from "./LandingFeature.astro";
 import LandingCrewShowcase from "./LandingCrewShowcase.astro";
+import LandingEventIntro from "./LandingEventIntro.astro";
+import LandingEventEvening from "./LandingEventEvening.astro";
+import LandingEventPhotoStrip from "./LandingEventPhotoStrip.astro";
+import LandingEventPeople from "./LandingEventPeople.astro";
+import LandingEventCards from "./LandingEventCards.astro";
+import LandingEventRsvp from "./LandingEventRsvp.astro";
+import LandingEventPlace from "./LandingEventPlace.astro";
 import MoguProposalHero from "../MoguProposalHero.astro";
 import type { LandingPageBlocksParent } from "./blockTypes";
 import type { Locale } from "../../i18n/config";
@@ -64,8 +73,17 @@ const { landingPage, locale } = Astro.props;
         {kind === "Timeline" && <LandingTimeline block={block} landingPage={landingPage} index={index} />}
         {kind === "Feature" && <LandingFeature block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "CrewShowcase" && <LandingCrewShowcase block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "TripBoats" && <LandingTripBoats block={block} landingPage={landingPage} index={index} locale={locale} />}
+        {kind === "CinematicRoute" && <LandingCinematicRoute block={block} landingPage={landingPage} index={index} />}
         {kind === "Actions" && <LandingActions block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "Faq" && <LandingFaq block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventIntro" && <LandingEventIntro block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventEvening" && <LandingEventEvening block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventPhotoStrip" && <LandingEventPhotoStrip block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventPeople" && <LandingEventPeople block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventCards" && <LandingEventCards block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventRsvp" && <LandingEventRsvp block={block} landingPage={landingPage} index={index} />}
+        {kind === "EventPlace" && <LandingEventPlace block={block} landingPage={landingPage} index={index} />}
         {kind === "MoguProposal" && <LandingMoguProposal block={block} landingPage={landingPage} index={index} locale={locale} />}
         {kind === "MoguHero" && <MoguProposalHero tripSlug={block.tripSlug} hideLogo={block.hideLogo ?? false} hideTitle={block.hideTitle ?? false} title={block.iframeTitle ?? undefined} />}
       </>

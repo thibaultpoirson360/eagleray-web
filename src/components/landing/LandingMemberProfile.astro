@@ -30,16 +30,16 @@ const member = members.find((m) => m._sys.filename === String(block.member ?? ""
 ---
 
 <section
-  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-[calc(var(--spacing-section)*1.5)]"
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
-  <div class:list={["mx-auto grid gap-12", member ? "max-w-[1080px] lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-16" : "max-w-[700px]"]}>
-    <div class="min-w-0" data-tina-field={tinaField(block, "body")}>
-      <TinaMarkdown content={block.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
-      {
-        member && (
+  {
+    block.collapseAbout && member ? (
+      <div class="mx-auto grid max-w-[1000px] items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-20">
+        <div class="min-w-0" data-tina-field={tinaField(block, "body")}>
+          <TinaMarkdown content={block.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
           <div class="mt-8">
-            <CrewStory member={member} labels={sectionResult.data.crewSection}>
+            <CrewStory member={member} labels={sectionResult.data.crewSection} collapse>
               {block.moreText && (
                 <div data-tina-field={tinaField(block, "moreText")}>
                   <TinaMarkdown content={block.moreText} components={{ p: BodyParagraph }} />
@@ -47,15 +47,33 @@ const member = members.find((m) => m._sys.filename === String(block.member ?? ""
               )}
             </CrewStory>
           </div>
-        )
-      }
-    </div>
-    {
-      member && (
-        <div class="lg:sticky lg:top-[calc(var(--spacing-nav-solid)+1rem)] lg:self-start">
-          <CrewFullCard member={member} labels={sectionResult.data.crewSection} hideAbout />
         </div>
-      )
-    }
-  </div>
+        <CrewFullCard member={member} labels={sectionResult.data.crewSection} hideAbout mini />
+      </div>
+    ) : (
+      <div class:list={["mx-auto grid gap-12", member ? "max-w-[1080px] lg:grid-cols-[minmax(0,1fr)_minmax(0,24rem)] lg:gap-16" : "max-w-[700px]"]}>
+        <div class="min-w-0" data-tina-field={tinaField(block, "body")}>
+          <TinaMarkdown content={block.body} components={{ p: BodyParagraph, blockquote: BodyQuote, img: BodyImage }} />
+          {
+            member && (
+              <div class="mt-8">
+                <CrewStory member={member} labels={sectionResult.data.crewSection}>
+                  {block.moreText && (
+                    <div data-tina-field={tinaField(block, "moreText")}>
+                      <TinaMarkdown content={block.moreText} components={{ p: BodyParagraph }} />
+                    </div>
+                  )}
+                </CrewStory>
+              </div>
+            )
+          }
+        </div>
+        {member && (
+          <div class="lg:sticky lg:top-[calc(var(--spacing-nav-solid)+1rem)] lg:self-start">
+            <CrewFullCard member={member} labels={sectionResult.data.crewSection} hideAbout />
+          </div>
+        )}
+      </div>
+    )
+  }
 </section>

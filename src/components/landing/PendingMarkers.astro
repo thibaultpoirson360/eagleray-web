@@ -1,0 +1,17 @@
+---
+/**
+ * Internal-review helper: any "[PENDIENTE: ...]" or "[PENDIENTE]" written in a
+ * page's text is shown in red, right where it is written, so the person
+ * reviewing the page can see what is still to confirm. Delete the marker from
+ * the text when the item is confirmed; with no markers, this changes nothing.
+ * (Red is the one deliberate exception to the site's colours: it is temporary.)
+ */
+const html = await Astro.slots.render("default");
+// Only text between tags is touched, never a tag or an attribute (an interactive
+// block keeps its data in an attribute, and that must stay exactly as it is).
+const marked = html.replace(/(<[^>]*>)|(\[PENDIENTE[^\]<]*\])/g, (all, tag, marker) =>
+  tag ? tag : `<span class="font-medium text-red-600">${marker}</span>`
+);
+---
+
+<Fragment set:html={marked} />

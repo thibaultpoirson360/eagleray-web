@@ -1,0 +1,90 @@
+{
+  "name": "Fountaine Pajot Saona 47",
+  "tagline": "Catamaran",
+  "description": "Refitted in 2026, with four double cabins, a cabin with bunk beds and air conditioning in all of them. The flybridge has its own lounge, so half the group can read in the shade up there while the other half is already out on a paddleboard. The watermaker means a fresh shower after every swim, wherever you're anchored.",
+  "details": "Refitted in 2026, with four double cabins, a cabin with bunk beds and air conditioning in all of them. The flybridge has its own lounge, so half the group can read in the shade up there while the other half is already out on a paddleboard. The watermaker means a fresh shower after every swim, wherever you're anchored.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge lounge",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "length": "47 ft",
+  "cabins": "5",
+  "bathrooms": "5",
+  "guests": "up to 8",
+  "order": 6,
+  "photo": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+  "photoAlt": "Fountaine Pajot Saona 47 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-02.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-03.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-video-01.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran",
+      "video": "/assets/video/boats/fountaine-pajot-saona-47-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-04.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-05.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-06.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-07.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-08.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-09.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-10.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-11.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-12.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-13.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-14.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-15.webp",
+      "alt": "Fountaine Pajot Saona 47 catamaran"
+    }
+  ]
+}

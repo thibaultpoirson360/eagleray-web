@@ -1,0 +1,32 @@
+---
+/**
+ * `eventPlace` landing block: a full-width photo of the venue, with a small label, the name, the address and a link to the map centered below.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+
+---
+
+<section class="relative" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="aspect-[4/3] overflow-hidden bg-surface md:aspect-[21/9]">
+    {block.image && <img src={block.image} alt={block.alt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" data-tina-field={tinaField(block, "image")} />}
+  </div>
+  <div class="mx-auto max-w-[44rem] px-pad py-[calc(var(--spacing-section)*1.4)] text-center">
+    {block.label && <p class="font-mono text-[.76rem] tracking-[.14em] text-ink/64 uppercase" data-tina-field={tinaField(block, "label")}>{block.label}</p>}
+    {block.name && <p class="mt-6 font-display text-[clamp(1.35rem,2.4vw,1.9rem)] font-light text-ink" data-tina-field={tinaField(block, "name")}>{block.name}</p>}
+    {block.address && <p class="mx-auto mt-4 max-w-[40ch] text-[.84rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(block, "address")}>{block.address}</p>}
+    {block.linkLabel && block.linkHref && (
+      <p class="mt-8">
+        <a href={block.linkHref} target="_blank" rel="noopener noreferrer" class="text-[.84rem] font-medium text-ink underline underline-offset-4" data-tina-field={tinaField(block, "linkLabel")}>{block.linkLabel}</a>
+      </p>
+    )}
+  </div>
+</section>

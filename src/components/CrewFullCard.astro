@@ -33,10 +33,14 @@ interface Props {
   compact?: boolean;
   /** Leaves out the "about" text (and its "read more"), e.g. when it is printed next to the card. */
   hideAbout?: boolean;
+  /** Wide card: photo on the left, the rest on the right (on large screens). */
+  horizontal?: boolean;
+  /** Small landscape card: wide photo, name, tags and languages on one line; no certificates list. */
+  mini?: boolean;
   class?: string;
 }
 
-const { member, labels, compact = false, hideAbout = false, class: className = "" } = Astro.props;
+const { member, labels, compact = false, hideAbout = false, horizontal = false, mini = false, class: className = "" } = Astro.props;
 
 const roles = clean(member.roles);
 const skills = clean(member.skills);
@@ -50,8 +54,8 @@ const years = member.yearsOfExperience;
 const showFooter = skills.length + languages.length + certificates.length > 0 || years != null;
 ---
 
-<article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", className]}>
-  <div class:list={["relative flex-none", "aspect-[4/5]"]}>
+<article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", horizontal && "lg:flex-row", className]}>
+  <div class:list={["relative flex-none", mini ? "aspect-[4/3]" : compact ? "aspect-square" : "aspect-[4/5]", horizontal && "lg:aspect-auto lg:min-h-[24rem] lg:w-[42%]"]}>
     <ImageSlider
       client:visible
       photos={memberPhotos(member)}
@@ -86,11 +90,12 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
     }
   </div>
 
-  <div class="flex-none px-6 pt-6 pb-4">
-    <h3 class="font-display text-[1.6rem]" data-tina-field={tinaField(member, "name")}>{member.name}</h3>
+  <div class:list={["flex min-w-0 flex-1 flex-col", horizontal && "lg:justify-center"]}>
+  <div class:list={["flex-none", mini ? "px-5 pt-4 pb-3" : "px-6 pt-6 pb-4"]}>
+    <h3 class:list={["font-display", mini ? "text-[1.25rem]" : "text-[1.6rem]"]} data-tina-field={tinaField(member, "name")}>{member.name}</h3>
     {
       roles.length > 0 && (
-        <ul class="mt-3 flex flex-wrap gap-2" data-tina-field={tinaField(member, "roles")}>
+        <ul class:list={["flex flex-wrap gap-2", mini ? "mt-2" : "mt-3"]} data-tina-field={tinaField(member, "roles")}>
           {roles.map((role) => (
             <li class="rounded-sm border border-ink/40 px-3 py-1 font-mono text-[.66rem] tracking-[.1em] text-ink uppercase">
               {role}
@@ -152,7 +157,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
 
   {
     showFooter && (
-      <div class="flex-none border-t border-ink/8 bg-surface px-6 py-5">
+      <div class:list={["flex-none border-t border-ink/8 bg-surface", mini ? "px-5 py-4" : "px-6 py-5"]}>
         {skills.length > 0 && (
           <ul class="flex flex-wrap gap-2" data-tina-field={tinaField(member, "skills")}>
             {skills.map((skill) => (
@@ -162,14 +167,17 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
             ))}
           </ul>
         )}
-        {(languages.length > 0 || certificates.length > 0) && (
+        {mini && languages.length > 0 && (
+          <p class:list={["text-[.8rem] leading-[1.6] text-ink", skills.length > 0 && "mt-3"]} data-tina-field={tinaField(member, "languages")}>
+            {languages.map((l) => l.language).join(" · ")}
+          </p>
+        )}
+        {!mini && (languages.length > 0 || certificates.length > 0) && (
           <div class:list={["grid grid-cols-[1fr_auto] gap-x-5 text-[.86rem] leading-[1.7] text-ink", skills.length > 0 && "mt-4"]}>
             <ul data-tina-field={tinaField(member, "languages")}>
               {languages.map((l) => (
                 <li>
-                  {l.flag && <span aria-hidden="true">{l.flag} </span>}
                   {l.language}
-                  {l.level && <span class="text-ink/64"> ({l.level})</span>}
                 </li>
               ))}
             </ul>
@@ -180,7 +188,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
             </ul>
           </div>
         )}
-        {years != null && (
+        {years != null && !mini && (
           <p
             class:list={["border-t border-ink/14 pt-3 text-[.78rem] text-ink/64", (skills.length > 0 || languages.length > 0 || certificates.length > 0) && "mt-4"]}
             data-tina-field={tinaField(member, "yearsOfExperience")}
@@ -191,4 +199,5 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
       </div>
     )
   }
+  </div>
 </article>

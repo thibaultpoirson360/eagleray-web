@@ -158,6 +158,12 @@ export const crew: Collection = {
       description: 'Shows a pill on the photo, e.g. "Joining Q4 2026". Leave blank for active crew.',
     },
     {
+      type: "boolean",
+      name: "hidden",
+      label: "Hide from the website",
+      description: "Turn on to keep this person out of the home slider, the Passionate Sea People page and every crew slider. Turn off to publish.",
+    },
+    {
       type: "number",
       name: "order",
       label: "Position",

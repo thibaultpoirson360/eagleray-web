@@ -2,7 +2,8 @@
 /**
  * Home section "Your expedition": the expedition cards from "Sail with us"
  * under the usual section heading. Text from content/expeditionsSection;
- * the cards are the Sail with us page's `expeditions` (edited there).
+ * the cards are the Sail with us page's `expeditions` (edited there), shown
+ * as a slider so more can be added.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import ExpeditionCards, { type ExpeditionCard } from "./ExpeditionCards.astro";
@@ -14,8 +15,12 @@ interface Props {
 }
 
 const { expeditionsSection, sailWithUsPage } = Astro.props;
-const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? []).flatMap((e, i) =>
-  e?.name
+const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? [])
+  .map((e, i) => ({ e, i }))
+  // Cards with a homepage position come first, in that order; the others keep the Sail with Us order.
+  .sort((a, b) => (a.e?.homeOrder ?? Number.POSITIVE_INFINITY) - (b.e?.homeOrder ?? Number.POSITIVE_INFINITY) || a.i - b.i)
+  .flatMap(({ e, i }) =>
+  e?.name && !e.hideOnHome
     ? [
         {
           id: e.name,
@@ -70,5 +75,5 @@ const cards: ExpeditionCard[] = (sailWithUsPage.expeditions ?? []).flatMap((e, i
     </h2>
   </div>
 
-  <ExpeditionCards expeditions={cards} linkLabel={expeditionsSection.cardLabel ?? ""} />
+  <ExpeditionCards expeditions={cards} linkLabel={expeditionsSection.cardLabel ?? ""} slider sliderLabel={expeditionsSection.title} />
 </section>

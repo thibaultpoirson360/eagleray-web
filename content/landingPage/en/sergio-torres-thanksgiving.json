@@ -14,12 +14,6 @@
       "_template": "hero"
     },
     {
-      "member": "sergio-torres-canei",
-      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
-      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
-      "_template": "memberProfile"
-    },
-    {
       "title": "Two sailing departures in November",
       "intro": "Prices per full boat, for the November 2026 dates. If you divide the cost per person, you can see the price per person with the boat full (that is, at its maximum capacity).",
       "options": [
@@ -49,10 +43,10 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "The Lagoon 450F catamaran at anchor off Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo: the Lagoon 450F catamaran at anchor, with guests on the flybridge",
-          "bookLabel": "Book now",
-          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Open Cabins departure (November 22 to 25)."
+          "bookLabel": "Book a call",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         },
         {
           "name": "Thanksgiving at Anchor",
@@ -72,20 +66,107 @@
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
           "imageAlt": "The Beneteau Sense 55 sailboat under sail",
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 under sail, or a Thanksgiving table on deck",
-          "bookLabel": "Book now",
-          "bookHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products",
-          "infoLabel": "Contact us for more info",
-          "infoMessage": "I'd like more information about the Thanksgiving at Anchor departure (November 26 to 29)."
+          "bookLabel": "Book a call",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
+          "reserveLabel": "Reserve now",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         }
       ],
       "bookingLabel": "Info on booking",
       "bookingInfo": "* 20% deposit to book.\n* The balance is due 30 days before departure: October 23 for Open Cabins, October 27 for Thanksgiving at Anchor. If you book after that date, you pay the full amount when you book.\n* If you cancel, the deposit is not refunded.\n* If we cancel, because the departure doesn’t fill or for safety, you get 100% back.\n\nWant the whole week on a private boat? Write to us.\n",
-      "_template": "departures"
+      "_template": "departures",
+      "boatLinkLabel": "See the boat",
+      "includesLinkLabel": "See what is included"
+    },
+    {
+      "member": "sergio-torres-canei",
+      "body": "## WHO IS SERGIO\n\nSurvivor México 2025 champion, Ironman and personal trainer.\n\nHe has guided groups in several countries and is now an Expedition Leader at Eagle Ray.\n\nOn this trip, he shapes the day: when to get in the water, where to fish, and when to do nothing at all.\n",
+      "collapseAbout": true,
+      "moreText": "More about Sergio:\n\n* Survivor México 2025 champion\n* Ironman\n* Personal trainer in Cancún: functional training and calisthenics\n* Zondela Travel ambassador\n* Expert in guided group trips for 5 to 15 people\n* Guide for freediving, spearfishing, snorkeling, open-water swimming, kayaking, meditation, and stretching\n* PADI Open Water certification\n\nFind more info about his adventures on his Instagram: [@sergio\\_torres\\_canei](https://www.instagram.com/sergio_torres_canei/)\n",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Your floating home",
+      "intro": "Each departure sails on its own boat.",
+      "detailsLabel": "See all photos",
+      "boatItems": [
+        {
+          "boat": "bay-dreamer",
+          "banner": "/assets/img/boats/bay-dreamer-09.webp",
+          "bannerAlt": "The Lagoon 450F catamaran at anchor",
+          "tag": "Open Cabins · Nov 22 to 25",
+          "displayName": "Lagoon 450F",
+          "subtitle": "Catamaran",
+          "about": "The Lagoon 450F is the most spacious of Eagle Ray’s boats, the one that offers larger groups room to move comfortably, both on deck and inside. The cabins stay cool on their own, the shower water does not go cold halfway through the week, and the flybridge offers the crew, and anyone who wants it, an elevated place from which to watch the horizon. It is the kind of comfort you are not used to noticing, until the day you need it and it is already there.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Catamaran"
+            },
+            {
+              "label": "Guest cabins",
+              "value": "3"
+            },
+            {
+              "label": "Guests",
+              "value": "up to 6"
+            }
+          ],
+          "featureList": [
+            "Flybridge",
+            "Individual air conditioning in each cabin",
+            "Dishwasher",
+            "Two 57 HP engines",
+            "75 L/h watermaker",
+            "Onan generator",
+            "Code Zero sail",
+            "Starlink on board",
+            "15 HP tender"
+          ],
+          "similarNote": "Or a similar boat with equal or greater characteristics."
+        },
+        {
+          "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "The cockpit lounge of the Beneteau Sense 55",
+          "tag": "Thanksgiving at Anchor · Nov 26 to 29",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Sailboat",
+          "about": "The Beneteau Sense 55 is the most intimate of Eagle Ray’s boats, a 60-foot monohull built for groups looking for the classic feeling of sailing, and not just a boat that happens to have sails. Thanks to its three private suites, each couple has a door they can close, and the whole group can sit together around the same table in the cockpit for dinner. A hydraulic swim platform lowers directly into the water, so for a swim or to go snorkeling there is no need to climb down a ladder. In addition, it behaves differently from a catamaran: more heel and more response at the helm, ideal for groups that want to enjoy both the sailing and the destination.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Sailboat"
+            },
+            {
+              "label": "Length",
+              "value": "60 ft"
+            },
+            {
+              "label": "Guest suites",
+              "value": "2"
+            },
+            {
+              "label": "Guests",
+              "value": "up to 4"
+            }
+          ],
+          "featureList": [
+            "60-foot monohull",
+            "3 private suites",
+            "Cockpit table with space for 10 people",
+            "Hydraulic swim platform",
+            "High-performance sail package"
+          ],
+          "similarNote": "Or a similar boat with equal or greater characteristics."
+        }
+      ],
+      "_template": "tripBoats"
     },
     {
       "title": "What is included",
       "includedTitle": "Included",
-      "included": "**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
+      "included": "**Boat**\n\n* The boat of your departure, or similar with equal or greater characteristics\n\n**Crew**\n\n* Sergio Torres, Eagle Ray Expedition Leader\n* Eagle Ray captain\n* Eagle Ray chef\n\n**Program**\n\n* Sergio’s daily program, adapted to the group’s physical condition and mood\n* Spearfishing with Sergio in authorized areas\n\n**Equipment**\n\n* Snorkeling equipment\n* Fishing kit\n* 2 paddleboards\n* 1 kayak\n* 1 dinghy\n* Beach equipment (chairs, canopy, etc.)\n\n**Meals and drinks**\n\n* All meals on board\n* Non-alcoholic drinks\n\n**Transfer**\n\n* La Paz Airport ↔ marina, on arrival and departure\n\n**Extras**\n\n* Diesel\n* Sailing permits and entrance to national parks\n* Starlink wifi on board\n",
       "notIncludedTitle": "Not included",
       "notIncluded": "* Flights to La Paz\n* Alcoholic drinks, chosen from a menu before the trip\n* Scuba diving, depending on number of dives and certifications\n* Other guided activities, quoted separately\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
       "gallery": [
@@ -104,34 +185,82 @@
     {
       "title": "The route",
       "intro": "Both departures follow the same route: three nights between La Paz and the south of Espíritu Santo.",
-      "steps": [
+      "places": [
         {
-          "stepTitle": "La Paz → Caleta Lobos or Pichilingue",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
-          "stepImageAlt": "Caleta Lobos La Paz",
-          "stepImageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina · start and finish",
+          "lat": 24.1585,
+          "lon": -110.3245
         },
         {
-          "stepTitle": "Caleta Lobos or Pichilingue → south of Espíritu Santo",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
-          "stepImageAlt": "Sur de espíritu santo, La Paz",
-          "stepImageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+          "key": "pichilingue",
+          "name": "Caleta Lobos or Pichilingue",
+          "sub": "First anchorage",
+          "lat": 24.2745,
+          "lon": -110.343
         },
         {
-          "stepTitle": "South of Espíritu Santo → Bahía de La Paz",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
-          "stepImageAlt": "bahía de la paz",
-          "stepImageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+          "key": "southes",
+          "name": "South of Espíritu Santo",
+          "sub": "Anchorage",
+          "lat": 24.3925,
+          "lon": -110.3486
         },
         {
-          "stepTitle": "Bahía de La Paz → La Paz",
-          "stepImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
-          "stepImageAlt": "la paz, baja california sur",
-          "stepImageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+          "key": "bahia",
+          "name": "Bahía de La Paz",
+          "sub": "On the way back",
+          "lat": 24.152,
+          "lon": -110.342
         }
       ],
+      "trips": [
+        {
+          "tab": "The route",
+          "beats": [
+            {
+              "label": "Both departures · 1 of 4",
+              "title": "La Paz → Caleta Lobos or Pichilingue",
+              "from": "lapaz",
+              "to": "pichilingue",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
+              "imageAlt": "Caleta Lobos La Paz",
+              "imageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+            },
+            {
+              "label": "Both departures · 2 of 4",
+              "title": "Caleta Lobos or Pichilingue → south of Espíritu Santo",
+              "from": "pichilingue",
+              "to": "southes",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
+              "imageAlt": "Sur de espíritu santo, La Paz",
+              "imageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+            },
+            {
+              "label": "Both departures · 3 of 4",
+              "title": "South of Espíritu Santo → Bahía de La Paz",
+              "from": "southes",
+              "to": "bahia",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
+              "imageAlt": "bahía de la paz",
+              "imageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+            },
+            {
+              "label": "Both departures · 4 of 4",
+              "title": "Bahía de La Paz → La Paz",
+              "from": "bahia",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "la paz, baja california sur",
+              "imageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Proposed route and anchorages. Final plan depends on weather. Positions are approximate. Map data © OpenStreetMap contributors.",
       "footnote": "Indicative route. It depends on the sea, the wind, the permits and the captain’s call. In November, northerly winds can come in, and if they do we change the order of the coves or stay at the same anchorage.\n\nOpen Cabins: back at the marina on Wednesday afternoon.\n\nThanksgiving at Anchor: back at the marina around midday on Sunday, so you can fly home the same day. We recommend flights from 16:00.",
-      "_template": "timeline"
+      "_template": "cinematicRoute"
     },
     {
       "title": "What is a day on board with Sergio like?",
@@ -336,15 +465,6 @@
       "cta": {
         "label": "Contact us for more info",
         "href": "/en/contact/"
-      },
-      "_template": "cta"
-    },
-    {
-      "title": "See the full proposal",
-      "lede": "Prefer everything in one place? Open the full proposal, with booking and a downloadable PDF.",
-      "cta": {
-        "label": "Open the full proposal",
-        "href": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness"
       },
       "_template": "cta"
     },

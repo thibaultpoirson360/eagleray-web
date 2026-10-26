@@ -31,10 +31,13 @@ const { block, landingPage, index, locale } = Astro.props;
 // (LandingPageView adds a visually hidden <h1> when it isn't); any later
 // hero is a section heading.
 const Heading = index === 0 ? "h1" : "h2";
+const calm = !!block.calm;
+// A button that points to a section of this same page must not be turned into a homepage link.
+const ctaHref = block.ctaOnThisPage ? (block.cta?.href ?? "") : moguForLocale(locale, homeAnchor(locale, block.cta?.href));
 ---
 
 <section
-  class="relative isolate flex min-h-[70vh] items-end overflow-hidden"
+  class:list={["relative isolate flex overflow-hidden", calm ? "min-h-svh items-center justify-center" : "min-h-[70vh] items-end"]}
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
   <div class="absolute inset-0 z-[-1]">
@@ -50,34 +53,37 @@ const Heading = index === 0 ? "h1" : "h2";
         />
       )
     }
-    <div class="absolute inset-0 bg-linear-to-b from-ink/25 via-ink/42 via-45% to-ink/82"></div>
+    <div class:list={["absolute inset-0 bg-linear-to-b", calm ? "from-ink/30 via-ink/38 to-ink/60" : "from-ink/25 via-ink/42 via-45% to-ink/82"]}></div>
   </div>
 
-  <div class="relative mx-auto w-full max-w-site px-pad py-20 text-white">
+  <div class:list={["relative mx-auto w-full max-w-site px-pad py-20 text-white", calm && "flex flex-col items-center text-center"]}>
     {
       block.kicker && (
         <p
-          class="mb-[1.1rem] font-mono text-[.76rem] tracking-[.14em] text-white/82 uppercase"
+          class:list={["mb-[1.1rem] font-mono text-[.76rem] tracking-[.14em] text-white/82 uppercase", calm && "mb-6"]}
           data-tina-field={tinaField(block, "kicker")}
         >
           {block.kicker}
         </p>
       )
     }
-    <Heading class="max-w-[20ch] font-display text-hero text-white" data-tina-field={tinaField(block, "title")}>
+    <Heading class:list={["max-w-[20ch] font-display text-hero text-white", calm && "max-w-[22ch] text-[clamp(1.7rem,3.6vw,2.7rem)] font-light"]} data-tina-field={tinaField(block, "title")}>
       {block.title}
     </Heading>
     {
       block.lede && (
-        <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={tinaField(block, "lede")}>
+        <p
+          class:list={["mt-[1.3rem] text-white/86", calm && "mt-6", block.lede.length > 160 ? "max-w-[42ch] text-[.82rem] leading-[1.6] sm:text-[.88rem]" : calm ? "max-w-[50ch] text-[.95rem]" : "max-w-[50ch] text-hero-sub"]}
+          data-tina-field={tinaField(block, "lede")}
+        >
           {block.lede}
         </p>
       )
     }
     {
       block.cta && (
-        <div class="mt-[2.3rem]">
-          <Button href={moguForLocale(locale, homeAnchor(locale, block.cta.href))} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
+        <div class:list={["mt-[2.3rem]", calm && "mt-9"]}>
+          <Button href={ctaHref} variant="primary" context="hero" data-tina-field={tinaField(block, "cta")}>
             {block.cta.label}
           </Button>
         </div>

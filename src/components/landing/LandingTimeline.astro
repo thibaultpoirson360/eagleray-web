@@ -22,25 +22,25 @@ const hasPhotos = steps.some(({ step }) => step.stepImage || step.stepImageNote)
 ---
 
 <section
-  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-section"
+  class="relative mx-auto max-w-site border-t border-ink/8 px-pad py-[calc(var(--spacing-section)*1.5)]"
   data-tina-field={tinaField(landingPage, "blocks", index)}
 >
   <div class:list={["mx-auto", hasPhotos ? "max-w-[1000px]" : "max-w-[760px]"]}>
     <h2 class="h2 text-h2" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
-    {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
+    {block.intro && <p class="mt-[1.2rem] max-w-[58ch] text-[.95rem] text-ink/74" data-tina-field={tinaField(block, "intro")}>{block.intro}</p>}
 
-    <ol class="mt-section-head border-l border-ink/14">
+    <ol class="mt-[calc(var(--spacing-section-head)*1.3)] border-l border-ink/14">
       {
         steps.map(({ step, i }, n) => (
           <li
-            class:list={["relative pb-12 pl-8 last:pb-0", step.stepImage || step.stepImageNote ? "md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,21rem)] md:items-center md:gap-10" : ""]}
+            class:list={["relative pb-16 pl-8 last:pb-0", step.stepImage || step.stepImageNote ? "md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,21rem)] md:items-center md:gap-10" : ""]}
             data-tina-field={tinaField(block, "steps", i)}
           >
             <span aria-hidden="true" class="absolute top-[.55rem] -left-[4.5px] size-2 rounded-full bg-ink" />
             <div>
               <p class="font-mono text-[.7rem] tracking-[.14em] text-ink/64 uppercase">{step.stepLabel || String(n + 1).padStart(2, "0")}</p>
               <h3 class="mt-1.5 font-display text-[1.3rem]">{step.stepTitle}</h3>
-              {step.stepText && <p class="mt-2 max-w-[60ch] leading-[1.65] text-ink/74">{step.stepText}</p>}
+              {step.stepText && <p class="mt-2 max-w-[60ch] text-[.9rem] leading-[1.7] text-ink/74">{step.stepText}</p>}
             </div>
             {(step.stepImage || step.stepImageNote) && (
               <div class="relative mt-5 aspect-[4/3] overflow-hidden rounded-lg bg-ink md:mt-0">

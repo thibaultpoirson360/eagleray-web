@@ -20,7 +20,7 @@ export interface BoatCard {
   cabins?: string;
   bathrooms?: string;
   guests?: string;
-  photos: { src: string; alt: string }[];
+  photos: { src: string; alt: string; video?: string }[];
 }
 
 export interface BoatModalLabels {
@@ -37,9 +37,16 @@ interface Props {
   boat: BoatCard | null;
   labels: BoatModalLabels;
   onClose: () => void;
+  /** Only the photos (white frame, no text, specs or button): for pages where the boat's data is shown elsewhere. */
+  photosOnly?: boolean;
 }
 
-export default function BoatModal({ boat: active, labels, onClose }: Props) {
+export default function BoatModal({
+  boat: active,
+  labels,
+  onClose,
+  photosOnly = false,
+}: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -75,6 +82,7 @@ export default function BoatModal({ boat: active, labels, onClose }: Props) {
   return (
     <dialog
       ref={dialogRef}
+      aria-label={active?.name}
       class="m-auto max-h-[88vh] w-[min(94vw,720px)] overflow-hidden rounded-xl bg-white p-0 text-ink backdrop:bg-ink/58 backdrop:backdrop-blur-sm"
       onClick={(event) => {
         if (event.target === dialogRef.current) close();
@@ -82,7 +90,9 @@ export default function BoatModal({ boat: active, labels, onClose }: Props) {
     >
       {active && (
         <div class="max-h-[88vh] overflow-y-auto">
-          <div class="relative aspect-[4/3] bg-ink">
+          <div
+            class={`relative aspect-[4/3] ${photosOnly ? "bg-white" : "bg-ink"}`}
+          >
             <ImageSlider
               photos={active.photos}
               previousLabel={labels.previous}
@@ -90,6 +100,7 @@ export default function BoatModal({ boat: active, labels, onClose }: Props) {
               dotLabel={labels.photo}
               dotsAt="bottom"
               fit="contain"
+              tone={photosOnly ? "light" : "dark"}
               className="h-full w-full"
             />
             <button
@@ -101,43 +112,59 @@ export default function BoatModal({ boat: active, labels, onClose }: Props) {
               ✕
             </button>
           </div>
-          <div class="px-6 pt-8 pb-9 md:px-10">
-            {active.tagline && <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">{active.tagline}</p>}
-            <h2 class="mt-2 mb-4 text-[clamp(1.5rem,4vw,2rem)]">{active.name}</h2>
-            {(active.details ?? active.description) && (
-              <div class="text-[.98rem] leading-[1.65] text-ink/68">
-                {(active.details ?? active.description ?? "").split(/\n\s*\n/).map((paragraph) => (
-                  <p class="mb-3 whitespace-pre-line last:mb-0">{paragraph}</p>
-                ))}
-              </div>
-            )}
-            {active.features && active.features.length > 0 && (
-              <ul class="mt-4 grid grid-cols-1 gap-x-6 gap-y-1.5 text-[.9rem] text-ink/64 sm:grid-cols-2">
-                {active.features.map((feature) => (
-                  <li class="flex gap-2">
-                    <span class="text-ink/35" aria-hidden="true">—</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            )}
-            <dl class="mt-6 grid grid-cols-2 gap-5 border-t border-ink/10 pt-5 md:grid-cols-4">
-              {stats(active).map(([label, value]) => (
-                <div>
-                  <dt class="mb-1 font-mono text-[.6rem] tracking-[.1em] text-ink/45 uppercase">{label}</dt>
-                  <dd class="text-[.95rem] text-ink">{value}</dd>
+          {!photosOnly && (
+            <div class="px-6 pt-8 pb-9 md:px-10">
+              {active.tagline && (
+                <p class="font-mono text-[.7rem] tracking-[.1em] text-ink/64 uppercase">
+                  {active.tagline}
+                </p>
+              )}
+              <h2 class="mt-2 mb-4 text-[clamp(1.5rem,4vw,2rem)]">
+                {active.name}
+              </h2>
+              {(active.details ?? active.description) && (
+                <div class="text-[.98rem] leading-[1.65] text-ink/68">
+                  {(active.details ?? active.description ?? "")
+                    .split(/\n\s*\n/)
+                    .map((paragraph) => (
+                      <p class="mb-3 whitespace-pre-line last:mb-0">
+                        {paragraph}
+                      </p>
+                    ))}
                 </div>
-              ))}
-            </dl>
-            <div class="mt-8">
-              <a
-                href={labels.customizeHref}
-                class="inline-flex items-center rounded bg-ink px-6 py-3.5 text-[.88rem] text-white transition-colors hover:bg-ink-hover"
-              >
-                {labels.customize}
-              </a>
+              )}
+              {active.features && active.features.length > 0 && (
+                <ul class="mt-4 grid grid-cols-1 gap-x-6 gap-y-1.5 text-[.9rem] text-ink/64 sm:grid-cols-2">
+                  {active.features.map((feature) => (
+                    <li class="flex gap-2">
+                      <span class="text-ink/35" aria-hidden="true">
+                        —
+                      </span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <dl class="mt-6 grid grid-cols-2 gap-5 border-t border-ink/10 pt-5 md:grid-cols-4">
+                {stats(active).map(([label, value]) => (
+                  <div>
+                    <dt class="mb-1 font-mono text-[.6rem] tracking-[.1em] text-ink/45 uppercase">
+                      {label}
+                    </dt>
+                    <dd class="text-[.95rem] text-ink">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div class="mt-8">
+                <a
+                  href={labels.customizeHref}
+                  class="inline-flex items-center rounded bg-ink px-6 py-3.5 text-[.88rem] text-white transition-colors hover:bg-ink-hover"
+                >
+                  {labels.customize}
+                </a>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </dialog>

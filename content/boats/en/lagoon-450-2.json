@@ -1,0 +1,83 @@
+{
+  "name": "Lagoon 450",
+  "tagline": "Catamaran",
+  "description": "Four double cabins and four bathrooms, built in 2014 and refitted since. There's a hammock on deck for the hour after lunch, and a flybridge above the saloon for the first coffee of the day. Paddleboards, a kayak and snorkel gear are always ready, and the watermaker keeps fresh water coming between anchorages.",
+  "details": "Four double cabins and four bathrooms, built in 2014 and refitted since. There's a hammock on deck for the hour after lunch, and a flybridge above the saloon for the first coffee of the day. Paddleboards, a kayak and snorkel gear are always ready, and the watermaker keeps fresh water coming between anchorages.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Hammock and inflatable dock",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "length": "45 ft",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "up to 8",
+  "order": 8,
+  "photo": "/assets/img/boats/lagoon-450-2014-01.webp",
+  "photoAlt": "Lagoon 450 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-01.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-02.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-03.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-video-01.webp",
+      "alt": "Lagoon 450 catamaran",
+      "video": "/assets/video/boats/lagoon-450-2014-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-04.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-05.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-06.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-07.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-08.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-09.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-10.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-11.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-12.webp",
+      "alt": "Lagoon 450 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2014-13.webp",
+      "alt": "Lagoon 450 catamaran"
+    }
+  ]
+}

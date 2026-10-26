@@ -10,9 +10,9 @@
   "gridTitle": "Meet the people behind Eagle Ray Expeditions",
   "roleLabels": {
     "founder": "Founder",
-    "captain": "Captain",
-    "expeditionLeader": "Expedition Leader",
-    "chef": "Chef",
+    "captain": "Captains",
+    "expeditionLeader": "Expedition Leaders",
+    "chef": "Chefs",
     "other": "Crew"
   }
 }

@@ -47,7 +47,7 @@ export const GET: APIRoute = async ({ site }) => {
     const { posts } = await loadBlogPosts(locale);
     for (const post of posts) add("blog/", post._sys.filename, locale, post.date ? String(post.date).slice(0, 10) : undefined);
     const { pages } = await loadLandingPages(locale);
-    for (const page of pages) add("landing/", page._sys.filename, locale);
+    for (const page of pages.filter((p) => !p.hideFromSearch)) add("landing/", page._sys.filename, locale);
     // Nav pages with blocks are real pages (see [locale]/[slug].astro); the
     // title-only placeholders are noindex and stay out of the sitemap.
     const { pages: navPages } = await loadNavPages(locale);

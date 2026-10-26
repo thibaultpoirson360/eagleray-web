@@ -30,6 +30,7 @@ import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import Funnel from "../../components/Funnel.astro";
 import ContactPage from "../../components/ContactPage.astro";
+import GuestStoriesPage from "../../components/GuestStoriesPage.astro";
 import BlogListing from "../../components/BlogListing.astro";
 import BlogPostView from "../../components/BlogPostView.astro";
 import LandingPageView from "../../components/LandingPageView.astro";
@@ -51,6 +52,7 @@ import {
   loadSiteSettings,
   loadFunnel,
   loadContactPage,
+  loadGuestStoriesPage,
   loadBlogSection,
   loadBlogPosts,
   loadBlogPost,
@@ -221,6 +223,14 @@ const route = createIslandRoute({
         locale: localeFromParams(params),
       };
     },
+  },
+  guestStoriesPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => loadGuestStoriesPage(localeFromParams(params)),
+    component: GuestStoriesPage,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => ({
+      guestStoriesPage: (result as Awaited<ReturnType<typeof loadGuestStoriesPage>>).data.guestStoriesPage,
+    }),
   },
   blogSection: {
     fetch: async (_request: Request, params: URLSearchParams) => {

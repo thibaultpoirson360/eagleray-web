@@ -1,0 +1,95 @@
+{
+  "name": "Lagoon 52",
+  "tagline": "Catamaran",
+  "description": "Five double cabins, so nobody in the group ends up on a sofa bed, and a sixth cabin with bunk beds if you're bringing kids. The flybridge is where everyone gathers to watch the next island get closer. At the stern, a grill, an outside shower and a kayak ready to go in the water. Refitted in 2024.",
+  "details": "Five double cabins, so nobody in the group ends up on a sofa bed, and a sixth cabin with bunk beds if you're bringing kids. The flybridge is where everyone gathers to watch the next island get closer. At the stern, a grill, an outside shower and a kayak ready to go in the water. Refitted in 2024.",
+  "features": [
+    "Air conditioning in every cabin and in the saloon",
+    "Starlink wifi on board",
+    "Generator",
+    "Watermaker (fresh water made on board)",
+    "Flybridge",
+    "Outdoor grill and outside shower",
+    "Double kayak and 2 paddleboards",
+    "Snorkeling gear and fishing rods"
+  ],
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Vayu_comedor_Popa2_fjr1fe.jpg",
+  "photoAlt": "Lagoon 52 catamaran",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-52-11.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-01.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-02.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-03.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-01.webp",
+      "alt": "Lagoon 52 catamaran",
+      "video": "/assets/video/boats/lagoon-52-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-04.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-05.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-06.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-07.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-08.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-video-02.webp",
+      "alt": "Lagoon 52 catamaran",
+      "video": "/assets/video/boats/lagoon-52-02.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-09.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-10.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-12.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-13.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-14.webp",
+      "alt": "Lagoon 52 catamaran"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-52-15.webp",
+      "alt": "Lagoon 52 catamaran"
+    }
+  ],
+  "length": "52 ft",
+  "cabins": "6",
+  "bathrooms": "6",
+  "guests": "up to 10",
+  "order": 5
+}

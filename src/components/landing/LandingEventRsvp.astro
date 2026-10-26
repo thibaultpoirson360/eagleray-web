@@ -1,0 +1,34 @@
+---
+/**
+ * `eventRsvp` landing block: a narrow centered section on the off-white background with a title, a line and the Tally form. The form is embedded from tally.so (its answers go to the spreadsheet connected in Tally). Nothing is embedded until a link is set.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { LandingPageBlocksParent } from "./blockTypes";
+
+interface Props {
+  block: any;
+  landingPage: LandingPageBlocksParent;
+  index: number;
+}
+
+const { block, landingPage, index } = Astro.props;
+const tallyId = String(block.tallyUrl ?? "").match(/^https:\/\/tally\.so\/(?:r|embed)\/([A-Za-z0-9]+)/)?.[1];
+const anchor = String(block.anchor ?? "").replace(/^#/, "").trim() || undefined;
+---
+
+<section id={anchor} class="relative scroll-mt-24 bg-surface" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="mx-auto max-w-form px-pad py-[calc(var(--spacing-section)*1.8)] text-center">
+    <h2 class="font-display text-[clamp(1.35rem,2.4vw,1.9rem)] font-light text-ink" data-tina-field={tinaField(block, "title")}>{block.title}</h2>
+    {block.line && <p class="mt-6 text-[.84rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(block, "line")}>{block.line}</p>}
+    {tallyId && (
+      <iframe
+        src={`https://tally.so/embed/${tallyId}?hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+        height={block.height ?? 1100}
+        loading="lazy"
+        class="mt-12 w-full border-0"
+        title={block.formTitle ?? block.title}
+        data-tina-field={tinaField(block, "tallyUrl")}
+      ></iframe>
+    )}
+  </div>
+</section>
