@@ -8,10 +8,12 @@
  *   npm run translate:status    only list the English files that are out of date
  *
  * The first run (no scripts/translation-state.json yet) treats the existing
- * Spanish and French files as in sync with the current commit.
+ * Spanish and French files as in sync with the current commit, or with the
+ * commit given as `--since <sha>` (use it when the translations are behind).
  * A batch holds whole files, up to MAX_ENTRIES strings; run /translate again
  * for the rest.
  */
+import { spawnSync } from "node:child_process";
 import { existsSync, rmSync } from "node:fs";
 import { PENDING_PATH, ROOT, WORK_DIR, git, loadContext, mkdirSync, readState, writeFileSync, writeState } from "./lib/translation-run.mjs";
 import { baselineFor, pendingEntries, planAll, planNeedsWrite, sha } from "./lib/translation-sync.mjs";
@@ -25,13 +27,32 @@ const { schema, memory } = await loadContext();
 const head = git.head(ROOT);
 
 let state = readState(ROOT);
+const sinceIndex = process.argv.indexOf("--since");
+const since = sinceIndex > 0 ? process.argv[sinceIndex + 1] : null;
+if (since && state) {
+  console.error("--since only works on the first run, before scripts/translation-state.json exists.");
+  process.exit(1);
+}
 if (!state) {
-  state = { default: head, files: {} };
+  let baseline = head;
+  if (since) {
+    const r = spawnSync("git", ["-C", ROOT, "rev-parse", "--verify", `${since}^{commit}`], { encoding: "utf8" });
+    if (r.status !== 0) {
+      console.error(`--since: "${since}" is not a commit in this repository.`);
+      process.exit(1);
+    }
+    baseline = r.stdout.trim();
+  }
+  state = { default: baseline, files: {} };
   if (statusOnly) {
-    console.log("No scripts/translation-state.json yet: the first `npm run translate:prepare` will treat the current Spanish and French as up to date.");
+    console.log(`No scripts/translation-state.json yet: counting changes since ${baseline.slice(0, 7)}${since ? "" : " (the current commit, so nothing)"}.`);
   } else {
     writeState(state);
-    console.log(`First run: recorded ${head.slice(0, 7)} as the point the translations are in sync with (scripts/translation-state.json).`);
+    console.log(
+      since
+        ? `First run: recorded ${baseline.slice(0, 7)} (--since) as the point the translations are in sync with, so English changed after it will be translated (scripts/translation-state.json).`
+        : `First run: recorded ${baseline.slice(0, 7)} as the point the translations are in sync with (scripts/translation-state.json).`
+    );
   }
 }
 

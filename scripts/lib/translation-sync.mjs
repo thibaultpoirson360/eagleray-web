@@ -147,6 +147,21 @@ function fieldMeta(fields, doc, parts) {
 
 // ---- planning ------------------------------------------------------------------
 
+/** field path (+ position within that field) -> text, for pairing documents whose structure differs. */
+function pathKeyed(doc, fields) {
+  const texts = translatableTexts(doc, fields);
+  const described = describeUnits(doc, fields);
+  const seen = new Map();
+  const map = new Map();
+  texts.forEach((text, i) => {
+    const base = described[i]?.path || `#${i}`;
+    const n = seen.get(base) ?? 0;
+    seen.set(base, n + 1);
+    map.set(`${base}#${n}`, text);
+  });
+  return map;
+}
+
 function readJson(file) {
   return JSON.parse(readFileSync(file, "utf8"));
 }
@@ -193,13 +208,18 @@ export function planFile({ root, file, schema, locale, memory, state, getIndex }
 
   let mode = "new";
   let pairing = null;
+  let aligned = null; // field-path pairing, for files whose structure differs
   if (existsSync(outAbs)) {
     const prevRaw = git.show(root, baselineFor(state, file), file);
-    if (prevRaw === curRaw) {
+    const targetDoc = readJson(outAbs);
+    const target = translatableTexts(targetDoc, collection.fields);
+    if (prevRaw === curRaw && target.length === english.length) {
       return { file, locale, outFile, mode: "unchanged", texts: [], sources: [], pending: [], warnings, doc: null, collection, cur };
     }
-    const target = translatableTexts(readJson(outAbs), collection.fields);
-    const previous = prevRaw === null ? null : translatableTexts(JSON.parse(prevRaw), collection.fields);
+    // Unchanged English whose translation is missing strings is treated like any file whose
+    // two sides do not line up: the "earlier English" is then the current English.
+    const previousDoc = prevRaw === null ? null : JSON.parse(prevRaw);
+    const previous = previousDoc ? translatableTexts(previousDoc, collection.fields) : null;
     if (previous && previous.length === target.length) {
       pairing = new Map();
       previous.forEach((text, i) => {
@@ -208,20 +228,31 @@ export function planFile({ root, file, schema, locale, memory, state, getIndex }
       mode = "changed";
     } else {
       mode = "mismatch";
-      warnings.push(
-        previous === null
-          ? `${outFile}: no earlier English version to compare with; reusing only the memory and matching strings from other files.`
-          : `${outFile}: the earlier English has ${previous.length} strings but the translation has ${target.length}; they cannot be paired, so only the memory and matching strings from other files are reused.`
-      );
+      if (previousDoc) {
+        aligned = { previous: pathKeyed(previousDoc, collection.fields), target: pathKeyed(targetDoc, collection.fields), cur: pathKeyed(cur, collection.fields) };
+        warnings.push(
+          `${outFile}: the English it was translated from has ${previous.length} strings but the translation has ${target.length}, so strings are matched by field path: a string is kept only if its English is unchanged and the translation has that field; everything else is re-drafted. Please read this file closely.`
+        );
+      } else {
+        warnings.push(`${outFile}: no earlier English version to compare with; reusing only the memory and matching strings from other files.`);
+      }
     }
   }
 
   const index = mode === "mismatch" ? getIndex(locale) : null;
   const sources = [];
-  const texts = english.map((text) => {
+  const keys = aligned ? [...aligned.cur.keys()] : [];
+  const texts = english.map((text, i) => {
     if (pairing?.has(text)) {
       sources.push("reused");
       return pairing.get(text);
+    }
+    if (aligned) {
+      const key = keys[i];
+      if (key !== undefined && aligned.previous.get(key) === text && aligned.target.has(key)) {
+        sources.push("reused");
+        return aligned.target.get(key);
+      }
     }
     if (Object.prototype.hasOwnProperty.call(memory[locale] ?? {}, text)) {
       sources.push("memory");

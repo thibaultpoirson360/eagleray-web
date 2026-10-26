@@ -163,6 +163,25 @@ describe("what goes to Claude", () => {
     assert.ok(p.pending.length > 0);
   });
 
+  it("matches by field path when the structure differs: keeps what it can, drafts only what is missing", () => {
+    const short = { ...baseEs, items: ["uno", "dos"] };
+    const { root, state } = setup(base, short, { ...base, title: "Welcome" });
+    const p = plan(root, state, "es", { es: { Welcome: "Bienvenidos" }, fr: {} });
+    assert.equal(p.mode, "mismatch");
+    assert.deepEqual(pendingEntries(p).map((e) => e.english), ["three"]);
+    assert.equal(p.texts[1], "El mar está en calma.");
+    assert.equal(p.texts[2], "uno");
+  });
+
+  it("drafts a field the translation is missing even when the English did not change", () => {
+    const short = { ...baseEs };
+    delete short.lede;
+    const root = makeRepo({ [FILE]: base, "content/page/es.json": short });
+    const p = plan(root, { default: git.head(root), files: {} });
+    assert.equal(p.mode, "mismatch");
+    assert.deepEqual(pendingEntries(p).map((e) => e.english), ["The sea is calm."]);
+  });
+
   it("is a no-op when English did not change", () => {
     const root = makeRepo({ [FILE]: base, "content/page/es.json": baseEs });
     const p = plan(root, { default: git.head(root), files: {} });

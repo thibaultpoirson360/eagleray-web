@@ -50,7 +50,15 @@ in sync with.
 
 `npm run translate:status` lists the English files that are out of date without
 writing anything. The first ever run (no `scripts/translation-state.json`)
-treats the current Spanish and French as up to date with the current commit.
+treats the current Spanish and French as up to date with the current commit. If
+the translations are behind, start from an earlier commit instead:
+`npm run translate:prepare -- --since <sha>` (first run only).
+
+If a file's earlier English and its translation have a different structure
+(the translation is missing fields), the strings are matched **by field path**:
+a string is kept only if its English is unchanged and the translation has that
+field; everything else is drafted again. The report lists these files; read
+them closely.
 
 ## Reading the report
 

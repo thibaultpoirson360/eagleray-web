@@ -15,6 +15,7 @@ Read `AGENTS.md` section 3 ("Translations") first if you have not this session.
    - If it says nothing needs translating, tell the person that Spanish and French are up to date and stop.
    - If it stops because English files have uncommitted changes, tell the person to commit or discard them first. Do not commit for them.
    - On the very first run it records the current commit as "in sync" and only translates strings that have no translation yet.
+   - If the existing translations are known to be behind, ask the person for the commit they were last in sync with and run `npm run translate:prepare -- --since <sha>` on the very first run (it records that commit instead of the current one).
 2. **Read the work file** `.translation-work/pending.json`. Each entry has `id`, `file`, `locale` (`es` or `fr`), `collection`, `path`, `field` (the editor label), `hint` and `english`. Also read `scripts/translation-glossary.md`, and look at a few pairs in `scripts/translation-memory.json` for the tone.
 3. **Translate** only the entries in `pending.json`. Write `.translation-work/translated.json` as `{ "<id>": "<translation>" }`, one key for every entry, no others.
    - Never invent entries. Never edit `en` files. Never edit `es` or `fr` files by hand: the apply script writes them.
