@@ -26,6 +26,10 @@
         {
           "label": "La experiencia con la raya águila",
           "href": "/es/the-eagle-ray-experience/"
+        },
+        {
+          "label": "Historias de huéspedes",
+          "href": "/es/about-us/guest-stories/"
         }
       ],
       "_template": "dropdown"

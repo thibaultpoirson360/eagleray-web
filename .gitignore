@@ -31,3 +31,6 @@ dist/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# /translate working files (scripts/translate-prepare.mjs)
+.translation-work/

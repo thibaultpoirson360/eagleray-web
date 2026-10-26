@@ -4,10 +4,49 @@
     "Leader d'expédition"
   ],
   "skills": [
-    "Plongée sous-marine"
+    "Plongée sous-marine",
+    "Plongée avec tuba",
+    "Voile",
+    "Surf",
+    "Kayak",
+    "Navigation",
+    "Exploration terrestre"
   ],
+  "languages": [
+    {
+      "language": "Anglais"
+    },
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Français"
+    }
+  ],
+  "certificates": [
+    "PADI OWSI",
+    "Skipper Glénans niveau III",
+    "Permis bateau à moteur (12 milles nautiques)",
+    "Licence en gestion hôtelière (ESADE)",
+    "Master en gestion d'entreprise"
+  ],
+  "yearsOfExperience": 2,
+  "quote": "L'océan, c'est de l'émotion",
   "about": "Thibault a rencontré Alexis au Chili alors qu'ils n'avaient que cinq ans. Aujourd'hui, Alexis mène Eagle Ray sous la surface : un instructeur de plongée international dont les réflexes d'hospitalité cinq étoiles se sont affûtés au Ritz-Carlton et au Mandarin Oriental. Il lit une table comme il lit un site de plongée : vite, sans bruit, avant que les autres ne s'en aperçoivent. On l'appelle le Pirate, et il a mérité ce surnom. Il sait quelle crique secrète choisir, quelle histoire mérite d'être racontée à dîner et quand le silence en dit davantage. Avec Alexis à bord, les plongées d'exception finissent souvent en longs dîners à la française, autour d'un bon vin, et en moments qui entrent dans la légende de l'équipage.",
-  "image": "/assets/img/crew-alexis.jpeg",
+  "history": "\"Au Sri Lanka, j'ai encadré un groupe de 12 plongeurs français expérimentés. J'avais tout préparé avant qu'ils ne demandent : des robinets DIN sur chaque bloc, du lest supplémentaire pour le passage des blocs acier aux blocs aluminium, les bons outils pour leur matériel. Avec des plongeurs comme eux, les détails font l'expérience.\n\nEnfant, j'explorais toujours : les bateaux, l'océan, ce que j'appelle la vie de pirate. L'aventure en a toujours fait partie.\"",
+  "why": "\"Ce que j'aime sous l'eau : les poissons pélagiques, les requins, l'eau bleue et limpide, et la poésie de tout cela. Pour moi, l'océan, c'est de l'émotion.\n\nJe vois les guides comme des ambassadeurs de l'océan. Mon travail est de le partager et de transmettre pourquoi il mérite d'être protégé. Et après une longue plongée, un long dîner à la française.\"",
+  "images": [
+    "/assets/img/crew/alexis-06.webp",
+    "/assets/img/crew/alexis-01.webp",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Alexis_expedition_leader_with_Eagle_Ray_Expeditions_i2yj28.jpg",
+    "/assets/img/crew/alexis-02.webp",
+    "/assets/img/crew/alexis-04.webp",
+    "/assets/img/crew/alexis-05.webp",
+    "/assets/img/crew/alexis-08.webp",
+    "/assets/img/crew/alexis-09.webp",
+    "/assets/img/crew/alexis-10.webp"
+  ],
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/alexis-06_tic42z.webp",
   "imageAlt": "Alexis, chef d'expédition, Plongée sous-marine",
   "order": 2
 }

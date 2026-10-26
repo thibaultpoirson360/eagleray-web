@@ -1,8 +1,8 @@
 {
-  "name": "Olympia",
-  "tagline": "Downeast 38 — Monocoque à voile, construit en 1977",
-  "description": "L'Olympia navigue depuis 1977. C'est un monocoque de 38 pieds doté d'une cabine et d'une salle de bains, ce qui en fait un bateau pour deux personnes.",
-  "details": "L'Olympia navigue depuis 1977. C'est un monocoque de 38 pieds doté d'une cabine et d'une salle de bains, ce qui en fait un bateau idéal pour deux personnes : une lune de miel, un anniversaire de mariage ou quelques jours sans avoir à se soucier des projets des autres.\n\nLors d'une sortie à la journée, son pont peut accueillir dix à douze personnes. À deux, c'est tout l'espace dont vous rêvez : pour vous prélasser au soleil, manger en plein air, ou regarder le mouillage s'endormir la nuit. Sous le pont, une cabine unique à l'ambiance chaleureuse.",
+  "name": "Downeast 38",
+  "tagline": "Monocoque à voile",
+  "description": "Ce monocoque à voile navigue depuis 1977. C'est un monocoque de 38 pieds doté d'une cabine et d'une salle de bains, ce qui en fait un bateau pour deux personnes.",
+  "details": "Ce monocoque à voile navigue depuis 1977. C'est un monocoque de 38 pieds doté d'une cabine et d'une salle de bains, ce qui en fait un bateau pour deux personnes : une lune de miel, un anniversaire, ou quelques jours sans avoir à suivre les plans de quelqu'un d'autre.\n\nEn sortie à la journée, son pont accueille dix ou douze personnes. À deux, c'est tout l'espace dont on a envie : s'allonger au soleil, manger dehors, regarder le mouillage s'apaiser le soir. Sous le pont, une seule cabine à l'aménagement chaleureux.",
   "features": [
     "Monocoque à voile de 38 pieds, construit en 1977",
     "1 chambre, 1 salle de bains",
@@ -11,14 +11,13 @@
     "Aménagement intérieur chaleureux",
     "Séjours à partir d'une nuit"
   ],
-  "length": "38 pieds",
-  "cabins": "1",
-  "bathrooms": "1",
-  "guests": "jusqu'à 2",
-  "order": 3,
   "photo": "/assets/img/boats/olympia-09.webp",
-  "photoAlt": "Olympia",
+  "photoAlt": "Downeast 38",
   "photos": [
+    {
+      "image": "/assets/img/boats/olympia-05.webp",
+      "alt": "Olympia"
+    },
     {
       "image": "/assets/img/boats/olympia-09.webp",
       "alt": "Olympia"
@@ -37,10 +36,6 @@
     },
     {
       "image": "/assets/img/boats/olympia-04.webp",
-      "alt": "Olympia"
-    },
-    {
-      "image": "/assets/img/boats/olympia-05.webp",
       "alt": "Olympia"
     },
     {
@@ -67,5 +62,10 @@
       "image": "/assets/img/boats/olympia-12.webp",
       "alt": "Olympia"
     }
-  ]
+  ],
+  "length": "38 pieds",
+  "cabins": "1",
+  "bathrooms": "1",
+  "guests": "jusqu'à 2",
+  "order": 3
 }

@@ -2,35 +2,57 @@
   "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
   "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
   "title": "Navega con nosotros",
-  "subtitle": "Excursiones privadas en velero adaptadas a tu grupo.",
+  "subtitle": "Viajes privados en velero en La Paz, Baja California Sur, pensados en torno a tu grupo.",
+  "heroCta": {
+    "label": "Planifica tu viaje",
+    "href": "/es/customize-your-expedition/"
+  },
   "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
-  "expeditionsLabel": "Elige la expedición",
+  "expeditionsLabel": "Elige tu expedición",
   "expeditions": [
     {
-      "name": "El Día de Acción de Gracias con Sergio Torres",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
-      "imageAlt": "Expedición activa",
-      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
-      "href": "/es/landing/sergio-torres-thanksgiving/"
-    },
-    {
       "name": "Expedición de recalibración",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Expedición de recalibración",
-      "description": "Una expedición privada en velero para quienes desean desconectar junto a sus seres queridos, a un ritmo que nadie más marca. Tú eliges las fechas y el grupo.",
-      "href": "/es/recalibration-expedition/"
+      "badge": "Fechas limitadas · 22 al 29 de nov.",
+      "facts": "2 salidas · 3 noches cada una",
+      "priceNote": "Desde 4,000 USD",
+      "description": "Pesca submarina, buceo libre y días en el mar con tu propia gente. Dos salidas en velero en noviembre, de 3 noches cada una.",
+      "href": "/es/landing/sergio-torres-thanksgiving/",
+      "homeOrder": 2
     },
     {
-      "name": "Expedición ad hoc",
+      "name": "Bucea y navega con Monik Saab",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
+      "imageAlt": "Monik Saab, líder de expedición de Eagle Ray, buceando en La Paz",
+      "badge": "Fechas limitadas · noviembre de 2026",
+      "description": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Monik dirige las inmersiones, con todo el equipo a bordo.",
+      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/",
+      "facts": "3 salidas · 1 día, 3 noches o 5 noches",
+      "priceNote": "Desde 5,500 USD · barco completo",
+      "homeOrder": 1
+    },
+    {
+      "name": "El Día de Acción de Gracias con Sergio Torres",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "El Día de Acción de Gracias con Sergio Torres",
+      "facts": "3, 5 o 7 noches · barco privado",
+      "priceNote": "Desde 14,500 USD, barco completo",
+      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+      "href": "/es/recalibration-expedition/",
+      "homeOrder": 3
+    },
+    {
+      "name": "Tu propia expedición",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
-      "imageAlt": "Expedición náutica improvisada",
+      "imageAlt": "Una expedición en velero a medida",
       "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
       "href": "/es/ad-hoc-expedition/"
     }
   ],
   "activitiesTitle": "Añade actividades a tu expedición",
-  "activitiesSubtitle": "Nuestro equipo «Passionate Sea People» está formado por los instructores y especialistas que dirigen estas actividades marinas. Son la esencia misma de Eagle Ray Expeditions y, por tanto, de sus actividades.\nCada expedición se puede adaptar a las actividades marinas que más te interesen. Dinos qué te gustaría hacer y la diseñaremos contigo.",
-  "activitiesButtonLabel": "Más información",
+  "activitiesSubtitle": "Nuestra gente del mar apasionada son los instructores y especialistas detrás de estas actividades en el océano. Cada expedición puede adaptarse a las que más te importan. Cuéntanos qué te gustaría y la diseñamos contigo.",
+  "activitiesButtonLabel": "Contáctanos para más información",
   "activities": [
     {
       "name": "Buceo",
@@ -43,23 +65,23 @@
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en mi expedición."
     },
     {
-      "name": "Cometa",
+      "name": "Kitesurf",
       "featured": true,
       "text": "Sesiones de kitesurf en las condiciones adecuadas, con un guía experimentado.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
-      "imageAlt": "Cometa",
+      "imageAlt": "Kitesurf",
       "imageNote": "",
       "priceNote": "desde 360 USD por persona y día",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incorporar a Kite a mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incorporar kitesurf a mi expedición."
     },
     {
-      "name": "Buceo en apnea",
+      "name": "Buceo libre",
       "text": "Sesiones guiadas en aguas abiertas, dirigidas por un instructor cualificado.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
-      "imageAlt": "Buceo en apnea",
+      "imageAlt": "Buceo libre",
       "imageNote": "",
       "priceNote": "Precio a consultar",
-      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo en apnea en mi expedición."
+      "contactMessage": "Me gustaría recibir más información sobre cómo incluir el buceo libre en mi expedición."
     },
     {
       "name": "Snorkel",
@@ -102,8 +124,33 @@
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
     }
   ],
+  "howTitle": "Cómo funciona",
+  "howSteps": [
+    {
+      "title": "Cuéntanos quién viene",
+      "text": "Quién viene, cuándo quieres ir y cómo te gustaría que fueran tus días en el mar."
+    },
+    {
+      "title": "Lo planificamos en torno a tu grupo",
+      "text": "Nuestro equipo planifica el barco, la tripulación y la ruta en torno a tu grupo, y lo adapta día a día."
+    },
+    {
+      "title": "Volvemos con una propuesta",
+      "text": "Rellena el formulario y volveremos a ti con una propuesta."
+    }
+  ],
+  "closingTitle": "¿No sabes cuál es para ti?",
+  "closingText": "Cuéntanos sobre tu grupo y te orientaremos hacia la expedición adecuada.",
+  "closingPrimaryCta": {
+    "label": "Planifica tu viaje",
+    "href": "/es/customize-your-expedition/"
+  },
+  "closingSecondaryCta": {
+    "label": "Contáctanos",
+    "href": "/es/contact/"
+  },
   "seo": {
-    "title": "Navega con nosotros - Eagle Ray Expeditions",
+    "title": "Viajes privados en velero en La Paz | Eagle Ray Expeditions",
     "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
     "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
     "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."

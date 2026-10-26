@@ -1,0 +1,47 @@
+{
+  "name": "Andrea",
+  "roles": [
+    "Leader d'expédition"
+  ],
+  "skills": [
+    "Kayak",
+    "Snorkeling",
+    "Randonnée"
+  ],
+  "languages": [
+    {
+      "language": "Espagnol"
+    },
+    {
+      "language": "Anglais"
+    }
+  ],
+  "certificates": [
+    "Certificat Sailing Boat Mexico",
+    "Certificat Navega Escuela De Vela BCS",
+    "SEGBATUR",
+    "Libreta De Mar type C",
+    "STCW Formation de base à la lutte contre l'incendie",
+    "STCW Techniques de survie personnelle",
+    "STCW Sécurité personnelle et responsabilités sociales",
+    "STCW Premiers secours et RCP",
+    "Cours théorique RYA (Shorebased)",
+    "Premiers secours RYA",
+    "Survie en mer de base RYA/MCA",
+    "Certificat de courte portée RYA/GMDSS"
+  ],
+  "yearsOfExperience": 5,
+  "quote": "Il n'est pas nécessaire de savoir faire quelque chose pour commencer. On avance simplement un pas à la fois.",
+  "about": "\"Je suis Andrea, navigatrice et aventurière. J'ai traversé l'Atlantique à la rame avec Oceanida, et cela m'a appris qu'il n'est pas toujours nécessaire de se sentir prêt pour affronter l'inconnu : on fait confiance, on s'adapte et on continue, un coup de rame après l'autre.\n\nJ'ai passé cinq ans sur des bateaux, des charters et des excursions au Mexique, avec des groupes petits et moyens de tous âges et de tous niveaux : accueillir les invités, coordonner les activités, veiller à leur sécurité et adapter la journée au groupe. À bord, j'encadre le kayak, le snorkeling et les randonnées à terre.\"",
+  "history": "\"À Cozumel, j'ai guidé une famille dont les parents n'avaient jamais vraiment appris à nager. Ils voulaient aller dans l'eau et en avaient une peur terrible. Après le briefing de sécurité, je suis allée les voir pour comprendre ce qui leur faisait peur. Nous avons changé pour un endroit plus calme et abrité, je leur ai donné le bon équipement de sécurité et je suis restée près d'eux jusqu'à ce que, petit à petit, ils entrent dans l'eau. Ensuite, j'ai emmené le reste du groupe faire du snorkeling sur le récif. À la fin, les parents sont venus me remercier.\n\nAvant tout cela, j'ai travaillé dans la scénographie et vendu des excursions en bateau à Puerto Aventuras. Je voyais les bateaux partir chaque jour et je me demandais pourquoi je n'étais pas dessus. Je suis allée chercher du travail en mer, j'ai appris sur le tas, et quelques années plus tard j'ai traversé l'Atlantique à la rame.\"",
+  "why": "\"La mer est un maître : c'est à vous d'apprendre à vous adapter à elle. J'y trouve la liberté, et elle exige de l'humilité. Elle vous rappelle combien vous êtes petit et vous montre ce dont vous êtes capable.\n\nLa partager, c'est s'adapter aux conditions pour que chacun puisse la vivre à sa manière. La mer est notre route et notre façon d'arriver jusqu'ici : nous en profitons donc, nous la respectons et nous laissons le moins de traces possible, pour ceux qui viendront après.\"",
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_2_phmnnn.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_Preparing_material_xtqzbx.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_hnswzp.jpg"
+  ],
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+  "imageAlt": "Andrea, cheffe d'expédition chez Eagle Ray Expeditions",
+  "order": 9
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Andrea",
+  "roles": [
+    "Líder de Expedición"
+  ],
+  "skills": [
+    "Kayak",
+    "Snorkel",
+    "Senderismo"
+  ],
+  "languages": [
+    {
+      "language": "Español"
+    },
+    {
+      "language": "Inglés"
+    }
+  ],
+  "certificates": [
+    "Certificado Sailing Boat México",
+    "Certificado Navega Escuela De Vela BCS",
+    "SEGBATUR",
+    "Libreta de Mar tipo C",
+    "STCW Formación básica contra incendios",
+    "STCW Técnicas de supervivencia personal",
+    "STCW Seguridad personal y responsabilidades sociales",
+    "STCW Primeros auxilios y RCP",
+    "Curso teórico RYA (Shorebased)",
+    "Primeros auxilios RYA",
+    "Supervivencia básica en el mar RYA/MCA",
+    "Certificado de corto alcance RYA/GMDSS"
+  ],
+  "yearsOfExperience": 5,
+  "quote": "No necesitas saber hacer algo para empezar. Solo das un paso a la vez.",
+  "about": "\"Soy Andrea, navegante y aventurera. Crucé el Atlántico en un bote de remos con Oceanida, y me enseñó que no siempre hace falta sentirse lista para enfrentarse a lo desconocido: confías, te adaptas y sigues adelante, una remada a la vez.\n\nLlevo cinco años en barcos, chárteres y excursiones en México, con grupos pequeños y medianos de todas las edades y niveles: recibiendo a los huéspedes, coordinando actividades, cuidando de su seguridad y adaptando el día al grupo. A bordo, guío kayak, snorkel y caminatas en tierra.\"",
+  "history": "\"En Cozumel guié a una familia cuyos padres nunca habían aprendido a nadar bien. Querían meterse en el agua y les aterraba. Después del briefing de seguridad, me acerqué a ellos para entender qué les daba miedo. Nos movimos a un lugar más tranquilo y protegido, les di el equipo de seguridad adecuado y me quedé cerca hasta que, poco a poco, se metieron. Luego llevé al resto del grupo a hacer snorkel en el arrecife. Al final, los padres vinieron a darme las gracias.\n\nAntes de todo esto, trabajé en escenografía y vendía excursiones en barco en Puerto Aventuras. Veía salir los barcos cada día y me preguntaba por qué yo no estaba en ellos. Fui a buscar trabajo en el mar, aprendí sobre la marcha y unos años después crucé el Atlántico a remo.\"",
+  "why": "\"El mar es un maestro: eres tú quien aprende a adaptarse a él. Allí encuentro libertad, y a la vez exige humildad. Te recuerda lo pequeño que eres y te muestra de lo que eres capaz.\n\nCompartirlo significa adaptarse a las condiciones para que cada persona pueda vivirlo a su manera. El mar es nuestro camino y nuestra forma de llegar hasta aquí, así que lo disfrutamos, lo respetamos y dejamos la menor huella posible para quien venga después.\"",
+  "images": [
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_2_phmnnn.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_Preparing_material_xtqzbx.jpg",
+    "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_underwater_hnswzp.jpg"
+  ],
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+  "imageAlt": "Andrea, líder de expedición de Eagle Ray Expeditions",
+  "order": 9
+}

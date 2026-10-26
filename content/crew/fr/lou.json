@@ -4,8 +4,46 @@
     "Capitaine",
     "Leader d'expédition"
   ],
+  "skills": [
+    "Voile",
+    "Cerf-volant",
+    "Plongée en apnée",
+    "Ingénierie navale",
+    "Plongée libre",
+    "Paddle"
+  ],
+  "languages": [
+    {
+      "language": "Français"
+    },
+    {
+      "language": "Anglais"
+    },
+    {
+      "language": "Espagnol"
+    }
+  ],
+  "certificates": [
+    "Capitaine de yacht à voile 200 GT",
+    "Mécanicien naval 250 kW",
+    "Soins médicaux niveau II",
+    "Opérateur radio général",
+    "Apnéiste AIDA 2",
+    "PADI Open Water"
+  ],
+  "yearsOfExperience": 15,
+  "quote": "Le calme des profondeurs et l'eau lisse comme un miroir.",
   "about": "Lou est capitaine, spécialiste du kite et apnéiste ; elle a fait de la Baja sa maison. Elle ne prend pas le contrôle de l'atmosphère d'un bateau : elle la transforme. Les épaules se détendent, le souffle ralentit et les novices trouvent leur place. Lou lit la mer et les gens avec le même instinct, sachant quand apporter de l'énergie ou laisser de l'espace.",
+  "history": "\"L'histoire que je raconte le plus : avoir vu Kavachi, un volcan sous-marin actif aux îles Salomon.\n\nC'est en traversant l'équateur que j'ai compris ce que la navigation apporte à ma vie, et j'ai décidé de la consacrer à rapprocher d'autres personnes de l'océan.\"",
+  "why": "\"J'aime le calme de l'eau profonde et lisse comme un miroir, et l'adrénaline de la vague parfaite et du bon vent.\n\nCe que je recherche chez les invités, c'est l'étincelle dans leurs yeux quand la mer commence à agir sur eux. Je l'ai vue changer des gens, moi y compris.\"",
+  "images": [
+    "/assets/img/crew-lou.jpeg",
+    "/assets/img/crew/lou-01.webp",
+    "/assets/img/crew/lou-02.webp",
+    "/assets/img/crew/lou-03.webp",
+    "/assets/img/crew/lou-04.webp"
+  ],
   "image": "/assets/img/crew-lou.jpeg",
   "imageAlt": "Lou, capitaine et chef d'expédition",
-  "order": 9
+  "order": 2
 }

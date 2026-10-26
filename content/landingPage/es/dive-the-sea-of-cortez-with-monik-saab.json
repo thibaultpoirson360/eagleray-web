@@ -1,41 +1,470 @@
 {
-  "title": "Bucea en el mar de Cortés con Monik Saab",
+  "title": "Bucea y navega con Monik Saab",
   "blocks": [
     {
       "kicker": "Fechas limitadas · Noviembre de 2026",
-      "title": "Bucea en el mar de Cortés con Monik Saab",
-      "lede": "Para buceadores titulados. Bucea, navega y pasa la noche fondeado frente a Espíritu Santo, con un pequeño grupo de hasta 8 personas a bordo. 3 o 5 días: del 20 al 22 de noviembre, o del 25 al 29 de noviembre.",
+      "title": "Bucea y navega con Monik Saab",
+      "lede": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Monik dirige las inmersiones, con todo el equipo a bordo. La tripulación de Eagle Ray navega el barco, cocina y lee el mar. Para buceadores certificados. ¿Nunca has buceado? Pregúntanos por una primera sesión con Monik.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
-      "imageAlt": "Monike Saab, jefa de expedición y experta en buceo en La Paz",
+      "imageAlt": "Monik Saab, líder de expedición de Eagle Ray, buceando en La Paz",
+      "cta": {
+        "label": "Reserva una llamada",
+        "href": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab."
+      },
       "_template": "hero"
     },
     {
+      "title": "Tres formas de bucear con Monik en noviembre",
+      "intro": "Las tres zarpan de Marina Palmira, en La Paz, en un velero Beneteau Sense 55, con Monik, un capitán de Eagle Ray y un chef de Eagle Ray. Cada una es un chárter privado de todo el barco, para tu grupo. Las inmersiones y el equipo de buceo están incluidos. Elige una o combina dos seguidas.\n\n¿No sabes cuál encaja con tu grupo? Reserva una llamada con Monik o con el equipo de Eagle Ray y resolvemos tus dudas antes de que reserves.",
+      "options": [
+        {
+          "name": "Día de buceo",
+          "dates": "Lunes 23 de noviembre · salida de un día · 1 inmersión",
+          "boatLine": "Hasta 6 huéspedes",
+          "description": "Una inmersión en San Rafaelito, luego comida a bordo, snorkel y el resto del día en cubierta. De vuelta en la marina por la tarde.",
+          "priceSummary": "5,500 USD · barco completo",
+          "deadline": "Reserva antes del 5 de noviembre",
+          "priceRows": [],
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
+          "imageAlt": "Buceadores en San Rafaelito, La Paz",
+          "imageNote": "[PENDIENTE] Foto: buceo en San Rafaelito o comida en cubierta",
+          "bookLabel": "Reserva una llamada",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Reserva ahora",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        },
+        {
+          "name": "Una noche al ancla",
+          "dates": "Martes 24 de noviembre → miércoles 25 de noviembre · 1 noche · 2 inmersiones",
+          "boatLine": "2 camarotes para huéspedes (uno principal y uno estándar) · hasta 4 huéspedes",
+          "description": "Navega hacia el sur de Espíritu Santo, bucea en Fang Ming y quédate para el atardecer y la cena al ancla. A la mañana siguiente, buceo en Isla Ballena, luego comida a bordo y regreso a La Paz por la tarde.",
+          "priceSummary": "8,500 USD · barco completo",
+          "deadline": "Reserva antes del 5 de noviembre",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
+          "imageAlt": "El Beneteau Sense 55 al ancla frente a Espíritu Santo",
+          "imageNote": "[PENDIENTE] Foto: el Beneteau Sense 55 al ancla al atardecer",
+          "bookLabel": "Reserva una llamada",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Reserva ahora",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        },
+        {
+          "name": "Expedición de buceo de Acción de Gracias",
+          "featured": true,
+          "dates": "Jueves 26 de noviembre → domingo 29 de noviembre · 3 noches · 4 inmersiones, más una quinta si las condiciones y el grupo lo permiten",
+          "boatLine": "2 camarotes para huéspedes (uno principal y uno estándar) · hasta 4 huéspedes",
+          "description": "Tres noches alrededor de Espíritu Santo, con tiempo para llegar al norte y a la colonia de lobos marinos de Los Islotes. Cena de Acción de Gracias al ancla el jueves por la noche. Sin inmersión la última mañana: un desayuno tranquilo, un baño y de vuelta en la marina hacia el mediodía del domingo.",
+          "priceSummary": "14,500 USD · barco completo, buceo incluido",
+          "deadline": "Reserva antes del 5 de noviembre",
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
+          "imageAlt": "Buceadores en Acción de Gracias en La Paz",
+          "imageNote": "[PENDIENTE] Foto: buceo con los lobos marinos en Los Islotes",
+          "bookLabel": "Reserva una llamada",
+          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "reserveLabel": "Reserva ahora",
+          "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
+        }
+      ],
+      "bookingLabel": "Información sobre la reserva",
+      "bookingInfo": "* Reserva antes del 5 de noviembre.\n* Cada salida es un chárter privado de todo el barco, para tu grupo.\n* Empieza con una llamada: Monik y el equipo de Eagle Ray responden tus preguntas antes de que reserves.\n* Las condiciones de pago y cancelación se confirman contigo antes de reservar.\n\n¿Quieres más días o una fecha distinta para tu propio grupo? Escríbenos.\n",
+      "_template": "departures",
+      "fillPhotos": true,
+      "boatLinkLabel": "Ver el barco",
+      "includesLinkLabel": "Ver qué está incluido"
+    },
+    {
       "member": "Monique",
-      "body": "### **¿QUIÉN ES MONIK?**\n\n\\\nCreció en una playa de Brasil y pasó dieciséis años trabajando en grandes empresas y enseñando inglés antes de hacer del mar su profesión.\n\nSi le preguntas qué es lo que la mantiene allí, lo resume en una sola frase:\n\n> «En el océano, todos se ayudan entre sí. Ojalá fuera así también en tierra».\n\nMonik lleva a pequeños grupos de buceadores al mar de Cortés con Eagle Ray. A bordo, observa antes de hablar: quién está relajado, quién revisa su equipo dos veces, quién quiere descender más profundo.\nA continuación, planifica las inmersiones en función de ellos. Qué lugar elegir, a qué profundidad, cuándo sumergirse y cuándo es mejor quedarse en cubierta y contemplar cómo cambia la luz.\n\nActualmente es instructora de buceo PADI y guía de expediciones titulada en México.\\\nLleva seis años buceando en Baja California del Sur, uno de ellos viviendo en La Paz. Cuenta con licencia para ejercer de guía en las islas Revillagigedo.\\\nHa trabajado durante varias temporadas en yates con cubierta para helicópteros. Imparte sesiones informativas de buceo en inglés, español, portugués o alemán.\n\nSigue sus inmersiones en [@nikdive](https://www.instagram.com/nikdive/)\n",
+      "body": "## ¿QUIÉN ES MONIK?\n\nMonik creció junto a una playa en Brasil. Pasó dieciséis años en grandes empresas y dando clases de inglés, y después hizo del mar su trabajo.\n\nHoy es instructora de buceo PADI y guía de expediciones con licencia en México, con seis años buceando en Baja California Sur y licencia para guiar en las islas Revillagigedo.\n\nAntes de la primera inmersión, observa: quién está relajado, quién revisa su equipo dos veces, quién quiere ir más profundo. Después planifica cada inmersión en torno a ellos. Qué sitio, a qué profundidad, cuándo entrar y cuándo lo mejor es quedarse en cubierta.\n",
+      "collapseAbout": true,
+      "moreText": "Más sobre Monik:\n\n* Instructora de buceo PADI\n* Guía de turistas certificada por SECTUR (NOM-09)\n* Con licencia para guiar en las islas Revillagigedo\n* STCW y Libreta de Mar\n* Temporadas en yates con operaciones en helipuerto\n* Ha organizado viajes de buceo de varios días para su propia comunidad\n* Briefings de buceo en inglés, español, portugués o alemán\n\nSigue sus inmersiones y a sus alumnos en Instagram: [@nikdive](https://www.instagram.com/nikdive/)\n",
       "_template": "memberProfile"
+    },
+    {
+      "title": "Tu casa flotante",
+      "intro": "Las tres salidas navegan en el mismo barco.",
+      "detailsLabel": "Ver todas las fotos",
+      "boatItems": [
+        {
+          "boat": "beneteau-sense-55",
+          "banner": "/assets/img/boats/beneteau-sense-55-11.webp",
+          "bannerAlt": "La zona de descanso del cockpit del Beneteau Sense 55",
+          "tag": "Las tres salidas",
+          "tripNote": "Salidas con noche: 2 camarotes para huéspedes (uno principal y uno estándar) · hasta 4 huéspedes. El tercer camarote se reserva para Monik. Día de buceo: hasta 6 huéspedes.",
+          "displayName": "Beneteau Sense 55",
+          "subtitle": "Velero",
+          "about": "El Beneteau Sense 55 es el más íntimo de los barcos de Eagle Ray, un monocasco de 60 pies construido para grupos que buscan la sensación clásica de navegar, y no solo un barco que tiene velas. Gracias a sus tres suites privadas, cada pareja tiene una puerta que puede cerrar, y todo el grupo puede sentarse junto alrededor de la misma mesa en el cockpit para cenar. Una plataforma de baño hidráulica desciende directamente al agua, así que para nadar o hacer snorkel no hace falta bajar por una escalera. Además, se comporta distinto que un catamarán: más escora y más respuesta al timón, ideal para grupos que quieren disfrutar tanto de la navegación como del destino.",
+          "specs": [
+            {
+              "label": "Tipo",
+              "value": "Velero"
+            },
+            {
+              "label": "Eslora",
+              "value": "60 pies"
+            },
+            {
+              "label": "Camarotes para huéspedes",
+              "value": "2"
+            },
+            {
+              "label": "Invitados",
+              "value": "hasta 4"
+            }
+          ],
+          "featureList": [
+            "Monocasco de 60 pies",
+            "3 suites privadas",
+            "Mesa en el cockpit con espacio para 10 personas",
+            "Plataforma de baño hidráulica",
+            "Paquete de velas de alto rendimiento"
+          ],
+          "similarNote": "O un barco similar con características iguales o superiores."
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Qué está incluido",
+      "includedTitle": "Incluido",
+      "included": "**Barco**\n\n* El barco de tu salida, o uno similar con características iguales o superiores\n* Chárter privado de todo el barco, para tu grupo\n\n**Tripulación**\n\n* Monik Saab, líder de expedición de Eagle Ray\n* Capitán de Eagle Ray\n* Chef de Eagle Ray\n\n**Buceo**\n\n* Inmersiones guiadas con Monik para buceadores certificados: 1 en el Día de buceo, 2 en Una noche al ancla, 4 en la expedición de Acción de Gracias\n* Equipo de buceo completo: botellas, lastre, chaleco, regulador y traje de neopreno\n* Planificación de las inmersiones según el nivel y el logbook de cada buceador\n* Logística de buceo según el itinerario\n\n**Equipo**\n\n* Equipo de snorkel\n* Kit de pesca\n* 2 tablas de paddle\n* 1 kayak\n* 1 auxiliar\n* Equipo de playa (sillas, toldo, etc.)\n\n**Comidas y bebidas**\n\n* Todas las comidas a bordo\n* Bebidas sin alcohol\n\n**Traslado**\n\n* Aeropuerto de La Paz ↔ marina, a la llegada y a la salida, en las tres salidas\n* También se pueden organizar con Eagle Ray, bajo petición, traslados desde cualquier punto de Baja California Sur hasta la marina\n\n**Extras**\n\n* Diésel\n* Permisos de navegación y entrada a parques nacionales\n* Wifi Starlink a bordo\n* Licencia de pesca para cada adulto a bordo\n",
+      "notIncludedTitle": "No incluido",
+      "notIncluded": "* Vuelos a La Paz\n* Bebidas alcohólicas, elegidas de un menú antes del viaje\n* Una primera sesión de buceo para huéspedes no certificados (Discover Scuba): disponible como experiencia adicional, precio bajo petición\n* La quinta inmersión de la expedición de Acción de Gracias: precio bajo petición\n* Otras actividades guiadas, cotizadas por separado\n* Propinas a la tripulación (se recomienda entre el 10 y el 15 %)\n* Seguro de viaje\n",
+      "gallery": [],
+      "_template": "includes"
+    },
+    {
+      "title": "La ruta",
+      "intro": "El Día de buceo y Una noche al ancla salen de Marina Palmira a las 07:45, cuando el mar está más tranquilo para navegar y bucear. En la Expedición de buceo de Acción de Gracias, los huéspedes llegan hacia el mediodía y la ruta empieza a la mañana siguiente.",
+      "places": [
+        {
+          "key": "lapaz",
+          "name": "La Paz",
+          "sub": "Marina Palmira · salida y llegada",
+          "lat": 24.1585,
+          "lon": -110.3245
+        },
+        {
+          "key": "sanrafaelito",
+          "name": "San Rafaelito",
+          "sub": "Buceo, comida y snorkel",
+          "lat": 24.2949,
+          "lon": -110.3408
+        },
+        {
+          "key": "fangming",
+          "name": "Sur de Espíritu Santo",
+          "sub": "Inmersión en Fang Ming",
+          "lat": 24.4229,
+          "lon": -110.3148
+        },
+        {
+          "key": "ballena",
+          "name": "Isla Ballena",
+          "sub": "Inmersión",
+          "lat": 24.4829,
+          "lon": -110.4044
+        },
+        {
+          "key": "islotes",
+          "name": "Los Islotes",
+          "sub": "Colonia de lobos marinos",
+          "lat": 24.5988,
+          "lon": -110.402
+        },
+        {
+          "key": "espwest",
+          "name": "Espíritu Santo",
+          "sub": "Roca Tintorera o Los Muellecitos",
+          "lat": 24.5042,
+          "lon": -110.4068
+        }
+      ],
+      "trips": [
+        {
+          "tab": "Día de buceo",
+          "beats": [
+            {
+              "label": "Día de buceo · 23 de noviembre",
+              "title": "La Paz → San Rafaelito",
+              "text": "1 inmersión, comida a bordo, snorkel y tiempo en cubierta.",
+              "from": "lapaz",
+              "to": "sanrafaelito",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_San_Rafaelito_cazls3.jpg",
+              "imageAlt": "La Paz → San Rafaelito"
+            },
+            {
+              "label": "Día de buceo · 23 de noviembre",
+              "title": "San Rafaelito → La Paz",
+              "text": "De vuelta en la marina por la tarde.",
+              "from": "sanrafaelito",
+              "to": "lapaz",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
+              "imageAlt": "San Rafaelito → La Paz"
+            }
+          ]
+        },
+        {
+          "tab": "Una noche",
+          "beats": [
+            {
+              "label": "Una noche al ancla · del 24 al 25 de noviembre · Día 1",
+              "title": "La Paz → sur de Espíritu Santo",
+              "text": "Inmersión en Fang Ming, atardecer y cena al ancla.",
+              "night": "Noche al ancla · sur de Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_Espíritu_santo_fgfljy.jpg",
+              "imageAlt": "La Paz → sur de Espíritu Santo"
+            },
+            {
+              "label": "Una noche al ancla · del 24 al 25 de noviembre · Día 2",
+              "title": "Isla Ballena → La Paz",
+              "text": "Desayuno, inmersión en Isla Ballena, comida a bordo y regreso a La Paz por la tarde.",
+              "from": "fangming",
+              "via": [
+                "ballena"
+              ],
+              "to": "lapaz",
+              "imageAlt": "Isla Ballena → La Paz"
+            }
+          ]
+        },
+        {
+          "tab": "Acción de Gracias",
+          "beats": [
+            {
+              "label": "Expedición de buceo de Acción de Gracias · del 26 al 29 de noviembre · Día 1",
+              "title": "La Paz → sur de Espíritu Santo",
+              "text": "Los huéspedes llegan hacia el mediodía. Navegación al sur para la primera noche al ancla, con la cena de Acción de Gracias a bordo.",
+              "night": "Noche al ancla · sur de Espíritu Santo",
+              "from": "lapaz",
+              "to": "fangming",
+              "imageAlt": "La Paz → sur de Espíritu Santo"
+            },
+            {
+              "label": "Expedición de buceo de Acción de Gracias · Día 2",
+              "title": "Los Islotes y el norte de Espíritu Santo",
+              "text": "Inmersión en Los Islotes con la colonia de lobos marinos, una comida larga y luego una inmersión en El Bajito.",
+              "from": "fangming",
+              "to": "islotes",
+              "imageAlt": "Los Islotes y el norte de Espíritu Santo"
+            },
+            {
+              "label": "Expedición de buceo de Acción de Gracias · Día 3",
+              "title": "Espíritu Santo",
+              "text": "Mañana tranquila con kayak, playa y snorkel. Inmersión en Roca Tintorera o Los Muellecitos, según las condiciones y el nivel del grupo. Una quinta inmersión en Isla Ballena para los grupos que quieran más. Después, navegación al sur para la última noche.",
+              "night": "Noche al ancla",
+              "from": "islotes",
+              "to": "espwest",
+              "imageAlt": "Espíritu Santo"
+            },
+            {
+              "label": "Expedición de buceo de Acción de Gracias · Día 4",
+              "title": "De vuelta a La Paz",
+              "text": "Desayuno, un baño, sin inmersión. De vuelta en la marina hacia el mediodía.",
+              "from": "espwest",
+              "to": "lapaz",
+              "imageAlt": "De vuelta a La Paz"
+            }
+          ]
+        }
+      ],
+      "mapNote": "Ruta y fondeaderos propuestos. El plan final depende del clima. Las posiciones son aproximadas. Datos del mapa © colaboradores de OpenStreetMap.",
+      "footnote": "Ruta indicativa. Depende del mar, del viento, de los permisos y de la decisión del capitán. En noviembre pueden entrar vientos del norte y, si lo hacen, cambiamos el orden de los sitios o nos quedamos en el mismo fondeadero.",
+      "_template": "cinematicRoute"
+    },
+    {
+      "title": "¿Cómo es un día a bordo con Monik?",
+      "intro": "Cada día tiene una estructura, no un horario. Monik y el capitán la ajustan al viento, a la visibilidad y a cómo bucea el grupo. Nadie tiene que hacer todas las inmersiones.",
+      "steps": [
+        {
+          "stepLabel": "Primera hora de la mañana",
+          "stepTitle": "Navegación",
+          "stepText": "Café en cubierta mientras el capitán lleva el barco al primer sitio."
+        },
+        {
+          "stepLabel": "Mañana",
+          "stepTitle": "Primera inmersión",
+          "stepText": "Monik da el briefing al grupo en cubierta y luego entran al agua."
+        },
+        {
+          "stepLabel": "Mediodía",
+          "stepTitle": "Mesa",
+          "stepText": "Comida preparada a bordo con productos locales y tiempo para hablar de lo que viste allá abajo."
+        },
+        {
+          "stepLabel": "Tarde",
+          "stepTitle": "Segunda inmersión o tiempo libre",
+          "stepText": "Los días con una segunda inmersión, Monik lleva al grupo de nuevo al agua. Los demás: kayak, paddleboard, un paseo por la playa de una isla. O nada en absoluto."
+        },
+        {
+          "stepLabel": "Atardecer",
+          "stepTitle": "Cubierta",
+          "stepText": "Los logbooks, la luz que cae sobre el desierto, el plan del día siguiente."
+        },
+        {
+          "stepLabel": "Noche",
+          "stepTitle": "Al ancla",
+          "stepText": "Cena a bordo. Si ese día hubo pesca, está en la mesa."
+        }
+      ],
+      "_template": "timeline"
+    },
+    {
+      "primaryLabel": "Reserva ahora",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contáctanos para más información",
+      "secondaryMessage": "Me gustaría recibir más información sobre las expediciones de buceo con Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Bucear con Monik",
+      "blurb": "La última comprobación, el paso fuera del barco, el ruido de la superficie que desaparece. Luego solo quedan tu respiración y lo que el mar decida mostrarte.",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.29_6_fkcump.jpg",
+          "alt": "Monik con un grupo de buceadores en La Paz"
+        }
+      ],
+      "photoNote": "[PENDIENTE] Fotos: Monik buceando con el grupo y la panga de buceo",
+      "moreLabel": "Más sobre el buceo",
+      "more": "Te despiertas al ancla con el sitio de buceo cerca. Sin trayecto a la marina, sin vuelta a un hotel. Entre inmersiones navegas, nadas, comes lo que ha cocinado el chef y hablas de lo que viste hasta que llega la hora de volver al agua.\n\n**Nivel**\n\n* Para buceadores certificados. Monik revisa las certificaciones y los logbooks antes del viaje y planifica cada inmersión en torno al grupo.\n* Algunos sitios piden Advanced Open Water.\n* ¿Viajas con alguien que todavía no bucea? Cuéntanoslo antes del viaje y Monik le prepara una primera sesión, con un suplemento.\n\n**Equipo**\n\n* Todo el equipo de buceo está a bordo e incluido. Trae el tuyo si lo prefieres.\n* Las inmersiones salen de nuestra panga de buceo, con la tripulación de Eagle Ray.\n\n**Inmersiones**\n\n* Día de buceo: 1 inmersión\n* Una noche al ancla: 2 inmersiones\n* Expedición de Acción de Gracias: 4 inmersiones, más una quinta si las condiciones y el grupo lo permiten\n\n**Seguridad**\n\n* Siempre en parejas, nunca solo en el agua.\n* Monik en el agua con el grupo, con el barco cerca.\n\n**Dónde**\n\n* En los sitios que el capitán y Monik eligen cada día: San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* No prometemos un sitio concreto: el mar decide primero.\n\n**Entre inmersiones**\n\n* Snorkel, natación, kayak, paddleboard, paseos por las islas y pesca donde está permitida.\n",
+      "_template": "feature"
     },
     {
       "images": [
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_with_clients_gqg9t2.jpg",
-          "alt": "Monike Saab, jefa de la expedición «Eagle Ray», antes de una inmersión "
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_seiwxx.jpg",
+          "alt": "Monik Saab, líder de expedición de Eagle Ray, antes de una inmersión"
         },
         {
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expediton_Leader_-_Monik_Saab_-_Scuba_dxiktq.avif",
-          "alt": "Monike Saab buceando en La Paz"
+          "alt": "Monik Saab buceando en La Paz"
         },
         {
-          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_Preparing_clients_for_scuba_vdbptj.avif",
-          "alt": "Monike prepara a los clientes antes de una inmersión en La Paz Eagle Ray Expeditions"
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Expedition_Leader_-_Monik_Saab_-_WITH_CLIENTS_wx5hxs.jpg",
+          "alt": "Monik Saab preparando a los buceadores antes de una inmersión en La Paz"
         }
       ],
       "_template": "imageGallery"
     },
     {
-      "title": "Ver la expedición completa",
+      "title": "Monik no navega sola,",
+      "titleEmphasis": "conoce a tu tripulación de Eagle Ray",
+      "blurb": "En Eagle Ray, cada expedición está dirigida por personas que viven el mar. Con Monik viajan un capitán, que maneja el barco, lee el mar y elige cada fondeadero según el viento, y un chef que cocina con productos locales.",
+      "linkLabel": "Gente del mar apasionada",
+      "linkHref": "/en/passionate-sea-people/",
+      "members": [
+        "benji",
+        "lou",
+        "roberto",
+        "javier",
+        "antoine",
+        "ana"
+      ],
+      "note": "El equipo se asigna según el barco y las fechas; confirmamos al equipo de Eagle Ray cuando haces la preinscripción final. Para que vayas conociéndolos, estos son algunos de los capitanes y chefs con los que navegamos.",
+      "_template": "crewShowcase"
+    },
+    {
+      "primaryLabel": "Reserva ahora",
+      "primaryHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products",
+      "secondaryLabel": "Contáctanos para más información",
+      "secondaryMessage": "Me gustaría recibir más información sobre las expediciones de buceo con Monik Saab.",
+      "_template": "actions"
+    },
+    {
+      "title": "Preguntas frecuentes",
+      "questions": [
+        {
+          "question": "¿Necesito estar certificado?",
+          "answer": "Sí, este viaje es para buceadores certificados. Si vienes con alguien que nunca ha buceado, cuéntanoslo antes del viaje: Monik puede prepararle una primera sesión, disponible como experiencia adicional, precio bajo petición."
+        },
+        {
+          "question": "¿Puedo venir con alguien que no bucea?",
+          "answer": "Sí. Puede hacer snorkel, kayak, paddle y disfrutar del barco, o probar una primera sesión de buceo con Monik como experiencia adicional, precio bajo petición. El precio del chárter es el mismo."
+        },
+        {
+          "question": "¿Comparto el barco con otros huéspedes?",
+          "answer": "No. Cada salida es un chárter privado de todo el barco, para tu grupo."
+        },
+        {
+          "question": "¿Cuántas personas habrá a bordo?",
+          "answer": "Hasta 4 huéspedes en las salidas con noche y hasta 6 en el Día de buceo, además de Monik, el capitán y el chef."
+        },
+        {
+          "question": "¿Cómo reservo?",
+          "answer": "Reserva una llamada con nosotros por WhatsApp. Monik o el equipo de Eagle Ray responden primero tus preguntas y luego puedes reservar y pagar en línea."
+        },
+        {
+          "question": "¿Puedo unir dos salidas seguidas?",
+          "answer": "Sí, habla con nosotros y las combinamos."
+        },
+        {
+          "question": "¿Tengo que llevar equipo de buceo?",
+          "answer": "No, todo el equipo está a bordo e incluido. Trae tu tarjeta de certificación y tu logbook. Si tienes tu propia máscara, computadora o traje de neopreno, puedes traerlos."
+        },
+        {
+          "question": "¿Puedo volar después de bucear?",
+          "answer": "Sí, con margen. Monik planifica la última inmersión para que tengas las horas que necesitas antes de tu vuelo. En la expedición de Acción de Gracias no hay inmersión la última mañana."
+        },
+        {
+          "question": "¿Qué pasa si cambia el clima?",
+          "answer": "El capitán decide la ruta cada día según el viento y el mar. Si un sitio no se puede bucear, vamos a otro o nos quedamos en un fondeadero protegido. La prioridad es la seguridad del grupo y volver a La Paz a tiempo."
+        },
+        {
+          "question": "¿Cuánta propina debo dar?",
+          "answer": "Recomendamos entre el 10 y el 15 % del precio del viaje."
+        },
+        {
+          "question": "¿Cuánto pago para reservar y qué pasa si necesito cancelar?",
+          "answer": "Reserva antes del 5 de noviembre, después de una llamada con Monik o con el equipo de Eagle Ray. Confirmamos contigo las condiciones de pago y cancelación antes de que reserves."
+        },
+        {
+          "question": "¿Necesito licencia de pesca?",
+          "answer": "El mar de Cortés la exige para cada adulto a bordo. Está incluida."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Conviene saber antes de venir",
+      "questions": [
+        {
+          "question": "Moneda local",
+          "answer": "Peso mexicano (MXN). Billetes de $20 a $1,000 MXN; los de $500 y $1,000 a veces son difíciles de cambiar en tiendas pequeñas. Los hoteles y la mayoría de los negocios turísticos de La Paz aceptan tarjeta, pero en lugares más pequeños necesitarás efectivo. Hay cajeros automáticos por toda la ciudad.\n\nNo lo necesitarás a bordo: las comidas y las bebidas sin alcohol están incluidas."
+        },
+        {
+          "question": "Cómo llegar",
+          "answer": "El aeropuerto de La Paz (LAP) está a 20 minutos de la marina, con vuelos nacionales y algunas rutas a Estados Unidos.\n\nEl traslado del aeropuerto a la marina está incluido.\n\nEl aeropuerto de Los Cabos está a 2 horas por carretera y a veces es más conveniente, según desde dónde vueles; si es tu caso, escríbenos y lo vemos."
+        },
+        {
+          "question": "Comida",
+          "answer": "La cocina de La Paz gira en torno al mar: almejas chocolata cocinadas sobre piedras calientes, ceviche con un toque de mayonesa, quesadillas de marlín o de pulpo y machaca, carne de res o de cerdo seca, el clásico que no viene del mar. Los tacos de pescado son un icono de la península (nacieron más al norte, en Ensenada), pero aquí están igual de en casa.\n\nA bordo, el chef cocina con lo que ofrecen estas mismas aguas, salvo que pidas otra cosa."
+        },
+        {
+          "question": "Qué llevar",
+          "answer": "Consejo: lleva menos de lo que crees.\n\nA bordo solo necesitas un traje de baño seco para cambiarte; la tripulación se encarga del resto.\n\nPara todo lo demás, ropa ligera de tejidos naturales para el calor seco, algo para las tardes más frescas y un sombrero, porque el sol del desierto pega directo.\n\nPara bucear: tu tarjeta de certificación y tu logbook. El resto del equipo está a bordo."
+        },
+        {
+          "question": "Clima",
+          "answer": "Clima desértico, seco casi todo el año.\n\nNoviembre: pueden entrar vientos del norte, que traen un mar corto y picado. Por eso el capitán decide la ruta cada día.\n\nInvierno (de diciembre a febrero): suave, de 18 a 24 °C, la temporada más agradable.\n\nPrimavera (abril y mayo): el calor empieza a subir.\n\nVerano (de junio a agosto): caluroso y húmedo, de 28 a 31 °C.\n\nTemporada de huracanes: del 15 de mayo al 30 de noviembre, con el riesgo concentrado en agosto y septiembre."
+        },
+        {
+          "question": "Conexión",
+          "answer": "En el mar la señal es limitada, así que cuenta con estar desconectado buena parte del día.\n\nEn La Paz el wifi funciona bien. Starlink a bordo."
+        }
+      ],
+      "_template": "faq"
+    },
+    {
+      "title": "Hablemos de tu expedición",
+      "lede": "Encuéntranos directamente por WhatsApp o por correo: +52 55 6809 0942 · hello@eaglerayexpeditions.com",
       "cta": {
-        "label": "Ver la expedición completa",
-        "href": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special"
+        "label": "Contáctanos para más información",
+        "href": "/es/contact/"
       },
       "_template": "cta"
     },
@@ -44,13 +473,14 @@
       "hideLogo": true,
       "hideTitle": true,
       "height": 600,
+      "iframeTitle": "Bucea y navega con Monik Saab",
       "_template": "moguProposal"
     }
   ],
   "seo": {
-    "title": "Buceo en el mar de Cortés con Monik Saab | Eagle Ray Expeditions",
-    "description": "Expediciones de buceo de 3 o 5 días para buceadores titulados en La Paz, Baja California del Sur. Bucea, navega y pasa la noche fondeado con Monik Saab. Noviembre de 2026",
-    "ogTitle": "Bucea en Baja California con Monik Saab",
-    "ogDescription": "Un grupo reducido, un velero y unos días en el mar frente a las costas de Espíritu Santo. Para buceadores certificados, del 20 al 22 y del 25 al 29 de noviembre."
+    "title": "Bucea y navega con Monik Saab | Eagle Ray Expeditions",
+    "description": "Bucea un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo, La Paz. Monik Saab dirige las inmersiones, con todo el equipo a bordo. Para buceadores certificados.",
+    "ogTitle": "Bucea y navega con Monik Saab",
+    "ogDescription": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Para buceadores certificados, noviembre de 2026."
   }
 }

@@ -26,6 +26,10 @@
         {
           "label": "L'expérience Eagle Ray",
           "href": "/fr/the-eagle-ray-experience/"
+        },
+        {
+          "label": "Témoignages de nos invités",
+          "href": "/fr/about-us/guest-stories/"
         }
       ],
       "_template": "dropdown"

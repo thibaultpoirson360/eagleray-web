@@ -1,114 +1,102 @@
-# Translation automation (DeepL draft PRs)
+# Translations (`/translate`)
 
-What `.github/workflows/translate-content.yml` does, for whoever reviews the
-PRs it opens (or has to debug a run that failed). One-time setup (getting a
-DeepL key, adding the GitHub secret) is `docs/tina-setup.md` section 13, not
-here.
+How the Spanish and French text is made and reviewed. English is the source;
+Spanish and French are drafted by the assistant when a person runs `/translate`
+in Claude Code on a separate branch, and checked by that person on the local
+site before anything is merged. **Nothing is translated automatically when
+someone saves in the editor.**
 
-## The flow, in one sentence
+> **Step-by-step for non-developers: `docs/how-to-translate.md`.**
 
-**A push to `main` that changes English content -> a script drafts ES/FR
-translations with DeepL -> the workflow commits them straight to `main`
-(no pull request) -> a person reviews and corrects them in the editor.**
+## Who runs it, and when
 
-> **Current behaviour.** The workflow no longer opens a pull request. Drafts
-> (and deletions of translations whose English source was removed) are
-> committed directly to `main` by `github-actions[bot]`, so they go live as
-> soon as `main` deploys, but only in languages listed in `PUBLIC_LIVE_LOCALES`.
-> The sections below that describe the pull request, the `staging` branch and
-> the review/merge steps describe the earlier flow and no longer apply. Fix a
-> bad draft in the editor or in `scripts/translation-memory.json`. If `main`
-> has branch protection, the bot needs permission to push to it.
+Whoever finishes a batch of English edits (a new page, a round of changes in
+the editor) runs **`/translate`** in Claude Code, once per batch, not once per
+save. Until then Spanish and French keep showing their last reviewed text: if
+nobody runs it, nothing breaks, the other languages are just behind English.
 
-## 1. Trigger
+Before running it, English changes must be committed (editor saves already are,
+once pulled). The scripts compare against the commit the translations were last
+in sync with.
 
-`on: push` to `main`, path-filtered to:
+## What happens
 
-```
-content/**/en.json
-content/**/en/*.json
-```
+1. **`npm run translate:prepare`** (no network, no AI). For every English file
+   it pairs the current Spanish/French with the English they were written from
+   (`git show <sha>:<file>`) and decides, string by string:
+   - English text that did not change keeps its current translation, **including
+     a reviewer's corrections**, even if the string moved (reordered lists);
+   - a new or edited string that is in `scripts/translation-memory.json` takes
+     the memory's wording;
+   - everything else is written to `.translation-work/pending.json`
+     (git-ignored), with the field label and the collection as context.
+   It prints counts per language and per file, and says plainly when nothing
+   needs translating. Large batches are split into whole files; run `/translate`
+   again for the rest.
+2. **The assistant translates** only those strings into
+   `.translation-work/translated.json`, following `scripts/translation-glossary.md`
+   and the tone of the approved translations (informal *tú* in Spanish, formal
+   *vous* in French, today).
+3. **`npm run translate:apply`** checks the result and only then writes the
+   files: every id present, no extra ids, no empty text, link and image targets
+   unchanged, line breaks unchanged. It warns (does not fail) on text returned
+   unchanged, odd length ratios and changed `*`/`` ` `` markers. It also removes
+   translations of deleted English documents (see below) and updates
+   `scripts/translation-state.json`. If a check fails nothing is written.
+4. **The assistant reports** the files written, how many strings were
+   translated / reused / taken from the memory, the warnings and any open
+   question for a native reviewer.
+5. **The assistant commits on a branch** named `translations-YYYY-MM-DD` (made
+   from an up-to-date `main` at the start) and pushes it as a backup. It opens
+   no pull request.
+6. **The person checks locally.** The assistant starts the local site and lists
+   the pages that changed in Spanish and French. Corrections are made on the
+   branch (through the editor or by asking the assistant).
+7. **Only when the person clearly approves**, the assistant merges the branch
+   into `main`, pushes `main` and deletes the branch. If the person says no or
+   is unsure, `main` is untouched and the branch stays. The person who ran
+   `/translate` is the one who approves; having a Spanish and a French speaker
+   read the text first is recommended.
 
-This is the exact shape of every EN source file in this repo today —
-confirmed against `tina/collections/*.ts` and the actual `content/` tree, not
-assumed as `content/en/**` (locale is *inside* each collection's folder here,
-not a top-level split):
+`npm run translate:status` lists the English files that are out of date without
+writing anything. The first ever run (no `scripts/translation-state.json`)
+treats the current Spanish and French as up to date with the current commit. If
+the translations are behind, start from an earlier commit instead:
+`npm run translate:prepare -- --since <sha>` (first run only).
 
-- **One document per locale** (`hero`, `difference`, `crewSection`,
-  `crewPage`, `wildlife`, `boatsSection`, `funnel`, `contactPage`,
-  `blogSection`, `navigation`, `footer`): `content/<collection>/en.json`.
-- **Multiple documents per locale** (`crew`, `boats`, `blogPost`,
-  `landingPage`): `content/<collection>/en/<slug>.json`.
+If a file's earlier English and its translation have a different structure
+(the translation is missing fields), the strings are matched **by field path**:
+a string is kept only if its English is unchanged and the translation has that
+field; everything else is drafted again. The report lists these files; read
+them closely.
 
-`siteSettings` and `editors` are **not** locale-routed (`ui.global: true`, a
-single `content/<folder>/index.json`) — they don't match either pattern and
-this workflow never touches them. That's deliberate: they hold brand facts
-(phone, WhatsApp, coordinates, the depth gauge's max depth) and the editor
-allowlist, nothing that is a translatable word. (`navigation` and `footer`
-used to be global too; they became one document per locale when ES/FR were
-enabled, because the nav labels, button text and accessible names are words.
-Any *word* that needs a translation must live in a per-locale collection.)
+## Reading the report
 
-`workflow_dispatch` is the manual trigger, with a **`scope`** input:
+- **translated**: new or edited English, translated by the assistant. Review these.
+- **reused**: English unchanged since the last sync; the existing translation
+  (reviewed or not) was kept as it is.
+- **memory**: new or edited English that matched `translation-memory.json`.
+- **warning "cannot be paired"**: the English file and its translation did not
+  have the same structure, so only the memory and matching strings from other
+  files were reused. Check that file closely.
+- **warning "returned unchanged"** or **"length ratio"**: probably fine for a
+  name or a short label; otherwise look at it.
 
-| scope | What it translates | Use it for |
-|---|---|---|
-| `changed` | the EN files the last commit changed | re-running after fixing a bad `DEEPL_API_KEY` |
-| `missing` (default) | **every** EN document, but only the ES/FR files that **don't exist yet** — never touches an existing (possibly reviewed or hand-edited) translation | bringing the whole site to a language for the first time; filling gaps |
-| `all` | every EN document, **overwriting** every existing ES/FR file | deliberately redoing everything; discards reviewed edits |
+## Correcting a translation (reviewers)
 
-A push to `main` always uses `changed`; only a manual run can pick a wider
-scope. The workflow only reacts to *future* pushes, so the first time a
-language is enabled, run it once by hand with `missing`.
-
-## 2. Translate
-
-`node --experimental-strip-types scripts/translate-content.mjs` does the
-work, with **zero npm dependencies** — `fetch`, `node:fs`, `node:path`,
-`node:child_process`, `node:module` only, which is why the Action has no
-`npm ci` step.
-
-1. **Resolve which files changed.** Explicit file arguments (used for local
-   testing), or `git diff $GIT_BASE_SHA...$GIT_HEAD_SHA` (the workflow sets
-   these from `github.event.before` / `github.sha`). If that diff fails for
-   any reason — no `before` SHA on a manual run, a brand-new branch's first
-   push (`before` is the all-zeros SHA), a shallow checkout — it falls back
-   to a full rescan of every EN content file, so a run degrades to
-   "translate everything" rather than silently translating nothing.
-2. **Load the real Tina schema.** `scripts/lib/tina-schema.mjs` imports every
-   `tina/collections/*.ts` file directly (via
-   `scripts/lib/ts-resolve-hook.mjs`, a small Node ESM resolve hook — see
-   below) and indexes each collection by the folder name in its own `path`
-   (e.g. `content/crew` -> `crew`). No `tinacms build`, no Tina credentials.
-3. **Walk each changed document against its collection's field schema**
-   (`scripts/lib/translatable-content.mjs`) and decide, per field, whether
-   it's translatable — see "What gets translated" below.
-4. **Send the translatable strings to DeepL** (`scripts/lib/deepl.mjs`, one
-   batched request per document per target language) and write the results
-   to `content/<collection>/es.json` / `.../fr.json` (or the `<locale>/<slug>.json`
-   form for multi-doc collections) — same 2-space-indent + trailing-newline
-   format as every other content file.
-
-### Why `--experimental-strip-types` + a resolve hook, not `tinacms build`
-
-Running the real `tina/collections/*.ts` files (rather than re-declaring
-which fields are translatable by hand, elsewhere) is the whole point — it's
-how the `doNotTranslate` marker and every field's real `type` are read
-without drifting out of sync with the actual schema. `tinacms build` would
-also read the schema, but needs Tina's local database/GraphQL server (ports,
-indexing, `TINA_PUBLIC_IS_LOCAL`) for something that's really just "import a
-few plain TypeScript objects." Node can do that natively since 22.6+ with
-`--experimental-strip-types`, with one catch: `tina/collections/*.ts` files
-import each other with extensionless specifiers (`from "../shared/fields"`),
-which real Node ESM resolution rejects (it requires the extension) — the
-exact same class of bug `scripts/patch-tina-generated.mjs` already patches
-for Tina's own generated output (see that file). `scripts/lib/ts-resolve-hook.mjs`
-fixes it the same way, at resolution time instead of via a post-build patch,
-since this is source code we don't control.
+- **In the editor on the branch, or by asking the assistant**: a correction stays for as long as
+  that English string does not change.
+- **In `scripts/translation-memory.json`** (`"<exact English>": "<approved text>"`):
+  for wording that must survive an English change, or that should be used
+  everywhere that exact sentence appears. A reviewer may edit this file and
+  `scripts/translation-glossary.md` (names, fixed phrases, tone) without a developer.
+- Never edit `scripts/translation-state.json` by hand: deleting it makes
+  `/translate` treat everything as in sync again, editing it makes it re-send
+  strings.
 
 ### What gets translated (and what doesn't) — the schema decides
 
-No hardcoded skip-list of field names lives in the Action. Per field, in order:
+No hardcoded skip-list of field names lives in the scripts. Per field, in order:
 
 1. **`ui: { translate: false }`** (the `doNotTranslate` helper added to
    `tina/shared/fields.ts`) — never translated, copied through byte-identical.
@@ -140,7 +128,7 @@ No hardcoded skip-list of field names lives in the Action. Per field, in order:
 
 **Internal links**: a field literally named `href` whose value is an internal
 path in the source language (`/en/blog/`) is rewritten to the target
-language's own page (`/es/blog/`) — deterministically, with no DeepL call — so
+language's own page (`/es/blog/`) — deterministically, with no translation step — so
 a Spanish page links to Spanish pages. Anchors (`#customize`), external URLs
 and empty values are left alone.
 
@@ -157,238 +145,46 @@ translatable UI copy "WhatsApp number" — a substring match on "whatsapp" or
 "email" would wrongly skip real copy like that or `whatsappMessage.emailLabel`
 without the mistake being obvious in a smoke test).
 
-### Re-translation semantics (a known, accepted tradeoff)
-
-Every run **overwrites** the ES/FR files for whatever EN files changed, in
-full — not a diff-aware "only re-translate the parts that changed" merge. If
-a human has hand-edited an ES/FR file after a previous translation PR merged,
-and the *same* EN source file changes again later, the next run's draft will
-clobber that hand-edit (in the new PR, which still needs review/merge — nothing
-is lost until someone approves and merges over it). Given the volume here
-(a small marketing site, infrequent content pushes), this was judged an
-acceptable simplification rather than building change-tracking/diffing logic
-— reviewers should treat every translation PR as a full draft to re-check for
-that file, not assume only the "new" parts need a look.
-
 ### Deleted English documents
 
-When an English document in a multi-document collection (`content/<collection>/en/<slug>.json`: blog posts, crew, boats, landing pages) is deleted, the script also deletes `content/<collection>/{es,fr}/<slug>.json` in the same run, and the deletions appear in the translation pull request for review. This runs on every trigger, even a push that only deleted files. Safety: a collection is only pruned while its `en/` folder still contains at least one file. If an English file was deleted by mistake, restore it in git **and** restore its translations from the previous commit; do not merge the pull request that deletes them.
+When an English document in a multi-document collection
+(`content/<collection>/en/<slug>.json`: blog posts, crew, boats, landing pages)
+is deleted, `translate:apply` also deletes
+`content/<collection>/{es,fr}/<slug>.json`, and the assistant lists the deletions
+in its report. Safety: a collection is only pruned while its `en/` folder still
+contains at least one file. If an English file was deleted by mistake, restore
+it in git **and** its translations from the previous commit; do not approve the
+merge of a branch that deletes them.
 
-## 3. Pull request — never auto-publish
+## Going live: enabling a language
 
-The workflow opens a PR (`peter-evans/create-pull-request`) only when files
-were actually written (`steps.translate.outputs.files_changed == 'true'`),
-using the default `GITHUB_TOKEN` (no extra PAT). The PR's head is the
-long-lived **`staging`** branch (base: `main`) — every future translation
-run updates the *same* branch/PR (until it's merged) instead of piling up a
-new PR per push, and it's also what makes the Vercel preview story in
-section 4 below viable (a stable branch name is a prerequisite for a stable
-preview URL). `permissions: contents: write, pull-requests: write` at the
-workflow level is exactly the scope needed for this and nothing more.
+Whether a language is *published* is separate from whether its content exists.
+It is controlled by one build-time variable, `PUBLIC_LIVE_LOCALES`
+(`.env.example`, `src/i18n/config.ts`): the `[locale]` routes, hreflang and the
+language switcher only cover the locales listed there. Unset means English
+only, so merging translations or routes can never expose a half-finished
+language.
 
-Because `staging` is permanent, two things to know:
+To bring the site to Spanish and French the first time:
 
-- The action **resets `staging` to `main` + the new translation commit** on
-  every run that has changes (that is how `peter-evans/create-pull-request`
-  updates an existing PR branch). Anything on `staging` that isn't in `main`
-  — including edits an editor made through the staging alias — is overwritten
-  by the next run, so **merge (or discard) the open translation PR before
-  pushing more EN content.**
-- `delete-branch` is set to `false` in the workflow on purpose. With `true`
-  the action deletes the branch when a run finds nothing to change and no
-  PR is open, which would take the Vercel alias and OAuth setup down with it.
-
-**Merging is always a manual, human action** — this workflow has no merge
-step, no auto-merge label, nothing. Both halves of "never auto-publish" hold:
-DeepL's draft never reaches `main` without becoming a normal reviewed PR
-first, and translation quality is never assumed — the PR body links to this
-doc's review guidance.
-
-## 4. Review — including a live preview with Tina editing
-
-A reviewer should check the diff like any other PR, but a text diff alone
-can't show whether translated copy actually *reads* right in place (line
-length in a card, an `<em>` split title, a multi-line quote). Two ways to
-check the PR, in increasing order of how much they let a reviewer actually do:
-
-- **View the rendered page** — the PR gets a normal Vercel preview deployment
-  (Vercel deploys a preview for every push to every branch on the connected
-  repo by default; `staging` is not special-cased, and needs no
-  extra Vercel configuration to get one). No sign-in needed to *view* the
-  static site at `/es/...` / `/fr/...`.
-- **Edit it live, in place, with Tina** — this is where the exact-match
-  constraint already documented in `docs/tina-setup.md` section 7 matters:
-  Google OAuth redirect URIs must be registered exactly, so a random
-  `*.vercel.app` preview URL can't complete sign-in. Section 7's fix is to
-  give one **stable branch** a permanent Vercel domain alias and register
-  *that one URL's* callback once. `staging` being a stable, reused branch
-  name (previous paragraph) means this is a **one-time** setup, not per-PR —
-  and if the staging alias from `docs/tina-setup.md` section 7 already
-  exists, it is already done:
-  1. Vercel: Project > Domains > assign a domain/subdomain (e.g.
-     `staging.eaglerayexpeditions.com`) to branch `staging`.
-  2. Google Cloud Console: add
-     `https://staging.eaglerayexpeditions.com/api/tina/auth/callback/google`
-     as an authorized redirect URI on the same OAuth client already used for
-     production (`docs/tina-setup.md` section 4b).
-  3. Vercel env vars, scoped to Preview + branch `staging`:
-     `NEXTAUTH_URL=https://staging.eaglerayexpeditions.com/api/tina/auth`.
-  4. Check Vercel **Deployment Protection** isn't blocking editors without
-     Vercel accounts from reaching that alias (section 7 flags this as a
-     standing client decision, not something this workflow changes).
-
-  Once set up, every future translation PR reuses the same alias (same
-  branch), so a reviewer can open `/admin/index.html` on that one URL,
-  sign in with an allowlisted Google account, and edit the draft ES/FR copy
-  **in place with Tina's visual editor** before approving — exactly the
-  "adjust the draft translation, not just read a diff" requirement.
-
-  Edits made there commit to the `staging` branch (Tina OSS has no
-  "save to a separate branch" workflow — see section 7), which is exactly
-  this PR's branch, so an editor's fix becomes part of the same PR
-  automatically.
-
-## 5. Merge
-
-A normal PR merge, by a human, once the reviewer is satisfied — same as any
-other change to `main`. No special-casing.
-
-## Translation memory (approved wording that DeepL must not overwrite)
-
-`scripts/translation-memory.json` maps an **exact English string** to its
-**approved Spanish / French text**: `{ "es": { "<English>": "<Español>" }, "fr": { … } }`.
-The translate script consults it before calling DeepL — a string found there
-is used as-is and never sent — so a native reviewer's corrections and the
-original site's human-written copy survive every redraft (a redraft replaces
-a whole file, so without this, any hand-corrected text would be lost the next
-time the English changes).
-
-* **Where it came from:** `node --experimental-strip-types scripts/build-translation-memory.mjs`
-  matched the English strings still on the site against the original,
-  human-written dictionary (`lib/i18n.js`) and kept the ones that are the
-  same sentence — about 110 strings per language, including the funnel, the
-  WhatsApp message labels, the footer, the home page's search/share text and
-  the depth-gauge labels. Re-running it only ever *adds* entries; it never
-  overwrites one.
-* **To fix a translation for good:** correct it in the editor, then add the
-  pair to the memory file (exact English on the left). Do it in the same pull
-  request as the correction.
-* **To apply the memory to the files that already exist** (no DeepL call, no
-  key needed): `node --experimental-strip-types scripts/translate-content.mjs --apply-memory`.
-  Files whose structure differs from the English are left alone and reported.
-* A string that appears in the memory but whose English wording was later
-  changed is simply no longer matched, so it goes back to DeepL — which is
-  correct: the reviewed text no longer describes the new English.
-
-## 6. Going live — enabling a language
-
-Whether a language is *published* is separate from whether its content
-exists. It's controlled by one build-time variable, `PUBLIC_LIVE_LOCALES`
-(`.env.example`, `src/i18n/config.ts`): the `[locale]` routes, hreflang and
-the language switcher only cover the locales listed there. Unset means
-English only, so merging translations or routes can never expose a
-half-finished language, and a build never tries to render a locale whose
-content doesn't exist yet.
-
-To bring the site to ES/FR the first time:
-
-1. **Vercel env var**, scope *Preview* (so the `staging` review site shows the
-   languages): `PUBLIC_LIVE_LOCALES=en,es,fr`. Leave *Production* unset.
-2. **Draft everything**: GitHub > Actions > *Translate content (DeepL draft)* >
-   *Run workflow* on `main`, scope `missing`. It opens the PR from `staging`
-   with every ES/FR document (about 42k characters for the whole site, under
-   10% of DeepL's free monthly allowance).
-3. **Review** on the staging alias with Tina (section 4) — home, contact, blog,
-   landing pages, and the nav/footer. Fix wording in place.
-4. **Merge** the PR. Production still shows English only.
-5. **Go live**: set *Production* `PUBLIC_LIVE_LOCALES=en,es,fr` and redeploy.
-   One language at a time works too (`en,es`). To roll back, remove the
-   variable and redeploy — the content stays in the repo.
+1. Run `/translate` (a language with no files yet gets every string drafted) and
+   check the result on the local site before approving the merge.
+2. Set `PUBLIC_LIVE_LOCALES=en,es,fr` in Vercel for *Preview* first, check
+   home, contact, blog, landing pages, nav and footer in both languages, then
+   set it for *Production* and redeploy. One language at a time works too
+   (`en,es`). To roll back, remove the variable and redeploy: the content stays
+   in the repo.
 
 A locale listed in `PUBLIC_LIVE_LOCALES` needs a complete set of documents.
-After it is live, new EN content is drafted automatically on each push and
-reviewed through the same PR flow; until that PR is merged, the new page just
-doesn't exist in ES/FR yet.
 
-## Keeping the DeepL key safe
+## Manual DeepL fallback
 
-- Stored only as the GitHub Actions repo secret `DEEPL_API_KEY` (setup:
-  `docs/tina-setup.md` section 13). Never committed — `.env.example` only
-  documents the variable name with an explicit note that it's a GitHub
-  secret, not a Vercel env var (the workflow never runs on Vercel).
-- `scripts/lib/deepl.mjs` never includes the key value in an error message
-  (a DeepL API error surfaces the response status/body only), and the
-  workflow only ever references it as `${{ secrets.DEEPL_API_KEY }}` in an
-  `env:` block — GitHub Actions automatically redacts any log line
-  containing a registered secret's literal value.
-
-## Usage volume
-
-Free tier (~500K characters/month) is assumed sufficient at this project's
-volume (translating the entire site into both languages once is roughly 42K
-characters; a normal content push is a small fraction of that) — a small marketing site with infrequent content pushes, not a
-high-frequency content pipeline. No usage-tracking or rate-limiting logic is
-built, deliberately: at this volume it would be speculative complexity with
-nothing to actually guard against yet. If usage ever approaches the free
-tier's limit, DeepL's own dashboard shows current usage — that's the signal
-to revisit this, not something to pre-build.
-
-## Verification performed (and what's still unverified)
-
-**Verified in this environment:**
-- `node --check` clean on all 5 script files
-  (`scripts/translate-content.mjs`, `scripts/lib/{ts-resolve-hook,tina-schema,translatable-content,deepl}.mjs`).
-- `actionlint` v1.7.12 on the workflow YAML: exit 0, zero findings. Also
-  parsed cleanly with `js-yaml` and PyYAML (PyYAML resolves the bare `on:`
-  key to the boolean `True` per YAML 1.1 — a well-known, harmless quirk of
-  that specific parser/spec version; GitHub's own parser and `actionlint`,
-  which uses the same YAML library GitHub's runner does, both read it as
-  the literal key `"on"`, which is what actually matters).
-- Ran the real script — both by importing its functions directly with an
-  injected fake `translateFn`, and as a real subprocess
-  (`node --experimental-strip-types scripts/translate-content.mjs <files>`,
-  with `scripts/lib/deepl.mjs` temporarily given an env-gated mock branch,
-  removed immediately after) — against real repo content (`content/hero/en.json`,
-  `content/crew/en/javier.json`, `content/boats/en/bay-dreamer.json`,
-  `content/blogPost/en/a-morning-under-sail-on-the-astrea.json`, plus
-  `difference`, `contactPage`, `wildlife`, `funnel`, and the unrelated
-  `landingPage` collection's polymorphic `blocks` field as an extra
-  real-world test of the `templates:` walker). Confirmed: `href`s,
-  image/video paths, `_template`, numbers/booleans/dates, and the
-  `doNotTranslate`-marked names (`"Javier"`, `"Bay Dreamer"`) came through
-  byte-identical, every copy field was sent to the translator, the blog
-  body's image URL/markdown syntax survived untouched while its alt/caption
-  translated, and output files matched the project's real 2-space-indent +
-  trailing-newline convention. All generated test fixtures were deleted
-  afterward and `scripts/lib/deepl.mjs`'s temporary mock branch fully
-  removed — `git status` shows only the intended file changes.
-- `TINA_PUBLIC_IS_LOCAL=true npx tinacms build --local --skip-cloud-checks`
-  after adding `doNotTranslate` to the schema: "Tina build complete", no
-  indexing errors. Ran `node scripts/patch-tina-generated.mjs` after, per
-  the normal build convention. Checked ports 4001/9000 were free before
-  starting and confirmed no process was left listening after.
-- A real network call to DeepL's live API with an invalid key: got a real
-  `403 Forbidden` from `api.deepl.com`, the script exited cleanly with code
-  1, and wrote zero partial files — confirms the endpoint, auth header, and
-  error path all work against DeepL's real infrastructure.
-- The `$GITHUB_OUTPUT` multi-line-value syntax (`files_changed`, `file_list`)
-  written and read back correctly from a real file.
-- The git-diff-failure fallback (full content rescan) triggers correctly and
-  found every EN content file in the repo.
-
-**Not verified in this environment** (needs things it doesn't have):
-- A real DeepL translation — actual ES/FR text quality, `preserve_formatting`
-  behavior against DeepL's real model (vs. the mock used above), a valid
-  key's real usage/billing dashboard.
-- A real GitHub Actions run of the workflow itself — the `push`/`paths`
-  trigger actually firing on GitHub's infrastructure, `github.event.before`
-  resolving as assumed across a normal push vs. a branch-creation push,
-  `peter-evans/create-pull-request` actually opening/updating a PR with
-  these permissions on a real repo.
-- A real Vercel preview on a PR this workflow opens, and Tina's visual
-  editor actually working on it end-to-end (sign-in through the stable-alias
-  setup in section 4, editing, and the edit landing back on the `staging`
-  branch as expected). This depends entirely on this project's pre-existing
-  Tina-on-Vercel-preview setup (`docs/tina-setup.md` section 7), which that
-  doc already marks as needing a real deploy to confirm — nothing new this
-  workflow introduces changes that risk, but nothing here re-verifies it either.
+`.github/workflows/translate-content.yml` can still be started by hand (Actions
+> Run workflow). It uses the DeepL API (`DEEPL_API_KEY`, `scripts/translate-content.mjs`,
+`scripts/lib/deepl.mjs`) and **commits straight to `main` with no review**.
+Nothing triggers it automatically any more. It is only for the case where
+`/translate` cannot be used. If the `DEEPL_API_KEY` secret is removed, only that
+manual run stops working (it fails at once with a clear message); `/translate`
+and everything else are unaffected. Do not use it on a language a reviewer has
+already corrected unless the scope is `missing`: `changed` and `all` overwrite
+existing translations.

@@ -4,8 +4,46 @@
     "Capitán",
     "Líder de Expedición"
   ],
+  "skills": [
+    "Vela",
+    "Cometa",
+    "Buceo en apnea",
+    "Ingeniería naval",
+    "Snorkel",
+    "Paddleboard"
+  ],
+  "languages": [
+    {
+      "language": "Francés"
+    },
+    {
+      "language": "Inglés"
+    },
+    {
+      "language": "Español"
+    }
+  ],
+  "certificates": [
+    "Patrón de yate a vela 200 GT",
+    "Ingeniería naval 250 kW",
+    "Atención médica nivel II",
+    "Operador general de radio",
+    "Apneísta AIDA 2",
+    "PADI Open Water"
+  ],
+  "yearsOfExperience": 15,
+  "quote": "La calma de las profundidades y el agua como un espejo.",
   "about": "Lou es capitana, especialista en kite y apneísta, y ha hecho de Baja su hogar. No se adueña del ambiente del barco: lo transforma. Los hombros se relajan, la respiración se calma y los novatos encuentran su lugar. Lou lee el mar y a las personas con el mismo instinto, sabiendo cuándo aportar energía y cuándo dejar espacio.",
+  "history": "\"La historia que más cuento: haber visto Kavachi, un volcán submarino activo en las islas Salomón.\n\nCruzar el ecuador fue cuando entendí lo que la navegación hace por mi vida, y decidí dedicarla a acercar a otras personas al océano.\"",
+  "why": "\"Me encanta la calma del agua profunda y lisa como un espejo, y la adrenalina de la ola perfecta y el viento justo.\n\nLo que busco en los huéspedes es la chispa en sus ojos cuando el mar empieza a obrar en ellos. He visto cómo cambia a las personas, a mí incluida.\"",
+  "images": [
+    "/assets/img/crew-lou.jpeg",
+    "/assets/img/crew/lou-01.webp",
+    "/assets/img/crew/lou-02.webp",
+    "/assets/img/crew/lou-03.webp",
+    "/assets/img/crew/lou-04.webp"
+  ],
   "image": "/assets/img/crew-lou.jpeg",
   "imageAlt": "Lou, capitán y jefe de expedición",
-  "order": 9
+  "order": 2
 }

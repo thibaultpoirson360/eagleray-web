@@ -7,6 +7,14 @@
     "namePlaceholder": "Nom",
     "emailPlaceholder": "E-mail",
     "howFoundPlaceholder": "Comment nous avez-vous trouvés ?",
+    "interestPlaceholder": "Je m'intéresse à :",
+    "interestOptions": [
+      "Une expédition privée pour mon groupe",
+      "Une cabine sur un départ partagé",
+      "Ajouter des activités à une expédition",
+      "Je ne sais pas encore",
+      "Autre"
+    ],
     "messagePlaceholder": "Message",
     "submitLabel": "Envoyer un message",
     "sendingLabel": "Envoi…",

@@ -1,0 +1,90 @@
+{
+  "name": "Fountaine Pajot Saona 47",
+  "tagline": "Catamarán",
+  "description": "Reformado en 2026, con cuatro camarotes dobles y un camarote con literas, todos con aire acondicionado. El flybridge tiene su propia zona de descanso: la mitad del grupo puede leer a la sombra allí arriba mientras la otra mitad ya está en una tabla de paddle. La potabilizadora significa una ducha de agua dulce después de cada baño, estés donde estés fondeado.",
+  "details": "Reformado en 2026, con cuatro camarotes dobles y un camarote con literas, todos con aire acondicionado. El flybridge tiene su propia zona de descanso: la mitad del grupo puede leer a la sombra allí arriba mientras la otra mitad ya está en una tabla de paddle. La potabilizadora significa una ducha de agua dulce después de cada baño, estés donde estés fondeado.",
+  "features": [
+    "Aire acondicionado en cada camarote y en el salón",
+    "Wifi Starlink a bordo",
+    "Generador",
+    "Potabilizadora (agua dulce producida a bordo)",
+    "Zona de descanso en el flybridge",
+    "Parrilla exterior y ducha exterior",
+    "Kayak doble y 2 tablas de paddle",
+    "Equipo de snorkel y cañas de pescar"
+  ],
+  "length": "47 pies",
+  "cabins": "5",
+  "bathrooms": "5",
+  "guests": "hasta 8",
+  "order": 6,
+  "photo": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+  "photoAlt": "Catamarán Fountaine Pajot Saona 47",
+  "photos": [
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-02.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-03.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-video-01.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47",
+      "video": "/assets/video/boats/fountaine-pajot-saona-47-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-04.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-05.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-06.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-07.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-08.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-09.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-10.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-11.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-12.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-13.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-14.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    },
+    {
+      "image": "/assets/img/boats/fountaine-pajot-saona-47-15.webp",
+      "alt": "Catamarán Fountaine Pajot Saona 47"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "title": "Témoignages de nos invités",
+  "lede": "Découvrez l'expérience de nos invités. Leurs photos, leurs mots.",
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/uliana-semenova-O25yy6fwl08-unsplash_2_gquy9c.jpg",
+  "heroImageAlt": "avis des invités d'Eagle Ray Expeditions",
+  "stories": [
+    {
+      "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/a57d5bc0-e65c-434f-a58e-c82074a5fe08_fmvtt9.jpg",
+      "heroImageAlt": "avis d'un client d'Eagle Ray Expeditions",
+      "shortQuote": "« Ils nous ont permis d'organiser une sortie en voilier les yeux fermés. »",
+      "name": "Clémence",
+      "group": "Famille",
+      "place": "Basse-Californie du Sud",
+      "nights": "7",
+      "monthYear": "Août 2026",
+      "fullQuote": "« Je recommande vivement Eagle Ray. Ils nous ont permis d'organiser une sortie en voilier les yeux fermés, côté organisation. L'équipe est réactive et très professionnelle. Ils savent exactement ce qu'ils font, et cela rend tout facile. Roberto, notre skipper, nous a mis à l'aise et nous a fait nous sentir en parfaite sécurité. Il a vraiment été formidable. »",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/8e9b8dc9-43fe-4e4a-bbb0-7f3f7ba75d09_uagp6w.jpg",
+          "alt": "mère et enfant en famille en voilier avec Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+          "alt": "voyage en famille en voilier en Basse-Californie avec Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/b1fc940a-95ac-4284-a7ae-75952e16f0a7_1_eogyjd.jpg",
+          "alt": "famille sur un catamaran Eagle Ray"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/IMG_5256_tqwfid.jpg",
+          "alt": "mère et enfant en voilier"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/IMG_5069_vcp6hk.jpg",
+          "alt": "famille en voilier à La Paz"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/IMG_5367_1_y4pzuw.jpg",
+          "alt": "famille de plusieurs générations"
+        }
+      ]
+    },
+    {
+      "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_BVI_Pilot_June_2026_1_eck3w7.jpg",
+      "heroImageAlt": "",
+      "shortQuote": "« Pas un spectateur, mais partie prenante de la vie du bateau. »",
+      "name": "Gabriel",
+      "group": "Amis",
+      "place": "Basse-Californie du Sud",
+      "nights": "7",
+      "monthYear": "Juillet 2026",
+      "fullQuote": "« Ce qui m'a marqué, c'est la proximité de l'équipage avec nous. J'ai adoré les longues discussions autour de la table après les repas, apprendre à naviguer, et cette vraie sensation de ne pas être un spectateur mais de faire réellement partie de la vie du bateau. Le côté humain est, sans aucun doute, le plus grand atout d'Eagle Ray et ce qui le distingue. »",
+      "photos": [
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Activity_-_Beach_-BVI_Pilot_June_202654_htdddg.jpg",
+          "alt": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_BVI_Pilot_June_2026_-_26_1_cw0xtz.jpg",
+          "alt": "avis d'un invité d'Eagle Ray"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_JUN2026_-_BVI_Pilot_-_People___Sea_life_-_Foto_-_004_ikwd3l.jpg",
+          "alt": "amis en voilier en Basse-Californie avec Eagle Ray"
+        },
+        {
+          "image": "",
+          "alt": ""
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_BVI_Pilot_June_2026_1_fsr0os.jpg",
+          "alt": "avis d'un invité d'Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_BVI_Pilot_June_2026_-_109_1_lgnxac.jpg",
+          "alt": "équipement de plongée à La Paz, Eagle Ray Expeditions"
+        },
+        {
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_BVI_Pilot_June_2026_-_114_ejkmcb.jpg",
+          "alt": "plongée à La Paz"
+        }
+      ]
+    }
+  ],
+  "controls": {
+    "previousLabel": "Photo précédente",
+    "nextLabel": "Photo suivante",
+    "dotLabel": "Photo"
+  },
+  "cta": {
+    "title": "Dites-nous qui vient.",
+    "text": "Nous construisons l'expédition autour de votre groupe, en commençant par les personnes à bord.",
+    "button": {
+      "label": "Planifiez votre expédition",
+      "href": "/fr/contact/"
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "name": "Bay Dreamer",
-  "tagline": "Lagoon 450F — Catamarán",
+  "name": "Lagoon 450F",
+  "tagline": "Catamarán",
   "description": "Un catamarán con un flybridge situado sobre el salón: el mejor sitio a bordo mientras navegas y el lugar ideal para contemplar el fondeadero al atardecer.",
-  "details": "Un catamarán con un flybridge sobre el salón: el mejor sitio a bordo mientras navegas y el lugar ideal para contemplar el fondeadero al atardecer. Una vela Code Zero le permite seguir navegando cuando el viento es flojo, y una lancha auxiliar con un motor fueraborda de 15 HP te lleva a la playa cuando quieras bajar a tierra.\n\nEl Bay Dreamer fue reacondicionado en 2022. Bajo cubierta: cuatro camarotes y cuatro baños, aire acondicionado en todos los camarotes, un lavavajillas en la cocina y una potabilizadora que produce agua dulce a bordo. También cuenta con Starlink, por si alguien necesita estar localizable.",
+  "details": "Un catamarán con flybridge sobre el salón: el mejor asiento a bordo mientras navegas y el lugar para ver el fondeadero al atardecer. Una vela Code Zero lo mantiene navegando cuando el viento es flojo, y una auxiliar con motor fueraborda de 15 HP te lleva a la playa cuando quieres bajar a tierra.\n\nFue reformado en 2022. Bajo cubierta: cuatro camarotes y cuatro baños, aire acondicionado en cada camarote, lavavajillas en la cocina y una potabilizadora que produce agua dulce a bordo. También lleva Starlink, por si alguien necesita seguir conectado.",
   "features": [
     "Catamarán de 45 pies, reacondicionado en 2022",
     "4 habitaciones, 4 baños",
@@ -15,14 +15,13 @@
     "Vela Code Zero para vientos flojos",
     "Embarcación auxiliar con motor fueraborda de 15 HP"
   ],
-  "length": "46 pies",
-  "cabins": "4",
-  "bathrooms": "4",
-  "guests": "hasta 8",
-  "order": 4,
-  "photo": "/assets/img/boats/bay-dreamer-09.webp",
-  "photoAlt": "Bay Dreamer",
+  "photo": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/bay-dreamer-08_jp0xu7.webp",
+  "photoAlt": "Lagoon 450F, flota de catamaranes de Eagle Ray",
   "photos": [
+    {
+      "image": "/assets/img/boats/bay-dreamer-08.webp",
+      "alt": "Bay Dreamer"
+    },
     {
       "image": "/assets/img/boats/bay-dreamer-09.webp",
       "alt": "Bay Dreamer"
@@ -53,10 +52,6 @@
     },
     {
       "image": "/assets/img/boats/bay-dreamer-07.webp",
-      "alt": "Bay Dreamer"
-    },
-    {
-      "image": "/assets/img/boats/bay-dreamer-08.webp",
       "alt": "Bay Dreamer"
     },
     {
@@ -91,5 +86,10 @@
       "image": "/assets/img/boats/bay-dreamer-17.webp",
       "alt": "Bay Dreamer"
     }
-  ]
+  ],
+  "length": "46 pies",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "hasta 8",
+  "order": 4
 }

@@ -1,0 +1,91 @@
+{
+  "name": "Lagoon 450",
+  "tagline": "Catamaran",
+  "description": "Quatre cabines doubles et quatre salles de bains, construit en 2018 et remis à neuf en 2024. Les après-midi se passent dehors : un hamac, un ponton gonflable pour plonger dans l'eau, un kayak double pour aller voir ce qu'il y a dans la crique suivante. Le dîner sort du barbecue sur le pont. Starlink est à bord, au cas où quelqu'un aurait besoin de rester joignable.",
+  "details": "Quatre cabines doubles et quatre salles de bains, construit en 2018 et remis à neuf en 2024. Les après-midi se passent dehors : un hamac, un ponton gonflable pour plonger dans l'eau, un kayak double pour aller voir ce qu'il y a dans la crique suivante. Le dîner sort du barbecue sur le pont. Starlink est à bord, au cas où quelqu'un aurait besoin de rester joignable.",
+  "features": [
+    "Climatisation dans chaque cabine et dans le carré",
+    "Wifi Starlink à bord",
+    "Groupe électrogène",
+    "Dessalinisateur (eau douce produite à bord)",
+    "Flybridge",
+    "Hamac et ponton gonflable",
+    "Barbecue extérieur et douche extérieure",
+    "Kayak double et 2 paddles",
+    "Matériel de snorkeling et cannes à pêche"
+  ],
+  "photo": "/assets/img/boats/lagoon-450-2018-01.webp",
+  "photoAlt": "Catamaran Lagoon 450",
+  "photos": [
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-01.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-02.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-03.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-video-01.webp",
+      "alt": "Catamaran Lagoon 450",
+      "video": "/assets/video/boats/lagoon-450-2018-01.mp4"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-04.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-05.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-06.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-07.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-08.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-09.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-10.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-11.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-12.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-13.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-14.webp",
+      "alt": "Catamaran Lagoon 450"
+    },
+    {
+      "image": "/assets/img/boats/lagoon-450-2018-15.webp",
+      "alt": "Catamaran Lagoon 450"
+    }
+  ],
+  "length": "45 pieds",
+  "cabins": "4",
+  "bathrooms": "4",
+  "guests": "jusqu'à 8",
+  "order": 7
+}
