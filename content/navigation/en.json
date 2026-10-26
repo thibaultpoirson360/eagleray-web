@@ -26,6 +26,10 @@
         {
           "label": "The Eagle Ray Experience",
           "href": "/en/the-eagle-ray-experience/"
+        },
+        {
+          "label": "Guest Stories",
+          "href": "/en/about-us/guest-stories/"
         }
       ],
       "_template": "dropdown"
