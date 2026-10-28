@@ -1,7 +1,7 @@
 {
   "title": "Private time at sea, for the people you look after.",
   "subtitle": "Eagle Ray Expeditions runs private sailing expeditions out of La Paz, Baja California Sur, for groups of up to 8. You know your clients. We build the trip around them: boat, crew, route and food.",
-  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_049_xs4nr6.jpg",
   "imageAlt": "Crew and guests together at sea in Baja California Sur",
   "primaryLabel": "Become a partner",
   "secondaryLabel": "Write to us at hello@eaglerayexpeditions.com",
@@ -36,8 +36,7 @@
   "formats": [
     {
       "name": "Recalibration Expedition",
-      "text": "Slow days, good food, quiet anchorages.",
-      "href": "/en/recalibration-expedition/"
+      "text": "Slow days, good food, quiet anchorages."
     },
     {
       "name": "Active Expedition",
@@ -45,13 +44,11 @@
     },
     {
       "name": "Ad-hoc Expedition",
-      "text": "Built from scratch around the group.",
-      "href": "/en/ad-hoc-expedition/"
+      "text": "Built from scratch around the group."
     },
     {
       "name": "Special editions",
-      "text": "Trips led by guest Expedition Leaders, a few times a year.",
-      "href": "/en/sail-with-us/#special-editions"
+      "text": "Trips led by guest Expedition Leaders, a few times a year."
     }
   ],
   "seeAllLabel": "See all expeditions",
@@ -64,7 +61,7 @@
   ],
   "getTitle": "What you get",
   "benefits": [
-    "A commission on every booking you bring. We walk you through the details in person.",
+    "A commission on every booking you bring. We walk you through the details.",
     "A crew you can introduce by name, with real profiles and photos.",
     "Proposals your clients can open and read on their phone."
   ],
