@@ -1,0 +1,119 @@
+{
+  "title": "Private time at sea, for the people you look after.",
+  "subtitle": "Eagle Ray Expeditions runs private sailing expeditions out of La Paz, Baja California Sur, for groups of up to 8. You know your clients. We build the trip around them: boat, crew, route and food.",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "imageAlt": "Crew and guests together at sea in Baja California Sur",
+  "primaryLabel": "Become a partner",
+  "secondaryLabel": "Write to us at hello@eaglerayexpeditions.com",
+  "whoTitle": "Who we work with",
+  "whoCards": [
+    {
+      "title": "Travel advisors and agencies",
+      "text": "Your client trusts you with the plan. We give you a trip you can put your name next to: a private boat, a crew you can introduce by name, and a proposal ready to send.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "A slow moment on board: lunch, shade and a swim off the stern"
+    },
+    {
+      "title": "Hotel concierges",
+      "text": "A guest asks what's worth doing beyond the hotel. A few nights on the Sea of Cortez, with a captain, an Expedition Leader and a chef aboard, is a real answer.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Food_-_Foto_sahnr9.jpg",
+      "imageAlt": "Food prepared by the chef on board"
+    },
+    {
+      "title": "Expedition Leaders",
+      "text": "You have a skill, a story and people who follow you. We put a boat and a crew around it, and you lead your own edition.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
+      "imageAlt": "Expedition Leader Monik Saab diving"
+    }
+  ],
+  "aboardTitle": "What your clients find aboard",
+  "aboardPoints": [
+    "A private boat. Only the group they chose, no strangers.",
+    "A crew picked for seamanship and hospitality: captain, Expedition Leader and chef.",
+    "3, 5 or 7 nights around Espíritu Santo, with no unbreakable agenda.",
+    "Starlink aboard, for the one call that can't wait."
+  ],
+  "formats": [
+    {
+      "name": "Recalibration Expedition",
+      "text": "Slow days, good food, quiet anchorages."
+    },
+    {
+      "name": "Active Expedition",
+      "text": "More hours in the water, with snorkel, free diving and scuba."
+    },
+    {
+      "name": "Ad-hoc Expedition",
+      "text": "Built from scratch around the group."
+    },
+    {
+      "name": "Special editions",
+      "text": "Trips led by guest Expedition Leaders, a few times a year."
+    }
+  ],
+  "seeAllLabel": "See all expeditions",
+  "seeAllHref": "/en/sail-with-us/",
+  "howTitle": "How it works",
+  "steps": [
+    "Tell us about your client: group size, dates, and what they want from the days.",
+    "We send you a proposal with boat options, crew and price.",
+    "Your client confirms. Our crew takes it from the first message to the last anchorage."
+  ],
+  "getTitle": "What you get",
+  "benefits": [
+    "A commission on every booking you bring. We walk you through the details in person.",
+    "A crew you can introduce by name, with real profiles and photos.",
+    "Proposals your clients can open and read on their phone."
+  ],
+  "limitedOffer": {
+    "text": "Until December 31, 2026: a discovery wine pack from Climats, our sommelier partner in Baja, to offer your clients.",
+    "lastDay": "2026-12-31"
+  },
+  "proofTitle": "Hear it from them",
+  "proofLinks": [
+    {
+      "label": "Guest Stories",
+      "href": "/en/about-us/guest-stories/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "imageAlt": "Guests aboard during an expedition"
+    },
+    {
+      "label": "Meet the crew",
+      "href": "/en/passionate-sea-people/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "imageAlt": "A member of the Eagle Ray crew"
+    }
+  ],
+  "formTitle": "Become a partner",
+  "form": {
+    "name": "Full name",
+    "company": "Company, hotel or Instagram handle",
+    "role": "I am a...",
+    "roleOptions": [
+      "Travel advisor or agency",
+      "Hotel concierge",
+      "Expedition Leader",
+      "Other"
+    ],
+    "location": "City and country",
+    "email": "Email",
+    "whatsapp": "WhatsApp (optional)",
+    "audience": "Who are your clients or your community? (optional)",
+    "source": "How did you hear about us?",
+    "sourceOptions": [
+      "Launch event in Mexico City",
+      "Instagram",
+      "A friend or colleague",
+      "Other"
+    ],
+    "selectPlaceholder": "Choose one",
+    "submitLabel": "Become a partner",
+    "sendingLabel": "Sending…",
+    "successMessage": "Thank you. We'll write back soon.",
+    "errorMessage": "Something went wrong sending your details. Please try again, or write to hello@eaglerayexpeditions.com."
+  },
+  "seo": {
+    "title": "Partnerships | Eagle Ray Expeditions",
+    "description": "Private sailing expeditions in Baja California Sur for travel advisors, concierges and Expedition Leaders. Work with Eagle Ray Expeditions."
+  }
+}

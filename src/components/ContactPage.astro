@@ -126,4 +126,14 @@ const waHref = siteSettings.contact?.whatsapp ? `https://wa.me/${siteSettings.co
       </div>
     </div>
   </div>
+  {
+    contactPage.partnersLinkLabel && (
+      <p class="mt-12 text-sm text-ink/74">
+        {contactPage.partnersText && <span data-tina-field={tinaField(contactPage, "partnersText")}>{contactPage.partnersText} </span>}
+        <a class="underline underline-offset-4 hover:text-ink" href={localePath(locale, "partnerships/")} data-tina-field={tinaField(contactPage, "partnersLinkLabel")}>
+          {contactPage.partnersLinkLabel}
+        </a>
+      </p>
+    )
+  }
 </section>

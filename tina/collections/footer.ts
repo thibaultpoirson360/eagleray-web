@@ -102,6 +102,7 @@ const footer: Collection = {
         { type: "string", name: "creditsLabel", label: "Credits link label" },
         { type: "string", name: "termsLabel", label: "Terms link label" },
         { type: "string", name: "privacyLabel", label: "Privacy link label" },
+        { type: "string", name: "partnershipsLabel", label: "Partnerships link label", description: "Links to the Partnerships page. Leave blank to hide the link." },
       ],
     },
   ],

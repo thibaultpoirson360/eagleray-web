@@ -143,7 +143,7 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
     </TinaIsland>
     <slot />
     <TinaIsland name="footer" wrapper={{ tag: 'div' }} params={{ locale }}>
-      <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} />
+      <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} locale={locale} />
     </TinaIsland>
     <script>
       import '../scripts/chrome.ts';

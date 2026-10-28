@@ -81,6 +81,8 @@ const contactPage: Collection = {
         { type: "string", name: "description", label: "Description", ui: textarea },
       ],
     },
+    { type: "string", name: "partnersText", label: "Partnerships link: lead-in text", description: "Small text under the page, e.g. \"Working with clients?\"." },
+    { type: "string", name: "partnersLinkLabel", label: "Partnerships link: link text", description: "Links to the Partnerships page. Leave both blank to hide." },
     seoField(),
   ],
 };
