@@ -1,0 +1,70 @@
+---
+/**
+ * Hero of Sail with Us: two photos side by side, same size, with a thin
+ * off-white gap (water on the left, a long lunch on deck on the right). The
+ * text is a quiet centred block on white space under the photos, so nothing
+ * crowds the header. On a phone the photos stack and the text follows.
+ * Keeps BaseLayout's transparent header. Tina markers come via `fields`.
+ */
+import Button from "./ui/Button.astro";
+
+interface Props {
+  title: string;
+  kicker?: string | null;
+  lede?: string | null;
+  images: { src?: string | null; alt?: string | null; field?: string }[];
+  cta?: { label: string; href: string } | null;
+  link?: { label: string; href: string } | null;
+  fields?: { title?: string; kicker?: string; lede?: string; cta?: string; link?: string };
+}
+
+const { title, kicker, lede, images, cta, link, fields = {} } = Astro.props;
+---
+
+<section class="bg-surface">
+  <div class="relative grid gap-0.5 bg-surface md:h-[72vh] md:min-h-[30rem] md:grid-cols-2">
+    {
+      images.slice(0, 1).map((image) => (
+        <div class="relative aspect-[4/3] bg-ink md:aspect-auto">
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="absolute inset-0 h-full w-full object-cover" data-tina-field={image.field} />}
+        </div>
+      ))
+    }
+    <div class="pointer-events-none absolute inset-0 z-[1] hidden bg-ink/30 md:block"></div>
+    {/* The headline: between the two stacked photos on a phone, centred over the seam between them from md up. */}
+    <div class="px-5 py-14 text-center text-ink md:pointer-events-none md:absolute md:inset-0 md:z-[2] md:flex md:items-center md:justify-center md:py-0 md:text-white">
+      <div class="mx-auto max-w-[40rem]">
+        {kicker && <p class="mb-6 font-mono text-[.7rem] tracking-[.2em] uppercase opacity-70" data-tina-field={fields.kicker}>{kicker}</p>}
+        <h1 class="font-display text-quote-lead leading-[1.5] font-normal whitespace-pre-line md:pointer-events-auto" data-tina-field={fields.title}>{title}</h1>
+      </div>
+    </div>
+    {
+      images.slice(1, 2).map((image) => (
+        <div class="relative aspect-[4/3] bg-ink md:aspect-auto">
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="absolute inset-0 h-full w-full object-cover" data-tina-field={image.field} />}
+        </div>
+      ))
+    }
+  </div>
+  <div class="px-5 pt-[calc(var(--spacing-section)*.9)] pb-[calc(var(--spacing-section)*1.2)] text-center">
+    <div class="mx-auto max-w-[40rem]">
+      {lede && <p class="mx-auto max-w-[46ch] text-[.95rem] leading-[1.8] text-ink/64" data-tina-field={fields.lede}>{lede}</p>}
+      {
+        cta && (
+          <div class="mt-12">
+            <Button href={cta.href} variant="primary" context="default" size="sm" data-tina-field={fields.cta}>
+              {cta.label}
+            </Button>
+          </div>
+        )
+      }
+      {
+        link && (
+          <p class="mt-6">
+            <a href={link.href} class="text-[.82rem] text-ink/56 underline underline-offset-[6px] transition-colors hover:text-ink" data-tina-field={fields.link}>{link.label}</a>
+          </p>
+        )
+      }
+    </div>
+  </div>
+</section>

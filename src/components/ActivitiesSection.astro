@@ -26,12 +26,12 @@ const contactHref = (message?: string | null) =>
   localePath(locale, "contact/") + (message ? `?message=${encodeURIComponent(message)}` : "");
 ---
 
-<section id="activities" class="mx-auto max-w-site px-5 py-section lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
-  <div class="section-head mb-section-head">
-    <h2 class="text-h2" data-tina-field={tinaField(page, "activitiesTitle")}>{page.activitiesTitle}</h2>
+<section id="activities" class="mx-auto max-w-site px-5 pb-[calc(var(--spacing-section)*1.4)] pt-[calc(var(--spacing-section)*.6)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+  <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
+    <h2 class="text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "activitiesTitle")}>{page.activitiesTitle}</h2>
     {
       page.activitiesSubtitle && (
-        <p class="mt-[1.2rem] max-w-[58ch] text-lede text-ink/74" data-tina-field={tinaField(page, "activitiesSubtitle")}>
+        <p class="mx-auto mt-5 max-w-[46ch] text-[.92rem] leading-[1.8] text-ink/64" data-tina-field={tinaField(page, "activitiesSubtitle")}>
           {page.activitiesSubtitle}
         </p>
       )
