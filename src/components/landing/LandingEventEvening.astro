@@ -1,7 +1,8 @@
 ---
 /**
  * `eventEvening` landing block: the plan of the evening as short lines on the
- * left (with a smaller italic line and a small address line under them) and, on the right, photos shown whole (the place, the dishes, the wine). On a phone the photos go under the text.
+ * left (with a smaller italic line and a small address line under them) and, on the right, photos shown whole (the place, the dishes, the wine).
+ * On a phone the order is: first photo, the text, then the other photos.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import type { LandingPageBlocksParent } from "./blockTypes";
@@ -16,11 +17,21 @@ const { block, landingPage, index } = Astro.props;
 const lines = ((block.lines ?? []) as (string | null)[]).filter(Boolean);
 // Always three slots so the layout holds its shape while photos are still missing.
 const photos = Array.from({ length: 3 }, (_, i) => (block.photos ?? [])[i] ?? {});
+const [first, ...others] = photos;
 ---
 
-<section class="relative mx-auto max-w-site px-pad py-[calc(var(--spacing-section)*1.8)]" data-tina-field={tinaField(landingPage, "blocks", index)}>
-  <div class="grid items-center gap-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-24">
-    <div>
+<section class="relative mx-auto max-w-site px-pad pt-6 pb-[calc(var(--spacing-section)*1.2)] lg:py-[calc(var(--spacing-section)*1.8)]" data-tina-field={tinaField(landingPage, "blocks", index)}>
+  <div class="grid gap-y-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-x-24 lg:gap-y-4">
+    {/* Photos are shown whole (never cropped): each keeps its own proportions. */}
+    <div class="lg:col-start-2 lg:row-start-1" data-tina-field={tinaField(block, "photos")}>
+      {first.image ? (
+        <img src={first.image} alt={first.alt ?? ""} loading="lazy" decoding="async" class="h-auto w-full rounded-sm" />
+      ) : (
+        <div class="aspect-[4/3] rounded-sm bg-surface"></div>
+      )}
+    </div>
+
+    <div class="lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:self-center">
       <div class="flex flex-col gap-8" data-tina-field={tinaField(block, "lines")}>
         {lines.map((line) => <p class="max-w-[28ch] font-display text-[clamp(1.35rem,2.4vw,1.9rem)] leading-[1.35] font-light text-ink">{line}</p>)}
       </div>
@@ -38,15 +49,14 @@ const photos = Array.from({ length: 3 }, (_, i) => (block.photos ?? [])[i] ?? {}
       )}
     </div>
 
-    <div class="grid grid-cols-2 items-start gap-3 sm:gap-4" data-tina-field={tinaField(block, "photos")}>
-      {photos.map((photo, i) => (
-        // Photos are shown whole (never cropped): each keeps its own proportions.
+    <div class="grid grid-cols-2 items-start gap-3 sm:gap-4 lg:col-start-2 lg:row-start-2" data-tina-field={tinaField(block, "photos")}>
+      {others.map((photo) =>
         photo.image ? (
-          <img src={photo.image} alt={photo.alt ?? ""} loading="lazy" decoding="async" class:list={["h-auto w-full rounded-sm", i === 0 && "col-span-2"]} />
+          <img src={photo.image} alt={photo.alt ?? ""} loading="lazy" decoding="async" class="h-auto w-full rounded-sm" />
         ) : (
-          <div class:list={["rounded-sm bg-surface", i === 0 ? "col-span-2 aspect-[4/3]" : "aspect-square"]}></div>
+          <div class="aspect-square rounded-sm bg-surface"></div>
         )
-      ))}
+      )}
     </div>
   </div>
 </section>
