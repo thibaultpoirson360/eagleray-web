@@ -28,5 +28,7 @@
   "expeditionCard": {
     "label": "Créateur d'expéditions",
     "description": "Vous avez déjà une idée d'itinéraire ? Passez directement au formulaire de création d'expédition et obtenez un devis personnalisé."
-  }
+  },
+  "partnersText": "Vous travaillez avec des clients ?",
+  "partnersLinkLabel": "Voir les partenariats"
 }

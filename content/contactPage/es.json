@@ -28,5 +28,7 @@
   "expeditionCard": {
     "label": "Creador de expediciones",
     "description": "¿Ya tienes en mente una ruta? Ve directamente al formulario del planificador de expediciones y recibe un presupuesto personalizado."
-  }
+  },
+  "partnersText": "¿Trabajas con clientes?",
+  "partnersLinkLabel": "Ver Alianzas"
 }

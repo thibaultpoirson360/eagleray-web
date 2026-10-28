@@ -1,25 +1,73 @@
 {
-  "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Des vacanciers naviguant sur un catamaran à La Paz",
-  "title": "Venez naviguer avec nous",
+  "heroImage": "",
+  "heroImageAlt": "Quelqu'un dans l'eau, en plongée ou en snorkeling depuis le bateau",
+  "heroImage2": "",
+  "heroImage2Alt": "Un groupe partageant un long déjeuner sur le pont",
+  "kicker": "Venez naviguer avec nous",
+  "title": "Certains viennent pour les plongées.\nD'autres viennent pour les longs déjeuners.\nNous naviguons pour les deux.",
   "subtitle": "Voyages privés à la voile à La Paz, en Basse-Californie du Sud, conçus autour de votre groupe.",
   "heroCta": {
     "label": "Planifiez votre voyage",
     "href": "/fr/customize-your-expedition/"
   },
-  "intro": "Nous organisons des sorties en voilier privées sur mesure pour votre groupe, et non l'inverse.\nC'est vous qui choisissez les participants.\nNotre équipe s'occupe de la navigation, veille à la sécurité de tous et sait s'adapter au fil de la journée pour modifier le programme si une occasion intéressante se présente.",
-  "expeditionsLabel": "Choisissez votre expédition",
+  "specialLinkLabel": "Éditions spéciales en novembre : Sergio Torres et Monik Saab",
+  "introTitle": "L'équipage observe le groupe, pas le programme.",
+  "intro": "Nous construisons des voyages privés à la voile autour de votre groupe, et non l'inverse. Vous choisissez qui vient. Notre équipe mène le bateau, veille à la sécurité de chacun et lit la journée pour pouvoir la changer quand quelque chose en vaut la peine.",
+  "expeditionsLabel": "Votre groupe, votre voyage",
+  "expeditionsIntro": "Des expéditions privées à vos dates, avec les personnes que vous choisissez.",
+  "specialKicker": "Éditions spéciales",
+  "specialTitle": "Dates limitées avec nos chefs d'expédition",
+  "specialIntro": "Quelques fois par an, l'un de nos chefs d'expédition organise un voyage autour de ce qu'il connaît le mieux. Des dates fixes, un petit groupe et la même façon de lire la journée que pour toute autre expédition.",
   "expeditions": [
+    {
+      "name": "Thanksgiving avec Sergio Torres",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "Un moment de calme à bord : déjeuner, ombre et baignade depuis la poupe",
+      "facts": "3, 5 ou 7 nuits · bateau privé",
+      "priceNote": "À partir de 14 500 USD · bateau entier",
+      "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
+      "href": "/fr/recalibration-expedition/",
+      "homeOrder": 3,
+      "group": "trip",
+      "builtAround": "Pensé pour : des journées lentes à bord",
+      "otherSide": "De longs déjeuners sur le pont, ou autant de temps dans l'eau que vous le souhaitez."
+    },
+    {
+      "name": "Expédition de recalibrage",
+      "group": "trip",
+      "builtAround": "Pensé pour : du temps dans l'eau",
+      "image": "",
+      "imageAlt": "Un groupe dans l'eau avec un guide",
+      "description": "Plus d'heures dans l'eau : apnée, plongée bouteille et longues sessions de snorkeling, avec un spécialiste certifié et le matériel à bord. Vous choisissez les dates et le groupe.",
+      "otherSide": "[CONFIRM] Si vous sautez une session, le long déjeuner vous attend toujours sur le pont.",
+      "facts": "[CONFIRM durations] · bateau privé",
+      "priceNote": "[PENDING]",
+      "href": "",
+      "hideOnHome": true
+    },
+    {
+      "name": "Votre propre expédition",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "Une expédition à la voile sur mesure",
+      "description": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
+      "href": "/fr/ad-hoc-expedition/",
+      "group": "trip",
+      "builtAround": "Pensé pour : votre idée",
+      "otherSide": "Vos dates, vos proches, votre rythme."
+    },
     {
       "name": "Expédition de recalibrage",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
-      "imageAlt": "Expédition de recalibrage",
+      "imageAlt": "Sergio Torres, chef d'expédition d'Eagle Ray, en apnée parmi les poissons",
       "badge": "Dates limitées · 22 au 29 nov.",
       "facts": "2 départs · 3 nuits chacun",
-      "priceNote": "À partir de 4 000 USD",
+      "priceNote": "À partir de 4 000 USD · [CONFIRM: par personne ou bateau entier]",
       "description": "Pêche sous-marine, apnée et journées en mer avec vos proches. Deux départs à la voile en novembre, de 3 nuits chacun.",
       "href": "/fr/landing/sergio-torres-thanksgiving/",
-      "homeOrder": 2
+      "homeOrder": 2,
+      "group": "special",
+      "builtAround": "Pensé pour : la pêche sous-marine et l'apnée",
+      "otherSide": "[CONFIRM] Pas dans l'eau ce jour-là ? Restez sur le pont."
     },
     {
       "name": "Plongez et naviguez avec Monik Saab",
@@ -30,28 +78,14 @@
       "href": "/fr/landing/dive-the-sea-of-cortez-with-monik-saab/",
       "facts": "3 départs · 1 jour, 3 nuits ou 5 nuits",
       "priceNote": "À partir de 5 500 USD · bateau entier",
-      "homeOrder": 1
-    },
-    {
-      "name": "Thanksgiving avec Sergio Torres",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
-      "imageAlt": "Thanksgiving avec Sergio Torres",
-      "facts": "3, 5 ou 7 nuits · bateau privé",
-      "priceNote": "À partir de 14 500 USD, bateau entier",
-      "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
-      "href": "/fr/recalibration-expedition/",
-      "homeOrder": 3
-    },
-    {
-      "name": "Votre propre expédition",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
-      "imageAlt": "Une expédition à la voile sur mesure",
-      "description": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
-      "href": "/fr/ad-hoc-expedition/"
+      "homeOrder": 1,
+      "group": "special",
+      "builtAround": "Pensé pour : la plongée",
+      "otherSide": "[CONFIRM] Vous ne plongez pas ? Essayez une session guidée ou restez sur le pont."
     }
   ],
-  "activitiesTitle": "Ajoutez des activités à votre expédition",
-  "activitiesSubtitle": "Nos passionnés de la mer sont les moniteurs et spécialistes derrière ces activités en mer. Chaque expédition peut être façonnée autour de celles qui vous tiennent à cœur. Dites-nous ce qui vous plairait et nous la concevrons avec vous.",
+  "activitiesTitle": "Ajoutez des activités, ou gardez des journées lentes",
+  "activitiesSubtitle": "Chaque expédition fonctionne sans aucune activité. Si votre groupe veut passer plus de temps dans l'eau, nos Gens de la mer passionnés sont les instructeurs et spécialistes qui les animent. Ajoutez-les à n'importe quelle expédition et nous la concevrons avec vous.",
   "activitiesButtonLabel": "Contactez-nous pour en savoir plus",
   "activities": [
     {
