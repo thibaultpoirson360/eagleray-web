@@ -46,7 +46,6 @@ const expeditions: TripCardData[] = (page?.expeditions ?? [])
   }));
 const tripCards = expeditions.filter((c) => c.group === "trip");
 const specialCards = expeditions.filter((c) => c.group === "special");
-const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
 const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-cols-2" : `md:grid-cols-2 ${max}`);
 ---
 
@@ -66,20 +65,15 @@ const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-
             title={page.title}
             kicker={page.kicker}
             lede={page.subtitle}
+            introTitle={page.introTitle}
+            intro={page.intro}
             images={[
               { src: page.heroImage, alt: page.heroImageAlt, field: tinaField(page, "heroImage") },
               { src: page.heroImage2, alt: page.heroImage2Alt, field: tinaField(page, "heroImage2") },
             ]}
             link={page.specialLinkLabel && specialCards.length > 0 ? { label: page.specialLinkLabel, href: "#special-editions" } : null}
-            fields={{ title: tinaField(page, "title"), kicker: tinaField(page, "kicker"), lede: tinaField(page, "subtitle"), cta: tinaField(page, "heroCta"), link: tinaField(page, "specialLinkLabel") }}
+            fields={{ title: tinaField(page, "title"), kicker: tinaField(page, "kicker"), lede: tinaField(page, "subtitle"), introTitle: tinaField(page, "introTitle"), intro: tinaField(page, "intro"), cta: tinaField(page, "heroCta"), link: tinaField(page, "specialLinkLabel") }}
           />
-
-          <section class="mx-auto max-w-[620px] px-5 pb-[calc(var(--spacing-section)*1.4)] text-center">
-            {page.introTitle && <h2 class="mb-8 text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "introTitle")}>{page.introTitle}</h2>}
-            {intro.map((paragraph) => (
-              <p class="text-[.95rem] leading-[1.9] text-ink/64" data-tina-field={tinaField(page, "intro")}>{paragraph}</p>
-            ))}
-          </section>
 
           <section class="mx-auto max-w-site px-5 pb-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
             <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
