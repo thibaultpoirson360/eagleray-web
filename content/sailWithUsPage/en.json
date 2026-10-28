@@ -1,25 +1,73 @@
 {
-  "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Guests sailing on a catamaran in La Paz",
-  "title": "Sail with us",
+  "heroImage": "",
+  "heroImageAlt": "Someone in the water, diving or snorkeling off the boat",
+  "heroImage2": "",
+  "heroImage2Alt": "A group sharing a long lunch on deck",
+  "kicker": "Sail with us",
+  "title": "Some come for the dives.\nSome come for the long lunches.\nWe sail for both.",
   "subtitle": "Private sailing trips in La Paz, Baja California Sur, built around your group.",
   "heroCta": {
     "label": "Plan your trip",
     "href": "/en/customize-your-expedition/"
   },
-  "intro": "We build private sailing trips around your group, not the other way around.\nYou choose who comes.\nOur team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
-  "expeditionsLabel": "Choose your expedition",
+  "specialLinkLabel": "Special editions this November: Sergio Torres and Monik Saab",
+  "introTitle": "The crew reads the group, not the schedule.",
+  "intro": "We build private sailing trips around your group, not the other way around. You choose who comes. Our team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
+  "expeditionsLabel": "Your group, your trip",
+  "expeditionsIntro": "Private expeditions on your dates, with the people you choose.",
+  "specialKicker": "Special editions",
+  "specialTitle": "Limited dates with our Expedition Leaders",
+  "specialIntro": "A few times a year, one of our Expedition Leaders takes a trip around what they know best. Set dates, a small group, and the same way of reading the day as every other expedition.",
   "expeditions": [
+    {
+      "name": "Recalibration Expedition",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "A slow moment on board: lunch, shade and a swim off the stern",
+      "facts": "3, 5 or 7 nights · private boat",
+      "priceNote": "From 14,500 USD · whole boat",
+      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
+      "href": "/en/recalibration-expedition/",
+      "homeOrder": 3,
+      "group": "trip",
+      "builtAround": "Built around: slow days on board",
+      "otherSide": "Long lunches on deck, or as much time in the water as you want."
+    },
+    {
+      "name": "Active Expedition",
+      "group": "trip",
+      "builtAround": "Built around: time in the water",
+      "image": "",
+      "imageAlt": "A group in the water with a guide",
+      "description": "More hours in the water: freediving, scuba and long snorkel sessions, with a certified specialist and the gear on board. You choose the dates and the group.",
+      "otherSide": "[CONFIRM] Skip a session, and the long lunch is still on deck.",
+      "facts": "[CONFIRM durations] · private boat",
+      "priceNote": "[PENDING]",
+      "href": "",
+      "hideOnHome": true
+    },
+    {
+      "name": "Your own expedition",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "A custom sailing expedition",
+      "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
+      "href": "/en/ad-hoc-expedition/",
+      "group": "trip",
+      "builtAround": "Built around: your idea",
+      "otherSide": "Your dates, your people, your pace."
+    },
     {
       "name": "Thanksgiving with Sergio Torres",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
-      "imageAlt": "Active Expedition",
+      "imageAlt": "Sergio Torres, Eagle Ray Expedition Leader, freediving with fish",
       "badge": "Limited dates · Nov 22 to 29",
       "facts": "2 departures · 3 nights each",
-      "priceNote": "From 4,000 USD",
+      "priceNote": "From 4,000 USD · [CONFIRM: per person or whole boat]",
       "description": "Spearfishing, freediving and days at sea with your own people. Two sailing departures in November, 3 nights each.",
       "href": "/en/landing/sergio-torres-thanksgiving/",
-      "homeOrder": 2
+      "homeOrder": 2,
+      "group": "special",
+      "builtAround": "Built around: spearfishing and freediving",
+      "otherSide": "[CONFIRM] Not in the water that day? Stay on deck."
     },
     {
       "name": "Dive & Sail with Monik Saab",
@@ -30,28 +78,14 @@
       "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/",
       "facts": "3 departures · 1 day, 3 nights or 5 nights",
       "priceNote": "From 5,500 USD · whole boat",
-      "homeOrder": 1
-    },
-    {
-      "name": "Recalibration Expedition",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
-      "imageAlt": "Recalibration Expedition",
-      "facts": "3, 5 or 7 nights · private boat",
-      "priceNote": "From 14,500 USD, whole boat",
-      "description": "A private sailing expedition for people who want to disconnect with their own people, at a pace nobody else is setting. You choose the dates and the group.",
-      "href": "/en/recalibration-expedition/",
-      "homeOrder": 3
-    },
-    {
-      "name": "Your own expedition",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
-      "imageAlt": "A custom sailing expedition",
-      "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
-      "href": "/en/ad-hoc-expedition/"
+      "homeOrder": 1,
+      "group": "special",
+      "builtAround": "Built around: diving",
+      "otherSide": "[CONFIRM] Not a diver? Try a guided session, or stay on deck."
     }
   ],
-  "activitiesTitle": "Add activities to your expedition",
-  "activitiesSubtitle": "Our Passionate Sea People are the instructors and specialists behind these ocean activities. Every expedition can be shaped around the ones you care about. Tell us what you'd like and we'll design it with you.",
+  "activitiesTitle": "Add activities, or keep the days slow",
+  "activitiesSubtitle": "Every expedition works with no activities at all. If your group wants more time in the water, our Passionate Sea People are the instructors and specialists behind these. Add them to any expedition, and we'll design it with you.",
   "activitiesButtonLabel": "Contact us for more info",
   "activities": [
     {

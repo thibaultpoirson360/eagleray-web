@@ -1,0 +1,49 @@
+---
+/**
+ * A trip card on Sail with Us: photo, "Built around" line, name, text, one
+ * italic line, facts, price and a "Learn more" button. Same structure for the
+ * group trips (light) and the special editions (`dark`, on the navy section).
+ * Every piece is optional, so a card without a price or a link still lines up.
+ */
+import Button from "./ui/Button.astro";
+import type { ExpeditionCard } from "./ExpeditionCards.astro";
+
+interface Props {
+  card: ExpeditionCard & { builtAround?: string; otherSide?: string };
+  linkLabel: string;
+  dark?: boolean;
+}
+
+const { card, linkLabel, dark = false } = Astro.props;
+---
+
+<article class="flex h-full flex-col">
+  <div class:list={["relative aspect-[4/5] overflow-hidden rounded", dark ? "bg-white/10" : "bg-ink/10"]}>
+    {card.image && <img src={card.image} alt={card.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" data-tina-field={card.field} />}
+    {
+      card.badge && (
+        <span class="absolute top-4 left-4 rounded-sm bg-ink px-[.6rem] py-[.3rem] font-mono text-[.62rem] tracking-[.06em] text-white">
+          {card.badge}
+        </span>
+      )
+    }
+  </div>
+  <div class="flex flex-1 flex-col pt-8" data-tina-field={card.descriptionField}>
+    {card.builtAround && <p class:list={["font-mono text-[.68rem] tracking-[.06em]", dark ? "text-white/74" : "text-ink/64"]}>{card.builtAround}</p>}
+    <h3 class="mt-3 font-display text-[1.2rem] font-normal">{card.name}</h3>
+    {card.description && <p class:list={["mt-4 text-[.88rem] leading-[1.75]", dark ? "text-white/80" : "text-ink/74"]}>{card.description}</p>}
+    {card.otherSide && <p class:list={["mt-4 text-[.88rem] leading-[1.75] italic", dark ? "text-white/80" : "text-ink/74"]}>{card.otherSide}</p>}
+    {card.facts && <p class:list={["mt-6 text-[.8rem]", dark ? "text-white/74" : "text-ink/64"]}>{card.facts}</p>}
+    {card.priceNote && <p class="mt-2 font-display text-[.95rem]">{card.priceNote}</p>}
+    {
+      card.href && (
+        <div class="mt-auto pt-8">
+          <Button href={card.href} variant={dark ? "primary" : "ghost"} context={dark ? "hero" : "default"} size="sm">
+            {linkLabel}
+            <span class="sr-only">: {card.name}</span>
+          </Button>
+        </div>
+      )
+    }
+  </div>
+</article>

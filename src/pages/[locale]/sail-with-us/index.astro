@@ -8,11 +8,12 @@
  * a language without a document shows no content and is `noindex`.
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import PageHero from "../../../components/ui/PageHero.astro";
 import Button from "../../../components/ui/Button.astro";
 import { tinaField } from "@tinacms/astro/tina-field";
 import ActivitiesSection from "../../../components/ActivitiesSection.astro";
-import ExpeditionCards, { type ExpeditionCard } from "../../../components/ExpeditionCards.astro";
+import type { ExpeditionCard } from "../../../components/ExpeditionCards.astro";
+import SailHero from "../../../components/SailHero.astro";
+import TripCard from "../../../components/TripCard.astro";
 import { loadSailWithUsPage } from "../../../lib/content";
 import { liveLocales, type Locale } from "../../../i18n/config";
 
@@ -23,9 +24,16 @@ export function getStaticPaths() {
 const locale = Astro.params.locale as Locale;
 const page = await loadSailWithUsPage(locale).then((r) => r.data.sailWithUsPage).catch(() => null);
 
-const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
-  .filter((e): e is NonNullable<typeof e> => !!e?.name)
-  .map((e) => ({
+type TripCardData = ExpeditionCard & { builtAround?: string; otherSide?: string; group: string };
+const expeditions: TripCardData[] = (page?.expeditions ?? [])
+  .map((e, i) => ({ e, i }))
+  .filter((x): x is { e: NonNullable<typeof x.e>; i: number } => !!x.e?.name)
+  .map(({ e, i }) => ({
+    group: e.group === "special" ? "special" : "trip",
+    builtAround: e.builtAround ?? undefined,
+    otherSide: e.otherSide ?? undefined,
+    field: tinaField(page!, "expeditions", i),
+    descriptionField: tinaField(page!, "expeditions", i),
     id: e.name,
     name: e.name,
     image: e.image ?? undefined,
@@ -36,7 +44,10 @@ const expeditions: ExpeditionCard[] = (page?.expeditions ?? [])
     facts: e.facts ?? undefined,
     priceNote: e.priceNote ?? undefined,
   }));
+const tripCards = expeditions.filter((c) => c.group === "trip");
+const specialCards = expeditions.filter((c) => c.group === "special");
 const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
+const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-cols-2" : `md:grid-cols-2 ${max}`);
 ---
 
 <BaseLayout
@@ -51,30 +62,63 @@ const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
     {
       page && (
         <>
-          <PageHero title={page.title} lede={page.subtitle} image={page.heroImage} imageAlt={page.heroImageAlt} cta={page.heroCta} />
+          <SailHero
+            title={page.title}
+            kicker={page.kicker}
+            lede={page.subtitle}
+            images={[
+              { src: page.heroImage, alt: page.heroImageAlt, field: tinaField(page, "heroImage") },
+              { src: page.heroImage2, alt: page.heroImage2Alt, field: tinaField(page, "heroImage2") },
+            ]}
+            link={page.specialLinkLabel && specialCards.length > 0 ? { label: page.specialLinkLabel, href: "#special-editions" } : null}
+            fields={{ title: tinaField(page, "title"), kicker: tinaField(page, "kicker"), lede: tinaField(page, "subtitle"), cta: tinaField(page, "heroCta"), link: tinaField(page, "specialLinkLabel") }}
+          />
 
-          <section class="mx-auto max-w-[720px] px-5 pt-16 pb-14 text-center">
+          <section class="mx-auto max-w-[620px] px-5 pb-[calc(var(--spacing-section)*1.4)] text-center">
+            {page.introTitle && <h2 class="mb-8 text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "introTitle")}>{page.introTitle}</h2>}
             {intro.map((paragraph) => (
-              <p class="text-[1.0625rem] leading-[1.8] text-ink/68">{paragraph}</p>
+              <p class="text-[.95rem] leading-[1.9] text-ink/64" data-tina-field={tinaField(page, "intro")}>{paragraph}</p>
             ))}
           </section>
 
-          <section class="mx-auto max-w-site px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
-            {page.expeditionsLabel && (
-              <p class="mb-10 border-t border-ink/14 pt-10 text-center font-mono text-[.76rem] tracking-[.24em] text-ink/50 uppercase">
-                {page.expeditionsLabel}
-              </p>
-            )}
-            <ExpeditionCards expeditions={expeditions} linkLabel="Learn more" />
+          <section class="mx-auto max-w-site px-5 pb-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+            <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
+              {page.expeditionsLabel && <h2 class="text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "expeditionsLabel")}>{page.expeditionsLabel}</h2>}
+              {page.expeditionsIntro && <p class="mx-auto mt-5 max-w-[46ch] text-[.92rem] leading-[1.8] text-ink/64" data-tina-field={tinaField(page, "expeditionsIntro")}>{page.expeditionsIntro}</p>}
+            </div>
+            <div class={`grid gap-x-10 gap-y-20 ${gridCols(tripCards.length, "lg:grid-cols-3")}`}>
+              {tripCards.map((card) => <TripCard card={card} linkLabel="Learn more" />)}
+            </div>
           </section>
 
+          {page.activitiesTitle && (
+            <div class="pt-[calc(var(--spacing-section)*.4)]">
+              <ActivitiesSection page={page} locale={locale} />
+            </div>
+          )}
+
+          {specialCards.length > 0 && (
+            <section id="special-editions" class="scroll-mt-24 bg-ink py-[calc(var(--spacing-section)*1.6)] text-white">
+              <div class="mx-auto max-w-site px-5 lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+                <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
+                  {page.specialKicker && <p class="mb-6 font-mono text-[.7rem] tracking-[.2em] text-white/64 uppercase" data-tina-field={tinaField(page, "specialKicker")}>{page.specialKicker}</p>}
+                  {page.specialTitle && <h2 class="text-quote-lead leading-[1.35] font-normal text-white" data-tina-field={tinaField(page, "specialTitle")}>{page.specialTitle}</h2>}
+                  {page.specialIntro && <p class="mx-auto mt-5 max-w-[46ch] text-[.92rem] leading-[1.8] text-white/70" data-tina-field={tinaField(page, "specialIntro")}>{page.specialIntro}</p>}
+                </div>
+                <div class={`grid gap-x-10 gap-y-20 ${gridCols(specialCards.length, "lg:grid-cols-3")}`}>
+                  {specialCards.map((card) => <TripCard card={card} linkLabel="Learn more" dark />)}
+                </div>
+              </div>
+            </section>
+          )}
+
           {page.howTitle && (page.howSteps?.length ?? 0) > 0 && (
-            <section class="mx-auto max-w-site px-5 pt-section lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
-              <h2 class="mb-section-head text-h2" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
+            <section class="mx-auto max-w-site px-5 py-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+              <h2 class="mb-section-head text-center text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
               <ol class="grid gap-10 md:grid-cols-3 md:gap-8">
                 {page.howSteps?.map((step, i) =>
                   step ? (
-                    <li class="border-t border-ink/14 pt-6" data-tina-field={tinaField(page, "howSteps", i)}>
+                    <li class="border-t border-ink/14 pt-6 text-center" data-tina-field={tinaField(page, "howSteps", i)}>
                       <p class="font-mono text-[.7rem] tracking-[.14em] text-ink/64">{String(i + 1).padStart(2, "0")}</p>
                       <h3 class="mt-3 font-display text-[1.3rem]">{step.title}</h3>
                       {step.text && <p class="mt-2 leading-[1.65] text-ink/74">{step.text}</p>}
@@ -85,11 +129,9 @@ const intro = page?.intro?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
             </section>
           )}
 
-          {page.activitiesTitle && <ActivitiesSection page={page} locale={locale} />}
-
           {page.closingTitle && (
-            <section class="border-t border-ink/8 px-5 py-section text-center">
-              <h2 class="mx-auto max-w-[24ch] text-h2" data-tina-field={tinaField(page, "closingTitle")}>{page.closingTitle}</h2>
+            <section class="border-t border-ink/8 px-5 py-[calc(var(--spacing-section)*1.4)] text-center">
+              <h2 class="mx-auto max-w-[24ch] text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "closingTitle")}>{page.closingTitle}</h2>
               {page.closingText && <p class="mx-auto mt-4 max-w-[46ch] text-ink/74" data-tina-field={tinaField(page, "closingText")}>{page.closingText}</p>}
               <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
                 {page.closingPrimaryCta?.label && page.closingPrimaryCta.href && (
