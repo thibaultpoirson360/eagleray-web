@@ -49,6 +49,7 @@ const partnershipsPage: Collection = {
       fields: [
         { type: "string", name: "name", label: "Format name" },
         { type: "string", name: "text", label: "One-line description", ui: textarea },
+        { type: "string", name: "href", label: "Link address (leave empty for no link)", description: "Where the box goes when someone clicks it, for example /en/recalibration-expedition/", ui: doNotTranslate },
       ],
     },
     { type: "string", name: "seeAllLabel", label: "\"See all expeditions\" link label" },

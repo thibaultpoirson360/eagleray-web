@@ -79,9 +79,18 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
   <ul class="mt-12 grid gap-4 sm:grid-cols-2">
     {
       page.formats?.map((f) => f && (
-        <li class="rounded border border-ink/14 bg-surface p-6" data-tina-field={tinaField(f, "name")}>
-          <h3 class="font-display text-[1.1rem] font-normal">{f.name}</h3>
-          <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74">{f.text}</p>
+        <li>
+          {f.href ? (
+            <a href={f.href} class="group block h-full rounded border border-ink/14 bg-surface p-6 transition-colors hover:border-ink/40 focus-visible:outline-2 focus-visible:outline-offset-2">
+              <h3 class="font-display text-[1.1rem] font-normal underline-offset-4 group-hover:underline" data-tina-field={tinaField(f, "name")}>{f.name} →</h3>
+              <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
+            </a>
+          ) : (
+            <div class="h-full rounded border border-ink/14 bg-surface p-6">
+              <h3 class="font-display text-[1.1rem] font-normal" data-tina-field={tinaField(f, "name")}>{f.name}</h3>
+              <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
+            </div>
+          )}
         </li>
       ))
     }

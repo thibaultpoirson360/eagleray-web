@@ -36,7 +36,8 @@
   "formats": [
     {
       "name": "Recalibration Expedition",
-      "text": "Slow days, good food, quiet anchorages."
+      "text": "Slow days, good food, quiet anchorages.",
+      "href": "/en/recalibration-expedition/"
     },
     {
       "name": "Active Expedition",
@@ -44,11 +45,13 @@
     },
     {
       "name": "Ad-hoc Expedition",
-      "text": "Built from scratch around the group."
+      "text": "Built from scratch around the group.",
+      "href": "/en/ad-hoc-expedition/"
     },
     {
       "name": "Special editions",
-      "text": "Trips led by guest Expedition Leaders, a few times a year."
+      "text": "Trips led by guest Expedition Leaders, a few times a year.",
+      "href": "/en/sail-with-us/#special-editions"
     }
   ],
   "seeAllLabel": "See all expeditions",
