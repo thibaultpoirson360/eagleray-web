@@ -1,0 +1,119 @@
+{
+  "title": "Tiempo privado en el mar, para las personas que cuidas.",
+  "subtitle": "Eagle Ray Expeditions organiza expediciones privadas en velero desde La Paz, Baja California Sur, para grupos de hasta 8 personas. Tú conoces a tus clientes. Nosotros construimos el viaje a su medida: barco, tripulación, ruta y comida.",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "imageAlt": "Tripulación e invitados juntos en el mar en Baja California Sur",
+  "primaryLabel": "Hazte socio",
+  "secondaryLabel": "Escríbenos a hello@eaglerayexpeditions.com",
+  "whoTitle": "Con quién trabajamos",
+  "whoCards": [
+    {
+      "title": "Asesores de viaje y agencias",
+      "text": "Tu cliente confía en ti para el plan. Te damos un viaje al que puedes poner tu nombre: un barco privado, una tripulación que puedes presentar por su nombre y una propuesta lista para enviar.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "Un momento tranquilo a bordo: comida, sombra y un chapuzón desde la popa"
+    },
+    {
+      "title": "Conserjes de hotel",
+      "text": "Un huésped pregunta qué vale la pena hacer más allá del hotel. Unas noches en el Mar de Cortés, con capitán, Líder de expedición y chef a bordo, son una respuesta de verdad.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Food_-_Foto_sahnr9.jpg",
+      "imageAlt": "Comida preparada por el chef a bordo"
+    },
+    {
+      "title": "Líderes de expedición",
+      "text": "Tienes una habilidad, una historia y gente que te sigue. Ponemos un barco y una tripulación a tu alrededor, y tú lideras tu propia edición.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
+      "imageAlt": "La Líder de expedición Monik Saab buceando"
+    }
+  ],
+  "aboardTitle": "Lo que tus clientes encuentran a bordo",
+  "aboardPoints": [
+    "Un barco privado. Solo el grupo que eligieron, sin desconocidos.",
+    "Una tripulación elegida por su marinería y hospitalidad: capitán, Líder de expedición y chef.",
+    "3, 5 o 7 noches alrededor de Espíritu Santo, sin una agenda inflexible.",
+    "Starlink a bordo, para esa llamada que no puede esperar."
+  ],
+  "formats": [
+    {
+      "name": "Expedición Recalibración",
+      "text": "Días lentos, buena comida, fondeaderos tranquilos."
+    },
+    {
+      "name": "Expedición Activa",
+      "text": "Más horas en el agua, con snorkel, buceo libre y buceo con tanque."
+    },
+    {
+      "name": "Expedición a medida",
+      "text": "Construida desde cero alrededor del grupo."
+    },
+    {
+      "name": "Ediciones especiales",
+      "text": "Viajes dirigidos por Líderes de expedición invitados, algunas veces al año."
+    }
+  ],
+  "seeAllLabel": "Ver todas las expediciones",
+  "seeAllHref": "/en/sail-with-us/",
+  "howTitle": "Cómo funciona",
+  "steps": [
+    "Cuéntanos sobre tu cliente: tamaño del grupo, fechas y qué busca en sus días.",
+    "Te enviamos una propuesta con opciones de barco, tripulación y precio.",
+    "Tu cliente confirma. Nuestra tripulación se encarga desde el primer mensaje hasta el último fondeadero."
+  ],
+  "getTitle": "Lo que obtienes",
+  "benefits": [
+    "Una comisión por cada reserva que traigas. Te explicamos los detalles en persona.",
+    "Una tripulación que puedes presentar por su nombre, con perfiles y fotos reales.",
+    "Propuestas que tus clientes pueden abrir y leer en su teléfono."
+  ],
+  "limitedOffer": {
+    "text": "Hasta el 31 de diciembre de 2026: un paquete de vinos de descubrimiento de Climats, nuestro socio sommelier en Baja, para ofrecer a tus clientes.",
+    "lastDay": "2026-12-31"
+  },
+  "proofTitle": "Escúchalo de ellos",
+  "proofLinks": [
+    {
+      "label": "Historias de invitados",
+      "href": "/es/about-us/guest-stories/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "imageAlt": "Invitados a bordo durante una expedición"
+    },
+    {
+      "label": "Conoce a la tripulación",
+      "href": "/es/passionate-sea-people/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "imageAlt": "Un miembro de la tripulación de Eagle Ray"
+    }
+  ],
+  "formTitle": "Hazte socio",
+  "form": {
+    "name": "Nombre completo",
+    "company": "Empresa, hotel o usuario de Instagram",
+    "role": "Soy...",
+    "roleOptions": [
+      "Asesor de viajes o agencia",
+      "Conserje de hotel",
+      "Líder de Expedición",
+      "Otro"
+    ],
+    "location": "Ciudad y país",
+    "email": "Correo",
+    "whatsapp": "WhatsApp (opcional)",
+    "audience": "¿Quiénes son tus clientes o tu comunidad? (opcional)",
+    "source": "¿Cómo supiste de nosotros?",
+    "sourceOptions": [
+      "Evento de lanzamiento en la Ciudad de México",
+      "Instagram",
+      "Un amigo o colega",
+      "Otro"
+    ],
+    "selectPlaceholder": "Elige una opción",
+    "submitLabel": "Hazte socio",
+    "sendingLabel": "Enviando…",
+    "successMessage": "Gracias. Te escribiremos pronto.",
+    "errorMessage": "Algo salió mal al enviar tus datos. Inténtalo de nuevo o escribe a hello@eaglerayexpeditions.com."
+  },
+  "seo": {
+    "title": "Alianzas | Eagle Ray Expeditions",
+    "description": "Expediciones privadas en velero en Baja California Sur para asesores de viaje, conserjes y Líderes de expedición. Trabaja con Eagle Ray Expeditions."
+  }
+}

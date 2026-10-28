@@ -51,6 +51,8 @@ Warm, direct, calm. No exclamation marks unless the English has one. Keep headin
 | Scuba diving | Buceo con tanque | Plongée bouteille | **guess** |
 | Sea lions | Lobos marinos | Otaries | **guess** |
 | Thanksgiving | Acción de Gracias | Thanksgiving | Spanish from the live landing page; French keeps the English word |
+| Partnerships | Alianzas | Partenariats | **guess** |
+| Become a partner | Hazte socio | Devenir partenaire | **guess** |
 
 ## Open questions
 

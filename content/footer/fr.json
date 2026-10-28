@@ -3,7 +3,7 @@
   "claimEmphasis": "On ne visite pas un lieu. On le parcourt en bateau.",
   "contactDisplay": {
     "phone": "+52 55 6809 0942",
-    "email": "thibault@eaglerayexpeditions.com"
+    "email": "hello@eaglerayexpeditions.com"
   },
   "base": {
     "heading": "Base",
@@ -26,6 +26,7 @@
     "creditsText": "Photographies sous licence Creative Commons.",
     "creditsLabel": "Crédits photo →",
     "termsLabel": "Conditions générales",
-    "privacyLabel": "Politique de confidentialité"
+    "privacyLabel": "Politique de confidentialité",
+    "partnershipsLabel": "Partenariats"
   }
 }

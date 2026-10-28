@@ -1,0 +1,119 @@
+{
+  "title": "Du temps privé en mer, pour les personnes dont vous prenez soin.",
+  "subtitle": "Eagle Ray Expeditions organise des expéditions privées à la voile au départ de La Paz, Baja California Sur, pour des groupes de 8 personnes maximum. Vous connaissez vos clients. Nous construisons le voyage autour d'eux : bateau, équipage, itinéraire et repas.",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "imageAlt": "Équipage et invités réunis en mer, en Baja California Sur",
+  "primaryLabel": "Devenir partenaire",
+  "secondaryLabel": "Écrivez-nous à hello@eaglerayexpeditions.com",
+  "whoTitle": "Avec qui nous travaillons",
+  "whoCards": [
+    {
+      "title": "Conseillers en voyages et agences",
+      "text": "Votre client vous confie le programme. Nous vous offrons un voyage auquel vous pouvez associer votre nom : un bateau privé, un équipage que vous pouvez présenter par son nom et une proposition prête à envoyer.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "Un moment de calme à bord : déjeuner, ombre et baignade depuis la poupe"
+    },
+    {
+      "title": "Concierges d'hôtel",
+      "text": "Un client demande ce qui vaut la peine d'être fait au-delà de l'hôtel. Quelques nuits en mer de Cortez, avec un capitaine, un chef d'expédition et un chef cuisinier à bord, c'est une vraie réponse.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Food_-_Foto_sahnr9.jpg",
+      "imageAlt": "Repas préparé par le chef à bord"
+    },
+    {
+      "title": "Chefs d'expédition",
+      "text": "Vous avez un savoir-faire, une histoire et des personnes qui vous suivent. Nous mettons un bateau et un équipage à votre service, et vous menez votre propre édition.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
+      "imageAlt": "Monik Saab, chef d'expédition, en plongée"
+    }
+  ],
+  "aboardTitle": "Ce que vos clients trouvent à bord",
+  "aboardPoints": [
+    "Un bateau privé. Uniquement le groupe qu'ils ont choisi, sans inconnus.",
+    "Un équipage choisi pour son sens marin et son hospitalité : capitaine, chef d'expédition et chef cuisinier.",
+    "3, 5 ou 7 nuits autour d'Espíritu Santo, sans programme figé.",
+    "Starlink à bord, pour l'appel qui ne peut pas attendre."
+  ],
+  "formats": [
+    {
+      "name": "Expédition Recalibration",
+      "text": "Des journées lentes, de bons repas, des mouillages paisibles."
+    },
+    {
+      "name": "Expédition Active",
+      "text": "Plus d'heures dans l'eau, avec snorkeling, apnée et plongée bouteille."
+    },
+    {
+      "name": "Expédition sur mesure",
+      "text": "Construite de zéro autour du groupe."
+    },
+    {
+      "name": "Éditions spéciales",
+      "text": "Des voyages menés par des chefs d'expédition invités, quelques fois par an."
+    }
+  ],
+  "seeAllLabel": "Voir toutes les expéditions",
+  "seeAllHref": "/en/sail-with-us/",
+  "howTitle": "Comment ça marche",
+  "steps": [
+    "Parlez-nous de votre client : taille du groupe, dates et ce qu'il attend de ses journées.",
+    "Nous vous envoyons une proposition avec les options de bateau, l'équipage et le prix.",
+    "Votre client confirme. Notre équipage s'occupe de tout, du premier message jusqu'au dernier mouillage."
+  ],
+  "getTitle": "Ce que vous obtenez",
+  "benefits": [
+    "Une commission sur chaque réservation que vous apportez. Nous vous détaillons les modalités en personne.",
+    "Un équipage que vous pouvez présenter par son nom, avec de vrais profils et de vraies photos.",
+    "Des propositions que vos clients peuvent ouvrir et lire sur leur téléphone."
+  ],
+  "limitedOffer": {
+    "text": "Jusqu'au 31 décembre 2026 : un coffret de vins de découverte de Climats, notre partenaire sommelier en Baja, à offrir à vos clients.",
+    "lastDay": "2026-12-31"
+  },
+  "proofTitle": "Écoutez-les",
+  "proofLinks": [
+    {
+      "label": "Témoignages d'invités",
+      "href": "/fr/about-us/guest-stories/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "imageAlt": "Invités à bord pendant une expédition"
+    },
+    {
+      "label": "Rencontrez l'équipage",
+      "href": "/fr/passionate-sea-people/",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "imageAlt": "Un membre de l'équipage d'Eagle Ray"
+    }
+  ],
+  "formTitle": "Devenir partenaire",
+  "form": {
+    "name": "Nom complet",
+    "company": "Entreprise, hôtel ou compte Instagram",
+    "role": "Je suis...",
+    "roleOptions": [
+      "Conseiller en voyages ou agence",
+      "Concierge d'hôtel",
+      "Leader d'expédition",
+      "Autre"
+    ],
+    "location": "Ville et pays",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp (facultatif)",
+    "audience": "Qui sont vos clients ou votre communauté ? (facultatif)",
+    "source": "Comment nous avez-vous connus ?",
+    "sourceOptions": [
+      "Soirée de lancement à Mexico",
+      "Instagram",
+      "Un ami ou un collègue",
+      "Autre"
+    ],
+    "selectPlaceholder": "Choisissez une option",
+    "submitLabel": "Devenir partenaire",
+    "sendingLabel": "Envoi…",
+    "successMessage": "Merci. Nous vous répondrons très bientôt.",
+    "errorMessage": "Une erreur s'est produite lors de l'envoi de vos informations. Veuillez réessayer ou écrire à hello@eaglerayexpeditions.com."
+  },
+  "seo": {
+    "title": "Partenariats | Eagle Ray Expeditions",
+    "description": "Expéditions privées à la voile en Baja California Sur pour conseillers en voyages, concierges et chefs d'expédition. Travaillez avec Eagle Ray Expeditions."
+  }
+}

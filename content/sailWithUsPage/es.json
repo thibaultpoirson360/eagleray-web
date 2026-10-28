@@ -1,25 +1,73 @@
 {
-  "heroImage": "/assets/andras-vas-8CI9Wy_C9VM-unsplash.webp",
-  "heroImageAlt": "Turistas navegando en un catamarán en La Paz",
-  "title": "Navega con nosotros",
+  "heroImage": "",
+  "heroImageAlt": "Alguien en el agua, buceando o haciendo snorkel desde el barco",
+  "heroImage2": "",
+  "heroImage2Alt": "Un grupo compartiendo una larga comida en cubierta",
+  "kicker": "Navega con nosotros",
+  "title": "Algunos vienen por las inmersiones.\nOtros vienen por las comidas largas.\nNavegamos por ambas.",
   "subtitle": "Viajes privados en velero en La Paz, Baja California Sur, pensados en torno a tu grupo.",
   "heroCta": {
     "label": "Planifica tu viaje",
     "href": "/es/customize-your-expedition/"
   },
-  "intro": "Organizamos viajes privados en velero a medida de tu grupo, y no al revés.\nTú eliges quién viene.\nNuestro equipo se encarga de la navegación, vela por la seguridad de todos y está atento a cómo se desarrolla el día, para poder cambiar de planes si surge algo que merezca la pena.",
-  "expeditionsLabel": "Elige tu expedición",
+  "specialLinkLabel": "Ediciones especiales este noviembre: Sergio Torres y Monik Saab",
+  "introTitle": "La tripulación lee al grupo, no el itinerario.",
+  "intro": "Construimos viajes privados en velero alrededor de tu grupo, y no al revés. Tú eliges quién viene. Nuestro equipo maneja el barco, cuida que todos estén seguros y lee el día para poder cambiarlo cuando surja algo que valga la pena.",
+  "expeditionsLabel": "Tu grupo, tu viaje",
+  "expeditionsIntro": "Expediciones privadas en tus fechas, con las personas que elijas.",
+  "specialKicker": "Ediciones especiales",
+  "specialTitle": "Fechas limitadas con nuestros Líderes de expedición",
+  "specialIntro": "Algunas veces al año, uno de nuestros Líderes de expedición organiza un viaje en torno a lo que mejor conoce. Fechas fijas, un grupo pequeño y la misma manera de leer el día que en cualquier otra expedición.",
   "expeditions": [
+    {
+      "name": "El Día de Acción de Gracias con Sergio Torres",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "imageAlt": "Un momento tranquilo a bordo: comida, sombra y un chapuzón desde la popa",
+      "facts": "3, 5 o 7 noches · barco privado",
+      "priceNote": "Desde 14,500 USD · barco completo",
+      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+      "href": "/es/recalibration-expedition/",
+      "homeOrder": 3,
+      "group": "trip",
+      "builtAround": "Pensada para: días lentos a bordo",
+      "otherSide": "Comidas largas en cubierta, o todo el tiempo que quieras en el agua."
+    },
+    {
+      "name": "Expedición de recalibración",
+      "group": "trip",
+      "builtAround": "Pensada para: tiempo en el agua",
+      "image": "",
+      "imageAlt": "Un grupo en el agua con un guía",
+      "description": "Más horas en el agua: buceo libre, buceo con tanque y largas sesiones de snorkel, con un especialista certificado y el equipo a bordo. Tú eliges las fechas y el grupo.",
+      "otherSide": "[CONFIRM] Si te saltas una sesión, la comida larga sigue esperando en cubierta.",
+      "facts": "[CONFIRM durations] · barco privado",
+      "priceNote": "[PENDING]",
+      "href": "",
+      "hideOnHome": true
+    },
+    {
+      "name": "Tu propia expedición",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
+      "imageAlt": "Una expedición en velero a medida",
+      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
+      "href": "/es/ad-hoc-expedition/",
+      "group": "trip",
+      "builtAround": "Pensada para: tu idea",
+      "otherSide": "Tus fechas, tu gente, tu ritmo."
+    },
     {
       "name": "Expedición de recalibración",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
-      "imageAlt": "Expedición de recalibración",
+      "imageAlt": "Sergio Torres, Líder de expedición de Eagle Ray, haciendo buceo libre entre peces",
       "badge": "Fechas limitadas · 22 al 29 de nov.",
       "facts": "2 salidas · 3 noches cada una",
-      "priceNote": "Desde 4,000 USD",
+      "priceNote": "Desde 4,000 USD · [CONFIRM: por persona o barco completo]",
       "description": "Pesca submarina, buceo libre y días en el mar con tu propia gente. Dos salidas en velero en noviembre, de 3 noches cada una.",
       "href": "/es/landing/sergio-torres-thanksgiving/",
-      "homeOrder": 2
+      "homeOrder": 2,
+      "group": "special",
+      "builtAround": "Pensada para: pesca submarina y buceo libre",
+      "otherSide": "[CONFIRM] ¿Ese día no vas al agua? Quédate en cubierta."
     },
     {
       "name": "Bucea y navega con Monik Saab",
@@ -30,28 +78,14 @@
       "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/",
       "facts": "3 salidas · 1 día, 3 noches o 5 noches",
       "priceNote": "Desde 5,500 USD · barco completo",
-      "homeOrder": 1
-    },
-    {
-      "name": "El Día de Acción de Gracias con Sergio Torres",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
-      "imageAlt": "El Día de Acción de Gracias con Sergio Torres",
-      "facts": "3, 5 o 7 noches · barco privado",
-      "priceNote": "Desde 14,500 USD, barco completo",
-      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
-      "href": "/es/recalibration-expedition/",
-      "homeOrder": 3
-    },
-    {
-      "name": "Tu propia expedición",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
-      "imageAlt": "Una expedición en velero a medida",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
-      "href": "/es/ad-hoc-expedition/"
+      "homeOrder": 1,
+      "group": "special",
+      "builtAround": "Pensada para: buceo",
+      "otherSide": "[CONFIRM] ¿No buceas? Prueba una sesión guiada o quédate en cubierta."
     }
   ],
-  "activitiesTitle": "Añade actividades a tu expedición",
-  "activitiesSubtitle": "Nuestra gente del mar apasionada son los instructores y especialistas detrás de estas actividades en el océano. Cada expedición puede adaptarse a las que más te importan. Cuéntanos qué te gustaría y la diseñamos contigo.",
+  "activitiesTitle": "Suma actividades, o mantén los días lentos",
+  "activitiesSubtitle": "Toda expedición funciona sin actividades. Si tu grupo quiere más tiempo en el agua, nuestra Gente del mar apasionada son los instructores y especialistas detrás de ellas. Súmalas a cualquier expedición y la diseñamos contigo.",
   "activitiesButtonLabel": "Contáctanos para más información",
   "activities": [
     {

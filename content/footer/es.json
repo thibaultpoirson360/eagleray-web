@@ -3,7 +3,7 @@
   "claimEmphasis": "No se visita. Se recorre en barco.",
   "contactDisplay": {
     "phone": "+52 55 6809 0942",
-    "email": "thibault@eaglerayexpeditions.com"
+    "email": "hello@eaglerayexpeditions.com"
   },
   "base": {
     "heading": "Base",
@@ -26,6 +26,7 @@
     "creditsText": "Fotografía bajo licencia Creative Commons.",
     "creditsLabel": "Créditos de fotos →",
     "termsLabel": "Términos y Condiciones",
-    "privacyLabel": "Aviso de Privacidad"
+    "privacyLabel": "Aviso de Privacidad",
+    "partnershipsLabel": "Alianzas"
   }
 }
