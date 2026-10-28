@@ -1,0 +1,175 @@
+---
+/**
+ * `/<locale>/partnerships` — for travel advisors, concierges and Expedition
+ * Leaders. Seven sections: hero, who we work with, what clients find aboard,
+ * how it works, what you get, proof, form. Wrapped in a <TinaIsland> by the
+ * page; every piece of copy comes from content/partnershipsPage.
+ */
+import PageHero from "./ui/PageHero.astro";
+import Button from "./ui/Button.astro";
+import PartnerForm from "./PartnerForm.tsx";
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { PartnershipsPageQuery, SiteSettingsQuery } from "../../tina/__generated__/types";
+import type { Locale } from "../i18n/config";
+
+interface Props {
+  page: PartnershipsPageQuery["partnershipsPage"];
+  siteSettings: SiteSettingsQuery["siteSettings"];
+  locale: Locale;
+}
+
+const { page, siteSettings } = Astro.props;
+const clean = (list?: (string | null)[] | null) => (list ?? []).filter((s): s is string => !!s);
+const email = siteSettings.contact?.email;
+const form = page.form;
+
+// The limited-time offer shows through the end of its last day (Mexico time).
+const offer = page.limitedOffer;
+const offerEnd = offer?.lastDay ? new Date(`${offer.lastDay}T23:59:59-07:00`) : null;
+const showOffer = !!offer?.text && (!offerEnd || Date.now() <= offerEnd.getTime());
+
+const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]";
+---
+
+<PageHero
+  title={page.title}
+  lede={page.subtitle}
+  image={page.image}
+  imageAlt={page.imageAlt}
+  cta={page.primaryLabel ? { label: page.primaryLabel, href: "#partner-form" } : null}
+  fields={{
+    title: tinaField(page, "title"),
+    lede: tinaField(page, "subtitle"),
+    image: tinaField(page, "image"),
+    cta: tinaField(page, "primaryLabel"),
+  }}
+/>
+{
+  email && page.secondaryLabel && (
+    <p class="mx-auto max-w-site px-5 pt-6 text-sm lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+      <a class="underline underline-offset-4 hover:text-ink-hover" href={`mailto:${email}`} data-tina-field={tinaField(page, "secondaryLabel")}>
+        {page.secondaryLabel}
+      </a>
+    </p>
+  )
+}
+
+<section class={section}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "whoTitle")}>{page.whoTitle}</h2>
+  <ul class="grid gap-10 md:grid-cols-3">
+    {
+      page.whoCards?.map((card) => card && (
+        <li class="flex flex-col">
+          <div class="aspect-[4/5] overflow-hidden rounded bg-ink/10">
+            {card.image && <img src={card.image} alt={card.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" data-tina-field={tinaField(card, "image")} />}
+          </div>
+          <h3 class="mt-6 font-display text-[1.2rem] font-normal" data-tina-field={tinaField(card, "title")}>{card.title}</h3>
+          <p class="mt-3 text-[.95rem] leading-[1.75] text-ink/74" data-tina-field={tinaField(card, "text")}>{card.text}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<section class={section}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "aboardTitle")}>{page.aboardTitle}</h2>
+  <ul class="grid max-w-[60ch] gap-4 text-lede text-ink/80" data-tina-field={tinaField(page, "aboardPoints")}>
+    {clean(page.aboardPoints).map((p) => <li class="border-l border-ink/20 pl-4">{p}</li>)}
+  </ul>
+  <ul class="mt-12 grid gap-4 sm:grid-cols-2">
+    {
+      page.formats?.map((f) => f && (
+        <li class="rounded border border-ink/14 bg-surface p-6" data-tina-field={tinaField(f, "name")}>
+          <h3 class="font-display text-[1.1rem] font-normal">{f.name}</h3>
+          <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74">{f.text}</p>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    page.seeAllHref && page.seeAllLabel && (
+      <div class="mt-8">
+        <Button href={page.seeAllHref} variant="ghost" context="default" data-tina-field={tinaField(page, "seeAllLabel")}>
+          {page.seeAllLabel}
+        </Button>
+      </div>
+    )
+  }
+</section>
+
+<section class={section}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
+  <ol class="grid gap-8 md:grid-cols-3" data-tina-field={tinaField(page, "steps")}>
+    {
+      clean(page.steps).map((s, i) => (
+        <li>
+          <span class="font-mono text-[.7rem] tracking-[.14em] text-ink/64">{String(i + 1).padStart(2, "0")}</span>
+          <p class="mt-3 text-ink/80">{s}</p>
+        </li>
+      ))
+    }
+  </ol>
+</section>
+
+<section class={section}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "getTitle")}>{page.getTitle}</h2>
+  <ul class="grid max-w-[60ch] gap-4 text-lede text-ink/80" data-tina-field={tinaField(page, "benefits")}>
+    {clean(page.benefits).map((b) => <li class="border-l border-ink/20 pl-4">{b}</li>)}
+  </ul>
+  {
+    showOffer && (
+      <div class="mt-8 max-w-[60ch] rounded border border-ink/14 bg-surface p-6 text-ink/80" data-limited-offer data-tina-field={tinaField(offer, "text")}>
+        {offer?.text}
+      </div>
+    )
+  }
+</section>
+
+<section class={section}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "proofTitle")}>{page.proofTitle}</h2>
+  <ul class="grid gap-6 sm:grid-cols-2">
+    {
+      page.proofLinks?.map((l) => l && l.href && (
+        <li>
+          <a href={l.href} class="group block">
+            <div class="aspect-[16/10] overflow-hidden rounded bg-ink/10">
+              {l.image && <img src={l.image} alt={l.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 ease-soft group-hover:scale-[1.02]" data-tina-field={tinaField(l, "image")} />}
+            </div>
+            <span class="mt-4 inline-block font-display text-[1.2rem] underline-offset-4 group-hover:underline" data-tina-field={tinaField(l, "label")}>{l.label} →</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<section id="partner-form" class={`${section} scroll-mt-24`}>
+  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "formTitle")}>{page.formTitle}</h2>
+  {
+    form && (
+      <div class="max-w-form">
+        <PartnerForm
+          client:visible
+          leadEndpoint={siteSettings.leadEndpoint ?? ""}
+          copy={{
+            name: form.name ?? "",
+            company: form.company ?? "",
+            role: form.role ?? "",
+            roleOptions: clean(form.roleOptions),
+            location: form.location ?? "",
+            email: form.email ?? "",
+            whatsapp: form.whatsapp ?? "",
+            audience: form.audience ?? "",
+            source: form.source ?? "",
+            sourceOptions: clean(form.sourceOptions),
+            selectPlaceholder: form.selectPlaceholder ?? "",
+            submitLabel: form.submitLabel ?? "",
+            sendingLabel: form.sendingLabel ?? "",
+            successMessage: form.successMessage ?? "",
+            errorMessage: form.errorMessage ?? "",
+          }}
+        />
+      </div>
+    )
+  }
+</section>

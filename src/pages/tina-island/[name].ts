@@ -20,6 +20,7 @@ import { createIslandRoute } from "../../lib/tina-island-route";
 import Hero from "../../components/Hero.astro";
 import Difference from "../../components/Difference.astro";
 import Crew from "../../components/Crew.astro";
+import PartnershipsPage from "../../components/PartnershipsPage.astro";
 import CrewPage from "../../components/CrewPage.astro";
 import NavPageView from "../../components/NavPageView.astro";
 import NotFoundView from "../../components/NotFoundView.astro";
@@ -52,6 +53,7 @@ import {
   loadSiteSettings,
   loadFunnel,
   loadContactPage,
+  loadPartnershipsPage,
   loadGuestStoriesPage,
   loadBlogSection,
   loadBlogPosts,
@@ -219,6 +221,26 @@ const route = createIslandRoute({
       };
       return {
         contactPage: contactPage.data.contactPage,
+        siteSettings: siteSettings.data.siteSettings,
+        locale: localeFromParams(params),
+      };
+    },
+  },
+  partnershipsPage: {
+    fetch: async (_request: Request, params: URLSearchParams) => {
+      const locale = localeFromParams(params);
+      const [page, siteSettings] = await Promise.all([loadPartnershipsPage(locale), loadSiteSettings()]);
+      return { page, siteSettings };
+    },
+    component: PartnershipsPage,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown, params: URLSearchParams) => {
+      const { page, siteSettings } = result as {
+        page: Awaited<ReturnType<typeof loadPartnershipsPage>>;
+        siteSettings: Awaited<ReturnType<typeof loadSiteSettings>>;
+      };
+      return {
+        page: page.data.partnershipsPage,
         siteSettings: siteSettings.data.siteSettings,
         locale: localeFromParams(params),
       };

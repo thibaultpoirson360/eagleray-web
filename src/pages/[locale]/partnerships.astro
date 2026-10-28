@@ -1,0 +1,34 @@
+---
+/**
+ * `/<locale>/partnerships` — thin wrapper, same pattern as contact.astro.
+ * Not in the main navigation; linked from the footer and the Contact page.
+ */
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import PartnershipsPage from "../../components/PartnershipsPage.astro";
+import { loadPartnershipsPage, loadSiteSettings } from "../../lib/content";
+import { liveLocales, type Locale } from "../../i18n/config";
+
+export function getStaticPaths() {
+  return liveLocales.map((locale) => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale as Locale;
+const [pageResult, siteSettingsResult] = await Promise.all([loadPartnershipsPage(locale), loadSiteSettings()]);
+const page = pageResult.data.partnershipsPage;
+---
+
+<BaseLayout
+  title={page.seo?.title ?? `${page.title} | Eagle Ray Expeditions`}
+  description={page.seo?.description ?? page.subtitle ?? undefined}
+  ogTitle={page.seo?.ogTitle ?? undefined}
+  ogDescription={page.seo?.ogDescription ?? undefined}
+  locale={locale}
+  path="partnerships/"
+>
+  <main id="main">
+    <TinaIsland name="partnershipsPage" wrapper={{ tag: "div" }} params={{ locale }}>
+      <PartnershipsPage page={page} siteSettings={siteSettingsResult.data.siteSettings} locale={locale} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

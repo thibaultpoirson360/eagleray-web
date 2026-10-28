@@ -24,14 +24,16 @@
  * here since Footer is now the thing right after it.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
+import { localePath, type Locale } from "../i18n/config";
 import type { FooterQuery, SiteSettingsQuery } from "../../tina/__generated__/types";
 
 interface Props {
   footer: FooterQuery["footer"];
   siteSettings: SiteSettingsQuery["siteSettings"];
+  locale?: Locale;
 }
 
-const { footer, siteSettings } = Astro.props;
+const { footer, siteSettings, locale = "en" } = Astro.props;
 const { contactDisplay, base, coords, legal } = footer;
 const contact = siteSettings.contact;
 const waHref = contact?.whatsapp ? `https://wa.me/${contact.whatsapp}` : undefined;
@@ -174,6 +176,13 @@ const mailHref = contact?.email ? `mailto:${contact.email}` : undefined;
           <a class="underline" href="/creditos.html" data-tina-field={tinaField(legal, "creditsLabel")}>
             {legal.creditsLabel}
           </a>
+        )}
+        {legal.partnershipsLabel && (
+          <>
+            <a class="underline" href={localePath(locale, "partnerships/")} data-tina-field={tinaField(legal, "partnershipsLabel")}>
+              {legal.partnershipsLabel}
+            </a>{' '}·{' '}
+          </>
         )}
         {legal.termsLabel && (
           <>

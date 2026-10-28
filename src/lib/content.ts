@@ -203,6 +203,13 @@ export function loadContactPage(locale: Locale, options?: RequestOptions) {
   );
 }
 
+export function loadPartnershipsPage(locale: Locale, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.partnershipsPage({ relativePath: `${locale}.json` }),
+    options
+  );
+}
+
 export function loadBlogSection(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(
     databaseClient.queries.blogSection({ relativePath: `${locale}.json` }),
