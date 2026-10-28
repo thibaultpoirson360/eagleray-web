@@ -56,8 +56,17 @@
     },
     {
       "label": "Contact Us",
-      "href": "/en/contact/",
-      "_template": "link"
+      "items": [
+        {
+          "label": "Contact",
+          "href": "/en/contact/"
+        },
+        {
+          "label": "Partnerships",
+          "href": "/en/partnerships/"
+        }
+      ],
+      "_template": "dropdown"
     }
   ],
   "cta": {
