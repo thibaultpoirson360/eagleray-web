@@ -82,6 +82,19 @@
       "description": "Une journée, une nuit au mouillage ou le week-end de Thanksgiving au large d'Espíritu Santo. Monik dirige les plongées, avec tout le matériel à bord.",
       "homeOrder": 1,
       "href": "/fr/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja avec Andrea",
+      "group": "special",
+      "builtAround": "Pensé pour : le kayak",
+      "otherSide": "Vous ne pagayez pas ? Faites du snorkeling avec l'équipage ou restez sur le pont.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, cheffe d'expédition Eagle Ray",
+      "badge": "Dates ouvertes · à partir du 10 novembre",
+      "facts": "3 nuits · jusqu'à 6 invités",
+      "priceNote": "À partir de 21 000 USD · bateau entier",
+      "description": "Trois nuits autour d'Espíritu Santo. Le bateau est votre maison, le kayak est votre façon d'explorer. Aucune expérience du kayak n'est nécessaire.",
+      "href": "/fr/landing/kayak-baja-with-andrea/"
     }
   ],
   "activitiesTitle": "Ajoutez des activités, ou gardez des journées lentes",

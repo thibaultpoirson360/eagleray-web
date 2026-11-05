@@ -1,0 +1,179 @@
+{
+  "title": "Kayak Baja avec Andrea",
+  "blocks": [
+    {
+      "kicker": "Édition spéciale",
+      "title": "Kayak Baja avec Andrea",
+      "lede": "Trois nuits autour d'Espíritu Santo. Le bateau est votre maison. Le kayak est votre façon d'explorer. Disponible à partir du 10 novembre · 3 nuits · À partir de 21 000 $ pour tout le bateau",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_on_boat_1_bmnoic.jpg",
+      "imageAlt": "Andrea, cheffe d'expédition Eagle Ray",
+      "cta": {
+        "label": "Demandez vos dates",
+        "href": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
+      },
+      "_template": "hero"
+    },
+    {
+      "body": "## L'EXPÉDITION\n\nAndrea a traversé l'Atlantique à la rame avec deux autres femmes, le premier équipage entièrement féminin à réussir la traversée par ses propres moyens. C'est à Espíritu Santo qu'elle s'y est entraînée. Aujourd'hui, elle guide de petits groupes de baie en baie autour de l'île, au rythme de celui ou celle qui pagaie ce jour-là. Environ deux heures sur l'eau, un pique-nique sur une plage où l'on arrive en kayak, et le bateau qui attend au prochain mouillage. Aucune expérience du kayak n'est nécessaire.\n",
+      "_template": "richText"
+    },
+    {
+      "member": "andrea-gutierrez",
+      "body": "## QUI EST ANDREA ?\n\nRameuse de l'Atlantique avec Oceánida. Cinq ans à guider des groupes en mer au Mexique.\n",
+      "collapseAbout": false,
+      "moreText": "",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Une journée avec Andrea",
+      "intro": "L'itinéraire est un plan, pas une promesse. Si le vent change, Andrea et le capitaine changent l'itinéraire avec lui.",
+      "steps": [
+        {
+          "stepLabel": "Matin",
+          "stepTitle": "Briefing",
+          "stepText": "Petit-déjeuner et briefing d'Andrea. Vent, itinéraire, qui pagaie avec qui."
+        },
+        {
+          "stepLabel": "Milieu de matinée",
+          "stepTitle": "Pagaie",
+          "stepText": "Environ deux heures de pagaie, de baie en baie, près de la côte (adaptable à l'énergie et à l'humeur du groupe)."
+        },
+        {
+          "stepLabel": "Déjeuner",
+          "stepTitle": "Pique-nique",
+          "stepText": "Un pique-nique sur la plage, ou le bateau vient vous chercher."
+        },
+        {
+          "stepLabel": "Après-midi",
+          "stepTitle": "Temps libre",
+          "stepText": "Snorkeling avec l'équipage, baignade depuis la poupe, ou rien du tout."
+        },
+        {
+          "stepLabel": "Soir",
+          "stepTitle": "Au mouillage",
+          "stepText": "Coucher de soleil au mouillage, dîner préparé par le chef."
+        }
+      ],
+      "_template": "timeline"
+    },
+    {
+      "body": "## IL N'EST PAS OBLIGATOIRE DE PAGAYER\n\nPendant qu'une partie du groupe est sur l'eau, les autres peuvent faire du snorkeling avec l'équipage, lire sur le pont ou les rejoindre pour la dernière baie de la journée.\n",
+      "_template": "richText"
+    },
+    {
+      "body": "## POUR QUI\n\n* Groupes de 2 à 6 invités (jusqu'à 8 sur demande)\n* Les familles sont les bienvenues. Les enfants pagaient et nagent toujours avec leurs parents.\n* Aucune expérience du kayak n'est nécessaire\n",
+      "_template": "richText"
+    },
+    {
+      "title": "Dates et prix",
+      "intro": "Dates ouvertes disponibles. Choisissez les dates qui conviennent à votre groupe, à partir de novembre.",
+      "options": [
+        {
+          "name": "Kayak Baja avec Andrea",
+          "dates": "Dates ouvertes disponibles · 3 nuits",
+          "boatLine": "Catamaran Lagoon 450 ou équivalent · jusqu'à 6 invités (jusqu'à 8 sur demande)",
+          "priceSummary": "21 000 $ · bateau entier (3 500 $ par invité)",
+          "detailsLabel": "Prix",
+          "priceRows": [
+            {
+              "label": "3 nuits, bateau entier, jusqu'à 6 invités",
+              "amount": "21 000 $ (3 500 $ par invité)"
+            },
+            {
+              "label": "Invités 7 et 8",
+              "amount": "+2 625 $ par invité"
+            }
+          ],
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+          "imageAlt": "Andrea, cheffe d'expédition Eagle Ray",
+          "bookLabel": "Demandez vos dates",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
+        }
+      ],
+      "fillPhotos": false,
+      "boatLinkLabel": "Voir le bateau",
+      "bookingLabel": "Comment réserver",
+      "bookingInfo": "* Acompte de 20 % pour réserver vos dates.\n* Le solde est dû 30 jours avant le départ. Pour les départs dans moins de 30 jours, paiement intégral à la réservation.\n",
+      "_template": "departures"
+    },
+    {
+      "title": "Le bateau",
+      "intro": "",
+      "detailsLabel": "Voir toutes les photos",
+      "boatItems": [
+        {
+          "boat": "lagoon-450",
+          "tag": "Votre bateau",
+          "tripNote": "Quatre cabines climatisées, un flybridge et un large pont stable pour mettre les kayaks à l'eau.",
+          "banner": "/assets/img/boats/lagoon-450-2018-01.webp",
+          "bannerAlt": "Catamaran Lagoon 450",
+          "displayName": "Lagoon 450",
+          "subtitle": "Catamaran",
+          "about": "Catamaran Lagoon 450 ou équivalent, confirmé avec votre acompte.",
+          "specs": [
+            {
+              "label": "Type",
+              "value": "Catamaran"
+            },
+            {
+              "label": "Longueur",
+              "value": "45 pieds"
+            },
+            {
+              "label": "Cabines invités",
+              "value": "4"
+            },
+            {
+              "label": "Invités",
+              "value": "jusqu'à 8"
+            }
+          ],
+          "featureList": [
+            "Climatisation dans toutes les cabines",
+            "Flybridge",
+            "Large pont stable pour mettre les kayaks à l'eau"
+          ]
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Ce qu'il y a à bord",
+      "includedTitle": "À bord",
+      "included": "* Votre propre bateau privé, pour votre groupe uniquement\n* Andrea, un capitaine et un chef\n* Des kayaks pour tout le groupe\n* Tous les repas et les boissons sans alcool\n* Une sélection de vins de notre partenaire sommelier Climats, offerte par nos soins (valeur de 350 $ en boutique)\n* Matériel de snorkeling et paddleboards\n* Permis du parc national\n* Transfert de l'aéroport à la marina à La Paz, aller-retour\n* Wifi Starlink\n",
+      "notIncludedTitle": "Non inclus à bord",
+      "notIncluded": "* Vols vers La Paz\n* Autres boissons alcoolisées, disponibles en supplément\n* Pourboires de l'équipage (10 à 15 % recommandés)\n* Assurance voyage\n",
+      "gallery": [],
+      "_template": "includes"
+    },
+    {
+      "title": "Questions fréquentes",
+      "questions": [
+        {
+          "question": "Ai-je besoin d'expérience en kayak ?",
+          "answer": "Non. Andrea organise chaque journée en fonction de la personne qui pagaie le plus lentement, et le bateau n'est jamais loin."
+        },
+        {
+          "question": "Et si la météo change ?",
+          "answer": "L'itinéraire est un plan. Andrea et le capitaine lisent le vent chaque matin et choisissent les baies qui conviennent ce jour-là."
+        },
+        {
+          "question": "Que dois-je apporter ?",
+          "answer": "Un chapeau, de la crème solaire biodégradable (Espíritu Santo est une zone protégée), une couche légère à manches longues et des chaussures d'eau. Andrea vous envoie une liste complète après votre réservation."
+        },
+        {
+          "question": "Les enfants peuvent-ils venir ?",
+          "answer": "Oui. Les enfants sont les bienvenus à condition d'être toujours avec leurs parents, à bord comme sur l'eau."
+        }
+      ],
+      "_template": "faq"
+    }
+  ],
+  "seo": {
+    "title": "Kayak Baja avec Andrea | Eagle Ray Expeditions",
+    "description": "Trois nuits en kayak autour d'Espíritu Santo, La Paz, avec Andrea, rameuse de l'Atlantique. Aucune expérience nécessaire. Bateau privé, dates ouvertes à partir de novembre.",
+    "ogTitle": "Kayak Baja avec Andrea",
+    "ogDescription": "Trois nuits autour d'Espíritu Santo. Le bateau est votre maison. Le kayak est votre façon d'explorer. Aucune expérience nécessaire."
+  }
+}
