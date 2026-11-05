@@ -23,7 +23,7 @@
           "boatLine": "Hasta 6 huéspedes",
           "description": "Una inmersión en San Rafaelito, luego comida a bordo, snorkel y el resto del día en cubierta. De vuelta en la marina por la tarde.",
           "priceSummary": "5,500 USD · barco completo",
-          "deadline": "Reserva antes del 5 de noviembre",
+          "deadline": "Reserva antes del 15 de noviembre",
           "priceRows": [],
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
@@ -40,7 +40,7 @@
           "boatLine": "2 camarotes para huéspedes (uno principal y uno estándar) · hasta 4 huéspedes",
           "description": "Navega hacia el sur de Espíritu Santo, bucea en Fang Ming y quédate para el atardecer y la cena al ancla. A la mañana siguiente, buceo en Isla Ballena, luego comida a bordo y regreso a La Paz por la tarde.",
           "priceSummary": "8,500 USD · barco completo",
-          "deadline": "Reserva antes del 5 de noviembre",
+          "deadline": "Reserva antes del 15 de noviembre",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
           "imageAlt": "El Beneteau Sense 55 al ancla frente a Espíritu Santo",
@@ -57,7 +57,7 @@
           "boatLine": "2 camarotes para huéspedes (uno principal y uno estándar) · hasta 4 huéspedes",
           "description": "Tres noches alrededor de Espíritu Santo, con tiempo para llegar al norte y a la colonia de lobos marinos de Los Islotes. Cena de Acción de Gracias al ancla el jueves por la noche. Sin inmersión la última mañana: un desayuno tranquilo, un baño y de vuelta en la marina hacia el mediodía del domingo.",
           "priceSummary": "14,500 USD · barco completo, buceo incluido",
-          "deadline": "Reserva antes del 5 de noviembre",
+          "deadline": "Reserva antes del 15 de noviembre",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
           "imageAlt": "Buceadores en Acción de Gracias en La Paz",
@@ -69,7 +69,7 @@
         }
       ],
       "bookingLabel": "Información sobre la reserva",
-      "bookingInfo": "* Reserva antes del 5 de noviembre.\n* Cada salida es un chárter privado de todo el barco, para tu grupo.\n* Empieza con una llamada: Monik y el equipo de Eagle Ray responden tus preguntas antes de que reserves.\n* Las condiciones de pago y cancelación se confirman contigo antes de reservar.\n\n¿Quieres más días o una fecha distinta para tu propio grupo? Escríbenos.\n",
+      "bookingInfo": "* Reserva antes del 15 de noviembre.\n* Cada salida es un chárter privado de todo el barco, para tu grupo.\n* Empieza con una llamada: Monik y el equipo de Eagle Ray responden tus preguntas antes de que reserves.\n* Las condiciones de pago y cancelación se confirman contigo antes de reservar.\n\n¿Quieres más días o una fecha distinta para tu propio grupo? Escríbenos.\n",
       "_template": "departures",
       "fillPhotos": true,
       "boatLinkLabel": "Ver el barco",
@@ -420,7 +420,7 @@
         },
         {
           "question": "¿Cuánto pago para reservar y qué pasa si necesito cancelar?",
-          "answer": "Reserva antes del 5 de noviembre, después de una llamada con Monik o con el equipo de Eagle Ray. Confirmamos contigo las condiciones de pago y cancelación antes de que reserves."
+          "answer": "Reserva antes del 15 de noviembre, después de una llamada con Monik o con el equipo de Eagle Ray. Confirmamos contigo las condiciones de pago y cancelación antes de que reserves."
         },
         {
           "question": "¿Necesito licencia de pesca?",

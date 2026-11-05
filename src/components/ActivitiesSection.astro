@@ -57,7 +57,7 @@ const contactHref = (message?: string | null) =>
                 data-tina-field={tinaField(page, "activities", i)}
               >
                 {/* The whole photo shows. On hover or keyboard focus a white banner rises from the bottom with the explanation and the button. On touch screens (no hover) the banner sits under the photo instead. */}
-                <div class={`relative w-full overflow-hidden bg-ink ${group.big ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                <div class={`relative w-full overflow-hidden bg-ink aspect-[4/5]`}>
                   {activity.image ? (
                     <img src={activity.image} alt={activity.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />
                   ) : (

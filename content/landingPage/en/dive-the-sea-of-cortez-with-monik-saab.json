@@ -23,7 +23,7 @@
           "boatLine": "Up to 6 guests",
           "description": "One dive at San Rafaelito, then lunch on board, snorkeling and the rest of the day on deck. Back at the marina in the afternoon.",
           "priceSummary": "5,500 USD · whole boat",
-          "deadline": "Book by November 5",
+          "deadline": "Book by November 15",
           "priceRows": [],
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
@@ -40,7 +40,7 @@
           "boatLine": "2 guest cabins (one master, one standard) · up to 4 guests",
           "description": "Sail out to the south of Espíritu Santo, dive Fang Ming, and stay for the sunset and dinner at anchor. Dive Isla Ballena the next morning, then lunch on board and back to La Paz in the afternoon.",
           "priceSummary": "8,500 USD · whole boat",
-          "deadline": "Book by November 5",
+          "deadline": "Book by November 15",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
           "imageAlt": "The Beneteau Sense 55 at anchor off Espíritu Santo",
@@ -57,7 +57,7 @@
           "boatLine": "2 guest cabins (one master, one standard) · up to 4 guests",
           "description": "Three nights around Espíritu Santo, with time to reach the north and the sea lion colony at Los Islotes. Thanksgiving dinner at anchor on Thursday night. No dive on the last morning: a slow breakfast, a swim, and back at the marina around midday on Sunday.",
           "priceSummary": "14,500 USD · whole boat, diving included",
-          "deadline": "Book by November 5",
+          "deadline": "Book by November 15",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
           "imageAlt": "Divers in thanksgiving in La paz",
@@ -69,7 +69,7 @@
         }
       ],
       "bookingLabel": "Info on booking",
-      "bookingInfo": "* Book by November 5.\n* Each departure is a private charter of the whole boat, for your group.\n* Start with a call: Monik and the Eagle Ray team answer your questions before you book.\n* Payment and cancellation terms are confirmed with you before you book.\n\nWant more days, or a different date for your own group? Write to us.\n",
+      "bookingInfo": "* Book by November 15.\n* Each departure is a private charter of the whole boat, for your group.\n* Start with a call: Monik and the Eagle Ray team answer your questions before you book.\n* Payment and cancellation terms are confirmed with you before you book.\n\nWant more days, or a different date for your own group? Write to us.\n",
       "_template": "departures",
       "fillPhotos": true,
       "boatLinkLabel": "See the boat",
@@ -420,7 +420,7 @@
         },
         {
           "question": "How much do I pay to book, and what if I need to cancel?",
-          "answer": "Book by November 5, after a call with Monik or the Eagle Ray team. We confirm the payment and cancellation terms with you before you book."
+          "answer": "Book by November 15, after a call with Monik or the Eagle Ray team. We confirm the payment and cancellation terms with you before you book."
         },
         {
           "question": "Do I need a fishing license?",
