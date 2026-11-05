@@ -99,6 +99,8 @@
   ],
   "activitiesTitle": "Personalize your experience: add activities and extras",
   "activitiesSubtitle": "Every expedition works with no activities at all. If your group wants more time in the water, our Passionate Sea People are the instructors and specialists behind these. Add them to any expedition, and we'll design it with you.",
+  "activitiesExtraLabel": "Add extra activities, paid separately",
+  "activitiesIncludedLabel": "Included activities",
   "activitiesButtonLabel": "Contact us for more info",
   "activities": [
     {
@@ -125,6 +127,7 @@
       "name": "Wine selection",
       "featured": true,
       "text": "A selection of international wines from our sommelier partner Climats. Available as an extra.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Wine_Selection_Eagle_Ray_Expeditions_p8721d.jpg",
       "imageAlt": "A selection of international wines",
       "imageNote": "",
       "priceNote": "Price on request",
@@ -180,41 +183,6 @@
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
     }
   ],
-  "howTitle": "You book the flight. We take it from there.",
-  "howSteps": [
-    {
-      "title": "Land in La Paz",
-      "text": "We pick you up at the airport."
-    },
-    {
-      "title": "Meet your crew at the marina",
-      "text": "Your Expedition Leader walks you through the boat and the plan."
-    },
-    {
-      "title": "At sea",
-      "text": "The days follow what your group wants: in the water, on deck, or both."
-    },
-    {
-      "title": "Back at the marina",
-      "text": "We drive you to the airport."
-    }
-  ],
-  "closingTitle": "Not sure which one fits your group?",
-  "closingText": "Tell us who is coming and what they like. We'll suggest the right expedition.",
-  "closingPrimaryCta": {
-    "label": "Plan my expedition",
-    "href": "/en/customize-your-expedition/"
-  },
-  "closingSecondaryCta": {
-    "label": "Contact us",
-    "href": "/en/contact/"
-  },
-  "seo": {
-    "title": "Private sailing trips in La Paz | Eagle Ray Expeditions",
-    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
-    "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
-    "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
-  },
   "waysSpecialTitle": "Special Editions",
   "waysSpecialText": "Set dates, built around one of our Expedition Leaders and what they know best: diving, freediving, kayaking, kitesurfing. You bring your people, they bring the sea they know.",
   "waysSpecialButton": "See upcoming dates",
@@ -319,6 +287,39 @@
     "Crew tips (10 to 15% recommended)",
     "Travel insurance"
   ],
-  "activitiesExtraLabel": "Add extra activities, paid separately",
-  "activitiesIncludedLabel": "Included activities"
+  "howTitle": "You book the flight. We take it from there.",
+  "howSteps": [
+    {
+      "title": "Land in La Paz",
+      "text": "We pick you up at the airport."
+    },
+    {
+      "title": "Meet your crew at the marina",
+      "text": "Your Expedition Leader walks you through the boat and the plan."
+    },
+    {
+      "title": "At sea",
+      "text": "The days follow what your group wants: in the water, on deck, or both."
+    },
+    {
+      "title": "Back at the marina",
+      "text": "We drive you to the airport."
+    }
+  ],
+  "closingTitle": "Not sure which one fits your group?",
+  "closingText": "Tell us who is coming and what they like. We'll suggest the right expedition.",
+  "closingPrimaryCta": {
+    "label": "Plan my expedition",
+    "href": "/en/customize-your-expedition/"
+  },
+  "closingSecondaryCta": {
+    "label": "Contact us",
+    "href": "/en/contact/"
+  },
+  "seo": {
+    "title": "Private sailing trips in La Paz | Eagle Ray Expeditions",
+    "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
+    "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
+    "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
+  }
 }
