@@ -36,7 +36,8 @@
   "formats": [
     {
       "name": "Expedición Recalibración",
-      "text": "Días lentos, buena comida, fondeaderos tranquilos."
+      "text": "Días lentos, buena comida, fondeaderos tranquilos.",
+      "href": "/es/recalibration-expedition/"
     },
     {
       "name": "Expedición Activa",
@@ -44,11 +45,13 @@
     },
     {
       "name": "Expedición a medida",
-      "text": "Construida desde cero alrededor del grupo."
+      "text": "Construida desde cero alrededor del grupo.",
+      "href": "/es/ad-hoc-expedition/"
     },
     {
       "name": "Ediciones especiales",
-      "text": "Viajes dirigidos por Líderes de expedición invitados, algunas veces al año."
+      "text": "Viajes dirigidos por Líderes de expedición invitados, algunas veces al año.",
+      "href": "/es/sail-with-us/#special-editions"
     }
   ],
   "seeAllLabel": "Ver todas las expediciones",

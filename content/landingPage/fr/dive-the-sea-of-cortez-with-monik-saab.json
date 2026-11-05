@@ -23,7 +23,7 @@
           "boatLine": "Jusqu'à 6 invités",
           "description": "Une plongée à San Rafaelito, puis déjeuner à bord, snorkeling et le reste de la journée sur le pont. Retour à la marina dans l'après-midi.",
           "priceSummary": "5 500 USD · bateau entier",
-          "deadline": "Réservez avant le 5 novembre",
+          "deadline": "Réservez avant le 15 novembre",
           "priceRows": [],
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
@@ -40,7 +40,7 @@
           "boatLine": "2 cabines invités (une principale, une standard) · jusqu'à 4 invités",
           "description": "Cap au sud d'Espíritu Santo, plongée à Fang Ming, puis le coucher du soleil et le dîner au mouillage. Le lendemain matin, plongée à Isla Ballena, puis déjeuner à bord et retour à La Paz dans l'après-midi.",
           "priceSummary": "8 500 USD · bateau entier",
-          "deadline": "Réservez avant le 5 novembre",
+          "deadline": "Réservez avant le 15 novembre",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
           "imageAlt": "Le Beneteau Sense 55 au mouillage au large d'Espíritu Santo",
@@ -57,7 +57,7 @@
           "boatLine": "2 cabines invités (une principale, une standard) · jusqu'à 4 invités",
           "description": "Trois nuits autour d'Espíritu Santo, avec le temps d'atteindre le nord et la colonie d'otaries de Los Islotes. Dîner de Thanksgiving au mouillage le jeudi soir. Pas de plongée le dernier matin : un petit-déjeuner tranquille, une baignade, et retour à la marina vers midi le dimanche.",
           "priceSummary": "14 500 USD · bateau entier, plongée incluse",
-          "deadline": "Réservez avant le 5 novembre",
+          "deadline": "Réservez avant le 15 novembre",
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
           "imageAlt": "Plongeurs pour Thanksgiving à La Paz",
@@ -69,7 +69,7 @@
         }
       ],
       "bookingLabel": "Infos sur la réservation",
-      "bookingInfo": "* Réservez avant le 5 novembre.\n* Chaque départ est un charter privé du bateau entier, pour votre groupe.\n* Commencez par un appel : Monik et l'équipe Eagle Ray répondent à vos questions avant que vous réserviez.\n* Les conditions de paiement et d'annulation vous sont confirmées avant la réservation.\n\nVous voulez plus de jours, ou une autre date pour votre propre groupe ? Écrivez-nous.\n",
+      "bookingInfo": "* Réservez avant le 15 novembre.\n* Chaque départ est une privatisation du bateau entier, pour votre groupe.\n* Commencez par un appel : Monik et l'équipe d'Eagle Ray répondent à vos questions avant que vous ne réserviez.\n* Les conditions de paiement et d'annulation vous sont confirmées avant la réservation.\n\nVous voulez plus de jours, ou une autre date pour votre propre groupe ? Écrivez-nous.\n",
       "_template": "departures",
       "fillPhotos": true,
       "boatLinkLabel": "Voir le bateau",
@@ -420,7 +420,7 @@
         },
         {
           "question": "Combien dois-je payer pour réserver, et que se passe-t-il si je dois annuler ?",
-          "answer": "Réservez avant le 5 novembre, après un appel avec Monik ou l'équipe Eagle Ray. Nous confirmons avec vous les conditions de paiement et d'annulation avant que vous réserviez."
+          "answer": "Réservez avant le 15 novembre, après un appel avec Monik ou l'équipe d'Eagle Ray. Nous vous confirmons les conditions de paiement et d'annulation avant que vous ne réserviez."
         },
         {
           "question": "Ai-je besoin d'une licence de pêche ?",

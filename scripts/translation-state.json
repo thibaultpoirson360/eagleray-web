@@ -20,17 +20,18 @@
     "content/crewPage/en.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/guestStoriesPage/en.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/landingPage/en/2bf06c702e5f2738132b825a7c98ce6dbe91766e.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
-    "content/landingPage/en/dive-the-sea-of-cortez-with-monik-saab.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
+    "content/landingPage/en/dive-the-sea-of-cortez-with-monik-saab.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9",
     "content/landingPage/en/meet-eagle-ray-at-niv.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/landingPage/en/sergio-torres-thanksgiving.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
     "content/navPages/en/ad-hoc-expedition.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
-    "content/navigation/en.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
-    "content/sailWithUsPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
+    "content/navigation/en.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9",
+    "content/sailWithUsPage/en.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9",
     "content/boats/en/beneteau-sense-55.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/boats/en/sun-odyssey-44i-jeanneau.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/aboutPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
     "content/footer/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
-    "content/partnershipsPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
-    "content/recalibrationPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6"
+    "content/partnershipsPage/en.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9",
+    "content/recalibrationPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
+    "content/boatsSection/en.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9"
   }
 }
