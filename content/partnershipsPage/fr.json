@@ -1,7 +1,7 @@
 {
   "title": "Du temps privé en mer, pour les personnes dont vous prenez soin.",
   "subtitle": "Eagle Ray Expeditions organise des expéditions privées à la voile au départ de La Paz, Baja California Sur, pour des groupes de 8 personnes maximum. Vous connaissez vos clients. Nous construisons le voyage autour d'eux : bateau, équipage, itinéraire et repas.",
-  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_049_xs4nr6.jpg",
   "imageAlt": "Équipage et invités réunis en mer, en Baja California Sur",
   "primaryLabel": "Devenir partenaire",
   "secondaryLabel": "Écrivez-nous à hello@eaglerayexpeditions.com",
@@ -10,7 +10,7 @@
     {
       "title": "Conseillers en voyages et agences",
       "text": "Votre client vous confie le programme. Nous vous offrons un voyage auquel vous pouvez associer votre nom : un bateau privé, un équipage que vous pouvez présenter par son nom et une proposition prête à envoyer.",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/anastase-maragos-Yx-d78tPdBk-unsplash_altryf.jpg",
       "imageAlt": "Un moment de calme à bord : déjeuner, ombre et baignade depuis la poupe"
     },
     {
@@ -36,8 +36,7 @@
   "formats": [
     {
       "name": "Expédition Recalibration",
-      "text": "Des journées lentes, de bons repas, des mouillages paisibles.",
-      "href": "/fr/recalibration-expedition/"
+      "text": "Des journées lentes, de bons repas, des mouillages paisibles."
     },
     {
       "name": "Expédition Active",
@@ -45,13 +44,11 @@
     },
     {
       "name": "Expédition sur mesure",
-      "text": "Construite de zéro autour du groupe.",
-      "href": "/fr/ad-hoc-expedition/"
+      "text": "Construite de zéro autour du groupe."
     },
     {
       "name": "Éditions spéciales",
-      "text": "Des voyages menés par des chefs d'expédition invités, quelques fois par an.",
-      "href": "/fr/sail-with-us/#special-editions"
+      "text": "Des voyages menés par des chefs d'expédition invités, quelques fois par an."
     }
   ],
   "seeAllLabel": "Voir toutes les expéditions",
@@ -64,7 +61,7 @@
   ],
   "getTitle": "Ce que vous obtenez",
   "benefits": [
-    "Une commission sur chaque réservation que vous apportez. Nous vous détaillons les modalités en personne.",
+    "Une commission sur chaque réservation que vous apportez. Nous vous expliquons les détails.",
     "Un équipage que vous pouvez présenter par son nom, avec de vrais profils et de vraies photos.",
     "Des propositions que vos clients peuvent ouvrir et lire sur leur téléphone."
   ],
@@ -77,13 +74,13 @@
     {
       "label": "Témoignages d'invités",
       "href": "/fr/about-us/guest-stories/",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/8e9b8dc9-43fe-4e4a-bbb0-7f3f7ba75d09_uagp6w.jpg",
       "imageAlt": "Invités à bord pendant une expédition"
     },
     {
       "label": "Rencontrez l'équipage",
       "href": "/fr/passionate-sea-people/",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lou-02_osk5xp.webp",
       "imageAlt": "Un membre de l'équipage d'Eagle Ray"
     }
   ],

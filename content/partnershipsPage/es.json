@@ -1,7 +1,7 @@
 {
   "title": "Tiempo privado en el mar, para las personas que cuidas.",
   "subtitle": "Eagle Ray Expeditions organiza expediciones privadas en velero desde La Paz, Baja California Sur, para grupos de hasta 8 personas. Tú conoces a tus clientes. Nosotros construimos el viaje a su medida: barco, tripulación, ruta y comida.",
-  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+  "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_049_xs4nr6.jpg",
   "imageAlt": "Tripulación e invitados juntos en el mar en Baja California Sur",
   "primaryLabel": "Hazte socio",
   "secondaryLabel": "Escríbenos a hello@eaglerayexpeditions.com",
@@ -10,7 +10,7 @@
     {
       "title": "Asesores de viaje y agencias",
       "text": "Tu cliente confía en ti para el plan. Te damos un viaje al que puedes poner tu nombre: un barco privado, una tripulación que puedes presentar por su nombre y una propuesta lista para enviar.",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/anastase-maragos-Yx-d78tPdBk-unsplash_altryf.jpg",
       "imageAlt": "Un momento tranquilo a bordo: comida, sombra y un chapuzón desde la popa"
     },
     {
@@ -36,8 +36,7 @@
   "formats": [
     {
       "name": "Expedición Recalibración",
-      "text": "Días lentos, buena comida, fondeaderos tranquilos.",
-      "href": "/es/recalibration-expedition/"
+      "text": "Días lentos, buena comida, fondeaderos tranquilos."
     },
     {
       "name": "Expedición Activa",
@@ -45,13 +44,11 @@
     },
     {
       "name": "Expedición a medida",
-      "text": "Construida desde cero alrededor del grupo.",
-      "href": "/es/ad-hoc-expedition/"
+      "text": "Construida desde cero alrededor del grupo."
     },
     {
       "name": "Ediciones especiales",
-      "text": "Viajes dirigidos por Líderes de expedición invitados, algunas veces al año.",
-      "href": "/es/sail-with-us/#special-editions"
+      "text": "Viajes dirigidos por Líderes de expedición invitados, algunas veces al año."
     }
   ],
   "seeAllLabel": "Ver todas las expediciones",
@@ -64,7 +61,7 @@
   ],
   "getTitle": "Lo que obtienes",
   "benefits": [
-    "Una comisión por cada reserva que traigas. Te explicamos los detalles en persona.",
+    "Una comisión por cada reserva que traigas. Te explicamos los detalles.",
     "Una tripulación que puedes presentar por su nombre, con perfiles y fotos reales.",
     "Propuestas que tus clientes pueden abrir y leer en su teléfono."
   ],
@@ -77,13 +74,13 @@
     {
       "label": "Historias de invitados",
       "href": "/es/about-us/guest-stories/",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Content_-_Crew___People___Sealife_1_mu0egv.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/8e9b8dc9-43fe-4e4a-bbb0-7f3f7ba75d09_uagp6w.jpg",
       "imageAlt": "Invitados a bordo durante una expedición"
     },
     {
       "label": "Conoce a la tripulación",
       "href": "/es/passionate-sea-people/",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Crew_-_Founder_Profile_Pic_3_-_003_gfnfl6.jpg",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/lou-02_osk5xp.webp",
       "imageAlt": "Un miembro de la tripulación de Eagle Ray"
     }
   ],
