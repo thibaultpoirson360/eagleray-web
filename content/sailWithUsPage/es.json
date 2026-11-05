@@ -13,14 +13,14 @@
   "specialLinkLabel": "Ediciones especiales este noviembre: Sergio Torres y Monik Saab",
   "introTitle": "La tripulación lee al grupo, no el itinerario.",
   "intro": "Construimos viajes privados en velero alrededor de tu grupo, y no al revés. Tú eliges quién viene. Nuestro equipo maneja el barco, cuida que todos estén seguros y lee el día para poder cambiarlo cuando surja algo que valga la pena.",
-  "expeditionsLabel": "Tu grupo, tu viaje",
+  "expeditionsLabel": "En tus fechas · elige tu ritmo",
   "expeditionsIntro": "Expediciones privadas en tus fechas, con las personas que elijas.",
   "specialKicker": "Ediciones especiales",
   "specialTitle": "Fechas limitadas con nuestros Líderes de expedición",
   "specialIntro": "Algunas veces al año, uno de nuestros Líderes de expedición organiza un viaje en torno a lo que mejor conoce. Fechas fijas, un grupo pequeño y la misma manera de leer el día que en cualquier otra expedición.",
   "expeditions": [
     {
-      "name": "El Día de Acción de Gracias con Sergio Torres",
+      "name": "Expedición de recalibración",
       "group": "trip",
       "builtAround": "Pensada para: días lentos a bordo",
       "otherSide": "Comidas largas en cubierta, o todo el tiempo que quieras en el agua.",
@@ -28,18 +28,18 @@
       "imageAlt": "Un momento tranquilo a bordo: comida, sombra y un chapuzón desde la popa",
       "facts": "3, 5 o 7 noches · barco privado",
       "priceNote": "Desde 700$ USD · pppn",
-      "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
+      "description": "Una expedición privada en velero para quienes quieren desconectar con su propia gente, a un ritmo que nadie más marca. Tú eliges las fechas y el grupo.",
       "homeOrder": 3,
       "href": "/es/recalibration-expedition/"
     },
     {
-      "name": "Expedición de recalibración",
+      "name": "Expedición activa",
       "group": "trip",
       "builtAround": "Pensada para: tiempo en el agua",
       "otherSide": "Si te saltas una sesión, el almuerzo largo sigue en cubierta.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Thibault_Sailing_Profile_pic_1_fultsk.jpg",
       "imageAlt": "Un grupo en el agua con un guía",
-      "facts": "3, 5, +7 noches · barco privado",
+      "facts": "3, 5 o 7 noches · barco privado",
       "priceNote": "Desde 700$ USD · pppd",
       "description": "Más horas en el agua: buceo libre, buceo con tanque y largas sesiones de snorkel, con un especialista certificado y el equipo a bordo. Tú eliges las fechas y el grupo.",
       "hideOnHome": true,
@@ -52,11 +52,11 @@
       "otherSide": "Tus fechas, tu gente, tu ritmo.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Una expedición en velero a medida",
-      "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
+      "description": "Algo distinto en mente. Una ruta de ida, una luna de miel, un grupo con planes muy distintos para la misma semana. Cuéntanos qué quieres y lo construimos.",
       "href": "/es/ad-hoc-expedition/"
     },
     {
-      "name": "Expedición de recalibración",
+      "name": "El Día de Acción de Gracias con Sergio Torres",
       "group": "special",
       "builtAround": "Pensada para: pesca submarina y buceo libre",
       "otherSide": "¿Ese día no vas al agua? Quédate en cubierta.",
@@ -171,25 +171,29 @@
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
     }
   ],
-  "howTitle": "Cómo funciona",
+  "howTitle": "Tú reservas el vuelo. Nosotros nos encargamos del resto.",
   "howSteps": [
     {
-      "title": "Cuéntanos quién viene",
-      "text": "Quién viene, cuándo quieres ir y cómo te gustaría que fueran tus días en el mar."
+      "title": "Aterriza en La Paz",
+      "text": "Te recogemos en el aeropuerto."
     },
     {
-      "title": "Lo planificamos en torno a tu grupo",
-      "text": "Nuestro equipo planifica el barco, la tripulación y la ruta en torno a tu grupo, y lo adapta día a día."
+      "title": "Conoce a tu tripulación en la marina",
+      "text": "Tu líder de expedición te enseña el barco y te explica el plan."
     },
     {
-      "title": "Volvemos con una propuesta",
-      "text": "Rellena el formulario y volveremos a ti con una propuesta."
+      "title": "En el mar",
+      "text": "Los días siguen lo que tu grupo quiere: en el agua, en cubierta o ambas cosas."
+    },
+    {
+      "title": "De vuelta en la marina",
+      "text": "Te llevamos al aeropuerto."
     }
   ],
-  "closingTitle": "¿No sabes cuál es para ti?",
-  "closingText": "Cuéntanos sobre tu grupo y te orientaremos hacia la expedición adecuada.",
+  "closingTitle": "¿No sabes cuál encaja con tu grupo?",
+  "closingText": "Cuéntanos quién viene y qué les gusta. Te sugerimos la expedición adecuada.",
   "closingPrimaryCta": {
-    "label": "Planifica tu viaje",
+    "label": "Planifica mi expedición",
     "href": "/es/customize-your-expedition/"
   },
   "closingSecondaryCta": {
@@ -201,5 +205,110 @@
     "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
     "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
     "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
-  }
+  },
+  "waysSpecialTitle": "Ediciones especiales",
+  "waysSpecialText": "Fechas fijas, construidas en torno a uno de nuestros líderes de expedición y lo que mejor conoce: buceo, buceo libre, kayak, kitesurf. Tú traes a tu gente, ellos traen el mar que conocen.",
+  "waysSpecialButton": "Ver próximas fechas",
+  "waysDatesTitle": "En tus fechas",
+  "waysDatesText": "Tu grupo, tus fechas, tu ritmo. 3, 5 o 7 noches alrededor de Espíritu Santo, con calma o con actividad, planificadas según lo que tu grupo quiera hacer.",
+  "waysDatesNote": "Desde $700 por invitado, por noche.",
+  "waysDatesCta": {
+    "label": "Planifica mi expedición",
+    "href": "/es/customize-your-expedition/"
+  },
+  "upcomingTitle": "Próximas ediciones especiales",
+  "upcomingCardLabel": "Ver la expedición",
+  "upcomingHomeTitle": "Próximas expediciones",
+  "upcomingHomeCta": {
+    "label": "Ver todas las expediciones",
+    "href": "/es/sail-with-us/"
+  },
+  "upcomingEditions": [
+    {
+      "name": "Camarotes abiertos",
+      "leader": "Sergio Torres",
+      "discipline": "Pesca submarina y buceo libre",
+      "dates": "Domingo 22 de noviembre → miércoles 25 de noviembre · 3 noches",
+      "boat": "Catamarán Lagoon 450F",
+      "price": "Desde 4,000 USD, camarote individual",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, Líder de expedición de Eagle Ray, haciendo buceo libre entre peces",
+      "href": "/es/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Día de buceo",
+      "leader": "Monik Saab",
+      "discipline": "Buceo",
+      "dates": "Lunes 23 de noviembre · salida de un día · 1 inmersión",
+      "boat": "Velero Beneteau Sense 55",
+      "price": "5,500 USD · barco completo",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
+      "imageAlt": "Buzos en San Rafaelito, La Paz",
+      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Una noche al ancla",
+      "leader": "Monik Saab",
+      "discipline": "Buceo",
+      "dates": "Martes 24 de noviembre → miércoles 25 de noviembre · 1 noche · 2 inmersiones",
+      "boat": "Velero Beneteau Sense 55",
+      "price": "8,500 USD · barco completo",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
+      "imageAlt": "El Beneteau Sense 55 al ancla frente a Espíritu Santo",
+      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Acción de Gracias al ancla",
+      "leader": "Sergio Torres",
+      "discipline": "Pesca submarina y buceo libre",
+      "dates": "Jueves 26 de noviembre → domingo 29 de noviembre · 3 noches",
+      "boat": "Velero Beneteau Sense 55",
+      "price": "14,500 USD, barco completo",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, Líder de expedición de Eagle Ray, haciendo buceo libre entre peces",
+      "href": "/es/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Expedición de buceo de Acción de Gracias",
+      "leader": "Monik Saab",
+      "discipline": "Buceo",
+      "dates": "Jueves 26 de noviembre → domingo 29 de noviembre · 3 noches",
+      "boat": "Velero Beneteau Sense 55",
+      "price": "14,500 USD · barco completo, buceo incluido",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
+      "imageAlt": "Buzos en Acción de Gracias en La Paz",
+      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja con Andrea",
+      "leader": "Andrea",
+      "discipline": "Kayak",
+      "dates": "Fechas abiertas desde el 10 de noviembre · 3 noches",
+      "boat": "Catamarán Lagoon 450",
+      "price": "Desde $21,000 por todo el barco",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, líder de expedición de Eagle Ray",
+      "href": "/es/landing/kayak-baja-with-andrea/"
+    }
+  ],
+  "aboardTitle": "Qué hay a bordo, en cada expedición",
+  "aboardOnTitle": "A bordo",
+  "aboardOn": [
+    "Tu propio barco privado, solo para tu grupo",
+    "Capitán, chef y un líder de expedición",
+    "Todas las comidas y bebidas sin alcohol",
+    "Una selección de vinos de nuestro socio sumiller Climats, por nuestra cuenta (valor de venta al público de $350)",
+    "Equipo de snorkel, paddleboards, kayak y bote auxiliar",
+    "Permisos del parque nacional",
+    "Traslado del aeropuerto a la marina en La Paz, ida y vuelta",
+    "Wifi Starlink"
+  ],
+  "aboardNotOnTitle": "No incluido a bordo",
+  "aboardNotOn": [
+    "Vuelos a La Paz",
+    "Otras bebidas alcohólicas, disponibles como extra",
+    "Buceo con tanque, salvo que la expedición lo incluya",
+    "Propinas para la tripulación (se recomienda del 10 al 15%)",
+    "Seguro de viaje"
+  ]
 }

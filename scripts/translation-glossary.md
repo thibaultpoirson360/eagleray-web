@@ -53,6 +53,8 @@ Warm, direct, calm. No exclamation marks unless the English has one. Keep headin
 | Thanksgiving | Acción de Gracias | Thanksgiving | Spanish from the live landing page; French keeps the English word |
 | Partnerships | Alianzas | Partenariats | **guess** |
 | Become a partner | Hazte socio | Devenir partenaire | **guess** |
+| Your Own Expedition | Tu propia expedición | Votre propre expédition | **guess** |
+| Special edition(s) | Edición especial / Ediciones especiales | Édition spéciale / Éditions spéciales | **guess** |
 
 ## Open questions
 

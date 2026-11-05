@@ -13,14 +13,14 @@
   "specialLinkLabel": "Éditions spéciales en novembre : Sergio Torres et Monik Saab",
   "introTitle": "L'équipage observe le groupe, pas le programme.",
   "intro": "Nous construisons des voyages privés à la voile autour de votre groupe, et non l'inverse. Vous choisissez qui vient. Notre équipe mène le bateau, veille à la sécurité de chacun et lit la journée pour pouvoir la changer quand quelque chose en vaut la peine.",
-  "expeditionsLabel": "Votre groupe, votre voyage",
+  "expeditionsLabel": "À vos dates · choisissez votre rythme",
   "expeditionsIntro": "Des expéditions privées à vos dates, avec les personnes que vous choisissez.",
   "specialKicker": "Éditions spéciales",
   "specialTitle": "Dates limitées avec nos chefs d'expédition",
   "specialIntro": "Quelques fois par an, l'un de nos chefs d'expédition organise un voyage autour de ce qu'il connaît le mieux. Des dates fixes, un petit groupe et la même façon de lire la journée que pour toute autre expédition.",
   "expeditions": [
     {
-      "name": "Thanksgiving avec Sergio Torres",
+      "name": "Expédition de recalibrage",
       "group": "trip",
       "builtAround": "Pensé pour : des journées lentes à bord",
       "otherSide": "De longs déjeuners sur le pont, ou autant de temps dans l'eau que vous le souhaitez.",
@@ -28,18 +28,18 @@
       "imageAlt": "Un moment de calme à bord : déjeuner, ombre et baignade depuis la poupe",
       "facts": "3, 5 ou 7 nuits · bateau privé",
       "priceNote": "À partir de 700$ USD · pppn",
-      "description": "Pêche sous-marine, plongée en apnée et journées en mer entre amis. Bateau privé, de 3 à 7 nuits, jusqu'au dimanche 29 novembre.",
+      "description": "Une expédition privée en voilier pour ceux qui veulent déconnecter entre proches, à un rythme que personne d'autre ne fixe. Vous choisissez les dates et le groupe.",
       "homeOrder": 3,
       "href": "/fr/recalibration-expedition/"
     },
     {
-      "name": "Expédition de recalibrage",
+      "name": "Expédition active",
       "group": "trip",
       "builtAround": "Pensé pour : du temps dans l'eau",
       "otherSide": "Si vous sautez une session, le long déjeuner reste sur le pont.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Thibault_Sailing_Profile_pic_1_fultsk.jpg",
       "imageAlt": "Un groupe dans l'eau avec un guide",
-      "facts": "3, 5, +7 nuits · bateau privé",
+      "facts": "3, 5 ou 7 nuits · bateau privé",
       "priceNote": "À partir de 700$ USD · pppd",
       "description": "Plus d'heures dans l'eau : apnée, plongée bouteille et longues sessions de snorkeling, avec un spécialiste certifié et le matériel à bord. Vous choisissez les dates et le groupe.",
       "hideOnHome": true,
@@ -52,11 +52,11 @@
       "otherSide": "Vos dates, vos proches, votre rythme.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Une expédition à la voile sur mesure",
-      "description": "Un voyage sur mesure, conçu spécialement pour votre groupe : les dates, les participants et ce que vous souhaitez faire pendant vos journées en mer.",
+      "description": "Une autre idée en tête. Un trajet aller simple, un voyage de noces, un groupe aux envies très différentes pour la même semaine. Dites-nous ce que vous voulez et nous le construisons.",
       "href": "/fr/ad-hoc-expedition/"
     },
     {
-      "name": "Expédition de recalibrage",
+      "name": "Thanksgiving avec Sergio Torres",
       "group": "special",
       "builtAround": "Pensé pour : la pêche sous-marine et l'apnée",
       "otherSide": "Pas dans l'eau ce jour-là ? Restez sur le pont.",
@@ -171,25 +171,29 @@
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer le kayak à mon expédition."
     }
   ],
-  "howTitle": "Comment ça marche",
+  "howTitle": "Vous réservez le vol. Nous nous occupons du reste.",
   "howSteps": [
     {
-      "title": "Dites-nous qui vient",
-      "text": "Qui vient, quand vous voulez partir et à quoi vous aimeriez que ressemblent vos journées en mer."
+      "title": "Atterrissez à La Paz",
+      "text": "Nous venons vous chercher à l'aéroport."
     },
     {
-      "title": "Nous le planifions autour de votre groupe",
-      "text": "Notre équipe planifie le bateau, l'équipage et l'itinéraire autour de votre groupe, et les adapte jour après jour."
+      "title": "Rencontrez votre équipage à la marina",
+      "text": "Votre chef d'expédition vous fait découvrir le bateau et vous présente le plan."
     },
     {
-      "title": "Nous revenons avec une proposition",
-      "text": "Remplissez le formulaire et nous reviendrons vers vous avec une proposition."
+      "title": "En mer",
+      "text": "Les journées suivent ce que veut votre groupe : dans l'eau, sur le pont, ou les deux."
+    },
+    {
+      "title": "De retour à la marina",
+      "text": "Nous vous conduisons à l'aéroport."
     }
   ],
-  "closingTitle": "Vous ne savez pas laquelle est faite pour vous ?",
-  "closingText": "Parlez-nous de votre groupe et nous vous orienterons vers la bonne expédition.",
+  "closingTitle": "Vous ne savez pas laquelle convient à votre groupe ?",
+  "closingText": "Dites-nous qui vient et ce qu'ils aiment. Nous vous suggérons la bonne expédition.",
   "closingPrimaryCta": {
-    "label": "Planifiez votre voyage",
+    "label": "Planifier mon expédition",
     "href": "/fr/customize-your-expedition/"
   },
   "closingSecondaryCta": {
@@ -201,5 +205,110 @@
     "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
     "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
     "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition de votre groupe, et nous nous occupons du reste."
-  }
+  },
+  "waysSpecialTitle": "Éditions spéciales",
+  "waysSpecialText": "Des dates fixes, construites autour de l'un de nos chefs d'expédition et de ce qu'il ou elle connaît le mieux : plongée, apnée, kayak, kitesurf. Vous amenez vos proches, ils apportent la mer qu'ils connaissent.",
+  "waysSpecialButton": "Voir les prochaines dates",
+  "waysDatesTitle": "À vos dates",
+  "waysDatesText": "Votre groupe, vos dates, votre rythme. 3, 5 ou 7 nuits autour d'Espíritu Santo, tranquilles ou actives, organisées selon ce que votre groupe veut faire.",
+  "waysDatesNote": "À partir de 700 $ par invité, par nuit.",
+  "waysDatesCta": {
+    "label": "Planifier mon expédition",
+    "href": "/fr/customize-your-expedition/"
+  },
+  "upcomingTitle": "Prochaines éditions spéciales",
+  "upcomingCardLabel": "Voir l'expédition",
+  "upcomingHomeTitle": "Prochaines expéditions",
+  "upcomingHomeCta": {
+    "label": "Voir toutes les expéditions",
+    "href": "/fr/sail-with-us/"
+  },
+  "upcomingEditions": [
+    {
+      "name": "Cabines ouvertes",
+      "leader": "Sergio Torres",
+      "discipline": "Pêche sous-marine et apnée",
+      "dates": "Dimanche 22 novembre → mercredi 25 novembre · 3 nuits",
+      "boat": "Catamaran Lagoon 450F",
+      "price": "À partir de 4 000 USD, cabine individuelle",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, chef d'expédition d'Eagle Ray, en apnée parmi les poissons",
+      "href": "/fr/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Journée plongée",
+      "leader": "Monik Saab",
+      "discipline": "Plongée",
+      "dates": "Lundi 23 novembre · sortie à la journée · 1 plongée",
+      "boat": "Voilier Beneteau Sense 55",
+      "price": "5 500 USD · bateau entier",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
+      "imageAlt": "Plongeurs à San Rafaelito, La Paz",
+      "href": "/fr/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Une nuit au mouillage",
+      "leader": "Monik Saab",
+      "discipline": "Plongée",
+      "dates": "Mardi 24 novembre → mercredi 25 novembre · 1 nuit · 2 plongées",
+      "boat": "Voilier Beneteau Sense 55",
+      "price": "8 500 USD · bateau entier",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
+      "imageAlt": "Le Beneteau Sense 55 au mouillage au large d'Espíritu Santo",
+      "href": "/fr/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Thanksgiving au mouillage",
+      "leader": "Sergio Torres",
+      "discipline": "Pêche sous-marine et apnée",
+      "dates": "Jeudi 26 novembre → dimanche 29 novembre · 3 nuits",
+      "boat": "Voilier Beneteau Sense 55",
+      "price": "14 500 USD, bateau entier",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, chef d'expédition d'Eagle Ray, en apnée parmi les poissons",
+      "href": "/fr/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Expédition plongée Thanksgiving",
+      "leader": "Monik Saab",
+      "discipline": "Plongée",
+      "dates": "Jeudi 26 novembre → dimanche 29 novembre · 3 nuits",
+      "boat": "Voilier Beneteau Sense 55",
+      "price": "14 500 USD · bateau entier, plongée incluse",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
+      "imageAlt": "Plongeurs à Thanksgiving à La Paz",
+      "href": "/fr/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja avec Andrea",
+      "leader": "Andrea",
+      "discipline": "Kayak",
+      "dates": "Dates ouvertes à partir du 10 novembre · 3 nuits",
+      "boat": "Catamaran Lagoon 450",
+      "price": "À partir de 21 000 $ pour tout le bateau",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, cheffe d'expédition Eagle Ray",
+      "href": "/fr/landing/kayak-baja-with-andrea/"
+    }
+  ],
+  "aboardTitle": "Ce qu'il y a à bord, sur chaque expédition",
+  "aboardOnTitle": "À bord",
+  "aboardOn": [
+    "Votre propre bateau privé, pour votre groupe uniquement",
+    "Capitaine, chef cuisinier et un chef d'expédition",
+    "Tous les repas et les boissons sans alcool",
+    "Une sélection de vins de notre partenaire sommelier Climats, offerte par nos soins (valeur de 350 $ en boutique)",
+    "Matériel de snorkeling, paddleboards, kayak et annexe",
+    "Permis du parc national",
+    "Transfert de l'aéroport à la marina à La Paz, aller-retour",
+    "Wifi Starlink"
+  ],
+  "aboardNotOnTitle": "Non inclus à bord",
+  "aboardNotOn": [
+    "Vols vers La Paz",
+    "Autres boissons alcoolisées, disponibles en supplément",
+    "Plongée bouteille, sauf si l'expédition l'inclut",
+    "Pourboires de l'équipage (10 à 15 % recommandés)",
+    "Assurance voyage"
+  ]
 }
