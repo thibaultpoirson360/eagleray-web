@@ -37,18 +37,21 @@ const cardLabel = page.upcomingCardLabel;
           <li class="flex flex-col" data-tina-field={tinaField(page, "upcomingEditions", i)}>
             <div class="relative aspect-[4/5] overflow-hidden rounded bg-ink/10">
               {e!.image && <img src={e!.image} alt={e!.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover object-center" />}
+              {e!.href && <a href={e!.href} class="absolute inset-0" tabindex="-1" aria-hidden="true"></a>}
             </div>
             <div class="flex flex-1 flex-col pt-6">
               {(e!.leader || e!.discipline) && (
                 <p class="font-mono text-[.68rem] tracking-[.06em] text-ink/64">{[e!.leader, e!.discipline].filter(Boolean).join(" · ")}</p>
               )}
-              <h3 class="mt-3 font-display text-[1.2rem] font-normal">{e!.name}</h3>
+              <h3 class="mt-3 font-display text-[1.2rem] font-normal">
+                {e!.href ? <a href={e!.href} class="underline-offset-4 transition-colors hover:underline">{e!.name}</a> : e!.name}
+              </h3>
               {e!.dates && <p class="mt-4 text-[.88rem] leading-[1.6] text-ink/74">{e!.dates}</p>}
               {e!.boat && <p class="mt-1 text-[.88rem] leading-[1.6] text-ink/74">{e!.boat}</p>}
               {e!.price && <p class="mt-3 font-display text-[.95rem]">{e!.price}</p>}
               {e!.href && cardLabel && (
                 <div class="mt-auto pt-6">
-                  <Button href={e!.href} variant="ghost" context="default" size="sm">
+                  <Button href={e!.href} variant="outline" context="default" size="sm">
                     {cardLabel}
                     <span class="sr-only">: {e!.name}</span>
                   </Button>

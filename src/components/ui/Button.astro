@@ -12,7 +12,7 @@
  */
 export interface Props {
   href?: string;
-  variant?: "primary" | "ghost";
+  variant?: "primary" | "ghost" | "outline";
   context?: "default" | "hero";
   size?: "default" | "sm";
   wide?: boolean;
@@ -56,10 +56,12 @@ const variantClasses = {
   default: {
     primary: "bg-ink text-white hover:bg-ink-hover hover:-translate-y-0.5",
     ghost: "border-ink/26 text-ink hover:bg-surface hover:border-ink hover:-translate-y-0.5",
+    outline: "border-ink! bg-surface text-ink hover:bg-ink hover:text-white hover:-translate-y-0.5",
   },
   hero: {
     primary: "bg-white text-ink hover:bg-surface hover:-translate-y-0.5",
     ghost: "border-white/45 text-white hover:bg-white/12 hover:border-white hover:-translate-y-0.5",
+    outline: "border-white! bg-transparent text-white hover:bg-white hover:text-ink hover:-translate-y-0.5",
   },
 } as const;
 

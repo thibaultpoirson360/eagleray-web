@@ -122,7 +122,7 @@ const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-
               {page.expeditionsIntro && <p class="mx-auto mt-5 max-w-[46ch] text-[.92rem] leading-[1.8] text-ink/64" data-tina-field={tinaField(page, "expeditionsIntro")}>{page.expeditionsIntro}</p>}
             </div>
             <div class={`grid gap-x-10 gap-y-20 ${gridCols(tripCards.length, "lg:grid-cols-3")}`}>
-              {tripCards.map((card) => <TripCard card={planCta ? { ...card, href: planCta.href } : card} linkLabel={planCta?.label ?? "Learn more"} />)}
+              {tripCards.map((card) => <TripCard card={planCta ? { ...card, href: planCta.href, pageHref: card.href } : card} linkLabel={planCta?.label ?? "Learn more"} />)}
             </div>
           </section>
 
