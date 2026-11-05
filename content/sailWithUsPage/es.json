@@ -97,8 +97,10 @@
       "href": "/es/landing/kayak-baja-with-andrea/"
     }
   ],
-  "activitiesTitle": "Suma actividades, o mantén los días lentos",
+  "activitiesTitle": "Personaliza tu experiencia: añade actividades y extras",
   "activitiesSubtitle": "Toda expedición funciona sin actividades. Si tu grupo quiere más tiempo en el agua, nuestra Gente del mar apasionada son los instructores y especialistas detrás de ellas. Súmalas a cualquier expedición y la diseñamos contigo.",
+  "activitiesExtraLabel": "Añade actividades extra, con pago aparte",
+  "activitiesIncludedLabel": "Actividades incluidas",
   "activitiesButtonLabel": "Contáctanos para más información",
   "activities": [
     {
@@ -120,6 +122,16 @@
       "imageNote": "",
       "priceNote": "desde 360 USD por persona y día",
       "contactMessage": "Me gustaría recibir más información sobre cómo incorporar kitesurf a mi expedición."
+    },
+    {
+      "name": "Selección de vinos",
+      "featured": true,
+      "text": "Una selección de vinos internacionales de nuestro socio sumiller Climats. Disponible como extra.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Wine_Selection_Eagle_Ray_Expeditions_p8721d.jpg",
+      "imageAlt": "Una selección de vinos internacionales",
+      "imageNote": "",
+      "priceNote": "Precio a consultar",
+      "contactMessage": "Me gustaría recibir más información sobre añadir una selección de vinos de Climats a mi expedición."
     },
     {
       "name": "Buceo libre",
@@ -171,41 +183,6 @@
       "contactMessage": "Me gustaría recibir más información sobre cómo incluir Kayak en mi expedición."
     }
   ],
-  "howTitle": "Tú reservas el vuelo. Nosotros nos encargamos del resto.",
-  "howSteps": [
-    {
-      "title": "Aterriza en La Paz",
-      "text": "Te recogemos en el aeropuerto."
-    },
-    {
-      "title": "Conoce a tu tripulación en la marina",
-      "text": "Tu líder de expedición te enseña el barco y te explica el plan."
-    },
-    {
-      "title": "En el mar",
-      "text": "Los días siguen lo que tu grupo quiere: en el agua, en cubierta o ambas cosas."
-    },
-    {
-      "title": "De vuelta en la marina",
-      "text": "Te llevamos al aeropuerto."
-    }
-  ],
-  "closingTitle": "¿No sabes cuál encaja con tu grupo?",
-  "closingText": "Cuéntanos quién viene y qué les gusta. Te sugerimos la expedición adecuada.",
-  "closingPrimaryCta": {
-    "label": "Planifica mi expedición",
-    "href": "/es/customize-your-expedition/"
-  },
-  "closingSecondaryCta": {
-    "label": "Contáctanos",
-    "href": "/es/contact/"
-  },
-  "seo": {
-    "title": "Viajes privados en velero en La Paz | Eagle Ray Expeditions",
-    "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
-    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
-    "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
-  },
   "waysSpecialTitle": "Ediciones especiales",
   "waysSpecialText": "Fechas fijas, construidas en torno a uno de nuestros líderes de expedición y lo que mejor conoce: buceo, buceo libre, kayak, kitesurf. Tú traes a tu gente, ellos traen el mar que conocen.",
   "waysSpecialButton": "Ver próximas fechas",
@@ -310,6 +287,39 @@
     "Propinas para la tripulación (se recomienda del 10 al 15%)",
     "Seguro de viaje"
   ],
-  "activitiesExtraLabel": "Añade actividades extra, con pago aparte",
-  "activitiesIncludedLabel": "Actividades incluidas"
+  "howTitle": "Tú reservas el vuelo. Nosotros nos encargamos del resto.",
+  "howSteps": [
+    {
+      "title": "Aterriza en La Paz",
+      "text": "Te recogemos en el aeropuerto."
+    },
+    {
+      "title": "Conoce a tu tripulación en la marina",
+      "text": "Tu líder de expedición te enseña el barco y te explica el plan."
+    },
+    {
+      "title": "En el mar",
+      "text": "Los días siguen lo que tu grupo quiere: en el agua, en cubierta o ambas cosas."
+    },
+    {
+      "title": "De vuelta en la marina",
+      "text": "Te llevamos al aeropuerto."
+    }
+  ],
+  "closingTitle": "¿No sabes cuál encaja con tu grupo?",
+  "closingText": "Cuéntanos quién viene y qué les gusta. Te sugerimos la expedición adecuada.",
+  "closingPrimaryCta": {
+    "label": "Planifica mi expedición",
+    "href": "/es/customize-your-expedition/"
+  },
+  "closingSecondaryCta": {
+    "label": "Contáctanos",
+    "href": "/es/contact/"
+  },
+  "seo": {
+    "title": "Viajes privados en velero en La Paz | Eagle Ray Expeditions",
+    "description": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y planifica tu viaje.",
+    "ogTitle": "Expediciones privadas en velero en La Paz, adaptadas a tu grupo. Elige una expedición y nosotros nos encargaremos del resto.",
+    "ogDescription": "Eagle Ray Expeditions organiza expediciones privadas en velero pensadas para garantizar tu comodidad y seguridad. Elige las fechas y el grupo, y nosotros nos encargaremos del resto."
+  }
 }

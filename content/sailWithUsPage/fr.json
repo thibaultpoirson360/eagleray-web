@@ -97,8 +97,10 @@
       "href": "/fr/landing/kayak-baja-with-andrea/"
     }
   ],
-  "activitiesTitle": "Ajoutez des activités, ou gardez des journées lentes",
+  "activitiesTitle": "Personnalisez votre expérience : ajoutez des activités et des extras",
   "activitiesSubtitle": "Chaque expédition fonctionne sans aucune activité. Si votre groupe veut passer plus de temps dans l'eau, nos Gens de la mer passionnés sont les instructeurs et spécialistes qui les animent. Ajoutez-les à n'importe quelle expédition et nous la concevrons avec vous.",
+  "activitiesExtraLabel": "Ajoutez des activités en plus, payantes à part",
+  "activitiesIncludedLabel": "Activités incluses",
   "activitiesButtonLabel": "Contactez-nous pour en savoir plus",
   "activities": [
     {
@@ -112,14 +114,24 @@
       "contactMessage": "J'aimerais avoir plus d'informations sur la possibilité d'intégrer la plongée sous-marine à mon expédition."
     },
     {
-      "name": "Cerf-volant",
+      "name": "Kitesurf",
       "featured": true,
       "text": "Des sessions de kitesurf dans des conditions idéales, accompagnées d'un guide expérimenté.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
-      "imageAlt": "Cerf-volant",
+      "imageAlt": "Kitesurf",
       "imageNote": "",
       "priceNote": "à partir de 360 USD par personne et par jour",
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer Kite à mon expédition."
+    },
+    {
+      "name": "Sélection de vins",
+      "featured": true,
+      "text": "Une sélection de vins internationaux de notre partenaire sommelier Climats. Disponible en supplément.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Wine_Selection_Eagle_Ray_Expeditions_p8721d.jpg",
+      "imageAlt": "Une sélection de vins internationaux",
+      "imageNote": "",
+      "priceNote": "Prix sur demande",
+      "contactMessage": "Je souhaiterais plus d'informations sur l'ajout d'une sélection de vins de Climats à mon expédition."
     },
     {
       "name": "Plongée en apnée",
@@ -171,41 +183,6 @@
       "contactMessage": "J'aimerais avoir plus d'informations sur la manière d'intégrer le kayak à mon expédition."
     }
   ],
-  "howTitle": "Vous réservez le vol. Nous nous occupons du reste.",
-  "howSteps": [
-    {
-      "title": "Atterrissez à La Paz",
-      "text": "Nous venons vous chercher à l'aéroport."
-    },
-    {
-      "title": "Rencontrez votre équipage à la marina",
-      "text": "Votre chef d'expédition vous fait découvrir le bateau et vous présente le plan."
-    },
-    {
-      "title": "En mer",
-      "text": "Les journées suivent ce que veut votre groupe : dans l'eau, sur le pont, ou les deux."
-    },
-    {
-      "title": "De retour à la marina",
-      "text": "Nous vous conduisons à l'aéroport."
-    }
-  ],
-  "closingTitle": "Vous ne savez pas laquelle convient à votre groupe ?",
-  "closingText": "Dites-nous qui vient et ce qu'ils aiment. Nous vous suggérons la bonne expédition.",
-  "closingPrimaryCta": {
-    "label": "Planifier mon expédition",
-    "href": "/fr/customize-your-expedition/"
-  },
-  "closingSecondaryCta": {
-    "label": "Nous contacter",
-    "href": "/fr/contact/"
-  },
-  "seo": {
-    "title": "Voyages privés à la voile à La Paz | Eagle Ray Expeditions",
-    "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
-    "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
-    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition de votre groupe, et nous nous occupons du reste."
-  },
   "waysSpecialTitle": "Éditions spéciales",
   "waysSpecialText": "Des dates fixes, construites autour de l'un de nos chefs d'expédition et de ce qu'il ou elle connaît le mieux : plongée, apnée, kayak, kitesurf. Vous amenez vos proches, ils apportent la mer qu'ils connaissent.",
   "waysSpecialButton": "Voir les prochaines dates",
@@ -310,6 +287,39 @@
     "Pourboires de l'équipage (10 à 15 % recommandés)",
     "Assurance voyage"
   ],
-  "activitiesExtraLabel": "Ajoutez des activités en plus, payantes à part",
-  "activitiesIncludedLabel": "Activités incluses"
+  "howTitle": "Vous réservez le vol. Nous nous occupons du reste.",
+  "howSteps": [
+    {
+      "title": "Atterrissez à La Paz",
+      "text": "Nous venons vous chercher à l'aéroport."
+    },
+    {
+      "title": "Rencontrez votre équipage à la marina",
+      "text": "Votre chef d'expédition vous fait découvrir le bateau et vous présente le plan."
+    },
+    {
+      "title": "En mer",
+      "text": "Les journées suivent ce que veut votre groupe : dans l'eau, sur le pont, ou les deux."
+    },
+    {
+      "title": "De retour à la marina",
+      "text": "Nous vous conduisons à l'aéroport."
+    }
+  ],
+  "closingTitle": "Vous ne savez pas laquelle convient à votre groupe ?",
+  "closingText": "Dites-nous qui vient et ce qu'ils aiment. Nous vous suggérons la bonne expédition.",
+  "closingPrimaryCta": {
+    "label": "Planifier mon expédition",
+    "href": "/fr/customize-your-expedition/"
+  },
+  "closingSecondaryCta": {
+    "label": "Nous contacter",
+    "href": "/fr/contact/"
+  },
+  "seo": {
+    "title": "Voyages privés à la voile à La Paz | Eagle Ray Expeditions",
+    "description": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition et organisez votre voyage.",
+    "ogTitle": "Expéditions privées à la voile à La Paz, sur mesure pour votre groupe. Choisissez une expédition, nous nous occupons du reste.",
+    "ogDescription": "Eagle Ray Expeditions organise des expéditions à la voile privées, conçues pour garantir votre confort et votre sécurité. Choisissez les dates et la composition de votre groupe, et nous nous occupons du reste."
+  }
 }
