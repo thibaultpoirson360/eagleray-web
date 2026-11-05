@@ -1,0 +1,179 @@
+{
+  "title": "Kayak Baja con Andrea",
+  "blocks": [
+    {
+      "kicker": "Edición especial",
+      "title": "Kayak Baja con Andrea",
+      "lede": "Tres noches alrededor de Espíritu Santo. El barco es tu casa. El kayak es tu forma de explorar. Disponible desde el 10 de noviembre · 3 noches · Desde $21,000 por todo el barco",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_on_boat_1_bmnoic.jpg",
+      "imageAlt": "Andrea, líder de expedición de Eagle Ray",
+      "cta": {
+        "label": "Solicita tus fechas",
+        "href": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
+      },
+      "_template": "hero"
+    },
+    {
+      "body": "## LA EXPEDICIÓN\n\nAndrea cruzó el Atlántico a remo con otras dos mujeres, la primera tripulación íntegramente femenina en completar la travesía por su cuenta. Espíritu Santo es donde se entrenó para lograrlo. Ahora guía a grupos pequeños de bahía en bahía alrededor de la isla, al ritmo de quien reme ese día. Unas dos horas en el agua, un picnic en una playa a la que llegas en kayak, y el barco esperando en el siguiente fondeadero. No se necesita experiencia en kayak.\n",
+      "_template": "richText"
+    },
+    {
+      "member": "andrea-gutierrez",
+      "body": "## ¿QUIÉN ES ANDREA?\n\nRemera del Atlántico con Oceánida. Cinco años guiando grupos en el mar en México.\n",
+      "collapseAbout": false,
+      "moreText": "",
+      "_template": "memberProfile"
+    },
+    {
+      "title": "Un día con Andrea",
+      "intro": "La ruta es un plan, no una promesa. Si cambia el viento, Andrea y el capitán cambian la ruta con él.",
+      "steps": [
+        {
+          "stepLabel": "Mañana",
+          "stepTitle": "Charla previa",
+          "stepText": "Desayuno y charla previa de Andrea. Viento, ruta, quién rema con quién."
+        },
+        {
+          "stepLabel": "Media mañana",
+          "stepTitle": "Remo",
+          "stepText": "Unas dos horas remando, de bahía en bahía, cerca de la costa (adaptable a la energía y al ánimo del grupo)."
+        },
+        {
+          "stepLabel": "Almuerzo",
+          "stepTitle": "Picnic",
+          "stepText": "Un picnic en la playa, o el barco pasa a recogerte."
+        },
+        {
+          "stepLabel": "Tarde",
+          "stepTitle": "Tiempo libre",
+          "stepText": "Snorkel con la tripulación, un baño desde la popa, o nada en absoluto."
+        },
+        {
+          "stepLabel": "Noche",
+          "stepTitle": "Al ancla",
+          "stepText": "Atardecer al ancla y cena preparada por el chef."
+        }
+      ],
+      "_template": "timeline"
+    },
+    {
+      "body": "## NO TODOS TIENEN QUE REMAR\n\nMientras una parte del grupo está en el agua, los demás pueden hacer snorkel con la tripulación, leer en cubierta o sumarse en la última bahía del día.\n",
+      "_template": "richText"
+    },
+    {
+      "body": "## PARA QUIÉN ES\n\n* Grupos de 2 a 6 invitados (hasta 8 bajo petición)\n* Las familias son bienvenidas. Los niños siempre reman y nadan con sus padres.\n* No se necesita experiencia en kayak\n",
+      "_template": "richText"
+    },
+    {
+      "title": "Fechas y precio",
+      "intro": "Fechas abiertas disponibles. Elige las fechas que mejor le vengan a tu grupo, desde noviembre.",
+      "options": [
+        {
+          "name": "Kayak Baja con Andrea",
+          "dates": "Fechas abiertas disponibles · 3 noches",
+          "boatLine": "Catamarán Lagoon 450 o equivalente · hasta 6 invitados (hasta 8 bajo petición)",
+          "priceSummary": "$21,000 · barco completo ($3,500 por invitado)",
+          "detailsLabel": "Precios",
+          "priceRows": [
+            {
+              "label": "3 noches, barco completo, hasta 6 invitados",
+              "amount": "$21,000 ($3,500 por invitado)"
+            },
+            {
+              "label": "Invitados 7 y 8",
+              "amount": "+$2,625 por invitado"
+            }
+          ],
+          "images": [],
+          "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+          "imageAlt": "Andrea, líder de expedición de Eagle Ray",
+          "bookLabel": "Solicita tus fechas",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
+        }
+      ],
+      "fillPhotos": false,
+      "boatLinkLabel": "Ver el barco",
+      "bookingLabel": "Cómo reservar",
+      "bookingInfo": "* Depósito del 20% para reservar tus fechas.\n* El saldo se paga 30 días antes de la salida. En salidas con menos de 30 días de antelación, pago total al reservar.\n",
+      "_template": "departures"
+    },
+    {
+      "title": "El barco",
+      "intro": "",
+      "detailsLabel": "Ver todas las fotos",
+      "boatItems": [
+        {
+          "boat": "lagoon-450",
+          "tag": "Tu barco",
+          "tripNote": "Cuatro camarotes con aire acondicionado, un flybridge y una cubierta amplia y estable para botar los kayaks.",
+          "banner": "/assets/img/boats/lagoon-450-2018-01.webp",
+          "bannerAlt": "Catamarán Lagoon 450",
+          "displayName": "Lagoon 450",
+          "subtitle": "Catamarán",
+          "about": "Catamarán Lagoon 450 o equivalente, confirmado con tu depósito.",
+          "specs": [
+            {
+              "label": "Tipo",
+              "value": "Catamarán"
+            },
+            {
+              "label": "Eslora",
+              "value": "45 pies"
+            },
+            {
+              "label": "Camarotes para huéspedes",
+              "value": "4"
+            },
+            {
+              "label": "Invitados",
+              "value": "hasta 8"
+            }
+          ],
+          "featureList": [
+            "Aire acondicionado en todos los camarotes",
+            "Flybridge",
+            "Cubierta amplia y estable para botar los kayaks"
+          ]
+        }
+      ],
+      "_template": "tripBoats"
+    },
+    {
+      "title": "Qué incluye el barco",
+      "includedTitle": "A bordo",
+      "included": "* Tu propio barco privado, solo para tu grupo\n* Andrea, un capitán y un chef\n* Kayaks para todo el grupo\n* Todas las comidas y bebidas sin alcohol\n* Una selección de vinos de nuestro socio sumiller Climats, por nuestra cuenta (valor de venta al público de $350)\n* Equipo de snorkel y paddleboards\n* Permisos del parque nacional\n* Traslado del aeropuerto a la marina en La Paz, ida y vuelta\n* Wifi Starlink\n",
+      "notIncludedTitle": "No incluido a bordo",
+      "notIncluded": "* Vuelos a La Paz\n* Otras bebidas alcohólicas, disponibles como extra\n* Propinas para la tripulación (se recomienda del 10 al 15%)\n* Seguro de viaje\n",
+      "gallery": [],
+      "_template": "includes"
+    },
+    {
+      "title": "Preguntas frecuentes",
+      "questions": [
+        {
+          "question": "¿Necesito experiencia en kayak?",
+          "answer": "No. Andrea planifica cada día en función de quien rema más despacio, y el barco nunca está lejos."
+        },
+        {
+          "question": "¿Qué pasa si cambia el tiempo?",
+          "answer": "La ruta es un plan. Andrea y el capitán leen el viento cada mañana y eligen las bahías que funcionan ese día."
+        },
+        {
+          "question": "¿Qué debo llevar?",
+          "answer": "Un sombrero, protector solar biodegradable (Espíritu Santo es un área protegida), una prenda ligera de manga larga y zapatos de agua. Andrea te envía una lista completa cuando reserves."
+        },
+        {
+          "question": "¿Pueden venir niños?",
+          "answer": "Sí. Los niños son bienvenidos siempre que estén con sus padres en todo momento, a bordo y en el agua."
+        }
+      ],
+      "_template": "faq"
+    }
+  ],
+  "seo": {
+    "title": "Kayak Baja con Andrea | Eagle Ray Expeditions",
+    "description": "Tres noches en kayak alrededor de Espíritu Santo, La Paz, con Andrea, remera del Atlántico. No se necesita experiencia. Barco privado, fechas abiertas desde noviembre.",
+    "ogTitle": "Kayak Baja con Andrea",
+    "ogDescription": "Tres noches alrededor de Espíritu Santo. El barco es tu casa. El kayak es tu forma de explorar. No se necesita experiencia."
+  }
+}

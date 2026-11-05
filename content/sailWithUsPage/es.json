@@ -82,6 +82,19 @@
       "description": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Monik dirige las inmersiones, con todo el equipo a bordo.",
       "homeOrder": 1,
       "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja con Andrea",
+      "group": "special",
+      "builtAround": "Pensada para: el kayak",
+      "otherSide": "¿No remas? Haz snorkel con la tripulación o quédate en cubierta.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, líder de expedición de Eagle Ray",
+      "badge": "Fechas abiertas · desde el 10 de noviembre",
+      "facts": "3 noches · hasta 6 invitados",
+      "priceNote": "Desde 21,000 USD · barco completo",
+      "description": "Tres noches alrededor de Espíritu Santo. El barco es tu casa, el kayak es tu forma de explorar. No se necesita experiencia en kayak.",
+      "href": "/es/landing/kayak-baja-with-andrea/"
     }
   ],
   "activitiesTitle": "Suma actividades, o mantén los días lentos",
