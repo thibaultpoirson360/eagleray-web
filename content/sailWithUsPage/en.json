@@ -82,6 +82,19 @@
       "description": "A day, a night at anchor, or the Thanksgiving weekend off Espíritu Santo. Monik leads the dives, with all the gear on board.",
       "homeOrder": 1,
       "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja with Andrea",
+      "group": "special",
+      "builtAround": "Built around: kayaking",
+      "otherSide": "Not paddling? Snorkel with the crew or stay on deck.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, Eagle Ray Expedition Leader",
+      "badge": "Open dates · from November 10",
+      "facts": "3 nights · up to 6 guests",
+      "priceNote": "From 21,000 USD · whole boat",
+      "description": "Three nights around Espíritu Santo. The boat is home, the kayak is how you explore. No kayak experience needed.",
+      "href": "/en/landing/kayak-baja-with-andrea/"
     }
   ],
   "activitiesTitle": "Add activities, or keep the days slow",
