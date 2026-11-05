@@ -1,36 +1,30 @@
 {
   "title": "Kayak Baja with Andrea",
-  "seo": {
-    "title": "Kayak Baja with Andrea | Eagle Ray Expeditions",
-    "description": "Three nights kayaking around Espíritu Santo, La Paz, with Andrea, an Atlantic rower. No experience needed. Private boat, open dates from November.",
-    "ogTitle": "Kayak Baja with Andrea",
-    "ogDescription": "Three nights around Espíritu Santo. The boat is home. The kayak is how you explore. No experience needed."
-  },
   "blocks": [
     {
-      "_template": "hero",
       "kicker": "Special edition",
       "title": "Kayak Baja with Andrea",
       "lede": "Three nights around Espíritu Santo. The boat is home. The kayak is how you explore. Available from November 10th · 3 nights · From $21,000 for the whole boat",
-      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutiérrez_-_on_boat_1_bmnoic.jpg",
       "imageAlt": "Andrea, Eagle Ray Expedition Leader",
       "cta": {
         "label": "Request your dates",
         "href": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
-      }
+      },
+      "_template": "hero"
     },
     {
-      "_template": "richText",
-      "body": "## THE EXPEDITION\n\nAndrea rowed across the Atlantic with two other women, the first all-women crew to make the crossing on their own. Espíritu Santo is where she trained for it. Now she leads small groups from bay to bay around the island, at the pace of whoever is paddling that day. Around two hours on the water, a picnic on a beach you reach by kayak, and the boat waiting at the next anchorage. No kayak experience needed.\n"
+      "body": "## THE EXPEDITION\n\nAndrea rowed across the Atlantic with two other women, the first all-women crew to make the crossing on their own. Espíritu Santo is where she trained for it. Now she leads small groups from bay to bay around the island, at the pace of whoever is paddling that day. Around two hours on the water, a picnic on a beach you reach by kayak, and the boat waiting at the next anchorage. No kayak experience needed.\n",
+      "_template": "richText"
     },
     {
-      "_template": "memberProfile",
       "member": "andrea-gutierrez",
       "body": "## WHO IS ANDREA\n\nAtlantic rower with Oceánida. Five years guiding groups at sea in Mexico.\n",
-      "collapseAbout": false
+      "collapseAbout": false,
+      "moreText": "",
+      "_template": "memberProfile"
     },
     {
-      "_template": "timeline",
       "title": "A day with Andrea",
       "intro": "The route is a plan, not a promise. If the wind changes, Andrea and the captain change the route with it.",
       "steps": [
@@ -59,24 +53,20 @@
           "stepTitle": "At anchor",
           "stepText": "Sunset at anchor, dinner from the chef."
         }
-      ]
+      ],
+      "_template": "timeline"
     },
     {
-      "_template": "richText",
-      "body": "## NOT EVERYONE HAS TO PADDLE\n\nWhile part of the group is on the water, the others can snorkel with the crew, read on deck, or join for the last bay of the day.\n"
+      "body": "## NOT EVERYONE HAS TO PADDLE\n\nWhile part of the group is on the water, the others can snorkel with the crew, read on deck, or join for the last bay of the day.\n",
+      "_template": "richText"
     },
     {
-      "_template": "richText",
-      "body": "## WHO IT'S FOR\n\n* Groups of 2 to 6 guests (up to 8 on request)\n* Families welcome. Children always paddle and swim with their parents.\n* No kayak experience needed\n"
+      "body": "## WHO IT'S FOR\n\n* Groups of 2 to 6 guests (up to 8 on request)\n* Families welcome. Children always paddle and swim with their parents.\n* No kayak experience needed\n",
+      "_template": "richText"
     },
     {
-      "_template": "departures",
       "title": "Dates and price",
       "intro": "Open dates available. Choose the dates that work for your group, from November.",
-      "bookingLabel": "How to book",
-      "bookingInfo": "* 20% deposit to book your dates.\n* The balance is due 30 days before departure. For departures less than 30 days away, full payment when booking.\n",
-      "boatLinkLabel": "See the boat",
-      "fillPhotos": false,
       "options": [
         {
           "name": "Kayak Baja with Andrea",
@@ -100,20 +90,24 @@
           "bookLabel": "Request your dates",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20request%20dates%20for%20the%20Kayak%20Baja%20expedition%20with%20Andrea."
         }
-      ]
+      ],
+      "fillPhotos": false,
+      "boatLinkLabel": "See the boat",
+      "bookingLabel": "How to book",
+      "bookingInfo": "* 20% deposit to book your dates.\n* The balance is due 30 days before departure. For departures less than 30 days away, full payment when booking.\n",
+      "_template": "departures"
     },
     {
-      "_template": "tripBoats",
       "title": "The boat",
       "intro": "",
       "detailsLabel": "See all photos",
       "boatItems": [
         {
           "boat": "lagoon-450",
-          "banner": "/assets/img/boats/lagoon-450-2018-01.webp",
-          "bannerAlt": "Lagoon 450 catamaran",
           "tag": "Your boat",
           "tripNote": "Four cabins with air conditioning, a flybridge, and a wide, stable deck for launching kayaks.",
+          "banner": "/assets/img/boats/lagoon-450-2018-01.webp",
+          "bannerAlt": "Lagoon 450 catamaran",
           "displayName": "Lagoon 450",
           "subtitle": "Catamaran",
           "about": "Lagoon 450 catamaran or equivalent, confirmed with your deposit.",
@@ -141,19 +135,19 @@
             "Wide, stable deck for launching kayaks"
           ]
         }
-      ]
+      ],
+      "_template": "tripBoats"
     },
     {
-      "_template": "includes",
       "title": "What's aboard",
       "includedTitle": "On board",
       "included": "* Your own private boat, for your group only\n* Andrea, a captain and a chef\n* Kayaks for the whole group\n* All meals and soft drinks\n* A selection of wines from our sommelier partner Climats, on us ($350 retail value)\n* Snorkel gear and paddleboards\n* National park permits\n* Airport to marina transfer in La Paz, both ways\n* Starlink wifi\n",
       "notIncludedTitle": "Not on board",
       "notIncluded": "* Flights to La Paz\n* Other alcohol, available as an extra\n* Crew tips (10 to 15% recommended)\n* Travel insurance\n",
-      "gallery": []
+      "gallery": [],
+      "_template": "includes"
     },
     {
-      "_template": "faq",
       "title": "Frequently asked questions",
       "questions": [
         {
@@ -172,7 +166,14 @@
           "question": "Can children come?",
           "answer": "Yes. Children are welcome as long as they are always with their parents, on board and on the water."
         }
-      ]
+      ],
+      "_template": "faq"
     }
-  ]
+  ],
+  "seo": {
+    "title": "Kayak Baja with Andrea | Eagle Ray Expeditions",
+    "description": "Three nights kayaking around Espíritu Santo, La Paz, with Andrea, an Atlantic rower. No experience needed. Private boat, open dates from November.",
+    "ogTitle": "Kayak Baja with Andrea",
+    "ogDescription": "Three nights around Espíritu Santo. The boat is home. The kayak is how you explore. No experience needed."
+  }
 }
