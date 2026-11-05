@@ -55,9 +55,18 @@
       "_template": "link"
     },
     {
-      "label": "Contáctanos",
-      "href": "/es/contact/",
-      "_template": "link"
+      "label": "Contacto",
+      "items": [
+        {
+          "label": "Contacto",
+          "href": "/es/contact/"
+        },
+        {
+          "label": "Alianzas",
+          "href": "/es/partnerships/"
+        }
+      ],
+      "_template": "dropdown"
     }
   ],
   "cta": {

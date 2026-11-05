@@ -28,11 +28,12 @@ const offer = page.limitedOffer;
 const offerEnd = offer?.lastDay ? new Date(`${offer.lastDay}T23:59:59-07:00`) : null;
 const showOffer = !!offer?.text && (!offerEnd || Date.now() <= offerEnd.getTime());
 
-const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]";
+const section = "mx-auto max-w-site border-t border-ink/[.06] py-[calc(var(--spacing-section)*1.9)] pr-pad pl-[calc(var(--spacing-pad)+var(--rail))]";
 ---
 
 <PageHero
   title={page.title}
+  tone="quiet"
   lede={page.subtitle}
   image={page.image}
   imageAlt={page.imageAlt}
@@ -55,16 +56,16 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 }
 
 <section class={section}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "whoTitle")}>{page.whoTitle}</h2>
-  <ul class="grid gap-10 md:grid-cols-3">
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "whoTitle")}>{page.whoTitle}</h2>
+  <ul class="grid gap-16 md:grid-cols-3 md:gap-12 lg:gap-16">
     {
       page.whoCards?.map((card) => card && (
         <li class="flex flex-col">
           <div class="aspect-[4/5] overflow-hidden rounded bg-ink/10">
             {card.image && <img src={card.image} alt={card.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" data-tina-field={tinaField(card, "image")} />}
           </div>
-          <h3 class="mt-6 font-display text-[1.2rem] font-normal" data-tina-field={tinaField(card, "title")}>{card.title}</h3>
-          <p class="mt-3 text-[.95rem] leading-[1.75] text-ink/74" data-tina-field={tinaField(card, "text")}>{card.text}</p>
+          <h3 class="mt-8 font-display text-[1.2rem] font-normal" data-tina-field={tinaField(card, "title")}>{card.title}</h3>
+          <p class="mt-4 text-[.95rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(card, "text")}>{card.text}</p>
         </li>
       ))
     }
@@ -72,23 +73,23 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 </section>
 
 <section class={section}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "aboardTitle")}>{page.aboardTitle}</h2>
-  <ul class="grid max-w-[60ch] gap-4 text-lede text-ink/80" data-tina-field={tinaField(page, "aboardPoints")}>
-    {clean(page.aboardPoints).map((p) => <li class="border-l border-ink/20 pl-4">{p}</li>)}
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "aboardTitle")}>{page.aboardTitle}</h2>
+  <ul class="grid max-w-[60ch] gap-8 text-lede leading-[1.9] text-ink/80" data-tina-field={tinaField(page, "aboardPoints")}>
+    {clean(page.aboardPoints).map((p) => <li class="border-l border-ink/20 py-1 pl-6">{p}</li>)}
   </ul>
-  <ul class="mt-12 grid gap-4 sm:grid-cols-2">
+  <ul class="mt-20 grid gap-8 sm:grid-cols-2">
     {
       page.formats?.map((f) => f && (
         <li>
           {f.href ? (
-            <a href={f.href} class="group block h-full rounded border border-ink/14 bg-surface p-6 transition-colors hover:border-ink/40 focus-visible:outline-2 focus-visible:outline-offset-2">
+            <a href={f.href} class="group block h-full rounded border border-ink/14 bg-surface p-8 md:p-10 transition-colors hover:border-ink/40 focus-visible:outline-2 focus-visible:outline-offset-2">
               <h3 class="font-display text-[1.1rem] font-normal underline-offset-4 group-hover:underline" data-tina-field={tinaField(f, "name")}>{f.name} →</h3>
-              <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
+              <p class="mt-4 text-[.9rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
             </a>
           ) : (
-            <div class="h-full rounded border border-ink/14 bg-surface p-6">
+            <div class="h-full rounded border border-ink/14 bg-surface p-8 md:p-10">
               <h3 class="font-display text-[1.1rem] font-normal" data-tina-field={tinaField(f, "name")}>{f.name}</h3>
-              <p class="mt-2 text-[.9rem] leading-[1.7] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
+              <p class="mt-4 text-[.9rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(f, "text")}>{f.text}</p>
             </div>
           )}
         </li>
@@ -97,7 +98,7 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
   </ul>
   {
     page.seeAllHref && page.seeAllLabel && (
-      <div class="mt-8">
+      <div class="mt-14">
         <Button href={page.seeAllHref} variant="ghost" context="default" data-tina-field={tinaField(page, "seeAllLabel")}>
           {page.seeAllLabel}
         </Button>
@@ -107,13 +108,13 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 </section>
 
 <section class={section}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
-  <ol class="grid gap-8 md:grid-cols-3" data-tina-field={tinaField(page, "steps")}>
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
+  <ol class="grid gap-14 md:grid-cols-3 md:gap-12" data-tina-field={tinaField(page, "steps")}>
     {
       clean(page.steps).map((s, i) => (
         <li>
           <span class="font-mono text-[.7rem] tracking-[.14em] text-ink/64">{String(i + 1).padStart(2, "0")}</span>
-          <p class="mt-3 text-ink/80">{s}</p>
+          <p class="mt-5 leading-[1.9] text-ink/80">{s}</p>
         </li>
       ))
     }
@@ -121,13 +122,13 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 </section>
 
 <section class={section}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "getTitle")}>{page.getTitle}</h2>
-  <ul class="grid max-w-[60ch] gap-4 text-lede text-ink/80" data-tina-field={tinaField(page, "benefits")}>
-    {clean(page.benefits).map((b) => <li class="border-l border-ink/20 pl-4">{b}</li>)}
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "getTitle")}>{page.getTitle}</h2>
+  <ul class="grid max-w-[60ch] gap-8 text-lede leading-[1.9] text-ink/80" data-tina-field={tinaField(page, "benefits")}>
+    {clean(page.benefits).map((b) => <li class="border-l border-ink/20 py-1 pl-6">{b}</li>)}
   </ul>
   {
     showOffer && (
-      <div class="mt-8 max-w-[60ch] rounded border border-ink/14 bg-surface p-6 text-ink/80" data-limited-offer data-tina-field={tinaField(offer, "text")}>
+      <div class="mt-8 max-w-[60ch] rounded border border-ink/14 bg-surface p-8 md:p-10 text-ink/80" data-limited-offer data-tina-field={tinaField(offer, "text")}>
         {offer?.text}
       </div>
     )
@@ -135,8 +136,8 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 </section>
 
 <section class={section}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "proofTitle")}>{page.proofTitle}</h2>
-  <ul class="grid gap-6 sm:grid-cols-2">
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "proofTitle")}>{page.proofTitle}</h2>
+  <ul class="grid gap-10 sm:grid-cols-2">
     {
       page.proofLinks?.map((l) => l && l.href && (
         <li>
@@ -144,7 +145,7 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
             <div class="aspect-[16/10] overflow-hidden rounded bg-ink/10">
               {l.image && <img src={l.image} alt={l.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-500 ease-soft group-hover:scale-[1.02]" data-tina-field={tinaField(l, "image")} />}
             </div>
-            <span class="mt-4 inline-block font-display text-[1.2rem] underline-offset-4 group-hover:underline" data-tina-field={tinaField(l, "label")}>{l.label} →</span>
+            <span class="mt-6 inline-block font-display text-[1.2rem] underline-offset-4 group-hover:underline" data-tina-field={tinaField(l, "label")}>{l.label} →</span>
           </a>
         </li>
       ))
@@ -153,7 +154,7 @@ const section = "mx-auto max-w-site border-t border-ink/8 py-section pr-pad pl-[
 </section>
 
 <section id="partner-form" class={`${section} scroll-mt-24`}>
-  <h2 class="mb-section-head text-h2 font-display" data-tina-field={tinaField(page, "formTitle")}>{page.formTitle}</h2>
+  <h2 class="mb-[calc(var(--spacing-section-head)*1.4)] text-h2 font-display" data-tina-field={tinaField(page, "formTitle")}>{page.formTitle}</h2>
   {
     form && (
       <div class="max-w-form">

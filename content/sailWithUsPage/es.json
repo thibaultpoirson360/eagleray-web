@@ -1,7 +1,7 @@
 {
-  "heroImage": "",
+  "heroImage": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/tom-nagel-snb8JwEKZd0-unsplash_cbkh8b.jpg",
   "heroImageAlt": "Alguien en el agua, buceando o haciendo snorkel desde el barco",
-  "heroImage2": "",
+  "heroImage2": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/aleksandra-dementeva-cO99F3Yr_-I-unsplash_ouqyrl.jpg",
   "heroImage2Alt": "Un grupo compartiendo una larga comida en cubierta",
   "kicker": "Navega con nosotros",
   "title": "Algunos vienen por las inmersiones.\nOtros vienen por las comidas largas.\nNavegamos por ambas.",
@@ -21,67 +21,67 @@
   "expeditions": [
     {
       "name": "El Día de Acción de Gracias con Sergio Torres",
+      "group": "trip",
+      "builtAround": "Pensada para: días lentos a bordo",
+      "otherSide": "Comidas largas en cubierta, o todo el tiempo que quieras en el agua.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Recalibration_Expedition_Eagle_Ray_Expeditions_nn0unz.jpg",
       "imageAlt": "Un momento tranquilo a bordo: comida, sombra y un chapuzón desde la popa",
       "facts": "3, 5 o 7 noches · barco privado",
-      "priceNote": "Desde 14,500 USD · barco completo",
+      "priceNote": "Desde 700$ USD · pppn",
       "description": "Pesca submarina, buceo libre y días en el mar con tu grupo. Barco privado, de 3 a 7 noches, con final el domingo 29 de noviembre.",
-      "href": "/es/recalibration-expedition/",
       "homeOrder": 3,
-      "group": "trip",
-      "builtAround": "Pensada para: días lentos a bordo",
-      "otherSide": "Comidas largas en cubierta, o todo el tiempo que quieras en el agua."
+      "href": "/es/recalibration-expedition/"
     },
     {
       "name": "Expedición de recalibración",
       "group": "trip",
       "builtAround": "Pensada para: tiempo en el agua",
-      "image": "",
+      "otherSide": "Si te saltas una sesión, el almuerzo largo sigue en cubierta.",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Thibault_Sailing_Profile_pic_1_fultsk.jpg",
       "imageAlt": "Un grupo en el agua con un guía",
+      "facts": "3, 5, +7 noches · barco privado",
+      "priceNote": "Desde 700$ USD · pppd",
       "description": "Más horas en el agua: buceo libre, buceo con tanque y largas sesiones de snorkel, con un especialista certificado y el equipo a bordo. Tú eliges las fechas y el grupo.",
-      "otherSide": "[CONFIRM] Si te saltas una sesión, la comida larga sigue esperando en cubierta.",
-      "facts": "[CONFIRM durations] · barco privado",
-      "priceNote": "[PENDING]",
-      "href": "",
-      "hideOnHome": true
+      "hideOnHome": true,
+      "href": ""
     },
     {
       "name": "Tu propia expedición",
+      "group": "trip",
+      "builtAround": "Pensada para: tu idea",
+      "otherSide": "Tus fechas, tu gente, tu ritmo.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "Una expedición en velero a medida",
       "description": "Tu propio viaje, diseñado a medida para tu grupo: las fechas, las personas y lo que queréis hacer durante vuestros días en el mar.",
-      "href": "/es/ad-hoc-expedition/",
-      "group": "trip",
-      "builtAround": "Pensada para: tu idea",
-      "otherSide": "Tus fechas, tu gente, tu ritmo."
+      "href": "/es/ad-hoc-expedition/"
     },
     {
       "name": "Expedición de recalibración",
+      "group": "special",
+      "builtAround": "Pensada para: pesca submarina y buceo libre",
+      "otherSide": "[CONFIRM] ¿Ese día no vas al agua? Quédate en cubierta.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
       "imageAlt": "Sergio Torres, Líder de expedición de Eagle Ray, haciendo buceo libre entre peces",
       "badge": "Fechas limitadas · 22 al 29 de nov.",
       "facts": "2 salidas · 3 noches cada una",
       "priceNote": "Desde 4,000 USD · [CONFIRM: por persona o barco completo]",
       "description": "Pesca submarina, buceo libre y días en el mar con tu propia gente. Dos salidas en velero en noviembre, de 3 noches cada una.",
-      "href": "/es/landing/sergio-torres-thanksgiving/",
       "homeOrder": 2,
-      "group": "special",
-      "builtAround": "Pensada para: pesca submarina y buceo libre",
-      "otherSide": "[CONFIRM] ¿Ese día no vas al agua? Quédate en cubierta."
+      "href": "/es/landing/sergio-torres-thanksgiving/"
     },
     {
       "name": "Bucea y navega con Monik Saab",
+      "group": "special",
+      "builtAround": "Pensada para: buceo",
+      "otherSide": "[CONFIRM] ¿No buceas? Prueba una sesión guiada o quédate en cubierta.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monike_Saab_-_Squba_-_Collage_x_website_enjdxi.png",
       "imageAlt": "Monik Saab, líder de expedición de Eagle Ray, buceando en La Paz",
       "badge": "Fechas limitadas · noviembre de 2026",
-      "description": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Monik dirige las inmersiones, con todo el equipo a bordo.",
-      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/",
       "facts": "3 salidas · 1 día, 3 noches o 5 noches",
       "priceNote": "Desde 5,500 USD · barco completo",
+      "description": "Un día, una noche al ancla o el fin de semana de Acción de Gracias frente a Espíritu Santo. Monik dirige las inmersiones, con todo el equipo a bordo.",
       "homeOrder": 1,
-      "group": "special",
-      "builtAround": "Pensada para: buceo",
-      "otherSide": "[CONFIRM] ¿No buceas? Prueba una sesión guiada o quédate en cubierta."
+      "href": "/es/landing/dive-the-sea-of-cortez-with-monik-saab/"
     }
   ],
   "activitiesTitle": "Suma actividades, o mantén los días lentos",

@@ -27,13 +27,16 @@ interface Props {
   /** A longer line under the sub-headline. */
   supporting?: string | null;
   cta?: { label: string; href: string } | null;
+  /** "quiet": a smaller headline (the h2 size) and more room, for a calmer page. */
+  tone?: "default" | "quiet";
   fields?: { title?: string; kicker?: string; lede?: string; supporting?: string; image?: string; cta?: string };
 }
 
-const { title, kicker, lede, image, imageAlt, supporting, cta, fields = {} } = Astro.props;
+const { title, kicker, lede, image, imageAlt, supporting, cta, tone = "default", fields = {} } = Astro.props;
+const quiet = tone === "quiet";
 ---
 
-<section class="relative isolate flex min-h-[60vh] items-end overflow-hidden">
+<section class:list={["relative isolate flex items-end overflow-hidden", quiet ? "min-h-[68vh]" : "min-h-[60vh]"]}>
   <div class="absolute inset-0 z-[-1] bg-ink">
     {
       image && (
@@ -50,7 +53,7 @@ const { title, kicker, lede, image, imageAlt, supporting, cta, fields = {} } = A
     }
     <div class="absolute inset-0 bg-linear-to-b from-ink/25 via-ink/42 via-45% to-ink/82"></div>
   </div>
-  <div class="relative mx-auto w-full max-w-site px-5 pt-32 pb-16 text-white lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]">
+  <div class:list={["relative mx-auto w-full max-w-site px-5 pt-32 text-white lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]", quiet ? "pb-24" : "pb-16"]}>
     {
       kicker && (
         <p class="mb-[1.1rem] font-mono text-[.76rem] tracking-[.14em] text-white/82 uppercase" data-tina-field={fields.kicker}>
@@ -58,10 +61,10 @@ const { title, kicker, lede, image, imageAlt, supporting, cta, fields = {} } = A
         </p>
       )
     }
-    <h1 class="max-w-[20ch] font-display text-hero text-white" data-tina-field={fields.title}>{title}</h1>
+    <h1 class:list={["font-display text-white", quiet ? "max-w-[26ch] text-h2 leading-[1.2]" : "max-w-[20ch] text-hero"]} data-tina-field={fields.title}>{title}</h1>
     {
       lede && (
-        <p class="mt-[1.3rem] max-w-[50ch] text-hero-sub text-white/86" data-tina-field={fields.lede}>
+        <p class:list={["max-w-[50ch] text-hero-sub text-white/86", quiet ? "mt-8" : "mt-[1.3rem]"]} data-tina-field={fields.lede}>
           {lede}
         </p>
       )
@@ -75,7 +78,7 @@ const { title, kicker, lede, image, imageAlt, supporting, cta, fields = {} } = A
     }
     {
       cta && (
-        <div class="mt-[2.3rem]">
+        <div class={quiet ? "mt-12" : "mt-[2.3rem]"}>
           <Button href={cta.href} variant="primary" context="hero" data-tina-field={fields.cta}>
             {cta.label}
           </Button>

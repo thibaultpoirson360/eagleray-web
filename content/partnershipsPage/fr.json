@@ -36,7 +36,8 @@
   "formats": [
     {
       "name": "Expédition Recalibration",
-      "text": "Des journées lentes, de bons repas, des mouillages paisibles."
+      "text": "Des journées lentes, de bons repas, des mouillages paisibles.",
+      "href": "/fr/recalibration-expedition/"
     },
     {
       "name": "Expédition Active",
@@ -44,11 +45,13 @@
     },
     {
       "name": "Expédition sur mesure",
-      "text": "Construite de zéro autour du groupe."
+      "text": "Construite de zéro autour du groupe.",
+      "href": "/fr/ad-hoc-expedition/"
     },
     {
       "name": "Éditions spéciales",
-      "text": "Des voyages menés par des chefs d'expédition invités, quelques fois par an."
+      "text": "Des voyages menés par des chefs d'expédition invités, quelques fois par an.",
+      "href": "/fr/sail-with-us/#special-editions"
     }
   ],
   "seeAllLabel": "Voir toutes les expéditions",
