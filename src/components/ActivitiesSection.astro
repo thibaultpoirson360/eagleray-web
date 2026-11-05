@@ -22,6 +22,8 @@ const activities = (page.activities ?? []).flatMap((activity, i) => (activity?.n
 // Main activities ("Large card") come first, two per row; the rest follow three per row.
 const large = activities.filter(({ activity }) => activity.featured);
 const regular = activities.filter(({ activity }) => !activity.featured);
+// With three large cards they share one row, so their text is a little smaller.
+const compactBig = large.length >= 3;
 const contactHref = (message?: string | null) =>
   localePath(locale, "contact/") + (message ? `?message=${encodeURIComponent(message)}` : "");
 ---
@@ -40,7 +42,7 @@ const contactHref = (message?: string | null) =>
 
   {
     [
-      { items: large, columns: large.length === 1 ? "" : "md:grid-cols-2", big: true, label: page.activitiesExtraLabel, labelField: tinaField(page, "activitiesExtraLabel") },
+      { items: large, columns: large.length === 1 ? "" : large.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3", big: true, label: page.activitiesExtraLabel, labelField: tinaField(page, "activitiesExtraLabel") },
       { items: regular, columns: regular.length === 1 ? "" : regular.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3", big: false, label: page.activitiesIncludedLabel, labelField: tinaField(page, "activitiesIncludedLabel") },
     ].map(
       (group) =>
@@ -80,17 +82,17 @@ const contactHref = (message?: string | null) =>
                   </span>
                   <p
                     aria-hidden="true"
-                    class={`pointer-events-none absolute right-5 bottom-5 left-5 font-display text-white [@media(hover:none)]:hidden ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}
+                    class={`pointer-events-none absolute right-5 bottom-5 left-5 font-display text-white [@media(hover:none)]:hidden ${group.big && !compactBig ? "text-[1.75rem]" : "text-[1.35rem]"}`}
                   >
                     {activity.name}
                   </p>
                 </div>
                 <div
-                  class={`absolute inset-x-0 bottom-0 flex translate-y-full flex-col bg-white transition-transform duration-500 ease-soft group-focus-within:translate-y-0 group-hover:translate-y-0 motion-reduce:transition-none [@media(hover:none)]:static [@media(hover:none)]:translate-y-0 ${group.big ? "p-8" : "p-6"}`}
+                  class={`absolute inset-x-0 bottom-0 flex translate-y-full flex-col bg-white transition-transform duration-500 ease-soft group-focus-within:translate-y-0 group-hover:translate-y-0 motion-reduce:transition-none [@media(hover:none)]:static [@media(hover:none)]:translate-y-0 ${group.big && !compactBig ? "p-8" : "p-6"}`}
                 >
-                  <h3 class={`font-display ${group.big ? "text-[1.75rem]" : "text-[1.35rem]"}`}>{activity.name}</h3>
+                  <h3 class={`font-display ${group.big && !compactBig ? "text-[1.75rem]" : "text-[1.35rem]"}`}>{activity.name}</h3>
                   {activity.text && (
-                    <p class={`mt-3 leading-[1.6] text-ink/74 ${group.big ? "text-[1rem]" : "text-[.92rem]"}`}>{activity.text}</p>
+                    <p class={`mt-3 leading-[1.6] text-ink/74 ${group.big && !compactBig ? "text-[1rem]" : "text-[.92rem]"}`}>{activity.text}</p>
                   )}
                   {activity.priceNote && <p class="mt-3 font-display text-[.9rem] font-normal text-ink/64">{activity.priceNote}</p>}
                   <div class="pt-5">
