@@ -1,8 +1,9 @@
 ---
 /**
- * Hero of Sail with Us: one full-width cover photo with the headline over it. The
+ * Hero of Sail with Us: two photos side by side, same size, with a thin
+ * off-white gap (water on the left, a long lunch on deck on the right). The
  * intro sits under the photos in two columns (title and text on the left, a
- * small note and link on the right), so nothing crowds the header.
+ * small note and link on the right), so nothing crowds the header. On a phone the photos stack and the text follows.
  * Keeps BaseLayout's transparent header. Tina markers come via `fields`.
  */
 import Button from "./ui/Button.astro";
@@ -24,22 +25,29 @@ const intro = introText?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
 ---
 
 <section class="bg-surface">
-  <div class="relative md:h-[52vh] md:min-h-[24rem]">
+  <div class="relative grid gap-0.5 bg-surface md:h-[min(88vh,56rem)] md:min-h-[28rem] md:grid-cols-2">
     {
       images.slice(0, 1).map((image) => (
-        <div class="relative aspect-[4/3] bg-ink md:aspect-auto md:h-full">
-          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="absolute inset-0 h-full w-full object-cover object-center" data-tina-field={image.field} />}
+        <div class="relative bg-ink md:h-full">
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-contain md:object-right" data-tina-field={image.field} />}
         </div>
       ))
     }
-    <div class="pointer-events-none absolute inset-0 z-[1] bg-ink/30"></div>
-    {/* The headline: over the photo, centred. */}
-    <div class="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center px-5 text-center text-white">
+    <div class="pointer-events-none absolute inset-0 z-[1] hidden bg-ink/25 md:block"></div>
+    {/* The headline: between the two stacked photos on a phone, centred over the seam between them from md up. */}
+    <div class="px-5 py-14 text-center text-ink md:pointer-events-none md:absolute md:inset-0 md:z-[2] md:flex md:items-center md:justify-center md:py-0 md:text-white">
       <div class="mx-auto max-w-[40rem]">
-        {kicker && <p class="mb-6 font-mono text-[.7rem] tracking-[.2em] uppercase opacity-80" data-tina-field={fields.kicker}>{kicker}</p>}
-        <h1 class="pointer-events-auto font-display text-quote-lead leading-[1.5] font-normal whitespace-pre-line" data-tina-field={fields.title}>{title}</h1>
+        {kicker && <p class="mb-6 font-mono text-[.7rem] tracking-[.2em] uppercase opacity-70" data-tina-field={fields.kicker}>{kicker}</p>}
+        <h1 class="font-display text-quote-lead leading-[1.5] font-normal whitespace-pre-line md:pointer-events-auto" data-tina-field={fields.title}>{title}</h1>
       </div>
     </div>
+    {
+      images.slice(1, 2).map((image) => (
+        <div class="relative bg-ink md:h-full">
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-contain md:object-left" data-tina-field={image.field} />}
+        </div>
+      ))
+    }
   </div>
   <div class="px-5 pt-[calc(var(--spacing-section)*.9)] pb-[calc(var(--spacing-section)*1.2)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
     <div class="mx-auto grid max-w-[64rem] gap-10 md:grid-cols-[1.5fr_1fr] md:gap-16">
