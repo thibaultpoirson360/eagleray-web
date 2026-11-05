@@ -1,0 +1,70 @@
+---
+/**
+ * "Upcoming special editions": one card per departure, in date order. Used on
+ * Sail with Us (section 3) and on the homepage right under the hero, so the
+ * cards are edited in one place: Sail with Us page > Upcoming editions.
+ * Every piece of a card is optional; a field left empty is simply not shown.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import type { SailWithUsPageQuery } from "../../tina/__generated__/types";
+
+interface Props {
+  page: SailWithUsPageQuery["sailWithUsPage"];
+  title?: string | null;
+  titleField?: string;
+  cta?: { label: string; href: string } | null;
+  ctaField?: string;
+  id?: string;
+  class?: string;
+}
+
+const { page, title, titleField, cta, ctaField, id, class: className } = Astro.props;
+const editions = (page.upcomingEditions ?? []).map((e, i) => ({ e, i })).filter((x) => !!x.e?.name);
+const cardLabel = page.upcomingCardLabel;
+---
+
+{
+  editions.length > 0 && (
+    <section id={id} class:list={["mx-auto max-w-site scroll-mt-24 px-5 py-[calc(var(--spacing-section)*1.2)] lg:px-[calc(var(--spacing-pad)+var(--rail))]", className]}>
+      {title && (
+        <h2 class="mb-[calc(var(--spacing-section-head)*1.2)] text-center text-quote-lead leading-[1.35] font-normal" data-tina-field={titleField}>
+          {title}
+        </h2>
+      )}
+      <ul class="grid gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+        {editions.map(({ e, i }) => (
+          <li class="flex flex-col" data-tina-field={tinaField(page, "upcomingEditions", i)}>
+            <div class="relative aspect-[4/5] overflow-hidden rounded bg-ink/10">
+              {e!.image && <img src={e!.image} alt={e!.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover object-center" />}
+            </div>
+            <div class="flex flex-1 flex-col pt-6">
+              {(e!.leader || e!.discipline) && (
+                <p class="font-mono text-[.68rem] tracking-[.06em] text-ink/64">{[e!.leader, e!.discipline].filter(Boolean).join(" · ")}</p>
+              )}
+              <h3 class="mt-3 font-display text-[1.2rem] font-normal">{e!.name}</h3>
+              {e!.dates && <p class="mt-4 text-[.88rem] leading-[1.6] text-ink/74">{e!.dates}</p>}
+              {e!.boat && <p class="mt-1 text-[.88rem] leading-[1.6] text-ink/74">{e!.boat}</p>}
+              {e!.price && <p class="mt-3 font-display text-[.95rem]">{e!.price}</p>}
+              {e!.href && cardLabel && (
+                <div class="mt-auto pt-6">
+                  <Button href={e!.href} variant="ghost" context="default" size="sm">
+                    {cardLabel}
+                    <span class="sr-only">: {e!.name}</span>
+                  </Button>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+      {cta?.label && cta.href && (
+        <div class="mt-14 text-center">
+          <Button href={cta.href} variant="primary" context="default" data-tina-field={ctaField}>
+            {cta.label}
+          </Button>
+        </div>
+      )}
+    </section>
+  )
+}

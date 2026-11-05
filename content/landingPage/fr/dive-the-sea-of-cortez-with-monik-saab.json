@@ -28,7 +28,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
           "imageAlt": "Plongeurs à San Rafaelito, La Paz",
-          "imageNote": "[PENDIENTE] Photo : plongée à San Rafaelito ou déjeuner sur le pont",
+          "imageNote": "",
           "bookLabel": "Réserver un appel",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Réservez maintenant",
@@ -44,7 +44,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
           "imageAlt": "Le Beneteau Sense 55 au mouillage au large d'Espíritu Santo",
-          "imageNote": "[PENDIENTE] Photo : le Beneteau Sense 55 au mouillage au coucher du soleil",
+          "imageNote": "",
           "bookLabel": "Réserver un appel",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Réservez maintenant",
@@ -61,7 +61,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
           "imageAlt": "Plongeurs pour Thanksgiving à La Paz",
-          "imageNote": "[PENDIENTE] Photo : plongée avec les otaries à Los Islotes",
+          "imageNote": "",
           "bookLabel": "Réserver un appel",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Réservez maintenant",
@@ -329,7 +329,7 @@
           "alt": "Monik avec un groupe de plongeurs à La Paz"
         }
       ],
-      "photoNote": "[PENDIENTE] Photos : Monik en plongée avec le groupe, et la panga de plongée",
+      "photoNote": "",
       "moreLabel": "En savoir plus sur la plongée",
       "more": "Vous vous réveillez au mouillage avec le site de plongée tout proche. Pas de trajet jusqu'à la marina, pas de retour à l'hôtel. Entre les plongées, vous naviguez, vous nagez, vous mangez ce que le chef a cuisiné, et vous parlez de ce que vous avez vu jusqu'à ce qu'il soit temps de retourner à l'eau.\n\n**Niveau**\n\n* Pour plongeurs certifiés. Monik vérifie les certifications et les carnets de plongée avant le voyage et planifie chaque plongée en fonction du groupe.\n* Certains sites exigent l'Advanced Open Water.\n* Vous venez avec quelqu'un qui ne plonge pas encore ? Dites-le-nous avant le voyage et Monik lui prépare une première séance, avec un supplément.\n\n**Matériel**\n\n* Tout le matériel de plongée est à bord et inclus. Apportez le vôtre si vous préférez.\n* Les plongées partent de notre panga de plongée, avec l'équipage d'Eagle Ray.\n\n**Plongées**\n\n* Journée plongée : 1 plongée\n* Une nuit au mouillage : 2 plongées\n* Expédition Thanksgiving : 4 plongées, plus une 5e si les conditions et le groupe le permettent\n\n**Sécurité**\n\n* Toujours en binôme, jamais seul dans l'eau.\n* Monik dans l'eau avec le groupe, le bateau à proximité.\n\n**Où**\n\n* Sur les sites que le capitaine et Monik choisissent chaque jour : San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* Nous ne promettons pas un site précis : la mer décide d'abord.\n\n**Entre les plongées**\n\n* Snorkeling, baignade, kayak, paddle, promenades sur les îles et pêche là où elle est autorisée.\n",
       "_template": "feature"

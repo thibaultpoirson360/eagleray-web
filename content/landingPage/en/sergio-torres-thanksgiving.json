@@ -42,7 +42,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "The Lagoon 450F catamaran at anchor off Espíritu Santo",
-          "imageNote": "[PENDIENTE] Photo: the Lagoon 450F catamaran at anchor, with guests on the flybridge",
+          "imageNote": "",
           "bookLabel": "Book a call",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Reserve now",
@@ -65,7 +65,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
           "imageAlt": "The Beneteau Sense 55 sailboat under sail",
-          "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 under sail, or a Thanksgiving table on deck",
+          "imageNote": "",
           "bookLabel": "Book a call",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Reserve now",
@@ -179,7 +179,7 @@
           "alt": "snorkeling"
         }
       ],
-      "galleryNote": "[PENDIENTE] Photos for this slider: lunch on board, the paddleboards and kayak, the dinghy, the crew on deck",
+      "galleryNote": "",
       "_template": "includes"
     },
     {
@@ -226,7 +226,7 @@
               "to": "pichilingue",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
               "imageAlt": "Caleta Lobos La Paz",
-              "imageNote": "[PENDIENTE] Photo: Caleta Lobos or Pichilingue, the first anchorage"
+              "imageNote": ""
             },
             {
               "label": "Both departures · 2 of 4",
@@ -235,7 +235,7 @@
               "to": "southes",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
               "imageAlt": "Sur de espíritu santo, La Paz",
-              "imageNote": "[PENDIENTE] Photo: The south of Espíritu Santo, with its coves and clear water"
+              "imageNote": ""
             },
             {
               "label": "Both departures · 3 of 4",
@@ -244,7 +244,7 @@
               "to": "bahia",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
               "imageAlt": "bahía de la paz",
-              "imageNote": "[PENDIENTE] Photo: Bahía de La Paz, on the way back"
+              "imageNote": ""
             },
             {
               "label": "Both departures · 4 of 4",
@@ -253,7 +253,7 @@
               "to": "lapaz",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
               "imageAlt": "la paz, baja california sur",
-              "imageNote": "[PENDIENTE] Photo: The marina in La Paz, where the trip ends"
+              "imageNote": ""
             }
           ]
         }
@@ -317,7 +317,7 @@
           "alt": "spearfishing in la paz with eagle ray expeditions"
         }
       ],
-      "photoNote": "[PENDIENTE] Big photo: Sergio freediving with the group, or a catch on the deck",
+      "photoNote": "",
       "moreLabel": "More about spearfishing",
       "more": "Spearfishing is done without a tank: one breath of air, a pair of fins, and a speargun.\n\nThat is why with Sergio it starts on deck, not in the water. First you learn how to breathe and relax the body. Then, how to go down a few meters and stay still. Only then, the speargun.\n\n**Level**\n\n* No previous experience is needed.\n* Sergio adapts the progression to each person.\n* Anyone who prefers can stick to snorkeling or fish from the boat.\n\n**Safety**\n\n* Always in pairs, never alone in the water.\n* Sergio in the water with the group and the boat nearby.\n* With the captain, certified in AIDA II freediving, there are two people on board who know how to move underwater.\n\n**Where**\n\n* In the coves the captain chooses each day, according to the wind and water visibility.\n* Only in areas where it is allowed.\n\n**What is caught**\n\n* Only permitted species and only what will be eaten that night.\n\n**Afterwards**\n\n* The chef cleans it and cooks it on board.\n* If there is no luck that day, dinner is still served.\n",
       "_template": "feature"

@@ -42,7 +42,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "El catamarán Lagoon 450F al ancla frente a Espíritu Santo",
-          "imageNote": "[PENDIENTE] Foto: el catamarán Lagoon 450F al ancla, con huéspedes en el flybridge",
+          "imageNote": "",
           "bookLabel": "Reserva una llamada",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Reserva ahora",
@@ -65,7 +65,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
           "imageAlt": "El velero Beneteau Sense 55 navegando",
-          "imageNote": "[PENDIENTE] Foto: el Beneteau Sense 55 navegando o una mesa de Acción de Gracias en cubierta",
+          "imageNote": "",
           "bookLabel": "Reserva una llamada",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Reserva ahora",
@@ -179,7 +179,7 @@
           "alt": "snorkel"
         }
       ],
-      "galleryNote": "[PENDIENTE] Fotos para este carrusel: comida a bordo, las tablas de paddle y el kayak, la auxiliar, la tripulación en cubierta",
+      "galleryNote": "",
       "_template": "includes"
     },
     {
@@ -226,7 +226,7 @@
               "to": "pichilingue",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
               "imageAlt": "Caleta Lobos, La Paz",
-              "imageNote": "[PENDIENTE] Foto: Caleta Lobos o Pichilingue, el primer fondeadero"
+              "imageNote": ""
             },
             {
               "label": "Las dos salidas · 2 de 4",
@@ -235,7 +235,7 @@
               "to": "southes",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
               "imageAlt": "Sur de Espíritu Santo, La Paz",
-              "imageNote": "[PENDIENTE] Foto: el sur de Espíritu Santo, con sus calas y su agua cristalina"
+              "imageNote": ""
             },
             {
               "label": "Las dos salidas · 3 de 4",
@@ -244,7 +244,7 @@
               "to": "bahia",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
               "imageAlt": "Bahía de La Paz",
-              "imageNote": "[PENDIENTE] Foto: Bahía de La Paz, de regreso"
+              "imageNote": ""
             },
             {
               "label": "Las dos salidas · 4 de 4",
@@ -253,7 +253,7 @@
               "to": "lapaz",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
               "imageAlt": "La Paz, Baja California Sur",
-              "imageNote": "[PENDIENTE] Foto: la marina de La Paz, donde termina el viaje"
+              "imageNote": ""
             }
           ]
         }
@@ -317,7 +317,7 @@
           "alt": "pesca submarina en La Paz con Eagle Ray Expeditions"
         }
       ],
-      "photoNote": "[PENDIENTE] Foto grande: Sergio haciendo buceo libre con el grupo o una captura en cubierta",
+      "photoNote": "",
       "moreLabel": "Más sobre la pesca submarina",
       "more": "La pesca submarina se practica sin tanque: una bocanada de aire, un par de aletas y un arpón.\n\nPor eso con Sergio empieza en cubierta, no en el agua. Primero aprendes a respirar y a relajar el cuerpo. Después, a bajar unos metros y quedarte quieto. Solo entonces, el arpón.\n\n**Nivel**\n\n* No se necesita experiencia previa.\n* Sergio adapta la progresión a cada persona.\n* Quien prefiera puede quedarse con el snorkel o pescar desde el barco.\n\n**Seguridad**\n\n* Siempre en parejas, nunca solo en el agua.\n* Sergio en el agua con el grupo y el barco cerca.\n* Con el capitán, certificado en buceo libre AIDA II, hay dos personas a bordo que saben moverse bajo el agua.\n\n**Dónde**\n\n* En las calas que el capitán elige cada día, según el viento y la visibilidad del agua.\n* Solo en zonas donde está permitido.\n\n**Qué se pesca**\n\n* Solo especies permitidas y solo lo que se comerá esa noche.\n\n**Después**\n\n* El chef la limpia y la cocina a bordo.\n* Si ese día no hay suerte, la cena se sirve igual.\n",
       "_template": "feature"

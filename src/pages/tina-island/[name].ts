@@ -16,6 +16,7 @@
  */
 export const prerender = false;
 
+import { tinaField } from "@tinacms/astro/tina-field";
 import { createIslandRoute } from "../../lib/tina-island-route";
 import Hero from "../../components/Hero.astro";
 import Difference from "../../components/Difference.astro";
@@ -27,6 +28,7 @@ import NotFoundView from "../../components/NotFoundView.astro";
 import Wildlife from "../../components/Wildlife.astro";
 import Boats from "../../components/Boats.astro";
 import ExpeditionsSection from "../../components/ExpeditionsSection.astro";
+import UpcomingEditions from "../../components/UpcomingEditions.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
 import Funnel from "../../components/Funnel.astro";
@@ -127,6 +129,21 @@ const route = createIslandRoute({
     propsFromData: (result: unknown) => ({
       wildlife: (result as Awaited<ReturnType<typeof loadWildlife>>).data.wildlife,
     }),
+  },
+  upcoming: {
+    fetch: async (_request: Request, params: URLSearchParams) => loadSailWithUsOrEnglish(localeFromParams(params)),
+    component: UpcomingEditions,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => {
+      const page = (result as Awaited<ReturnType<typeof loadSailWithUsOrEnglish>>).data.sailWithUsPage;
+      return {
+        page,
+        title: page.upcomingHomeTitle,
+        titleField: tinaField(page, "upcomingHomeTitle"),
+        cta: page.upcomingHomeCta,
+        ctaField: tinaField(page, "upcomingHomeCta"),
+      };
+    },
   },
   expeditions: {
     fetch: async (_request: Request, params: URLSearchParams) => {

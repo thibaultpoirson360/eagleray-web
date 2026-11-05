@@ -28,7 +28,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
           "imageAlt": "Buceadores en San Rafaelito, La Paz",
-          "imageNote": "[PENDIENTE] Foto: buceo en San Rafaelito o comida en cubierta",
+          "imageNote": "",
           "bookLabel": "Reserva una llamada",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserva ahora",
@@ -44,7 +44,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
           "imageAlt": "El Beneteau Sense 55 al ancla frente a Espíritu Santo",
-          "imageNote": "[PENDIENTE] Foto: el Beneteau Sense 55 al ancla al atardecer",
+          "imageNote": "",
           "bookLabel": "Reserva una llamada",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserva ahora",
@@ -61,7 +61,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
           "imageAlt": "Buceadores en Acción de Gracias en La Paz",
-          "imageNote": "[PENDIENTE] Foto: buceo con los lobos marinos en Los Islotes",
+          "imageNote": "",
           "bookLabel": "Reserva una llamada",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserva ahora",
@@ -329,7 +329,7 @@
           "alt": "Monik con un grupo de buceadores en La Paz"
         }
       ],
-      "photoNote": "[PENDIENTE] Fotos: Monik buceando con el grupo y la panga de buceo",
+      "photoNote": "",
       "moreLabel": "Más sobre el buceo",
       "more": "Te despiertas al ancla con el sitio de buceo cerca. Sin trayecto a la marina, sin vuelta a un hotel. Entre inmersiones navegas, nadas, comes lo que ha cocinado el chef y hablas de lo que viste hasta que llega la hora de volver al agua.\n\n**Nivel**\n\n* Para buceadores certificados. Monik revisa las certificaciones y los logbooks antes del viaje y planifica cada inmersión en torno al grupo.\n* Algunos sitios piden Advanced Open Water.\n* ¿Viajas con alguien que todavía no bucea? Cuéntanoslo antes del viaje y Monik le prepara una primera sesión, con un suplemento.\n\n**Equipo**\n\n* Todo el equipo de buceo está a bordo e incluido. Trae el tuyo si lo prefieres.\n* Las inmersiones salen de nuestra panga de buceo, con la tripulación de Eagle Ray.\n\n**Inmersiones**\n\n* Día de buceo: 1 inmersión\n* Una noche al ancla: 2 inmersiones\n* Expedición de Acción de Gracias: 4 inmersiones, más una quinta si las condiciones y el grupo lo permiten\n\n**Seguridad**\n\n* Siempre en parejas, nunca solo en el agua.\n* Monik en el agua con el grupo, con el barco cerca.\n\n**Dónde**\n\n* En los sitios que el capitán y Monik eligen cada día: San Rafaelito, Fang Ming, Isla Ballena, Los Islotes, El Bajito, Roca Tintorera, Los Muellecitos.\n* No prometemos un sitio concreto: el mar decide primero.\n\n**Entre inmersiones**\n\n* Snorkel, natación, kayak, paddleboard, paseos por las islas y pesca donde está permitida.\n",
       "_template": "feature"

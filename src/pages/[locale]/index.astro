@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TinaIsland from "@tinacms/astro/TinaIsland.astro";
 import Hero from "../../components/Hero.astro";
+import UpcomingEditions from "../../components/UpcomingEditions.astro";
+import { tinaField } from "@tinacms/astro/tina-field";
 import Difference from "../../components/Difference.astro";
 import Crew from "../../components/Crew.astro";
 import Wildlife from "../../components/Wildlife.astro";
@@ -59,6 +61,15 @@ const [funnelResult, siteSettingsResult] = await Promise.all([loadFunnel(locale)
     -->
     <TinaIsland name="hero" wrapper={{ tag: "div" }} params={{ locale }} primary>
       <Hero hero={heroResult.data.hero} />
+    </TinaIsland>
+    <TinaIsland name="upcoming" wrapper={{ tag: "div" }} params={{ locale }}>
+      <UpcomingEditions
+        page={sailWithUsResult.data.sailWithUsPage}
+        title={sailWithUsResult.data.sailWithUsPage.upcomingHomeTitle}
+        titleField={tinaField(sailWithUsResult.data.sailWithUsPage, "upcomingHomeTitle")}
+        cta={sailWithUsResult.data.sailWithUsPage.upcomingHomeCta}
+        ctaField={tinaField(sailWithUsResult.data.sailWithUsPage, "upcomingHomeCta")}
+      />
     </TinaIsland>
     <TinaIsland name="difference" wrapper={{ tag: "div" }} params={{ locale }}>
       <Difference difference={differenceResult.data.difference} />

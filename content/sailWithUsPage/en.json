@@ -13,7 +13,7 @@
   "specialLinkLabel": "Special editions this November: Sergio Torres and Monik Saab",
   "introTitle": "The crew reads the group, not the schedule.",
   "intro": "We build private sailing trips around your group, not the other way around. You choose who comes. Our team runs the boat, keeps everyone safe, and reads the day so it can change when something worth changing it for shows up.",
-  "expeditionsLabel": "Your group, your trip",
+  "expeditionsLabel": "On your dates · choose your pace",
   "expeditionsIntro": "Private expeditions on your dates, with the people you choose.",
   "specialKicker": "Special editions",
   "specialTitle": "Limited dates with our Expedition Leaders",
@@ -39,20 +39,20 @@
       "otherSide": "Skip a session, and the long lunch is still on deck.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Thibault_Sailing_Profile_pic_1_fultsk.jpg",
       "imageAlt": "A group in the water with a guide",
-      "facts": "3, 5, +7 nights · private boat",
+      "facts": "3, 5 or 7 nights · private boat",
       "priceNote": "From 700$ USD · pppd",
       "description": "More hours in the water: freediving, scuba and long snorkel sessions, with a certified specialist and the gear on board. You choose the dates and the group.",
       "hideOnHome": true,
       "href": ""
     },
     {
-      "name": "Your own expedition",
+      "name": "Your Own Expedition",
       "group": "trip",
       "builtAround": "Built around: your idea",
       "otherSide": "Your dates, your people, your pace.",
       "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/7598bb82-ba21-4ddf-8b45-ecf435563112_qahell.jpg",
       "imageAlt": "A custom sailing expedition",
-      "description": "Your own trip, built around your group: the dates, the people and what you want from your days at sea.",
+      "description": "Something else in mind. A one-way route, a honeymoon, a group with very different plans for the same week. Tell us what you want and we build it.",
       "href": "/en/ad-hoc-expedition/"
     },
     {
@@ -171,25 +171,29 @@
       "contactMessage": "I'd like more information about adding Kayak to my expedition."
     }
   ],
-  "howTitle": "How it works",
+  "howTitle": "You book the flight. We take it from there.",
   "howSteps": [
     {
-      "title": "Tell us who is coming",
-      "text": "Who is coming, when you want to go and what you'd like your days at sea to look like."
+      "title": "Land in La Paz",
+      "text": "We pick you up at the airport."
     },
     {
-      "title": "We plan it around your group",
-      "text": "Our team plans the boat, the crew and the route around your group, and adapts it day by day."
+      "title": "Meet your crew at the marina",
+      "text": "Your Expedition Leader walks you through the boat and the plan."
     },
     {
-      "title": "We come back with a proposal",
-      "text": "Fill in the form and we'll come back to you with a proposal."
+      "title": "At sea",
+      "text": "The days follow what your group wants: in the water, on deck, or both."
+    },
+    {
+      "title": "Back at the marina",
+      "text": "We drive you to the airport."
     }
   ],
-  "closingTitle": "Not sure which one is for you?",
-  "closingText": "Tell us about your group and we will point you to the right expedition.",
+  "closingTitle": "Not sure which one fits your group?",
+  "closingText": "Tell us who is coming and what they like. We'll suggest the right expedition.",
   "closingPrimaryCta": {
-    "label": "Plan your trip",
+    "label": "Plan my expedition",
     "href": "/en/customize-your-expedition/"
   },
   "closingSecondaryCta": {
@@ -201,5 +205,110 @@
     "description": "Private sailing expeditions in La Paz, built around your group. Choose an expedition and plan your trip.",
     "ogTitle": "Private sailing expeditions in La Paz, built around your group. Choose an expedition we will take care of the rest",
     "ogDescription": "Eagle Ray Expeditions creates private sailing expeditions built around your comfort and safety. Choose the dates, the group and we will take care of the rest."
-  }
+  },
+  "waysSpecialTitle": "Special Editions",
+  "waysSpecialText": "Set dates, built around one of our Expedition Leaders and what they know best: diving, freediving, kayaking, kitesurfing. You bring your people, they bring the sea they know.",
+  "waysSpecialButton": "See upcoming dates",
+  "waysDatesTitle": "On your dates",
+  "waysDatesText": "Your group, your dates, your pace. 3, 5 or 7 nights around Espíritu Santo, slow or active, planned around what your group wants to do.",
+  "waysDatesNote": "From $700 per guest, per night.",
+  "waysDatesCta": {
+    "label": "Plan my expedition",
+    "href": "/en/customize-your-expedition/"
+  },
+  "upcomingTitle": "Upcoming special editions",
+  "upcomingCardLabel": "See the expedition",
+  "upcomingHomeTitle": "Upcoming expeditions",
+  "upcomingHomeCta": {
+    "label": "See all expeditions",
+    "href": "/en/sail-with-us/"
+  },
+  "upcomingEditions": [
+    {
+      "name": "Open Cabins",
+      "leader": "Sergio Torres",
+      "discipline": "Spearfishing and freediving",
+      "dates": "Sunday, November 22 → Wednesday, November 25 · 3 nights",
+      "boat": "Lagoon 450F catamaran",
+      "price": "From 4,000 USD, solo cabin",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, Eagle Ray Expedition Leader, freediving with fish",
+      "href": "/en/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Dive Day",
+      "leader": "Monik Saab",
+      "discipline": "Diving",
+      "dates": "Monday, November 23 · day trip · 1 dive",
+      "boat": "Beneteau Sense 55 sailboat",
+      "price": "5,500 USD · whole boat",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.36.04_2_1_w0ehos.jpg",
+      "imageAlt": "Divers at San Rafaelito, La Paz",
+      "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "One Night at Anchor",
+      "leader": "Monik Saab",
+      "discipline": "Diving",
+      "dates": "Tuesday, November 24 → Wednesday, November 25 · 1 night · 2 dives",
+      "boat": "Beneteau Sense 55 sailboat",
+      "price": "8,500 USD · whole boat",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/WhatsApp_Image_2026-10-15_at_23.35.41_1_mpim1h.jpg",
+      "imageAlt": "The Beneteau Sense 55 at anchor off Espíritu Santo",
+      "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Thanksgiving at Anchor",
+      "leader": "Sergio Torres",
+      "discipline": "Spearfishing and freediving",
+      "dates": "Thursday, November 26 → Sunday, November 29 · 3 nights",
+      "boat": "Beneteau Sense 55 sailboat",
+      "price": "14,500 USD, whole boat",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Sergio_Torres_Canei_-_Underwater_con_peces_2_tcxyyq.jpg",
+      "imageAlt": "Sergio Torres, Eagle Ray Expedition Leader, freediving with fish",
+      "href": "/en/landing/sergio-torres-thanksgiving/"
+    },
+    {
+      "name": "Thanksgiving Dive Expedition",
+      "leader": "Monik Saab",
+      "discipline": "Diving",
+      "dates": "Thursday, November 26 → Sunday, November 29 · 3 nights",
+      "boat": "Beneteau Sense 55 sailboat",
+      "price": "14,500 USD · whole boat, diving included",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/francisco-jesus-navarro-hernandez-dtCTfjTEOgg-unsplash_fjaajg.jpg",
+      "imageAlt": "Divers in thanksgiving in La paz",
+      "href": "/en/landing/dive-the-sea-of-cortez-with-monik-saab/"
+    },
+    {
+      "name": "Kayak Baja with Andrea",
+      "leader": "Andrea",
+      "discipline": "Kayaking",
+      "dates": "Open dates from November 10 · 3 nights",
+      "boat": "Lagoon 450 catamaran",
+      "price": "From $21,000 for the whole boat",
+      "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Andrea_Gutierrez_omh70q.png",
+      "imageAlt": "Andrea, Eagle Ray Expedition Leader",
+      "href": "/en/landing/kayak-baja-with-andrea/"
+    }
+  ],
+  "aboardTitle": "What's aboard, on every expedition",
+  "aboardOnTitle": "On board",
+  "aboardOn": [
+    "Your own private boat, for your group only",
+    "Captain, chef and an Expedition Leader",
+    "All meals and soft drinks",
+    "A selection of wines from our sommelier partner Climats, on us ($350 retail value)",
+    "Snorkel gear, paddleboards, kayak and dinghy",
+    "National park permits",
+    "Airport to marina transfer in La Paz, both ways",
+    "Starlink wifi"
+  ],
+  "aboardNotOnTitle": "Not on board",
+  "aboardNotOn": [
+    "Flights to La Paz",
+    "Other alcohol, available as an extra",
+    "Scuba diving, unless the expedition includes it",
+    "Crew tips (10 to 15% recommended)",
+    "Travel insurance"
+  ]
 }

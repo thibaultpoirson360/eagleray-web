@@ -42,7 +42,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_ba6g4g.png",
           "imageAlt": "Le catamaran Lagoon 450F au mouillage au large d'Espíritu Santo",
-          "imageNote": "[PENDIENTE] Photo : le catamaran Lagoon 450F au mouillage, avec des invités sur le flybridge",
+          "imageNote": "",
           "bookLabel": "Réserver un appel",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Réservez maintenant",
@@ -65,7 +65,7 @@
           "images": [],
           "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/SERGIO_TORRES_OPEN_CABINS_2_maz3ec.png",
           "imageAlt": "Le voilier Beneteau Sense 55 sous voiles",
-          "imageNote": "[PENDIENTE] Photo : le Beneteau Sense 55 sous voiles, ou une table de Thanksgiving sur le pont",
+          "imageNote": "",
           "bookLabel": "Réserver un appel",
           "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Réservez maintenant",
@@ -179,7 +179,7 @@
           "alt": "snorkeling"
         }
       ],
-      "galleryNote": "[PENDIENTE] Photos pour ce carrousel : déjeuner à bord, les paddles et le kayak, l'annexe, l'équipage sur le pont",
+      "galleryNote": "",
       "_template": "includes"
     },
     {
@@ -226,7 +226,7 @@
               "to": "pichilingue",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Isla_de_lobos_La_Paz_Caleta_Lobos_o_Pichilingue_r9tcby.jpg",
               "imageAlt": "Caleta Lobos, La Paz",
-              "imageNote": "[PENDIENTE] Photo : Caleta Lobos ou Pichilingue, le premier mouillage"
+              "imageNote": ""
             },
             {
               "label": "Les deux départs · 2 sur 4",
@@ -235,7 +235,7 @@
               "to": "southes",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Sur_espíritu_santo_xafbp8.jpg",
               "imageAlt": "Sud d'Espíritu Santo, La Paz",
-              "imageNote": "[PENDIENTE] Photo : le sud d'Espíritu Santo, avec ses criques et son eau claire"
+              "imageNote": ""
             },
             {
               "label": "Les deux départs · 3 sur 4",
@@ -244,7 +244,7 @@
               "to": "bahia",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_Bahía_de_la_paz_yw8rv4.jpg",
               "imageAlt": "Bahía de La Paz",
-              "imageNote": "[PENDIENTE] Photo : Bahía de La Paz, au retour"
+              "imageNote": ""
             },
             {
               "label": "Les deux départs · 4 sur 4",
@@ -253,7 +253,7 @@
               "to": "lapaz",
               "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Places_-_La_Paz_afmgva.jpg",
               "imageAlt": "La Paz, Basse-Californie du Sud",
-              "imageNote": "[PENDIENTE] Photo : la marina de La Paz, où se termine le voyage"
+              "imageNote": ""
             }
           ]
         }
@@ -317,7 +317,7 @@
           "alt": "pêche sous-marine à La Paz avec Eagle Ray Expeditions"
         }
       ],
-      "photoNote": "[PENDIENTE] Grande photo : Sergio en apnée avec le groupe, ou une prise sur le pont",
+      "photoNote": "",
       "moreLabel": "En savoir plus sur la pêche sous-marine",
       "more": "La pêche sous-marine se pratique sans bouteille : une inspiration, une paire de palmes et un fusil harpon.\n\nC'est pourquoi, avec Sergio, tout commence sur le pont, pas dans l'eau. D'abord, vous apprenez à respirer et à relâcher le corps. Ensuite, à descendre de quelques mètres et à rester immobile. Et seulement alors, le fusil harpon.\n\n**Niveau**\n\n* Aucune expérience préalable n'est nécessaire.\n* Sergio adapte la progression à chacun.\n* Ceux qui préfèrent peuvent s'en tenir au snorkeling ou pêcher depuis le bateau.\n\n**Sécurité**\n\n* Toujours en binôme, jamais seul dans l'eau.\n* Sergio dans l'eau avec le groupe et le bateau à proximité.\n* Avec le capitaine, certifié apnée AIDA II, il y a deux personnes à bord qui savent évoluer sous l'eau.\n\n**Où**\n\n* Dans les criques que le capitaine choisit chaque jour, selon le vent et la visibilité de l'eau.\n* Uniquement dans les zones où c'est autorisé.\n\n**Ce qui est pêché**\n\n* Uniquement des espèces autorisées et uniquement ce qui sera mangé le soir même.\n\n**Ensuite**\n\n* Le chef la nettoie et la cuisine à bord.\n* Si la chance n'est pas au rendez-vous, le dîner est servi quand même.\n",
       "_template": "feature"

@@ -14,6 +14,7 @@ import ActivitiesSection from "../../../components/ActivitiesSection.astro";
 import type { ExpeditionCard } from "../../../components/ExpeditionCards.astro";
 import SailHero from "../../../components/SailHero.astro";
 import TripCard from "../../../components/TripCard.astro";
+import UpcomingEditions from "../../../components/UpcomingEditions.astro";
 import { loadSailWithUsPage } from "../../../lib/content";
 import { liveLocales, type Locale } from "../../../i18n/config";
 
@@ -46,6 +47,8 @@ const expeditions: TripCardData[] = (page?.expeditions ?? [])
   }));
 const tripCards = expeditions.filter((c) => c.group === "trip");
 const specialCards = expeditions.filter((c) => c.group === "special");
+const planCta = page?.waysDatesCta?.label && page.waysDatesCta.href ? page.waysDatesCta : null;
+const hasUpcoming = (page?.upcomingEditions ?? []).some((e) => !!e?.name);
 const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-cols-2" : `md:grid-cols-2 ${max}`);
 ---
 
@@ -75,13 +78,51 @@ const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-
             fields={{ title: tinaField(page, "title"), kicker: tinaField(page, "kicker"), lede: tinaField(page, "subtitle"), introTitle: tinaField(page, "introTitle"), intro: tinaField(page, "intro"), cta: tinaField(page, "heroCta"), link: tinaField(page, "specialLinkLabel") }}
           />
 
+          {(page.waysSpecialTitle || page.waysDatesTitle) && (
+            <section class="mx-auto max-w-site px-5 py-[calc(var(--spacing-section)*1.2)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+              <div class="grid gap-6 md:grid-cols-2 md:gap-8">
+                {page.waysSpecialTitle && (
+                  <div class="flex flex-col rounded-lg border border-ink/14 p-8 md:p-10" data-tina-field={tinaField(page, "waysSpecialTitle")}>
+                    <h2 class="font-display text-[1.5rem] font-normal">{page.waysSpecialTitle}</h2>
+                    {page.waysSpecialText && <p class="mt-4 leading-[1.75] text-ink/74" data-tina-field={tinaField(page, "waysSpecialText")}>{page.waysSpecialText}</p>}
+                    {page.waysSpecialButton && hasUpcoming && (
+                      <div class="mt-auto pt-8">
+                        <Button href="#special-editions" variant="primary" context="default" data-tina-field={tinaField(page, "waysSpecialButton")}>
+                          {page.waysSpecialButton}
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                )}
+                {page.waysDatesTitle && (
+                  <div class="flex flex-col rounded-lg border border-ink/14 p-8 md:p-10" data-tina-field={tinaField(page, "waysDatesTitle")}>
+                    <h2 class="font-display text-[1.5rem] font-normal">{page.waysDatesTitle}</h2>
+                    {page.waysDatesText && <p class="mt-4 leading-[1.75] text-ink/74" data-tina-field={tinaField(page, "waysDatesText")}>{page.waysDatesText}</p>}
+                    {page.waysDatesNote && <p class="mt-4 font-display text-[.95rem]" data-tina-field={tinaField(page, "waysDatesNote")}>{page.waysDatesNote}</p>}
+                    {planCta && (
+                      <div class="mt-auto pt-8">
+                        <Button href={planCta.href} variant="primary" context="default" data-tina-field={tinaField(page, "waysDatesCta")}>
+                          {planCta.label}
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {hasUpcoming && (
+            <UpcomingEditions id="special-editions" page={page} title={page.upcomingTitle} titleField={tinaField(page, "upcomingTitle")} class="border-t border-ink/8" />
+          )}
+
           <section class="mx-auto max-w-site px-5 pb-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
             <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
               {page.expeditionsLabel && <h2 class="text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "expeditionsLabel")}>{page.expeditionsLabel}</h2>}
               {page.expeditionsIntro && <p class="mx-auto mt-5 max-w-[46ch] text-[.92rem] leading-[1.8] text-ink/64" data-tina-field={tinaField(page, "expeditionsIntro")}>{page.expeditionsIntro}</p>}
             </div>
             <div class={`grid gap-x-10 gap-y-20 ${gridCols(tripCards.length, "lg:grid-cols-3")}`}>
-              {tripCards.map((card) => <TripCard card={card} linkLabel="Learn more" />)}
+              {tripCards.map((card) => <TripCard card={planCta ? { ...card, href: planCta.href } : card} linkLabel={planCta?.label ?? "Learn more"} />)}
             </div>
           </section>
 
@@ -91,7 +132,7 @@ const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-
             </div>
           )}
 
-          {specialCards.length > 0 && (
+          {!hasUpcoming && specialCards.length > 0 && (
             <section id="special-editions" class="scroll-mt-24 bg-ink py-[calc(var(--spacing-section)*1.6)] text-white">
               <div class="mx-auto max-w-site px-5 lg:px-[calc(var(--spacing-pad)+var(--rail))]">
                 <div class="mb-[calc(var(--spacing-section-head)*1.2)] text-center">
@@ -106,10 +147,28 @@ const gridCols = (n: number, max: string) => (n === 1 ? "" : n === 2 ? "md:grid-
             </section>
           )}
 
+          {(page.aboardOn?.length ?? 0) > 0 && (
+            <section class="border-t border-ink/8 bg-surface px-5 py-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
+              <div class="mx-auto max-w-site">
+                {page.aboardTitle && <h2 class="mb-section-head text-center text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "aboardTitle")}>{page.aboardTitle}</h2>}
+                <div class="mx-auto grid max-w-[60rem] gap-12 md:grid-cols-2 md:gap-16">
+                  <div data-tina-field={tinaField(page, "aboardOn")}>
+                    {page.aboardOnTitle && <h3 class="mb-5 font-display text-[1.2rem] font-normal">{page.aboardOnTitle}</h3>}
+                    <ul class="list-disc space-y-2 pl-5 leading-[1.65] text-ink/74">{page.aboardOn?.map((item) => item && <li>{item}</li>)}</ul>
+                  </div>
+                  <div data-tina-field={tinaField(page, "aboardNotOn")}>
+                    {page.aboardNotOnTitle && <h3 class="mb-5 font-display text-[1.2rem] font-normal">{page.aboardNotOnTitle}</h3>}
+                    <ul class="list-disc space-y-2 pl-5 leading-[1.65] text-ink/74">{page.aboardNotOn?.map((item) => item && <li>{item}</li>)}</ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+
           {page.howTitle && (page.howSteps?.length ?? 0) > 0 && (
             <section class="mx-auto max-w-site px-5 py-[calc(var(--spacing-section)*1.4)] lg:px-[calc(var(--spacing-pad)+var(--rail))]">
               <h2 class="mb-section-head text-center text-quote-lead leading-[1.35] font-normal" data-tina-field={tinaField(page, "howTitle")}>{page.howTitle}</h2>
-              <ol class="grid gap-10 md:grid-cols-3 md:gap-8">
+              <ol class:list={["grid gap-10 md:gap-8", (page.howSteps?.length ?? 0) >= 4 ? "md:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"]}>
                 {page.howSteps?.map((step, i) =>
                   step ? (
                     <li class="border-t border-ink/14 pt-6 text-center" data-tina-field={tinaField(page, "howSteps", i)}>
