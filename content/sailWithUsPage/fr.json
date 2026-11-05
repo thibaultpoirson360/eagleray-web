@@ -309,5 +309,7 @@
     "Plongée bouteille, sauf si l'expédition l'inclut",
     "Pourboires de l'équipage (10 à 15 % recommandés)",
     "Assurance voyage"
-  ]
+  ],
+  "activitiesExtraLabel": "Ajoutez des activités en plus, payantes à part",
+  "activitiesIncludedLabel": "Activités incluses"
 }
