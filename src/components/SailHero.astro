@@ -29,7 +29,7 @@ const intro = introText?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
     {
       images.slice(0, 1).map((image) => (
         <div class="relative bg-ink md:h-full">
-          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-contain md:object-right" data-tina-field={image.field} />}
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-cover md:object-[center_45%]" data-tina-field={image.field} />}
         </div>
       ))
     }
@@ -44,7 +44,7 @@ const intro = introText?.split(/\n\s*\n|\n/).filter(Boolean) ?? [];
     {
       images.slice(1, 2).map((image) => (
         <div class="relative bg-ink md:h-full">
-          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-contain md:object-left" data-tina-field={image.field} />}
+          {image.src && <img src={image.src} alt={image.alt ?? ""} loading="eager" decoding="async" class="block h-auto w-full md:absolute md:inset-0 md:h-full md:object-cover md:object-[center_62%]" data-tina-field={image.field} />}
         </div>
       ))
     }
