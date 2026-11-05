@@ -92,6 +92,8 @@ const sailWithUsPage: Collection = {
       description: 'The section below the expedition cards. Its address ends in "#activities".',
     },
     { type: "string", name: "activitiesSubtitle", label: "Activities section: text under the heading", ui: textarea },
+    { type: "string", name: "activitiesExtraLabel", label: "Activities: small label above the large (paid extra) cards", description: 'e.g. "Extra activities, paid separately"' },
+    { type: "string", name: "activitiesIncludedLabel", label: "Activities: small label above the other (included) cards", description: 'e.g. "Included activities"' },
     { type: "string", name: "activitiesButtonLabel", label: "Activities section: button on each card", description: 'e.g. "More info". It opens the contact form with the message below already written.' },
     {
       type: "object",

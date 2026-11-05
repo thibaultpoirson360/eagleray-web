@@ -40,11 +40,17 @@ const contactHref = (message?: string | null) =>
 
   {
     [
-      { items: large, columns: large.length === 1 ? "" : "md:grid-cols-2", big: true },
-      { items: regular, columns: regular.length === 1 ? "" : regular.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3", big: false },
+      { items: large, columns: large.length === 1 ? "" : "md:grid-cols-2", big: true, label: page.activitiesExtraLabel, labelField: tinaField(page, "activitiesExtraLabel") },
+      { items: regular, columns: regular.length === 1 ? "" : regular.length === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3", big: false, label: page.activitiesIncludedLabel, labelField: tinaField(page, "activitiesIncludedLabel") },
     ].map(
       (group) =>
         group.items.length > 0 && (
+          <>
+          {group.label && (
+            <p class:list={["mb-6 text-center font-mono text-[.7rem] tracking-[.2em] text-ink/64 uppercase", group.big ? "" : "mt-14"]} data-tina-field={group.labelField}>
+              {group.label}
+            </p>
+          )}
           <ul
             class={`-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:grid md:gap-8 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden ${group.columns} ${group.big ? "" : "mt-8"}`}
             tabindex="0"
@@ -102,6 +108,7 @@ const contactHref = (message?: string | null) =>
               </li>
             ))}
           </ul>
+          </>
         )
     )
   }

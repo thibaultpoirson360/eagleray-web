@@ -297,7 +297,6 @@
     "Your own private boat, for your group only",
     "Captain, chef and an Expedition Leader",
     "All meals and soft drinks",
-    "A selection of wines from our sommelier partner Climats, on us ($350 retail value)",
     "Snorkel gear, paddleboards, kayak and dinghy",
     "National park permits",
     "Airport to marina transfer in La Paz, both ways",
@@ -310,5 +309,7 @@
     "Scuba diving, unless the expedition includes it",
     "Crew tips (10 to 15% recommended)",
     "Travel insurance"
-  ]
+  ],
+  "activitiesExtraLabel": "Add extra activities, paid separately",
+  "activitiesIncludedLabel": "Included activities"
 }
