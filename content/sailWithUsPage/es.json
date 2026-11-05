@@ -309,5 +309,7 @@
     "Buceo con tanque, salvo que la expedición lo incluya",
     "Propinas para la tripulación (se recomienda del 10 al 15%)",
     "Seguro de viaje"
-  ]
+  ],
+  "activitiesExtraLabel": "Añade actividades extra, con pago aparte",
+  "activitiesIncludedLabel": "Actividades incluidas"
 }
