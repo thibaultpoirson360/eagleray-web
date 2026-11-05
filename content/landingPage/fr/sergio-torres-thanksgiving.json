@@ -44,7 +44,7 @@
           "imageAlt": "Le catamaran Lagoon 450F au mouillage au large d'Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo : le catamaran Lagoon 450F au mouillage, avec des invités sur le flybridge",
           "bookLabel": "Réserver un appel",
-          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Open%20Cabins%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Réservez maintenant",
           "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         },
@@ -67,7 +67,7 @@
           "imageAlt": "Le voilier Beneteau Sense 55 sous voiles",
           "imageNote": "[PENDIENTE] Photo : le Beneteau Sense 55 sous voiles, ou une table de Thanksgiving sur le pont",
           "bookLabel": "Réserver un appel",
-          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20Thanksgiving%20at%20Anchor%20departure%20with%20Sergio%20Torres.",
           "reserveLabel": "Réservez maintenant",
           "reserveHref": "https://v2.app.moguplatform.com/trips/sergio-torres-eagle-ray-expeditions-la-paz-fishing-and-wellness/checkout?step=products"
         }
@@ -461,7 +461,7 @@
     },
     {
       "title": "Parlons de votre expédition",
-      "lede": "Retrouvez-nous directement sur WhatsApp ou par e-mail : +52 55 6809 0942 · hello@eaglerayexpeditions.com",
+      "lede": "Retrouvez-nous directement sur WhatsApp ou par e-mail : +52 55 2741 9922 · hello@eaglerayexpeditions.com",
       "cta": {
         "label": "Contactez-nous pour en savoir plus",
         "href": "/fr/contact/"

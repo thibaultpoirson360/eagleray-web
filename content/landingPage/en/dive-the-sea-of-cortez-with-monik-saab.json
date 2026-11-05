@@ -9,7 +9,7 @@
       "imageAlt": "Monik Saab, Eagle Ray Expedition Leader, scuba diving in La Paz",
       "cta": {
         "label": "Book a call",
-        "href": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab."
+        "href": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab."
       },
       "_template": "hero"
     },
@@ -30,7 +30,7 @@
           "imageAlt": "Divers at San Rafaelito, La Paz",
           "imageNote": "[PENDIENTE] Photo: diving at San Rafaelito, or lunch on deck",
           "bookLabel": "Book a call",
-          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserve now",
           "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         },
@@ -46,7 +46,7 @@
           "imageAlt": "The Beneteau Sense 55 at anchor off Espíritu Santo",
           "imageNote": "[PENDIENTE] Photo: the Beneteau Sense 55 at anchor at sunset",
           "bookLabel": "Book a call",
-          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserve now",
           "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         },
@@ -63,7 +63,7 @@
           "imageAlt": "Divers in thanksgiving in La paz",
           "imageNote": "[PENDIENTE] Photo: diving with the sea lions at Los Islotes",
           "bookLabel": "Book a call",
-          "bookHref": "https://wa.me/525568090942?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
+          "bookHref": "https://wa.me/525527419922?text=I'd%20like%20to%20book%20a%20call%20about%20the%20diving%20expeditions%20with%20Monik%20Saab.",
           "reserveLabel": "Reserve now",
           "reserveHref": "https://v2.app.moguplatform.com/trips/eagle-ray-expeditions-monik-saab-la-paz-scuba-diving-special/checkout?step=products"
         }
@@ -461,7 +461,7 @@
     },
     {
       "title": "Let's talk about your expedition",
-      "lede": "Find us directly on WhatsApp or by email: +52 55 6809 0942 · hello@eaglerayexpeditions.com",
+      "lede": "Find us directly on WhatsApp or by email: +52 55 2741 9922 · hello@eaglerayexpeditions.com",
       "cta": {
         "label": "Contact us for more info",
         "href": "/en/contact/"
