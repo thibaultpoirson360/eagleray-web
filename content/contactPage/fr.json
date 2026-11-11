@@ -15,6 +15,16 @@
       "Je ne sais pas encore",
       "Autre"
     ],
+    "partnerOption": "Je souhaite devenir partenaire",
+    "partnerRolePlaceholder": "Votre fonction",
+    "partnerCompanyPlaceholder": "Votre entreprise",
+    "workOption": "Je souhaite travailler chez Eagle Ray",
+    "workPositionPlaceholder": "Quel poste ?",
+    "workPositionOptions": [
+      "Leader d'expédition",
+      "Capitaine",
+      "Chef"
+    ],
     "messagePlaceholder": "Message",
     "submitLabel": "Envoyer un message",
     "sendingLabel": "Envoi…",
