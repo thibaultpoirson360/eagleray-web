@@ -30,6 +30,16 @@ if (form && locale !== "en" && !form.interestOptions?.length) {
   form.interestPlaceholder = en?.interestPlaceholder ?? null;
   form.interestOptions = en?.interestOptions ?? null;
 }
+// The partner / work follow-up texts show in English until /translate drafts them.
+if (form && locale !== "en" && !form.partnerOption) {
+  const en = (await loadContactPage("en")).data.contactPage.form;
+  form.partnerOption = en?.partnerOption ?? null;
+  form.partnerRolePlaceholder = en?.partnerRolePlaceholder ?? null;
+  form.partnerCompanyPlaceholder = en?.partnerCompanyPlaceholder ?? null;
+  form.workOption = en?.workOption ?? null;
+  form.workPositionPlaceholder = en?.workPositionPlaceholder ?? null;
+  form.workPositionOptions = en?.workPositionOptions ?? null;
+}
 ---
 
 <BaseLayout
