@@ -22,6 +22,12 @@ interface FormCopy {
   howFoundPlaceholder: string;
   interestPlaceholder?: string;
   interestOptions?: string[];
+  partnerOption?: string;
+  partnerRolePlaceholder?: string;
+  partnerCompanyPlaceholder?: string;
+  workOption?: string;
+  workPositionPlaceholder?: string;
+  workPositionOptions?: string[];
   messagePlaceholder: string;
   submitLabel: string;
   sendingLabel: string;
@@ -37,12 +43,24 @@ interface Props {
 const inputClass =
   "w-full rounded border border-ink/14 px-4 py-3 text-sm text-ink placeholder:text-ink/45 transition-colors duration-200 ease-out focus:border-ink focus:outline-none";
 
+// The partner and work options sit just before the last two entries
+// ("Not sure yet", "Other") so those stay at the bottom of the menu.
+function withExtraOptions(copy: FormCopy): string[] {
+  const base = copy.interestOptions ?? [];
+  const extras = [copy.partnerOption, copy.workOption].filter((o): o is string => !!o);
+  const at = Math.max(base.length - 2, 0);
+  return [...base.slice(0, at), ...extras, ...base.slice(at)];
+}
+
 export default function ContactForm({ copy, leadEndpoint }: Props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [howFound, setHowFound] = useState("");
   const [interest, setInterest] = useState("");
   const [message, setMessage] = useState("");
+  const [role, setRole] = useState("");
+  const [company, setCompany] = useState("");
+  const [position, setPosition] = useState("");
 
   // A link such as /en/contact/?message=… (the activity buttons on Sail with
   // us) arrives with the message box already written. Only fills an empty box.
@@ -54,6 +72,10 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
 
+  const isPartner = !!copy.partnerOption && interest === copy.partnerOption;
+  const isWork = !!copy.workOption && interest === copy.workOption;
+  const menuOptions = withExtraOptions(copy);
+
   async function handleSubmit(e: Event) {
     e.preventDefault();
     if (!name || !email || !message) return;
@@ -64,7 +86,7 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
       const res = await fetch(leadEndpoint, {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, howFound, ...(interest ? { interest } : {}), message, _subject: "New contact form message" }),
+        body: JSON.stringify({ name, email, howFound, ...(interest ? { interest } : {}), ...(isPartner ? { role, company } : {}), ...(isWork ? { position } : {}), message, _subject: "New contact form message" }),
       });
       if (!res.ok) throw new Error(`Formspree error ${res.status}`);
       await res.json();
@@ -101,7 +123,7 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
         onInput={(e) => setEmail((e.target as HTMLInputElement).value)}
         class={inputClass}
       />
-      {copy.interestOptions && copy.interestOptions.length > 0 && (
+      {menuOptions.length > 0 && (
         <select
           name="interest"
           value={interest}
@@ -109,7 +131,43 @@ export default function ContactForm({ copy, leadEndpoint }: Props) {
           class={`${inputClass} ${interest ? "" : "text-ink/45"}`}
         >
           <option value="">{copy.interestPlaceholder}</option>
-          {copy.interestOptions.map((option) => (
+          {menuOptions.map((option) => (
+            <option value={option}>{option}</option>
+          ))}
+        </select>
+      )}
+      {isPartner && (
+        <>
+          <input
+            type="text"
+            name="role"
+            required
+            placeholder={copy.partnerRolePlaceholder}
+            value={role}
+            onInput={(e) => setRole((e.target as HTMLInputElement).value)}
+            class={inputClass}
+          />
+          <input
+            type="text"
+            name="company"
+            required
+            placeholder={copy.partnerCompanyPlaceholder}
+            value={company}
+            onInput={(e) => setCompany((e.target as HTMLInputElement).value)}
+            class={inputClass}
+          />
+        </>
+      )}
+      {isWork && (copy.workPositionOptions ?? []).length > 0 && (
+        <select
+          name="position"
+          required
+          value={position}
+          onChange={(e) => setPosition((e.target as HTMLSelectElement).value)}
+          class={`${inputClass} ${position ? "" : "text-ink/45"}`}
+        >
+          <option value="">{copy.workPositionPlaceholder}</option>
+          {(copy.workPositionOptions ?? []).map((option) => (
             <option value={option}>{option}</option>
           ))}
         </select>
