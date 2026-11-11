@@ -6,6 +6,7 @@ import { tinaField } from '@tinacms/astro/tina-field';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Sounder from '../components/Sounder.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 import { loadNavigation, loadFooter, loadSiteSettings } from '../lib/content';
 
 interface Props {
@@ -145,6 +146,7 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
     <TinaIsland name="footer" wrapper={{ tag: 'div' }} params={{ locale }}>
       <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} locale={locale} />
     </TinaIsland>
+    <WhatsAppButton navigation={navigationResult.data.navigation} siteSettings={siteSettingsResult.data.siteSettings} />
     <script>
       import '../scripts/chrome.ts';
     </script>
