@@ -162,6 +162,19 @@ const navigation: Collection = {
     },
     {
       type: "string",
+      name: "whatsappLabel",
+      label: "Floating WhatsApp button (accessible label, not visible text)",
+      description: 'Read by screen readers for the round WhatsApp button at the bottom right, e.g. "Message us on WhatsApp".',
+    },
+    {
+      type: "string",
+      name: "whatsappMessage",
+      label: "Floating WhatsApp button — message that opens ready to send",
+      description: "The text already written in the chat when a visitor taps the button. They can change it before sending. Leave empty to open an empty chat.",
+      ui: { component: "textarea" },
+    },
+    {
+      type: "string",
       name: "surfaceLabel",
       label: "Depth gauge — label shown at the surface",
       description:

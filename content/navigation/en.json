@@ -79,5 +79,7 @@
   "ariaLabel": "Main",
   "languageLabel": "Language",
   "skipLabel": "Skip to main content",
+  "whatsappLabel": "Message us on WhatsApp",
+  "whatsappMessage": "Hi! I'd like information about an Eagle Ray expedition.",
   "surfaceLabel": "Surface"
 }
