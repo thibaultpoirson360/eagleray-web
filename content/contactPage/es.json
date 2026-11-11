@@ -15,11 +15,11 @@
       "Aún no lo sé",
       "Otro"
     ],
-    "partnerOption": "Quiero convertirme en socio",
-    "partnerRolePlaceholder": "Tu cargo",
+    "partnerOption": "Quiero ser partner",
+    "partnerRolePlaceholder": "Cargo",
     "partnerCompanyPlaceholder": "Tu empresa",
     "workOption": "Quiero trabajar en Eagle Ray",
-    "workPositionPlaceholder": "¿Qué puesto?",
+    "workPositionPlaceholder": "Posición",
     "workPositionOptions": [
       "Líder de Expedición",
       "Capitán",
