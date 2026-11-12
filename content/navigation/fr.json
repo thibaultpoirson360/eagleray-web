@@ -79,5 +79,7 @@
   "ariaLabel": "Accueil",
   "languageLabel": "Langue",
   "skipLabel": "Aller au contenu principal",
+  "whatsappLabel": "Écrivez-nous sur WhatsApp",
+  "whatsappMessage": "Bonjour ! J'aimerais recevoir des informations sur une expédition Eagle Ray.",
   "surfaceLabel": "Surface"
 }
