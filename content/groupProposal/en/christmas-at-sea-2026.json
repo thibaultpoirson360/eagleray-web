@@ -89,91 +89,6 @@
       "Wine selection"
     ]
   },
-  "boat": {
-    "title": "Fountaine Pajot Saona 47",
-    "intro": "A private catamaran with five cabins, each with its own bathroom. Captain, chef, deckhand and our Expedition Leader on board.",
-    "gallery": [
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_vista_aerea_de_atras_zs2tiq.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_layout_hu8bml.png",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_RECAMARA_PROA_ESTRIBOR_2_ppmsoo.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_portada_i887nz.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_sala_ext_h0b5tm.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_camarote_literas_vx2mdj.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_vista_aerea_de_atras_listn5.jpg",
-        "alt": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_Baño_ql0oqt.jpg",
-        "alt": "baño",
-        "caption": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_echadero_proa2_sl00ap.jpg",
-        "alt": "Exterior",
-        "caption": ""
-      },
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_Comedor_ptynax.jpg",
-        "alt": "Salón exterior 2",
-        "caption": ""
-      }
-    ],
-    "specs": "2019, refit 2026 · 5 cabins · 5 bathrooms",
-    "cabins": [
-      {
-        "who": "Grandparents",
-        "cabin": "queen cabin"
-      },
-      {
-        "who": "Mother and daughter",
-        "cabin": "queen cabin"
-      },
-      {
-        "who": "Parents",
-        "cabin": "queen cabin"
-      },
-      {
-        "who": "Two sisters",
-        "cabin": "queen cabin"
-      },
-      {
-        "who": "Third sister",
-        "cabin": "cabin with bunk beds"
-      }
-    ],
-    "prices": [
-      {
-        "label": "Bank transfer",
-        "total": "USD 22,500 total",
-        "perPerson": "USD 2,500 per person"
-      },
-      {
-        "label": "Card payment",
-        "total": "USD 23,250 total",
-        "perPerson": "USD 2,583 per person"
-      }
-    ],
-    "priceNote": "Price for the full boat and the full group, valid for 48 hours from the date of this proposal. Choose one of the two options for payment and communicate it to our agent to receive the details."
-  },
   "food": {
     "title": "What's cooking on board",
     "text": "Your chef shops in La Paz the day before you board and cooks three meals a day on board: breakfast on deck, lunch at anchor, dinner as the sun goes down. Tell us about allergies or preferences before the trip and the menu is built around them.",
@@ -257,6 +172,95 @@
       {
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
         "alt": ""
+      }
+    ]
+  },
+  "boats": {
+    "options": [
+      {
+        "name": "Fountaine Pajot Saona 47",
+        "intro": "A private catamaran with five cabins, each with its own bathroom. Captain, chef, deckhand and our Expedition Leader on board.",
+        "gallery": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_vista_aerea_de_atras_zs2tiq.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_layout_hu8bml.png",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_RECAMARA_PROA_ESTRIBOR_2_ppmsoo.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_portada_i887nz.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_sala_ext_h0b5tm.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_camarote_literas_vx2mdj.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_vista_aerea_de_atras_listn5.jpg",
+            "alt": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_Baño_ql0oqt.jpg",
+            "alt": "baño",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_kaia_echadero_proa2_sl00ap.jpg",
+            "alt": "Exterior",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_Comedor_ptynax.jpg",
+            "alt": "Salón exterior 2",
+            "caption": ""
+          }
+        ],
+        "specs": "2019, refit 2026 · 5 cabins · 5 bathrooms",
+        "cabins": [
+          {
+            "who": "Grandparents",
+            "cabin": "queen cabin"
+          },
+          {
+            "who": "Mother and daughter",
+            "cabin": "queen cabin"
+          },
+          {
+            "who": "Parents",
+            "cabin": "queen cabin"
+          },
+          {
+            "who": "Two sisters",
+            "cabin": "queen cabin"
+          },
+          {
+            "who": "Third sister",
+            "cabin": "cabin with bunk beds"
+          }
+        ],
+        "prices": [
+          {
+            "label": "Bank transfer",
+            "total": "USD 22,500 total",
+            "perPerson": "USD 2,500 per person"
+          },
+          {
+            "label": "Card payment",
+            "total": "USD 23,250 total",
+            "perPerson": "USD 2,583 per person"
+          }
+        ],
+        "priceNote": "Price for the full boat and the full group, valid for 48 hours from the date of this proposal. Choose one of the two options for payment and communicate it to our agent to receive the details."
       }
     ]
   },

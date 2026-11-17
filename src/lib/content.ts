@@ -261,23 +261,7 @@ export function loadLandingPage(locale: Locale, slug: string, options?: RequestO
   );
 }
 
-/** Private trip proposals (content/tripProposal/<locale>/<slug>.json). Listed across every locale: see the proposal page. */
-export async function loadTripProposals(options?: RequestOptions) {
-  const result = await requestWithMetadata(databaseClient.queries.tripProposalConnection(), options);
-  const pages = (result.data.tripProposalConnection?.edges ?? [])
-    .map((edge) => edge?.node)
-    .filter((node): node is NonNullable<typeof node> => !!node);
-  return { ...result, pages };
-}
-
-export function loadTripProposal(locale: Locale, slug: string, options?: RequestOptions) {
-  return requestWithMetadata(
-    databaseClient.queries.tripProposal({ relativePath: `${locale}/${slug}.json` }),
-    options
-  );
-}
-
-/** Private group proposals, cinematic style (content/groupProposal/<locale>/<slug>.json). */
+/** Private proposals (content/groupProposal/<locale>/<slug>.json): the one proposal template. */
 export async function loadGroupProposals(options?: RequestOptions) {
   const result = await requestWithMetadata(databaseClient.queries.groupProposalConnection(), options);
   const pages = (result.data.groupProposalConnection?.edges ?? [])
