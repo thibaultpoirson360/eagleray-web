@@ -1,0 +1,664 @@
+{
+  "title": "Propuesta para Antoine Hurel",
+  "hero": {
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/josh-withers-C989jL20Yr0-unsplash_f0cjju.jpg",
+    "imageAlt": "El mar de Cortés visto desde un velero",
+    "note": "Propuesta para Antoine Hurel · La Paz, Mar de Cortés",
+    "title": "Tres noches en el mar, solo para ti y tú familia",
+    "subtitle": "Tres noches en el mar, sin prisa. Salen de La Paz y pasan los días entre el agua, la cubierta y las calas de Espíritu Santo.",
+    "button": {
+      "label": "Reservar",
+      "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
+    }
+  },
+  "notice": {
+    "availability": "Disponibilidad limitada: queda 1 plaza",
+    "expires": "Esta propuesta vence el 25 de noviembre de 2026"
+  },
+  "brief": {
+    "title": "Ustedes solo tienen que decidir cuándo meterse al agua.",
+    "text": "Antoine, esta es la propuesta que preparamos para tu familia: tres noches a bordo de un catamarán privado, saliendo de La Paz y navegando entre bahías tranquilas de la isla Espíritu Santo.\n\nEagle Ray se encarga del barco, de la comida y de la ruta. Ustedes eligen el ritmo de cada día: nadar, remar, explorar la playa o simplemente descansar.\n\nMás abajo encuentras la ruta, los dos barcos que podemos ofrecerte y lo que incluye cada día. Cuando estés listo, reserva con un clic.\n\nEl equipo de Eagle Ray Expeditions",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "11 al 14 de diciembre de 2026 · 4 días, 3 noches"
+      },
+      {
+        "icon": "people",
+        "text": "8 personas, dos por cabina"
+      },
+      {
+        "icon": "pin",
+        "text": "La Paz, Baja California Sur"
+      },
+      {
+        "icon": "clock",
+        "text": "Embarque viernes 11, 9:00 · Regreso lunes 14, 9:00"
+      }
+    ],
+    "photos": [
+      {
+        "image": "/assets/proposals/antoine/hero-familia.webp",
+        "alt": "Madre con su bebé en la cubierta, con el mar de Cortés detrás",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/hero-cubierta.webp",
+        "alt": "Dos personas tumbadas al sol en la cubierta",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/hero-arco.webp",
+        "alt": "Las rocas de la isla vistas desde la proa del catamarán",
+        "caption": ""
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Quiénes somos",
+    "title": "Apasionados del mar",
+    "text": "Eagle Ray Expeditions navega por Baja California Sur desde La Paz.\n\nSomos apasionados del mar: capitanes, chefs y líderes de expedición elegidos por dos motivos: cómo manejan un barco y cómo cuidan a las personas a bordo. Una cosa nunca va sin la otra.\n\nLo que la gente se lleva de la experiencia en el mar rara vez es solo el barco. Es la mañana en que alguien leyó el viento por primera vez, la cena que se alargó porque nadie quería levantarse de la mesa, el plan que cambió cuando aparecieron los delfines.\n\nPor eso organizamos cada viaje al revés: primero su grupo y lo que quiere vivir durante sus días en el mar; después, la tripulación que mejor se adapte; y solo entonces, el barco.",
+    "quote": "El velero es el medio, no el destino.",
+    "image": "/assets/proposals/antoine/quienes-somos.webp",
+    "imageAlt": "Eagle Ray Expeditions: gente del mar apasionada"
+  },
+  "scenes": {
+    "eyebrow": "Un día a bordo",
+    "title": "Un día en el mar, de principio a fin",
+    "note": "El ritmo se adapta al grupo y al clima.",
+    "items": [
+      {
+        "time": "Amanecer",
+        "title": "El primer café",
+        "text": "El barco despierta despacio. Café en el cockpit, con la cala todavía en silencio.",
+        "image": "/assets/img/boats/bay-dreamer-01.webp",
+        "imageAlt": "Cockpit del catamarán al amanecer"
+      },
+      {
+        "time": "Mañana",
+        "title": "Al agua",
+        "text": "Snorkel entre arrecifes y bahías. El mar de Cortés, solo para ustedes.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/eagle-ray/cl-e2ieabxohwithxvsuo7m.jpg",
+        "imageAlt": "Persona haciendo snorkel en el mar de Cortés"
+      },
+      {
+        "time": "Mediodía",
+        "title": "La comida",
+        "text": "El chef cocina marisco local, en cubierta o con los pies en la arena.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/sergio/lunch-beach.jpg",
+        "imageAlt": "Comida servida en una playa de Espíritu Santo"
+      },
+      {
+        "time": "Tarde",
+        "title": "A tu manera",
+        "text": "Kayak, paddleboard, una playa para ustedes solos o una siesta a la sombra.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/commons/activity-paddleboard-balandra.jpg",
+        "imageAlt": "Tabla de paddle en la bahía de Balandra"
+      },
+      {
+        "time": "Atardecer",
+        "title": "Cena al ancla",
+        "text": "La luz baja sobre la bahía y la mesa se pone en cubierta.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
+        "imageAlt": "Atardecer en La Paz"
+      }
+    ]
+  },
+  "itinerary": {
+    "eyebrow": "La expedición",
+    "title": "Tres noches en el mar. Una estructura, no un horario.",
+    "intro": "Nuestra forma más pausada de navegar. Comidas largas fondeados, baños antes del desayuno y una ruta que sigue al viento, no a un itinerario impreso. El equipo de snorkel y las tablas de paddle están a bordo para usarlos cuando quieran.\n\nEl capitán elige las calas según el viento de esos días. Si el tiempo acompaña, una de las mañanas puede ser en Balandra.",
+    "days": [
+      {
+        "label": "Día 1",
+        "title": "Viernes 11",
+        "moments": [
+          {
+            "time": "Mañana",
+            "text": "Recogida y embarque en la marina de La Paz."
+          },
+          {
+            "time": "Mediodía",
+            "text": "Primer baño, snorkel o paddle. Comida a bordo."
+          },
+          {
+            "time": "Tarde",
+            "text": "Rumbo a Espíritu Santo. Agua, cubierta o siesta a la sombra."
+          },
+          {
+            "time": "Atardecer",
+            "text": "Fondeados en la primera cala."
+          },
+          {
+            "time": "Noche",
+            "text": "Cena a bordo. Solo el sonido del agua contra el casco."
+          }
+        ],
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/dia1-cubierta.webp",
+            "alt": "Dos personas tumbadas en la cubierta frente a una cala",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia1-fruta.webp",
+            "alt": "Fruta fresca y café sobre la mesa de cubierta",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia1-agua.webp",
+            "alt": "Un nadador bajo el agua",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia1-proa.webp",
+            "alt": "Tres personas en la proa mirando la bahía",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "label": "Día 2",
+        "title": "Sábado 12",
+        "moments": [
+          {
+            "time": "Mañana",
+            "text": "Café en cubierta y baño antes del desayuno."
+          },
+          {
+            "time": "Mediodía",
+            "text": "Snorkel, paddle o exploración de la costa. Comida a bordo."
+          },
+          {
+            "time": "Tarde",
+            "text": "Navegación corta hacia otra cala, o el barco se queda donde está si nadie quiere moverse."
+          },
+          {
+            "time": "Noche",
+            "text": "Cena bajo las estrellas."
+          }
+        ],
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/hero-arco.webp",
+            "alt": "Las rocas de la isla desde la proa",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia2-brindis.webp",
+            "alt": "Una cerveza fría a bordo",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia2-paddle.webp",
+            "alt": "Dos personas de pie sobre tablas de paddle al atardecer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia2-familia.webp",
+            "alt": "Madre con su bebé en la cubierta",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia2-kayak.webp",
+            "alt": "Dos personas en kayak al atardecer",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "label": "Día 3",
+        "title": "Domingo 13",
+        "moments": [
+          {
+            "time": "Mañana",
+            "text": "El día que más se parece a no hacer nada."
+          },
+          {
+            "time": "Mediodía",
+            "text": "Comida larga fondeados."
+          },
+          {
+            "time": "Tarde",
+            "text": "Último rato en el agua mientras baja el sol."
+          },
+          {
+            "time": "Noche",
+            "text": "Última cena a bordo."
+          }
+        ],
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/dia3-playa.webp",
+            "alt": "Playa de arena blanca vista desde el mar",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia3-atardecer.webp",
+            "alt": "Una persona en paddle al atardecer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/dia3-laguna.webp",
+            "alt": "Vista aérea de una laguna y una playa",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "label": "Día 4",
+        "title": "Lunes 14",
+        "moments": [
+          {
+            "time": "Mañana",
+            "text": "Desayuno y último baño. Vuelta a la marina a las 9:00."
+          }
+        ],
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/dia4-malecon.webp",
+            "alt": "El malecón de La Paz al atardecer, con palmeras",
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  },
+  "route": {
+    "eyebrow": "La ruta",
+    "title": "La Paz y Espíritu Santo",
+    "dates": "4 días · 11 al 14 de diciembre de 2026",
+    "stops": [
+      {
+        "name": "La Paz",
+        "sub": "Marina, salida y regreso",
+        "lat": 24.158,
+        "lon": -110.3245
+      },
+      {
+        "name": "Caleta Lobos",
+        "sub": "O Pichilingue",
+        "lat": 24.296,
+        "lon": -110.335
+      },
+      {
+        "name": "Bahía San Gabriel",
+        "sub": "O Puerto Ballena, sur de Espíritu Santo",
+        "lat": 24.43,
+        "lon": -110.36
+      },
+      {
+        "name": "Bahía de La Paz",
+        "sub": "Última noche cerca de la ciudad",
+        "lat": 24.205,
+        "lon": -110.31
+      }
+    ],
+    "facts": [
+      "2 días completos en el agua",
+      "8 personas, dos por cabina"
+    ],
+    "note": "Las etapas rondan las 15 millas náuticas. El capitán define la ruta según el clima.",
+    "mapLabel": "Ruta propuesta para 3 noches",
+    "credit": "Datos del mapa © colaboradores de OpenStreetMap."
+  },
+  "boats": {
+    "title": "Elijan su barco",
+    "choose": "Dos catamaranes",
+    "note": "Les proponemos dos catamaranes. El barco exacto lo confirmamos al reservar: este o uno de características similares.\n\nLos dos catamaranes son estables y tienen todo en un mismo nivel: la bebé puede estar cerca mientras ustedes comen o se bañan. A bordo tendrán su chaleco salvavidas infantil y una cuna. Cuéntennos sus horarios y el chef y la tripulación lo tendrán en cuenta.",
+    "options": [
+      {
+        "name": "Lagoon 450F o similar",
+        "intro": "El más grande de los dos, y se nota en cuanto suben a bordo: más cubierta para tumbarse al sol, un salón donde caben todos a la vez y sitio para que la bebé se mueva sin estar siempre en brazos. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Abajo, cada pareja tiene su cabina. Es el barco para quien prefiere no pensar en el espacio.",
+        "gallery": [
+          {
+            "image": "/assets/proposals/antoine/barco-lagoon.webp",
+            "alt": "Cubierta y mesa del catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-08.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-09.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-01.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-02.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-03.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-04.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-05.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-06.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/bay-dreamer-07.webp",
+            "alt": "Bay Dreamer",
+            "caption": ""
+          }
+        ],
+        "specs": "Tipo Catamarán · Cabinas 4 · Invitados 8, dos por cabina",
+        "prices": [
+          {
+            "label": "Barco completo",
+            "total": "$23,625 USD",
+            "perPerson": ""
+          }
+        ],
+        "priceNote": "Barco completo, pensión completa, 3 noches.",
+        "tag": "Recomendado",
+        "features": [
+          "Flybridge",
+          "Chef a bordo",
+          "Snorkel, paddleboard y juguetes flotantes",
+          "Toallas de playa",
+          "Sonido Bluetooth a bordo"
+        ],
+        "note": "O un barco similar con características iguales o superiores."
+      },
+      {
+        "name": "Bali 4.6 o similar",
+        "intro": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
+        "gallery": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_deck_aino3c.jpg",
+            "alt": "Proa del catamarán Bali 4.6 con huéspedes a bordo",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Interior_comedor_ufil0s.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Cocina_uo85g0.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_detras_e5j68i.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_mapa_cninyy.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Habitación_jgcjkg.jpg",
+            "alt": "",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Habitación_literlas_dabsn4.jpg",
+            "alt": "",
+            "caption": ""
+          }
+        ],
+        "specs": "Tipo Catamarán · Largo 46 pies · Cabinas 5 · Baños 4",
+        "prices": [
+          {
+            "label": "Barco completo",
+            "total": "$30,713 USD",
+            "perPerson": ""
+          }
+        ],
+        "priceNote": "Barco completo, pensión completa, 3 noches.",
+        "features": [
+          "Aire acondicionado",
+          "Flybridge y cockpit de proa",
+          "Desalinizadora y generador",
+          "Snorkel y paddleboard"
+        ],
+        "note": "O un barco similar con características iguales o superiores."
+      }
+    ]
+  },
+  "book": {
+    "title": "Cómo reservar",
+    "text": "",
+    "terms": [
+      "Pago: Al tratarse de una reserva con menos de 30 días de antelación se pide el pago en su totalidad.",
+      "Clima: La decisión de salir la toma el capitán, siempre por seguridad."
+    ]
+  },
+  "aboard": {
+    "title": "Todo lo que necesitan a bordo",
+    "text": "Un capitán, un chef y un Expedition Leader de Eagle Ray cuidan del barco, de la mesa y de cada día.",
+    "onTitle": "Incluido",
+    "onBoard": [
+      "Capitán y chef de Eagle Ray",
+      "Expedition Leader de Eagle Ray, con ustedes todo el viaje",
+      "El barco de tu salida, o uno similar con características iguales o superiores",
+      "Equipo de snorkel y tablas de paddle",
+      "Chaleco salvavidas infantil y cuna",
+      "Desayuno, comida y cena todos los días, preparados a bordo, con el menú que elijan antes del viaje",
+      "Bocadillos y fruta fresca entre nado y nado",
+      "Menús pensados para su grupo: vegetarianos, veganos, sin gluten, alergias",
+      "Pescado de la captura del día, cuando la línea trae algo",
+      "Agua, café, té y refrescos, todo el día",
+      "Recogida en el aeropuerto o en su hotel y traslado privado a la marina",
+      "Diésel",
+      "Permisos de navegación y entrada a parques nacionales",
+      "Wifi Starlink a bordo"
+    ],
+    "offTitle": "No incluido",
+    "notOnBoard": [
+      "Vuelos a La Paz",
+      "Bebidas alcohólicas (se pueden pedir antes del viaje)",
+      "Propinas para la tripulación (recomendado entre el 10 y el 15 %)",
+      "Seguro de viaje personal (el barco cuenta con su propio seguro de responsabilidad civil)"
+    ],
+    "photos": [
+      {
+        "image": "/assets/proposals/antoine/incluye-auxiliar.webp",
+        "alt": "Auxiliar a motor en la orilla",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-snorkel.webp",
+        "alt": "Dos personas haciendo snorkel",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-pesca.webp",
+        "alt": "Cañas de pesca a bordo",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-paddle.webp",
+        "alt": "Tabla de paddle en aguas turquesa",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-flotadores.webp",
+        "alt": "Personas relajándose sobre flotadores",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-kayak.webp",
+        "alt": "Kayak en la bahía",
+        "caption": ""
+      }
+    ]
+  },
+  "crew": {
+    "title": "Conozcan a su tripulación",
+    "text": "Cada expedición está dirigida por apasionados del mar, no es simplemente un barco con personal a bordo. Un capitán, un chef y un Expedition Leader no se limitan a encargarse de que todo funcione entre bastidores, sino que marcan el ritmo de cada jornada.",
+    "members": [
+      "benji",
+      "lou",
+      "roberto",
+      "javier",
+      "antoine",
+      "ana"
+    ],
+    "note": "La tripulación de Eagle Ray ha sido cuidadosamente seleccionada, con personas elegidas por su destreza en el mar y su capacidad para entender al grupo. Mira sus perfiles y dinos a quién te gustaría tener a bordo."
+  },
+  "practical": {
+    "eyebrow": "Todo lo que conviene saber",
+    "title": "Antes de zarpar",
+    "items": [
+      {
+        "title": "Cómo llegar",
+        "text": "Les recogemos en el aeropuerto de La Paz o en su hotel y les llevamos a la marina. Solo tienen que decirnos dónde y a qué hora.",
+        "photos": []
+      },
+      {
+        "title": "Comida",
+        "text": "La gastronomía de La Paz gira en torno al mar: almejas de chocolate cocinadas sobre piedras calientes, ceviche con un toque de mayonesa, quesadillas de marlín o pulpo, y la machaca, carne seca de ternera o cerdo, el clásico que no procede del mar. Los tacos de pescado son un icono de la península (nacieron más al norte, en Ensenada), pero aquí se sienten igual de en casa.\n\nA bordo, el chef cocina con lo que ofrecen estas mismas aguas, a menos que pidan otra cosa.",
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/comida-almejas.webp",
+            "alt": "Almejas de chocolate con limón",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/comida-quesadillas.webp",
+            "alt": "Quesadillas servidas en una tabla",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/comida-ceviche.webp",
+            "alt": "Ceviche fresco",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "title": "Qué traer",
+        "text": "Traigan menos de lo que creen. A bordo solo necesitan un traje de baño seco para cambiarse; del resto se ocupa la tripulación. Para lo demás: ropa ligera, algo de abrigo para la noche, que en diciembre refresca, y gorra, porque el sol del desierto pega directo.",
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/traer-ropa.webp",
+            "alt": "Ropa ligera de verano",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/traer-gorras.webp",
+            "alt": "Sombreros y gorras para el sol",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "title": "Clima",
+        "text": "Clima desértico, seco casi todo el año.\n\nInvierno (de diciembre a febrero): templado, de 18 a 24 °C; la estación más agradable.\n\nNoviembre: pueden soplar vientos del norte, que provocan un mar agitado durante breves periodos. Por eso el capitán decide la ruta cada día.",
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/clima-sol.webp",
+            "alt": "El sol ocultándose sobre el mar",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "title": "Conexión",
+        "text": "A bordo hay Starlink con conexión: recomendamos desconectar, pero por si alguien necesita estar localizable está disponible.",
+        "photos": []
+      },
+      {
+        "title": "La Paz y el mar de Cortés",
+        "text": "Baja California del Sur es el lugar donde el desierto se encuentra con el mar de Cortés, esa masa de agua que Jacques Cousteau denominó «el acuario del mundo».\n\nLa Paz, puerto base de Eagle Ray Expeditions, se encuentra en una bahía desértica, cerca de la colonia de leones marinos de la isla Espíritu Santo. Delfines y leones marinos, lo suficientemente cerca como para verlos bien. No hay nada preparado: solo hay que mantener los ojos bien abiertos y estar en el lugar adecuado en el momento adecuado, y nuestra tripulación sabe cómo hacerlo.",
+        "photos": [
+          {
+            "image": "/assets/proposals/antoine/paz-lobos.webp",
+            "alt": "Leones marinos descansando",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/paz-mar.webp",
+            "alt": "El mar de Cortés agitado por el viento",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/paz-costa.webp",
+            "alt": "Costa de roca roja en Espíritu Santo",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/paz-cardones.webp",
+            "alt": "Cardones sobre un acantilado",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/paz-bahia.webp",
+            "alt": "Vista aérea de una bahía de aguas turquesa",
+            "caption": ""
+          },
+          {
+            "image": "/assets/proposals/antoine/paz-cactus.webp",
+            "alt": "Cactus y el mar al fondo",
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Lo que suelen preguntarnos",
+    "items": [
+      {
+        "question": "¿Cómo se paga?",
+        "answer": "Con un depósito del 30 % el barco queda reservado para ustedes. El 70 % restante se paga el 1 de diciembre. Si reservan después de esa fecha, se paga el total al reservar. Aceptamos las principales tarjetas. Si prefieren pagar por transferencia, el precio baja un 3 %: escríbannos y les mandamos los datos."
+      },
+      {
+        "question": "¿Y si hace mal tiempo?",
+        "answer": "La decisión de salir la toma el capitán, siempre por seguridad. Si el viento cambia, busca una cala protegida y el plan se adapta. Si el capitán decide que no se puede salir, les proponemos otra fecha en los próximos 12 meses o les devolvemos todo lo pagado, lo que prefieran."
+      },
+      {
+        "question": "¿Y si somos nosotros los que tenemos que cancelar?",
+        "answer": "Hasta el 1 de diciembre, el depósito no se devuelve, pero pueden usarlo para otra fecha en los próximos 12 meses. A partir del 1 de diciembre, el importe total no es reembolsable. Por eso les recomendamos viajar con seguro de viaje."
+      }
+    ]
+  },
+  "closing": {
+    "title": "Reserven su salida de diciembre",
+    "text": "Elijan el barco, confirmen las fechas y aseguren sus tres noches en el mar de Cortés.",
+    "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
+    "buttonLabel": "Reservar",
+    "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products",
+    "note": "En la página de reserva eligen el barco y completan los datos del grupo.",
+    "agentLine": "Tu agente en Eagle Ray: Angela",
+    "contacts": [
+      {
+        "label": "WhatsApp",
+        "value": "+52 55 6809 0942",
+        "href": "https://wa.me/525568090942"
+      },
+      {
+        "label": "Email",
+        "value": "hello@eaglerayexpeditions.com",
+        "href": "mailto:hello@eaglerayexpeditions.com"
+      }
+    ]
+  },
+  "legal": "Los precios de esta propuesta están en dólares estadounidenses (USD) y son válidos hasta la fecha límite indicada. Su barco y su tripulación quedan reservados al recibir el depósito. Eagle Ray Expeditions Inc. · Delaware corporation · 131 Continental Dr, Suite 305, Newark, DE 19713, United States · hello@eaglerayexpeditions.com"
+}

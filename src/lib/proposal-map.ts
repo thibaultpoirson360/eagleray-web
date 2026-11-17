@@ -1,5 +1,5 @@
 /**
- * The route map of a private proposal (TripProposalView.astro). The land
+ * The route map of a private proposal (GroupProposalView.astro). The land
  * outlines come from espiritu-santo-map.ts; the sailing line is the same
  * curve the original proposal page drew from La Paz north to Espíritu Santo.
  * Each stop is placed on the curve at its nearest point, and the line is
