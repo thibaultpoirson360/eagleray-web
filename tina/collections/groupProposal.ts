@@ -136,9 +136,9 @@ const groupProposal: Collection = {
       fields: [
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "onTitle", label: "First column: heading" },
-        { type: "string", name: "on", label: "First column: list", list: true },
+        { type: "string", name: "onBoard", label: "First column: list", list: true },
         { type: "string", name: "offTitle", label: "Second column: heading" },
-        { type: "string", name: "off", label: "Second column: list", list: true },
+        { type: "string", name: "notOnBoard", label: "Second column: list", list: true },
       ],
     },
     {

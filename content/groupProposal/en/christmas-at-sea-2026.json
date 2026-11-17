@@ -117,7 +117,8 @@
   "aboard": {
     "title": "What's aboard",
     "onTitle": "On board",
-    "on": [
+    "offTitle": "Not on board",
+    "onBoard": [
       "Captain, chef and deckhand",
       "An Eagle Ray Expeditions Expedition Leader, with you all three days",
       "All meals on board and non-alcoholic drinks",
@@ -127,8 +128,7 @@
       "Dinghy, 2 paddle boards, double kayak, inflatable platform, snorkel gear for everyone",
       "BBQ, beach shade, chairs and towels"
     ],
-    "offTitle": "Not on board",
-    "off": [
+    "notOnBoard": [
       "Alcohol (bring your own, or ask us about our Baja wine selection)",
       "Crew tips (10% of the trip value is customary)",
       "Transfer to Los Cabos at the end of the trip"

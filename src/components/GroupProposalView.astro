@@ -153,14 +153,14 @@ const [mainPhoto, ...restPhotos] = gallery;
           <div class="mt-16 grid gap-16 md:grid-cols-2 md:gap-24">
             <div>
               {aboard.onTitle && <h3 class={`${small} border-t border-white/20 pt-6 pb-7 text-white/70`} data-tina-field={tinaField(aboard, "onTitle")}>{aboard.onTitle}</h3>}
-              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-white/90" data-tina-field={tinaField(aboard, "on")}>
-                {list(aboard.on).map((item) => <li>{item}</li>)}
+              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-white/90" data-tina-field={tinaField(aboard, "onBoard")}>
+                {list(aboard.onBoard).map((item) => <li>{item}</li>)}
               </ul>
             </div>
             <div>
               {aboard.offTitle && <h3 class={`${small} border-t border-white/20 pt-6 pb-7 text-white/70`} data-tina-field={tinaField(aboard, "offTitle")}>{aboard.offTitle}</h3>}
-              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-white/70" data-tina-field={tinaField(aboard, "off")}>
-                {list(aboard.off).map((item) => <li>{item}</li>)}
+              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-white/70" data-tina-field={tinaField(aboard, "notOnBoard")}>
+                {list(aboard.notOnBoard).map((item) => <li>{item}</li>)}
               </ul>
             </div>
           </div>
