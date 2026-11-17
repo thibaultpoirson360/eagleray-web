@@ -438,14 +438,17 @@
         ],
         "note": "O un barco similar con características iguales o superiores."
       }
-    ]
+    ],
+    "button": {
+      "label": "Reservar",
+      "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
+    }
   },
   "book": {
     "title": "Cómo reservar",
     "text": "",
     "terms": [
-      "Pago: Al tratarse de una reserva con menos de 30 días de antelación se pide el pago en su totalidad.",
-      "Clima: La decisión de salir la toma el capitán, siempre por seguridad."
+      "Pago: Al tratarse de una reserva con menos de 30 días de antelación se pide el pago en su totalidad. Se puede pagar con tarjeta o por transferencia."
     ]
   },
   "aboard": {

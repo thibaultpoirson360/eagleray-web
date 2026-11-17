@@ -232,6 +232,7 @@ const groupProposal: Collection = {
       fields: [
         { type: "string", name: "title", label: "Title above the tabs", description: "Only shown when there are two or more boats." },
         { type: "string", name: "choose", label: "Label above the tabs" },
+        ctaField("button", "Booking button (shown in each price box)"),
         {
           type: "object",
           name: "options",

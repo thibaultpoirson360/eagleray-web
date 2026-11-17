@@ -357,44 +357,66 @@ const icons: Record<string, string> = {
                   </ul>
                 )}
                 {(o.prices?.length ?? 0) > 0 && (
-                  <div class:list={["mt-16 grid gap-px overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "md:grid-cols-2" : ""]}>
-                    {o.prices.map((pr: any) => (
-                      <div class="bg-ink p-8 text-white md:p-10" data-tina-field={tinaField(pr)}>
-                        <p class={`${small} text-white/70`} data-tina-field={tinaField(pr, "label")}>{pr.label}</p>
-                        {pr.total && <p class="mt-6 text-[clamp(1.5rem,5vw,2.1rem)] leading-tight font-semibold" data-tina-field={tinaField(pr, "total")}>{pr.total}</p>}
-                        {pr.perPerson && <p class="mt-2 text-white/78" data-tina-field={tinaField(pr, "perPerson")}>{pr.perPerson}</p>}
+                  <>
+                    <div class:list={["mt-16 overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "grid gap-px md:grid-cols-2" : ""]}>
+                      {o.prices.map((pr: any) => (
+                        <div class:list={["bg-ink p-8 text-white md:p-10", o.prices.length === 1 && boats.button?.href ? "flex flex-col gap-8 md:flex-row md:items-center md:justify-between" : ""]} data-tina-field={tinaField(pr)}>
+                          <div>
+                            <p class={`${small} text-white/70`} data-tina-field={tinaField(pr, "label")}>{pr.label}</p>
+                            {pr.total && <p class="mt-6 text-[clamp(1.5rem,5vw,2.1rem)] leading-tight font-semibold" data-tina-field={tinaField(pr, "total")}>{pr.total}</p>}
+                            {pr.perPerson && <p class="mt-2 text-white/78" data-tina-field={tinaField(pr, "perPerson")}>{pr.perPerson}</p>}
+                          </div>
+                          {o.prices.length === 1 && boats.button?.href && boats.button?.label && (
+                            <div class="md:shrink-0">
+                              <Button href={boats.button.href} variant="primary" context="hero" data-tina-field={tinaField(boats, "button")}>{boats.button.label}</Button>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    {o.prices.length > 1 && boats.button?.href && boats.button?.label && (
+                      <div class="mt-6 md:text-right">
+                        <Button href={boats.button.href} variant="primary" data-tina-field={tinaField(boats, "button")}>{boats.button.label}</Button>
                       </div>
-                    ))}
-                  </div>
+                    )}
+                  </>
                 )}
                 {o.priceNote && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(o, "priceNote")}>{o.priceNote}</p>}
                 {o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
               </article>
             );
           })}
-          {boats.note && <p class="mt-12 max-w-[60ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(boats, "note")}>{boats.note}</p>}
-          {book && (
-            <div class="mt-20">
-              <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
-              {book.text && <p class="mt-4 max-w-[56ch] text-[.9rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "text")}>{book.text}</p>}
-              <div class="mt-8 max-w-[60ch] border-t border-ink/14" data-tina-field={tinaField(book, "terms")}>
-                {list(book.terms).map((t) => {
-                  const cut = t.indexOf(": ");
-                  const label = cut > 0 ? t.slice(0, cut) : t;
-                  const detail = cut > 0 ? t.slice(cut + 2) : "";
-                  return detail ? (
-                    <details class="group border-b border-ink/14 py-5">
-                      <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
-                        <span>{label}</span>
-                        <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
-                      </summary>
-                      <p class="mt-4 text-[.9rem] leading-[1.75] text-ink/80">{detail.charAt(0).toUpperCase() + detail.slice(1)}</p>
-                    </details>
-                  ) : (
-                    <p class="border-b border-ink/14 py-5 text-[.95rem] font-semibold">{label}</p>
-                  );
-                })}
-              </div>
+          {(boats.note || book) && (
+            <div class:list={["mt-20 grid gap-14", boats.note && book ? "md:grid-cols-2 md:gap-24" : ""]}>
+              {boats.note && (
+                <div class="max-w-[56ch] space-y-5 text-[.9rem] leading-[1.8] text-ink/70" data-tina-field={tinaField(boats, "note")}>
+                  {paragraphs(boats.note).map((p) => <p>{p}</p>)}
+                </div>
+              )}
+              {book && (
+                <div>
+                  <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
+                  {book.text && <p class="mt-4 max-w-[56ch] text-[.9rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "text")}>{book.text}</p>}
+                  <div class="mt-8 max-w-[60ch] border-t border-ink/14" data-tina-field={tinaField(book, "terms")}>
+                    {list(book.terms).map((t) => {
+                      const cut = t.indexOf(": ");
+                      const label = cut > 0 ? t.slice(0, cut) : t;
+                      const detail = cut > 0 ? t.slice(cut + 2) : "";
+                      return detail ? (
+                        <details class="group border-b border-ink/14 py-5">
+                          <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
+                            <span>{label}</span>
+                            <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
+                          </summary>
+                          <p class="mt-4 text-[.9rem] leading-[1.75] text-ink/80">{detail.charAt(0).toUpperCase() + detail.slice(1)}</p>
+                        </details>
+                      ) : (
+                        <p class="border-b border-ink/14 py-5 text-[.95rem] font-semibold">{label}</p>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

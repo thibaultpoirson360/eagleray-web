@@ -5,7 +5,7 @@
     "imageAlt": "Un kitesurfeur sur une eau turquoise",
     "note": "Expédition spéciale kite · Proposition privée pour Tanguy",
     "title": "Kite & Sail",
-    "subtitle": "8 jours au départ de La Paz, entre La Ventana, Cerralvo et Bonanza. Snorkeling le matin, kite l'après-midi.",
+    "subtitle": "7 jours au départ de La Paz, entre La Ventana, Cerralvo et Bonanza. Snorkeling le matin, kite l'après-midi.",
     "button": {
       "label": "Réserver",
       "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products"
@@ -13,11 +13,11 @@
   },
   "brief": {
     "title": "Une semaine de voile et de kite",
-    "text": "Huit jours à bord, au départ de La Paz. Le matin, snorkeling près du mouillage. L'après-midi, kite, avec le bateau comme base.\n\nAdly, votre Expedition Leader, est instructeur de kite. L'instructeur et l'équipement de kite sont inclus.",
+    "text": "Sept jours à bord, au départ de La Paz. Le matin, snorkeling près du mouillage. L'après-midi, kite, avec le bateau comme base.\n\nAdly, votre Expedition Leader, est instructeur de kite. L'instructeur et l'équipement de kite sont inclus.",
     "facts": [
       {
         "icon": "calendar",
-        "text": "5 au 12 avril 2027 · 8 jours"
+        "text": "12 au 18 avril 2027 · 7 jours"
       },
       {
         "icon": "people",
@@ -268,9 +268,14 @@
             "perPerson": "4 375 USD par personne avec 4 personnes"
           }
         ],
-        "priceNote": "Prix pour le bateau complet et l'expédition de 8 jours."
+        "priceNote": "Prix pour le bateau complet et l'expédition de 7 jours.",
+        "note": "30 % du montant total à verser à la réservation et 70 % au plus tard 30 jours avant le départ"
       }
-    ]
+    ],
+    "button": {
+      "label": "Réserver",
+      "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products"
+    }
   },
   "aboard": {
     "title": "À bord",
