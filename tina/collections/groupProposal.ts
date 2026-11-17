@@ -20,10 +20,11 @@ const photos = (name: string, label: string, description?: string): TinaField =>
   label,
   description,
   list: true,
-  ui: { itemProps: (item: Record<string, string>) => ({ label: item?.alt || item?.image || "Empty photo slot" }), defaultItem: { image: "", alt: "" } },
+  ui: { itemProps: (item: Record<string, string>) => ({ label: item?.caption || item?.alt || item?.image || "Empty photo slot" }), defaultItem: { image: "", alt: "", caption: "" } },
   fields: [
     { type: "image", name: "image", label: "Photo" },
     { type: "string", name: "alt", label: "Description (alt text)" },
+    { type: "string", name: "caption", label: "Caption under the photo", description: "Optional. Shown under the photo, also while the slot is still empty." },
   ],
 });
 
@@ -92,6 +93,23 @@ const groupProposal: Collection = {
         { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
         { type: "string", name: "note", label: "Small note" },
         photos("photos", "Photos"),
+        photos("gallery", "Gallery under the photos", "Empty slots with a caption, to fill in."),
+      ],
+    },
+    {
+      type: "object",
+      name: "dive",
+      label: "3b. Diving",
+      fields: [
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "text", label: "Text", ui: textarea },
+        {
+          type: "string",
+          name: "activities",
+          label: "Extra activity cards (names from Sail with Us)",
+          list: true,
+          description: "Type the activity names exactly as on the Sail with Us page, e.g. 'Scuba diving', 'Kite', 'Wine selection'. The cards, photos and texts come from that page, so they are edited there.",
+        },
       ],
     },
     {
@@ -131,6 +149,16 @@ const groupProposal: Collection = {
     },
     {
       type: "object",
+      name: "food",
+      label: "4b. Food on board",
+      fields: [
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "text", label: "Text", ui: textarea },
+        photos("photos", "Food photos"),
+      ],
+    },
+    {
+      type: "object",
       name: "aboard",
       label: "5. What is aboard",
       fields: [
@@ -148,6 +176,19 @@ const groupProposal: Collection = {
       fields: [
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+        {
+          type: "object",
+          name: "leader",
+          label: "Expedition Leader profile",
+          fields: [
+            { type: "image", name: "image", label: "Portrait" },
+            { type: "string", name: "imageAlt", label: "Portrait description (alt text)" },
+            { type: "string", name: "name", label: "Name" },
+            { type: "string", name: "role", label: "Role" },
+            { type: "string", name: "facts", label: "Facts (shown in a row)", list: true },
+            { type: "string", name: "text", label: "Text", ui: textarea },
+          ],
+        },
         photos("photos", "Photos"),
       ],
     },

@@ -1,0 +1,69 @@
+---
+/**
+ * The "add extra activities" cards of a private proposal: the same cards as on
+ * Sail with Us (ActivitiesSection.astro), with the same texts and photos, since
+ * they are read from that page and edited there once. On hover or keyboard
+ * focus a white banner rises over the photo with the explanation, the price
+ * note and the button; on touch screens the banner sits under the photo. The
+ * button opens WhatsApp with that activity's message already written.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+
+interface Activity {
+  name: string;
+  text?: string | null;
+  image?: string | null;
+  imageAlt?: string | null;
+  priceNote?: string | null;
+  contactMessage?: string | null;
+}
+interface Props {
+  /** Pairs of the activity and its index in the Sail with Us list (for Tina's click-to-edit marker). */
+  items: { activity: Activity; index: number }[];
+  page: any;
+  /** `https://wa.me/<number>` (no message). */
+  whatsapp: string;
+  label?: string | null;
+}
+
+const { items, page, whatsapp, label } = Astro.props;
+const href = (message?: string | null) => (whatsapp ? `${whatsapp}${message ? `?text=${encodeURIComponent(message)}` : ""}` : "");
+---
+
+{
+  items.length > 0 && (
+    <div>
+      {label && <p class="mb-8 font-mono text-[.66rem] tracking-[.18em] text-ink/64 uppercase" data-tina-field={tinaField(page, "activitiesExtraLabel")}>{label}</p>}
+      <ul
+        class="-mx-5 flex scroll-px-5 snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden"
+        tabindex="0"
+        role="group"
+        aria-label={label ?? undefined}
+      >
+        {items.map(({ activity, index }) => (
+          <li class="group relative flex w-[82%] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white md:w-auto" data-tina-field={tinaField(page, "activities", index)}>
+            <div class="relative aspect-[4/5] w-full overflow-hidden bg-ink">
+              {activity.image && <img src={activity.image} alt={activity.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />}
+              <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/65 via-transparent to-transparent [@media(hover:none)]:hidden"></div>
+              <span aria-hidden="true" class="pointer-events-none absolute top-4 right-4 flex size-8 items-center justify-center rounded-full bg-white/90 text-ink transition-opacity duration-500 group-focus-within:opacity-0 group-hover:opacity-0 [@media(hover:none)]:hidden">+</span>
+              <p aria-hidden="true" class="pointer-events-none absolute right-5 bottom-5 left-5 text-[1.3rem] font-semibold text-white [@media(hover:none)]:hidden">{activity.name}</p>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 flex translate-y-full flex-col bg-white p-6 text-ink transition-transform duration-500 ease-soft group-focus-within:translate-y-0 group-hover:translate-y-0 motion-reduce:transition-none [@media(hover:none)]:static [@media(hover:none)]:translate-y-0">
+              <h3 class="text-[1.2rem] font-semibold">{activity.name}</h3>
+              {activity.text && <p class="mt-3 text-[.92rem] leading-[1.65] text-ink/74">{activity.text}</p>}
+              {activity.priceNote && <p class="mt-3 text-[.9rem] font-semibold text-ink/64">{activity.priceNote}</p>}
+              {page.activitiesButtonLabel && href(activity.contactMessage) && (
+                <div class="pt-5">
+                  <Button href={href(activity.contactMessage)} variant="ghost" context="default" size="sm" class="border-ink! bg-transparent! text-ink transition-colors duration-500 group-focus-within:bg-ink! group-focus-within:text-white group-hover:bg-ink! group-hover:text-white hover:bg-ink-hover!">
+                    {page.activitiesButtonLabel}
+                  </Button>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

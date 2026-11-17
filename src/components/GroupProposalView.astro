@@ -14,16 +14,25 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 import Button from "./ui/Button.astro";
 import ProposalPhotos from "./ProposalPhotos.astro";
-import { loadSiteSettings } from "../lib/content";
+import ProposalActivityCards from "./ProposalActivityCards.astro";
+import { loadSiteSettings, loadSailWithUsOrEnglish } from "../lib/content";
 
 interface Props {
   proposal: any;
   locale: string;
 }
 
-const { proposal } = Astro.props;
-const { hero, brief, days, boat, aboard, crew, book, closing, footer } = proposal;
-const settings = await loadSiteSettings();
+const { proposal, locale } = Astro.props;
+const { hero, brief, days, dive, boat, food, aboard, crew, book, closing, footer } = proposal;
+const [settings, sailResult] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any)]);
+const sailPage = sailResult.data.sailWithUsPage;
+// The extra-activity cards come from the Sail with Us page (one place to edit): the proposal only picks which ones, by name.
+const wanted = (dive?.activities ?? []).map((n: string | null) => String(n ?? "").trim().toLowerCase()).filter(Boolean);
+const activityItems = wanted.flatMap((name: string) => {
+  const index = (sailPage.activities ?? []).findIndex((a: any) => a?.name?.trim().toLowerCase() === name);
+  const activity = index >= 0 ? sailPage.activities?.[index] : null;
+  return activity?.name && activity.image ? [{ activity: activity as any, index }] : [];
+});
 const number = String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
 const whatsapp = number ? `https://wa.me/${number}${closing?.message ? `?text=${encodeURIComponent(closing.message)}` : ""}` : "";
 const paragraphs = (text?: string | null) => (text ?? "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
@@ -93,6 +102,7 @@ const [mainPhoto, ...restPhotos] = gallery;
             {paragraphs(days.text).map((p) => <p>{p}</p>)}
           </div>
           <ProposalPhotos photos={days.photos} class="mt-16" />
+          <ProposalPhotos photos={days.gallery} slots class="mt-3 md:mt-6" />
           {days.note && <p class="mt-10 max-w-[56ch] text-[.8rem] leading-relaxed text-white/64" data-tina-field={tinaField(days, "note")}>{days.note}</p>}
         </div>
       </section>
@@ -100,8 +110,22 @@ const [mainPhoto, ...restPhotos] = gallery;
   }
 
   {
+    dive && (
+      <section class="border-t border-ink/10 bg-surface">
+        <div class={box}>
+          <h2 class={h2} data-tina-field={tinaField(dive, "title")}>{dive.title}</h2>
+          {dive.text && <p class={`mt-10 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(dive, "text")}>{dive.text}</p>}
+          <div class="mt-20">
+            <ProposalActivityCards items={activityItems} page={sailPage} whatsapp={number ? `https://wa.me/${number}` : ""} label={sailPage.activitiesExtraLabel} />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
     boat && (
-      <section id="boat" class="scroll-mt-20 bg-surface">
+      <section id="boat" class="scroll-mt-20 border-t border-ink/10 bg-surface">
         <div class={box}>
           <h2 class="text-[clamp(2.4rem,9vw,4.4rem)] leading-none font-semibold tracking-[-.02em]" data-tina-field={tinaField(boat, "title")}>{boat.title}</h2>
           {boat.intro && <p class={`mt-8 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(boat, "intro")}>{boat.intro}</p>}
@@ -146,8 +170,20 @@ const [mainPhoto, ...restPhotos] = gallery;
   }
 
   {
-    aboard && (
+    food && (
       <section class="bg-ink text-white">
+        <div class={box}>
+          <h2 class={`${h2} text-white`} data-tina-field={tinaField(food, "title")}>{food.title}</h2>
+          {food.text && <p class={`mt-10 max-w-[56ch] ${body} text-white/84`} data-tina-field={tinaField(food, "text")}>{food.text}</p>}
+          <ProposalPhotos photos={food.photos} slots class="mt-16" />
+        </div>
+      </section>
+    )
+  }
+
+  {
+    aboard && (
+      <section class="border-t border-white/15 bg-ink text-white">
         <div class={box}>
           <h2 class={`${h2} text-white`} data-tina-field={tinaField(aboard, "title")}>{aboard.title}</h2>
           <div class="mt-16 grid gap-16 md:grid-cols-2 md:gap-24">
@@ -177,6 +213,30 @@ const [mainPhoto, ...restPhotos] = gallery;
           <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-ink/80`} data-tina-field={tinaField(crew, "text")}>
             {paragraphs(crew.text).map((p) => <p>{p}</p>)}
           </div>
+          {crew.leader && (
+            <div class="mt-20 grid gap-10 border-t border-ink/14 pt-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-20" data-tina-field={tinaField(crew, "leader")}>
+              {crew.leader.image ? (
+                <img src={crew.leader.image} alt={crew.leader.imageAlt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover" data-tina-field={tinaField(crew.leader, "image")} />
+              ) : (
+                <div class="aspect-[4/5] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(crew.leader, "image")}></div>
+              )}
+              <div>
+                {crew.leader.name && <h3 class="text-[clamp(1.6rem,5vw,2.2rem)] leading-tight font-semibold" data-tina-field={tinaField(crew.leader, "name")}>{crew.leader.name}</h3>}
+                {crew.leader.role && <p class={`${small} mt-3 text-ink/64`} data-tina-field={tinaField(crew.leader, "role")}>{crew.leader.role}</p>}
+                {list(crew.leader.facts).length > 0 && (
+                  <ul class="mt-8 flex flex-wrap gap-x-3 gap-y-2 text-[.9rem] leading-snug font-semibold" data-tina-field={tinaField(crew.leader, "facts")}>
+                    {list(crew.leader.facts).map((f, i) => (
+                      <li class="flex items-center gap-3">
+                        {i > 0 && <span class="text-ink/35" aria-hidden="true">·</span>}
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {crew.leader.text && <p class={`mt-8 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(crew.leader, "text")}>{crew.leader.text}</p>}
+              </div>
+            </div>
+          )}
           <ProposalPhotos photos={crew.photos} slots class="mt-16" />
         </div>
       </section>

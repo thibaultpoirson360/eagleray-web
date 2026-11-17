@@ -5,7 +5,7 @@
     "imageAlt": "Turquoise shallows and white sand seen from above, in the Sea of Cortez",
     "note": "Private proposal prepared for Jaunt",
     "title": "Christmas at sea, all nine of you.",
-    "subtitle": "Three nights in the Sea of Cortez, December 25 to 28. One boat, two families, and a crew that takes care of everything else.",
+    "subtitle": "4 days, 3 nights in the Sea of Cortez, December 25 to 28. One boat, two families, and a crew that takes care of everything else.",
     "button": {
       "label": "See your boat",
       "href": "#boat"
@@ -17,7 +17,7 @@
     "facts": [
       {
         "icon": "calendar",
-        "text": "Dec 25 to 28 · 3 nights"
+        "text": "Dec 25 to 28 · 4 days, 3 nights"
       },
       {
         "icon": "people",
@@ -25,17 +25,17 @@
       },
       {
         "icon": "pin",
-        "text": "La Paz, Baja California Sur"
+        "text": "Day 1, Dec 25: check-in at the marina, 9:00"
       },
       {
         "icon": "clock",
-        "text": "Boarding 9:00 · Back on land 13:00"
+        "text": "Day 4, Dec 28: check-out, 13:00"
       }
     ]
   },
   "days": {
-    "title": "Three days, no unbreakable agenda",
-    "text": "We leave La Paz on Christmas morning and head for Espíritu Santo, the island in front of the city. The route is decided each morning with the captain, by wind and sea.\n\nPlaces we often reach in three days: the turquoise bays of Ensenada Grande and Caleta Partida, Los Islotes, where a colony of sea lions lives, and Balandra on the way back.\n\nSome days you'll want the paddle boards and the kayak out early. Some days the best plan is to stay anchored and let lunch run long. Both are allowed.",
+    "title": "Four days, no unbreakable agenda",
+    "text": "We leave La Paz on Christmas morning and head for Espíritu Santo, the island in front of the city. The route is decided each morning with the captain, by wind and sea.\n\nAt Los Islotes, at the north end of the island, a colony of sea lions lives on the rocks. The young ones come to play with snorkelers in the water.\n\nThe bays of Ensenada Grande and Caleta Partida are where we usually anchor for the night: white sand, turquoise water and no one else around after sunset.\n\nOn the way back, Balandra: shallow water you can walk across, and the mushroom-shaped rock everyone photographs.\n\nIn between: paddle boards, kayak, snorkel straight off the boat, and long lunches at anchor.",
     "note": "Final route set by the captain according to weather and sea conditions.",
     "photos": [
       {
@@ -46,6 +46,47 @@
         "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
         "alt": "Sea lions resting"
       }
+    ],
+    "gallery": [
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Los Islotes sea lions"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Ensenada Grande"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Caleta Partida"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Balandra"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Snorkel"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Scuba"
+      }
+    ]
+  },
+  "dive": {
+    "title": "For those who want to go deeper",
+    "text": "Alexis, your Expedition Leader, is a dive instructor. Anyone in the group who wants to try scuba for the first time can do a first dive with him, no experience needed. Certified divers can dive with him too. Let us know before the trip so we bring the equipment.",
+    "activities": [
+      "Scuba diving",
+      "Kite",
+      "Wine selection"
     ]
   },
   "boat": {
@@ -118,13 +159,49 @@
     ],
     "priceNote": "Price for the full boat and the full group, valid for 48 hours from the date of this proposal."
   },
+  "food": {
+    "title": "What's cooking on board",
+    "text": "Your chef shops in La Paz the day before you board and cooks three meals a day on board: breakfast on deck, lunch at anchor, dinner as the sun goes down. Tell us about allergies or preferences before the trip and the menu is built around them.",
+    "photos": [
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      }
+    ]
+  },
   "aboard": {
     "title": "What's aboard",
     "onTitle": "On board",
     "offTitle": "Not on board",
     "onBoard": [
       "Captain, chef and deckhand",
-      "An Eagle Ray Expeditions Expedition Leader, with you all three days",
+      "Alexis, your Expedition Leader and dive instructor, with you all four days",
       "All meals on board and non-alcoholic drinks",
       "Fuel, navigation and national park permits",
       "Pickup in La Paz to the marina",
@@ -135,7 +212,8 @@
     "notOnBoard": [
       "Alcohol (bring your own, or ask us about our Baja wine selection)",
       "Crew tips (10% of the trip value is customary)",
-      "Transfer to Los Cabos at the end of the trip"
+      "Transfer to Los Cabos at the end of the trip",
+      "Scuba diving equipment and tanks (on request, book before the trip)"
     ]
   },
   "crew": {
@@ -154,7 +232,19 @@
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
         "alt": ""
       }
-    ]
+    ],
+    "leader": {
+      "image": "",
+      "imageAlt": "",
+      "name": "Alexis",
+      "role": "Your Expedition Leader",
+      "facts": [
+        "Dive instructor",
+        "Speaks French, English and Spanish",
+        "Background in hospitality"
+      ],
+      "text": "Alexis grew up in Chile and spent years in luxury hospitality (Ritz-Carlton & Mandarin Oriental) before the sea became his work. On board he reads the group: who wants to swim at seven, who wants a slow coffee, who's ready to try a first dive. He'll speak French with one family, Italian with the other, and Spanish with the crew."
+    }
   },
   "book": {
     "title": "How to book",

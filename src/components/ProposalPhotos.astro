@@ -12,14 +12,14 @@
 import { tinaField } from "@tinacms/astro/tina-field";
 
 interface Props {
-  photos?: ({ image?: string | null; alt?: string | null } | null)[] | null;
+  photos?: ({ image?: string | null; alt?: string | null; caption?: string | null } | null)[] | null;
   class?: string;
   /** Keep photo slots that have no photo yet as quiet empty boxes, so an editor can click one and add it. */
   slots?: boolean;
 }
 
 const { photos, class: extra, slots = false } = Astro.props;
-const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null } => (slots ? !!p : !!p?.image));
+const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null; caption?: string | null } => (slots ? !!p : !!p?.image));
 const n = list.length;
 
 // Sizes of the rows, biggest first: 4 -> 2+2, 5 -> 3+2, 7 -> 3+2+2, 8 -> 3+3+2.
@@ -49,6 +49,7 @@ const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as c
           ) : (
             <div class:list={["w-full rounded-lg bg-ink/8", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]} data-tina-field={tinaField(p, "image")}></div>
           )}
+          {p.caption && <figcaption class="mt-3 text-[.8rem] leading-snug opacity-70" data-tina-field={tinaField(p, "caption")}>{p.caption}</figcaption>}
         </figure>
       ))}
     </div>
