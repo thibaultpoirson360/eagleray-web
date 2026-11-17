@@ -1,0 +1,38 @@
+---
+/**
+ * `/<locale>/proposals/<slug>/` — a private group proposal in the cinematic
+ * style (tina/collections/groupProposal.ts). Private like the other proposal
+ * template: `noindex`, no link from the site, not in the sitemap. Built for
+ * every language that has a document, not only `liveLocales`, because a
+ * proposal is written for one client in one language.
+ *
+ * The whole page is set in Open Sans, which the Google Fonts link below loads
+ * for this page only (the site already loads its own fonts from Google Fonts).
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import GroupProposalView from "../../../components/GroupProposalView.astro";
+import { loadGroupProposal, loadGroupProposals } from "../../../lib/content";
+import type { Locale } from "../../../i18n/config";
+
+export async function getStaticPaths() {
+  const { pages } = await loadGroupProposals();
+  return pages.map((page) => ({ params: { locale: page._sys.breadcrumbs[0], slug: page._sys.filename } }));
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const result = await loadGroupProposal(locale, slug);
+const proposal = result.data.groupProposal;
+// The link preview (WhatsApp) uses the opening photo; Cloudinary photos go as a light 1200x630 JPEG.
+const preview = proposal.hero?.image?.replace("/upload/f_auto,q_auto/", "/upload/f_jpg,q_auto:eco,w_1200,h_630,c_fill/");
+---
+
+<BaseLayout title={`${proposal.title} | Eagle Ray Expeditions`} ogImage={preview ?? undefined} locale={locale} path={`proposals/${slug}/`} transparentNav={true} noindex={true}>
+  <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" />
+  <main id="main">
+    <TinaIsland name="groupProposal" wrapper={{ tag: "div" }} params={{ locale, slug }}>
+      <GroupProposalView proposal={proposal} locale={locale} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

@@ -97,6 +97,7 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=TASA+Explorer:wght@400..800&display=swap"
     />
+    <slot name="head" />
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <link rel="canonical" href={urlFor(locale)} />}
     {!noindex && liveLocales.map((l) => <link rel="alternate" hreflang={l} href={urlFor(l)} />)}
