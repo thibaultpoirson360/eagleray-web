@@ -75,7 +75,6 @@
     "eyebrow": "La ruta",
     "title": "La Paz y Espíritu Santo",
     "dates": "4 días · 11 al 14 de diciembre de 2026",
-    "mapLabel": "Ruta propuesta para 3 noches",
     "stops": [
       {
         "name": "La Paz",
@@ -107,6 +106,7 @@
       "8 personas, dos por cabina"
     ],
     "note": "Las etapas rondan las 15 millas náuticas. El capitán define la ruta según el clima.",
+    "mapLabel": "Ruta propuesta para 3 noches",
     "mapCredit": "Datos del mapa © colaboradores de OpenStreetMap."
   },
   "boat": {
@@ -121,6 +121,7 @@
         "dates": "11 al 14 de diciembre",
         "price": "$23,625 USD",
         "priceNote": "Barco completo, pensión completa, 3 noches.",
+        "tag": "El que les recomendamos",
         "boatSlug": "bay-dreamer",
         "banner": "/assets/proposals/antoine/barco-lagoon.webp",
         "bannerAlt": "Cubierta y mesa del catamarán Lagoon 450F",
@@ -146,8 +147,7 @@
           "Toallas de playa",
           "Sonido Bluetooth a bordo"
         ],
-        "similarNote": "O un barco similar con características iguales o superiores.",
-        "tag": "El que les recomendamos"
+        "similarNote": "O un barco similar con características iguales o superiores."
       },
       {
         "name": "Bali 4.6 o similar",
@@ -155,6 +155,10 @@
         "dates": "11 al 14 de diciembre",
         "price": "$30,713 USD",
         "priceNote": "Barco completo, pensión completa, 3 noches.",
+        "tag": "",
+        "banner": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_deck_aino3c.jpg",
+        "bannerAlt": "Proa del catamarán Bali 4.6 con huéspedes a bordo",
+        "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "specs": [
           {
             "label": "Tipo",
@@ -173,17 +177,13 @@
             "value": "4"
           }
         ],
-        "similarNote": "O un barco similar con características iguales o superiores.",
-        "tag": "",
-        "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "featureList": [
           "Aire acondicionado",
           "Flybridge y cockpit de proa",
           "Desalinizadora y generador",
           "Snorkel y paddleboard"
         ],
-        "banner": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_deck_aino3c.jpg",
-        "bannerAlt": "Proa del catamarán Bali 4.6 con huéspedes a bordo",
+        "similarNote": "O un barco similar con características iguales o superiores.",
         "photos": [
           {
             "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Interior_comedor_ufil0s.jpg"
@@ -208,97 +208,6 @@
     ],
     "note": "Les proponemos dos catamaranes. El barco exacto lo confirmamos al reservar: este o uno de características similares.\n\nLos dos catamaranes son estables y tienen todo en un mismo nivel: la bebé puede estar cerca mientras ustedes comen o se bañan. A bordo tendrán su chaleco salvavidas infantil y una cuna. Cuéntennos sus horarios y el chef y la tripulación lo tendrán en cuenta."
   },
-  "offer": {
-    "eyebrow": "Qué incluye",
-    "title": "Todo lo que necesitan a bordo",
-    "crew": "Un capitán, un chef y un Expedition Leader de Eagle Ray cuidan del barco, de la mesa y de cada día.",
-    "includedTitle": "Incluido",
-    "included": [
-      "Capitán y chef de Eagle Ray",
-      "Expedition Leader de Eagle Ray, con ustedes todo el viaje",
-      "El barco de tu salida, o uno similar con características iguales o superiores",
-      "Equipo de snorkel y tablas de paddle",
-      "Chaleco salvavidas infantil y cuna",
-      "Desayuno, comida y cena todos los días, preparados a bordo, con el menú que elijan antes del viaje",
-      "Bocadillos y fruta fresca entre nado y nado",
-      "Menús pensados para su grupo: vegetarianos, veganos, sin gluten, alergias",
-      "Pescado de la captura del día, cuando la línea trae algo",
-      "Agua, café, té y refrescos, todo el día",
-      "Recogida en el aeropuerto o en su hotel y traslado privado a la marina"
-    ],
-    "alsoTitle": "También a bordo",
-    "also": [
-      "Diésel",
-      "Permisos de navegación y entrada a parques nacionales",
-      "Wifi Starlink a bordo"
-    ],
-    "excludedTitle": "No incluido",
-    "excluded": [
-      "Vuelos a La Paz",
-      "Bebidas alcohólicas (se pueden pedir antes del viaje)",
-      "Propinas para la tripulación (recomendado entre el 10 y el 15 %)",
-      "Seguro de viaje personal (el barco cuenta con su propio seguro de responsabilidad civil)"
-    ],
-    "terms": [
-      {
-        "label": "Pago",
-        "text": "Con un depósito del 30 % el barco queda reservado para ustedes. El 70 % restante se paga el 1 de diciembre."
-      },
-      {
-        "label": "Clima",
-        "text": "La decisión de salir la toma el capitán, siempre por seguridad."
-      }
-    ],
-    "gallery": [
-      {
-        "image": "/assets/proposals/antoine/incluye-auxiliar.webp",
-        "alt": "Auxiliar a motor en la orilla"
-      },
-      {
-        "image": "/assets/proposals/antoine/incluye-snorkel.webp",
-        "alt": "Dos personas haciendo snorkel"
-      },
-      {
-        "image": "/assets/proposals/antoine/incluye-pesca.webp",
-        "alt": "Cañas de pesca a bordo"
-      },
-      {
-        "image": "/assets/proposals/antoine/incluye-paddle.webp",
-        "alt": "Tabla de paddle en aguas turquesa"
-      },
-      {
-        "image": "/assets/proposals/antoine/incluye-flotadores.webp",
-        "alt": "Personas relajándose sobre flotadores"
-      },
-      {
-        "image": "/assets/proposals/antoine/incluye-kayak.webp",
-        "alt": "Kayak en la bahía"
-      }
-    ]
-  },
-  "reserve": {
-    "title": "Reserven su salida de diciembre",
-    "lede": "Elijan el barco, confirmen las fechas y aseguren sus tres noches en el mar de Cortés.",
-    "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
-    "button": {
-      "label": "Reservar",
-      "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
-    },
-    "note": "En la página de reserva eligen el barco y completan los datos del grupo.",
-    "agentLine": "Tu agente en Eagle Ray: Angela Idini",
-    "contacts": [
-      {
-        "label": "WhatsApp",
-        "value": "+52 55 6809 0942",
-        "href": "https://wa.me/525568090942"
-      },
-      {
-        "label": "Email",
-        "value": "hello@eaglerayexpeditions.com",
-        "href": "mailto:hello@eaglerayexpeditions.com"
-      }
-    ]
-  },
   "crew": {
     "title": "Conozcan a su tripulación",
     "titleEmphasis": "",
@@ -322,8 +231,8 @@
   "about": {
     "eyebrow": "Quiénes somos",
     "title": "Apasionados del mar",
-    "quote": "El velero es el medio, no el destino.",
     "text": "Eagle Ray Expeditions navega por Baja California Sur desde La Paz.\n\nSomos apasionados del mar: capitanes, chefs y líderes de expedición elegidos por dos motivos: cómo manejan un barco y cómo cuidan a las personas a bordo. Una cosa nunca va sin la otra.\n\nLo que la gente se lleva de la experiencia en el mar rara vez es solo el barco. Es la mañana en que alguien leyó el viento por primera vez, la cena que se alargó porque nadie quería levantarse de la mesa, el plan que cambió cuando aparecieron los delfines.\n\nPor eso organizamos cada viaje al revés: primero su grupo y lo que quiere vivir durante sus días en el mar; después, la tripulación que mejor se adapte; y solo entonces, el barco.",
+    "quote": "El velero es el medio, no el destino.",
     "image": "/assets/proposals/antoine/quienes-somos.webp",
     "imageAlt": "Eagle Ray Expeditions: gente del mar apasionada"
   },
@@ -474,6 +383,74 @@
       }
     ]
   },
+  "offer": {
+    "eyebrow": "Qué incluye",
+    "title": "Todo lo que necesitan a bordo",
+    "crew": "Un capitán, un chef y un Expedition Leader de Eagle Ray cuidan del barco, de la mesa y de cada día.",
+    "includedTitle": "Incluido",
+    "included": [
+      "Capitán y chef de Eagle Ray",
+      "Expedition Leader de Eagle Ray, con ustedes todo el viaje",
+      "El barco de tu salida, o uno similar con características iguales o superiores",
+      "Equipo de snorkel y tablas de paddle",
+      "Chaleco salvavidas infantil y cuna",
+      "Desayuno, comida y cena todos los días, preparados a bordo, con el menú que elijan antes del viaje",
+      "Bocadillos y fruta fresca entre nado y nado",
+      "Menús pensados para su grupo: vegetarianos, veganos, sin gluten, alergias",
+      "Pescado de la captura del día, cuando la línea trae algo",
+      "Agua, café, té y refrescos, todo el día",
+      "Recogida en el aeropuerto o en su hotel y traslado privado a la marina"
+    ],
+    "alsoTitle": "También a bordo",
+    "also": [
+      "Diésel",
+      "Permisos de navegación y entrada a parques nacionales",
+      "Wifi Starlink a bordo"
+    ],
+    "excludedTitle": "No incluido",
+    "excluded": [
+      "Vuelos a La Paz",
+      "Bebidas alcohólicas (se pueden pedir antes del viaje)",
+      "Propinas para la tripulación (recomendado entre el 10 y el 15 %)",
+      "Seguro de viaje personal (el barco cuenta con su propio seguro de responsabilidad civil)"
+    ],
+    "gallery": [
+      {
+        "image": "/assets/proposals/antoine/incluye-auxiliar.webp",
+        "alt": "Auxiliar a motor en la orilla"
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-snorkel.webp",
+        "alt": "Dos personas haciendo snorkel"
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-pesca.webp",
+        "alt": "Cañas de pesca a bordo"
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-paddle.webp",
+        "alt": "Tabla de paddle en aguas turquesa"
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-flotadores.webp",
+        "alt": "Personas relajándose sobre flotadores"
+      },
+      {
+        "image": "/assets/proposals/antoine/incluye-kayak.webp",
+        "alt": "Kayak en la bahía"
+      }
+    ],
+    "terms": [
+      {
+        "label": "Pago",
+        "text": "Con un depósito del 30 % el barco queda reservado para ustedes. El 70 % restante se paga el 1 de diciembre."
+      },
+      {
+        "label": "Clima",
+        "text": "La decisión de salir la toma el capitán, siempre por seguridad."
+      }
+    ]
+  },
   "practical": {
     "eyebrow": "Todo lo que conviene saber",
     "title": "Antes de zarpar",
@@ -575,6 +552,29 @@
       {
         "question": "¿Y si somos nosotros los que tenemos que cancelar?",
         "answer": "Hasta el 1 de diciembre, el depósito no se devuelve, pero pueden usarlo para otra fecha en los próximos 12 meses. A partir del 1 de diciembre, el importe total no es reembolsable. Por eso les recomendamos viajar con seguro de viaje."
+      }
+    ]
+  },
+  "reserve": {
+    "title": "Reserven su salida de diciembre",
+    "lede": "Elijan el barco, confirmen las fechas y aseguren sus tres noches en el mar de Cortés.",
+    "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
+    "button": {
+      "label": "Reservar",
+      "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
+    },
+    "note": "En la página de reserva eligen el barco y completan los datos del grupo.",
+    "agentLine": "Tu agente en Eagle Ray: Angela",
+    "contacts": [
+      {
+        "label": "WhatsApp",
+        "value": "+52 55 6809 0942",
+        "href": "https://wa.me/525568090942"
+      },
+      {
+        "label": "Email",
+        "value": "hello@eaglerayexpeditions.com",
+        "href": "mailto:hello@eaglerayexpeditions.com"
       }
     ]
   },
