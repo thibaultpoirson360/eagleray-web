@@ -60,8 +60,12 @@ const leaderMember = crewResult.members.find((m: any) => m._sys.filename === Str
 const leaderPhoto = crew?.leader?.image || (leaderMember ? memberPhotos(leaderMember as any)[0]?.src : "");
 const crewMembers = ((crew?.members ?? []) as (string | null)[]).flatMap((name) => crewResult.members.filter((m: any) => m._sys.filename === String(name ?? "").trim()));
 
-const stopsIn = ((route?.stops ?? []) as any[]).filter((s) => s && typeof s.lat === "number" && typeof s.lon === "number");
-const { stops, drawn } = placeStops(stopsIn);
+// The drawn map (La Paz and Espíritu Santo) is used only when every stop has coordinates; otherwise the stops are a list and the route is a photo.
+const stopsIn = ((route?.stops ?? []) as any[]).filter((s) => s?.name);
+const mappable = stopsIn.length > 0 && stopsIn.every((s) => typeof s.lat === "number" && typeof s.lon === "number");
+const placed = mappable ? placeStops(stopsIn) : { stops: stopsIn.map((s, i) => ({ n: i + 1, name: s.name, sub: s.sub ?? "" })), drawn: 0 };
+const stops = placed.stops as any[];
+const drawn = placed.drawn;
 
 const options = ((boats?.options ?? []) as any[]).filter(Boolean);
 // One literal class per tab (Tailwind only keeps classes it can read here): show the panel whose radio is checked.
@@ -238,8 +242,8 @@ const icons: Record<string, string> = {
     stops.length > 0 && (
       <section class={light}>
         <div class={box}>
-          <div class="grid items-start gap-14 md:grid-cols-[11rem_1fr] md:gap-28">
-            <div class="w-32 md:w-full">
+          <div class:list={["grid items-start gap-14", mappable ? "md:grid-cols-[11rem_1fr] md:gap-28" : ""]}>
+            {mappable && <div class="w-32 md:w-full">
               <svg viewBox="468 140 272 800" role="img" aria-label={route.mapLabel ?? route.title} class="aspect-[272/800] h-auto w-full rounded-lg">
                 <rect x="0" y="0" width="1000" height="1100" class="fill-ink/10"></rect>
                 {LAND.map((d) => <path d={d} class="fill-surface stroke-ink/20" stroke-width=".8" />)}
@@ -252,7 +256,7 @@ const icons: Record<string, string> = {
                   </g>
                 ))}
               </svg>
-            </div>
+            </div>}
             <div>
               {route.eyebrow && <p class={`${small} text-ink/64`} data-tina-field={tinaField(route, "eyebrow")}>{route.eyebrow}</p>}
               <h2 class={`${route.eyebrow ? "mt-7 " : ""}${h2}`} data-tina-field={tinaField(route, "title")}>{route.title}</h2>
@@ -275,7 +279,7 @@ const icons: Record<string, string> = {
               {route.credit && <p class="mt-4 text-[.75rem] text-ink/50" data-tina-field={tinaField(route, "credit")}>{route.credit}</p>}
             </div>
           </div>
-          <ProposalPhotos photos={route.photos} slots class="mt-20" />
+          <ProposalPhotos photos={route.photos} slots natural class="mt-20" />
         </div>
       </section>
     )

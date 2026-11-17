@@ -197,15 +197,15 @@ const groupProposal: Collection = {
           fields: [
             { type: "string", name: "name", label: "Place", required: true },
             { type: "string", name: "sub", label: "Detail" },
-            { type: "number", name: "lat", label: "Latitude", required: true, description: "e.g. 24.296" },
-            { type: "number", name: "lon", label: "Longitude", required: true, description: "e.g. -110.335" },
+            { type: "number", name: "lat", label: "Latitude", description: "e.g. 24.296. Fill in latitude and longitude for every stop to draw the map of La Paz and Espíritu Santo. Leave both empty for a trip outside that area: the stops show as a list and you add the map as a photo." },
+            { type: "number", name: "lon", label: "Longitude", description: "e.g. -110.335" },
           ],
         },
         { type: "string", name: "facts", label: "Highlights", list: true },
         { type: "string", name: "note", label: "Note under the route", ui: textarea },
         { type: "string", name: "mapLabel", label: "Map description (for screen readers)" },
         { type: "string", name: "credit", label: "Map credit", description: "Keep the OpenStreetMap credit." },
-        photos("photos", "Photos under the map"),
+        photos("photos", "Photos under the map", "For a trip outside the drawn area, put the route map here as a photo: it is shown whole, not cropped."),
       ],
     },
     {
