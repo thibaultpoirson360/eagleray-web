@@ -1,5 +1,19 @@
 import type { Collection } from "tinacms";
+import type { TinaField } from "tinacms";
 import { ctaField, textarea } from "../shared/fields";
+
+/** A row of photos under a section: a photo and its description (alt text). */
+const photosField = (name = "photos", label = "Photos"): TinaField => ({
+  type: "object",
+  name,
+  label,
+  list: true,
+  ui: { itemProps: (item: Record<string, string>) => ({ label: item?.alt || item?.image }) },
+  fields: [
+    { type: "image", name: "image", label: "Photo" },
+    { type: "string", name: "alt", label: "Description (alt text)" },
+  ],
+});
 
 /**
  * Private trip proposals: one page per client, reached only by a long link
@@ -55,6 +69,7 @@ const tripProposal: Collection = {
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
         { type: "string", name: "signature", label: "Signature" },
+        photosField(),
       ],
     },
     {
@@ -182,6 +197,62 @@ const tripProposal: Collection = {
     },
     {
       type: "object",
+      name: "notice",
+      label: "Notice under the opening photo",
+      description: "A thin bar for urgency: limited places, the date the proposal expires.",
+      fields: [
+        { type: "string", name: "availability", label: "Availability", description: "e.g. 'Queda 1 plaza disponible'." },
+        { type: "string", name: "expires", label: "Expiry", description: "e.g. 'Esta propuesta vence el 25 de noviembre de 2026'." },
+      ],
+    },
+    {
+      type: "object",
+      name: "about",
+      label: "Who we are",
+      fields: [
+        { type: "string", name: "eyebrow", label: "Small label" },
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+        { type: "string", name: "quote", label: "Highlighted sentence" },
+        { type: "image", name: "image", label: "Wide photo under the text" },
+        { type: "string", name: "imageAlt", label: "Photo description (alt text)" },
+      ],
+    },
+    {
+      type: "object",
+      name: "itinerary",
+      label: "Day by day",
+      fields: [
+        { type: "string", name: "eyebrow", label: "Small label" },
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "intro", label: "Text under the title", ui: textarea },
+        {
+          type: "object",
+          name: "days",
+          label: "Days",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: `${item?.label ?? ""} · ${item?.title ?? ""}` }) },
+          fields: [
+            { type: "string", name: "label", label: "Day label", required: true, description: "e.g. 'Día 1'." },
+            { type: "string", name: "title", label: "Day title", required: true, description: "e.g. 'Viernes 11'." },
+            {
+              type: "object",
+              name: "moments",
+              label: "Moments",
+              list: true,
+              ui: { itemProps: (item: Record<string, string>) => ({ label: item?.time }) },
+              fields: [
+                { type: "string", name: "time", label: "Time of day", required: true },
+                { type: "string", name: "text", label: "Text", ui: textarea },
+              ],
+            },
+            photosField(),
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
       name: "offer",
       label: "What is included",
       fields: [
@@ -194,6 +265,7 @@ const tripProposal: Collection = {
         { type: "string", name: "also", label: "Also on board: list", list: true },
         { type: "string", name: "excludedTitle", label: "Not included: heading" },
         { type: "string", name: "excluded", label: "Not included: list", list: true },
+        photosField("gallery", "Photos under the lists"),
         {
           type: "object",
           name: "terms",
@@ -209,6 +281,47 @@ const tripProposal: Collection = {
     },
     {
       type: "object",
+      name: "practical",
+      label: "Good to know",
+      fields: [
+        { type: "string", name: "eyebrow", label: "Small label" },
+        { type: "string", name: "title", label: "Title", required: true },
+        {
+          type: "object",
+          name: "items",
+          label: "Topics",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: item?.title }) },
+          fields: [
+            { type: "string", name: "title", label: "Topic", required: true, description: "e.g. 'Cómo llegar', 'Comida', 'Qué traer', 'Clima'." },
+            { type: "string", name: "text", label: "Text", ui: textarea },
+            photosField(),
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
+      name: "faq",
+      label: "Questions and answers",
+      fields: [
+        { type: "string", name: "eyebrow", label: "Small label" },
+        { type: "string", name: "title", label: "Title", required: true },
+        {
+          type: "object",
+          name: "items",
+          label: "Questions",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: item?.question }) },
+          fields: [
+            { type: "string", name: "question", label: "Question", required: true },
+            { type: "string", name: "answer", label: "Answer", ui: textarea },
+          ],
+        },
+      ],
+    },
+    {
+      type: "object",
       name: "reserve",
       label: "Reserve",
       fields: [
@@ -217,9 +330,22 @@ const tripProposal: Collection = {
         { type: "image", name: "image", label: "Background photo" },
         ctaField("button", "Reserve button"),
         { type: "string", name: "note", label: "Small print under the button", ui: textarea },
-        { type: "string", name: "contactLabel", label: "Text before the email", description: "e.g. 'Dudas: escríbenos a'." },
+        { type: "string", name: "agentLine", label: "Your Eagle Ray contact", description: "e.g. 'Tu agente: Angela Idini'." },
+        {
+          type: "object",
+          name: "contacts",
+          label: "Contact links",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: item?.label }) },
+          fields: [
+            { type: "string", name: "label", label: "Name", required: true, description: "e.g. 'WhatsApp'." },
+            { type: "string", name: "value", label: "Shown as", required: true },
+            { type: "string", name: "href", label: "Link", required: true },
+          ],
+        },
       ],
     },
+    { type: "string", name: "legal", label: "Small print at the very bottom", ui: textarea },
   ],
 };
 

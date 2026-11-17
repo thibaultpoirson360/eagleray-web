@@ -18,6 +18,7 @@ import { LAND } from "../lib/espiritu-santo-map";
 import { ROUTE_D, placeStops } from "../lib/proposal-map";
 import ImageSlider from "./ImageSlider.tsx";
 import ProposalDay from "./ProposalDay.tsx";
+import ProposalPhotos from "./ProposalPhotos.astro";
 import CrewSummaryCard from "./CrewSummaryCard.astro";
 import SliderDots from "./SliderDots.tsx";
 import { loadBoats, loadBoatsSection, loadCrew, loadCrewSection } from "../lib/content";
@@ -28,7 +29,7 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props as { proposal: any; locale: any };
-const { hero, welcome, day, route, boat, offer, reserve, crew } = proposal;
+const { hero, welcome, day, route, boat, offer, reserve, crew, notice, about, itinerary, practical, faq, legal } = proposal;
 // Photos of a boat come from the Boats page, so they are edited once; the labels of the photo slider come from its pop-up texts.
 const [boatsResult, boatsSection, crewResult, crewSection] = await Promise.all([loadBoats(locale), loadBoatsSection(locale), loadCrew(locale), loadCrewSection(locale)]);
 const modal = boatsSection.data.boatsSection.modal;
@@ -81,6 +82,18 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
 />
 
 {
+  (notice?.availability || notice?.expires) && (
+    <div class="bg-ink text-white">
+      <div class={`mx-auto flex max-w-site flex-wrap items-center justify-center gap-x-12 gap-y-3 ${gutter} py-6 font-mono text-[.62rem] tracking-[.2em] text-white/86 uppercase`}>
+        {notice.availability && <p data-tina-field={tinaField(notice, "availability")}>{notice.availability}</p>}
+        {notice.availability && notice.expires && <span class="hidden h-3 w-px bg-white/30 md:block" aria-hidden="true"></span>}
+        {notice.expires && <p data-tina-field={tinaField(notice, "expires")}>{notice.expires}</p>}
+      </div>
+    </div>
+  )
+}
+
+{
   welcome && (
     <section class="bg-surface">
       <div class:list={[sectionBox, "grid gap-16 md:grid-cols-[1fr_1.4fr] md:gap-32"]}>
@@ -93,6 +106,33 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
           {welcome.signature && <p class="pt-6 font-sans text-[.75rem] tracking-wide text-ink/64" data-tina-field={tinaField(welcome, "signature")}>{welcome.signature}</p>}
         </div>
       </div>
+      {(welcome.photos?.length ?? 0) > 0 && (
+        <div class={`mx-auto max-w-site ${gutter} pb-[calc(var(--spacing-section)*2.8)]`}>
+          <ProposalPhotos photos={welcome.photos} />
+        </div>
+      )}
+    </section>
+  )
+}
+
+{
+  about && (
+    <section class="bg-white">
+      <div class:list={[sectionBox, "grid gap-16 md:grid-cols-[1fr_1.4fr] md:gap-32"]}>
+        <div>
+          {about.eyebrow && <p class={eyebrow} data-tina-field={tinaField(about, "eyebrow")}>{about.eyebrow}</p>}
+          <h2 class={`mt-7 ${h2}`} data-tina-field={tinaField(about, "title")}>{about.title}</h2>
+          {about.quote && <p class="mt-12 max-w-[26ch] font-serif text-[clamp(1.05rem,1.8vw,1.3rem)] leading-[1.5] text-ink/86 italic" data-tina-field={tinaField(about, "quote")}>{about.quote}</p>}
+        </div>
+        <div class="space-y-8 text-[.82rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(about, "text")}>
+          {paragraphs(about.text).map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+      {about.image && (
+        <div class={`mx-auto max-w-site ${gutter} pb-[calc(var(--spacing-section)*2.8)]`}>
+          <img src={about.image} alt={about.imageAlt ?? ""} loading="lazy" decoding="async" class="aspect-[21/9] w-full rounded-lg object-cover" data-tina-field={tinaField(about, "image")} />
+        </div>
+      )}
     </section>
   )
 }
@@ -114,6 +154,39 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
         fields: { time: tinaField(x, "time"), title: tinaField(x, "title"), text: tinaField(x, "text"), image: tinaField(x, "image") },
       }))}
     />
+  )
+}
+
+{
+  itinerary && (itinerary.days?.length ?? 0) > 0 && (
+    <section class="bg-surface">
+      <div class={sectionBox}>
+        {itinerary.eyebrow && <p class={eyebrow} data-tina-field={tinaField(itinerary, "eyebrow")}>{itinerary.eyebrow}</p>}
+        <h2 class={`mt-7 ${h2}`} data-tina-field={tinaField(itinerary, "title")}>{itinerary.title}</h2>
+        {itinerary.intro && <p class="mt-8 max-w-[56ch] text-[.85rem] leading-[1.8] text-ink/74" data-tina-field={tinaField(itinerary, "intro")}>{itinerary.intro}</p>}
+        <div class="mt-24 border-t border-ink/14">
+          {itinerary.days.map((d: any) => (
+            <div class="grid gap-8 border-b border-ink/14 py-16 md:grid-cols-[14rem_1fr] md:gap-24" data-tina-field={tinaField(d)}>
+              <div>
+                <p class={eyebrow} data-tina-field={tinaField(d, "label")}>{d.label}</p>
+                <h3 class="mt-4 font-display text-[1.3rem] leading-tight" data-tina-field={tinaField(d, "title")}>{d.title}</h3>
+              </div>
+              <div>
+              <ul class="space-y-6">
+                {((d.moments ?? []) as any[]).map((m) => (
+                  <li class="grid gap-1 sm:grid-cols-[7.5rem_1fr] sm:gap-6" data-tina-field={tinaField(m)}>
+                    <span class={`${eyebrow} pt-1`}>{m.time}</span>
+                    <span class="text-[.82rem] leading-[1.7] text-ink/86">{m.text}</span>
+                  </li>
+                ))}
+              </ul>
+              <ProposalPhotos photos={d.photos} class="mt-12" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
 
@@ -264,6 +337,7 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
             )
           ))}
         </div>
+        <ProposalPhotos photos={offer.gallery} class="mt-20" />
         {(offer.terms?.length ?? 0) > 0 && (
           <dl class="mt-24 border-t border-ink/14">
             {offer.terms.map((t: any) => (
@@ -304,6 +378,52 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
 }
 
 {
+  practical && (practical.items?.length ?? 0) > 0 && (
+    <section class="bg-surface">
+      <div class={sectionBox}>
+        {practical.eyebrow && <p class={eyebrow} data-tina-field={tinaField(practical, "eyebrow")}>{practical.eyebrow}</p>}
+        <h2 class={`mt-7 ${h2}`} data-tina-field={tinaField(practical, "title")}>{practical.title}</h2>
+        <div class="mt-24 grid gap-x-24 gap-y-20 md:grid-cols-2">
+          {practical.items.map((it: any) => (
+            <div class="border-t border-ink/14 pt-8" data-tina-field={tinaField(it)}>
+              <h3 class="font-display text-[1.05rem] leading-tight" data-tina-field={tinaField(it, "title")}>{it.title}</h3>
+              <div class="mt-5 space-y-4 text-[.8rem] leading-[1.85] text-ink/74" data-tina-field={tinaField(it, "text")}>
+                {paragraphs(it.text).map((p) => <p>{p}</p>)}
+              </div>
+              <ProposalPhotos photos={it.photos} class="mt-8" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
+  faq && (faq.items?.length ?? 0) > 0 && (
+    <section class="bg-white">
+      <div class:list={[sectionBox, "grid gap-16 md:grid-cols-[1fr_1.6fr] md:gap-32"]}>
+        <div>
+          {faq.eyebrow && <p class={eyebrow} data-tina-field={tinaField(faq, "eyebrow")}>{faq.eyebrow}</p>}
+          <h2 class={`mt-7 ${h2}`} data-tina-field={tinaField(faq, "title")}>{faq.title}</h2>
+        </div>
+        <div class="border-t border-ink/14">
+          {faq.items.map((q: any) => (
+            <details class="group border-b border-ink/14 py-7" data-tina-field={tinaField(q)}>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-8 text-[.9rem] font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
+                <span data-tina-field={tinaField(q, "question")}>{q.question}</span>
+                <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <p class="mt-6 max-w-[58ch] text-[.8rem] leading-[1.9] text-ink/74" data-tina-field={tinaField(q, "answer")}>{q.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+{
   reserve && (
     <section class="relative isolate overflow-hidden bg-ink text-white">
       {reserve.image && <img src={reserve.image} alt="" loading="lazy" decoding="async" class="absolute inset-0 z-[-1] h-full w-full object-cover" data-tina-field={tinaField(reserve, "image")} />}
@@ -317,7 +437,25 @@ const sectionBox = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing
           </div>
         )}
         {reserve.note && <p class="mx-auto mt-10 max-w-[46ch] text-[.7rem] leading-relaxed text-white/64" data-tina-field={tinaField(reserve, "note")}>{reserve.note}</p>}
+        {(reserve.agentLine || (reserve.contacts?.length ?? 0) > 0) && (
+          <div class="mt-20 border-t border-white/20 pt-10 text-[.74rem] text-white/78">
+            {reserve.agentLine && <p data-tina-field={tinaField(reserve, "agentLine")}>{reserve.agentLine}</p>}
+            {(reserve.contacts?.length ?? 0) > 0 && (
+              <ul class="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+                {reserve.contacts.map((c: any) => (
+                  <li data-tina-field={tinaField(c)}><a href={c.href} class="underline underline-offset-4 hover:text-white">{c.label}: {c.value}</a></li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )}
       </div>
     </section>
+  )
+}
+
+{
+  legal && (
+    <p class={`mx-auto max-w-site ${gutter} py-16 text-[.68rem] leading-[1.8] text-ink/50`} data-tina-field={tinaField(proposal, "legal")}>{legal}</p>
   )
 }
