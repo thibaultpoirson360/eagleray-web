@@ -14,10 +14,12 @@ import { tinaField } from "@tinacms/astro/tina-field";
 interface Props {
   photos?: ({ image?: string | null; alt?: string | null } | null)[] | null;
   class?: string;
+  /** Keep photo slots that have no photo yet as quiet empty boxes, so an editor can click one and add it. */
+  slots?: boolean;
 }
 
-const { photos, class: extra } = Astro.props;
-const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null } => !!p?.image);
+const { photos, class: extra, slots = false } = Astro.props;
+const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null } => (slots ? !!p : !!p?.image));
 const n = list.length;
 
 // Sizes of the rows, biggest first: 4 -> 2+2, 5 -> 3+2, 7 -> 3+2+2, 8 -> 3+3+2.
@@ -35,14 +37,18 @@ const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as c
     <div class:list={["grid grid-cols-6 gap-3 md:gap-6", extra]}>
       {list.map((p, i) => (
         <figure class:list={["m-0", i === n - 1 && n % 2 === 1 ? "col-span-6" : "col-span-3", wide[perPhoto[i] as 1 | 2 | 3]]}>
-          <img
-            src={p.image}
-            alt={p.alt ?? ""}
-            loading="lazy"
-            decoding="async"
-            class:list={["w-full rounded-lg object-cover", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]}
-            data-tina-field={tinaField(p, "image")}
-          />
+          {p.image ? (
+            <img
+              src={p.image}
+              alt={p.alt ?? ""}
+              loading="lazy"
+              decoding="async"
+              class:list={["w-full rounded-lg object-cover", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]}
+              data-tina-field={tinaField(p, "image")}
+            />
+          ) : (
+            <div class:list={["w-full rounded-lg bg-ink/8", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]} data-tina-field={tinaField(p, "image")}></div>
+          )}
         </figure>
       ))}
     </div>

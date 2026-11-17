@@ -277,6 +277,22 @@ export function loadTripProposal(locale: Locale, slug: string, options?: Request
   );
 }
 
+/** Private group proposals, cinematic style (content/groupProposal/<locale>/<slug>.json). */
+export async function loadGroupProposals(options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.groupProposalConnection(), options);
+  const pages = (result.data.groupProposalConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node);
+  return { ...result, pages };
+}
+
+export function loadGroupProposal(locale: Locale, slug: string, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.groupProposal({ relativePath: `${locale}/${slug}.json` }),
+    options
+  );
+}
+
 /** The La Paz page (content/laPage/<locale>.json). */
 export function loadLaPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.laPage({ relativePath: `${locale}.json` }), options);

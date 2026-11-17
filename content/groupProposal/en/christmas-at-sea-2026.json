@@ -1,0 +1,176 @@
+{
+  "title": "Christmas at sea 2026",
+  "hero": {
+    "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
+    "imageAlt": "Turquoise shallows and white sand seen from above, in the Sea of Cortez",
+    "note": "Private proposal prepared for Jaunt",
+    "title": "Christmas at sea, all nine of you.",
+    "subtitle": "Three nights in the Sea of Cortez, December 25 to 28. One boat, two families, and a crew that takes care of everything else.",
+    "button": {
+      "label": "See your boat",
+      "href": "#boat"
+    }
+  },
+  "brief": {
+    "title": "What you asked for",
+    "text": "Everyone on the same boat. Four rooms set up the way your families sleep: grandparents, mother and daughter, parents, and the three sisters. And a finish in La Paz with the afternoon free for the road to Los Cabos.\n\nThat's the brief. Here is how we'd do it.",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "Dec 25 to 28 · 3 nights"
+      },
+      {
+        "icon": "people",
+        "text": "9 guests · 2 families"
+      },
+      {
+        "icon": "pin",
+        "text": "La Paz, Baja California Sur"
+      },
+      {
+        "icon": "clock",
+        "text": "Boarding 9:00 · Back on land 13:00"
+      }
+    ]
+  },
+  "days": {
+    "title": "Three days, no unbreakable agenda",
+    "text": "We leave La Paz on Christmas morning and head for Espíritu Santo, the island in front of the city. The route is decided each morning with the captain, by wind and sea.\n\nPlaces we often reach in three days: the turquoise bays of Ensenada Grande and Caleta Partida, Los Islotes, where a colony of sea lions lives, and Balandra on the way back.\n\nSome days you'll want the paddle boards and the kayak out early. Some days the best plan is to stay anchored and let lunch run long. Both are allowed.",
+    "note": "Final route set by the captain according to weather and sea conditions.",
+    "photos": [
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-costa.webp",
+        "alt": "A cove of red rock and sand on Espíritu Santo"
+      },
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
+        "alt": "Sea lions resting"
+      }
+    ]
+  },
+  "boat": {
+    "title": "Fountaine Pajot Saona 47",
+    "intro": "A private catamaran with five cabins, each with its own bathroom. Captain, chef, deckhand and our Expedition Leader on board.",
+    "gallery": [
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      }
+    ],
+    "specs": "2019, refit 2026 · 5 cabins · 5 bathrooms",
+    "cabins": [
+      {
+        "who": "Grandparents",
+        "cabin": "queen cabin"
+      },
+      {
+        "who": "Mother and daughter",
+        "cabin": "queen cabin"
+      },
+      {
+        "who": "Parents",
+        "cabin": "queen cabin"
+      },
+      {
+        "who": "Two sisters",
+        "cabin": "queen cabin"
+      },
+      {
+        "who": "Third sister",
+        "cabin": "cabin with bunk beds"
+      }
+    ],
+    "prices": [
+      {
+        "label": "Bank transfer",
+        "total": "USD 22,500 total",
+        "perPerson": "USD 2,500 per person"
+      },
+      {
+        "label": "Card payment",
+        "total": "USD 23,250 total",
+        "perPerson": "USD 2,583 per person"
+      }
+    ],
+    "priceNote": "Price for the full boat and the full group, valid for 48 hours from the date of this proposal."
+  },
+  "aboard": {
+    "title": "What's aboard",
+    "onTitle": "On board",
+    "on": [
+      "Captain, chef and deckhand",
+      "An Eagle Ray Expeditions Expedition Leader, with you all three days",
+      "All meals on board and non-alcoholic drinks",
+      "Fuel, navigation and national park permits",
+      "Pickup in La Paz to the marina",
+      "Wi-Fi, air conditioning and watermaker",
+      "Dinghy, 2 paddle boards, double kayak, inflatable platform, snorkel gear for everyone",
+      "BBQ, beach shade, chairs and towels"
+    ],
+    "offTitle": "Not on board",
+    "off": [
+      "Alcohol (bring your own, or ask us about our Baja wine selection)",
+      "Crew tips (10% of the trip value is customary)",
+      "Transfer to Los Cabos at the end of the trip"
+    ]
+  },
+  "crew": {
+    "title": "The people running the boat",
+    "text": "The captain reads the sea. The chef cooks with what Baja has that week. The deckhand handles the dinghy and the anchor. And your Expedition Leader reads the group: when to swim, when to sail, when to leave everyone alone with a coffee on the bow.\n\nYou bring the people. We take care of the rest.",
+    "photos": [
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      },
+      {
+        "image": "",
+        "alt": ""
+      }
+    ]
+  },
+  "book": {
+    "title": "How to book",
+    "text": "Christmas dates go fast and the boat is held only once we receive the deposit. These are the terms:",
+    "terms": [
+      "Bank transfer price: payment in USD to the Eagle Ray Expeditions US account. 50% on confirmation and 50% before November 23, or 100% on confirmation.",
+      "Card price: payment through a secure payment link. 50% on confirmation and 50% before November 23, or 100% on confirmation.",
+      "This proposal is valid for 48 hours.",
+      "Cancellation: 50% of the amount paid is refunded for cancellations before November 24. From November 24, payments are non-refundable.",
+      "Weather: if conditions prevent sailing, we extend the lost day when the boat's schedule allows. If not, we refund 50% of each day lost."
+    ]
+  },
+  "closing": {
+    "title": "Ready when you are",
+    "text": "Tell us how you'd like to pay, and we'll send the booking details the same day.",
+    "buttonLabel": "Confirm on WhatsApp",
+    "message": "Hi, we'd like to confirm the Christmas expedition on the Fountaine Pajot Saona 47, paying by ___."
+  },
+  "footer": {
+    "line1": "Eagle Ray Expeditions · Ocean adventures led by passionate sea people",
+    "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
+  }
+}

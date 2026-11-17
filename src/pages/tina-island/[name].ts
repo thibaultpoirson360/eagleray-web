@@ -38,6 +38,7 @@ import BlogListing from "../../components/BlogListing.astro";
 import BlogPostView from "../../components/BlogPostView.astro";
 import LandingPageView from "../../components/LandingPageView.astro";
 import TripProposalView from "../../components/TripProposalView.astro";
+import GroupProposalView from "../../components/GroupProposalView.astro";
 import {
   loadHero,
   loadDifference,
@@ -63,6 +64,7 @@ import {
   loadBlogPost,
   loadLandingPage,
   loadTripProposal,
+  loadGroupProposal,
 } from "../../lib/content";
 import { defaultLocale, isLocale, type Locale } from "../../i18n/config";
 
@@ -363,6 +365,15 @@ const route = createIslandRoute({
     wrapper: { tag: "div" },
     propsFromData: (result: unknown, params: URLSearchParams) => ({
       proposal: (result as Awaited<ReturnType<typeof loadTripProposal>>).data.tripProposal,
+      locale: localeFromParams(params),
+    }),
+  },
+  groupProposal: {
+    fetch: async (_request: Request, params: URLSearchParams) => loadGroupProposal(localeFromParams(params), params.get("slug") ?? ""),
+    component: GroupProposalView,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown, params: URLSearchParams) => ({
+      proposal: (result as Awaited<ReturnType<typeof loadGroupProposal>>).data.groupProposal,
       locale: localeFromParams(params),
     }),
   },
