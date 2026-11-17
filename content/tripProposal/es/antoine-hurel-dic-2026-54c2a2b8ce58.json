@@ -2,17 +2,17 @@
   "title": "Propuesta para Antoine Hurel",
   "hero": {
     "kicker": "Propuesta para Antoine Hurel · La Paz, Mar de Cortés",
-    "title": "Renueven energías con los suyos en el mar de Cortés",
+    "title": "Tres noches en el mar, solo para ti y tú familia",
     "lede": "Tres noches en el mar, sin prisa. Salen de La Paz y pasan los días entre el agua, la cubierta y las calas de Espíritu Santo.",
     "dates": "Viernes 11 de diciembre, 9:00 → lunes 14, 9:00 · 8 personas, dos por cabina",
-    "image": "https://eagle-ray-trip-pages.vercel.app/media/eagle-ray/hero-loop-poster.jpg",
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/josh-withers-C989jL20Yr0-unsplash_f0cjju.jpg",
     "imageAlt": "El mar de Cortés visto desde un velero",
     "buttonLabel": "Reservar"
   },
   "welcome": {
     "eyebrow": "Para Antoine y los suyos",
     "title": "Ustedes solo tienen que decidir cuándo meterse al agua.",
-    "text": "Antoine, esta es la propuesta que preparamos para ti y los tuyos: tres noches en el mar con los suyos, sin prisa. Salen de La Paz, pasan los días entre el agua, la cubierta y las calas de Espíritu Santo, y cada noche cenan fondeados con solo el sonido del agua contra el casco.\n\nEl capitán lleva el barco, el chef se ocupa de la cocina y su Expedition Leader está con ustedes todo el viaje. Más abajo encuentran el día a día, la ruta, los dos barcos que podemos ofrecerles y todo lo que conviene saber. Cuando estén listos, reservan con un clic.",
+    "text": "Antoine, esta es la propuesta que preparamos para tu familia: tres noches a bordo de un catamarán privado, saliendo de La Paz y navegando entre bahías tranquilas de la isla Espíritu Santo.\n\nEagle Ray se encarga del barco, de la comida y de la ruta. Ustedes eligen el ritmo de cada día: nadar, remar, explorar la playa o simplemente descansar.\n\nMás abajo encuentras la ruta, los dos barcos que podemos ofrecerte y lo que incluye cada día. Cuando estés listo, reserva con un clic.",
     "signature": "El equipo de Eagle Ray Expeditions",
     "photos": [
       {
@@ -174,7 +174,7 @@
           }
         ],
         "similarNote": "O un barco similar con características iguales o superiores.",
-        "tag": "Opcional",
+        "tag": "",
         "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "featureList": [
           "Aire acondicionado",
@@ -182,8 +182,28 @@
           "Desalinizadora y generador",
           "Snorkel y paddleboard"
         ],
-        "banner": "/assets/proposals/antoine/barco-bali.webp",
-        "bannerAlt": "Proa del catamarán Bali 4.6 con huéspedes a bordo"
+        "banner": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_deck_aino3c.jpg",
+        "bannerAlt": "Proa del catamarán Bali 4.6 con huéspedes a bordo",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Interior_comedor_ufil0s.jpg"
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Cocina_uo85g0.jpg"
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_detras_e5j68i.jpg"
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_mapa_cninyy.jpg"
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Habitación_jgcjkg.jpg"
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Habitación_literlas_dabsn4.jpg"
+          }
+        ]
       }
     ],
     "note": "Les proponemos dos catamaranes. El barco exacto lo confirmamos al reservar: este o uno de características similares.\n\nLos dos catamaranes son estables y tienen todo en un mismo nivel: la bebé puede estar cerca mientras ustedes comen o se bañan. A bordo tendrán su chaleco salvavidas infantil y una cuna. Cuéntennos sus horarios y el chef y la tripulación lo tendrán en cuenta."
