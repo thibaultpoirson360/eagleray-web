@@ -1,0 +1,358 @@
+{
+  "title": "Proposition pour Tanguy, Kite & Sail",
+  "hero": {
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
+    "imageAlt": "Un kitesurfeur sur une eau turquoise",
+    "note": "Expédition spéciale kite · Proposition privée pour Tanguy",
+    "title": "Kite & Sail",
+    "subtitle": "8 jours au départ de La Paz, entre La Ventana, Cerralvo et Bonanza. Snorkeling le matin, kite l'après-midi.",
+    "button": {
+      "label": "Réserver",
+      "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products"
+    }
+  },
+  "brief": {
+    "title": "Une semaine de voile et de kite",
+    "text": "Huit jours à bord, au départ de La Paz. Le matin, snorkeling près du mouillage. L'après-midi, kite, avec le bateau comme base.\n\nAdly, votre Expedition Leader, est instructeur de kite. L'instructeur et l'équipement de kite sont inclus.",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "5 au 12 avril 2027 · 8 jours"
+      },
+      {
+        "icon": "people",
+        "text": "Jusqu'à 4 personnes"
+      },
+      {
+        "icon": "pin",
+        "text": "La Paz, Baja California Sur"
+      },
+      {
+        "icon": "clock",
+        "text": "Snorkeling le matin, kite l'après-midi"
+      }
+    ]
+  },
+  "days": {
+    "title": "Le programme kite",
+    "text": "El Sargento. Mouillage sur le récif, face à Las Palmas. Kite sous le vent du bateau, avec une option vague sur le récif à côté du mouillage.\n\nDownwinder. De Hot Springs ou Rasta Beach jusqu'à South Baja Joe's / South Beach. L'annexe accompagne les riders et assure le retour jusqu'au bateau.\n\nSouth Beach et Bufadora. Une deuxième journée à South Beach, avec Bufadora quand le groupe veut des vagues. À environ 2,5 nm du bateau en annexe.\n\nSud de Cerralvo. Nouveau mouillage pour l'eau plate. Protégé du vent du nord, tranquille pour la progression et les foils.\n\nBonanza. Traversée directe, puis session de kite à l'arrivée. Le lendemain, retour à La Paz à la voile.",
+    "note": "Snorkeling chaque matin près du mouillage. Kite chaque après-midi, selon le vent.",
+    "photos": [
+      {
+        "image": "/assets/img/la-paz/la-ventana.webp",
+        "alt": "Un kitesurfeur en plein saut",
+        "caption": ""
+      }
+    ]
+  },
+  "itinerary": {
+    "title": "Jour par jour",
+    "intro": "Les durées sont des estimations de planification et dépendent du vent et de l'état de la mer.",
+    "days": [
+      {
+        "label": "Jour 1",
+        "title": "La Paz vers El Sargento",
+        "moments": [
+          {
+            "time": "Trajet",
+            "text": "38 nm | 5 h 25"
+          },
+          {
+            "time": "Matin",
+            "text": "Briefing, départ"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Arrivée en début d'après-midi. Première session de kite depuis le bateau."
+          }
+        ]
+      },
+      {
+        "label": "Jour 2",
+        "title": "El Sargento, au mouillage",
+        "moments": [
+          {
+            "time": "Matin",
+            "text": "Snorkeling sur le récif"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Kite sous le vent du bateau. Option vague sur le récif à côté du mouillage."
+          }
+        ]
+      },
+      {
+        "label": "Jour 3",
+        "title": "El Sargento, au mouillage",
+        "moments": [
+          {
+            "time": "Matin",
+            "text": "Snorkeling"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Downwinder de Hot Springs ou Rasta Beach jusqu'à South Baja Joe's / South Beach. L'annexe suit et assure le retour."
+          }
+        ]
+      },
+      {
+        "label": "Jour 4",
+        "title": "El Sargento, au mouillage",
+        "moments": [
+          {
+            "time": "Matin",
+            "text": "Snorkeling"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Kite à South Beach, Bufadora pour les vagues. Navette en annexe."
+          }
+        ]
+      },
+      {
+        "label": "Jour 5",
+        "title": "El Sargento vers le sud de Cerralvo",
+        "moments": [
+          {
+            "time": "Trajet",
+            "text": "10 nm | 1 h 25"
+          },
+          {
+            "time": "Matin",
+            "text": "Snorkeling, puis déplacement du bateau"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Kite en eau plate, mouillage abrité."
+          }
+        ]
+      },
+      {
+        "label": "Jour 6",
+        "title": "Sud de Cerralvo vers Bonanza",
+        "moments": [
+          {
+            "time": "Trajet",
+            "text": "32 nm | 4 h 35"
+          },
+          {
+            "time": "Matin",
+            "text": "Snorkeling, départ en fin de matinée"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Traversée directe. Kite à Bonanza à l'arrivée."
+          }
+        ]
+      },
+      {
+        "label": "Jour 7",
+        "title": "Bonanza vers La Paz",
+        "moments": [
+          {
+            "time": "Trajet",
+            "text": "16 nm | 2 h 15"
+          },
+          {
+            "time": "Matin",
+            "text": "Snorkeling, puis retour à la voile"
+          },
+          {
+            "time": "Après-midi",
+            "text": "Arrivée à La Paz en milieu d'après-midi."
+          }
+        ]
+      }
+    ]
+  },
+  "route": {
+    "title": "L'itinéraire",
+    "stops": [
+      {
+        "name": "La Paz, marina",
+        "sub": "Départ et arrivée"
+      },
+      {
+        "name": "El Sargento",
+        "sub": "Jours 1 à 4. Mouillage sur le récif, annexe vers les spots de kite."
+      },
+      {
+        "name": "Sud de Cerralvo",
+        "sub": "Jour 5. Eau plate."
+      },
+      {
+        "name": "Bonanza",
+        "sub": "Jour 6. Traversée directe depuis Cerralvo. Jour 7, retour à La Paz à la voile."
+      }
+    ],
+    "note": "Total d'environ 96 nm, 13 h 40 en mer. Fond de carte satellite. Positions et distances approximatives, calculées à 7 nœuds. Ne pas utiliser pour la navigation.",
+    "mapLabel": "Carte de l'itinéraire : La Paz, El Sargento, sud de Cerralvo et Bonanza",
+    "photos": [
+      {
+        "image": "/assets/proposals/kite-sail-2027/route-map.webp",
+        "alt": "Carte satellite de l'itinéraire : La Paz, El Sargento, sud de Cerralvo et Bonanza",
+        "caption": ""
+      }
+    ]
+  },
+  "boats": {
+    "options": [
+      {
+        "name": "Jeanneau Sun Odyssey 44i ou équivalent",
+        "intro": "Un monocoque à voile conçu par Philippe Briand pour offrir d'excellentes performances de navigation, et piloté ici par un capitaine qui le connaît sur le bout des doigts.",
+        "gallery": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Sun_Odyssey_44i_Jeanneau_-_Sailing_monohull_Velero_-_Sail_in_Mexico_gdxzg7.jpg",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-02.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur / Pont / Barre",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-03.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Pont / mesa",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-04.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-01.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-05.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-06.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Extérieur",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-07.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Salon",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-08.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Salon",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/sun-odyssey-44i-jeanneau-10.webp",
+            "alt": "Sun Odyssey 44i - Jeanneau — Intérieur / Cabine",
+            "caption": ""
+          }
+        ],
+        "specs": "Monocoque à voile · 45,1 pieds · 3 cabines · 3 salles de bains · Jusqu'à 4 personnes",
+        "features": [
+          "Conçu par Philippe Briand, construit pour offrir des performances optimales à la voile",
+          "Un capitaine qui connaît le bateau sur le bout des doigts ; les passagers peuvent s'initier à la barre et au réglage des voiles",
+          "Wi-Fi Starlink à bord",
+          "Climatisation",
+          "Dessalinisateur à bord",
+          "Planche de stand up paddle et kayak biplace"
+        ],
+        "prices": [
+          {
+            "label": "Bateau complet",
+            "total": "17 500 USD",
+            "perPerson": "4 375 USD par personne avec 4 personnes"
+          }
+        ],
+        "priceNote": "Prix pour le bateau complet et l'expédition de 8 jours."
+      }
+    ]
+  },
+  "aboard": {
+    "title": "À bord",
+    "onTitle": "Inclus",
+    "onBoard": [
+      "Capitaine, chef et Expedition Leader",
+      "Adly, instructeur de kite, avec vous pendant toute l'expédition",
+      "Équipement de kite",
+      "Snorkeling chaque matin près du mouillage",
+      "Annexe de sécurité et VHF pendant les sessions de kite",
+      "Briefing au début de chaque journée",
+      "Petit-déjeuner, déjeuner et dîner chaque jour, préparés à bord par votre chef, avec des produits locaux frais"
+    ],
+    "offTitle": "Non inclus",
+    "notOnBoard": [
+      "Vols vers La Paz",
+      "Pourboires pour l'équipage (10 à 15 % sont d'usage)",
+      "Assurance voyage personnelle"
+    ]
+  },
+  "crew": {
+    "title": "Les personnes qui mènent le bateau",
+    "text": "Le capitaine s'occupe du bateau et de la route, et décide chaque jour si l'on sort ou non. L'Expedition Leader guide les journées de snorkeling et de kite et fait le briefing du groupe. Le chef cuisine des produits locaux frais.",
+    "leader": {
+      "member": "adly",
+      "image": "",
+      "imageAlt": "Adly, Expedition Leader",
+      "name": "Adly",
+      "role": "Votre Expedition Leader",
+      "facts": [
+        "Instructeur de kite IKO",
+        "Instructeur de plongée PADI OWSI",
+        "Parle arabe, anglais et espagnol"
+      ],
+      "text": "Thibault a rencontré Adly en apprenant le kite à La Ventana, terrain de jeu légendaire du vent au Mexique. Originaire d'Égypte, Adly l'a bientôt invité à lui rendre la pareille sur la mer Rouge. Ingénieur de formation, il est aujourd'hui instructeur IKO et PADI, avec plus de 1 500 plongées, plus de 80 élèves et une expérience d'équipage sur quatre continents. Adly lit le vent, le courant et l'énergie du groupe d'un même regard. Il sait quand pousser pour une plongée de plus, et quand ne rien faire au mouillage est exactement l'aventure dont tout le monde a besoin."
+    }
+  },
+  "practical": {
+    "title": "Une journée type",
+    "items": [
+      {
+        "title": "07h30",
+        "text": "Petit-déjeuner"
+      },
+      {
+        "title": "09h00",
+        "text": "Snorkeling près du mouillage"
+      },
+      {
+        "title": "12h30",
+        "text": "Déjeuner sur le pont"
+      },
+      {
+        "title": "14h00",
+        "text": "Session de kite, le bateau comme base"
+      },
+      {
+        "title": "18h00",
+        "text": "Coucher de soleil, apéro"
+      },
+      {
+        "title": "20h00",
+        "text": "Dîner préparé par le chef"
+      }
+    ]
+  },
+  "closing": {
+    "title": "Prêt à réserver ?",
+    "text": "Confirmez votre expédition sur la page de réservation.",
+    "buttonLabel": "Réserver",
+    "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products",
+    "contacts": [
+      {
+        "label": "WhatsApp",
+        "value": "+52 55 6809 0942",
+        "href": "https://wa.me/525568090942"
+      },
+      {
+        "label": "Email",
+        "value": "hello@eaglerayexpeditions.com",
+        "href": "mailto:hello@eaglerayexpeditions.com"
+      }
+    ]
+  }
+}

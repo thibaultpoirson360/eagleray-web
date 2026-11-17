@@ -16,9 +16,11 @@ interface Props {
   class?: string;
   /** Keep photo slots that have no photo yet as quiet empty boxes, so an editor can click one and add it. */
   slots?: boolean;
+  /** A single photo keeps its own proportions (a map, for instance) instead of being cropped to a wide strip. */
+  natural?: boolean;
 }
 
-const { photos, class: extra, slots = false } = Astro.props;
+const { photos, class: extra, slots = false, natural = false } = Astro.props;
 const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null; caption?: string | null } => (slots ? !!p : !!p?.image));
 const n = list.length;
 
@@ -43,7 +45,7 @@ const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as c
               alt={p.alt ?? ""}
               loading="lazy"
               decoding="async"
-              class:list={["w-full rounded-lg object-cover", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]}
+              class:list={["w-full rounded-lg", n === 1 && natural ? "h-auto" : "object-cover", n === 1 ? (natural ? "" : "aspect-[16/9] md:aspect-[21/9]") : "aspect-[4/3]"]}
               data-tina-field={tinaField(p, "image")}
             />
           ) : (
