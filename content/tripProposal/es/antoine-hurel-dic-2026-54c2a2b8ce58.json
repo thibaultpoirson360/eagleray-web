@@ -12,7 +12,7 @@
   "welcome": {
     "eyebrow": "Para Antoine",
     "title": "Tú organizas el viaje. Nosotros nos ocupamos del mar.",
-    "text": "Antoine, esta es la propuesta que preparamos para tu grupo: tres noches a bordo de un velero privado, saliendo de La Paz y navegando entre bahías tranquilas de la isla Espíritu Santo.\n\nEagle Ray se encarga del barco, de la comida y de la ruta. Ustedes eligen el ritmo de cada día: nadar, remar, explorar la playa o simplemente descansar.\n\nMás abajo encuentras la ruta, los dos barcos que podemos ofrecerte y lo que incluye cada día. Cuando estés listo, reserva con un clic.",
+    "text": "Antoine, esta es la propuesta que preparamos para tu familia: tres noches a bordo de un catamarán privado, saliendo de La Paz y navegando entre bahías tranquilas de la isla Espíritu Santo.\n\nEagle Ray se encarga del barco, de la comida y de la ruta. Ustedes eligen el ritmo de cada día: nadar, remar, explorar la playa o simplemente descansar.\n\nMás abajo encuentras la ruta, los dos barcos que podemos ofrecerte y lo que incluye cada día. Cuando estés listo, reserva con un clic.",
     "signature": "El equipo de Eagle Ray Expeditions"
   },
   "day": {
@@ -61,7 +61,6 @@
     "eyebrow": "La ruta",
     "title": "La Paz y Espíritu Santo",
     "dates": "4 días · 11 al 14 de diciembre de 2026",
-    "mapLabel": "Ruta propuesta para 3 noches",
     "stops": [
       {
         "name": "La Paz",
@@ -92,6 +91,7 @@
       "2 días completos en el agua"
     ],
     "note": "Las etapas rondan las 15 millas náuticas. El capitán define la ruta según el clima.",
+    "mapLabel": "Ruta propuesta para 3 noches",
     "mapCredit": "Datos del mapa © colaboradores de OpenStreetMap."
   },
   "boat": {
@@ -147,6 +147,8 @@
         "dates": "11 al 14 de diciembre",
         "price": "$30,713 USD",
         "priceNote": "Todo el barco, con capitán y chef.",
+        "tag": "Opcional",
+        "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "specs": [
           {
             "label": "Tipo",
@@ -165,17 +167,31 @@
             "value": "4"
           }
         ],
-        "similarNote": "O un barco similar con características iguales o superiores.",
-        "tag": "Opcional",
-        "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "featureList": [
           "Aire acondicionado",
           "Flybridge y cockpit de proa",
           "Desalinizadora y generador",
           "Snorkel y paddleboard"
-        ]
+        ],
+        "similarNote": "O un barco similar con características iguales o superiores."
       }
     ]
+  },
+  "crew": {
+    "title": "Tu grupo no navega solo,",
+    "titleEmphasis": "conoce a tu tripulación de Eagle Ray",
+    "blurb": "En Eagle Ray, cada expedición está dirigida por personas que viven el mar. Con ustedes viajan un capitán, que maneja el barco, lee el mar y elige cada fondeadero según el viento, y un chef que cocina con productos locales.",
+    "linkLabel": "Gente del mar apasionada",
+    "linkHref": "/es/passionate-sea-people/",
+    "members": [
+      "benji",
+      "lou",
+      "roberto",
+      "javier",
+      "antoine",
+      "ana"
+    ],
+    "note": "El equipo se asigna según el barco y las fechas; confirmamos al equipo de Eagle Ray cuando haces la reserva. Para que vayas conociéndolos, estos son algunos de los capitanes y chefs con los que navegamos."
   },
   "offer": {
     "eyebrow": "Qué incluye",
@@ -224,21 +240,5 @@
       "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
     },
     "note": "En la página de reserva eliges el barco y completas los datos del grupo. ¿Dudas antes de reservar? Escríbenos a hello@eaglerayexpeditions.com."
-  },
-  "crew": {
-    "title": "Tu grupo no navega solo,",
-    "titleEmphasis": "conoce a tu tripulación de Eagle Ray",
-    "blurb": "En Eagle Ray, cada expedición está dirigida por personas que viven el mar. Con ustedes viajan un capitán, que maneja el barco, lee el mar y elige cada fondeadero según el viento, y un chef que cocina con productos locales.",
-    "linkLabel": "Gente del mar apasionada",
-    "linkHref": "/es/passionate-sea-people/",
-    "members": [
-      "benji",
-      "lou",
-      "roberto",
-      "javier",
-      "antoine",
-      "ana"
-    ],
-    "note": "El equipo se asigna según el barco y las fechas; confirmamos al equipo de Eagle Ray cuando haces la reserva. Para que vayas conociéndolos, estos son algunos de los capitanes y chefs con los que navegamos."
   }
 }
