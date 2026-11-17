@@ -115,7 +115,7 @@ const groupProposal: Collection = {
     {
       type: "object",
       name: "boat",
-      label: "4. The boat",
+      label: "4. The boat, price and how to book",
       fields: [
         { type: "string", name: "title", label: "Boat name", required: true },
         { type: "string", name: "intro", label: "Intro", ui: textarea },
@@ -181,6 +181,7 @@ const groupProposal: Collection = {
           name: "leader",
           label: "Expedition Leader profile",
           fields: [
+            { type: "string", name: "member", label: "Crew profile (file name in Crew)", description: "e.g. 'alexis'. Clicking the portrait opens this person's profile, as on Passionate Sea People. With no portrait uploaded here, their photo from Crew is shown." },
             { type: "image", name: "image", label: "Portrait" },
             { type: "string", name: "imageAlt", label: "Portrait description (alt text)" },
             { type: "string", name: "name", label: "Name" },
@@ -195,7 +196,7 @@ const groupProposal: Collection = {
     {
       type: "object",
       name: "book",
-      label: "7. How to book",
+      label: "How to book (shown under the price)",
       fields: [
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "text", label: "Text", ui: textarea },

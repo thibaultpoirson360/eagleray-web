@@ -46,6 +46,47 @@
         "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
         "alt": "Sea lions resting"
       }
+    ],
+    "gallery": [
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Los Islotes sea lions"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Ensenada Grande"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Caleta Partida"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Balandra"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Snorkel"
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": "Scuba"
+      }
+    ]
+  },
+  "dive": {
+    "title": "For those who want to go deeper",
+    "text": "Alexis, your Expedition Leader, is a dive instructor. Anyone in the group who wants to try scuba for the first time can do a first dive with him, no experience needed. Certified divers can dive with him too. Let us know before the trip so we bring the equipment.",
+    "activities": [
+      "Scuba diving",
+      "Kite",
+      "Wine selection"
     ]
   },
   "boat": {
@@ -79,6 +120,21 @@
       {
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Boats/ERE_-_Boat_-_Fountaine_Pajot_Saona_47_-_Catamaran_-_Kaia_-_Kaia_vista_aerea_de_atras_listn5.jpg",
         "alt": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
       }
     ],
     "specs": "2019, refit 2026 · 5 cabins · 5 bathrooms",
@@ -118,9 +174,46 @@
     ],
     "priceNote": "Price for the full boat and the full group, valid for 48 hours from the date of this proposal. Choose one of the two options for payment and communicate it to our agent to receive the details."
   },
+  "food": {
+    "title": "What's cooking on board",
+    "text": "Your chef shops in La Paz the day before you board and cooks three meals a day on board: breakfast on deck, lunch at anchor, dinner as the sun goes down. Tell us about allergies or preferences before the trip and the menu is built around them.",
+    "photos": [
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      }
+    ]
+  },
   "aboard": {
     "title": "What's aboard",
     "onTitle": "On board",
+    "offTitle": "Not on board",
     "onBoard": [
       "Captain, chef and deckhand",
       "Alexis, your Expedition Leader and dive instructor, with you all four days",
@@ -130,7 +223,6 @@
       "Dinghy, 2 paddle boards, double kayak, inflatable platform, snorkel gear for everyone",
       "BBQ, beach shade, chairs and towels"
     ],
-    "offTitle": "Not on board",
     "notOnBoard": [
       "Alcohol (bring your own, or ask us about our wine selection)",
       "Crew tips (10% of the trip value is customary)",
@@ -153,17 +245,30 @@
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
         "alt": ""
       }
-    ]
+    ],
+    "leader": {
+      "image": "",
+      "imageAlt": "",
+      "name": "Alexis",
+      "role": "Your Expedition Leader",
+      "facts": [
+        "Dive instructor",
+        "Speaks French, English and Spanish",
+        "Background in hospitality"
+      ],
+      "text": "Alexis grew up in Chile and spent years in luxury hospitality (Ritz-Carlton & Mandarin Oriental) before the sea became his work. On board he reads the group: who wants to swim at seven, who wants a slow coffee, who's ready to try a first dive. He'll speak French with one family, Italian with the other, and Spanish with the crew.",
+      "member": "alexis"
+    }
   },
   "book": {
     "title": "How to book",
     "text": "Christmas dates go fast and the boat is held only once we receive the deposit. These are the terms:",
     "terms": [
       "Bank transfer price: payment in USD to the Eagle Ray Expeditions US account. 50% on confirmation and 50% before November 23, or 100% on confirmation.",
-      "Card price: payment through a secure payment link. 50% on confirmation and 50% before November 23, or 100% on confirmation.",
+      "Card price: payment through a secure payment link. 50% on confirmation and 50% before November 23, or 100% on confirmation. Card processing fees are non-refundable.",
       "This proposal is valid for 48 hours.",
       "Cancellation: 50% of the amount paid is refunded for cancellations before November 24. From November 24, payments are non-refundable.",
-      "Weather: if conditions prevent sailing, we extend the lost day when the boat's schedule allows. If not, we refund 50% of each day lost."
+      "Weather: if conditions prevent leaving port, we extend the lost day when the boat's schedule allows. If not, we refund USD 1,600 for each full day lost."
     ]
   },
   "closing": {

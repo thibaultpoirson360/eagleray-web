@@ -30,10 +30,14 @@ interface Props {
   name: string;
   /** Where the button goes with no JavaScript. */
   fallbackHref: string;
+  /** Optional: something else to click instead of the text button (a portrait, for instance). */
+  trigger?: ComponentChildren;
+  /** Classes for the clickable element when `trigger` is given. */
+  triggerClass?: string;
   children?: ComponentChildren;
 }
 
-export default function CrewModal({ label, closeLabel, name, fallbackHref, children }: Props) {
+export default function CrewModal({ label, closeLabel, name, fallbackHref, trigger, triggerClass, children }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -62,9 +66,14 @@ export default function CrewModal({ label, closeLabel, name, fallbackHref, child
       <a
         href={fallbackHref}
         onClick={open}
-        class="inline-flex items-center gap-1 text-[.86rem] font-medium text-ink underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+        aria-label={trigger ? label : undefined}
+        class={
+          trigger
+            ? (triggerClass ?? "block") + " focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+            : "inline-flex items-center gap-1 text-[.86rem] font-medium text-ink underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+        }
       >
-        {label}
+        {trigger ?? label}
       </a>
       <dialog
         ref={dialogRef}
