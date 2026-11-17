@@ -148,6 +148,7 @@
         "price": "$30,713 USD",
         "priceNote": "Todo el barco, con capitán y chef.",
         "tag": "Opcional",
+        "banner": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Exterior_deck_aino3c.jpg",
         "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
         "specs": [
           {
@@ -173,7 +174,12 @@
           "Desalinizadora y generador",
           "Snorkel y paddleboard"
         ],
-        "similarNote": "O un barco similar con características iguales o superiores."
+        "similarNote": "O un barco similar con características iguales o superiores.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_Boat_-_Bali_4.6_-_Interior_comedor_ufil0s.jpg"
+          }
+        ]
       }
     ]
   },
