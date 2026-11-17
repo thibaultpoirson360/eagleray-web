@@ -1,9 +1,13 @@
 ---
 /**
- * A row of photos under a section of a private proposal (a day, the
- * included services, a practical topic). One photo fills the row; two, three
- * or more sit side by side in a grid. Photos come from the editor; the alt
- * text is the description the editor wrote for each.
+ * A mosaic of photos under a section of a private proposal. Rows are always
+ * full, with no empty cells: the photos are split into rows of up to three
+ * and each photo stretches to share its row, so 5 photos are 3 on top and 2
+ * below (the two below fill the same width as the three above), 4 are 2 + 2,
+ * 7 are 3 + 2 + 2, and a single photo fills the whole width, long and
+ * narrow. On a phone the rows are two photos wide, and an odd last photo
+ * takes the whole row. The classes are written out in full so Tailwind
+ * keeps them.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 
@@ -14,15 +18,31 @@ interface Props {
 
 const { photos, class: extra } = Astro.props;
 const list = (photos ?? []).filter((p): p is { image: string; alt?: string | null } => !!p?.image);
-const cols = list.length === 1 ? "grid-cols-1" : list.length === 2 ? "grid-cols-2" : "grid-cols-2 md:grid-cols-3";
+const n = list.length;
+
+// Sizes of the rows, biggest first: 4 -> 2+2, 5 -> 3+2, 7 -> 3+2+2, 8 -> 3+3+2.
+const rowCount = Math.ceil(n / 3);
+const base = Math.floor(n / rowCount);
+const extraRows = n % rowCount;
+const rows = Array.from({ length: rowCount }, (_, i) => base + (i < extraRows ? 1 : 0));
+const perPhoto = rows.flatMap((size) => Array.from({ length: size }, () => size));
+
+const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as const;
 ---
 
 {
-  list.length > 0 && (
-    <div class:list={["grid gap-4 md:gap-6", cols, extra]}>
-      {list.map((p) => (
-        <figure class="m-0">
-          <img src={p.image} alt={p.alt ?? ""} loading="lazy" decoding="async" class:list={["w-full rounded-lg object-cover", list.length === 1 ? "aspect-[21/9]" : "aspect-[4/3]"]} data-tina-field={tinaField(p, "image")} />
+  n > 0 && (
+    <div class:list={["grid grid-cols-6 gap-3 md:gap-6", extra]}>
+      {list.map((p, i) => (
+        <figure class:list={["m-0", i === n - 1 && n % 2 === 1 ? "col-span-6" : "col-span-3", wide[perPhoto[i] as 1 | 2 | 3]]}>
+          <img
+            src={p.image}
+            alt={p.alt ?? ""}
+            loading="lazy"
+            decoding="async"
+            class:list={["w-full rounded-lg object-cover", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : "aspect-[4/3]"]}
+            data-tina-field={tinaField(p, "image")}
+          />
         </figure>
       ))}
     </div>
