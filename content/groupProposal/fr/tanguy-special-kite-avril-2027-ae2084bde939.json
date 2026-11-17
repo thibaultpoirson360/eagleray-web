@@ -5,7 +5,7 @@
     "imageAlt": "Un kitesurfeur sur une eau turquoise",
     "note": "Expédition spéciale kite · Proposition privée pour Tanguy",
     "title": "Kite & Sail",
-    "subtitle": "7 jours au départ de La Paz, entre La Ventana, Cerralvo et Bonanza. Snorkeling le matin, kite l'après-midi.",
+    "subtitle": "7 jours sur la mer de Cortés, de Loreto à La Paz. Du kite quand le vent se lève, avec Lou, votre capitaine.",
     "button": {
       "label": "Réserver",
       "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products"
@@ -13,7 +13,7 @@
   },
   "brief": {
     "title": "Une semaine de voile et de kite",
-    "text": "Sept jours à bord, au départ de La Paz. Le matin, snorkeling près du mouillage. L'après-midi, kite, avec le bateau comme base.\n\nAdly, votre Expedition Leader, est instructeur de kite. L'instructeur et l'équipement de kite sont inclus.",
+    "text": "Sept jours à bord, de Loreto à La Paz, entre les îles de la mer de Cortés. Vous êtes deux à bord, avec Lou, votre capitaine, et un chef.\n\nLou est expert en kite : il vous emmène en faire quand le vent se lève. Vous apportez votre propre matériel de kite.",
     "facts": [
       {
         "icon": "calendar",
@@ -21,22 +21,17 @@
       },
       {
         "icon": "people",
-        "text": "Jusqu'à 4 personnes"
+        "text": "2 personnes à bord"
       },
       {
         "icon": "pin",
-        "text": "La Paz, Baja California Sur"
+        "text": "De Loreto à La Paz, Baja California Sur"
       },
       {
         "icon": "clock",
-        "text": "Snorkeling le matin, kite l'après-midi"
+        "text": "Kite quand le vent se lève"
       }
-    ]
-  },
-  "days": {
-    "title": "Le programme kite",
-    "text": "El Sargento. Mouillage sur le récif, face à Las Palmas. Kite sous le vent du bateau, avec une option vague sur le récif à côté du mouillage.\n\nDownwinder. De Hot Springs ou Rasta Beach jusqu'à South Baja Joe's / South Beach. L'annexe accompagne les riders et assure le retour jusqu'au bateau.\n\nSouth Beach et Bufadora. Une deuxième journée à South Beach, avec Bufadora quand le groupe veut des vagues. À environ 2,5 nm du bateau en annexe.\n\nSud de Cerralvo. Nouveau mouillage pour l'eau plate. Protégé du vent du nord, tranquille pour la progression et les foils.\n\nBonanza. Traversée directe, puis session de kite à l'arrivée. Le lendemain, retour à La Paz à la voile.",
-    "note": "Snorkeling chaque matin près du mouillage. Kite chaque après-midi, selon le vent.",
+    ],
     "photos": [
       {
         "image": "/assets/img/la-paz/la-ventana.webp",
@@ -47,151 +42,132 @@
   },
   "itinerary": {
     "title": "Jour par jour",
-    "intro": "Les durées sont des estimations de planification et dépendent du vent et de l'état de la mer.",
     "days": [
       {
         "label": "Jour 1",
-        "title": "La Paz vers El Sargento",
+        "title": "Loreto → Puerto Escondido → Isla Danzante",
         "moments": [
           {
-            "time": "Trajet",
-            "text": "38 nm | 5 h 25"
+            "time": "Programme",
+            "text": "Arrivée à Loreto dimanche soir et embarquement pour le début de l’expédition."
           },
           {
-            "time": "Matin",
-            "text": "Briefing, départ"
+            "time": "Distance",
+            "text": "~5 nm"
           },
           {
-            "time": "Après-midi",
-            "text": "Arrivée en début d'après-midi. Première session de kite depuis le bateau."
+            "time": "Navigation",
+            "text": "1h + transfert"
           }
         ]
       },
       {
         "label": "Jour 2",
-        "title": "El Sargento, au mouillage",
+        "title": "Parc national de la Bahía de Loreto (Las Ánimas / Isla Danzante) → Agua Verde",
         "moments": [
           {
-            "time": "Matin",
-            "text": "Snorkeling sur le récif"
+            "time": "Programme",
+            "text": "Entrée dans l’archipel : Isla Carmen, Danzante et 4 ou 5 îles. Snorkeling à Las Ánimas."
           },
           {
-            "time": "Après-midi",
-            "text": "Kite sous le vent du bateau. Option vague sur le récif à côté du mouillage."
+            "time": "Distance",
+            "text": "~22 nm"
+          },
+          {
+            "time": "Navigation",
+            "text": "4h"
           }
         ]
       },
       {
         "label": "Jour 3",
-        "title": "El Sargento, au mouillage",
+        "title": "Bahía Agua Verde → Puerto Los Gatos",
         "moments": [
           {
-            "time": "Matin",
-            "text": "Snorkeling"
+            "time": "Programme",
+            "text": "Visiter le village, déguster des produits frais et du fromage de chèvre local, se détendre dans les criques."
           },
           {
-            "time": "Après-midi",
-            "text": "Downwinder de Hot Springs ou Rasta Beach jusqu'à South Baja Joe's / South Beach. L'annexe suit et assure le retour."
+            "time": "Distance",
+            "text": "~20 nm"
+          },
+          {
+            "time": "Navigation",
+            "text": "3–4h"
           }
         ]
       },
       {
         "label": "Jour 4",
-        "title": "El Sargento, au mouillage",
+        "title": "Puerto Los Gatos → Isla San José (via la côte de San Evaristo)",
         "moments": [
           {
-            "time": "Matin",
-            "text": "Snorkeling"
+            "time": "Programme",
+            "text": "Nous verrons des formations de grès rose rappelant la planète Mars, nous mangerons des palourdes et nous ferons du kitesurf si le vent se lève."
           },
           {
-            "time": "Après-midi",
-            "text": "Kite à South Beach, Bufadora pour les vagues. Navette en annexe."
+            "time": "Distance",
+            "text": "~22 nm"
+          },
+          {
+            "time": "Navigation",
+            "text": "3–4h"
           }
         ]
       },
       {
         "label": "Jour 5",
-        "title": "El Sargento vers le sud de Cerralvo",
+        "title": "Isla San José, de mouillage en mouillage (île et côte)",
         "moments": [
           {
-            "time": "Trajet",
-            "text": "10 nm | 1 h 25"
+            "time": "Programme",
+            "text": "Deux ou trois mouillages différents dans la journée, plages de la péninsule, pêche."
           },
           {
-            "time": "Matin",
-            "text": "Snorkeling, puis déplacement du bateau"
+            "time": "Distance",
+            "text": "~8 nm"
           },
           {
-            "time": "Après-midi",
-            "text": "Kite en eau plate, mouillage abrité."
+            "time": "Navigation",
+            "text": "1–2h"
           }
         ]
       },
       {
         "label": "Jour 6",
-        "title": "Sud de Cerralvo vers Bonanza",
+        "title": "Amortajada (sud d’Isla San José) → Isla San Francisco",
         "moments": [
           {
-            "time": "Trajet",
-            "text": "32 nm | 4 h 35"
+            "time": "Programme",
+            "text": "Mangrove d’Amortajada en annexe ou en kayak, et observation des oiseaux."
           },
           {
-            "time": "Matin",
-            "text": "Snorkeling, départ en fin de matinée"
+            "time": "Distance",
+            "text": "~12 nm"
           },
           {
-            "time": "Après-midi",
-            "text": "Traversée directe. Kite à Bonanza à l'arrivée."
+            "time": "Navigation",
+            "text": "2h"
           }
         ]
       },
       {
         "label": "Jour 7",
-        "title": "Bonanza vers La Paz",
+        "title": "Isla San Francisco (« San Francisquito ») → La Paz",
         "moments": [
           {
-            "time": "Trajet",
-            "text": "16 nm | 2 h 15"
+            "time": "Programme",
+            "text": "Dernière navigation vers La Paz et débarquement samedi. Arrivée finale à La Paz pour la fin du voyage."
           },
           {
-            "time": "Matin",
-            "text": "Snorkeling, puis retour à la voile"
+            "time": "Distance",
+            "text": "~45 nm"
           },
           {
-            "time": "Après-midi",
-            "text": "Arrivée à La Paz en milieu d'après-midi."
+            "time": "Navigation",
+            "text": "4–5h"
           }
         ]
-      }
-    ]
-  },
-  "route": {
-    "title": "L'itinéraire",
-    "stops": [
-      {
-        "name": "La Paz, marina",
-        "sub": "Départ et arrivée"
-      },
-      {
-        "name": "El Sargento",
-        "sub": "Jours 1 à 4. Mouillage sur le récif, annexe vers les spots de kite."
-      },
-      {
-        "name": "Sud de Cerralvo",
-        "sub": "Jour 5. Eau plate."
-      },
-      {
-        "name": "Bonanza",
-        "sub": "Jour 6. Traversée directe depuis Cerralvo. Jour 7, retour à La Paz à la voile."
-      }
-    ],
-    "note": "Total d'environ 96 nm, 13 h 40 en mer. Fond de carte satellite. Positions et distances approximatives, calculées à 7 nœuds. Ne pas utiliser pour la navigation.",
-    "mapLabel": "Carte de l'itinéraire : La Paz, El Sargento, sud de Cerralvo et Bonanza",
-    "photos": [
-      {
-        "image": "/assets/proposals/kite-sail-2027/route-map.webp",
-        "alt": "Carte satellite de l'itinéraire : La Paz, El Sargento, sud de Cerralvo et Bonanza",
-        "caption": ""
       }
     ]
   },
@@ -265,7 +241,7 @@
           {
             "label": "Bateau complet",
             "total": "17 500 USD",
-            "perPerson": "4 375 USD par personne avec 4 personnes"
+            "perPerson": "8 750 USD par personne avec 2 personnes"
           }
         ],
         "priceNote": "Prix pour le bateau complet et l'expédition de 7 jours.",
@@ -277,70 +253,74 @@
       "href": "https://v2.app.moguplatform.com/trips/expedition-active-tanguy-reservation/checkout?step=products"
     }
   },
+  "food": {
+    "title": "Ce qui se cuisine à bord",
+    "text": "Votre chef cuisine trois repas par jour à bord : le petit-déjeuner sur le pont, le déjeuner au mouillage, le dîner au coucher du soleil. Signalez-nous vos allergies ou préférences avant le voyage et le menu est construit autour.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+        "alt": "Plat préparé à bord par le chef",
+        "caption": ""
+      }
+    ]
+  },
   "aboard": {
     "title": "À bord",
     "onTitle": "Inclus",
     "onBoard": [
-      "Capitaine, chef et Expedition Leader",
-      "Adly, instructeur de kite, avec vous pendant toute l'expédition",
-      "Équipement de kite",
-      "Snorkeling chaque matin près du mouillage",
-      "Annexe de sécurité et VHF pendant les sessions de kite",
-      "Briefing au début de chaque journée",
+      "Lou, capitaine, expert en kite : il vous emmène faire du kite",
+      "Un chef à bord",
       "Petit-déjeuner, déjeuner et dîner chaque jour, préparés à bord par votre chef, avec des produits locaux frais"
     ],
     "offTitle": "Non inclus",
     "notOnBoard": [
-      "Vols vers La Paz",
+      "Matériel de kite : vous apportez le vôtre",
+      "Vols vers Loreto et depuis La Paz",
       "Pourboires pour l'équipage (10 à 15 % sont d'usage)",
       "Assurance voyage personnelle"
     ]
   },
   "crew": {
     "title": "Les personnes qui mènent le bateau",
-    "text": "Le capitaine s'occupe du bateau et de la route, et décide chaque jour si l'on sort ou non. L'Expedition Leader guide les journées de snorkeling et de kite et fait le briefing du groupe. Le chef cuisine des produits locaux frais.",
+    "text": "Lou est votre capitaine : il s'occupe du bateau et de la route, décide chaque jour si l'on sort ou non, et il est expert en kite. Le chef cuisine des produits locaux frais.",
     "leader": {
-      "member": "adly",
+      "member": "lou",
       "image": "",
-      "imageAlt": "Adly, Expedition Leader",
-      "name": "Adly",
-      "role": "Votre Expedition Leader",
+      "imageAlt": "Lou, capitaine",
+      "name": "Lou",
+      "role": "Votre capitaine",
       "facts": [
-        "Instructeur de kite IKO",
-        "Instructeur de plongée PADI OWSI",
-        "Parle arabe, anglais et espagnol"
+        "Capitaine et spécialiste du kite",
+        "Parle français, anglais et espagnol",
+        "15 ans d'expérience"
       ],
-      "text": "Thibault a rencontré Adly en apprenant le kite à La Ventana, terrain de jeu légendaire du vent au Mexique. Originaire d'Égypte, Adly l'a bientôt invité à lui rendre la pareille sur la mer Rouge. Ingénieur de formation, il est aujourd'hui instructeur IKO et PADI, avec plus de 1 500 plongées, plus de 80 élèves et une expérience d'équipage sur quatre continents. Adly lit le vent, le courant et l'énergie du groupe d'un même regard. Il sait quand pousser pour une plongée de plus, et quand ne rien faire au mouillage est exactement l'aventure dont tout le monde a besoin."
+      "text": "Lou est capitaine, spécialiste du kite et apnéiste ; il a fait de la Baja sa maison. Il ne prend pas le contrôle de l'atmosphère d'un bateau : il la transforme. Les épaules se détendent, le souffle ralentit et les novices trouvent leur place. Lou lit la mer et les gens avec le même instinct, sachant quand apporter de l'énergie ou laisser de l'espace."
     }
-  },
-  "practical": {
-    "title": "Une journée type",
-    "items": [
-      {
-        "title": "07h30",
-        "text": "Petit-déjeuner"
-      },
-      {
-        "title": "09h00",
-        "text": "Snorkeling près du mouillage"
-      },
-      {
-        "title": "12h30",
-        "text": "Déjeuner sur le pont"
-      },
-      {
-        "title": "14h00",
-        "text": "Session de kite, le bateau comme base"
-      },
-      {
-        "title": "18h00",
-        "text": "Coucher de soleil, apéro"
-      },
-      {
-        "title": "20h00",
-        "text": "Dîner préparé par le chef"
-      }
-    ]
   },
   "closing": {
     "title": "Prêt à réserver ?",
@@ -350,8 +330,8 @@
     "contacts": [
       {
         "label": "WhatsApp",
-        "value": "+52 55 6809 0942",
-        "href": "https://wa.me/525568090942"
+        "value": "+52 55 2741 9922",
+        "href": "https://wa.me/525527419922"
       },
       {
         "label": "Email",
