@@ -15,7 +15,11 @@ import { tinaField } from "@tinacms/astro/tina-field";
 import Button from "./ui/Button.astro";
 import ProposalPhotos from "./ProposalPhotos.astro";
 import ProposalActivityCards from "./ProposalActivityCards.astro";
-import { loadSiteSettings, loadSailWithUsOrEnglish } from "../lib/content";
+import CrewModal from "./CrewModal.tsx";
+import CrewFullCard from "./CrewFullCard.astro";
+import { localePath } from "../i18n/config";
+import { memberPhotos, shortName } from "../lib/crew";
+import { loadSiteSettings, loadSailWithUsOrEnglish, loadCrew, loadCrewSection } from "../lib/content";
 
 interface Props {
   proposal: any;
@@ -24,7 +28,11 @@ interface Props {
 
 const { proposal, locale } = Astro.props;
 const { hero, brief, days, dive, boat, food, aboard, crew, book, closing, footer } = proposal;
-const [settings, sailResult] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any)]);
+const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
+// The Expedition Leader's profile (the crew member whose portrait opens the pop-up, as on Passionate Sea People).
+const leaderMember = crewResult.members.find((m: any) => m._sys.filename === String(crew?.leader?.member ?? "").trim());
+const leaderPhoto = crew?.leader?.image || (leaderMember ? memberPhotos(leaderMember as any)[0]?.src : "");
+const crewLabels = crewSection.data.crewSection;
 const sailPage = sailResult.data.sailWithUsPage;
 // The extra-activity cards come from the Sail with Us page (one place to edit): the proposal only picks which ones, by name.
 const wanted = (dive?.activities ?? []).map((n: string | null) => String(n ?? "").trim().toLowerCase()).filter(Boolean);
@@ -143,14 +151,14 @@ const [mainPhoto, ...restPhotos] = gallery;
           </div>
           {boat.specs && <p class={`${small} mt-12 text-ink/64`} data-tina-field={tinaField(boat, "specs")}>{boat.specs}</p>}
           {(boat.cabins?.length ?? 0) > 0 && (
-            <dl class="mt-10 border-t border-ink/14">
+            <ul class="mt-10 grid gap-x-16 gap-y-3 sm:grid-cols-2">
               {boat.cabins.map((c: any) => (
-                <div class="grid gap-1 border-b border-ink/14 py-5 sm:grid-cols-[14rem_1fr] sm:gap-6" data-tina-field={tinaField(c)}>
-                  <dt class="font-semibold" data-tina-field={tinaField(c, "who")}>{c.who}</dt>
-                  <dd class="text-ink/80" data-tina-field={tinaField(c, "cabin")}>{c.cabin}</dd>
-                </div>
+                <li class="flex items-baseline justify-between gap-6 text-[.95rem]" data-tina-field={tinaField(c)}>
+                  <span class="font-semibold" data-tina-field={tinaField(c, "who")}>{c.who}</span>
+                  <span class="text-right text-ink/64" data-tina-field={tinaField(c, "cabin")}>{c.cabin}</span>
+                </li>
               ))}
-            </dl>
+            </ul>
           )}
           {(boat.prices?.length ?? 0) > 0 && (
             <div class="mt-16 grid gap-px overflow-hidden rounded-lg bg-white/20 md:grid-cols-2">
@@ -164,6 +172,30 @@ const [mainPhoto, ...restPhotos] = gallery;
             </div>
           )}
           {boat.priceNote && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(boat, "priceNote")}>{boat.priceNote}</p>}
+          {book && (
+            <div class="mt-20">
+              <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
+              {book.text && <p class="mt-4 max-w-[56ch] text-[.9rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "text")}>{book.text}</p>}
+              <div class="mt-8 max-w-[60ch] border-t border-ink/14" data-tina-field={tinaField(book, "terms")}>
+                {list(book.terms).map((t) => {
+                  const cut = t.indexOf(": ");
+                  const label = cut > 0 ? t.slice(0, cut) : t;
+                  const detail = cut > 0 ? t.slice(cut + 2) : "";
+                  return detail ? (
+                    <details class="group border-b border-ink/14 py-5">
+                      <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
+                        <span>{label}</span>
+                        <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
+                      </summary>
+                      <p class="mt-4 text-[.9rem] leading-[1.75] text-ink/80">{detail.charAt(0).toUpperCase() + detail.slice(1)}</p>
+                    </details>
+                  ) : (
+                    <p class="border-b border-ink/14 py-5 text-[.95rem] font-semibold">{label}</p>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       </section>
     )
@@ -215,7 +247,22 @@ const [mainPhoto, ...restPhotos] = gallery;
           </div>
           {crew.leader && (
             <div class="mt-20 grid gap-10 border-t border-ink/14 pt-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-20" data-tina-field={tinaField(crew, "leader")}>
-              {crew.leader.image ? (
+              {leaderMember ? (
+                <CrewModal
+                  client:visible
+                  label={`${crewLabels.meetLabel ?? "Meet"} ${shortName(leaderMember.name)} →`}
+                  closeLabel={crewLabels.closeLabel ?? "Close"}
+                  name={leaderMember.name}
+                  fallbackHref={localePath(locale as any, `passionate-sea-people/#${leaderMember._sys.filename}`)}
+                  triggerClass="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg bg-ink/8"
+                >
+                  <Fragment slot="trigger">
+                    {leaderPhoto && <img src={leaderPhoto} alt={crew.leader.imageAlt ?? ""} loading="lazy" decoding="async" class="absolute inset-0 h-full w-full object-cover object-[50%_20%] transition duration-700 ease-soft group-hover:scale-[1.03]" data-tina-field={tinaField(crew.leader, "image")} />}
+                    <span class="absolute bottom-4 left-4 rounded bg-white/92 px-4 py-2 text-[.8rem] font-semibold text-ink">{`${crewLabels.meetLabel ?? "Meet"} ${shortName(leaderMember.name)} →`}</span>
+                  </Fragment>
+                  <CrewFullCard member={leaderMember as any} labels={crewLabels as any} compact class="max-h-[92vh]" />
+                </CrewModal>
+              ) : crew.leader.image ? (
                 <img src={crew.leader.image} alt={crew.leader.imageAlt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover" data-tina-field={tinaField(crew.leader, "image")} />
               ) : (
                 <div class="aspect-[4/5] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(crew.leader, "image")}></div>
@@ -238,20 +285,6 @@ const [mainPhoto, ...restPhotos] = gallery;
             </div>
           )}
           <ProposalPhotos photos={crew.photos} slots class="mt-16" />
-        </div>
-      </section>
-    )
-  }
-
-  {
-    book && (
-      <section class="bg-ink text-white">
-        <div class={box}>
-          <h2 class={`${h2} text-white`} data-tina-field={tinaField(book, "title")}>{book.title}</h2>
-          {book.text && <p class={`mt-10 max-w-[56ch] ${body} text-white/84`} data-tina-field={tinaField(book, "text")}>{book.text}</p>}
-          <ul class="mt-14 max-w-[60ch] border-t border-white/20" data-tina-field={tinaField(book, "terms")}>
-            {list(book.terms).map((t) => <li class="border-b border-white/20 py-6 text-[.95rem] leading-[1.75] text-white/90">{t}</li>)}
-          </ul>
         </div>
       </section>
     )
