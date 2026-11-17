@@ -179,8 +179,8 @@
     "text": "Your chef shops in La Paz the day before you board and cooks three meals a day on board: breakfast on deck, lunch at anchor, dinner as the sun goes down. Tell us about allergies or preferences before the trip and the menu is built around them.",
     "photos": [
       {
-        "image": "",
-        "alt": "",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+        "alt": "Sashimi",
         "caption": ""
       },
       {
@@ -213,7 +213,6 @@
   "aboard": {
     "title": "What's aboard",
     "onTitle": "On board",
-    "offTitle": "Not on board",
     "onBoard": [
       "Captain, chef and deckhand",
       "Alexis, your Expedition Leader and dive instructor, with you all four days",
@@ -223,6 +222,7 @@
       "Dinghy, 2 paddle boards, double kayak, inflatable platform, snorkel gear for everyone",
       "BBQ, beach shade, chairs and towels"
     ],
+    "offTitle": "Not on board",
     "notOnBoard": [
       "Alcohol (bring your own, or ask us about our wine selection)",
       "Crew tips (10% of the trip value is customary)",
@@ -232,6 +232,19 @@
   "crew": {
     "title": "The people running the boat",
     "text": "The captain reads the sea. The chef cooks with what Baja has that week. The deckhand handles the dinghy and the anchor. And your Expedition Leader reads the group: when to swim, when to sail, when to leave everyone alone with a coffee on the bow.\n\nYou bring the people. We take care of the rest.",
+    "leader": {
+      "member": "alexis",
+      "image": "",
+      "imageAlt": "",
+      "name": "Alexis",
+      "role": "Your Expedition Leader",
+      "facts": [
+        "Dive instructor",
+        "Speaks French, English and Spanish",
+        "Background in hospitality"
+      ],
+      "text": "Alexis grew up in Chile and spent years in luxury hospitality (Ritz-Carlton & Mandarin Oriental) before the sea became his work. On board he reads the group: who wants to swim at seven, who wants a slow coffee, who's ready to try a first dive. He'll speak French with one family, Italian with the other, and Spanish with the crew."
+    },
     "photos": [
       {
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_AUG2026_-_Najida_-_Velero_-_People___Sea_life_-_Foto_-_088_t76wxw.jpg",
@@ -245,20 +258,7 @@
         "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
         "alt": ""
       }
-    ],
-    "leader": {
-      "image": "",
-      "imageAlt": "",
-      "name": "Alexis",
-      "role": "Your Expedition Leader",
-      "facts": [
-        "Dive instructor",
-        "Speaks French, English and Spanish",
-        "Background in hospitality"
-      ],
-      "text": "Alexis grew up in Chile and spent years in luxury hospitality (Ritz-Carlton & Mandarin Oriental) before the sea became his work. On board he reads the group: who wants to swim at seven, who wants a slow coffee, who's ready to try a first dive. He'll speak French with one family, Italian with the other, and Spanish with the crew.",
-      "member": "alexis"
-    }
+    ]
   },
   "book": {
     "title": "How to book",
