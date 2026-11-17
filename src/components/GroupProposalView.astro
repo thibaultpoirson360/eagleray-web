@@ -79,6 +79,35 @@ const BoatName = options.length > 1 ? "h3" : "h2";
 
 const paragraphs = (text?: string | null) => (text ?? "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 const list = (items?: (string | null)[] | null) => (items ?? []).filter((x): x is string => !!x);
+// Small text format for the long terms dropdown: blank line = new block, "## " small heading, "### " bold heading, "- " list, "1. " numbered list (an indented line continues the item above).
+type Node = { type: "h2" | "h3" | "p"; text: string } | { type: "ul" | "ol"; items: string[] };
+const termsNodes = (text?: string | null): Node[] => {
+  const out: Node[] = [];
+  for (const block of (text ?? "").split(/\n{2,}/)) {
+    let open: Extract<Node, { items: string[] }> | null = null;
+    for (const raw of block.split("\n")) {
+      const line = raw.trimEnd();
+      if (!line.trim()) continue;
+      const bullet = line.match(/^\s{0,1}(-|\d+\.)\s+(.*)$/);
+      if (bullet) {
+        const type = bullet[1] === "-" ? "ul" : "ol";
+        if (!open || open.type !== type) {
+          open = { type, items: [] };
+          out.push(open);
+        }
+        open.items.push(bullet[2]);
+      } else if (open && /^\s{2,}/.test(line)) {
+        open.items[open.items.length - 1] += "\n" + line.trim();
+      } else {
+        open = null;
+        if (line.startsWith("### ")) out.push({ type: "h3", text: line.slice(4) });
+        else if (line.startsWith("## ")) out.push({ type: "h2", text: line.slice(3) });
+        else out.push({ type: "p", text: line.trim() });
+      }
+    }
+  }
+  return out;
+};
 
 const gutter = "px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]";
 const box = `relative mx-auto max-w-site ${gutter} py-[calc(var(--spacing-section)*2.4)]`;
@@ -143,6 +172,7 @@ const icons: Record<string, string> = {
               ))}
             </ul>
           )}
+          {brief.note && <p class="mt-10 max-w-[56ch] text-[.95rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(brief, "note")}>{brief.note}</p>}
           <ProposalPhotos photos={brief.photos} natural class="mt-20" />
         </div>
       </section>
@@ -383,6 +413,23 @@ const icons: Record<string, string> = {
                 )}
                 {o.priceNote && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(o, "priceNote")}>{o.priceNote}</p>}
                 {o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
+                {boats.payment?.title && boats.payment?.text && (
+                  <details class="group mt-10 max-w-[60ch] border-y border-ink/14 py-5" data-tina-field={tinaField(boats, "payment")}>
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
+                      <span>{boats.payment.title}</span>
+                      <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
+                    </summary>
+                    <div class="mt-6 space-y-4 text-[.9rem] leading-[1.75] text-ink/80">
+                      {termsNodes(boats.payment.text).map((n) =>
+                        n.type === "h2" ? <p class={`${small} pt-4 text-ink/64`}>{n.text}</p>
+                        : n.type === "h3" ? <p class="pt-2 font-semibold text-ink">{n.text}</p>
+                        : n.type === "p" ? <p>{n.text}</p>
+                        : n.type === "ul" ? <ul class="list-disc space-y-1.5 pl-5">{(n as { items: string[] }).items.map((i: string) => <li class="whitespace-pre-line">{i}</li>)}</ul>
+                        : <ol class="list-decimal space-y-2.5 pl-5">{(n as { items: string[] }).items.map((i: string) => <li class="whitespace-pre-line">{i}</li>)}</ol>
+                      )}
+                    </div>
+                  </details>
+                )}
               </article>
             );
           })}

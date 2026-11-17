@@ -92,6 +92,7 @@ const groupProposal: Collection = {
             { type: "string", name: "text", label: "Text", required: true },
           ],
         },
+        { type: "string", name: "note", label: "Note under the key facts (optional)", ui: textarea },
         photos("photos", "Photos (optional)"),
       ],
     },
@@ -274,6 +275,22 @@ const groupProposal: Collection = {
           ],
         },
         { type: "string", name: "note", label: "Note under the boats", ui: textarea },
+        {
+          type: "object",
+          name: "payment",
+          label: "Payment and cancellation terms (dropdown under the price)",
+          description: "A dropdown, closed at first, right under each boat's price.",
+          fields: [
+            { type: "string", name: "title", label: "Dropdown title" },
+            {
+              type: "string",
+              name: "text",
+              label: "Text",
+              ui: textarea,
+              description: "Separate blocks with a blank line. A line starting with '## ' is a small heading, '### ' a bold heading. Lines starting with '- ' make a list, and '1. ', '2. ' a numbered list (an indented line continues the item above).",
+            },
+          ],
+        },
       ],
     },
     {
