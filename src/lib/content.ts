@@ -261,6 +261,22 @@ export function loadLandingPage(locale: Locale, slug: string, options?: RequestO
   );
 }
 
+/** Private trip proposals (content/tripProposal/<locale>/<slug>.json). Listed across every locale: see the proposal page. */
+export async function loadTripProposals(options?: RequestOptions) {
+  const result = await requestWithMetadata(databaseClient.queries.tripProposalConnection(), options);
+  const pages = (result.data.tripProposalConnection?.edges ?? [])
+    .map((edge) => edge?.node)
+    .filter((node): node is NonNullable<typeof node> => !!node);
+  return { ...result, pages };
+}
+
+export function loadTripProposal(locale: Locale, slug: string, options?: RequestOptions) {
+  return requestWithMetadata(
+    databaseClient.queries.tripProposal({ relativePath: `${locale}/${slug}.json` }),
+    options
+  );
+}
+
 /** The La Paz page (content/laPage/<locale>.json). */
 export function loadLaPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(databaseClient.queries.laPage({ relativePath: `${locale}.json` }), options);

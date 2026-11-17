@@ -1,0 +1,244 @@
+{
+  "title": "Propuesta para Antoine Hurel",
+  "hero": {
+    "kicker": "Propuesta para Antoine Hurel · La Paz, Mar de Cortés",
+    "title": "Tres noches en el mar, solo para tu grupo",
+    "lede": "Un velero privado con capitán y chef de Eagle Ray, y la bahía de La Paz y las islas de Espíritu Santo para ustedes.",
+    "dates": "3 noches · 11 al 14 de diciembre de 2026",
+    "image": "https://eagle-ray-trip-pages.vercel.app/media/eagle-ray/hero-loop-poster.jpg",
+    "imageAlt": "El mar de Cortés visto desde un velero",
+    "buttonLabel": "Reservar"
+  },
+  "welcome": {
+    "eyebrow": "Para Antoine",
+    "title": "Tú organizas el viaje. Nosotros nos ocupamos del mar.",
+    "text": "Antoine, esta es la propuesta que preparamos para tu grupo: tres noches a bordo de un velero privado, saliendo de La Paz y navegando entre bahías tranquilas de la isla Espíritu Santo.\n\nEagle Ray se encarga del barco, de la comida y de la ruta. Ustedes eligen el ritmo de cada día: nadar, remar, explorar la playa o simplemente descansar.\n\nMás abajo encuentras la ruta, los dos barcos que podemos ofrecerte y lo que incluye cada día. Cuando estés listo, reserva con un clic.",
+    "signature": "El equipo de Eagle Ray Expeditions"
+  },
+  "day": {
+    "eyebrow": "Un día a bordo",
+    "title": "Un día en el mar, de principio a fin",
+    "note": "El ritmo se adapta al grupo y al clima.",
+    "scenes": [
+      {
+        "time": "Amanecer",
+        "title": "El primer café",
+        "text": "El barco despierta despacio. Café en el cockpit, con la cala todavía en silencio.",
+        "image": "/assets/img/boats/bay-dreamer-01.webp",
+        "imageAlt": "Cockpit del catamarán al amanecer"
+      },
+      {
+        "time": "Mañana",
+        "title": "Al agua",
+        "text": "Snorkel entre arrecifes y bahías. El mar de Cortés, solo para ustedes.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/eagle-ray/cl-e2ieabxohwithxvsuo7m.jpg",
+        "imageAlt": "Persona haciendo snorkel en el mar de Cortés"
+      },
+      {
+        "time": "Mediodía",
+        "title": "La comida",
+        "text": "El chef cocina marisco local, en cubierta o con los pies en la arena.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/sergio/lunch-beach.jpg",
+        "imageAlt": "Comida servida en una playa de Espíritu Santo"
+      },
+      {
+        "time": "Tarde",
+        "title": "A tu manera",
+        "text": "Kayak, paddleboard, una playa para ustedes solos o una siesta a la sombra.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/commons/activity-paddleboard-balandra.jpg",
+        "imageAlt": "Tabla de paddle en la bahía de Balandra"
+      },
+      {
+        "time": "Atardecer",
+        "title": "Cena al ancla",
+        "text": "La luz baja sobre la bahía y la mesa se pone en cubierta.",
+        "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
+        "imageAlt": "Atardecer en La Paz"
+      }
+    ]
+  },
+  "route": {
+    "eyebrow": "La ruta",
+    "title": "La Paz y Espíritu Santo",
+    "dates": "4 días · 11 al 14 de diciembre de 2026",
+    "mapLabel": "Ruta propuesta para 3 noches",
+    "stops": [
+      {
+        "name": "La Paz",
+        "sub": "Marina, salida y regreso",
+        "lat": 24.158,
+        "lon": -110.3245
+      },
+      {
+        "name": "Caleta Lobos",
+        "sub": "O Pichilingue",
+        "lat": 24.296,
+        "lon": -110.335
+      },
+      {
+        "name": "Bahía San Gabriel",
+        "sub": "O Puerto Ballena, sur de Espíritu Santo",
+        "lat": 24.43,
+        "lon": -110.36
+      },
+      {
+        "name": "Bahía de La Paz",
+        "sub": "Última noche cerca de la ciudad",
+        "lat": 24.205,
+        "lon": -110.31
+      }
+    ],
+    "facts": [
+      "2 días completos en el agua"
+    ],
+    "note": "Las etapas rondan las 15 millas náuticas. El capitán define la ruta según el clima.",
+    "mapCredit": "Datos del mapa © colaboradores de OpenStreetMap."
+  },
+  "boat": {
+    "eyebrow": "El barco",
+    "title": "Dos barcos para tu salida",
+    "choose": "Elige tu barco",
+    "priceLabel": "Barco completo",
+    "options": [
+      {
+        "name": "Lagoon 450F o similar",
+        "type": "Catamarán de 46 pies · Lagoon 450F o similar",
+        "dates": "11 al 14 de diciembre",
+        "price": "$23,625 USD",
+        "priceNote": "Todo el barco, con capitán y chef.",
+        "boatSlug": "bay-dreamer",
+        "banner": "/assets/img/boats/bay-dreamer-09.webp",
+        "bannerAlt": "El catamarán Lagoon 450F al ancla",
+        "about": "El Lagoon 450F es el más espacioso de los barcos de Eagle Ray: espacio para moverse con comodidad, tanto en cubierta como en el interior. Los camarotes se mantienen frescos por sí solos, el agua de la ducha no se enfría y el flybridge ofrece un lugar elevado desde el que mirar el horizonte.",
+        "specs": [
+          {
+            "label": "Tipo",
+            "value": "Catamarán"
+          },
+          {
+            "label": "Largo",
+            "value": "46 pies"
+          },
+          {
+            "label": "Camarotes",
+            "value": "4"
+          },
+          {
+            "label": "Invitados",
+            "value": "hasta 8"
+          }
+        ],
+        "featureList": [
+          "Flybridge",
+          "Aire acondicionado individual en cada camarote",
+          "Lavavajillas",
+          "Dos motores de 57 HP",
+          "Potabilizadora de 75 L/h",
+          "Generador Onan",
+          "Vela Code Zero",
+          "Starlink a bordo",
+          "Auxiliar de 15 HP"
+        ],
+        "similarNote": "O un barco similar con características iguales o superiores."
+      },
+      {
+        "name": "Bali 4.6 o similar",
+        "type": "Catamarán de 46 pies y 5 cabinas · Bali 4.6 o similar",
+        "dates": "11 al 14 de diciembre",
+        "price": "$30,713 USD",
+        "priceNote": "Todo el barco, con capitán y chef.",
+        "specs": [
+          {
+            "label": "Tipo",
+            "value": "Catamarán"
+          },
+          {
+            "label": "Largo",
+            "value": "46 pies"
+          },
+          {
+            "label": "Cabinas",
+            "value": "5"
+          },
+          {
+            "label": "Baños",
+            "value": "4"
+          }
+        ],
+        "similarNote": "O un barco similar con características iguales o superiores.",
+        "tag": "Opcional",
+        "about": "El que tiene más sitio de los dos, y se nota en cuanto suben a bordo: cinco cabinas, una para cada pareja y otra para la tripulación, así que nadie comparte más de lo que quiere. En la proa, un cockpit a la sombra con acceso directo desde el salón, para el primer café mirando la cala. Arriba, el flybridge es el lugar para ver caer la tarde sobre Espíritu Santo. Y abajo, aire acondicionado para dormir bien las tres noches. Es el barco para quien quiere un poco más de espacio sin renunciar a estar todos juntos.",
+        "featureList": [
+          "Aire acondicionado",
+          "Flybridge y cockpit de proa",
+          "Desalinizadora y generador",
+          "Snorkel y paddleboard"
+        ]
+      }
+    ]
+  },
+  "offer": {
+    "eyebrow": "Qué incluye",
+    "title": "Todo lo que necesitan a bordo",
+    "crew": "Un capitán y un chef de Eagle Ray cuidan del barco y de la mesa durante todo el viaje.",
+    "includedTitle": "Incluido",
+    "included": [
+      "El barco de tu salida, o uno similar con características iguales o superiores",
+      "Capitán y chef de Eagle Ray",
+      "Equipo de snorkel",
+      "2 tablas de paddle y 1 kayak",
+      "Desayuno, comida y cena todos los días, preparados a bordo por tu chef",
+      "Bocadillos y fruta fresca entre nado y nado",
+      "Menús planeados para tu grupo antes de que lleguen: vegetarianos, veganos, sin gluten, alergias",
+      "Pescado de la captura del día, cuando la línea trae algo",
+      "Agua, café, té y refrescos, todo el día",
+      "Traslado aeropuerto de La Paz ↔ marina, a la llegada y a la salida"
+    ],
+    "alsoTitle": "También a bordo",
+    "also": [
+      "Diésel",
+      "Permisos de navegación y entrada a parques nacionales",
+      "Wifi Starlink a bordo"
+    ],
+    "excludedTitle": "No incluido",
+    "excluded": [
+      "Vuelos a La Paz",
+      "Bebidas alcohólicas, elegidas de un menú antes del viaje",
+      "Buceo con tanque y otras actividades guiadas, cotizadas por separado",
+      "Propinas a la tripulación (se recomienda entre el 10 y el 15 %)",
+      "Seguro de viaje"
+    ],
+    "terms": [
+      {
+        "label": "Clima",
+        "text": "El capitán puede cambiar la ruta según el clima."
+      }
+    ]
+  },
+  "reserve": {
+    "title": "Reserva tu salida de diciembre",
+    "lede": "Elige el barco, confirma las fechas y asegura tus tres noches en el mar de Cortés.",
+    "image": "https://eagle-ray-trip-pages.vercel.app/media/video/d3-lapaz-sunset.jpg",
+    "button": {
+      "label": "Reservar",
+      "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
+    },
+    "note": "En la página de reserva eliges el barco y completas los datos del grupo. ¿Dudas antes de reservar? Escríbenos a hello@eaglerayexpeditions.com."
+  },
+  "crew": {
+    "title": "Tu grupo no navega solo,",
+    "titleEmphasis": "conoce a tu tripulación de Eagle Ray",
+    "blurb": "En Eagle Ray, cada expedición está dirigida por personas que viven el mar. Con ustedes viajan un capitán, que maneja el barco, lee el mar y elige cada fondeadero según el viento, y un chef que cocina con productos locales.",
+    "linkLabel": "Gente del mar apasionada",
+    "linkHref": "/es/passionate-sea-people/",
+    "members": [
+      "benji",
+      "lou",
+      "roberto",
+      "javier",
+      "antoine",
+      "ana"
+    ],
+    "note": "El equipo se asigna según el barco y las fechas; confirmamos al equipo de Eagle Ray cuando haces la reserva. Para que vayas conociéndolos, estos son algunos de los capitanes y chefs con los que navegamos."
+  }
+}
