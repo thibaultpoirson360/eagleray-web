@@ -1,0 +1,43 @@
+---
+/**
+ * `/<locale>/proposal/<slug>/` — a private trip proposal for one client.
+ * The long random slug is the only "key": the page is `noindex`, has no link
+ * from the site and is not in the sitemap. Proposals are built for every
+ * language that has a document (not only `liveLocales`), because a proposal is
+ * written in the client's own language and is not part of the public
+ * translation flow — a Spanish-only proposal must exist even while the
+ * public site is English only. See tina/collections/tripProposal.ts.
+ */
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import TripProposalView from "../../../components/TripProposalView.astro";
+import { loadTripProposal, loadTripProposals } from "../../../lib/content";
+import type { Locale } from "../../../i18n/config";
+
+export async function getStaticPaths() {
+  const { pages } = await loadTripProposals();
+  return pages.map((page) => ({ params: { locale: page._sys.breadcrumbs[0], slug: page._sys.filename } }));
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale as Locale;
+const result = await loadTripProposal(locale, slug);
+const proposal = result.data.tripProposal;
+// The link preview (WhatsApp) uses the opening photo as a light 1200x630 JPEG.
+const preview = proposal.hero?.image?.replace("/upload/f_auto,q_auto/", "/upload/f_jpg,q_auto:eco,w_1200,h_630,c_fill/");
+---
+
+<BaseLayout
+  title={`${proposal.title} — Eagle Ray Expeditions`}
+  ogImage={preview ?? undefined}
+  locale={locale}
+  path={`proposal/${slug}/`}
+  transparentNav={true}
+  noindex={true}
+>
+  <main id="main">
+    <TinaIsland name="tripProposal" wrapper={{ tag: "div" }} params={{ locale, slug }}>
+      <TripProposalView proposal={proposal} locale={locale} />
+    </TinaIsland>
+  </main>
+</BaseLayout>

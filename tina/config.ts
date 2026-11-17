@@ -20,6 +20,7 @@ import navPages from "./collections/navPages";
 import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
+import tripProposal from "./collections/tripProposal";
 import partnershipsPage from "./collections/partnershipsPage";
 import guestStoriesPage from "./collections/guestStoriesPage";
 import notFoundPage from "./collections/notFoundPage";
@@ -106,6 +107,7 @@ export default defineConfig({
       blogSection,
       blogPost,
       landingPage,
+      tripProposal,
       siteSettings,
       // access list for Google sign-in
       editors,
