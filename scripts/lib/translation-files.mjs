@@ -12,6 +12,14 @@ export const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url
 export const TARGET_LOCALES = ["es", "fr"];
 export const MEMORY_PATH = path.join(REPO_ROOT, "scripts", "translation-memory.json");
 
+/**
+ * Collections where a Spanish or French document may exist with no English one:
+ * a group proposal is written for one client, often only in that client's
+ * language. pruneOrphanTranslations never deletes these. English documents in
+ * them are still translated as usual.
+ */
+export const KEEP_WITHOUT_ENGLISH = new Set(["groupProposal"]);
+
 // content/<folder>/en.json  (one document per locale, e.g. hero, funnel)
 const SINGLE_DOC_RE = /^content\/([^/]+)\/en\.json$/;
 // content/<folder>/en/<slug>.json  (multi-document collections, e.g. crew, boats, blogPost)
@@ -72,7 +80,8 @@ export function outputPathFor(folder, slug, locale) {
  * are pruned — a single-document file like `en.json` is never deleted by the
  * editor. Safety: a folder is only pruned when `content/<folder>/en/` still
  * holds at least one file, so a missing or emptied English folder can never
- * wipe every translation. Deletions end up in the reviewed pull request, and
+ * wipe every translation. Collections in KEEP_WITHOUT_ENGLISH are never
+ * pruned. Deletions end up in the reviewed pull request, and
  * git history keeps the files if a deletion was a mistake.
  * Returns the repo-relative paths removed. `dryRun` lists without deleting.
  */
@@ -83,6 +92,7 @@ export function pruneOrphanTranslations(root = REPO_ROOT, { dryRun = false } = {
 
   for (const entry of readdirSync(contentDir, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
+    if (KEEP_WITHOUT_ENGLISH.has(entry.name)) continue;
     const enDir = path.join(contentDir, entry.name, "en");
     if (!existsSync(enDir) || !statSync(enDir).isDirectory()) continue;
     const enSlugs = new Set(readdirSync(enDir).filter((f) => f.endsWith(".json")));

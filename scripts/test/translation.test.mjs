@@ -18,6 +18,7 @@ import {
   buildDocument,
   git,
   pendingEntries,
+  planAll,
   planFile,
   translatableTexts,
   validateTranslation,
@@ -239,6 +240,31 @@ describe("pruneOrphanTranslations", () => {
   it("never touches single-document files", () => {
     const root = makeRepo({ "content/hero/en.json": {}, "content/hero/es.json": {} });
     assert.deepEqual(pruneOrphanTranslations(root), []);
+  });
+
+  it("keeps a group proposal that exists only in Spanish or French", () => {
+    const root = makeRepo({
+      "content/groupProposal/en/christmas.json": {},
+      "content/groupProposal/es/antoine.json": {},
+      "content/groupProposal/fr/tanguy.json": {},
+    });
+    assert.deepEqual(pruneOrphanTranslations(root), []);
+    assert.ok(existsSync(path.join(root, "content/groupProposal/es/antoine.json")));
+    assert.ok(existsSync(path.join(root, "content/groupProposal/fr/tanguy.json")));
+  });
+});
+
+// ---- group proposals ------------------------------------------------------------------
+
+describe("group proposals", () => {
+  it("still drafts Spanish and French for a proposal that exists only in English", () => {
+    const schema = new Map([...fakeSchema, ["groupProposal", { ...fakeSchema.get("page"), name: "groupProposal" }]]);
+    const root = makeRepo({ "content/groupProposal/en/christmas.json": base, "content/groupProposal/es/antoine.json": baseEs });
+    const plans = planAll({ root, schema, memory: { es: {}, fr: {} }, state: { default: git.head(root), files: {} } }).filter((p) =>
+      p.file.startsWith("content/groupProposal/")
+    );
+    assert.deepEqual(plans.map((p) => p.file), ["content/groupProposal/en/christmas.json"]);
+    assert.deepEqual(plans[0].locales.map((l) => [l.locale, l.mode]), [["es", "new"], ["fr", "new"]]);
   });
 });
 
