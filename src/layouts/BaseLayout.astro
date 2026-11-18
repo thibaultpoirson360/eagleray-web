@@ -85,18 +85,12 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
     <meta name="twitter:card" content="summary_large_image" />
     {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
     <!--
-      The four web fonts the design uses (--font-display/serif/sans/mono in
-      global.css), same families and weights as the original index.html
-      <head>. Nothing else loads them, so without this every heading, body
-      and mono label renders in a system fallback. One combined request
-      (families in alphabetical order) instead of the source's two.
+      Fonts are self-hosted (@font-face in global.css). Preload the two that
+      paint the first screen (body text and headings, latin subset) so text
+      doesn't wait for the stylesheet to discover them.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=TASA+Explorer:wght@400..800&display=swap"
-    />
+    <link rel="preload" href="/assets/fonts/inter-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/tasa-explorer-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
     <slot name="head" />
     {noindex && <meta name="robots" content="noindex" />}
     {!noindex && <link rel="canonical" href={urlFor(locale)} />}
