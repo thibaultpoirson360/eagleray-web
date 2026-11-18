@@ -53,6 +53,10 @@ Warm, direct, calm. No exclamation marks unless the English has one. Keep headin
 | Thanksgiving | Acción de Gracias | Thanksgiving | Spanish from the live landing page; French keeps the English word |
 | Partnerships | Alianzas | Partenariats | **guess** |
 | Become a partner | Hazte socio | Devenir partenaire | **guess** |
+| Cookie settings | Configuración de cookies | Paramètres des cookies | **guess**. Footer link that reopens the cookie banner |
+| Accept all / Reject all | Aceptar todo / Rechazar todo | Tout accepter / Tout refuser | **guess**. Cookie banner buttons |
+| Analytics (cookie category) | Analítica | Mesure d'audience | **guess**. French follows the CNIL's usual term |
+| Embedded content | Contenido integrado | Contenu intégré | **guess** |
 | Your Own Expedition | Tu propia expedición | Votre propre expédition | **guess** |
 | Special edition(s) | Edición especial / Ediciones especiales | Édition spéciale / Éditions spéciales | **guess** |
 
