@@ -34,6 +34,10 @@ import landingPage from "./collections/landingPage";
 import editors from "./collections/editors";
 
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
+// Local dev against the real Cloudinary library (`npm run tina:dev:cloudinary`)
+// instead of the files in public/assets. Only means anything in local mode:
+// deployed builds always use Cloudinary.
+const localCloudinary = isLocal && process.env.TINA_PUBLIC_MEDIA === "cloudinary";
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -68,7 +72,10 @@ export default defineConfig({
   //   deployed: Cloudinary via media.loadCustomStore, so editors can upload
   //             their own photos from the admin (see
   //             tina/media/cloudinary-media-store.ts for how and why).
-  media: isLocal
+  //   local + TINA_PUBLIC_MEDIA=cloudinary: the deployed store, with its
+  //             list/delete calls answered by a dev-only route in
+  //             astro.config.mjs (no login in local mode).
+  media: isLocal && !localCloudinary
     ? { tina: { publicFolder: "public", mediaRoot: "assets", static: false } }
     : {
         loadCustomStore: async () => {
