@@ -29,11 +29,12 @@
     "content/boats/en/beneteau-sense-55.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/boats/en/sun-odyssey-44i-jeanneau.json": "5c522658776728d53fb7ac658d9d6f868fd9a428",
     "content/aboutPage/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
-    "content/footer/en.json": "f989a1770820130a7f8d02371cf99b2afe0710f6",
+    "content/footer/en.json": "d469d39af9ec6c280d102e8cdbfd4932c2c4c5ab",
     "content/partnershipsPage/en.json": "38e06bca5c91f0352bbefe5d918acf8a7f5c5297",
     "content/recalibrationPage/en.json": "38e06bca5c91f0352bbefe5d918acf8a7f5c5297",
     "content/boatsSection/en.json": "392a6b95a17c31c4a1a23d257cef8428c7e698f9",
     "content/landingPage/en/kayak-baja-with-andrea.json": "e6529c564e3f9140beb78fa63b166885a807b4c8",
-    "content/experiencePage/en.json": "38e06bca5c91f0352bbefe5d918acf8a7f5c5297"
+    "content/experiencePage/en.json": "38e06bca5c91f0352bbefe5d918acf8a7f5c5297",
+    "content/cookieConsent/en.json": "d469d39af9ec6c280d102e8cdbfd4932c2c4c5ab"
   }
 }
