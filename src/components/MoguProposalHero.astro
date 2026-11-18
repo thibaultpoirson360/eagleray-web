@@ -8,6 +8,7 @@
  * (the landing route checks startsWithHero in src/lib/mogu.ts).
  */
 import { moguEmbedSrc } from "../lib/mogu";
+import ConsentEmbed from "./ConsentEmbed.astro";
 
 interface Props {
   tripSlug: string;
@@ -20,10 +21,6 @@ const { tripSlug, hideLogo = false, hideTitle = false, title = "Trip proposal" }
 ---
 
 <section class="relative block h-[calc(100vh-var(--spacing-nav))] w-full overflow-hidden">
-  <iframe
-    src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })}
-    loading="eager"
-    class="block h-full w-full border-0"
-    title={title}
-  ></iframe>
+  <!-- Loads only after the visitor allows embedded content (cookie banner). -->
+  <ConsentEmbed src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })} provider="Mogu" class="block h-full w-full border-0" title={title} />
 </section>

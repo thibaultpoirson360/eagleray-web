@@ -200,6 +200,16 @@ const mailHref = contact?.email ? `mailto:${contact.email}` : undefined;
             </a>
           </>
         )}
+        {legal.cookieSettingsLabel && (
+          // Reopens the cookie banner (initConsent in chrome.ts). A button, not a link: it
+          // goes nowhere. Hidden without JavaScript, where it couldn't do anything.
+          <span class="no-js:hidden">
+            {' '}·{' '}
+            <button type="button" class="cursor-pointer underline" data-consent-open data-tina-field={tinaField(legal, "cookieSettingsLabel")}>
+              {legal.cookieSettingsLabel}
+            </button>
+          </span>
+        )}
       </p>
     </div>
   )}

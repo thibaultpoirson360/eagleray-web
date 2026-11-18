@@ -20,6 +20,7 @@ import navPages from "./collections/navPages";
 import navigation from "./collections/navigation";
 import footer from "./collections/footer";
 import contactPage from "./collections/contactPage";
+import cookieConsent from "./collections/cookieConsent";
 import groupProposal from "./collections/groupProposal";
 import partnershipsPage from "./collections/partnershipsPage";
 import guestStoriesPage from "./collections/guestStoriesPage";
@@ -102,6 +103,7 @@ export default defineConfig({
       navPages,
       navigation,
       footer,
+      cookieConsent,
       contactPage,
       partnershipsPage,
       notFoundPage,

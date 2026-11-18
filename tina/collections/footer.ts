@@ -103,6 +103,7 @@ const footer: Collection = {
         { type: "string", name: "termsLabel", label: "Terms link label" },
         { type: "string", name: "privacyLabel", label: "Privacy link label" },
         { type: "string", name: "partnershipsLabel", label: "Partnerships link label", description: "Links to the Partnerships page. Leave blank to hide the link." },
+        { type: "string", name: "cookieSettingsLabel", label: "Cookie settings link label", description: "Reopens the cookie banner so a visitor can change their choice. EU law requires a way to do this on every page." },
       ],
     },
   ],

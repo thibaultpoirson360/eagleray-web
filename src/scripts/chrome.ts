@@ -28,6 +28,7 @@
  *     build-time year alone would silently go stale for a site that
  *     isn't rebuilt every January.
  */
+import { readConsent, saveConsent, apply, CATEGORIES, type Category } from "../lib/consent";
 
 const $ = <T extends Element = Element>(sel: string, scope: ParentNode = document): T | null =>
   scope.querySelector<T>(sel);
@@ -343,6 +344,95 @@ function initYear() {
   if (year) year.textContent = String(new Date().getFullYear());
 }
 
+/* ---------- Cookie consent (CookieBanner.astro, ConsentEmbed.astro, src/lib/consent.ts) ---------- */
+let consentOpener: HTMLElement | null = null;
+
+/** Shows the banner. `choices`: open the per-purpose switches, ticked with the current choice. */
+function showConsentBanner(choices: boolean, focus: boolean) {
+  const banner = $<HTMLElement>("[data-cookie-banner]");
+  if (!banner) return;
+  const current = readConsent();
+  $$<HTMLInputElement>("[data-consent-category]", banner).forEach((box) => {
+    box.checked = Boolean(current?.[box.dataset.consentCategory as Category]);
+  });
+  toggleConsentChoices(banner, choices);
+  banner.hidden = false;
+  if (focus) banner.focus();
+}
+
+function toggleConsentChoices(banner: HTMLElement, open: boolean) {
+  $("[data-cookie-choices]", banner)?.toggleAttribute("hidden", !open);
+  $$("[data-consent-when]", banner).forEach((el) => {
+    el.toggleAttribute("hidden", (el as HTMLElement).dataset.consentWhen !== (open ? "open" : "closed"));
+  });
+}
+
+function decideConsent(choice: Record<Category, boolean>) {
+  if (saveConsent(choice)) {
+    // Something that was running was turned off: only a reload stops it.
+    location.reload();
+    return;
+  }
+  const banner = $<HTMLElement>("[data-cookie-banner]");
+  if (banner && !banner.hidden) {
+    banner.hidden = true;
+    consentOpener?.focus();
+  }
+  consentOpener = null;
+}
+
+function initConsent() {
+  const current = readConsent();
+  apply(current);
+  if (!current) showConsentBanner(false, false);
+
+  const all = (value: boolean) => Object.fromEntries(CATEGORIES.map((c) => [c, value])) as Record<Category, boolean>;
+
+  // Delegated, so it survives Tina's editor re-rendering the banner/footer.
+  document.addEventListener("click", (event) => {
+    const target = (event.target as Element).closest<HTMLElement>("[data-action^='consent-'], [data-consent-open]");
+    if (!target) return;
+    if (target.hasAttribute("data-consent-open")) {
+      event.preventDefault();
+      consentOpener = target;
+      showConsentBanner(true, true);
+      return;
+    }
+    const banner = $<HTMLElement>("[data-cookie-banner]");
+    switch (target.dataset.action) {
+      case "consent-accept":
+        return decideConsent(all(true));
+      case "consent-reject":
+        return decideConsent(all(false));
+      case "consent-choose":
+        if (banner) toggleConsentChoices(banner, true);
+        $<HTMLInputElement>("[data-consent-category]", banner ?? document)?.focus();
+        return;
+      case "consent-save": {
+        const choice = all(false);
+        $$<HTMLInputElement>("[data-consent-category]", banner ?? document).forEach((box) => {
+          choice[box.dataset.consentCategory as Category] = box.checked;
+        });
+        return decideConsent(choice);
+      }
+      case "consent-embeds": {
+        // "Load content" on a blocked embed: keep the rest of the choice as it is.
+        const saved = readConsent();
+        const choice = all(false);
+        CATEGORIES.forEach((c) => (choice[c] = Boolean(saved?.[c])));
+        choice.embeds = true;
+        return decideConsent(choice);
+      }
+    }
+  });
+}
+
+/** In Tina's preview, a re-rendered banner comes back hidden: show it again if no choice is saved. */
+function syncConsentBanner(scope: ParentNode) {
+  if (!$("[data-cookie-banner]", scope)) return;
+  if (!readConsent()) showConsentBanner(false, false);
+}
+
 /**
  * TinaCMS's visual editor doesn't patch a changed field in place — its
  * bridge does `island.innerHTML = <freshly rendered HTML>` on the whole
@@ -370,6 +460,7 @@ function initTinaReinit() {
     safe(() => initReveals(scope), "initReveals(reinit)");
     safe(() => initTilt(scope), "initTilt(reinit)");
     safe(() => initMagnetic(scope), "initMagnetic(reinit)");
+    safe(() => syncConsentBanner(scope), "syncConsentBanner(reinit)");
   };
 
   const mo = new MutationObserver((mutations) => {
@@ -391,6 +482,7 @@ function boot() {
   safe(initMagnetic, "initMagnetic");
   safe(initSounder, "initSounder");
   safe(initYear, "initYear");
+  safe(initConsent, "initConsent");
   safe(initTinaReinit, "initTinaReinit");
 }
 

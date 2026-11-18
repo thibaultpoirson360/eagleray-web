@@ -10,6 +10,7 @@
  * cut from whatever was pasted, and the Mogu logo / title can be hidden.
  */
 import { moguEmbedSrc } from "../lib/mogu";
+import ConsentEmbed from "./ConsentEmbed.astro";
 
 interface Props {
   /** Mogu trip identifier used in the embed URL, e.g. "baja-sailing-7-days". */
@@ -27,10 +28,5 @@ interface Props {
 const { tripSlug, height = 600, title = "Trip proposal", hideLogo = false, hideTitle = false } = Astro.props;
 ---
 
-<iframe
-  src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })}
-  height={height}
-  loading="lazy"
-  class="w-full border-0"
-  title={title}
-></iframe>
+<!-- Loads only after the visitor allows embedded content (cookie banner). -->
+<ConsentEmbed src={moguEmbedSrc(tripSlug, { hideLogo, hideTitle })} provider="Mogu" height={height} class="w-full border-0" title={title} />
