@@ -156,6 +156,14 @@ contains at least one file. If an English file was deleted by mistake, restore
 it in git **and** its translations from the previous commit; do not approve the
 merge of a branch that deletes them.
 
+### Group proposals written only in Spanish or French
+
+A group proposal (`content/groupProposal/<locale>/<slug>.json`) is written for
+one client, sometimes only in Spanish or French. Those are never deleted for
+having no English version. An English proposal is translated like any other
+document. The list of collections treated this way is `KEEP_WITHOUT_ENGLISH` in
+`scripts/lib/translation-files.mjs`.
+
 ## Going live: enabling a language
 
 Whether a language is *published* is separate from whether its content exists.
