@@ -23,6 +23,8 @@ export interface Props {
   class?: string;
   /** Tina's click-to-edit marker — passed through since Astro doesn't auto-forward unlisted props. */
   "data-tina-field"?: string;
+  /** A hook for page scripts to find the button (e.g. the cookie banner's "consent-accept"). */
+  "data-action"?: string;
 }
 
 const {
@@ -36,6 +38,7 @@ const {
   disabled = false,
   class: extraClass,
   "data-tina-field": tinaField,
+  "data-action": action,
 } = Astro.props;
 
 // One deliberate deviation from CLAUDE.md's locked base mapping: below `sm`
@@ -78,7 +81,7 @@ const classes = [
 
 {
   href ? (
-    <a class={classes} href={href} data-magnetic={magnetic ? "" : undefined} data-tina-field={tinaField}>
+    <a class={classes} href={href} data-magnetic={magnetic ? "" : undefined} data-tina-field={tinaField} data-action={action}>
       <slot />
     </a>
   ) : (
@@ -88,6 +91,7 @@ const classes = [
       disabled={disabled}
       data-magnetic={magnetic ? "" : undefined}
       data-tina-field={tinaField}
+      data-action={action}
     >
       <slot />
     </button>

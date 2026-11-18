@@ -101,6 +101,8 @@ The assistant, when running /translate:
 ### 7. Things that need a person's decision first
 Adding **analytics or tracking scripts**, **new embeds** (maps, videos, booking widgets), **new forms** that collect personal data, **new npm packages**, or anything that sends visitor data to a third party. These have privacy and legal consequences, especially for visitors in Europe and Mexico. Describe the option and stop.
 
+Once a person has said yes: a tracker is loaded only from `apply()` in `src/lib/consent.ts`, under a cookie-banner category, never as a `<script>` in a page. An iframe from another company goes through `<ConsentEmbed>` (`src/components/ConsentEmbed.astro`), never a bare `<iframe>`. Then update the matching description in *Cookie banner* (`content/cookieConsent/en.json`) and section 5 of `public/privacy.html`. Fonts and other files come from our own domain (`public/assets/`), not a third-party CDN.
+
 ### 8. Say what you didn't verify
 End every task with what you **checked** (build, type-check, which pages and languages you looked at, at which widths) and what you **did not or could not** check. Never say "done" or "works" for something you didn't actually run.
 
@@ -122,6 +124,8 @@ Reuse these. Before creating a component, look here and in `src/components/`.
 | Component | File | Use |
 |---|---|---|
 | `Button` | `src/components/ui/Button.astro` | The only button. `variant` `"primary"` or `"ghost"`; `context` `"default"` (on white) or `"hero"` (over a photo); `size="sm"`, `wide`. |
+| `CookieBanner` | `src/components/CookieBanner.astro` | The cookie banner, on every page (in `BaseLayout`). Text edited under *Cookie banner*; behaviour in `src/lib/consent.ts`. |
+| `ConsentEmbed` | `src/components/ConsentEmbed.astro` | Wraps any third-party iframe (Mogu, Tally) so it only loads after the visitor allows embedded content. |
 | `PageHero` | `src/components/ui/PageHero.astro` | Full-width photo banner with kicker, `<h1>`, sub-headline and optional button. Pass Tina markers through `fields`. |
 | `SliderDots` | `src/components/SliderDots.tsx` | Dot navigation for a swipe slider. |
 | Rich-text pieces | `src/components/richtext/` | How paragraphs, quotes and images look inside articles. |

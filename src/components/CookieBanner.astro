@@ -1,0 +1,99 @@
+---
+/**
+ * Cookie banner, on every page (BaseLayout). Edited under *Cookie banner*
+ * (content/cookieConsent/<locale>.json). The behaviour is in
+ * src/lib/consent.ts, wired up by initConsent in src/scripts/chrome.ts.
+ *
+ * Hidden in the HTML and shown by the script only when there's no saved
+ * choice, so a visitor without JavaScript never sees it (and nothing
+ * optional can load for them anyway). Not a modal: it sits at the bottom
+ * of the screen and the page stays usable, which is why there's no focus
+ * trap and no Escape. "Reject all" and "Accept all" are the same button
+ * style on purpose: EU regulators require refusing to be as easy as
+ * accepting. "Choose" reveals one switch per purpose, all off by default.
+ *
+ * The footer's "Cookie settings" link (Footer.astro) reopens it with the
+ * choices open and the current choice ticked.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import type { CookieConsentQuery } from "../../tina/__generated__/types";
+import Button from "./ui/Button.astro";
+
+interface Props {
+  consent: CookieConsentQuery["cookieConsent"];
+}
+
+const { consent } = Astro.props;
+const categories = [
+  { key: "analytics", data: consent.analytics },
+  { key: "marketing", data: consent.marketing },
+  { key: "embeds", data: consent.embeds },
+] as const;
+---
+
+<section
+  data-cookie-banner
+  hidden
+  tabindex="-1"
+  aria-labelledby="cookie-banner-title"
+  class="fixed inset-x-3 bottom-3 z-[150] mx-auto max-h-[calc(100svh-1.5rem)] max-w-2xl overflow-y-auto rounded-lg border border-ink/14 bg-white p-5 text-ink shadow-lg focus:outline-none sm:inset-x-6 sm:bottom-6 sm:p-6"
+>
+  <p id="cookie-banner-title" class="font-mono text-[.72rem] tracking-[.08em] text-ink uppercase" data-tina-field={tinaField(consent, "title")}>
+    {consent.title}
+  </p>
+  <p class="mt-2 text-sm leading-[1.6] text-ink/74">
+    <span data-tina-field={tinaField(consent, "text")}>{consent.text}</span>{" "}
+    <a class="underline hover:text-ink" href="/privacy.html" data-tina-field={tinaField(consent, "privacyLinkLabel")}>{consent.privacyLinkLabel}</a>
+  </p>
+
+  <fieldset data-cookie-choices hidden class="mt-4 space-y-4 border-t border-ink/8 pt-4">
+    <legend class="sr-only">{consent.title}</legend>
+    {
+      consent.necessary && (
+        <div class="flex items-start justify-between gap-4">
+          <span>
+            <span class="block text-sm font-medium" data-tina-field={tinaField(consent.necessary, "label")}>{consent.necessary.label}</span>
+            <span class="mt-0.5 block text-xs leading-[1.55] text-ink/64" data-tina-field={tinaField(consent.necessary, "description")}>
+              {consent.necessary.description}
+            </span>
+          </span>
+          <span class="flex-none pt-0.5 font-mono text-[.66rem] tracking-[.06em] text-ink/52 uppercase" data-tina-field={tinaField(consent.necessary, "alwaysOnLabel")}>
+            {consent.necessary.alwaysOnLabel}
+          </span>
+        </div>
+      )
+    }
+    {
+      categories.map(({ key, data }) =>
+        data ? (
+          <label class="flex cursor-pointer items-start justify-between gap-4">
+            <span>
+              <span class="block text-sm font-medium" data-tina-field={tinaField(data, "label")}>{data.label}</span>
+              <span class="mt-0.5 block text-xs leading-[1.55] text-ink/64" data-tina-field={tinaField(data, "description")}>
+                {data.description}
+              </span>
+            </span>
+            <input
+              type="checkbox"
+              name={key}
+              data-consent-category={key}
+              class="mt-0.5 h-4 w-4 flex-none cursor-pointer accent-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+            />
+          </label>
+        ) : null
+      )
+    }
+  </fieldset>
+
+  <div class="mt-4 flex flex-wrap gap-2">
+    <Button size="sm" data-action="consent-reject" data-tina-field={tinaField(consent, "rejectLabel")}>{consent.rejectLabel}</Button>
+    <Button size="sm" data-action="consent-accept" data-tina-field={tinaField(consent, "acceptLabel")}>{consent.acceptLabel}</Button>
+    <!-- "Choose" and "Save my choices" swap places when the choices open; the wrappers carry `hidden` (Button doesn't forward it). -->
+    <span data-consent-when="closed" class="contents">
+      <Button size="sm" variant="ghost" data-action="consent-choose" data-tina-field={tinaField(consent, "chooseLabel")}>{consent.chooseLabel}</Button>
+    </span>
+    <span data-consent-when="open" hidden class="contents">
+      <Button size="sm" variant="ghost" data-action="consent-save" data-tina-field={tinaField(consent, "saveLabel")}>{consent.saveLabel}</Button>
+    </span>
+  </div>
+</section>

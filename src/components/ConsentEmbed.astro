@@ -1,0 +1,58 @@
+---
+/**
+ * A third-party iframe (Mogu trip proposal, Tally form) that is only
+ * loaded once the visitor allows "Embedded content" in the cookie banner.
+ * Until then the iframe has no `src` (its address waits in `data-src`) and
+ * a placeholder takes its place, at the same height so nothing jumps.
+ * "Load content" in the placeholder saves that consent for the whole site;
+ * the "open in a new tab" link works without JavaScript and without consent
+ * (visiting their site directly is the visitor's own choice).
+ *
+ * The placeholder's inline `height` is the one exception to "no inline
+ * style": the height is an editor's number, and Tailwind can't build a
+ * class from a value it only learns at build time from content.
+ *
+ * Every new embed from another company must go through this component.
+ * Placeholder wording: *Cookie banner* > Blocked embed placeholder.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import Button from "./ui/Button.astro";
+import { loadCookieConsent } from "../lib/content";
+import { defaultLocale, isLocale } from "../i18n/config";
+
+interface Props {
+  src: string;
+  /** The company's name, shown in the placeholder (e.g. "Mogu", "Tally"). */
+  provider: string;
+  title: string;
+  /** Classes for the iframe and the placeholder (size, border). */
+  class?: string;
+  /** Height in px, when the embed has a fixed one. */
+  height?: number;
+}
+
+const { src, provider, title, class: className = "", height } = Astro.props;
+const locale = isLocale(Astro.params.locale) ? Astro.params.locale : defaultLocale;
+const consent = (await loadCookieConsent(locale)).data.cookieConsent;
+const placeholder = consent.embedPlaceholder;
+const fill = (text?: string | null) => (text ?? "").replaceAll("{provider}", provider);
+---
+
+<div data-consent-embed class="contents">
+  <div
+    data-consent-placeholder
+    class={`flex flex-col items-center justify-center gap-4 border border-ink/14 bg-surface px-pad py-10 text-center ${className}`}
+    style={height ? `height:${height}px` : undefined}
+  >
+    <p class="max-w-md text-sm leading-[1.6] text-ink/74" data-tina-field={placeholder ? tinaField(placeholder, "text") : undefined}>
+      {fill(placeholder?.text)}
+    </p>
+    <Button size="sm" data-action="consent-embeds" data-tina-field={placeholder ? tinaField(placeholder, "loadLabel") : undefined}>
+      {placeholder?.loadLabel}
+    </Button>
+    <a class="text-xs text-ink/64 underline hover:text-ink" href={src} target="_blank" rel="noopener" data-tina-field={placeholder ? tinaField(placeholder, "openLabel") : undefined}>
+      {fill(placeholder?.openLabel)}
+    </a>
+  </div>
+  <iframe data-src={src} hidden height={height} title={title} class={className}></iframe>
+</div>

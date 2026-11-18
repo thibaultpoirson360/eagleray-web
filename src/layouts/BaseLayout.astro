@@ -7,7 +7,8 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import Sounder from '../components/Sounder.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-import { loadNavigation, loadFooter, loadSiteSettings } from '../lib/content';
+import CookieBanner from '../components/CookieBanner.astro';
+import { loadNavigation, loadFooter, loadSiteSettings, loadCookieConsent } from '../lib/content';
 
 interface Props {
   title: string;
@@ -59,7 +60,11 @@ const absolute = (u: string) => new URL(u, site).href;
 // Page chrome, not page content — fetched here (not per-page) so every
 // page that uses this layout gets Nav/Footer for free.
 const navigationResult = await loadNavigation(locale);
-const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale), loadSiteSettings()]);
+const [footerResult, siteSettingsResult, cookieConsentResult] = await Promise.all([
+  loadFooter(locale),
+  loadSiteSettings(),
+  loadCookieConsent(locale),
+]);
 ---
 
 <!doctype html>
@@ -148,6 +153,10 @@ const [footerResult, siteSettingsResult] = await Promise.all([loadFooter(locale)
       <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} locale={locale} />
     </TinaIsland>
     <WhatsAppButton navigation={navigationResult.data.navigation} siteSettings={siteSettingsResult.data.siteSettings} />
+    <!-- Cookie banner: hidden until chrome.ts finds no saved choice. Nothing optional (GA, Meta Pixel, Mogu/Tally) loads before consent: src/lib/consent.ts. -->
+    <TinaIsland name="cookieConsent" wrapper={{ tag: 'div' }} params={{ locale }}>
+      <CookieBanner consent={cookieConsentResult.data.cookieConsent} />
+    </TinaIsland>
     <script>
       import '../scripts/chrome.ts';
     </script>

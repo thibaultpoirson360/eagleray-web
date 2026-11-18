@@ -31,6 +31,7 @@ import ExpeditionsSection from "../../components/ExpeditionsSection.astro";
 import UpcomingEditions from "../../components/UpcomingEditions.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
+import CookieBanner from "../../components/CookieBanner.astro";
 import Funnel from "../../components/Funnel.astro";
 import ContactPage from "../../components/ContactPage.astro";
 import GuestStoriesPage from "../../components/GuestStoriesPage.astro";
@@ -53,6 +54,7 @@ import {
   loadBoats,
   loadNavigation,
   loadFooter,
+  loadCookieConsent,
   loadSiteSettings,
   loadFunnel,
   loadContactPage,
@@ -208,6 +210,15 @@ const route = createIslandRoute({
       };
       return { footer: footer.data.footer, siteSettings: siteSettings.data.siteSettings };
     },
+  },
+  cookieConsent: {
+    fetch: async (_request: Request, params: URLSearchParams) =>
+      loadCookieConsent(localeFromParams(params), { priority: "primary" }),
+    component: CookieBanner,
+    wrapper: { tag: "div" },
+    propsFromData: (result: unknown) => ({
+      consent: (result as Awaited<ReturnType<typeof loadCookieConsent>>).data.cookieConsent,
+    }),
   },
   funnel: {
     fetch: async (_request: Request, params: URLSearchParams) => {

@@ -203,6 +203,25 @@ export function loadContactPage(locale: Locale, options?: RequestOptions) {
   );
 }
 
+/**
+ * The cookie banner's text for `locale`, or the English one until that
+ * language has been translated: the banner is on every page, so a missing
+ * translation must never break a page's build.
+ */
+export async function loadCookieConsent(locale: Locale, options?: RequestOptions) {
+  const load = (l: Locale) =>
+    requestWithMetadata(databaseClient.queries.cookieConsent({ relativePath: `${l}.json` }), options);
+  // A missing file either throws or comes back with no document, depending
+  // on the data layer: treat both as "not translated yet".
+  try {
+    const result = await load(locale);
+    if (result.data?.cookieConsent) return result;
+  } catch {
+    /* fall through to English */
+  }
+  return load(defaultLocale);
+}
+
 export function loadPartnershipsPage(locale: Locale, options?: RequestOptions) {
   return requestWithMetadata(
     databaseClient.queries.partnershipsPage({ relativePath: `${locale}.json` }),
