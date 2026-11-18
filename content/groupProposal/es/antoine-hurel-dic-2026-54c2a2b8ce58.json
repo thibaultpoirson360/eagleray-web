@@ -444,6 +444,51 @@
       "href": "https://v2.app.moguplatform.com/trips/3-noches-mar-familia-eagle-ray-expeditions/checkout?step=products"
     }
   },
+  "food": {
+    "title": "Qué se cocina a bordo",
+    "text": "Su chef hace las compras en La Paz el día antes del embarque y cocina tres comidas al día a bordo: el desayuno en cubierta, la comida al ancla y la cena cuando baja el sol. Cuéntennos antes del viaje sus alergias o preferencias, y el menú se construye en torno a ellas.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+        "alt": "Ceviche de camarón",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+        "alt": "Torre de atún",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+        "alt": "Ensalada fresca",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+        "alt": "Comida servida a bordo",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+        "alt": "Desayuno de la casa",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+        "alt": "Fruta fresca del desayuno",
+        "caption": ""
+      }
+    ]
+  },
+  "dive": {
+    "title": "Personalicen su experiencia",
+    "text": "Su viaje funciona tal cual, sin nada más. Si quieren más tiempo en el agua o algo especial a bordo, pueden añadir actividades y extras, con pago aparte. Cuéntennos qué les gustaría y lo organizamos antes de zarpar.",
+    "activities": [
+      "Buceo",
+      "Kitesurf",
+      "Selección de vinos"
+    ]
+  },
   "book": {
     "title": "Cómo reservar",
     "text": "",
