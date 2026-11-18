@@ -223,6 +223,10 @@ const groupProposal: Collection = {
           list: true,
           description: "Type the activity names exactly as on the Sail with Us page, e.g. 'Scuba diving', 'Kite', 'Wine selection'. The cards, photos and texts come from that page, so they are edited there.",
         },
+        { type: "string", name: "tellTitle", label: "Block under the cards: title (optional)", description: "e.g. 'Cuéntennos lo que quieren'." },
+        { type: "string", name: "tellText", label: "Block under the cards: text", ui: textarea },
+        { type: "string", name: "buttonLabel", label: "WhatsApp button text (optional)", description: "e.g. 'Quiero customizar mi experiencia, hablar con un agente'. Opens WhatsApp with the message below, to the number in Site settings." },
+        { type: "string", name: "buttonMessage", label: "WhatsApp message", ui: textarea },
       ],
     },
     {

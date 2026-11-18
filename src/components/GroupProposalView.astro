@@ -324,6 +324,22 @@ const icons: Record<string, string> = {
           <div class="mt-20">
             <ProposalActivityCards items={activityItems} page={sailPage} whatsapp={number ? `https://wa.me/${number}` : ""} label={sailPage.activitiesExtraLabel} />
           </div>
+          {(dive.tellTitle || dive.tellText || dive.buttonLabel) && (
+            <div class="mt-24 max-w-[56ch] border-t border-ink/14 pt-14">
+              {dive.tellTitle && <h3 class="text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(dive, "tellTitle")}>{dive.tellTitle}</h3>}
+              {dive.tellText && <div class={`mt-6 space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(dive, "tellText")}>{paragraphs(dive.tellText).map((p) => <p>{p}</p>)}</div>}
+              {dive.buttonLabel && number && (
+                <div class="mt-10">
+                  <Button href={`https://wa.me/${number}${dive.buttonMessage ? `?text=${encodeURIComponent(dive.buttonMessage)}` : ""}`} variant="primary" data-tina-field={tinaField(dive, "buttonLabel")}>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-5 shrink-0">
+                      <path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.1L2 22l5.05-1.6A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 1 1-4.3 14.96l-.3-.19-3 .95.98-2.93-.2-.31A8.1 8.1 0 0 1 12.04 3.8Zm-3.2 3.9c-.2 0-.5.07-.76.35-.26.28-1 1-1 2.45s1.03 2.84 1.17 3.04c.15.2 2.03 3.2 5 4.36 2.47.97 2.97.78 3.5.73.54-.05 1.73-.7 1.97-1.4.24-.68.24-1.27.17-1.4-.07-.12-.27-.2-.57-.35-.3-.15-1.73-.86-2-.95-.27-.1-.47-.15-.66.15-.2.3-.76.95-.93 1.15-.17.2-.34.22-.64.07a7.9 7.9 0 0 1-2.3-1.42 8.7 8.7 0 0 1-1.6-1.98c-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5Z"></path>
+                    </svg>
+                    <span>{dive.buttonLabel}</span>
+                  </Button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
     )
