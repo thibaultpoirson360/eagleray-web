@@ -17,7 +17,9 @@
  * into the bundle at build time.
  *
  * api/media/cloudinary.ts (the Vercel Function entry) re-exports this,
- * mirroring the api/tina/backend.ts -> tina/backend.ts split.
+ * mirroring the api/tina/backend.ts -> tina/backend.ts split. The Cloudinary
+ * calls themselves live in cloudinary-actions.ts, shared with the local
+ * dev route in astro.config.mjs.
  *
  * Authorization reuses the exact same check the Tina GraphQL backend uses
  * (tina/backend.ts) — an editor must be signed in via Auth.js, not a new
@@ -29,23 +31,21 @@
  */
 import { AuthJsBackendAuthProvider } from "tinacms-authjs";
 import { authOptions } from "../auth.js";
+import { isConfigured, runAction, type CloudinaryEnv } from "./cloudinary-actions.js";
 
-const CLOUD_NAME = process.env.CLOUDINARY_CLOUD_NAME;
-const UPLOAD_PRESET = process.env.CLOUDINARY_UPLOAD_PRESET;
-const API_KEY = process.env.CLOUDINARY_API_KEY;
-const API_SECRET = process.env.CLOUDINARY_API_SECRET;
-const ROOT_FOLDER = "eagleray-web";
-
-function basicAuthHeader(): string {
-  return "Basic " + Buffer.from(`${API_KEY}:${API_SECRET}`).toString("base64");
-}
+const env: CloudinaryEnv = {
+  cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET,
+  apiKey: process.env.CLOUDINARY_API_KEY,
+  apiSecret: process.env.CLOUDINARY_API_SECRET,
+};
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
     return;
   }
-  if (!CLOUD_NAME || !UPLOAD_PRESET || !API_KEY || !API_SECRET) {
+  if (!isConfigured(env)) {
     res.status(500).json({ error: "Cloudinary isn't configured on this deployment." });
     return;
   }
@@ -57,51 +57,6 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const { action, directory, limit, offset, publicId } = req.body ?? {};
-
-  if (action === "config") {
-    res.status(200).json({ cloudName: CLOUD_NAME, uploadPreset: UPLOAD_PRESET });
-    return;
-  }
-
-  if (action === "list") {
-    const prefix = directory ? `${ROOT_FOLDER}/${directory}` : ROOT_FOLDER;
-    const params = new URLSearchParams({
-      type: "upload",
-      prefix,
-      max_results: String(limit ?? 50),
-    });
-    if (offset) params.set("next_cursor", String(offset));
-
-    const response = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image?${params}`, {
-      headers: { Authorization: basicAuthHeader() },
-    });
-    if (!response.ok) {
-      res.status(response.status).json({ error: "Cloudinary list failed" });
-      return;
-    }
-    const data = await response.json();
-    res.status(200).json({ resources: data.resources, nextOffset: data.next_cursor });
-    return;
-  }
-
-  if (action === "delete") {
-    if (!publicId) {
-      res.status(400).json({ error: "Missing publicId" });
-      return;
-    }
-    const params = new URLSearchParams({ "public_ids[]": publicId });
-    const response = await fetch(
-      `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/resources/image/upload?${params}`,
-      { method: "DELETE", headers: { Authorization: basicAuthHeader() } }
-    );
-    if (!response.ok) {
-      res.status(response.status).json({ error: "Cloudinary delete failed" });
-      return;
-    }
-    res.status(200).json({ ok: true });
-    return;
-  }
-
-  res.status(400).json({ error: `Unknown action "${action}"` });
+  const result = await runAction(req.body ?? {}, env);
+  res.status(result.status).json(result.body);
 }

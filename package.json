@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "tina:dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"astro dev\"",
+    "tina:dev:cloudinary": "TINA_PUBLIC_IS_LOCAL=true TINA_PUBLIC_MEDIA=cloudinary tinacms dev -c \"astro dev\"",
     "tina:build": "tinacms build --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
     "tina:build:local": "TINA_PUBLIC_IS_LOCAL=true tinacms build --local --skip-cloud-checks && node scripts/patch-tina-generated.mjs",
     "test:e2e": "playwright test",

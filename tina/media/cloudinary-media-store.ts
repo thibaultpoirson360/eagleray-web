@@ -5,8 +5,8 @@
  * the admin, with size/format normalized by an unsigned upload preset
  * configured in the Cloudinary dashboard (docs/tina-setup.md has the steps).
  *
- * Wired in via `media.loadCustomStore` in tina/config.ts (deployed builds
- * only — local dev keeps the simpler git-backed `media.tina` store).
+ * Wired in via `media.loadCustomStore` in tina/config.ts: deployed builds,
+ * and local dev when started with `npm run tina:dev:cloudinary`.
  *
  * `persist` (upload) talks to Cloudinary directly from the browser using an
  * UNSIGNED preset — no API secret in this bundle, and no Vercel Function
@@ -38,7 +38,6 @@ const ROOT_FOLDER = "eagleray-web";
 interface CloudinaryResource {
   public_id: string;
   format: string;
-  folder?: string;
 }
 
 interface CloudinaryConfig {
@@ -87,18 +86,30 @@ function thumbnailUrl(cloudName: string, publicId: string, format: string, w: nu
   return `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,w_${w},h_${h},f_auto,q_auto/${publicId}.${format}`;
 }
 
-function toMedia(cloudName: string, resource: CloudinaryResource): Media {
+// iPhone photos arrive as HEIC/HEIF. f_auto already converts them for every
+// visitor, but a link ending in ".heic" looks broken when copied, and some
+// link-preview services judge a link by its extension. Cloudinary converts
+// to whatever extension the URL asks for, so ask for ".jpg" instead.
+function webFormat(format: string): string {
+  return format === "heic" || format === "heif" ? "jpg" : format;
+}
+
+// `directory` is the folder the editor is looking at, relative to
+// ROOT_FOLDER ("" at the top level); Tina joins it with a folder's filename
+// to navigate into it.
+function toMedia(cloudName: string, resource: CloudinaryResource, directory: string): Media {
   const filename = resource.public_id.split("/").pop() ?? resource.public_id;
+  const format = webFormat(resource.format);
   const thumbnails: Record<string, string> = {};
   for (const size of THUMBNAIL_SIZES) {
-    thumbnails[size.key] = thumbnailUrl(cloudName, resource.public_id, resource.format, size.w, size.h);
+    thumbnails[size.key] = thumbnailUrl(cloudName, resource.public_id, format, size.w, size.h);
   }
   return {
     type: "file",
     id: resource.public_id,
     filename: `${filename}.${resource.format}`,
-    directory: resource.folder ?? "",
-    src: deliveryUrl(cloudName, resource.public_id, resource.format),
+    directory,
+    src: deliveryUrl(cloudName, resource.public_id, format),
     thumbnails,
   };
 }
@@ -147,8 +158,16 @@ export default class CloudinaryMediaStore implements MediaStore {
       throw new Error(`Couldn't list Cloudinary media (HTTP ${response.status}).`);
     }
     const data = await response.json();
+    const directory = options?.directory ?? "";
+    const folders: string[] = data.folders ?? [];
     const resources: CloudinaryResource[] = data.resources ?? [];
-    return { items: resources.map((r) => toMedia(cloudName, r)), nextOffset: data.nextOffset };
+    return {
+      items: [
+        ...folders.map((name): Media => ({ type: "dir", id: name, filename: name, directory })),
+        ...resources.map((r) => toMedia(cloudName, r, directory)),
+      ],
+      nextOffset: data.nextOffset,
+    };
   }
 
   async delete(media: Media): Promise<void> {

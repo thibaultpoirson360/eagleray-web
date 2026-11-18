@@ -390,7 +390,22 @@ Cloudinary setup (one-time, ~5 minutes):
 4. Add all four as env vars — `.env.example` has the exact names
    (`CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`,
    `CLOUDINARY_UPLOAD_PRESET`) — to the Vercel project (Project Settings > Environment
-   Variables), then redeploy. Not needed in local `.env`: local dev doesn't use Cloudinary.
+   Variables), then redeploy. Add them to your local `.env` too if you want to use
+   `npm run tina:dev:cloudinary` (below); plain `npm run tina:dev` doesn't need them.
+
+**Folders.** The Cloudinary account uses *dynamic folders*: an image's folder is separate from
+its public ID, so moving images between folders in the Cloudinary console never changes their
+URL and never breaks a page. The media manager lists the subfolders and images of the folder
+being viewed (`tina/media/cloudinary-actions.ts`). Tina's "New folder" button only opens an
+empty view, so the first time a missing folder is opened the backend creates it in Cloudinary;
+otherwise it would vanish when the editor navigated away. Renaming and deleting folders is
+done in the Cloudinary console: Tina's media manager has no buttons for it.
+
+**Local dev against Cloudinary.** `npm run tina:dev:cloudinary` is `tina:dev` plus
+`TINA_PUBLIC_MEDIA=cloudinary`: the local editor uses the real Cloudinary library instead of
+`public/assets`. The list/delete calls are answered by a dev-only route in `astro.config.mjs`
+(local mode has no login, so it skips the session check; it never exists in a build). Uploads,
+deletes and new folders made this way are real and show up on the live site's media manager.
 
 Photos already committed under `public/assets/img/` keep working as-is (their src is a plain
 `/assets/...` path, untouched by this) — this only changes where a *new* upload goes.
@@ -400,6 +415,7 @@ Videos (`hero.background.videoSrc`) are a plain path string, unaffected either w
 
 ```
 npm run tina:dev          # tinacms dev -c "astro dev" with TINA_PUBLIC_IS_LOCAL=true
+npm run tina:dev:cloudinary  # same, but the media manager uses the real Cloudinary library (section 8)
 npm run tina:build:local  # schema/compile check; no cloud, no Redis
 ```
 Local mode: no login, no GitHub, no Redis, filesystem content, `contentApiUrlOverride`
