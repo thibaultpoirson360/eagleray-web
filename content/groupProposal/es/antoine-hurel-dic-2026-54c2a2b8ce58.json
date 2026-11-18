@@ -487,7 +487,11 @@
       "Buceo",
       "Kitesurf",
       "Selección de vinos"
-    ]
+    ],
+    "tellTitle": "Cuéntennos lo que quieren",
+    "tellText": "Cada familia viaja distinto. Díganos qué les gustaría hacer, cuándo les va mejor el día, qué comen y qué no, qué necesita la bebé a bordo y cualquier cosa que quieran que el viaje tenga.\n\nUn agente de Eagle Ray habla con ustedes y ajusta el viaje antes de zarpar.",
+    "buttonLabel": "Quiero customizar mi experiencia, hablar con un agente",
+    "buttonMessage": "Hola, queremos customizar nuestra experiencia en el viaje del 11 al 14 de diciembre y hablar con un agente."
   },
   "book": {
     "title": "Cómo reservar",
