@@ -1,0 +1,31 @@
+{
+  "title": "Cookies",
+  "text": "Nos gustaría usar cookies para ver cómo se usa el sitio, medir nuestros anuncios y mostrar propuestas de viaje y formularios de nuestros socios. No se activa nada a menos que digas que sí, y puedes cambiar de opinión cuando quieras desde el pie de página.",
+  "privacyLinkLabel": "Aviso de Privacidad",
+  "acceptLabel": "Aceptar todo",
+  "rejectLabel": "Rechazar todo",
+  "chooseLabel": "Elegir",
+  "saveLabel": "Guardar mi elección",
+  "necessary": {
+    "label": "Necesarias",
+    "description": "Recuerdan tu elección sobre las cookies y guardan un borrador del formulario de planificación del viaje en tu navegador mientras lo llenas. No se envía nada a nadie más.",
+    "alwaysOnLabel": "Siempre activas"
+  },
+  "analytics": {
+    "label": "Analítica",
+    "description": "Google Analytics cuenta las visitas y las páginas que se leen, para que podamos mejorar el sitio."
+  },
+  "marketing": {
+    "label": "Marketing",
+    "description": "El Meta Pixel (Facebook, Instagram) nos indica si nuestros anuncios traen visitantes al sitio."
+  },
+  "embeds": {
+    "label": "Contenido integrado",
+    "description": "Muestra propuestas de viaje de Mogu y formularios de Tally dentro de nuestras páginas. Estos servicios pueden usar sus propias cookies."
+  },
+  "embedPlaceholder": {
+    "text": "Este contenido lo proporciona {provider}, que puede usar cookies.",
+    "loadLabel": "Cargar contenido",
+    "openLabel": "Abrir en {provider} en una pestaña nueva"
+  }
+}
