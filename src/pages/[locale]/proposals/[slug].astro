@@ -6,8 +6,8 @@
  * every language that has a document, not only `liveLocales`, because a
  * proposal is written for one client in one language.
  *
- * The whole page is set in Open Sans, which the Google Fonts link below loads
- * for this page only (the site already loads its own fonts from Google Fonts).
+ * The whole page is set in Open Sans, self-hosted like the site's other fonts
+ * (@font-face in global.css).
  */
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import TinaIsland from "@tinacms/astro/TinaIsland.astro";
@@ -29,7 +29,6 @@ const preview = proposal.hero?.image?.replace("/upload/f_auto,q_auto/", "/upload
 ---
 
 <BaseLayout title={`${proposal.title} | Eagle Ray Expeditions`} ogImage={preview ?? undefined} locale={locale} path={`proposals/${slug}/`} transparentNav={true} noindex={true}>
-  <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" />
   <main id="main">
     <TinaIsland name="groupProposal" wrapper={{ tag: "div" }} params={{ locale, slug }}>
       <GroupProposalView proposal={proposal} locale={locale} />
