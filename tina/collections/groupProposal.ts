@@ -43,6 +43,16 @@ const groupProposal: Collection = {
     { type: "string", name: "title", label: "Proposal name (for the team)", required: true, isTitle: true, description: "Browser tab title. Visitors do not see it as a heading." },
     {
       type: "object",
+      name: "partner",
+      label: "Co-branding (optional)",
+      description: "An agency or partner whose logo sits next to Eagle Ray's logo in the opening photo and in the footer. The logo is shown as it is, on a white card.",
+      fields: [
+        { type: "image", name: "logo", label: "Partner logo" },
+        { type: "string", name: "logoAlt", label: "Logo description (alt text)", description: "e.g. the partner's name." },
+      ],
+    },
+    {
+      type: "object",
       name: "hero",
       label: "1. Opening photo",
       fields: [
@@ -140,10 +150,22 @@ const groupProposal: Collection = {
       label: "3. The days",
       fields: [
         { type: "string", name: "title", label: "Title", required: true },
-        { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+        { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line. A paragraph starting with '### ' is shown as a bold line, handy for 'Day 1 · Welcome aboard'." },
         { type: "string", name: "note", label: "Small note" },
         photos("photos", "Photos"),
         photos("gallery", "Gallery under the photos", "Empty slots with a caption, to fill in."),
+      ],
+    },
+    {
+      type: "object",
+      name: "whales",
+      label: "Extra story section, e.g. whales (optional)",
+      description: "A title, a text and photos, in the same style as The days. Empty photo slots stay as boxes to fill in.",
+      fields: [
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+        photos("photos", "Photos"),
+        { type: "string", name: "internalNote", label: "Internal note (never shown on the page)", ui: textarea, description: "For the team only. Note that this repository is public: do not write anything confidential here." },
       ],
     },
     {
@@ -396,6 +418,17 @@ const groupProposal: Collection = {
             { type: "string", name: "answer", label: "Answer", ui: textarea },
           ],
         },
+      ],
+    },
+    {
+      type: "object",
+      name: "video",
+      label: "Video (optional)",
+      description: "A YouTube video or playlist, shown before the closing.",
+      fields: [
+        { type: "string", name: "title", label: "Title" },
+        { type: "string", name: "url", label: "YouTube link", description: "The full link of the video or the playlist. It loads from youtube-nocookie.com, with no autoplay." },
+        { type: "string", name: "caption", label: "Text under the video" },
       ],
     },
     {

@@ -38,7 +38,7 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props;
-const { hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer } = proposal;
+const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer } = proposal;
 
 const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
 const number = String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
@@ -67,6 +67,21 @@ const placed = mappable ? placeStops(stopsIn) : { stops: stopsIn.map((s, i) => (
 const stops = placed.stops as any[];
 const drawn = placed.drawn;
 
+// A YouTube link (video or playlist) becomes a youtube-nocookie embed; anything else is ignored.
+const embed = (() => {
+  const raw = String(video?.url ?? "").trim();
+  if (!raw) return "";
+  try {
+    const u = new URL(raw);
+    const list = u.searchParams.get("list");
+    const id = u.searchParams.get("v") || (u.hostname === "youtu.be" ? u.pathname.slice(1) : u.pathname.startsWith("/embed/") ? u.pathname.split("/")[2] : "");
+    if (id && /^[\w-]{6,}$/.test(id)) return `https://www.youtube-nocookie.com/embed/${id}${list ? `?list=${encodeURIComponent(list)}` : ""}`;
+    if (list && /^[\w-]{6,}$/.test(list)) return `https://www.youtube-nocookie.com/embed/videoseries?list=${encodeURIComponent(list)}`;
+  } catch {}
+  return "";
+})();
+// The logos of Eagle Ray and the partner, on white cards of the same height.
+const logoCard = "flex h-16 items-center rounded-lg bg-white px-5 md:h-[4.5rem]";
 const options = ((boats?.options ?? []) as any[]).filter(Boolean);
 // One literal class per tab (Tailwind only keeps classes it can read here): show the panel whose radio is checked.
 const showPanel = [
@@ -129,6 +144,13 @@ const icons: Record<string, string> = {
     {hero.image && <img src={hero.image} alt={hero.imageAlt ?? ""} loading="eager" decoding="async" fetchpriority="high" class="absolute inset-0 z-[-1] h-full w-full object-cover" data-tina-field={tinaField(hero, "image")} />}
     <div class="absolute inset-0 z-[-1] bg-linear-to-b from-ink/35 via-ink/25 via-40% to-ink/90"></div>
     <div class={`mx-auto w-full max-w-site ${gutter} pt-32 pb-16 md:pb-24`}>
+      {partner?.logo && (
+        <div class="mb-8 flex flex-wrap items-center gap-4">
+          <div class={logoCard}><img src="/assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" class="h-8 w-auto md:h-9" /></div>
+          <span class="text-white/70" aria-hidden="true">×</span>
+          <div class={logoCard}><img src={partner.logo} alt={partner.logoAlt ?? ""} class="h-12 w-auto md:h-14" data-tina-field={tinaField(partner, "logo")} /></div>
+        </div>
+      )}
       {hero.note && <p class={`${small} mb-6 text-white/80`} data-tina-field={tinaField(hero, "note")}>{hero.note}</p>}
       <h1 class="max-w-[15ch] text-[clamp(2.2rem,9vw,4.8rem)] leading-[1.04] font-semibold tracking-[-.02em] text-white" data-tina-field={tinaField(hero, "title")}>{hero.title}</h1>
       {hero.subtitle && <p class="mt-7 max-w-[40ch] text-[clamp(1rem,2.6vw,1.2rem)] leading-[1.6] text-white/88" data-tina-field={tinaField(hero, "subtitle")}>{hero.subtitle}</p>}
@@ -225,11 +247,25 @@ const icons: Record<string, string> = {
         <div class={box}>
           <h2 class={`${h2} text-white`} data-tina-field={tinaField(days, "title")}>{days.title}</h2>
           <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-white/84`} data-tina-field={tinaField(days, "text")}>
-            {paragraphs(days.text).map((p) => <p>{p}</p>)}
+            {paragraphs(days.text).map((p) => (p.startsWith("### ") ? <p class="pt-4 font-semibold text-white">{p.slice(4)}</p> : <p>{p}</p>))}
           </div>
           <ProposalPhotos photos={days.photos} class="mt-16" />
           <ProposalPhotos photos={days.gallery} slots class="mt-3 md:mt-6" />
           {days.note && <p class="mt-10 max-w-[56ch] text-[.8rem] leading-relaxed text-white/64" data-tina-field={tinaField(days, "note")}>{days.note}</p>}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    whales && (
+      <section class="border-t border-white/15 bg-ink text-white">
+        <div class={box}>
+          <h2 class={`${h2} text-white`} data-tina-field={tinaField(whales, "title")}>{whales.title}</h2>
+          <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-white/84`} data-tina-field={tinaField(whales, "text")}>
+            {paragraphs(whales.text).map((p) => <p>{p}</p>)}
+          </div>
+          <ProposalPhotos photos={whales.photos} slots class="mt-16" />
         </div>
       </section>
     )
@@ -373,7 +409,7 @@ const icons: Record<string, string> = {
               <article class:list={[options.length > 1 ? "mt-16" : "", options.length > 1 ? `hidden ${showPanel[i] ?? ""}` : ""]} data-tina-field={tinaField(o)}>
                 {o.tag && <p class="mb-5 w-fit rounded-sm bg-ink px-3 py-1.5 font-mono text-[.6rem] tracking-[.14em] text-white uppercase" data-tina-field={tinaField(o, "tag")}>{o.tag}</p>}
                 <BoatName class={options.length > 1 ? "text-[clamp(1.8rem,6vw,3rem)] leading-none font-semibold tracking-[-.02em]" : "text-[clamp(2.4rem,9vw,4.4rem)] leading-none font-semibold tracking-[-.02em]"} data-tina-field={tinaField(o, "name")}>{o.name}</BoatName>
-                {o.intro && <p class={`mt-8 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(o, "intro")}>{o.intro}</p>}
+                {o.intro && <div class={`mt-8 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(o, "intro")}>{paragraphs(o.intro).map((p) => <p>{p}</p>)}</div>}
                 <div class="mt-16">
                   {mainPhoto && (
                     <>
@@ -634,6 +670,20 @@ const icons: Record<string, string> = {
   }
 
   {
+    embed && (
+      <section class="bg-ink text-white">
+        <div class={box}>
+          {video.title && <h2 class={`${h2} text-white`} data-tina-field={tinaField(video, "title")}>{video.title}</h2>}
+          <div class:list={[video.title ? "mt-12" : "", "aspect-video w-full overflow-hidden rounded-lg bg-white/10"]}>
+            <iframe src={embed} title={video.title ?? "Video"} class="size-full border-0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+          </div>
+          {video.caption && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-white/70" data-tina-field={tinaField(video, "caption")}>{video.caption}</p>}
+        </div>
+      </section>
+    )
+  }
+
+  {
     closing && (
       <section class:list={["relative isolate overflow-hidden", closing.image ? "bg-ink text-white" : light]}>
         {closing.image && <img src={closing.image} alt="" loading="lazy" decoding="async" class="absolute inset-0 z-[-1] h-full w-full object-cover" data-tina-field={tinaField(closing, "image")} />}
@@ -670,6 +720,13 @@ const icons: Record<string, string> = {
     footer && (
       <div class="bg-ink text-white">
         <div class={`mx-auto max-w-site ${gutter} space-y-2 py-12 text-center text-[.8rem] leading-relaxed text-white/70`}>
+          {partner?.logo && (
+            <div class="mb-8 flex flex-wrap items-center justify-center gap-4">
+              <div class={logoCard}><img src="/assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" class="h-8 w-auto md:h-9" /></div>
+              <span class="text-white/70" aria-hidden="true">×</span>
+              <div class={logoCard}><img src={partner.logo} alt={partner.logoAlt ?? ""} class="h-12 w-auto md:h-14" /></div>
+            </div>
+          )}
           {footer.line1 && <p data-tina-field={tinaField(footer, "line1")}>{footer.line1}</p>}
           {footer.line2 && <p data-tina-field={tinaField(footer, "line2")}>{footer.line2}</p>}
         </div>

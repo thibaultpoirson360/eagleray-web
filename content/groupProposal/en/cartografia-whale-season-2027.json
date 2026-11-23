@@ -1,0 +1,246 @@
+{
+  "title": "Blue whale season at sea",
+  "partner": {
+    "logo": "/assets/proposals/cartografia/cartografia-logo.png",
+    "logoAlt": "Cartografía Travel Boutique"
+  },
+  "hero": {
+    "image": "/assets/proposals/cartografia/dia3-laguna.webp",
+    "imageAlt": "Turquoise shallows and white sand seen from above, in the Sea of Cortez",
+    "note": "Eagle Ray Expeditions × Cartografía Travel Boutique",
+    "title": "Blue whale season at sea",
+    "subtitle": "A private catamaran for nine in the Sea of Cortez, February or March 2027",
+    "button": {
+      "label": "See your boat",
+      "href": "#boat"
+    }
+  },
+  "brief": {
+    "title": "Your trip at a glance",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "[DATES TO CONFIRM, February or March 2027]"
+      },
+      {
+        "icon": "clock",
+        "text": "[3 OR 4 NIGHTS] on board"
+      },
+      {
+        "icon": "people",
+        "text": "9 guests"
+      },
+      {
+        "icon": "pin",
+        "text": "La Paz, Baja California Sur"
+      }
+    ]
+  },
+  "days": {
+    "title": "No unbreakable agenda",
+    "text": "### Day 1 · Welcome aboard\nYour Expedition Leader meets you at La Paz airport and takes you to the marina, where the crew is waiting. First swim off the stern and dinner at anchor.\n\n### Day 2 · Espíritu Santo\nSnorkel, kayak and paddleboard in the coves of Espíritu Santo, a protected national park. Your Expedition Leader chooses the spots that suit the group that day.\n\n### Day 3 · The Bay of La Paz\nIn February and March, whale sharks feed close to shore in the Bay of La Paz. A long lunch on deck, and an afternoon with nothing scheduled.\n\n### Last day · Back to La Paz\nBreakfast at anchor, a final swim, and the sail back to La Paz.",
+    "note": "Your captain sets the route each day according to the wind.",
+    "photos": [
+      {
+        "image": "/assets/proposals/cartografia/paz-costa.webp",
+        "alt": "A cove of red rock and sand on Espíritu Santo"
+      },
+      {
+        "image": "/assets/proposals/cartografia/paz-lobos.webp",
+        "alt": "Sea lions resting"
+      }
+    ]
+  },
+  "whales": {
+    "title": "The blue whales of Loreto",
+    "text": "From January to March, gray, humpback and blue whales arrive in the waters of Baja California Sur. Blue whales, the largest animals on Earth, feed off Loreto, north of La Paz along the same coast.\n\nWe can add a day in Loreto with a local guide to look for them, before or after your time on board. Whales are wild: we look for them, but no one can promise a sighting.",
+    "photos": [
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "",
+        "caption": ""
+      }
+    ],
+    "internalNote": "CONFIRMAR con Thibault: formato y precio de la excursión de ballenas azules en Loreto, y nado con tiburón ballena (incluido o extra)"
+  },
+  "boats": {
+    "options": [
+      {
+        "name": "Your boat · Lagoon 52",
+        "intro": "A 52-foot catamaran with five double cabins and a sixth with bunk beds, six bathrooms and air conditioning in every cabin. The flybridge is where everyone gathers to watch the next island get closer. At the stern, a grill, an outside shower and kayaks ready to go in the water.\n\nOnce we know who is travelling with whom, couples, families or friends, we'll send you a cabin plan so everyone knows where they sleep before arriving.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/lagoon-52-11.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-01.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-02.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-03.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-04.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-05.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-06.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-07.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-08.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-09.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-10.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-52-12.webp",
+            "alt": "Lagoon 52 catamaran",
+            "caption": ""
+          }
+        ],
+        "specs": "Lagoon 52 · 6 cabins · 6 bathrooms",
+        "prices": [
+          {
+            "label": "Price for the full boat",
+            "total": "[PRICE TO CONFIRM]",
+            "perPerson": ""
+          }
+        ],
+        "priceNote": "Price for the full boat and the full group."
+      }
+    ]
+  },
+  "food": {
+    "title": "What's cooking on board",
+    "text": "Your chef shops in La Paz the day before you board and cooks three meals a day on board: breakfast on deck, lunch at anchor, dinner as the sun goes down. Tell us about allergies or preferences before the trip and the menu is built around them.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+        "alt": "Sashimi",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+        "alt": "Torre de atún",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+        "alt": "Ceviche ",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+        "alt": "Fruit and cheese selection",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+        "alt": "French toasts",
+        "caption": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+        "alt": "Desayuno",
+        "caption": ""
+      }
+    ]
+  },
+  "aboard": {
+    "title": "What's aboard",
+    "onTitle": "On board",
+    "onBoard": [
+      "Captain, chef and deckhand",
+      "Your Expedition Leader, with you all days",
+      "All meals on board and non-alcoholic drinks",
+      "Fuel, navigation and national park permits",
+      "Wi-Fi, air conditioning and watermaker",
+      "Dinghy, 2 paddle boards, double kayak, inflatable platform, snorkel gear for everyone",
+      "BBQ, beach shade, chairs and towels"
+    ],
+    "offTitle": "Not on board",
+    "notOnBoard": [
+      "Alcohol (bring your own, or ask us about our wine selection)",
+      "Crew tips (10% of the trip value is customary)",
+      "Scuba diving or kite surfing equipment and tanks (on request, book before the trip)"
+    ]
+  },
+  "crew": {
+    "title": "The people running the boat",
+    "text": "The captain reads the sea. The chef cooks with what Baja has that week. The deckhand handles the dinghy and the anchor. And your Expedition Leader reads the group: when to swim, when to sail, when to leave everyone alone with a coffee on the bow.\n\nYou bring the people. We take care of the rest.",
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Andrea_Gutie%CC%81rrez_-_underwater_2_phmnnn.jpg",
+        "alt": ""
+      },
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/crew-lou_mnja7l.jpg",
+        "alt": ""
+      }
+    ]
+  },
+  "video": {
+    "title": "See it for yourself",
+    "url": "https://youtube.com/playlist?list=PLAFWpllwLfpg&si=751QvS900SbI0wFg"
+  },
+  "book": {
+    "title": "How to book",
+    "text": "The boat is held only once we receive the deposit. These are the terms:",
+    "terms": [
+      "Bank transfer price: payment in USD to the Eagle Ray Expeditions US account. 50% on confirmation and 50% before [DATE TO CONFIRM], or 100% on confirmation.",
+      "Card price: payment through a secure payment link. 50% on confirmation and 50% before [DATE TO CONFIRM], or 100% on confirmation. Card processing fees are non-refundable.",
+      "This proposal is valid for [VALIDITY TO CONFIRM].",
+      "Cancellation: 50% of the amount paid is refunded for cancellations before [DATE TO CONFIRM]. After that date, payments are non-refundable.",
+      "Weather: if conditions prevent leaving port, we extend the lost day when the boat's schedule allows. If not, we refund USD 1,600 for each full day lost.",
+      "Departures between March 21 and April 4, 2027 (Holy Week) carry a supplement.",
+      "Flights and hotel nights before or after the expedition are not included."
+    ]
+  },
+  "closing": {
+    "title": "Ready when you are",
+    "text": "Tell us how you'd like to pay, and we'll send the booking details the same day.",
+    "buttonLabel": "Confirm on WhatsApp",
+    "message": "Hi, we'd like to confirm the whale season expedition on the Lagoon 52, paying by ___."
+  },
+  "footer": {
+    "line1": "Eagle Ray Expeditions · Ocean adventures led by passionate sea people",
+    "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
+  }
+}
