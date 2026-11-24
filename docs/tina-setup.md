@@ -355,7 +355,13 @@ Limits and gotchas found:
     use their own Redis namespace (the branch name). Tina OSS has no editorial workflow /
     "save to branch then PR" like Tina Cloud, so promoting staging edits to `main` is a
     normal git merge done by a developer.
-  - Extra branches leave extra namespaces in Redis; it is small, but delete stale ones.
+  - Only `main` and `staging` (the `REDIS_BRANCHES` list in `tina/database.ts`) keep an
+    index in Redis. Every other Vercel preview builds from an in-memory index and its
+    `/admin` cannot save. Reason: `upstash-redis-level` stores the whole index in one
+    Redis hash (`level:h`), Upstash caps one record at 100 MB, and a copy per preview
+    branch filled it in Nov 2026 (every build failed with "ERR max single record size
+    exceeded"). If that error comes back: in the Upstash console CLI run `DEL level:h`,
+    then redeploy `main` (and `staging`); the index is rebuilt from git.
 - Recommended v1: editors use production `/admin` (edits land on `main`, Vercel redeploys).
   Add the staging alias only if the client wants review-before-publish.
 
