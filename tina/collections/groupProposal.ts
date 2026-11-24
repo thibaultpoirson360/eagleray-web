@@ -40,6 +40,7 @@ const groupProposal: Collection = {
     },
   },
   fields: [
+    { type: "boolean", name: "compact", label: "Compact size", description: "Turn on for a cleaner page with smaller type, photos and spacing. Off keeps the original size." },
     { type: "string", name: "title", label: "Proposal name (for the team)", required: true, isTitle: true, description: "Browser tab title. Visitors do not see it as a heading." },
     {
       type: "object",
