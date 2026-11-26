@@ -28,6 +28,21 @@ const photos = (name: string, label: string, description?: string): TinaField =>
   ],
 });
 
+const infoSection = (name: string, label: string, description: string): TinaField => ({
+  type: "object",
+  name,
+  label,
+  description,
+  fields: [
+    { type: "string", name: "eyebrow", label: "Small label" },
+    { type: "string", name: "title", label: "Title", required: true },
+    { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+    { type: "string", name: "items", label: "List", list: true, description: "One line per item. Write 'Label: details' to show the label in small capitals beside the details." },
+    { type: "string", name: "note", label: "Small note", ui: textarea },
+    photos("photos", "Photos"),
+  ],
+});
+
 const groupProposal: Collection = {
   name: "groupProposal",
   label: "Private proposals",
@@ -62,6 +77,9 @@ const groupProposal: Collection = {
         { value: "video", label: "Video" },
         { value: "closing", label: "Closing and booking button" },
         { value: "about", label: "Who we are" },
+        { value: "trips", label: "Trip options (e.g. 3 or 5 nights)" },
+        { value: "kite", label: "Kite and wing (information section 1)" },
+        { value: "season", label: "The wind in season (information section 2)" },
         { value: "itinerary", label: "Day by day" },
         { value: "practical", label: "Good to know" },
         { value: "faq", label: "Questions and answers" },
@@ -127,6 +145,7 @@ const groupProposal: Collection = {
                 { value: "pin", label: "Place" },
                 { value: "clock", label: "Clock" },
                 { value: "meals", label: "Meals (fork and knife)" },
+                { value: "wind", label: "Wind" },
               ],
             },
             { type: "string", name: "text", label: "Text", required: true },
@@ -149,6 +168,31 @@ const groupProposal: Collection = {
         { type: "string", name: "imageAlt", label: "Photo description (alt text)" },
       ],
     },
+    {
+      type: "object",
+      name: "trips",
+      label: "Trip options, side by side (optional)",
+      description: "Two or more cards, e.g. 3 nights and 5 nights. Add 'Trip options' to the order of the sections to show it.",
+      fields: [
+        { type: "string", name: "title", label: "Title", required: true },
+        { type: "string", name: "text", label: "Text", ui: textarea },
+        {
+          type: "object",
+          name: "items",
+          label: "Options",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: item?.name }) },
+          fields: [
+            { type: "string", name: "tag", label: "Tag (optional)", description: "e.g. \"Lou's pick\". The tagged card is outlined." },
+            { type: "string", name: "name", label: "Name", required: true, description: "e.g. '3 nights / 4 days'." },
+            { type: "string", name: "text", label: "Text", ui: textarea },
+          ],
+        },
+        { type: "string", name: "note", label: "Line under the cards" },
+      ],
+    },
+    infoSection("kite", "Information section 1: kite and wing (optional)", "A title, text, a list and photos. Add 'Kite and wing' to the order of the sections to show it. Dark background."),
+    infoSection("season", "Information section 2: the wind in season (optional)", "The same shape as the section above, with a light background. Add 'The wind in season' to the order of the sections to show it."),
     {
       type: "object",
       name: "scenes",
@@ -310,6 +354,7 @@ const groupProposal: Collection = {
         { type: "string", name: "choose", label: "Label above the tabs" },
         { type: "string", name: "pricingTitle", label: "Price section: title", description: "Only when 'Price and how to pay' is added to the order of the sections." },
         { type: "string", name: "pricingText", label: "Price section: text", ui: textarea },
+        { type: "string", name: "priceButtonLabel", label: "Price section: button text in each price box", description: "Shown in a price box that has a WhatsApp message, e.g. 'Book this option on WhatsApp'." },
         ctaField("button", "Booking button (shown in each price box)"),
         {
           type: "object",
@@ -345,6 +390,7 @@ const groupProposal: Collection = {
                 { type: "string", name: "label", label: "Payment method or label", required: true },
                 { type: "string", name: "total", label: "Total" },
                 { type: "string", name: "perPerson", label: "Per person" },
+                { type: "string", name: "message", label: "WhatsApp message for this option (optional)", ui: textarea, description: "With a message and a button text (above, under the boats), the price box gets a WhatsApp booking button with this message already written." },
               ],
             },
             { type: "string", name: "priceNote", label: "Line under the price box", ui: textarea },

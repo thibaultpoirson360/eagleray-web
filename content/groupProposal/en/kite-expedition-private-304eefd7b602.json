@@ -1,0 +1,438 @@
+{
+  "airy": true,
+  "order": [
+    "brief",
+    "about",
+    "trips",
+    "boats",
+    "kite",
+    "days",
+    "food",
+    "crew",
+    "season",
+    "aboard",
+    "pricing",
+    "video",
+    "closing"
+  ],
+  "title": "Kite expedition, private proposal (couple, with Lou)",
+  "hero": {
+    "video": "/assets/video/hero-loop.mp4",
+    "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
+    "imageAlt": "Turquoise shallows and white sand seen from above, in the Sea of Cortez",
+    "note": "Private proposal prepared for [Name] and [Name]",
+    "title": "Built around the wind",
+    "subtitle": "Two of you, a private boat and the kite season in Baja California Sur.",
+    "button": {
+      "label": "See the boat",
+      "href": "#boat"
+    }
+  },
+  "notice": {
+    "availability": "Open dates, December to April",
+    "expires": "Valid until December 31, 2026"
+  },
+  "brief": {
+    "title": "Your trip at a glance",
+    "sideFacts": true,
+    "text": "A private expedition on the Sea of Cortez, built around the wind. Kite is the center of the trip: the best wind windows come first, and sailing, swimming, meals and rest fit around them.\n\nWhile she rides with Lou, he can head out on his wing. Eagle Ray Expeditions brings the boat, the crew, the kitchen and the logistics, so the only thing you plan is when to get in the water.",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "Open dates in the kite season, December to April"
+      },
+      {
+        "icon": "people",
+        "text": "2 guests on a private boat"
+      },
+      {
+        "icon": "people",
+        "text": "Captain, chef and Lou as Expedition Leader"
+      },
+      {
+        "icon": "wind",
+        "text": "Kite gear for her included, his wing gear welcome on board"
+      },
+      {
+        "icon": "pin",
+        "text": "Airport pickup and private transfer included"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Your Expedition Leader",
+    "title": "Meet Lou",
+    "quote": "The calmness of the deep and the glassy water.",
+    "text": "I've spent 15 years on sailboats around the world: the Bahamas, Polynesia, Brittany, the Caribbean and the Sea of Cortez. I've skippered boats from a Lagoon 41 to a Lagoon 62, and I'm a certified marine engineer, so I know the boat from the helm to the engine room.\n\nI'm an IKO-certified kite instructor, and I also teach sailing and freediving. On this trip I'm your Expedition Leader and, for her, the coach she already knows from her lessons. While she rides with me, he can head out on his wing.\n\nYears of all of it in Baja have taught me to read the wind and the people on the water, and to adjust the day as it goes. What I look for in guests is the spark in their eyes when the sea starts to work on them.",
+    "image": "/assets/img/crew-lou.jpeg",
+    "imageAlt": "Lou, Expedition Leader and kite instructor with Eagle Ray Expeditions"
+  },
+  "trips": {
+    "title": "Two ways to do it",
+    "items": [
+      {
+        "tag": "",
+        "name": "3 nights / 4 days",
+        "text": "A short private escape around the wind: four days on the water, with kite sessions whenever the wind allows."
+      },
+      {
+        "tag": "Lou's pick",
+        "name": "5 nights / 6 days",
+        "text": "More days to wait for the best wind and use it. It also leaves room for a longer day out toward Isla Cerralvo, if conditions and Lou say yes."
+      }
+    ],
+    "note": "Want more or fewer nights? Ask us."
+  },
+  "boats": {
+    "title": "The boat",
+    "choose": "Choose a boat",
+    "pricingTitle": "Price and how to book",
+    "pricingText": "Prices are for the whole boat and the two of you, in US dollars. They are valid for the kite season, December to April. Christmas, New Year and Holy Week dates on request.",
+    "priceButtonLabel": "Book this option on WhatsApp",
+    "options": [
+      {
+        "tag": "Main option",
+        "name": "Lagoon 450F",
+        "intro": "A 45-foot catamaran with four double cabins and four bathrooms, built in 2018 and refitted in 2024.\n\nWhy a catamaran works for kite: a wide deck to rig on, a stable boat at anchor, and the option to anchor close to shore. The flybridge, the inflatable dock and the tender make getting in and out of the water easy.\n\nThis boat or a similar one, subject to availability for your dates.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-01.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-02.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-03.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-video-01.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-04.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-05.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-06.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-07.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-08.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-09.webp",
+            "alt": "Lagoon 450F catamaran",
+            "caption": ""
+          }
+        ],
+        "specs": "Lagoon 450F · 4 cabins · 4 bathrooms",
+        "features": [
+          "Air conditioning in every cabin and in the saloon",
+          "Starlink wifi on board",
+          "Generator",
+          "Watermaker (fresh water made on board)",
+          "Flybridge",
+          "Hammock and inflatable dock",
+          "Outdoor grill and outside shower",
+          "Double kayak and 2 paddleboards",
+          "Snorkeling gear and fishing rods",
+          "Tender"
+        ],
+        "prices": [
+          {
+            "label": "3 nights / 4 days",
+            "total": "USD 21,000 total",
+            "perPerson": "USD 10,500 per person (2 guests)",
+            "message": "Hi, we'd like to book the Lagoon 450F, 3 nights / 4 days, for the kite expedition."
+          },
+          {
+            "label": "5 nights / 6 days · Lou's pick",
+            "total": "USD 31,600 total",
+            "perPerson": "USD 15,800 per person (2 guests)",
+            "message": "Hi, we'd like to book the Lagoon 450F, 5 nights / 6 days, for the kite expedition."
+          }
+        ]
+      },
+      {
+        "tag": "Alternative",
+        "name": "Beneteau Sense 55",
+        "intro": "A 55-foot sailing monohull, for those who want to feel the boat heel under sail. It is also the lower-priced option.\n\nThe cockpit table seats ten, so lunch at anchor happens outside, and the swim platform lowers to the waterline. Below deck: three suites and three bathrooms.\n\nThis boat or a similar one, subject to availability for your dates.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-08.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-12.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-01.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-02.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-03.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-04.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-05.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/beneteau-sense-55-06.webp",
+            "alt": "Beneteau Sense 55 sailing monohull",
+            "caption": ""
+          }
+        ],
+        "specs": "Beneteau Sense 55 · 3 suites · 3 bathrooms",
+        "features": [
+          "55 ft sailing monohull",
+          "3 suites, 3 bathrooms",
+          "Cockpit table for 10",
+          "Hydraulic swim platform",
+          "Performance sails"
+        ],
+        "prices": [
+          {
+            "label": "3 nights / 4 days",
+            "total": "USD 13,900 total",
+            "perPerson": "USD 6,950 per person (2 guests)",
+            "message": "Hi, we'd like to book the Beneteau Sense 55, 3 nights / 4 days, for the kite expedition."
+          },
+          {
+            "label": "5 nights / 6 days · Lou's pick",
+            "total": "USD 20,400 total",
+            "perPerson": "USD 10,200 per person (2 guests)",
+            "message": "Hi, we'd like to book the Beneteau Sense 55, 5 nights / 6 days, for the kite expedition."
+          }
+        ]
+      }
+    ]
+  },
+  "book": {
+    "title": "How to book",
+    "text": "A few simple terms:",
+    "terms": [
+      "To confirm: 30% of the total.",
+      "Balance: 70% before 30 days prior to departure.",
+      "Gift: if you book with a deposit before December 31, 2026, we add a wine selection worth 300 USD."
+    ]
+  },
+  "kite": {
+    "eyebrow": "Kite and wing",
+    "title": "Kite and wing",
+    "text": "Kite gear for her is included. He brings his own wing setup, and it is welcome on board.\n\nDepending on the day, you launch from the boat or from the beach, always depending on the wind.",
+    "items": [
+      "Her gear: kite, board, harness, wetsuit, helmet or impact vest [list to confirm with Lou]",
+      "His gear: bring your own wing setup, welcome on board",
+      "Launch: from the boat or the beach, depending on the day",
+      "On the water: tender support [to confirm with Lou]",
+      "Spots: Espíritu Santo and La Ventana, depending on the wind"
+    ],
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
+        "alt": "Kite session",
+        "caption": ""
+      }
+    ]
+  },
+  "days": {
+    "title": "The wind decides",
+    "photosAside": true,
+    "text": "Each day, the captain and Lou choose where to anchor and where to ride, based on the wind and the sea state. Around La Ventana the wind tends to fill in during the afternoon, so the day follows it.\n\n### When the wind is up\nThe tender goes to the water, she rides with Lou, and he heads out on his wing.\n\n### When it isn't\nSnorkel, paddleboard and kayak off the boat, a long lunch at anchor, or a sail to the next anchorage.\n\n### On the 5-night trip\nIf conditions and Lou say yes, there may be a longer day out toward Isla Cerralvo. It is a possibility, not a fixed activity.",
+    "note": "The final plan is set by the captain and Lou, according to wind and sea conditions.",
+    "photos": [
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-costa.webp",
+        "alt": "A cove of red rock and sand on Espíritu Santo",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
+        "alt": "Turquoise shallows and white sand seen from above",
+        "caption": ""
+      }
+    ]
+  },
+  "food": {
+    "title": "What's cooked on board",
+    "text": "Three meals a day, cooked on board by your chef: breakfast, lunch and dinner. Meals fit around the wind, so lunch can wait if the best wind is at noon.",
+    "meals": [
+      {
+        "name": "Breakfast",
+        "time": "On deck",
+        "text": "Fresh fruit and something hot, before the day starts.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+            "alt": "Breakfast fruit",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+            "alt": "French toast",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Lunch",
+        "time": "At anchor",
+        "text": "A long lunch, back on board after the water.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+            "alt": "Ceviche",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+            "alt": "Fruit and cheese selection",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Dinner",
+        "time": "At sunset",
+        "text": "Cooked on board, with local produce and what the sea gives that week.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+            "alt": "Sashimi",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+            "alt": "Tuna tower",
+            "caption": ""
+          }
+        ]
+      }
+    ],
+    "buttonTitle": "Personalize your menu",
+    "buttonText": "Before departure we send you a menu to choose dishes and drinks. If there are allergies or diets, such as vegetarian, vegan or gluten-free, tell us and we adapt it.",
+    "buttonLabel": "Personalize my menu",
+    "buttonMessage": "Hi, we'd like to personalize the menu for our kite expedition."
+  },
+  "crew": {
+    "title": "Your crew",
+    "sideBySide": true,
+    "text": "Every expedition has a crew of three: a captain who knows these waters well, a chef who cooks with local produce and what the sea gives that week, and an Expedition Leader who looks after the group.\n\nWe choose them for their love of the sea and for how they share it with other people. They come from sailing, diving and hospitality (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
+    "explainTitle": "What an Expedition Leader is",
+    "explainText": "An Expedition Leader is not a guide who follows a script, and not a host who serves the table. It is the Eagle Ray Expeditions person who stays with you the whole trip and answers for how it goes.\n\nThey know the group, decide with the captain when to swim and when to sail, look after everyone in the water, and take care of the details so you don't have to think about them.\n\nThat is the difference from chartering a boat with a crew: here someone is in charge of your experience, not only of the navigation. On this trip, that person is also her kite coach.",
+    "leader": {
+      "member": "lou",
+      "image": "",
+      "imageAlt": "Lou, Expedition Leader and kite instructor",
+      "name": "Lou",
+      "role": "Your Expedition Leader and her kite coach",
+      "facts": [
+        "IKO-certified kite instructor",
+        "Master 200 GT, marine engineer",
+        "Speaks French, English and Spanish"
+      ],
+      "text": "Lou is the person in charge of making the trip work for you: the wind, the anchorages, the water and the day.\n\nLou also coaches her on the kite, as in her lessons, and keeps an eye on the water while the two of you ride."
+    }
+  },
+  "season": {
+    "eyebrow": "Season",
+    "title": "The wind in season",
+    "text": "The season runs from November to March. The wind comes from the north and northwest, and around La Ventana it tends to fill in during the afternoon.\n\n[Lou: typical range in knots and best months]"
+  },
+  "aboard": {
+    "title": "What's aboard",
+    "text": "A private boat, a captain, a chef and Lou, your Expedition Leader and IKO-certified kite instructor.",
+    "onTitle": "On board",
+    "onBoard": [
+      "Private boat, with captain and chef",
+      "Lou as Expedition Leader and IKO-certified kite instructor",
+      "All meals on board: breakfast, lunch and dinner",
+      "Menus planned around you: vegetarian, vegan, gluten-free, allergies",
+      "Fish from the day's catch, when the line brings something in",
+      "Water, coffee, tea and soft drinks, all day",
+      "Fuel",
+      "Starlink on the Lagoon 450F",
+      "Kite gear for her",
+      "Snorkel gear, kayak, paddleboards and tender",
+      "National park permits",
+      "Airport pickup and private transfer"
+    ],
+    "offTitle": "Not on board",
+    "notOnBoard": [
+      "Flights",
+      "Alcohol (bring your own, or ask us about our wine selection)",
+      "Crew tips (10% is usual)",
+      "Personal travel insurance",
+      "His wing foil gear (bring your own)",
+      "Land transfers to La Ventana, if needed [to confirm]"
+    ]
+  },
+  "video": {
+    "title": "This is Eagle Ray Expeditions",
+    "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
+    "caption": ""
+  },
+  "closing": {
+    "title": "Ready when you are",
+    "text": "Tell us the boat and the option, and we'll send the booking details the same day. Dates are open: we choose them with Lou, around the wind.",
+    "buttonLabel": "Confirm on WhatsApp",
+    "message": "Hi, we'd like to talk about the kite expedition: boat ___, option ___, dates ___.",
+    "note": "Valid until December 31, 2026.",
+    "agentLine": "Your contact: Lou",
+    "contacts": [
+      {
+        "label": "WhatsApp",
+        "value": "+52 55 2741 9922",
+        "href": "https://wa.me/525527419922"
+      },
+      {
+        "label": "Email",
+        "value": "hello@eaglerayexpeditions.com",
+        "href": "mailto:hello@eaglerayexpeditions.com"
+      }
+    ]
+  },
+  "legal": "Prices in this proposal are in US dollars (USD) and valid until the date shown. Your boat and crew are reserved once the deposit is received. Eagle Ray Expeditions Inc. · Delaware corporation · 131 Continental Dr, Suite 305, Newark, DE 19713, United States · hello@eaglerayexpeditions.com",
+  "footer": {
+    "line1": "Eagle Ray Expeditions · Ocean adventures led by passionate sea people",
+    "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
+  }
+}

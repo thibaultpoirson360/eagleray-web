@@ -1,0 +1,55 @@
+---
+/**
+ * A plain information section of a private proposal (GroupProposalView.astro):
+ * a small label, a title, text, an optional list and photos. Used for the
+ * kite and wing section and for the wind in season. The look constants
+ * (box, heading and text sizes) come from the proposal, so it follows its
+ * airy or compact setting.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import ProposalPhotos from "./ProposalPhotos.astro";
+
+interface Props {
+  data: any;
+  box: string;
+  h2: string;
+  body: string;
+  small: string;
+  /** Section background classes, e.g. the light or the navy one. */
+  tone: string;
+}
+
+const { data, box, h2, body, small, tone } = Astro.props;
+const paragraphs = (text?: string | null) => (text ?? "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+const items = (data.items ?? []).filter((x: string | null): x is string => !!x);
+const dark = tone.includes("bg-ink");
+---
+
+<section class={tone}>
+  <div class={box}>
+    <div class="grid items-start gap-16 md:grid-cols-[1fr_1.2fr] md:gap-24">
+      <div>
+        {data.eyebrow && <p class:list={[small, dark ? "text-white/64" : "text-ink/64"]} data-tina-field={tinaField(data, "eyebrow")}>{data.eyebrow}</p>}
+        <h2 class:list={[data.eyebrow && "mt-7", h2, dark && "text-white"]} data-tina-field={tinaField(data, "title")}>{data.title}</h2>
+        {data.text && <div class:list={[`mt-10 max-w-[48ch] space-y-5 ${body}`, dark ? "text-white/84" : "text-ink/80"]} data-tina-field={tinaField(data, "text")}>{paragraphs(data.text).map((p) => <p>{p}</p>)}</div>}
+      </div>
+      {items.length > 0 && (
+        <ul class:list={["border-t", dark ? "border-white/20" : "border-ink/14"]} data-tina-field={tinaField(data, "items")}>
+          {items.map((item: string) => {
+            const cut = item.indexOf(": ");
+            const label = cut > 0 ? item.slice(0, cut) : "";
+            const detail = cut > 0 ? item.slice(cut + 2) : item;
+            return (
+              <li class:list={["grid gap-2 border-b py-6 sm:grid-cols-[9rem_1fr] sm:gap-8", dark ? "border-white/15" : "border-ink/14"]}>
+                {label && <span class:list={[small, "pt-1", dark ? "text-white/64" : "text-ink/64"]}>{label}</span>}
+                <span class:list={["text-[.95rem] leading-[1.7]", dark ? "text-white/90" : "text-ink/86", !label && "sm:col-span-2"]}>{detail}</span>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+    {data.note && <p class:list={["mt-10 max-w-[56ch] text-[.8rem] leading-relaxed", dark ? "text-white/64" : "text-ink/64"]} data-tina-field={tinaField(data, "note")}>{data.note}</p>}
+    <ProposalPhotos photos={data.photos} class="mt-20" />
+  </div>
+</section>

@@ -21,6 +21,7 @@ import { tinaField } from "@tinacms/astro/tina-field";
 import Button from "./ui/Button.astro";
 import ProposalPhotos from "./ProposalPhotos.astro";
 import ProposalActivityCards from "./ProposalActivityCards.astro";
+import ProposalInfoSection from "./ProposalInfoSection.astro";
 import ProposalDay from "./ProposalDay.tsx";
 import CrewModal from "./CrewModal.tsx";
 import CrewFullCard from "./CrewFullCard.astro";
@@ -39,7 +40,7 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props;
-const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather } = proposal;
+const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather, trips, kite, season } = proposal;
 
 const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
 const number = String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
@@ -164,6 +165,7 @@ const icons: Record<string, string> = {
   calendar: "M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z",
   people: "M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 6.5M18 14a6.5 6.5 0 0 1 3.5 6",
   pin: "M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11ZM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
+  wind: "M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8",
   meals: "M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 21V3c-2.5 1.5-4 4.5-4 8h4",
   clock: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 2",
 };
@@ -254,6 +256,32 @@ const icons: Record<string, string> = {
       </section>
     )
   }
+
+  {
+    key === "trips" && (trips?.items?.length ?? 0) > 0 && (
+      <section class={light}>
+        <div class={box}>
+          {trips.title && <h2 class={h2} data-tina-field={tinaField(trips, "title")}>{trips.title}</h2>}
+          {trips.text && <div class={`mt-10 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(trips, "text")}>{paragraphs(trips.text).map((p) => <p>{p}</p>)}</div>}
+          <div class="mt-16 grid gap-6 md:grid-cols-2 md:gap-10">
+            {((trips.items ?? []) as any[]).filter(Boolean).map((t) => (
+              <div class:list={["flex flex-col rounded-lg border p-8 md:p-12", t.tag ? "border-ink bg-white" : "border-ink/14 bg-white"]} data-tina-field={tinaField(t)}>
+                <div class="min-h-7">
+                  {t.tag && <p class="w-fit rounded-sm bg-ink px-3 py-1.5 font-mono text-[.6rem] tracking-[.14em] text-white uppercase" data-tina-field={tinaField(t, "tag")}>{t.tag}</p>}
+                </div>
+                <h3 class="mt-6 text-[clamp(1.5rem,4vw,2rem)] leading-tight font-semibold tracking-[-.01em]" data-tina-field={tinaField(t, "name")}>{t.name}</h3>
+                {t.text && <p class="mt-6 max-w-[42ch] text-[.95rem] leading-[1.85] text-ink/76" data-tina-field={tinaField(t, "text")}>{t.text}</p>}
+              </div>
+            ))}
+          </div>
+          {trips.note && <p class="mt-10 text-[.95rem] font-semibold" data-tina-field={tinaField(trips, "note")}>{trips.note}</p>}
+        </div>
+      </section>
+    )
+  }
+
+  {key === "kite" && kite && <ProposalInfoSection data={kite} box={box} h2={h2} body={body} small={small} tone="bg-ink text-white" />}
+  {key === "season" && season && <ProposalInfoSection data={season} box={box} h2={h2} body={body} small={small} tone={light} />}
 
   {
     key === "scenes" && (scenes?.items?.length ?? 0) > 0 && (
@@ -606,8 +634,10 @@ const icons: Record<string, string> = {
             </div>
           )}
           <div class:list={[aboardInPricing && "md:sticky md:top-28"]}>
+          <div class="space-y-20">
           {options.map((o) => (
             <div data-tina-field={tinaField(o)}>
+              {options.length > 1 && <h3 class="mb-8 text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(o, "name")}>{o.name}</h3>}
               {(o.prices?.length ?? 0) > 0 && (
                 <div class:list={["overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "grid gap-px md:grid-cols-2" : ""]}>
                   {o.prices.map((pr: any) => (
@@ -616,6 +646,11 @@ const icons: Record<string, string> = {
                         <p class={`${small} text-white/70`} data-tina-field={tinaField(pr, "label")}>{pr.label}</p>
                         {pr.total && <p class="mt-6 text-[clamp(1.5rem,5vw,2.1rem)] leading-tight font-semibold" data-tina-field={tinaField(pr, "total")}>{pr.total}</p>}
                         {pr.perPerson && <p class="mt-2 text-white/78" data-tina-field={tinaField(pr, "perPerson")}>{pr.perPerson}</p>}
+                        {pr.message && boats.priceButtonLabel && number && (
+                          <div class="pt-8">
+                            <Button href={`https://wa.me/${number}?text=${encodeURIComponent(pr.message)}`} variant="primary" context="hero" size="sm" data-tina-field={tinaField(pr, "message")}>{boats.priceButtonLabel}</Button>
+                          </div>
+                        )}
                       </div>
                       {o.prices.length === 1 && boats.button?.href && boats.button?.label && (
                         <div class="pt-10">
@@ -630,6 +665,7 @@ const icons: Record<string, string> = {
               {o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
             </div>
           ))}
+          </div>
           {boats.payment?.title && boats.payment?.text && (
             <details class="group mt-12 max-w-[60ch] border-y border-ink/14 py-5" data-tina-field={tinaField(boats, "payment")}>
               <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
