@@ -13,13 +13,13 @@
     "video",
     "closing"
   ],
-  "title": "Day trip Espíritu Santo, 27 nov 2026 (Patricio, 10 personas)",
+  "title": "Day trip Balandra y Pichilingue, 27 nov 2026 (Patricio, 10 personas)",
   "hero": {
     "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
     "imageAlt": "Aguas turquesa y arena blanca vistas desde el aire, en el Mar de Cortés",
     "note": "Propuesta privada preparada para Patricio",
     "title": "Un día en el mar de Cortés",
-    "subtitle": "Viernes 27 de noviembre. Un catamarán privado para 10 personas, rumbo a Espíritu Santo, con chef a bordo.",
+    "subtitle": "Viernes 27 de noviembre. Un catamarán privado para 10 personas, rumbo a Balandra y Pichilingue, con chef a bordo.",
     "button": {
       "label": "Ver el barco",
       "href": "#boat"
@@ -32,7 +32,7 @@
   },
   "brief": {
     "title": "Su día, de un vistazo",
-    "text": "Cinco horas en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, una comida preparada a bordo con el menú que ustedes elijan, y Espíritu Santo, la isla frente a La Paz, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 11:00 en punto aprovechamos cada hora y llegamos con tiempo para nadar y comer sin prisa.",
+    "text": "Cinco horas en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, una comida preparada a bordo con el menú que ustedes elijan, y dos de los rincones más bonitos de la bahía de La Paz, Balandra y Pichilingue, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 11:00 en punto aprovechamos cada hora y llegamos con tiempo para nadar y comer sin prisa.",
     "facts": [
       {
         "icon": "calendar",
@@ -192,7 +192,7 @@
   },
   "route": {
     "eyebrow": "La ruta",
-    "title": "Alrededor de Espíritu Santo",
+    "title": "Balandra y Pichilingue",
     "dates": "Viernes 27 de noviembre · de 11:00 a 16:00",
     "stops": [
       {
@@ -202,10 +202,16 @@
         "lon": -110.3245
       },
       {
-        "name": "Caleta Lobos",
-        "sub": "Camino a Espíritu Santo: baño, snorkel y comida a bordo",
-        "lat": 24.296,
-        "lon": -110.335
+        "name": "Pichilingue",
+        "sub": "Primera parada: baño y snorkel en aguas tranquilas",
+        "lat": 24.272,
+        "lon": -110.336
+      },
+      {
+        "name": "Balandra",
+        "sub": "Agua baja para caminar, comida a bordo y la roca en forma de hongo",
+        "lat": 24.322,
+        "lon": -110.324
       },
       {
         "name": "Bahía de La Paz",
@@ -219,7 +225,7 @@
       "10 personas, un barco solo para ustedes"
     ],
     "note": "El capitán define la ruta final según el viento y el mar.",
-    "mapLabel": "Ruta propuesta del día: de La Paz hacia Espíritu Santo y de vuelta",
+    "mapLabel": "Ruta propuesta del día: de la marina a Pichilingue y Balandra, y de vuelta",
     "credit": "Datos del mapa © colaboradores de OpenStreetMap."
   },
   "dive": {
@@ -297,7 +303,7 @@
   },
   "days": {
     "title": "Sin agenda inamovible",
-    "text": "Una jornada en el mar, de principio a fin. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 11:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite llegar a Espíritu Santo y aprovechar el día.\n\n### Mediodía · Rumbo a la isla\nEl barco sale de la bahía de La Paz. Para quien lo haya pedido, desayuno opcional a bordo.\n\n### Primera hora de la tarde · Una bahía para ustedes\nSnorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### 16:00 · Check-out\nRegreso y desembarco en la marina.",
+    "text": "Una jornada en el mar, de principio a fin. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 11:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite aprovechar el día y llegar a Balandra con la mejor luz.\n\n### Mediodía · Rumbo a Pichilingue\nEl barco sale de la marina y navega por la bahía de La Paz. Para quien lo haya pedido, desayuno opcional a bordo.\n\n### Primera hora de la tarde · Balandra\nAgua baja y transparente, snorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### 16:00 · Check-out\nRegreso y desembarco en la marina.",
     "note": "Ruta final fijada por el capitán según las condiciones del viento y del mar.",
     "photosAside": true,
     "photos": [
