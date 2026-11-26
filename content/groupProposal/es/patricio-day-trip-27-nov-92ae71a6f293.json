@@ -1,0 +1,391 @@
+{
+  "airy": true,
+  "order": [
+    "brief",
+    "boats",
+    "food",
+    "route",
+    "crew",
+    "dive",
+    "pricing",
+    "days",
+    "weather",
+    "video",
+    "closing"
+  ],
+  "title": "Day trip Espíritu Santo, 27 nov 2026 (Patricio, 10 personas)",
+  "hero": {
+    "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
+    "imageAlt": "Aguas turquesa y arena blanca vistas desde el aire, en el Mar de Cortés",
+    "note": "Propuesta privada preparada para Patricio",
+    "title": "Un día en el mar de Cortés",
+    "subtitle": "Viernes 27 de noviembre. Un catamarán privado para 10 personas, rumbo a Espíritu Santo, con chef a bordo.",
+    "button": {
+      "label": "Ver el barco",
+      "href": "#boat"
+    },
+    "video": "/assets/video/hero-loop.mp4"
+  },
+  "notice": {
+    "availability": "Check-in 9:00 en punto · Check-out 19:00",
+    "expires": "Propuesta válida hasta el jueves 26 de noviembre, 11:00"
+  },
+  "brief": {
+    "title": "Su día, de un vistazo",
+    "text": "Un día completo en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, el menú que ustedes elijan y Espíritu Santo, la isla frente a La Paz, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 9:00 en punto aprovechamos cada hora y llegamos a Espíritu Santo con tiempo para nadar, comer sin prisa y ver el atardecer.",
+    "facts": [
+      {
+        "icon": "calendar",
+        "text": "Viernes 27 de noviembre de 2026"
+      },
+      {
+        "icon": "clock",
+        "text": "Check-in 9:00 · Check-out 19:00"
+      },
+      {
+        "icon": "pin",
+        "text": "Marina Puerto Cortez, La Paz"
+      },
+      {
+        "icon": "people",
+        "text": "10 invitados"
+      },
+      {
+        "icon": "meals",
+        "text": "Desayuno, comida y cena temprana al atardecer"
+      }
+    ],
+    "sideFacts": true
+  },
+  "boats": {
+    "pricingTitle": "El precio, y cómo reservar",
+    "pricingText": "Un precio único por el barco completo y el grupo completo. Todo lo que incluye está aquí mismo, junto al precio.",
+    "options": [
+      {
+        "name": "Fountaine Pajot Saona 47",
+        "intro": "Un catamarán de 47 pies, renovado en 2026, solo para su grupo. Un flybridge con su propio salón, para que la mitad del grupo lea a la sombra mientras la otra mitad ya está en el paddleboard. Aire acondicionado, wifi Starlink y desalinizadora: una ducha de agua dulce después de cada baño, estén donde estén.\n\nA popa, parrilla, ducha exterior, kayak doble y paddleboards listos para entrar al agua. Capitán, chef y Expedition Leader a bordo; ustedes ponen al grupo.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-02.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-03.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-04.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-05.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-06.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-07.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-08.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-09.webp",
+            "alt": "Catamarán Fountaine Pajot Saona 47",
+            "caption": ""
+          }
+        ],
+        "specs": "Fountaine Pajot Saona 47 · Renovado en 2026",
+        "features": [
+          "Aire acondicionado en el salón",
+          "Wifi Starlink a bordo",
+          "Generador",
+          "Desalinizadora (agua dulce hecha a bordo)",
+          "Salón en el flybridge",
+          "Parrilla y ducha exterior",
+          "Kayak doble y 2 paddleboards",
+          "Equipo de snorkel y cañas de pesca"
+        ],
+        "prices": [
+          {
+            "label": "Barco completo · 10 invitados",
+            "total": "89,000 MXN en total",
+            "perPerson": "8,900 MXN por persona"
+          }
+        ],
+        "priceNote": "Precio por el barco completo y el grupo completo, sin actividades extra. Propuesta válida hasta el jueves 26 de noviembre a las 11:00."
+      }
+    ],
+    "button": {
+      "label": "Reservar mi día en el mar",
+      "href": "https://wa.me/525527419922?text=Hola%2C%20queremos%20reservar%20el%20day%20trip%20del%20viernes%2027%20de%20noviembre%20(10%20personas)."
+    }
+  },
+  "book": {
+    "title": "Cómo reservar",
+    "text": "Al ser una reserva con poca antelación, estas son las condiciones:",
+    "terms": [
+      "Pago: 100% al reservar, antes del jueves 26 de noviembre a las 11:00.",
+      "Cancelación: al reservar con menos de 24 horas de antelación, no hay cancelación ni reembolso.",
+      "Esta propuesta es válida hasta el jueves 26 de noviembre a las 11:00."
+    ]
+  },
+  "food": {
+    "title": "Qué se cocina a bordo",
+    "text": "Tres comidas incluidas, cocinadas a bordo por su chef: desayuno, comida y una cena temprana al atardecer, antes de volver a puerto.",
+    "meals": [
+      {
+        "name": "Desayuno",
+        "time": "Al empezar el día",
+        "text": "Fruta fresca y algo caliente, en cubierta, mientras el barco sale de la bahía.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+            "alt": "Fruta de desayuno",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+            "alt": "Desayuno de pan francés",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Comida",
+        "time": "Al ancla, en una bahía",
+        "text": "Una comida larga, sin prisa, con el mar enfrente.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+            "alt": "Ceviche",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+            "alt": "Selección de fruta y quesos",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Cena temprana",
+        "time": "Al atardecer",
+        "text": "La última luz del día, a bordo, antes del regreso.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+            "alt": "Sashimi",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+            "alt": "Torre de atún",
+            "caption": ""
+          }
+        ]
+      }
+    ],
+    "buttonTitle": "Personaliza tu menú",
+    "buttonText": "Antes del viernes les enviamos un menú para que escojan los platillos de cada comida y las bebidas. Si hay alergias o dietas, vegetarianas, veganas o sin gluten, nos lo cuentan y lo adaptamos.",
+    "buttonLabel": "Personalizar mi menú",
+    "buttonMessage": "Hola, queremos personalizar el menú del day trip del viernes 27 de noviembre (grupo de Patricio, 10 personas)."
+  },
+  "route": {
+    "eyebrow": "La ruta",
+    "title": "Alrededor de Espíritu Santo",
+    "dates": "Viernes 27 de noviembre · de 9:00 a 19:00",
+    "stops": [
+      {
+        "name": "Marina Puerto Cortez",
+        "sub": "Check-in a las 9:00 y salida",
+        "lat": 24.158,
+        "lon": -110.3245
+      },
+      {
+        "name": "Caleta Lobos",
+        "sub": "Primera parada, camino a la isla",
+        "lat": 24.296,
+        "lon": -110.335
+      },
+      {
+        "name": "Bahía San Gabriel",
+        "sub": "Espíritu Santo: baño, snorkel y comida a bordo",
+        "lat": 24.43,
+        "lon": -110.36
+      },
+      {
+        "name": "Bahía de La Paz",
+        "sub": "Cena al atardecer y regreso a la marina",
+        "lat": 24.205,
+        "lon": -110.31
+      }
+    ],
+    "facts": [
+      "Un día completo en el agua",
+      "10 personas, un barco solo para ustedes"
+    ],
+    "note": "El capitán define la ruta final según el viento y el mar.",
+    "mapLabel": "Ruta propuesta del día: de La Paz a Espíritu Santo y de vuelta",
+    "credit": "Datos del mapa © colaboradores de OpenStreetMap."
+  },
+  "dive": {
+    "title": "Añadan una actividad",
+    "sideBySide": true,
+    "text": "Una sesión de descubrimiento de dos horas, como actividad de introducción, para quien quiera probar algo nuevo.\n\nSon actividades de pago aparte: el precio del día es sin actividades extra.",
+    "note": "Para coordinar las actividades extra necesitamos su confirmación a más tardar el jueves 26 de noviembre antes del mediodía.",
+    "cards": [
+      {
+        "name": "Buceo scuba",
+        "text": "Una sesión de descubrimiento de dos horas con un instructor cualificado, para dar los primeros pasos bajo el agua.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
+        "imageAlt": "Buceo",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de buceo scuba."
+      },
+      {
+        "name": "Kitesurf",
+        "text": "Una sesión de descubrimiento de dos horas con un guía experimentado, según las condiciones del día.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
+        "imageAlt": "Kitesurf",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de kitesurf."
+      },
+      {
+        "name": "Apnea",
+        "text": "Una sesión de descubrimiento de dos horas en aguas abiertas, dirigida por un instructor cualificado.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
+        "imageAlt": "Apnea",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de apnea."
+      },
+      {
+        "name": "Breathwork y meditación",
+        "text": "Un workshop de dos horas de respiración consciente y meditación.",
+        "image": "",
+        "imageAlt": "",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir el workshop de breathwork y meditación."
+      }
+    ]
+  },
+  "aboard": {
+    "title": "Lo que incluye su día",
+    "text": "Un capitán, un chef y su Expedition Leader, Sergio Torres, cuidan del barco, de la mesa y del día.",
+    "onTitle": "Incluido",
+    "onBoard": [
+      "Capitán, chef y Expedition Leader (Sergio Torres)",
+      "El Fountaine Pajot Saona 47, solo para su grupo",
+      "Desayuno, comida y cena temprana al atardecer, preparados a bordo, con el menú que elijan antes del viaje",
+      "Bocadillos y fruta fresca entre nado y nado",
+      "Menús pensados para su grupo: vegetarianos, veganos, sin gluten, alergias",
+      "Pescado de la captura del día, cuando la línea trae algo",
+      "Agua, café, té y refrescos, todo el día",
+      "Diésel y navegación",
+      "Kayak doble",
+      "2 paddleboards",
+      "Equipo de snorkel para todos",
+      "Dinghy",
+      "Muelle inflable",
+      "Parrilla exterior",
+      "Cañas de pesca",
+      "Starlink",
+      "Aire acondicionado en los camarotes",
+      "Desalinizadora (agua dulce hecha a bordo)",
+      "Sombra, sillas y toallas"
+    ],
+    "offTitle": "No incluido",
+    "notOnBoard": [
+      "Actividades extra (buceo, kitesurf, apnea, workshop de breathwork y meditación)",
+      "Bebidas alcohólicas (traigan las suyas o pregúntennos por nuestra selección de vinos)",
+      "Propinas para la tripulación (lo habitual es el 10% del valor del viaje)"
+    ]
+  },
+  "days": {
+    "title": "Sin agenda inamovible",
+    "text": "Un solo día, completo. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 9:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite llegar a Espíritu Santo y aprovechar el día.\n\n### Mañana · Rumbo a Espíritu Santo\nDesayuno a bordo mientras el barco sale de la bahía de La Paz.\n\n### Mediodía · Una bahía para ustedes\nSnorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### Atardecer · Cena y regreso\nCena temprana a bordo con la luz baja, y de vuelta a La Paz.\n\n### 19:00 · Check-out\nDesembarco en la marina.",
+    "note": "Ruta final fijada por el capitán según las condiciones del viento y del mar.",
+    "photosAside": true,
+    "photos": [
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-costa.webp",
+        "alt": "Una cala de roca roja y arena en Espíritu Santo",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
+        "alt": "Lobos marinos descansando",
+        "caption": ""
+      }
+    ]
+  },
+  "weather": {
+    "title": "El clima en La Paz el viernes",
+    "text": "El pronóstico para el viernes 27 de noviembre en La Paz, de las 9:00 a las 18:00. Lo actualizamos antes de su salida.",
+    "date": "2026-11-27",
+    "windLabel": "Viento",
+    "rainLabel": "Lluvia",
+    "note": "Pronóstico de MET Norway (met.no), actualizado el"
+  },
+  "video": {
+    "title": "Así es Eagle Ray",
+    "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
+    "caption": ""
+  },
+  "closing": {
+    "title": "Listos cuando ustedes lo estén",
+    "text": "Confírmennos antes del jueves 26 a las 11:00 y les enviamos los datos para el pago del 100%.",
+    "buttonLabel": "Confirmar por WhatsApp",
+    "message": "Hola, queremos confirmar el day trip del viernes 27 de noviembre en el Fountaine Pajot Saona 47 (10 personas).",
+    "note": "Propuesta válida hasta el jueves 26 de noviembre a las 11:00.",
+    "agentLine": "Tu agente en Eagle Ray: Angela",
+    "contacts": [
+      {
+        "label": "WhatsApp",
+        "value": "+52 55 2741 9922",
+        "href": "https://wa.me/525527419922"
+      },
+      {
+        "label": "Email",
+        "value": "hello@eaglerayexpeditions.com",
+        "href": "mailto:hello@eaglerayexpeditions.com"
+      }
+    ]
+  },
+  "legal": "Los precios de esta propuesta están en pesos mexicanos (MXN) y son válidos hasta la fecha límite indicada. Su barco y su tripulación quedan reservados al recibir el pago.",
+  "footer": {
+    "line1": "Eagle Ray Expeditions · Aventuras en el océano guiadas por gente apasionada del mar",
+    "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
+  },
+  "crew": {
+    "title": "Su Expedition Leader",
+    "text": "Cada día en el mar tiene alguien que lee al grupo: cuándo nadar, cuándo navegar y cuándo dejar a todos en paz con un café en la proa.",
+    "leader": {
+      "member": "sergio-torres-canei",
+      "image": "",
+      "imageAlt": "Sergio Torres, Expedition Leader",
+      "name": "Sergio Torres",
+      "role": "Tu Expedition Leader",
+      "facts": [
+        "Habla español, inglés y francés"
+      ],
+      "text": "Sergio, «Canei» para los amigos, es Expedition Leader de Eagle Ray y estará con ustedes todo el día, de la marina al atardecer."
+    }
+  }
+}

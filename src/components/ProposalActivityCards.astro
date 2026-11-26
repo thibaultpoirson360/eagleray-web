@@ -19,15 +19,17 @@ interface Activity {
   contactMessage?: string | null;
 }
 interface Props {
-  /** Pairs of the activity and its index in the Sail with Us list (for Tina's click-to-edit marker). */
-  items: { activity: Activity; index: number }[];
+  /** Pairs of the activity and its index in the Sail with Us list (for Tina's click-to-edit marker). A card written in the proposal itself passes its own `field` marker instead. */
+  items: { activity: Activity; index: number; field?: string }[];
   page: any;
   /** `https://wa.me/<number>` (no message). */
   whatsapp: string;
   label?: string | null;
+  /** Cards per row on a laptop: 3 (the usual) or 2 (when the cards sit beside a block of text). */
+  cols?: 2 | 3;
 }
 
-const { items, page, whatsapp, label } = Astro.props;
+const { items, page, whatsapp, label, cols = 3 } = Astro.props;
 const href = (message?: string | null) => (whatsapp ? `${whatsapp}${message ? `?text=${encodeURIComponent(message)}` : ""}` : "");
 ---
 
@@ -36,13 +38,13 @@ const href = (message?: string | null) => (whatsapp ? `${whatsapp}${message ? `?
     <div>
       {label && <p class="mb-8 font-mono text-[.66rem] tracking-[.18em] text-ink/64 uppercase" data-tina-field={tinaField(page, "activitiesExtraLabel")}>{label}</p>}
       <ul
-        class="-mx-5 flex scroll-px-5 snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden"
+        class:list={["-mx-5 flex scroll-px-5 snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:grid md:gap-8 md:overflow-visible md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden", cols === 2 ? "md:grid-cols-2" : "md:grid-cols-3"]}
         tabindex="0"
         role="group"
         aria-label={label ?? undefined}
       >
-        {items.map(({ activity, index }) => (
-          <li class="group relative flex w-[82%] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white md:w-auto" data-tina-field={tinaField(page, "activities", index)}>
+        {items.map(({ activity, index, field }) => (
+          <li class="group relative flex w-[82%] flex-none snap-start flex-col overflow-hidden rounded-lg border border-ink/14 bg-white md:w-auto" data-tina-field={field ?? tinaField(page, "activities", index)}>
             <div class="relative aspect-[4/5] w-full overflow-hidden bg-ink">
               {activity.image && <img src={activity.image} alt={activity.imageAlt ?? ""} loading="lazy" decoding="async" class="h-full w-full object-cover" />}
               <div class="pointer-events-none absolute inset-0 bg-linear-to-t from-ink/65 via-transparent to-transparent [@media(hover:none)]:hidden"></div>

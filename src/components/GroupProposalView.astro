@@ -30,6 +30,7 @@ import { localePath } from "../i18n/config";
 import { memberPhotos, shortName } from "../lib/crew";
 import { LAND } from "../lib/espiritu-santo-map";
 import { ROUTE_D, placeStops } from "../lib/proposal-map";
+import { loadForecast } from "../lib/forecast";
 import { loadSiteSettings, loadSailWithUsOrEnglish, loadCrew, loadCrewSection } from "../lib/content";
 
 interface Props {
@@ -38,7 +39,7 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props;
-const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer } = proposal;
+const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather } = proposal;
 
 const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
 const number = String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
@@ -48,11 +49,14 @@ const closingHref: string = closing?.href || whatsapp;
 // The extra-activity cards come from the Sail with Us page (one place to edit): the proposal only picks which ones, by name.
 const sailPage = sailResult.data.sailWithUsPage;
 const wanted = (dive?.activities ?? []).map((n: string | null) => String(n ?? "").trim().toLowerCase()).filter(Boolean);
-const activityItems = wanted.flatMap((name: string) => {
+const sailItems = wanted.flatMap((name: string) => {
   const index = (sailPage.activities ?? []).findIndex((a: any) => a?.name?.trim().toLowerCase() === name);
   const activity = index >= 0 ? sailPage.activities?.[index] : null;
   return activity?.name && activity.image ? [{ activity: activity as any, index }] : [];
 });
+// Cards written in the proposal itself (an activity that is not on Sail with Us, or with another text or price note).
+const ownItems = ((dive?.cards ?? []) as any[]).filter((c) => c?.name).map((c) => ({ activity: c, index: 0, field: tinaField(c) }));
+const activityItems = [...sailItems, ...ownItems];
 
 // Crew: the leader's portrait opens the profile pop-up; the crew cards are a slider.
 const crewLabels = crewSection.data.crewSection;
@@ -125,11 +129,32 @@ const termsNodes = (text?: string | null): Node[] => {
 };
 
 const compact = !!proposal.compact;
+// "Airy" is the quiet, spacious version: more room around every section and block.
+const airy = !!proposal.airy;
+
+// Sections in the order the editor chose (the "Order of the sections" field). What is not listed follows in the usual order,
+// and the notice bar always comes right under the opening photo. "pricing" and "weather" exist only when listed.
+const defaultOrder = ["notice", "brief", "about", "scenes", "days", "whales", "itinerary", "route", "dive", "boats", "food", "aboard", "crew", "practical", "faq", "video", "closing", "legal", "footer"];
+const chosen = ((proposal.order ?? []) as (string | null)[]).map((k) => String(k ?? "").trim()).filter((k) => k && k !== "notice");
+const order = ["notice", ...chosen, ...defaultOrder.filter((k) => k !== "notice" && !chosen.includes(k))];
+// With "pricing" listed, the price, payment notes and booking terms leave the boat panel and become a section of their own.
+const splitPricing = chosen.includes("pricing");
+// With "pricing" listed and "aboard" not, what is aboard sits beside the price (above it on a phone) instead of in its own section.
+const aboardInPricing = splitPricing && !chosen.includes("aboard") && !!aboard;
+
+// The weather widget: the forecast for one day at a place, fetched when the page is built.
+const forecast = weather?.date ? await loadForecast({ lat: weather.lat ?? 24.16, lon: weather.lon ?? -110.31, date: weather.date, timeZone: weather.timezone || undefined }) : null;
+const skyIcons: Record<string, string> = {
+  sun: "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4",
+  partly: "M8 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8 3v1.5M2.5 5.5l1 1M1 11h1.5M13.5 5.5l-1 1M9 20h8a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.4 1.8A3.1 3.1 0 0 0 9 20Z",
+  cloud: "M7 19h10a4.5 4.5 0 0 0 .6-9 6.5 6.5 0 0 0-12.4 1.8A3.7 3.7 0 0 0 7 19Z",
+  rain: "M7 15h10a4.5 4.5 0 0 0 .6-9 6.5 6.5 0 0 0-12.4 1.8A3.7 3.7 0 0 0 7 15ZM8 18l-1 3M12 18l-1 3M16 18l-1 3",
+};
 const gutter = "px-5 lg:pr-pad lg:pl-[calc(var(--spacing-pad)+var(--rail))]";
 // "Compact" is a cleaner version of the same page: smaller type, tighter sections.
-const box = `relative mx-auto max-w-site ${gutter} ${compact ? "py-[calc(var(--spacing-section)*1.5)]" : "py-[calc(var(--spacing-section)*2.4)]"}`;
-const h2 = compact ? "text-[clamp(1.3rem,3.8vw,1.9rem)] leading-[1.2] font-semibold tracking-[-.01em]" : "text-[clamp(1.6rem,5.2vw,2.6rem)] leading-[1.15] font-semibold tracking-[-.01em]";
-const body = compact ? "text-[.9rem] leading-[1.75]" : "text-[.98rem] leading-[1.85]";
+const box = `relative mx-auto max-w-site ${gutter} ${compact ? "py-[calc(var(--spacing-section)*1.5)]" : airy ? "py-[calc(var(--spacing-section)*3.4)]" : "py-[calc(var(--spacing-section)*2.4)]"}`;
+const h2 = compact ? "text-[clamp(1.3rem,3.8vw,1.9rem)] leading-[1.2] font-semibold tracking-[-.01em]" : airy ? "text-[clamp(1.7rem,5vw,2.8rem)] leading-[1.2] font-medium tracking-[-.015em]" : "text-[clamp(1.6rem,5.2vw,2.6rem)] leading-[1.15] font-semibold tracking-[-.01em]";
+const body = compact ? "text-[.9rem] leading-[1.75]" : airy ? "text-[1rem] leading-[2]" : "text-[.98rem] leading-[1.85]";
 const small = "font-mono text-[.66rem] tracking-[.18em] uppercase";
 const heroH1 = compact ? "text-[clamp(1.9rem,6.4vw,3.4rem)]" : "text-[clamp(2.2rem,9vw,4.8rem)]";
 const boatH = compact ? "text-[clamp(1.6rem,5vw,2.4rem)]" : "text-[clamp(2.4rem,9vw,4.4rem)]";
@@ -139,13 +164,15 @@ const icons: Record<string, string> = {
   calendar: "M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z",
   people: "M9 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 6.5M18 14a6.5 6.5 0 0 1 3.5 6",
   pin: "M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 1 1 13 0c0 5.4-6.5 11-6.5 11ZM12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z",
+  meals: "M7 3v8M4 3v5a3 3 0 0 0 6 0V3M7 11v10M17 21V3c-2.5 1.5-4 4.5-4 8h4",
   clock: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM12 7v5l3 2",
 };
 ---
 
-<div class="bg-surface font-['Open_Sans',sans-serif] text-ink [&_*]:font-['Open_Sans',sans-serif]">
+<div class:list={["bg-surface font-['Open_Sans',sans-serif] text-ink [&_*]:font-['Open_Sans',sans-serif]", airy && "[&_.mt-10]:mt-14 [&_.mt-12]:mt-16 [&_.mt-16]:mt-24 [&_.mt-20]:mt-32 [&_.mt-24]:mt-36"]}>
   <section class:list={["relative isolate flex items-end overflow-hidden bg-ink text-white", compact ? "min-h-[78svh]" : "min-h-svh"]}>
     {hero.image && <img src={hero.image} alt={hero.imageAlt ?? ""} loading="eager" decoding="async" fetchpriority="high" class="absolute inset-0 z-[-1] h-full w-full object-cover" data-tina-field={tinaField(hero, "image")} />}
+    {hero.video && <video autoplay muted loop playsinline preload="metadata" poster={hero.image ?? undefined} aria-hidden="true" class="absolute inset-0 z-[-1] h-full w-full object-cover motion-reduce:hidden" data-tina-field={tinaField(hero, "video")}><source src={hero.video} type="video/mp4" /></video>}
     <div class="absolute inset-0 z-[-1] bg-linear-to-b from-ink/35 via-ink/25 via-40% to-ink/90"></div>
     <div class={`mx-auto w-full max-w-site ${gutter} pt-32 ${compact ? "pb-12 md:pb-16" : "pb-16 md:pb-24"}`}>
       {partner?.logo && (
@@ -166,8 +193,9 @@ const icons: Record<string, string> = {
     </div>
   </section>
 
+  {order.map((key) => (<Fragment>
   {
-    (notice?.availability || notice?.expires) && (
+    key === "notice" && (notice?.availability || notice?.expires) && (
       <div class="bg-ink text-white">
         <div class={`mx-auto flex max-w-site flex-wrap items-center justify-center gap-x-12 gap-y-3 ${gutter} py-6 font-mono text-[.62rem] tracking-[.2em] text-white/86 uppercase`}>
           {notice.availability && <p data-tina-field={tinaField(notice, "availability")}>{notice.availability}</p>}
@@ -179,17 +207,18 @@ const icons: Record<string, string> = {
   }
 
   {
-    brief && (
+    key === "brief" && brief && (
       <section class={light}>
         <div class={box}>
-          <h2 class={h2} data-tina-field={tinaField(brief, "title")}>{brief.title}</h2>
-          <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-ink/80`} data-tina-field={tinaField(brief, "text")}>
+          <div class:list={[brief.sideFacts && "grid gap-y-12 md:grid-cols-[1.1fr_1fr] md:gap-x-24 md:gap-y-16"]}>
+          <h2 class:list={[h2, brief.sideFacts && "md:col-span-2"]} data-tina-field={tinaField(brief, "title")}>{brief.title}</h2>
+          <div class:list={[`max-w-[56ch] space-y-6 ${body} text-ink/80`, brief.sideFacts ? "order-2 md:order-1" : "mt-10"]} data-tina-field={tinaField(brief, "text")}>
             {paragraphs(brief.text).map((p) => <p>{p}</p>)}
           </div>
           {(brief.facts?.length ?? 0) > 0 && (
-            <ul class="mt-20 grid gap-8 border-t border-ink/14 pt-12 md:grid-cols-4 md:gap-10">
+            <ul class:list={["grid gap-8", brief.sideFacts ? "order-1 md:order-2 md:gap-10 md:border-l md:border-ink/14 md:pl-16" : "mt-20 border-t border-ink/14 pt-12 md:grid-cols-4 md:gap-10"]}>
               {((brief.facts ?? []) as any[]).filter(Boolean).map((f) => (
-                <li class="flex items-center gap-5 md:flex-col md:items-start md:gap-6" data-tina-field={tinaField(f)}>
+                <li class:list={["flex items-center gap-5", !brief.sideFacts && "md:flex-col md:items-start md:gap-6"]} data-tina-field={tinaField(f)}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-8 shrink-0 text-ink">
                     <path d={icons[f.icon ?? "calendar"] ?? icons.calendar}></path>
                   </svg>
@@ -198,6 +227,7 @@ const icons: Record<string, string> = {
               ))}
             </ul>
           )}
+          </div>
           {brief.note && <p class="mt-10 max-w-[56ch] text-[.95rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(brief, "note")}>{brief.note}</p>}
           <ProposalPhotos photos={brief.photos} natural class="mt-20" />
         </div>
@@ -206,7 +236,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    about && (
+    key === "about" && about && (
       <section class={light}>
         <div class={box}>
           <div class="grid gap-14 md:grid-cols-[1fr_1.4fr] md:gap-24">
@@ -226,7 +256,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    (scenes?.items?.length ?? 0) > 0 && (
+    key === "scenes" && (scenes?.items?.length ?? 0) > 0 && (
       <ProposalDay
         client:load
         eyebrow={scenes.eyebrow ?? ""}
@@ -246,24 +276,38 @@ const icons: Record<string, string> = {
   }
 
   {
-    days && (
+    key === "days" && days && (
       <section class="bg-ink text-white">
         <div class={box}>
-          <h2 class={`${h2} text-white`} data-tina-field={tinaField(days, "title")}>{days.title}</h2>
-          <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-white/84`} data-tina-field={tinaField(days, "text")}>
-            {paragraphs(days.text).map((p) => {
-              const [first, ...rest] = p.split("\n");
-              return first.startsWith("### ") ? (
-                <div>
-                  <p class="pt-4 font-semibold text-white">{first.slice(4)}</p>
-                  {rest.length > 0 && <p class="mt-2">{rest.join(" ")}</p>}
-                </div>
-              ) : (
-                <p>{p}</p>
-              );
-            })}
+          <div class:list={[days.photosAside && "grid items-start gap-16 md:grid-cols-[1.1fr_1fr] md:gap-28"]}>
+          <div>
+            <h2 class={`${h2} text-white`} data-tina-field={tinaField(days, "title")}>{days.title}</h2>
+            <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-white/84`} data-tina-field={tinaField(days, "text")}>
+              {paragraphs(days.text).map((p) => {
+                const [first, ...rest] = p.split("\n");
+                return first.startsWith("### ") ? (
+                  <div>
+                    <p class="pt-4 font-semibold text-white">{first.slice(4)}</p>
+                    {rest.length > 0 && <p class="mt-2">{rest.join(" ")}</p>}
+                  </div>
+                ) : (
+                  <p>{p}</p>
+                );
+              })}
+            </div>
           </div>
-          <ProposalPhotos photos={days.photos} class="mt-16" />
+          {days.photosAside && (
+            <div class="grid gap-6 md:gap-10">
+              {((days.photos ?? []) as any[]).filter((ph) => ph?.image).map((ph) => (
+                <figure class="m-0">
+                  <img src={ph.image} alt={ph.alt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover" data-tina-field={tinaField(ph, "image")} />
+                  {ph.caption && <figcaption class="mt-3 text-[.8rem] leading-snug opacity-70" data-tina-field={tinaField(ph, "caption")}>{ph.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          )}
+          </div>
+          {!days.photosAside && <ProposalPhotos photos={days.photos} class="mt-16" />}
           <ProposalPhotos photos={days.gallery} slots class="mt-3 md:mt-6" />
           {days.note && <p class="mt-10 max-w-[56ch] text-[.8rem] leading-relaxed text-white/64" data-tina-field={tinaField(days, "note")}>{days.note}</p>}
         </div>
@@ -272,7 +316,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    whales && (
+    key === "whales" && whales && (
       <section class="border-t border-white/15 bg-ink text-white">
         <div class={box}>
           <h2 class={`${h2} text-white`} data-tina-field={tinaField(whales, "title")}>{whales.title}</h2>
@@ -286,7 +330,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    (itinerary?.days?.length ?? 0) > 0 && (
+    key === "itinerary" && (itinerary?.days?.length ?? 0) > 0 && (
       <section class={light}>
         <div class={box}>
           {itinerary.eyebrow && <p class={`${small} text-ink/64`} data-tina-field={tinaField(itinerary, "eyebrow")}>{itinerary.eyebrow}</p>}
@@ -319,7 +363,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    stops.length > 0 && (
+    key === "route" && stops.length > 0 && (
       <section class={light}>
         <div class={box}>
           <div class:list={["grid items-start gap-14", mappable ? "md:grid-cols-[11rem_1fr] md:gap-28" : ""]}>
@@ -366,16 +410,18 @@ const icons: Record<string, string> = {
   }
 
   {
-    dive && (
+    key === "dive" && dive && (
       <section class={light}>
         <div class={box}>
-          <h2 class={h2} data-tina-field={tinaField(dive, "title")}>{dive.title}</h2>
-          {dive.text && <p class={`mt-10 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(dive, "text")}>{dive.text}</p>}
-          <div class="mt-20">
-            <ProposalActivityCards items={activityItems} page={sailPage} whatsapp={number ? `https://wa.me/${number}` : ""} label={sailPage.activitiesExtraLabel} />
+          <div class:list={[dive.sideBySide && "md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:grid-rows-[auto_auto_auto_1fr] md:gap-x-20"]}>
+          <h2 class:list={[h2, dive.sideBySide && "md:col-start-1"]} data-tina-field={tinaField(dive, "title")}>{dive.title}</h2>
+          {dive.text && <div class:list={[`mt-10 max-w-[52ch] space-y-5 ${body} text-ink/80`, dive.sideBySide && "md:col-start-1"]} data-tina-field={tinaField(dive, "text")}>{paragraphs(dive.text).map((p) => <p>{p}</p>)}</div>}
+          <div class:list={[dive.sideBySide ? "pt-14 md:col-start-2 md:row-span-4 md:row-start-1 md:pt-0" : "mt-20"]}>
+            <ProposalActivityCards items={activityItems} page={sailPage} whatsapp={number ? `https://wa.me/${number}` : ""} label={sailPage.activitiesExtraLabel} cols={dive.sideBySide ? 2 : 3} />
           </div>
+          {dive.note && <p class:list={["mt-10 max-w-[60ch] text-[.8rem] leading-relaxed text-ink/64", dive.sideBySide && "md:col-start-1"]} data-tina-field={tinaField(dive, "note")}>{dive.note}</p>}
           {(dive.tellTitle || dive.tellText || dive.buttonLabel) && (
-            <div class="mt-24 max-w-[56ch] border-t border-ink/14 pt-14">
+            <div class:list={["mt-24 max-w-[56ch] border-t border-ink/14 pt-14", dive.sideBySide && "md:col-start-1"]}>
               {dive.tellTitle && <h3 class="text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(dive, "tellTitle")}>{dive.tellTitle}</h3>}
               {dive.tellText && <div class={`mt-6 space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(dive, "tellText")}>{paragraphs(dive.tellText).map((p) => <p>{p}</p>)}</div>}
               {dive.buttonLabel && number && (
@@ -390,13 +436,14 @@ const icons: Record<string, string> = {
               )}
             </div>
           )}
+          </div>
         </div>
       </section>
     )
   }
 
   {
-    options.length > 0 && (
+    key === "boats" && options.length > 0 && (
       <section id="boat" class={`scroll-mt-20 ${light}`}>
         <div class:list={[box, "group/boats"]}>
           {options.length > 1 && (
@@ -452,7 +499,7 @@ const icons: Record<string, string> = {
                     ))}
                   </ul>
                 )}
-                {(o.prices?.length ?? 0) > 0 && (
+                {!splitPricing && (o.prices?.length ?? 0) > 0 && (
                   <>
                     <div class:list={["mt-16 overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "grid gap-px md:grid-cols-2" : ""]}>
                       {o.prices.map((pr: any) => (
@@ -477,9 +524,9 @@ const icons: Record<string, string> = {
                     )}
                   </>
                 )}
-                {o.priceNote && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(o, "priceNote")}>{o.priceNote}</p>}
-                {o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
-                {boats.payment?.title && boats.payment?.text && (
+                {!splitPricing && o.priceNote && <p class="mt-6 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(o, "priceNote")}>{o.priceNote}</p>}
+                {!splitPricing && o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
+                {!splitPricing && boats.payment?.title && boats.payment?.text && (
                   <details class="group mt-10 max-w-[60ch] border-y border-ink/14 py-5" data-tina-field={tinaField(boats, "payment")}>
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
                       <span>{boats.payment.title}</span>
@@ -499,7 +546,7 @@ const icons: Record<string, string> = {
               </article>
             );
           })}
-          {(boats.note || book) && (
+          {!splitPricing && (boats.note || book) && (
             <div class:list={["mt-20 grid gap-14", boats.note && book ? "md:grid-cols-2 md:gap-24" : ""]}>
               {boats.note && (
                 <div class="max-w-[56ch] space-y-5 text-[.9rem] leading-[1.8] text-ink/70" data-tina-field={tinaField(boats, "note")}>
@@ -538,19 +585,163 @@ const icons: Record<string, string> = {
   }
 
   {
-    food && (
-      <section class="bg-ink text-white">
+    key === "pricing" && options.length > 0 && (
+      <section id="pricing" class={`scroll-mt-20 ${light}`}>
         <div class={box}>
-          <h2 class={`${h2} text-white`} data-tina-field={tinaField(food, "title")}>{food.title}</h2>
-          {food.text && <p class={`mt-10 max-w-[56ch] ${body} text-white/84`} data-tina-field={tinaField(food, "text")}>{food.text}</p>}
-          <ProposalPhotos photos={food.photos} slots class="mt-16" />
+          {boats.pricingTitle && <h2 class={h2} data-tina-field={tinaField(boats, "pricingTitle")}>{boats.pricingTitle}</h2>}
+          {boats.pricingText && <div class={`mt-10 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(boats, "pricingText")}>{paragraphs(boats.pricingText).map((p) => <p>{p}</p>)}</div>}
+          <div class:list={[boats.pricingTitle || boats.pricingText ? "mt-20" : "", "grid items-start gap-20 md:gap-24", aboardInPricing && "md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]"]}>
+          {aboardInPricing && (
+            <div>
+              {aboard.title && <h3 class="text-[1.3rem] leading-tight font-semibold" data-tina-field={tinaField(aboard, "title")}>{aboard.title}</h3>}
+              {aboard.text && <p class="mt-5 max-w-[48ch] text-[.95rem] leading-[1.85] text-ink/76" data-tina-field={tinaField(aboard, "text")}>{aboard.text}</p>}
+              {aboard.onTitle && <h4 class={`${small} mt-12 border-t border-ink/14 pt-6 pb-7 text-ink/64`} data-tina-field={tinaField(aboard, "onTitle")}>{aboard.onTitle}</h4>}
+              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-ink/86" data-tina-field={tinaField(aboard, "onBoard")}>
+                {list(aboard.onBoard).map((item) => <li>{item}</li>)}
+              </ul>
+              {aboard.offTitle && <h4 class={`${small} mt-14 border-t border-ink/14 pt-6 pb-7 text-ink/64`} data-tina-field={tinaField(aboard, "offTitle")}>{aboard.offTitle}</h4>}
+              <ul class="space-y-4 text-[.95rem] leading-[1.7] text-ink/64" data-tina-field={tinaField(aboard, "notOnBoard")}>
+                {list(aboard.notOnBoard).map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          )}
+          <div class:list={[aboardInPricing && "md:sticky md:top-28"]}>
+          {options.map((o) => (
+            <div data-tina-field={tinaField(o)}>
+              {(o.prices?.length ?? 0) > 0 && (
+                <div class:list={["overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "grid gap-px md:grid-cols-2" : ""]}>
+                  {o.prices.map((pr: any) => (
+                    <div class="bg-ink p-8 text-white md:p-12" data-tina-field={tinaField(pr)}>
+                      <div>
+                        <p class={`${small} text-white/70`} data-tina-field={tinaField(pr, "label")}>{pr.label}</p>
+                        {pr.total && <p class="mt-6 text-[clamp(1.5rem,5vw,2.1rem)] leading-tight font-semibold" data-tina-field={tinaField(pr, "total")}>{pr.total}</p>}
+                        {pr.perPerson && <p class="mt-2 text-white/78" data-tina-field={tinaField(pr, "perPerson")}>{pr.perPerson}</p>}
+                      </div>
+                      {o.prices.length === 1 && boats.button?.href && boats.button?.label && (
+                        <div class="pt-10">
+                          <Button href={boats.button.href} variant="primary" context="hero" data-tina-field={tinaField(boats, "button")}>{boats.button.label}</Button>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {o.priceNote && <p class="mt-8 max-w-[56ch] text-[.85rem] leading-relaxed text-ink/70" data-tina-field={tinaField(o, "priceNote")}>{o.priceNote}</p>}
+              {o.note && <p class="mt-3 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(o, "note")}>{o.note}</p>}
+            </div>
+          ))}
+          {boats.payment?.title && boats.payment?.text && (
+            <details class="group mt-12 max-w-[60ch] border-y border-ink/14 py-5" data-tina-field={tinaField(boats, "payment")}>
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-6 text-[.95rem] font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink [&::-webkit-details-marker]:hidden">
+                <span>{boats.payment.title}</span>
+                <span class="text-xl leading-none text-ink/50 transition duration-500 ease-soft group-open:rotate-45" aria-hidden="true">+</span>
+              </summary>
+              <div class="mt-6 space-y-4 text-[.9rem] leading-[1.75] text-ink/80">
+                {termsNodes(boats.payment.text).map((n) =>
+                  n.type === "h2" ? <p class={`${small} pt-4 text-ink/64`}>{n.text}</p>
+                  : n.type === "h3" ? <p class="pt-2 font-semibold text-ink">{n.text}</p>
+                  : n.type === "p" ? <p>{n.text}</p>
+                  : n.type === "ul" ? <ul class="list-disc space-y-1.5 pl-5">{(n as { items: string[] }).items.map((i: string) => <li class="whitespace-pre-line">{i}</li>)}</ul>
+                  : <ol class="list-decimal space-y-2.5 pl-5">{(n as { items: string[] }).items.map((i: string) => <li class="whitespace-pre-line">{i}</li>)}</ol>
+                )}
+              </div>
+            </details>
+          )}
+          {(boats.note || book) && (
+            <div class="mt-16 grid gap-14">
+              {boats.note && (
+                <div class="max-w-[56ch] space-y-5 text-[.9rem] leading-[1.8] text-ink/70" data-tina-field={tinaField(boats, "note")}>
+                  {paragraphs(boats.note).map((p) => <p>{p}</p>)}
+                </div>
+              )}
+              {book && (
+                <div>
+                  <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
+                  {book.text && <p class="mt-4 max-w-[56ch] text-[.9rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "text")}>{book.text}</p>}
+                  <ul class="mt-8 max-w-[60ch] space-y-4 border-t border-ink/14 pt-8 text-[.92rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "terms")}>
+                    {list(book.terms).map((t) => <li>{t}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+          </div>
+          </div>
         </div>
       </section>
     )
   }
 
   {
-    aboard && (
+    key === "weather" && weather && forecast && (
+      <section class={light}>
+        <div class={box}>
+          <div class="grid items-start gap-16 md:grid-cols-[1fr_1.3fr] md:gap-28">
+            <div>
+              <h2 class={h2} data-tina-field={tinaField(weather, "title")}>{weather.title}</h2>
+              {weather.text && <div class={`mt-10 max-w-[44ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(weather, "text")}>{paragraphs(weather.text).map((p) => <p>{p}</p>)}</div>}
+            </div>
+            <div>
+              <ul class="grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-ink/14 sm:grid-cols-4" aria-label={weather.title}>
+                {forecast.hours.map((h) => (
+                  <li class="flex flex-col items-start gap-5 bg-white p-6">
+                    <span class={`${small} text-ink/64`}>{h.hour}</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="size-9 text-ink"><path d={skyIcons[h.sky]}></path></svg>
+                    <span class="text-[2rem] leading-none font-semibold">{h.temp}°C</span>
+                    <span class="text-[.85rem] leading-[1.7] text-ink/70">
+                      {weather.windLabel} {h.wind} kn<br />
+                      {weather.rainLabel} {h.rain} mm
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {weather.note && <p class="mt-8 max-w-[56ch] text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(weather, "note")}>{weather.note} {forecast.updated}</p>}
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    key === "food" && food && (
+      <section class="bg-ink text-white">
+        <div class={box}>
+          <h2 class={`${h2} text-white`} data-tina-field={tinaField(food, "title")}>{food.title}</h2>
+          {food.text && <p class={`mt-10 max-w-[56ch] ${body} text-white/84`} data-tina-field={tinaField(food, "text")}>{food.text}</p>}
+          {(food.meals?.length ?? 0) > 0 && (
+            <div class="mt-20 border-t border-white/20">
+              {((food.meals ?? []) as any[]).filter(Boolean).map((m) => (
+                <div class="grid gap-10 border-b border-white/15 py-14 md:grid-cols-[14rem_1fr] md:gap-24" data-tina-field={tinaField(m)}>
+                  <div>
+                    {m.time && <p class={`${small} text-white/64`} data-tina-field={tinaField(m, "time")}>{m.time}</p>}
+                    <h3 class="mt-4 text-[1.5rem] leading-tight font-semibold text-white" data-tina-field={tinaField(m, "name")}>{m.name}</h3>
+                    {m.text && <p class="mt-5 max-w-[30ch] text-[.92rem] leading-[1.8] text-white/76" data-tina-field={tinaField(m, "text")}>{m.text}</p>}
+                  </div>
+                  <ProposalPhotos photos={m.photos} slots />
+                </div>
+              ))}
+            </div>
+          )}
+          <ProposalPhotos photos={food.photos} slots class="mt-16" />
+          {(food.buttonTitle || food.buttonText || food.buttonLabel) && (
+            <div class="mt-20 max-w-[52ch]">
+              {food.buttonTitle && <h3 class="text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold text-white" data-tina-field={tinaField(food, "buttonTitle")}>{food.buttonTitle}</h3>}
+              {food.buttonText && <div class={`mt-6 space-y-5 ${body} text-white/84`} data-tina-field={tinaField(food, "buttonText")}>{paragraphs(food.buttonText).map((p) => <p>{p}</p>)}</div>}
+              {food.buttonLabel && (food.buttonHref || number) && (
+                <div class="mt-10">
+                  <Button href={food.buttonHref || `https://wa.me/${number}${food.buttonMessage ? `?text=${encodeURIComponent(food.buttonMessage)}` : ""}`} variant="primary" context="hero" data-tina-field={tinaField(food, "buttonLabel")}>{food.buttonLabel}</Button>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    key === "aboard" && aboard && !aboardInPricing && (
       <section class="border-t border-white/15 bg-ink text-white">
         <div class={box}>
           <h2 class={`${h2} text-white`} data-tina-field={tinaField(aboard, "title")}>{aboard.title}</h2>
@@ -576,7 +767,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    crew && (
+    key === "crew" && crew && (
       <section class={light}>
         <div class={box}>
           <h2 class={h2} data-tina-field={tinaField(crew, "title")}>{crew.title}</h2>
@@ -638,7 +829,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    (practical?.items?.length ?? 0) > 0 && (
+    key === "practical" && (practical?.items?.length ?? 0) > 0 && (
       <section class={light}>
         <div class={box}>
           {practical.eyebrow && <p class={`${small} text-ink/64`} data-tina-field={tinaField(practical, "eyebrow")}>{practical.eyebrow}</p>}
@@ -660,7 +851,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    (faq?.items?.length ?? 0) > 0 && (
+    key === "faq" && (faq?.items?.length ?? 0) > 0 && (
       <section class={light}>
         <div class:list={[box, "grid gap-14 md:grid-cols-[1fr_1.6fr] md:gap-28"]}>
           <div>
@@ -684,7 +875,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    embed && (
+    key === "video" && embed && (
       <section class="bg-ink text-white">
         <div class={box}>
           {video.title && <h2 class={`${h2} text-white`} data-tina-field={tinaField(video, "title")}>{video.title}</h2>}
@@ -698,7 +889,7 @@ const icons: Record<string, string> = {
   }
 
   {
-    closing && (
+    key === "closing" && closing && (
       <section class:list={["relative isolate overflow-hidden", closing.image ? "bg-ink text-white" : light]}>
         {closing.image && <img src={closing.image} alt="" loading="lazy" decoding="async" class="absolute inset-0 z-[-1] h-full w-full object-cover" data-tina-field={tinaField(closing, "image")} />}
         {closing.image && <div class="absolute inset-0 z-[-1] bg-ink/70"></div>}
@@ -728,10 +919,10 @@ const icons: Record<string, string> = {
     )
   }
 
-  {legal && <p class={`mx-auto max-w-site ${gutter} py-14 text-[.72rem] leading-[1.8] text-ink/50`} data-tina-field={tinaField(proposal, "legal")}>{legal}</p>}
+  {key === "legal" && legal && <p class={`mx-auto max-w-site ${gutter} py-14 text-[.72rem] leading-[1.8] text-ink/50`} data-tina-field={tinaField(proposal, "legal")}>{legal}</p>}
 
   {
-    footer && (
+    key === "footer" && footer && (
       <div class="bg-ink text-white">
         <div class={`mx-auto max-w-site ${gutter} space-y-2 py-12 text-center text-[.8rem] leading-relaxed text-white/70`}>
           {partner?.logo && (
@@ -747,4 +938,5 @@ const icons: Record<string, string> = {
       </div>
     )
   }
+  </Fragment>))}
 </div>
