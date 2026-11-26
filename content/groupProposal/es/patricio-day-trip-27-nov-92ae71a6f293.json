@@ -15,6 +15,7 @@
   ],
   "title": "Day trip Balandra y Pichilingue, 27 nov 2026 (Patricio, 10 personas)",
   "hero": {
+    "video": "/assets/video/hero-loop.mp4",
     "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
     "imageAlt": "Aguas turquesa y arena blanca vistas desde el aire, en el Mar de Cortés",
     "note": "Propuesta privada preparada para Patricio",
@@ -23,8 +24,7 @@
     "button": {
       "label": "Ver el barco",
       "href": "#boat"
-    },
-    "video": "/assets/video/hero-loop.mp4"
+    }
   },
   "notice": {
     "availability": "Check-in 11:00 en punto · Check-out 16:00",
@@ -33,6 +33,7 @@
   "brief": {
     "title": "Su día, de un vistazo",
     "text": "Cinco horas en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, una comida preparada a bordo con el menú que ustedes elijan, y dos de los rincones más bonitos de la bahía de La Paz, Balandra y Pichilingue, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 11:00 en punto aprovechamos cada hora y llegamos con tiempo para nadar y comer sin prisa.",
+    "sideFacts": true,
     "facts": [
       {
         "icon": "calendar",
@@ -54,12 +55,111 @@
         "icon": "meals",
         "text": "Comida a bordo, con desayuno opcional"
       }
+    ]
+  },
+  "days": {
+    "title": "Sin agenda inamovible",
+    "text": "Una jornada en el mar, de principio a fin. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 11:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite aprovechar el día y llegar a Balandra con la mejor luz.\n\n### Mediodía · Rumbo a Pichilingue\nEl barco sale de la marina y navega por la bahía de La Paz. Para quien lo haya pedido, desayuno opcional a bordo.\n\n### Primera hora de la tarde · Balandra\nAgua baja y transparente, snorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### 16:00 · Check-out\nRegreso y desembarco en la marina.",
+    "note": "Ruta final fijada por el capitán según las condiciones del viento y del mar.",
+    "photosAside": true,
+    "photos": [
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-costa.webp",
+        "alt": "Una cala de roca roja y arena en Espíritu Santo",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
+        "alt": "Lobos marinos descansando",
+        "caption": ""
+      }
+    ]
+  },
+  "route": {
+    "eyebrow": "La ruta",
+    "title": "Balandra y Pichilingue",
+    "dates": "Viernes 27 de noviembre · de 11:00 a 16:00",
+    "stops": [
+      {
+        "name": "Marina Puerto Cortez",
+        "sub": "Check-in a las 11:00 y salida",
+        "lat": 24.158,
+        "lon": -110.3245
+      },
+      {
+        "name": "Pichilingue",
+        "sub": "Primera parada: baño y snorkel en aguas tranquilas",
+        "lat": 24.272,
+        "lon": -110.336
+      },
+      {
+        "name": "Balandra",
+        "sub": "Agua baja para caminar, comida a bordo y la roca en forma de hongo",
+        "lat": 24.322,
+        "lon": -110.324
+      },
+      {
+        "name": "Bahía de La Paz",
+        "sub": "Regreso a la marina, check-out a las 16:00",
+        "lat": 24.205,
+        "lon": -110.31
+      }
     ],
-    "sideFacts": true
+    "facts": [
+      "Cinco horas en el agua",
+      "10 personas, un barco solo para ustedes"
+    ],
+    "note": "El capitán define la ruta final según el viento y el mar.",
+    "mapLabel": "Ruta propuesta del día: de la marina a Pichilingue y Balandra, y de vuelta",
+    "credit": "Datos del mapa © colaboradores de OpenStreetMap."
+  },
+  "dive": {
+    "title": "Añadan una actividad",
+    "text": "Una sesión de descubrimiento de dos horas, como actividad de introducción, para quien quiera probar algo nuevo.\n\nSon actividades de pago aparte: el precio del día es sin actividades extra.",
+    "sideBySide": true,
+    "cards": [
+      {
+        "name": "Buceo scuba",
+        "text": "Una sesión de descubrimiento de dos horas con un instructor cualificado, para dar los primeros pasos bajo el agua.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
+        "imageAlt": "Buceo",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de buceo scuba."
+      },
+      {
+        "name": "Kitesurf",
+        "text": "Una sesión de descubrimiento de dos horas con un guía experimentado, según las condiciones del día.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
+        "imageAlt": "Kitesurf",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de kitesurf."
+      },
+      {
+        "name": "Apnea",
+        "text": "Una sesión de descubrimiento de dos horas en aguas abiertas, dirigida por un instructor cualificado.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
+        "imageAlt": "Apnea",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de apnea."
+      },
+      {
+        "name": "Breathwork y meditación",
+        "text": "Un workshop de dos horas de respiración consciente y meditación.",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Activities/Person_doing_breathwork_on_a_boat_hse7n8.png",
+        "imageAlt": "",
+        "priceNote": "Precio a consultar",
+        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir el workshop de breathwork y meditación."
+      }
+    ],
+    "note": "Para coordinar las actividades extra necesitamos su confirmación a más tardar el jueves 26 de noviembre antes del mediodía."
   },
   "boats": {
     "pricingTitle": "El precio, y cómo reservar",
     "pricingText": "Un precio único por el barco completo y el grupo completo. Todo lo que incluye está aquí mismo, junto al precio.",
+    "button": {
+      "label": "Reservar mi día en el mar",
+      "href": "https://wa.me/525527419922?text=Hola%2C%20queremos%20reservar%20el%20day%20trip%20del%20viernes%2027%20de%20noviembre%20(10%20personas)."
+    },
     "options": [
       {
         "name": "Fountaine Pajot Saona 47",
@@ -131,11 +231,7 @@
         ],
         "priceNote": "Precio por el barco completo y el grupo completo, sin actividades extra. Propuesta válida hasta el jueves 26 de noviembre a las 11:00."
       }
-    ],
-    "button": {
-      "label": "Reservar mi día en el mar",
-      "href": "https://wa.me/525527419922?text=Hola%2C%20queremos%20reservar%20el%20day%20trip%20del%20viernes%2027%20de%20noviembre%20(10%20personas)."
-    }
+    ]
   },
   "book": {
     "title": "Cómo reservar",
@@ -190,84 +286,6 @@
     "buttonLabel": "Personalizar mi menú",
     "buttonMessage": "Hola, queremos personalizar el menú del day trip del viernes 27 de noviembre (grupo de Patricio, 10 personas)."
   },
-  "route": {
-    "eyebrow": "La ruta",
-    "title": "Balandra y Pichilingue",
-    "dates": "Viernes 27 de noviembre · de 11:00 a 16:00",
-    "stops": [
-      {
-        "name": "Marina Puerto Cortez",
-        "sub": "Check-in a las 11:00 y salida",
-        "lat": 24.158,
-        "lon": -110.3245
-      },
-      {
-        "name": "Pichilingue",
-        "sub": "Primera parada: baño y snorkel en aguas tranquilas",
-        "lat": 24.272,
-        "lon": -110.336
-      },
-      {
-        "name": "Balandra",
-        "sub": "Agua baja para caminar, comida a bordo y la roca en forma de hongo",
-        "lat": 24.322,
-        "lon": -110.324
-      },
-      {
-        "name": "Bahía de La Paz",
-        "sub": "Regreso a la marina, check-out a las 16:00",
-        "lat": 24.205,
-        "lon": -110.31
-      }
-    ],
-    "facts": [
-      "Cinco horas en el agua",
-      "10 personas, un barco solo para ustedes"
-    ],
-    "note": "El capitán define la ruta final según el viento y el mar.",
-    "mapLabel": "Ruta propuesta del día: de la marina a Pichilingue y Balandra, y de vuelta",
-    "credit": "Datos del mapa © colaboradores de OpenStreetMap."
-  },
-  "dive": {
-    "title": "Añadan una actividad",
-    "sideBySide": true,
-    "text": "Una sesión de descubrimiento de dos horas, como actividad de introducción, para quien quiera probar algo nuevo.\n\nSon actividades de pago aparte: el precio del día es sin actividades extra.",
-    "note": "Para coordinar las actividades extra necesitamos su confirmación a más tardar el jueves 26 de noviembre antes del mediodía.",
-    "cards": [
-      {
-        "name": "Buceo scuba",
-        "text": "Una sesión de descubrimiento de dos horas con un instructor cualificado, para dar los primeros pasos bajo el agua.",
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ERE_-_People_-_Expedition_Leader_-_Monik_Saab_-_diving_dupn3e.jpg",
-        "imageAlt": "Buceo",
-        "priceNote": "Precio a consultar",
-        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de buceo scuba."
-      },
-      {
-        "name": "Kitesurf",
-        "text": "Una sesión de descubrimiento de dos horas con un guía experimentado, según las condiciones del día.",
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
-        "imageAlt": "Kitesurf",
-        "priceNote": "Precio a consultar",
-        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de kitesurf."
-      },
-      {
-        "name": "Apnea",
-        "text": "Una sesión de descubrimiento de dos horas en aguas abiertas, dirigida por un instructor cualificado.",
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/freediving_lvjlai.jpg",
-        "imageAlt": "Apnea",
-        "priceNote": "Precio a consultar",
-        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir la sesión de descubrimiento de apnea."
-      },
-      {
-        "name": "Breathwork y meditación",
-        "text": "Un workshop de dos horas de respiración consciente y meditación.",
-        "image": "",
-        "imageAlt": "",
-        "priceNote": "Precio a consultar",
-        "contactMessage": "Hola, somos el grupo de Patricio (viernes 27 de noviembre). Queremos añadir el workshop de breathwork y meditación."
-      }
-    ]
-  },
   "aboard": {
     "title": "Lo que incluye su día",
     "text": "Un capitán, un chef y su Expedition Leader, Sergio Torres, cuidan del barco, de la mesa y del día.",
@@ -301,42 +319,45 @@
       "Propinas para la tripulación (lo habitual es el 10% del valor del viaje)"
     ]
   },
-  "days": {
-    "title": "Sin agenda inamovible",
-    "text": "Una jornada en el mar, de principio a fin. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 11:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite aprovechar el día y llegar a Balandra con la mejor luz.\n\n### Mediodía · Rumbo a Pichilingue\nEl barco sale de la marina y navega por la bahía de La Paz. Para quien lo haya pedido, desayuno opcional a bordo.\n\n### Primera hora de la tarde · Balandra\nAgua baja y transparente, snorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### 16:00 · Check-out\nRegreso y desembarco en la marina.",
-    "note": "Ruta final fijada por el capitán según las condiciones del viento y del mar.",
-    "photosAside": true,
-    "photos": [
-      {
-        "image": "/assets/proposals/christmas-at-sea-2026/paz-costa.webp",
-        "alt": "Una cala de roca roja y arena en Espíritu Santo",
-        "caption": ""
-      },
-      {
-        "image": "/assets/proposals/christmas-at-sea-2026/paz-lobos.webp",
-        "alt": "Lobos marinos descansando",
-        "caption": ""
-      }
-    ]
-  },
-  "weather": {
-    "title": "El clima en La Paz el viernes",
-    "text": "El pronóstico para el viernes 27 de noviembre en La Paz, de las 11:00 a las 16:00. Lo actualizamos antes de su salida.",
-    "date": "2026-11-27",
-    "windLabel": "Viento",
-    "rainLabel": "Lluvia",
-    "note": "Pronóstico de MET Norway (met.no), actualizado el",
-    "hours": [
-      11,
-      12,
-      14,
-      16
-    ]
+  "crew": {
+    "title": "Su equipo",
+    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce las aguas a la perfección, un chef que cocina con producto local y lo que da el mar y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo tratan y quieren compartirlo con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
+    "sideBySide": true,
+    "explainTitle": "Qué es un Expedition Leader",
+    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray que va con ustedes todo el día y que responde de que el día salga como lo imaginaron.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación.",
+    "leader": {
+      "member": "sergio-torres-canei",
+      "image": "",
+      "imageAlt": "Sergio Torres, Expedition Leader",
+      "name": "Sergio Torres",
+      "role": "Su Expedition Leader para esta ocasión",
+      "facts": [
+        "Coach de deporte",
+        "Apnea",
+        "Spearfishing",
+        "Habla español, inglés y francés"
+      ],
+      "text": "Sergio, «Canei» para los amigos, es la persona encargada de que todo salga a la perfección durante su día en el mar.\n\nSi añaden alguna actividad, puede ser él quien la dirija: es coach de deporte y trabaja la apnea, el spearfishing y más."
+    }
   },
   "video": {
     "title": "Así es Eagle Ray",
     "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
     "caption": ""
+  },
+  "weather": {
+    "title": "El clima en La Paz el viernes",
+    "text": "El pronóstico para el viernes 27 de noviembre en La Paz, de las 11:00 a las 16:00. Lo actualizamos antes de su salida.",
+    "date": "2026-11-27",
+    "hours": [
+      11,
+      12,
+      14,
+      16
+    ],
+    "windLabel": "Viento",
+    "rainLabel": "Lluvia",
+    "note": "Pronóstico de MET Norway (met.no), actualizado el"
   },
   "closing": {
     "title": "Listos cuando ustedes lo estén",
@@ -362,26 +383,5 @@
   "footer": {
     "line1": "Eagle Ray Expeditions · Aventuras en el océano guiadas por gente apasionada del mar",
     "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
-  },
-  "crew": {
-    "title": "Su equipo",
-    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce las aguas a la perfección, un chef que cocina con producto local y lo que da el mar y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo tratan y quieren compartirlo con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
-    "leader": {
-      "member": "sergio-torres-canei",
-      "image": "",
-      "imageAlt": "Sergio Torres, Expedition Leader",
-      "name": "Sergio Torres",
-      "role": "Su Expedition Leader para esta ocasión",
-      "facts": [
-        "Coach de deporte",
-        "Apnea",
-        "Spearfishing",
-        "Habla español, inglés y francés"
-      ],
-      "text": "Sergio, «Canei» para los amigos, es la persona encargada de que todo salga a la perfección durante su día en el mar.\n\nSi añaden alguna actividad, puede ser él quien la dirija: es coach de deporte y trabaja la apnea, el spearfishing y más."
-    },
-    "sideBySide": true,
-    "explainTitle": "Qué es un Expedition Leader",
-    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray que va con ustedes todo el día y que responde de que el día salga como lo imaginaron.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación."
   }
 }
