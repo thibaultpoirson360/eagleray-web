@@ -430,6 +430,9 @@ const groupProposal: Collection = {
       fields: [
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
+        { type: "boolean", name: "sideBySide", label: "Team on the left, Expedition Leader on the right", description: "On a laptop the text sits in the left column and the Expedition Leader's profile in the right one. On a phone they stack." },
+        { type: "string", name: "explainTitle", label: "Block under the text: title (optional)", description: "e.g. 'Qué es un Expedition Leader'." },
+        { type: "string", name: "explainText", label: "Block under the text: text", ui: textarea },
         {
           type: "object",
           name: "leader",
@@ -441,7 +444,7 @@ const groupProposal: Collection = {
             { type: "string", name: "name", label: "Name" },
             { type: "string", name: "role", label: "Role" },
             { type: "string", name: "facts", label: "Facts (shown in a row)", list: true },
-            { type: "string", name: "text", label: "Text", ui: textarea },
+            { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
           ],
         },
         { type: "string", name: "members", label: "Crew cards (file names in Crew, optional)", list: true, description: "e.g. benji, lou. Shown as a slider of cards, each opening the full profile." },
@@ -512,6 +515,7 @@ const groupProposal: Collection = {
         { type: "string", name: "date", label: "Day", required: true, description: "Year-month-day, e.g. 2026-11-27." },
         { type: "number", name: "lat", label: "Latitude", description: "Empty means La Paz, 24.16." },
         { type: "number", name: "lon", label: "Longitude", description: "Empty means La Paz, -110.31." },
+        { type: "number", name: "hours", label: "Hours to show", list: true, description: "Local hours, 0 to 23, e.g. 11, 12, 14, 16. Empty means 9, 12, 15 and 18." },
         { type: "string", name: "timezone", label: "Time zone", description: "Empty means La Paz (America/Mazatlan)." },
         { type: "string", name: "windLabel", label: "Label: wind", description: "Shown before the wind in knots, e.g. 'Wind'." },
         { type: "string", name: "rainLabel", label: "Label: rain", description: "Shown before the rain in mm, e.g. 'Rain'." },

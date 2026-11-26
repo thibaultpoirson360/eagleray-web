@@ -143,7 +143,7 @@ const splitPricing = chosen.includes("pricing");
 const aboardInPricing = splitPricing && !chosen.includes("aboard") && !!aboard;
 
 // The weather widget: the forecast for one day at a place, fetched when the page is built.
-const forecast = weather?.date ? await loadForecast({ lat: weather.lat ?? 24.16, lon: weather.lon ?? -110.31, date: weather.date, timeZone: weather.timezone || undefined }) : null;
+const forecast = weather?.date ? await loadForecast({ lat: weather.lat ?? 24.16, lon: weather.lon ?? -110.31, date: weather.date, timeZone: weather.timezone || undefined, hours: ((weather.hours ?? []) as (number | null)[]).filter((h): h is number => typeof h === "number") }) : null;
 const skyIcons: Record<string, string> = {
   sun: "M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4",
   partly: "M8 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8 3v1.5M2.5 5.5l1 1M1 11h1.5M13.5 5.5l-1 1M9 20h8a4 4 0 0 0 .5-8 5.5 5.5 0 0 0-10.4 1.8A3.1 3.1 0 0 0 9 20Z",
@@ -770,12 +770,21 @@ const icons: Record<string, string> = {
     key === "crew" && crew && (
       <section class={light}>
         <div class={box}>
+          <div class:list={[crew.sideBySide && "grid items-start gap-20 md:grid-cols-2 md:gap-24"]}>
+          <div>
           <h2 class={h2} data-tina-field={tinaField(crew, "title")}>{crew.title}</h2>
           <div class={`mt-10 max-w-[56ch] space-y-6 ${body} text-ink/80`} data-tina-field={tinaField(crew, "text")}>
             {paragraphs(crew.text).map((p) => <p>{p}</p>)}
           </div>
+          {(crew.explainTitle || crew.explainText) && (
+            <div class="mt-16 max-w-[56ch] border-t border-ink/14 pt-12">
+              {crew.explainTitle && <h3 class="text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(crew, "explainTitle")}>{crew.explainTitle}</h3>}
+              {crew.explainText && <div class={`mt-6 space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(crew, "explainText")}>{paragraphs(crew.explainText).map((p) => <p>{p}</p>)}</div>}
+            </div>
+          )}
+          </div>
           {crew.leader && (
-            <div class="mt-20 grid gap-10 border-t border-ink/14 pt-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-20" data-tina-field={tinaField(crew, "leader")}>
+            <div class:list={["grid gap-10", crew.sideBySide ? "" : "mt-20 border-t border-ink/14 pt-16 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-20"]} data-tina-field={tinaField(crew, "leader")}>
               {leaderMember ? (
                 <CrewModal
                   client:visible
@@ -809,10 +818,11 @@ const icons: Record<string, string> = {
                     ))}
                   </ul>
                 )}
-                {crew.leader.text && <p class={`mt-8 max-w-[52ch] ${body} text-ink/80`} data-tina-field={tinaField(crew.leader, "text")}>{crew.leader.text}</p>}
+                {crew.leader.text && <div class={`mt-8 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(crew.leader, "text")}>{paragraphs(crew.leader.text).map((p) => <p>{p}</p>)}</div>}
               </div>
             </div>
           )}
+          </div>
           {crewMembers.length > 0 && (
             <div class="mt-20">
               <div class="-mx-5 flex scroll-px-5 snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-4 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] md:mx-0 md:px-0 [&::-webkit-scrollbar]:hidden" data-crew-showcase tabindex="0" role="group" aria-label={crew.title}>

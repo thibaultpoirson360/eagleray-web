@@ -27,12 +27,12 @@
     "video": "/assets/video/hero-loop.mp4"
   },
   "notice": {
-    "availability": "Check-in 9:00 en punto · Check-out 19:00",
+    "availability": "Check-in 11:00 en punto · Check-out 16:00",
     "expires": "Propuesta válida hasta el jueves 26 de noviembre, 11:00"
   },
   "brief": {
     "title": "Su día, de un vistazo",
-    "text": "Un día completo en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, el menú que ustedes elijan y Espíritu Santo, la isla frente a La Paz, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 9:00 en punto aprovechamos cada hora y llegamos a Espíritu Santo con tiempo para nadar, comer sin prisa y ver el atardecer.",
+    "text": "Cinco horas en el mar, solo para su grupo: un catamarán privado con capitán, chef y Expedition Leader, una comida preparada a bordo con el menú que ustedes elijan, y Espíritu Santo, la isla frente a La Paz, como destino.\n\nLa puntualidad es lo que hace posible el día: con el check-in a las 11:00 en punto aprovechamos cada hora y llegamos con tiempo para nadar y comer sin prisa.",
     "facts": [
       {
         "icon": "calendar",
@@ -40,7 +40,7 @@
       },
       {
         "icon": "clock",
-        "text": "Check-in 9:00 · Check-out 19:00"
+        "text": "Check-in 11:00 · Check-out 16:00"
       },
       {
         "icon": "pin",
@@ -52,7 +52,7 @@
       },
       {
         "icon": "meals",
-        "text": "Desayuno, comida y cena temprana al atardecer"
+        "text": "Comida a bordo, con desayuno opcional"
       }
     ],
     "sideFacts": true
@@ -125,8 +125,8 @@
         "prices": [
           {
             "label": "Barco completo · 10 invitados",
-            "total": "89,000 MXN en total",
-            "perPerson": "8,900 MXN por persona"
+            "total": "61,000 MXN en total",
+            "perPerson": "6,100 MXN por persona"
           }
         ],
         "priceNote": "Precio por el barco completo y el grupo completo, sin actividades extra. Propuesta válida hasta el jueves 26 de noviembre a las 11:00."
@@ -148,12 +148,12 @@
   },
   "food": {
     "title": "Qué se cocina a bordo",
-    "text": "Tres comidas incluidas, cocinadas a bordo por su chef: desayuno, comida y una cena temprana al atardecer, antes de volver a puerto.",
+    "text": "Una comida cocinada a bordo por su chef, y un desayuno opcional si quieren empezar el día con algo antes de zarpar.",
     "meals": [
       {
         "name": "Desayuno",
-        "time": "Al empezar el día",
-        "text": "Fruta fresca y algo caliente, en cubierta, mientras el barco sale de la bahía.",
+        "time": "Opcional",
+        "text": "Si lo quieren, fruta fresca y algo caliente a bordo, antes de zarpar. Nos lo indican al escoger el menú.",
         "photos": [
           {
             "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
@@ -183,66 +183,43 @@
             "caption": ""
           }
         ]
-      },
-      {
-        "name": "Cena temprana",
-        "time": "Al atardecer",
-        "text": "La última luz del día, a bordo, antes del regreso.",
-        "photos": [
-          {
-            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
-            "alt": "Sashimi",
-            "caption": ""
-          },
-          {
-            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
-            "alt": "Torre de atún",
-            "caption": ""
-          }
-        ]
       }
     ],
     "buttonTitle": "Personaliza tu menú",
-    "buttonText": "Antes del viernes les enviamos un menú para que escojan los platillos de cada comida y las bebidas. Si hay alergias o dietas, vegetarianas, veganas o sin gluten, nos lo cuentan y lo adaptamos.",
+    "buttonText": "Antes del viernes les enviamos un menú para que escojan los platillos y las bebidas, y si quieren el desayuno. Si hay alergias o dietas, vegetarianas, veganas o sin gluten, nos lo cuentan y lo adaptamos.",
     "buttonLabel": "Personalizar mi menú",
     "buttonMessage": "Hola, queremos personalizar el menú del day trip del viernes 27 de noviembre (grupo de Patricio, 10 personas)."
   },
   "route": {
     "eyebrow": "La ruta",
     "title": "Alrededor de Espíritu Santo",
-    "dates": "Viernes 27 de noviembre · de 9:00 a 19:00",
+    "dates": "Viernes 27 de noviembre · de 11:00 a 16:00",
     "stops": [
       {
         "name": "Marina Puerto Cortez",
-        "sub": "Check-in a las 9:00 y salida",
+        "sub": "Check-in a las 11:00 y salida",
         "lat": 24.158,
         "lon": -110.3245
       },
       {
         "name": "Caleta Lobos",
-        "sub": "Primera parada, camino a la isla",
+        "sub": "Camino a Espíritu Santo: baño, snorkel y comida a bordo",
         "lat": 24.296,
         "lon": -110.335
       },
       {
-        "name": "Bahía San Gabriel",
-        "sub": "Espíritu Santo: baño, snorkel y comida a bordo",
-        "lat": 24.43,
-        "lon": -110.36
-      },
-      {
         "name": "Bahía de La Paz",
-        "sub": "Cena al atardecer y regreso a la marina",
+        "sub": "Regreso a la marina, check-out a las 16:00",
         "lat": 24.205,
         "lon": -110.31
       }
     ],
     "facts": [
-      "Un día completo en el agua",
+      "Cinco horas en el agua",
       "10 personas, un barco solo para ustedes"
     ],
     "note": "El capitán define la ruta final según el viento y el mar.",
-    "mapLabel": "Ruta propuesta del día: de La Paz a Espíritu Santo y de vuelta",
+    "mapLabel": "Ruta propuesta del día: de La Paz hacia Espíritu Santo y de vuelta",
     "credit": "Datos del mapa © colaboradores de OpenStreetMap."
   },
   "dive": {
@@ -292,7 +269,8 @@
     "onBoard": [
       "Capitán, chef y Expedition Leader (Sergio Torres)",
       "El Fountaine Pajot Saona 47, solo para su grupo",
-      "Desayuno, comida y cena temprana al atardecer, preparados a bordo, con el menú que elijan antes del viaje",
+      "Comida preparada a bordo, con el menú que elijan antes del viaje",
+      "Desayuno opcional, si lo piden al escoger el menú",
       "Bocadillos y fruta fresca entre nado y nado",
       "Menús pensados para su grupo: vegetarianos, veganos, sin gluten, alergias",
       "Pescado de la captura del día, cuando la línea trae algo",
@@ -319,7 +297,7 @@
   },
   "days": {
     "title": "Sin agenda inamovible",
-    "text": "Un solo día, completo. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 9:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite llegar a Espíritu Santo y aprovechar el día.\n\n### Mañana · Rumbo a Espíritu Santo\nDesayuno a bordo mientras el barco sale de la bahía de La Paz.\n\n### Mediodía · Una bahía para ustedes\nSnorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### Atardecer · Cena y regreso\nCena temprana a bordo con la luz baja, y de vuelta a La Paz.\n\n### 19:00 · Check-out\nDesembarco en la marina.",
+    "text": "Una jornada en el mar, de principio a fin. El capitán decide la ruta según el viento y el mar, y el día se acomoda al grupo.\n\n### 11:00 · Check-in\nLlegada a la Marina Puerto Cortez. Pedimos puntualidad: es lo que nos permite llegar a Espíritu Santo y aprovechar el día.\n\n### Mediodía · Rumbo a la isla\nEl barco sale de la bahía de La Paz. Para quien lo haya pedido, desayuno opcional a bordo.\n\n### Primera hora de la tarde · Una bahía para ustedes\nSnorkel, paddleboard y kayak directo desde el barco, y una comida larga al ancla.\n\n### 16:00 · Check-out\nRegreso y desembarco en la marina.",
     "note": "Ruta final fijada por el capitán según las condiciones del viento y del mar.",
     "photosAside": true,
     "photos": [
@@ -337,11 +315,17 @@
   },
   "weather": {
     "title": "El clima en La Paz el viernes",
-    "text": "El pronóstico para el viernes 27 de noviembre en La Paz, de las 9:00 a las 18:00. Lo actualizamos antes de su salida.",
+    "text": "El pronóstico para el viernes 27 de noviembre en La Paz, de las 11:00 a las 16:00. Lo actualizamos antes de su salida.",
     "date": "2026-11-27",
     "windLabel": "Viento",
     "rainLabel": "Lluvia",
-    "note": "Pronóstico de MET Norway (met.no), actualizado el"
+    "note": "Pronóstico de MET Norway (met.no), actualizado el",
+    "hours": [
+      11,
+      12,
+      14,
+      16
+    ]
   },
   "video": {
     "title": "Así es Eagle Ray",
@@ -374,18 +358,24 @@
     "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
   },
   "crew": {
-    "title": "Su Expedition Leader",
-    "text": "Cada día en el mar tiene alguien que lee al grupo: cuándo nadar, cuándo navegar y cuándo dejar a todos en paz con un café en la proa.",
+    "title": "Su equipo",
+    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce las aguas a la perfección, un chef que cocina con producto local y lo que da el mar y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo tratan y quieren compartirlo con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
     "leader": {
       "member": "sergio-torres-canei",
       "image": "",
       "imageAlt": "Sergio Torres, Expedition Leader",
       "name": "Sergio Torres",
-      "role": "Tu Expedition Leader",
+      "role": "Su Expedition Leader para esta ocasión",
       "facts": [
+        "Coach de deporte",
+        "Apnea",
+        "Spearfishing",
         "Habla español, inglés y francés"
       ],
-      "text": "Sergio, «Canei» para los amigos, es Expedition Leader de Eagle Ray y estará con ustedes todo el día, de la marina al atardecer."
-    }
+      "text": "Sergio, «Canei» para los amigos, es la persona encargada de que todo salga a la perfección durante su día en el mar.\n\nSi añaden alguna actividad, puede ser él quien la dirija: es coach de deporte y trabaja la apnea, el spearfishing y más."
+    },
+    "sideBySide": true,
+    "explainTitle": "Qué es un Expedition Leader",
+    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray que va con ustedes todo el día y que responde de que el día salga como lo imaginaron.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación."
   }
 }
