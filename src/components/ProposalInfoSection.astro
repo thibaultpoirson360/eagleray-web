@@ -4,7 +4,9 @@
  * a small label, a title, text, an optional list and photos. Used for the
  * kite and wing section and for the wind in season. The look constants
  * (box, heading and text sizes) come from the proposal, so it follows its
- * airy or compact setting.
+ * airy or compact setting. The range chart positions its bars with inline
+ * percentages (style=), the one place where the values come from data and
+ * there is no Tailwind class for them.
  */
 import { tinaField } from "@tinacms/astro/tina-field";
 import ProposalPhotos from "./ProposalPhotos.astro";
@@ -23,11 +25,26 @@ const { data, box, h2, body, small, tone } = Astro.props;
 const paragraphs = (text?: string | null) => (text ?? "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
 const items = (data.items ?? []).filter((x: string | null): x is string => !!x);
 const dark = tone.includes("bg-ink");
+// A big photo (or an empty slot an editor can click) beside the section, when `sideImage` exists.
+const side = !!data.sideImage;
+
+// A range chart by month (e.g. typical wind): one bar per month from its low to its high on a shared 0-based scale.
+// All numbers come from the editor; a month with no numbers shows its placeholder text instead of a bar.
+const chart = data.chart;
+const rows = ((chart?.months ?? []) as any[]).filter((m) => m?.month).map((m) => ({
+  ...m,
+  has: typeof m.low === "number" && typeof m.high === "number" && m.high >= m.low,
+}));
+const top = Math.max(0, ...rows.filter((r) => r.has).map((r) => r.high), typeof chart?.max === "number" ? chart.max : 0);
+const axisMax = Math.max(20, Math.ceil(top / 5) * 5);
+const ticks = Array.from({ length: axisMax / 5 + 1 }, (_, i) => i * 5);
+const pct = (v: number) => `${(v / axisMax) * 100}%`;
 ---
 
 <section class={tone}>
   <div class={box}>
-    <div class="grid items-start gap-16 md:grid-cols-[1fr_1.2fr] md:gap-24">
+    <div class:list={[side && "md:grid md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] md:gap-x-24"]}>
+    <div class:list={["grid items-start gap-16", side ? "md:col-start-1" : "md:grid-cols-[1fr_1.2fr] md:gap-24"]}>
       <div>
         {data.eyebrow && <p class:list={[small, dark ? "text-white/64" : "text-ink/64"]} data-tina-field={tinaField(data, "eyebrow")}>{data.eyebrow}</p>}
         <h2 class:list={[data.eyebrow && "mt-7", h2, dark && "text-white"]} data-tina-field={tinaField(data, "title")}>{data.title}</h2>
@@ -49,7 +66,42 @@ const dark = tone.includes("bg-ink");
         </ul>
       )}
     </div>
-    {data.note && <p class:list={["mt-10 max-w-[56ch] text-[.8rem] leading-relaxed", dark ? "text-white/64" : "text-ink/64"]} data-tina-field={tinaField(data, "note")}>{data.note}</p>}
-    <ProposalPhotos photos={data.photos} class="mt-20" />
+    {rows.length > 0 && (
+      <figure class:list={["mt-16 max-w-3xl", side && "md:col-start-1"]} data-tina-field={tinaField(data, "chart")}>
+        {chart.title && <figcaption class={`${small} mb-8 text-ink/64`} data-tina-field={tinaField(chart, "title")}>{chart.title}{chart.unit ? ` (${chart.unit})` : ""}</figcaption>}
+        <div class="grid grid-cols-[5.5rem_1fr] gap-x-5 sm:grid-cols-[6.5rem_1fr_7.5rem] sm:gap-x-6">
+          <span aria-hidden="true"></span>
+          <div class="relative h-5" aria-hidden="true">
+            {ticks.map((t) => <span class="absolute top-0 -translate-x-1/2 font-mono text-[.62rem] text-ink/50" style={`left:${pct(t)}`}>{t}</span>)}
+          </div>
+          <span aria-hidden="true" class="hidden sm:block"></span>
+          {rows.map((r) => (
+            <>
+              <span class="py-3 text-[.9rem] font-semibold">{r.month}</span>
+              <div class="relative my-3 h-2 rounded-full bg-ink/8" aria-hidden="true">
+                {ticks.slice(1, -1).map((t) => <span class="absolute inset-y-[-.75rem] w-px bg-ink/10" style={`left:${pct(t)}`}></span>)}
+                {r.has && <span class="absolute inset-y-0 rounded-full bg-ink" style={`left:${pct(r.low)};width:${pct(r.high - r.low)}`}></span>}
+              </div>
+              <span class="col-span-2 pb-2 text-[.85rem] text-ink/76 sm:col-span-1 sm:py-3 sm:text-right sm:text-ink/86">
+                {r.has ? `${r.low}-${r.high}${chart.unit ? ` ${chart.unit}` : ""}` : chart.emptyLabel}
+              </span>
+            </>
+          ))}
+        </div>
+        {chart.note && <p class="mt-6 text-[.8rem] leading-relaxed text-ink/64" data-tina-field={tinaField(chart, "note")}>{chart.note}</p>}
+      </figure>
+    )}
+    {data.note && <p class:list={["mt-10 max-w-[56ch] text-[.8rem] leading-relaxed", dark ? "text-white/64" : "text-ink/64", side && "md:col-start-1"]} data-tina-field={tinaField(data, "note")}>{data.note}</p>}
+    {side && (
+      <div class="mt-16 md:col-start-2 md:row-span-4 md:row-start-1 md:mt-0">
+        {data.sideImage.image ? (
+          <img src={data.sideImage.image} alt={data.sideImage.alt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover" data-tina-field={tinaField(data.sideImage, "image")} />
+        ) : (
+          <div class="aspect-[4/5] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(data.sideImage, "image")}></div>
+        )}
+      </div>
+    )}
+    </div>
+    <ProposalPhotos photos={data.photos} natural class="mt-16 max-w-md" />
   </div>
 </section>

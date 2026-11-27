@@ -39,6 +39,41 @@ const infoSection = (name: string, label: string, description: string): TinaFiel
     { type: "string", name: "text", label: "Text", ui: textarea, description: "Separate paragraphs with a blank line." },
     { type: "string", name: "items", label: "List", list: true, description: "One line per item. Write 'Label: details' to show the label in small capitals beside the details." },
     { type: "string", name: "note", label: "Small note", ui: textarea },
+    {
+      type: "object",
+      name: "sideImage",
+      label: "Big photo beside the section (optional)",
+      description: "A tall photo to the right of the text and chart on a laptop (below them on a phone). Leave the object empty to hide it; add it with no photo to show a quiet box you can click and fill.",
+      fields: [
+        { type: "image", name: "image", label: "Photo" },
+        { type: "string", name: "alt", label: "Photo description (alt text)" },
+      ],
+    },
+    {
+      type: "object",
+      name: "chart",
+      label: "Range chart (optional)",
+      description: "One bar per row, from its low to its high (e.g. typical wind in knots). Type only numbers you can stand behind: a row with no numbers shows the placeholder text instead of a bar.",
+      fields: [
+        { type: "string", name: "title", label: "Chart title" },
+        { type: "string", name: "unit", label: "Unit", description: "e.g. 'knots'." },
+        { type: "number", name: "max", label: "Scale maximum (optional)", description: "Empty means the highest number rounded up to the next 5, at least 20." },
+        { type: "string", name: "emptyLabel", label: "Text for a month with no numbers yet" },
+        {
+          type: "object",
+          name: "months",
+          label: "Rows (months, or kinds of wind)",
+          list: true,
+          ui: { itemProps: (item: Record<string, string>) => ({ label: item?.month }) },
+          fields: [
+            { type: "string", name: "month", label: "Row label", required: true, description: "e.g. a month, or \"Season\"." },
+            { type: "number", name: "low", label: "Low" },
+            { type: "number", name: "high", label: "High" },
+          ],
+        },
+        { type: "string", name: "note", label: "Source or note under the chart", ui: textarea },
+      ],
+    },
     photos("photos", "Photos"),
   ],
 });
@@ -56,6 +91,7 @@ const groupProposal: Collection = {
   },
   fields: [
     { type: "boolean", name: "compact", label: "Compact size", description: "Turn on for a cleaner page with smaller type, photos and spacing. Off keeps the original size." },
+    { type: "boolean", name: "slim", label: "Narrow page column", description: "Makes the whole page column narrower on a laptop, so photos, boxes and text are all smaller. Combine with 'Compact size'." },
     { type: "boolean", name: "airy", label: "Airy layout", description: "Turn on for a quieter, more spacious page: more room around every section and block. Off keeps the usual spacing." },
     {
       type: "string",
@@ -164,6 +200,7 @@ const groupProposal: Collection = {
         { type: "string", name: "title", label: "Title", required: true },
         { type: "string", name: "text", label: "Text", ui: textarea },
         { type: "string", name: "quote", label: "Highlighted sentence" },
+        { type: "boolean", name: "photoBelowTitle", label: "Photo right under the title", description: "Puts the photo in the left column, just under the title, instead of under the whole section." },
         { type: "image", name: "image", label: "Wide photo under the text" },
         { type: "string", name: "imageAlt", label: "Photo description (alt text)" },
       ],
