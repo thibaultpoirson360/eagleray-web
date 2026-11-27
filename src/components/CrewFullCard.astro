@@ -55,7 +55,7 @@ const showFooter = skills.length + languages.length + certificates.length > 0 ||
 ---
 
 <article class:list={["crew-full flex h-full flex-col overflow-hidden rounded-lg border border-ink/14 bg-white", horizontal && "lg:flex-row", className]}>
-  <div class:list={["relative flex-none", mini ? "aspect-[4/3]" : compact ? "aspect-square" : "aspect-[4/5]", horizontal && "lg:aspect-auto lg:min-h-[24rem] lg:w-[42%]"]}>
+  <div class:list={["relative flex-none", mini ? "aspect-[4/3]" : compact ? "aspect-square max-h-[32vh]" : "aspect-[4/5]", horizontal && "lg:aspect-auto lg:min-h-[24rem] lg:w-[42%]"]}>
     <ImageSlider
       client:visible
       photos={memberPhotos(member)}

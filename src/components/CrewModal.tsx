@@ -13,9 +13,11 @@ import type { ComponentChildren } from "preact";
  * free. What it doesn't give, and this adds: closing on a backdrop click,
  * the close button, and locking the page's scroll while it's open.
  *
- * Height: the card inside caps itself at 92vh and squeezes its About text
- * (the one scrollable part) to fit, so the whole card — photo, tags,
- * languages — is visible on a laptop screen without scrolling the modal.
+ * Height: the card inside caps itself at 92vh, its photo takes at most 32vh
+ * and it squeezes its About text (the scrollable part) to fit, so the whole
+ * card — photo, name, text, tags — is visible on a laptop screen. If a very
+ * short screen still cannot fit it, the dialog itself scrolls (it must never
+ * clip the text with no way to reach it).
  *
  * The trigger is a real link to the same card on the Passionate Sea People
  * page (`fallbackHref`), so with no JavaScript — or before this island has
@@ -83,7 +85,7 @@ export default function CrewModal({ label, closeLabel, name, fallbackHref, trigg
         onClick={(e) => {
           if (e.target === dialogRef.current) close();
         }}
-        class="m-auto max-h-[92vh] w-[min(94vw,650px)] overflow-hidden rounded-lg bg-transparent p-0 text-ink backdrop:bg-ink/60 backdrop:backdrop-blur-sm"
+        class="m-auto max-h-[92vh] w-[min(94vw,650px)] overflow-y-auto overscroll-contain rounded-lg bg-transparent p-0 text-ink backdrop:bg-ink/60 backdrop:backdrop-blur-sm"
       >
         <div class="relative">
           <button
