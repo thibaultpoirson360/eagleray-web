@@ -22,6 +22,7 @@ import Button from "./ui/Button.astro";
 import ProposalPhotos from "./ProposalPhotos.astro";
 import ProposalActivityCards from "./ProposalActivityCards.astro";
 import ProposalInfoSection from "./ProposalInfoSection.astro";
+import ProposalRegionMap from "./ProposalRegionMap.astro";
 import ProposalDay from "./ProposalDay.tsx";
 import CrewModal from "./CrewModal.tsx";
 import CrewFullCard from "./CrewFullCard.astro";
@@ -40,7 +41,7 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props;
-const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather, trips, kite, season, family } = proposal;
+const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather, trips, kite, season, family, regionMap } = proposal;
 
 const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
 // A proposal booked through a partner shows no WhatsApp button at all: every button that needs the number is hidden.
@@ -89,6 +90,17 @@ const embed = (() => {
 // The logos of Eagle Ray and the partner, on white cards of the same height.
 const logoCard = "flex h-16 items-center rounded-lg bg-white px-5 md:h-[4.5rem]";
 const options = ((boats?.options ?? []) as any[]).filter(Boolean);
+// The day by day: one list, or several in tabs (e.g. Loreto and La Paz, 4 and 5 nights), shown with radio buttons and CSS like the boat tabs.
+const itineraryPanels: { label?: string; intro?: string; days: any[] }[] =
+  (itinerary?.tabs?.length ?? 0) > 0 ? (itinerary.tabs as any[]).filter(Boolean).map((t) => ({ label: t.label, intro: t.intro, days: (t.days ?? []).filter(Boolean) })) : [{ days: itinerary?.days ?? [] }];
+const showItinerary = [
+  "group-has-[#itin-0:checked]/itin:block",
+  "group-has-[#itin-1:checked]/itin:block",
+  "group-has-[#itin-2:checked]/itin:block",
+  "group-has-[#itin-3:checked]/itin:block",
+  "group-has-[#itin-4:checked]/itin:block",
+  "group-has-[#itin-5:checked]/itin:block",
+];
 // One literal class per tab (Tailwind only keeps classes it can read here): show the panel whose radio is checked.
 const showPanel = [
   "group-has-[#boat-0:checked]/boats:block",
@@ -266,18 +278,19 @@ const icons: Record<string, string> = {
 
   {
     key === "trips" && (trips?.items?.length ?? 0) > 0 && (
-      <section class={light}>
+      <section id="trips" class={`scroll-mt-20 ${light}`}>
         <div class={box}>
           {trips.title && <h2 class={h2} data-tina-field={tinaField(trips, "title")}>{trips.title}</h2>}
           {trips.text && <div class={`mt-10 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(trips, "text")}>{paragraphs(trips.text).map((p) => <p>{p}</p>)}</div>}
           <div class="mt-16 grid gap-6 md:grid-cols-2 md:gap-10">
             {((trips.items ?? []) as any[]).filter(Boolean).map((t) => (
               <div class:list={["flex flex-col rounded-lg border p-8 md:p-12", t.tag ? "border-ink bg-white" : "border-ink/14 bg-white"]} data-tina-field={tinaField(t)}>
+                {(t.image || t.imageAlt) && (t.image ? <img src={t.image} alt={t.imageAlt ?? ""} loading="lazy" decoding="async" class="mb-8 aspect-[16/9] w-full rounded-lg object-cover" data-tina-field={tinaField(t, "image")} /> : <div class="mb-8 aspect-[16/9] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(t, "image")}></div>)}
                 <div class="min-h-7">
                   {t.tag && <p class="w-fit rounded-sm bg-ink px-3 py-1.5 font-mono text-[.6rem] tracking-[.14em] text-white uppercase" data-tina-field={tinaField(t, "tag")}>{t.tag}</p>}
                 </div>
                 <h3 class="mt-6 text-[clamp(1.5rem,4vw,2rem)] leading-tight font-semibold tracking-[-.01em]" data-tina-field={tinaField(t, "name")}>{t.name}</h3>
-                {t.text && <p class="mt-6 max-w-[42ch] text-[.95rem] leading-[1.85] text-ink/76" data-tina-field={tinaField(t, "text")}>{t.text}</p>}
+                {t.text && <div class="mt-6 max-w-[46ch] space-y-4 text-[.95rem] leading-[1.85] text-ink/76" data-tina-field={tinaField(t, "text")}>{paragraphs(t.text).map((p) => <p>{p}</p>)}</div>}
               </div>
             ))}
           </div>
@@ -288,6 +301,7 @@ const icons: Record<string, string> = {
   }
 
   {key === "kite" && kite && <ProposalInfoSection data={kite} box={box} h2={h2} body={body} small={small} tone="bg-ink text-white" />}
+  {key === "regionMap" && regionMap && <ProposalRegionMap data={regionMap} box={box} h2={h2} body={body} small={small} tone={light} />}
   {key === "family" && family && <ProposalInfoSection data={family} box={box} h2={h2} body={body} small={small} tone={light} />}
   {key === "season" && season && <ProposalInfoSection data={season} box={box} h2={h2} body={body} small={small} tone={light} />}
 
@@ -366,14 +380,30 @@ const icons: Record<string, string> = {
   }
 
   {
-    key === "itinerary" && (itinerary?.days?.length ?? 0) > 0 && (
+    key === "itinerary" && itineraryPanels.some((p) => p.days.length > 0) && (
       <section class={light}>
         <div class={box}>
           {itinerary.eyebrow && <p class={`${small} text-ink/64`} data-tina-field={tinaField(itinerary, "eyebrow")}>{itinerary.eyebrow}</p>}
           <h2 class={`${itinerary.eyebrow ? "mt-7 " : ""}${h2}`} data-tina-field={tinaField(itinerary, "title")}>{itinerary.title}</h2>
           {itinerary.intro && <div class={`mt-8 max-w-[56ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(itinerary, "intro")}>{paragraphs(itinerary.intro).map((p) => <p>{p}</p>)}</div>}
-          <div class="mt-20 border-t border-ink/14">
-            {itinerary.days.map((d: any) => (
+          <div class="group/itin">
+          {itineraryPanels.length > 1 && (
+            <fieldset class="mt-12">
+              <div class="flex flex-wrap gap-4">
+                {itineraryPanels.map((pn, i) => (
+                  <div class="relative">
+                    <input type="radio" name="itin" id={`itin-${i}`} class="peer absolute inset-0 size-full cursor-pointer opacity-0" checked={i === 0} />
+                    <label for={`itin-${i}`} class="block rounded border border-ink/26 bg-white px-6 py-3 text-[.9rem] font-semibold text-ink transition duration-500 ease-soft peer-checked:bg-ink peer-checked:text-white peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink">{pn.label}</label>
+                  </div>
+                ))}
+              </div>
+            </fieldset>
+          )}
+          {itineraryPanels.map((pn, pi) => (
+          <div class:list={[itineraryPanels.length > 1 ? `hidden ${showItinerary[pi] ?? ""}` : ""]} data-tina-field={tinaField(itinerary, itinerary.tabs?.length ? "tabs" : "days")}>
+          {pn.intro && <p class={`mt-10 max-w-[56ch] ${body} text-ink/80`}>{pn.intro}</p>}
+          <div class={`${itineraryPanels.length > 1 ? "mt-12" : "mt-20"} border-t border-ink/14`}>
+            {pn.days.map((d: any) => (
               <div class="grid gap-8 border-b border-ink/14 py-14 md:grid-cols-[14rem_1fr] md:gap-24" data-tina-field={tinaField(d)}>
                 <div>
                   <p class={`${small} text-ink/64`} data-tina-field={tinaField(d, "label")}>{d.label}</p>
@@ -392,6 +422,9 @@ const icons: Record<string, string> = {
                 </div>
               </div>
             ))}
+          </div>
+          </div>
+          ))}
           </div>
         </div>
       </section>

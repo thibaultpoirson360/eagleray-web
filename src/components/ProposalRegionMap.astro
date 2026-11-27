@@ -1,0 +1,59 @@
+---
+/**
+ * A simple map of Baja California Sur with pins (a private proposal's
+ * `regionMap` section): the land outline comes from src/lib/baja-map.ts, the
+ * pins from latitude and longitude. No script. A pin with a tag (for example
+ * "Recomendado") is drawn solid and its tag is written beside it.
+ */
+import { tinaField } from "@tinacms/astro/tina-field";
+import { BAJA_LAND, BAJA_VIEW_H, BAJA_VIEW_W, projectBaja } from "../lib/baja-map";
+
+interface Props {
+  data: any;
+  box: string;
+  h2: string;
+  body: string;
+  small: string;
+  tone: string;
+}
+
+const { data, box, h2, body, small, tone } = Astro.props;
+const paragraphs = (text?: string | null) => (text ?? "").split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+const pins = ((data.pins ?? []) as any[])
+  .filter((p) => p?.name && typeof p.lat === "number" && typeof p.lon === "number")
+  .map((p) => ({ ...p, at: projectBaja(p.lat, p.lon) }));
+---
+
+<section class={tone}>
+  <div class={box}>
+    <div class="grid items-center gap-16 md:grid-cols-[1fr_1.1fr] md:gap-24">
+      <div>
+        {data.eyebrow && <p class={`${small} text-ink/64`} data-tina-field={tinaField(data, "eyebrow")}>{data.eyebrow}</p>}
+        <h2 class:list={[data.eyebrow && "mt-7", h2]} data-tina-field={tinaField(data, "title")}>{data.title}</h2>
+        {data.text && <div class={`mt-10 max-w-[44ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(data, "text")}>{paragraphs(data.text).map((p) => <p>{p}</p>)}</div>}
+        {pins.length > 0 && (
+          <ul class="mt-10 space-y-3" data-tina-field={tinaField(data, "pins")}>
+            {pins.map((p, i) => (
+              <li class="flex items-baseline gap-4 text-[.95rem]">
+                <span class="grid size-[1.4rem] shrink-0 place-items-center rounded-full bg-ink font-mono text-[.65rem] text-white" aria-hidden="true">{i + 1}</span>
+                <span><strong class="font-semibold">{p.name}</strong>{p.tag ? <span class={`${small} ml-3 text-ink/64`}>{p.tag}</span> : null}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <svg viewBox={`0 0 ${BAJA_VIEW_W} ${BAJA_VIEW_H}`} role="img" aria-label={data.mapLabel ?? data.title} class="mx-auto h-auto w-full max-w-lg rounded-lg">
+        <rect x="0" y="0" width={BAJA_VIEW_W} height={BAJA_VIEW_H} class="fill-ink/10"></rect>
+        {BAJA_LAND.map((d) => <path d={d} class="fill-surface stroke-ink/25" stroke-width="1.2" stroke-linejoin="round" />)}
+        {pins.map((p, i) => (
+          <g>
+            <circle cx={p.at[0]} cy={p.at[1]} r="22" class="fill-ink stroke-surface" stroke-width="4"></circle>
+            <text x={p.at[0]} y={p.at[1] + 8} text-anchor="middle" class="fill-white text-[22px] font-semibold">{i + 1}</text>
+            <text x={p.at[0] + 36} y={p.at[1] + 9} class="fill-ink text-[26px] font-semibold" stroke="#f7f6f1" stroke-width="6" paint-order="stroke">{p.name}</text>
+          </g>
+        ))}
+      </svg>
+    </div>
+    {data.credit && <p class="mt-10 text-[.75rem] text-ink/50" data-tina-field={tinaField(data, "credit")}>{data.credit}</p>}
+  </div>
+</section>
