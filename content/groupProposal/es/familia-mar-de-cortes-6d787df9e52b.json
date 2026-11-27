@@ -1,0 +1,502 @@
+{
+  "compact": true,
+  "slim": true,
+  "order": [
+    "brief",
+    "whales",
+    "boats",
+    "family",
+    "days",
+    "food",
+    "crew",
+    "pricing",
+    "aboard",
+    "video",
+    "closing"
+  ],
+  "title": "Familia de 9 personas, Mar de Cortés, feb o mar 2027 (Cartografía)",
+  "partner": {
+    "logo": "/assets/proposals/cartografia/cartografia-logo.png",
+    "logoAlt": "Cartografía Travel Boutique",
+    "partnerOnly": true,
+    "noDirectContact": true
+  },
+  "hero": {
+    "image": "/assets/proposals/cartografia/dia3-laguna.webp",
+    "imageAlt": "Aguas turquesa y arena blanca vistas desde el aire, en el Mar de Cortés",
+    "note": "Propuesta privada para su familia",
+    "title": "Disfrutando el Mar de Cortés en familia",
+    "subtitle": "9 personas, catamarán privado desde La Paz, 4 o 5 noches, febrero o marzo de 2027.",
+    "button": {
+      "label": "Ver los barcos",
+      "href": "#boat"
+    }
+  },
+  "notice": {
+    "availability": "Última semana de febrero o de marzo de 2027",
+    "expires": "Propuesta válida hasta el 15 de diciembre de 2026"
+  },
+  "brief": {
+    "title": "Su viaje, de un vistazo",
+    "sideFacts": true,
+    "text": "Cuatro o cinco noches en el Mar de Cortés en familia, a bordo de un catamarán privado que sale y regresa a La Paz, en invierno, cuando el mar alrededor de La Paz tiene más vida.\n\nLa niña tiene espacio para moverse y nadar, los adultos no organizan nada, y la tripulación lee el mar cada día para decidir adónde ir. Ustedes eligen la época; nosotros, a la gente que sabe dónde mirar.",
+    "facts": [
+      {
+        "icon": "people",
+        "text": "9 personas: 8 adultos y una niña de 6 años"
+      },
+      {
+        "icon": "calendar",
+        "text": "Última semana de febrero o de marzo de 2027, 4 o 5 noches"
+      },
+      {
+        "icon": "pin",
+        "text": "Salida y regreso en La Paz, con recogida en el aeropuerto"
+      },
+      {
+        "icon": "people",
+        "text": "Catamarán privado de 4 o 5 cabinas, con capitán y tripulación"
+      },
+      {
+        "icon": "people",
+        "text": "Un Expedition Leader con ustedes todo el viaje"
+      },
+      {
+        "icon": "meals",
+        "text": "Todas las comidas a bordo"
+      }
+    ]
+  },
+  "whales": {
+    "title": "El mar de La Paz en invierno",
+    "text": "En invierno, el Mar de Cortés alrededor de La Paz reúne a muchas de las especies grandes que lo han hecho conocido. El capitán y el Expedition Leader deciden cada día adónde ir según el mar y lo que se ha visto en la zona.\n\nLa ballena azul se ha visto en estas aguas en esta época, y con suerte puede aparecer.\n\nSon animales salvajes y nadie puede garantizar lo que aparece.",
+    "photos": [
+      {
+        "image": "/assets/img/la-paz/sea-lions.webp",
+        "alt": "Lobos marinos en Los Islotes",
+        "caption": ""
+      },
+      {
+        "image": "/assets/img/la-paz/humpback-whale.webp",
+        "alt": "Ballena jorobada en la superficie",
+        "caption": ""
+      },
+      {
+        "image": "/assets/img/la-paz/whale-shark.webp",
+        "alt": "Tiburón ballena alimentándose cerca de la superficie",
+        "caption": ""
+      },
+      {
+        "image": "/assets/img/la-paz/dolphins.webp",
+        "alt": "Delfines en la ola de proa",
+        "caption": ""
+      },
+      {
+        "image": "/assets/img/la-paz/manta-ray.webp",
+        "alt": "Manta raya sobre el arrecife",
+        "caption": ""
+      },
+      {
+        "image": "",
+        "alt": "Espacio para otra foto de fauna",
+        "caption": ""
+      }
+    ]
+  },
+  "boats": {
+    "title": "Dos barcos para su familia",
+    "choose": "Elijan una opción",
+    "pricingTitle": "Precio",
+    "pricingText": "Precios por el barco completo y las 9 personas. Las fechas exactas de salida y regreso se definen con ustedes.",
+    "note": "Barco de la categoría sujeto a disponibilidad; el modelo exacto se confirma con el depósito.",
+    "priceTable": {
+      "columns": [
+        "Última semana de febrero",
+        "Última semana de marzo*"
+      ],
+      "rows": [
+        {
+          "label": "Lagoon 450F · 4 noches",
+          "cells": [
+            {
+              "total": "USD 24,300",
+              "perPerson": "USD 2,700 por persona",
+              "note": "aprox. 52,700 MXN por persona"
+            },
+            {
+              "total": "USD 26,800",
+              "perPerson": "USD 2,978 por persona",
+              "note": "aprox. 58,100 MXN por persona"
+            }
+          ]
+        },
+        {
+          "label": "Lagoon 450F · 5 noches",
+          "cells": [
+            {
+              "total": "USD 28,500",
+              "perPerson": "USD 3,167 por persona",
+              "note": "aprox. 61,800 MXN por persona"
+            },
+            {
+              "total": "USD 31,400",
+              "perPerson": "USD 3,489 por persona",
+              "note": "aprox. 68,000 MXN por persona"
+            }
+          ]
+        },
+        {
+          "label": "Saona 47 · 4 noches",
+          "cells": [
+            {
+              "total": "USD 26,500",
+              "perPerson": "USD 2,944 por persona",
+              "note": "aprox. 57,400 MXN por persona"
+            },
+            {
+              "total": "USD 29,200",
+              "perPerson": "USD 3,244 por persona",
+              "note": "aprox. 63,300 MXN por persona"
+            }
+          ]
+        },
+        {
+          "label": "Saona 47 · 5 noches",
+          "cells": [
+            {
+              "total": "USD 30,000",
+              "perPerson": "USD 3,333 por persona",
+              "note": "aprox. 65,000 MXN por persona"
+            },
+            {
+              "total": "USD 33,000",
+              "perPerson": "USD 3,667 por persona",
+              "note": "aprox. 71,500 MXN por persona"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "* La última semana de marzo coincide con Semana Santa, que lleva un suplemento del 10%. Los precios de esa columna ya lo incluyen.",
+        "Precio en dólares; la referencia en pesos es orientativa."
+      ],
+      "gift": "Si reservan antes del 31 de diciembre de 2026, una selección de vinos internacionales para el viaje."
+    },
+    "options": [
+      {
+        "tag": "Opción 1",
+        "name": "Catamarán Lagoon 450F · 4 cabinas",
+        "intro": "Un catamarán de 45 pies con cuatro camarotes dobles y cuatro baños, construido en 2018 y renovado en 2024.\n\nLa distribución para su grupo: la cabina 1 para los padres con la niña, y las cabinas 2, 3 y 4 para cada pareja.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-01.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-02.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-03.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-video-01.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-04.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-05.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-06.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-07.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-08.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/lagoon-450-2018-09.webp",
+            "alt": "Catamarán Lagoon 450F",
+            "caption": ""
+          }
+        ],
+        "specs": "Lagoon 450F · 4 cabinas · 4 baños",
+        "features": [
+          "Aire acondicionado en cada camarote y en el salón",
+          "Wifi Starlink a bordo",
+          "Generador",
+          "Potabilizadora (agua dulce producida a bordo)",
+          "Flybridge",
+          "Hamaca y plataforma inflable",
+          "Parrilla exterior y ducha exterior",
+          "Kayak doble y 2 tablas de paddle",
+          "Equipo de snorkel y cañas de pescar",
+          "Dinghy"
+        ],
+        "cabins": [
+          {
+            "who": "Cabina 1",
+            "cabin": "Los padres con la niña"
+          },
+          {
+            "who": "Cabina 2",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 3",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 4",
+            "cabin": "Una pareja"
+          }
+        ]
+      },
+      {
+        "tag": "Opción 2 · Más espacio",
+        "name": "Catamarán Saona 47 · 5 cabinas",
+        "intro": "Un catamarán de 47 pies, renovado en 2026, con cinco cabinas y cinco baños: la opción con más espacio.\n\nCada pareja tiene su cabina, y la quinta es para la niña, al lado de la de sus padres.",
+        "gallery": [
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-01.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-02.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-03.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-04.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-05.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-06.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-07.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-08.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          },
+          {
+            "image": "/assets/img/boats/fountaine-pajot-saona-47-09.webp",
+            "alt": "Catamarán Saona 47",
+            "caption": ""
+          }
+        ],
+        "specs": "Saona 47 · 5 cabinas · 5 baños",
+        "features": [
+          "Aire acondicionado en cada camarote y en el salón",
+          "Wifi Starlink a bordo",
+          "Generador",
+          "Potabilizadora (agua dulce producida a bordo)",
+          "Zona de descanso en el flybridge",
+          "Parrilla exterior y ducha exterior",
+          "Kayak doble y 2 tablas de paddle",
+          "Equipo de snorkel y cañas de pescar",
+          "Dinghy"
+        ],
+        "cabins": [
+          {
+            "who": "Cabina 1",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 2",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 3",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 4",
+            "cabin": "Una pareja"
+          },
+          {
+            "who": "Cabina 5",
+            "cabin": "La niña, al lado de la de sus padres"
+          }
+        ]
+      }
+    ]
+  },
+  "family": {
+    "eyebrow": "En familia",
+    "title": "Con niños a bordo",
+    "text": "La cubierta del catamarán es un espacio amplio y estable para jugar. Esto es lo que cuidamos para la niña:",
+    "items": [
+      "Chaleco: salvavidas infantil a su medida",
+      "Redes: redes de seguridad a bordo",
+      "Comidas: menú adaptado para ella",
+      "En el agua: snorkel y paddle a su ritmo, con la tripulación",
+      "Cubierta: un espacio estable para jugar"
+    ]
+  },
+  "days": {
+    "title": "Sin agenda inamovible",
+    "photosAside": true,
+    "text": "Cuatro o cinco noches, sin un itinerario cerrado. Cada día el capitán y el Expedition Leader deciden adónde ir según el mar, el viento y lo que se ha visto en la zona.\n\n### Primer día · Bienvenida a bordo\nRecogida en el aeropuerto, traslado a la marina en La Paz, presentación de la tripulación y primer baño.\n\n### Los días en el mar\nSnorkel, kayak y paddleboard directo desde el barco, al ritmo de la niña. Comidas largas a bordo y tiempo sin nada programado.\n\n### Último día · Regreso a La Paz\nDesayuno, un último baño y regreso a La Paz.",
+    "note": "La ruta final la define el capitán según las condiciones del mar y del tiempo.",
+    "photos": [
+      {
+        "image": "/assets/proposals/cartografia/paz-costa.webp",
+        "alt": "Una cala de roca roja y arena en Espíritu Santo",
+        "caption": ""
+      },
+      {
+        "image": "/assets/proposals/cartografia/dia3-laguna.webp",
+        "alt": "Aguas turquesa y arena blanca vistas desde el aire",
+        "caption": ""
+      }
+    ]
+  },
+  "food": {
+    "title": "Qué se cocina a bordo",
+    "text": "Tres comidas al día, cocinadas a bordo por su chef: desayuno, comida y cena. Hay menú infantil, y el menú se arma con ustedes antes del viaje.",
+    "meals": [
+      {
+        "name": "Desayuno",
+        "time": "Al empezar el día",
+        "text": "Fruta fresca y algo caliente, en cubierta.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Fruta_desayuno_k3nllj.jpg",
+            "alt": "Fruta de desayuno",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Pan_frances_qb1pqk.jpg",
+            "alt": "Desayuno de pan francés",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Comida",
+        "time": "Al ancla",
+        "text": "Una comida larga, sin prisa, con el mar enfrente.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Ceviche_y0mwb9.jpg",
+            "alt": "Ceviche",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Lunch_en_el_cat_rvigvo.jpg",
+            "alt": "Selección de fruta y quesos",
+            "caption": ""
+          }
+        ]
+      },
+      {
+        "name": "Cena",
+        "time": "Al atardecer",
+        "text": "Cocinada a bordo, con producto local y lo que da el mar esa semana.",
+        "photos": [
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Sashimi_2_xzj8ih.jpg",
+            "alt": "Sashimi",
+            "caption": ""
+          },
+          {
+            "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Torre_de_atun_s1h0kk.jpg",
+            "alt": "Torre de atún",
+            "caption": ""
+          }
+        ]
+      }
+    ],
+    "buttonText": "Antes del viaje les hacemos llegar un menú para que escojan los platillos y las bebidas, incluido el menú para la niña. Si hay alergias o dietas, vegetarianas, veganas o sin gluten, las adaptamos."
+  },
+  "crew": {
+    "title": "Su equipo",
+    "sideBySide": true,
+    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce bien estas aguas, un chef que cocina con producto local y lo que da el mar, y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo lo comparten con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
+    "explainTitle": "Qué es un Expedition Leader",
+    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray Expeditions que va con ustedes todo el viaje y que responde de cómo sale.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación.",
+    "members": [
+      "alexis",
+      "andrea-gutierrez"
+    ],
+    "note": "Uno de ellos los acompañará como Expedition Leader."
+  },
+  "aboard": {
+    "title": "Qué incluye",
+    "text": "Todo lo que necesitan a bordo, sin organizar nada.",
+    "onTitle": "Incluido",
+    "onBoard": [
+      "Catamarán privado",
+      "Capitán y tripulación",
+      "Expedition Leader",
+      "Todas las comidas a bordo y bebidas sin alcohol",
+      "Equipo de snorkel, kayak y paddleboards",
+      "Dinghy",
+      "Permisos del parque nacional",
+      "Kit Eagle Ray",
+      "Iniciación en apnea con el Expedition Leader",
+      "Recogida en el aeropuerto y traslado a la marina en La Paz"
+    ],
+    "offTitle": "No incluido",
+    "notOnBoard": [
+      "Vuelos",
+      "Alcohol (salvo los vinos de regalo)",
+      "Buceo con tanque y otras actividades guiadas",
+      "Propinas de la tripulación (el 10% es lo habitual)",
+      "Seguro de viaje personal"
+    ]
+  },
+  "video": {
+    "title": "Así es Eagle Ray Expeditions",
+    "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
+    "caption": ""
+  },
+  "closing": {
+    "title": "Listos cuando ustedes lo estén",
+    "text": "Elijan barco, noches y fecha, y reserven con Cartografía Travel Boutique.",
+    "note": "Propuesta válida hasta el 15 de diciembre de 2026.",
+    "agentLine": "Eagle Ray Expeditions y Cartografía Travel Boutique"
+  },
+  "legal": "Los precios de esta propuesta están en dólares estadounidenses (USD) y son válidos hasta el 15 de diciembre de 2026. Eagle Ray Expeditions Inc. · Delaware corporation · 131 Continental Dr, Suite 305, Newark, DE 19713, United States",
+  "footer": {
+    "line1": "Eagle Ray Expeditions · Aventuras en el océano guiadas por gente apasionada del mar"
+  }
+}

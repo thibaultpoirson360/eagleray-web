@@ -116,6 +116,8 @@ const groupProposal: Collection = {
         { value: "trips", label: "Trip options (e.g. 3 or 5 nights)" },
         { value: "kite", label: "Kite and wing (information section 1)" },
         { value: "season", label: "The wind in season (information section 2)" },
+        { value: "family", label: "Information section 3 (e.g. travelling with children)" },
+        { value: "whales", label: "Whales and wildlife" },
         { value: "itinerary", label: "Day by day" },
         { value: "practical", label: "Good to know" },
         { value: "faq", label: "Questions and answers" },
@@ -130,6 +132,8 @@ const groupProposal: Collection = {
       fields: [
         { type: "image", name: "logo", label: "Partner logo" },
         { type: "string", name: "logoAlt", label: "Logo description (alt text)", description: "e.g. the partner's name." },
+        { type: "boolean", name: "noDirectContact", label: "No direct contact with Eagle Ray", description: "For a proposal booked only through the partner: hides every WhatsApp button on the page and the floating WhatsApp button. Leave the button texts and contact lines empty too." },
+        { type: "boolean", name: "partnerOnly", label: "Show only the partner's logo in the opening photo", description: "Hides Eagle Ray's logo next to the partner's. The footer still shows both." },
       ],
     },
     {
@@ -229,6 +233,7 @@ const groupProposal: Collection = {
       ],
     },
     infoSection("kite", "Information section 1: kite and wing (optional)", "A title, text, a list and photos. Add 'Kite and wing' to the order of the sections to show it. Dark background."),
+    infoSection("family", "Information section 3: e.g. travelling with children (optional)", "The same shape as the sections above, light background. Add 'Information section 3' to the order of the sections to show it."),
     infoSection("season", "Information section 2: the wind in season (optional)", "The same shape as the section above, with a light background. Add 'The wind in season' to the order of the sections to show it."),
     {
       type: "object",
@@ -391,6 +396,40 @@ const groupProposal: Collection = {
         { type: "string", name: "choose", label: "Label above the tabs" },
         { type: "string", name: "pricingTitle", label: "Price section: title", description: "Only when 'Price and how to pay' is added to the order of the sections." },
         { type: "string", name: "pricingText", label: "Price section: text", ui: textarea },
+        {
+          type: "object",
+          name: "priceTable",
+          label: "Price table with date columns (optional)",
+          description: "One row per boat and length, one column per date. Each cell can have a WhatsApp booking button. It shows in the price section.",
+          fields: [
+            { type: "string", name: "columns", label: "Column titles", list: true, description: "e.g. the dates, in the same order as the cells of each row." },
+            {
+              type: "object",
+              name: "rows",
+              label: "Rows",
+              list: true,
+              ui: { itemProps: (item: Record<string, string>) => ({ label: item?.label }) },
+              fields: [
+                { type: "string", name: "label", label: "Row title", required: true, description: "e.g. 'Lagoon 450F · 4 noches'." },
+                {
+                  type: "object",
+                  name: "cells",
+                  label: "Cells, one per column",
+                  list: true,
+                  ui: { itemProps: (item: Record<string, string>) => ({ label: item?.total }) },
+                  fields: [
+                    { type: "string", name: "total", label: "Total" },
+                    { type: "string", name: "perPerson", label: "Per person" },
+                    { type: "string", name: "note", label: "Small line (e.g. the amount in pesos)" },
+                    { type: "string", name: "message", label: "WhatsApp message (optional)", ui: textarea, description: "With a message and a button text (below), the cell gets a booking button." },
+                  ],
+                },
+              ],
+            },
+            { type: "string", name: "notes", label: "Notes under the table", list: true },
+            { type: "string", name: "gift", label: "Highlighted line (e.g. a gift for booking early)" },
+          ],
+        },
         { type: "string", name: "priceButtonLabel", label: "Price section: button text in each price box", description: "Shown in a price box that has a WhatsApp message, e.g. 'Book this option on WhatsApp'." },
         ctaField("button", "Booking button (shown in each price box)"),
         {

@@ -33,6 +33,8 @@ interface Props {
    * default state is unreadable against the page's own white background.
    */
   transparentNav?: boolean;
+  /** A private proposal that is booked through a partner: no floating WhatsApp button, so visitors cannot message us directly from the page. */
+  hideWhatsApp?: boolean;
   /**
    * For pages that must stay out of search results and off the language graph
    * (the 404): emits `noindex` and drops the canonical/hreflang/og:locale
@@ -51,6 +53,7 @@ const {
   locale = defaultLocale,
   path = '',
   transparentNav = true,
+  hideWhatsApp = false,
   noindex = false,
 } = Astro.props;
 const site = Astro.site ?? new URL(Astro.url.origin);
@@ -146,7 +149,7 @@ const [footerResult, siteSettingsResult, cookieConsentResult] = await Promise.al
     <TinaIsland name="footer" wrapper={{ tag: 'div' }} params={{ locale }}>
       <Footer footer={footerResult.data.footer} siteSettings={siteSettingsResult.data.siteSettings} locale={locale} />
     </TinaIsland>
-    <WhatsAppButton navigation={navigationResult.data.navigation} siteSettings={siteSettingsResult.data.siteSettings} />
+    {!hideWhatsApp && <WhatsAppButton navigation={navigationResult.data.navigation} siteSettings={siteSettingsResult.data.siteSettings} />}
     <!-- Cookie banner: hidden until chrome.ts finds no saved choice. Nothing optional (GA, Meta Pixel, Mogu/Tally) loads before consent: src/lib/consent.ts. -->
     <TinaIsland name="cookieConsent" wrapper={{ tag: 'div' }} params={{ locale }}>
       <CookieBanner consent={cookieConsentResult.data.cookieConsent} />

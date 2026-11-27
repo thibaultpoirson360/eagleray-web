@@ -28,7 +28,7 @@ const proposal = result.data.groupProposal;
 const preview = proposal.hero?.image?.replace("/upload/f_auto,q_auto/", "/upload/f_jpg,q_auto:eco,w_1200,h_630,c_fill/");
 ---
 
-<BaseLayout title={`${proposal.title} | Eagle Ray Expeditions`} ogImage={preview ?? undefined} locale={locale} path={`proposals/${slug}/`} transparentNav={true} noindex={true}>
+<BaseLayout title={`${proposal.title} | Eagle Ray Expeditions`} ogImage={preview ?? undefined} locale={locale} path={`proposals/${slug}/`} transparentNav={true} noindex={true} hideWhatsApp={!!proposal.partner?.noDirectContact}>
   <main id="main">
     <TinaIsland name="groupProposal" wrapper={{ tag: "div" }} params={{ locale, slug }}>
       <GroupProposalView proposal={proposal} locale={locale} />

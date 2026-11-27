@@ -46,7 +46,7 @@ const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as c
           {p.image ? (
             <img src={p.image} alt={p.alt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover object-[50%_20%]" data-tina-field={tinaField(p, "image")} />
           ) : (
-            <div class="aspect-[4/5] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(p, "image")}></div>
+            <div class="aspect-[4/5] w-full rounded-lg bg-current/10" data-tina-field={tinaField(p, "image")}></div>
           )}
           {p.caption && <figcaption class="mt-3 text-[.8rem] leading-snug opacity-70" data-tina-field={tinaField(p, "caption")}>{p.caption}</figcaption>}
         </figure>
@@ -70,7 +70,7 @@ const wide = { 1: "md:col-span-6", 2: "md:col-span-3", 3: "md:col-span-2" } as c
               data-tina-field={tinaField(p, "image")}
             />
           ) : (
-            <div class:list={["w-full rounded-lg bg-ink/8", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : portrait ? "aspect-[4/5]" : "aspect-[4/3]"]} data-tina-field={tinaField(p, "image")}></div>
+            <div class:list={["w-full rounded-lg bg-current/10", n === 1 ? "aspect-[16/9] md:aspect-[21/9]" : portrait ? "aspect-[4/5]" : "aspect-[4/3]"]} data-tina-field={tinaField(p, "image")}></div>
           )}
           {p.caption && <figcaption class="mt-3 text-[.8rem] leading-snug opacity-70" data-tina-field={tinaField(p, "caption")}>{p.caption}</figcaption>}
         </figure>

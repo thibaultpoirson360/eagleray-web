@@ -40,10 +40,11 @@ interface Props {
 }
 
 const { proposal, locale } = Astro.props;
-const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather, trips, kite, season } = proposal;
+const { partner, whales, video, hero, notice, brief, about, scenes, days, itinerary, route, dive, boats, book, food, aboard, crew, practical, faq, closing, legal, footer, weather, trips, kite, season, family } = proposal;
 
 const [settings, sailResult, crewResult, crewSection] = await Promise.all([loadSiteSettings(), loadSailWithUsOrEnglish(locale as any), loadCrew(locale as any), loadCrewSection(locale as any)]);
-const number = String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
+// A proposal booked through a partner shows no WhatsApp button at all: every button that needs the number is hidden.
+const number = proposal.partner?.noDirectContact ? "" : String(settings.data.siteSettings.contact?.whatsapp ?? "").replace(/\D/g, "");
 const whatsapp = number ? `https://wa.me/${number}${closing?.message ? `?text=${encodeURIComponent(closing.message)}` : ""}` : "";
 const closingHref: string = closing?.href || whatsapp;
 
@@ -184,8 +185,8 @@ const icons: Record<string, string> = {
     <div class={`mx-auto w-full ${wrap} ${gutter} pt-32 ${compact ? "pb-12 md:pb-16" : "pb-16 md:pb-24"}`}>
       {partner?.logo && (
         <div class="mb-8 flex flex-wrap items-center gap-4">
-          <div class={logoCard}><img src="/assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" class="h-8 w-auto md:h-9" /></div>
-          <span class="text-white/70" aria-hidden="true">×</span>
+          {!partner.partnerOnly && <div class={logoCard}><img src="/assets/img/logo-wordmark-navy.png" alt="Eagle Ray Expeditions" class="h-8 w-auto md:h-9" /></div>}
+          {!partner.partnerOnly && <span class="text-white/70" aria-hidden="true">×</span>}
           <div class={logoCard}><img src={partner.logo} alt={partner.logoAlt ?? ""} class="h-12 w-auto md:h-14" data-tina-field={tinaField(partner, "logo")} /></div>
         </div>
       )}
@@ -287,6 +288,7 @@ const icons: Record<string, string> = {
   }
 
   {key === "kite" && kite && <ProposalInfoSection data={kite} box={box} h2={h2} body={body} small={small} tone="bg-ink text-white" />}
+  {key === "family" && family && <ProposalInfoSection data={family} box={box} h2={h2} body={body} small={small} tone={light} />}
   {key === "season" && season && <ProposalInfoSection data={season} box={box} h2={h2} body={body} small={small} tone={light} />}
 
   {
@@ -580,14 +582,14 @@ const icons: Record<string, string> = {
               </article>
             );
           })}
-          {!splitPricing && (boats.note || book) && (
-            <div class:list={["mt-20 grid gap-14", boats.note && book ? "md:grid-cols-2 md:gap-24" : ""]}>
+          {(boats.note || (!splitPricing && book)) && (
+            <div class:list={["mt-20 grid gap-14", boats.note && book && !splitPricing ? "md:grid-cols-2 md:gap-24" : ""]}>
               {boats.note && (
                 <div class="max-w-[56ch] space-y-5 text-[.9rem] leading-[1.8] text-ink/70" data-tina-field={tinaField(boats, "note")}>
                   {paragraphs(boats.note).map((p) => <p>{p}</p>)}
                 </div>
               )}
-              {book && (
+              {!splitPricing && book && (
                 <div>
                   <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
                   {book.text && <p class="mt-4 max-w-[56ch] text-[.9rem] leading-[1.75] text-ink/80" data-tina-field={tinaField(book, "text")}>{book.text}</p>}
@@ -624,6 +626,40 @@ const icons: Record<string, string> = {
         <div class={box}>
           {boats.pricingTitle && <h2 class={h2} data-tina-field={tinaField(boats, "pricingTitle")}>{boats.pricingTitle}</h2>}
           {boats.pricingText && <div class={`mt-10 max-w-[52ch] space-y-5 ${body} text-ink/80`} data-tina-field={tinaField(boats, "pricingText")}>{paragraphs(boats.pricingText).map((p) => <p>{p}</p>)}</div>}
+          {(boats.priceTable?.rows?.length ?? 0) > 0 && (
+            <div class="mt-16" data-tina-field={tinaField(boats, "priceTable")}>
+              <div class="hidden gap-6 border-b border-ink/14 pb-5 md:grid md:grid-cols-[13rem_1fr_1fr]" aria-hidden="true">
+                <span></span>
+                {list(boats.priceTable.columns).map((c) => <span class={`${small} text-ink/64`}>{c}</span>)}
+              </div>
+              <ul>
+                {((boats.priceTable.rows ?? []) as any[]).filter(Boolean).map((r) => (
+                  <li class="grid gap-6 border-b border-ink/14 py-8 md:grid-cols-[13rem_1fr_1fr] md:gap-6" data-tina-field={tinaField(r)}>
+                    <h3 class="text-[1.05rem] leading-snug font-semibold" data-tina-field={tinaField(r, "label")}>{r.label}</h3>
+                    {((r.cells ?? []) as any[]).filter(Boolean).map((c, ci) => (
+                      <div data-tina-field={tinaField(c)}>
+                        <p class={`${small} mb-3 text-ink/64 md:hidden`}>{list(boats.priceTable.columns)[ci]}</p>
+                        {c.total && <p class="text-[clamp(1.3rem,4vw,1.7rem)] leading-tight font-semibold" data-tina-field={tinaField(c, "total")}>{c.total}</p>}
+                        {c.perPerson && <p class="mt-1 text-[.9rem] text-ink/76" data-tina-field={tinaField(c, "perPerson")}>{c.perPerson}</p>}
+                        {c.note && <p class="text-[.82rem] text-ink/64" data-tina-field={tinaField(c, "note")}>{c.note}</p>}
+                        {c.message && boats.priceButtonLabel && number && (
+                          <div class="pt-4">
+                            <Button href={`https://wa.me/${number}?text=${encodeURIComponent(c.message)}`} variant="ghost" context="default" size="sm" data-tina-field={tinaField(c, "message")}>{boats.priceButtonLabel}</Button>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </li>
+                ))}
+              </ul>
+              {list(boats.priceTable.notes).length > 0 && (
+                <ul class="mt-8 max-w-[64ch] space-y-2 text-[.82rem] leading-relaxed text-ink/64" data-tina-field={tinaField(boats.priceTable, "notes")}>
+                  {list(boats.priceTable.notes).map((n) => <li>{n}</li>)}
+                </ul>
+              )}
+              {boats.priceTable.gift && <p class="mt-8 max-w-[56ch] border-l-2 border-ink pl-5 text-[.95rem] leading-[1.7] font-semibold" data-tina-field={tinaField(boats.priceTable, "gift")}>{boats.priceTable.gift}</p>}
+            </div>
+          )}
           <div class:list={[boats.pricingTitle || boats.pricingText ? "mt-20" : "", "grid items-start gap-20 md:gap-24", aboardInPricing && "md:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]"]}>
           {aboardInPricing && (
             <div>
@@ -643,7 +679,7 @@ const icons: Record<string, string> = {
           <div class="space-y-20">
           {options.map((o) => (
             <div data-tina-field={tinaField(o)}>
-              {options.length > 1 && <h3 class="mb-8 text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(o, "name")}>{o.name}</h3>}
+              {options.length > 1 && (o.prices?.length ?? 0) > 0 && <h3 class="mb-8 text-[clamp(1.3rem,4vw,1.8rem)] leading-tight font-semibold" data-tina-field={tinaField(o, "name")}>{o.name}</h3>}
               {(o.prices?.length ?? 0) > 0 && (
                 <div class:list={["overflow-hidden rounded-lg bg-white/20", o.prices.length > 1 ? "grid gap-px md:grid-cols-2" : ""]}>
                   {o.prices.map((pr: any) => (
@@ -689,13 +725,8 @@ const icons: Record<string, string> = {
               </div>
             </details>
           )}
-          {(boats.note || book) && (
+          {book && (
             <div class="mt-16 grid gap-14">
-              {boats.note && (
-                <div class="max-w-[56ch] space-y-5 text-[.9rem] leading-[1.8] text-ink/70" data-tina-field={tinaField(boats, "note")}>
-                  {paragraphs(boats.note).map((p) => <p>{p}</p>)}
-                </div>
-              )}
               {book && (
                 <div>
                   <h3 class="text-[1.15rem] font-semibold" data-tina-field={tinaField(book, "title")}>{book.title}</h3>
