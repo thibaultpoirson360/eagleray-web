@@ -21,9 +21,7 @@
   "title": "Familia de 9 personas, ballena azul, Mar de Cortés, feb o mar 2027 (Cartografía)",
   "partner": {
     "logo": "/assets/proposals/cartografia/cartografia-logo.png",
-    "logoAlt": "Cartografía Travel Boutique",
-    "partnerOnly": true,
-    "noDirectContact": true
+    "logoAlt": "Cartografía Travel Boutique"
   },
   "hero": {
     "image": "/assets/proposals/familia/hero-ballena.jpg",
@@ -42,8 +40,8 @@
   },
   "brief": {
     "title": "Su viaje, de un vistazo",
-    "sideFacts": true,
     "text": "Una expedición privada en familia por el Mar de Cortés, pensada alrededor de un sueño: encontrarse con la ballena azul, el animal más grande del planeta. Son cuatro o cinco noches a bordo de un catamarán privado, un hotel flotante de lujo con capitán, chef privado y un Expedition Leader, entre islas, playas remotas y vida marina.\n\nNo es un tour de avistamiento. Elegimos con cuidado la época y el lugar, y el crew lee el mar cada día. Nadie puede garantizar un encuentro, por eso cada día del viaje tiene su propio plan.",
+    "sideFacts": true,
     "facts": [
       {
         "icon": "people",
@@ -70,6 +68,38 @@
         "text": "Todas las comidas a bordo"
       }
     ]
+  },
+  "trips": {
+    "title": "Dos destinos para su expedición",
+    "text": "Les recomendamos Loreto. La Paz es la alternativa. En los dos destinos se puede elegir entre 4 noches y 5 días, o 5 noches y 6 días.",
+    "items": [
+      {
+        "tag": "Eagle Ray Recommended",
+        "name": "Opción A · Loreto · Blue Whale Expedition",
+        "text": "El Parque Nacional Bahía de Loreto es una de las zonas más importantes del Mar de Cortés para la observación estacional de ballenas azules.\n\nEn febrero y marzo, las condiciones del mar y la abundancia de alimento favorecen su presencia en estas aguas. Febrero y principios de marzo son especialmente interesantes.\n\nLoreto también es un escenario para navegar entre islas como Danzante y del Carmen, con fondeaderos protegidos, playas y aguas claras.\n\nElegimos con cuidado el lugar y la época para tener más oportunidades de encuentro. Ningún avistamiento puede garantizarse."
+      },
+      {
+        "tag": "",
+        "name": "Opción B · La Paz · Sea of Cortez Expedition",
+        "text": "La Paz es una expedición de naturaleza, aventura y biodiversidad: la isla Espíritu Santo, los paisajes de Balandra y la posibilidad de explorar hacia Cerralvo y La Ventana.\n\nExploración de ecosistemas marinos, playas y fondeaderos, snorkel y actividades acuáticas, encuentros con fauna marina y navegación privada en familia.\n\nEn estas aguas hay posibilidades de ver distintos cetáceos. Si la prioridad absoluta es encontrar ballenas azules, nuestra primera recomendación es Loreto."
+      }
+    ],
+    "note": "4 noches y 5 días, o 5 noches y 6 días, en cualquiera de los dos destinos."
+  },
+  "kite": {
+    "eyebrow": "Catamarán + Sea Safari",
+    "title": "Su hotel flotante, y una exploración especializada",
+    "text": "El catamarán es el hotel flotante: la familia duerme, come, descansa y disfruta del mar. Para buscar ballenas azules se puede añadir una exploración especializada en una embarcación local más ágil, con expertos que conocen la zona.\n\nSe combinan el confort a bordo del catamarán y la salida de exploración de unas seis horas.",
+    "items": [
+      "Catamarán: duermen, comen y descansan a bordo",
+      "Sea Safari: embarcación local, con expertos de la zona, de unas seis horas",
+      "Precio: no está incluido en el viaje. Se puede añadir por 3,000 MXN por persona",
+      "Fauna: ningún encuentro puede garantizarse"
+    ]
+  },
+  "season": {
+    "title": "La naturaleza tiene su propio ritmo",
+    "text": "Observar ballenas azules depende de factores naturales: el movimiento de los animales, la disponibilidad de alimento y las condiciones del mar.\n\nUna expedición de varios días permite adaptar las actividades y repartir las oportunidades de exploración.\n\nNo garantizamos encuentros. Diseñamos con cuidado las condiciones para buscarlos de manera responsable."
   },
   "whales": {
     "title": "Fauna del Mar de Cortés",
@@ -101,7 +131,7 @@
         "caption": ""
       },
       {
-        "image": "",
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/ballena_cola_mar_de_cortez_epi6vj.jpg",
         "alt": "Espacio para una foto de ballena azul o de Loreto",
         "caption": ""
       },
@@ -122,85 +152,16 @@
       }
     ]
   },
+  "itinerary": {
+    "eyebrow": "Día por día",
+    "title": "Cuatro o cinco noches, sin horarios rígidos",
+    "intro": "Elijan destino y duración. Cada día el capitán y el Expedition Leader ajustan el plan según el mar y lo que se ha visto en la zona."
+  },
   "boats": {
     "title": "Dos barcos para su familia",
     "choose": "Elijan una opción",
     "pricingTitle": "Precio",
     "pricingText": "Precios por el barco completo y las 9 personas. Las fechas exactas de salida y regreso se definen con ustedes.",
-    "note": "Barco de la categoría sujeto a disponibilidad; el modelo exacto se confirma con el depósito.",
-    "priceTable": {
-      "columns": [
-        "Última semana de febrero",
-        "Última semana de marzo*"
-      ],
-      "rows": [
-        {
-          "label": "Lagoon 450F · 4 noches",
-          "cells": [
-            {
-              "total": "USD 24,300",
-              "perPerson": "USD 2,700 por persona",
-              "note": "aprox. 52,700 MXN por persona"
-            },
-            {
-              "total": "USD 26,800",
-              "perPerson": "USD 2,978 por persona",
-              "note": "aprox. 58,100 MXN por persona"
-            }
-          ]
-        },
-        {
-          "label": "Lagoon 450F · 5 noches",
-          "cells": [
-            {
-              "total": "USD 28,500",
-              "perPerson": "USD 3,167 por persona",
-              "note": "aprox. 61,800 MXN por persona"
-            },
-            {
-              "total": "USD 31,400",
-              "perPerson": "USD 3,489 por persona",
-              "note": "aprox. 68,000 MXN por persona"
-            }
-          ]
-        },
-        {
-          "label": "Saona 47 · 4 noches",
-          "cells": [
-            {
-              "total": "USD 26,500",
-              "perPerson": "USD 2,944 por persona",
-              "note": "aprox. 57,400 MXN por persona"
-            },
-            {
-              "total": "USD 29,200",
-              "perPerson": "USD 3,244 por persona",
-              "note": "aprox. 63,300 MXN por persona"
-            }
-          ]
-        },
-        {
-          "label": "Saona 47 · 5 noches",
-          "cells": [
-            {
-              "total": "USD 30,000",
-              "perPerson": "USD 3,333 por persona",
-              "note": "aprox. 65,000 MXN por persona"
-            },
-            {
-              "total": "USD 33,000",
-              "perPerson": "USD 3,667 por persona",
-              "note": "aprox. 71,500 MXN por persona"
-            }
-          ]
-        }
-      ],
-      "notes": [
-        "* La última semana de marzo coincide con Semana Santa, que lleva un suplemento del 10%. Los precios de esa columna ya lo incluyen.",
-        "Precio en dólares; la referencia en pesos es orientativa."
-      ],
-      "gift": "Si reservan antes del 31 de diciembre de 2026, una selección de vinos internacionales para el viaje."
-    },
     "options": [
       {
         "tag": "Opción 1",
@@ -376,19 +337,8 @@
           }
         ]
       }
-    ]
-  },
-  "family": {
-    "eyebrow": "En familia",
-    "title": "Con niños a bordo",
-    "text": "La cubierta del catamarán es un espacio amplio y estable para jugar. Esto es lo que cuidamos para la niña:",
-    "items": [
-      "Chaleco: salvavidas infantil a su medida",
-      "Redes: redes de seguridad a bordo",
-      "Comidas: menú adaptado para ella",
-      "En el agua: snorkel y paddle a su ritmo, con la tripulación",
-      "Cubierta: un espacio estable para jugar"
-    ]
+    ],
+    "note": "Barco de la categoría sujeto a disponibilidad; el modelo exacto se confirma con el depósito."
   },
   "food": {
     "title": "Qué se cocina a bordo",
@@ -448,18 +398,6 @@
     ],
     "buttonText": "Antes del viaje les hacemos llegar un menú para que escojan los platillos y las bebidas, incluido el menú para la niña. Si hay alergias o dietas, vegetarianas, veganas o sin gluten, las adaptamos."
   },
-  "crew": {
-    "title": "Su equipo",
-    "sideBySide": true,
-    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce bien estas aguas, un chef que cocina con producto local y lo que da el mar, y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo lo comparten con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
-    "explainTitle": "Qué es un Expedition Leader",
-    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray Expeditions que va con ustedes todo el viaje y que responde de cómo sale.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación.",
-    "members": [
-      "alexis",
-      "andrea-gutierrez"
-    ],
-    "note": "Uno de ellos los acompañará como Expedition Leader."
-  },
   "aboard": {
     "title": "Qué incluye",
     "text": "Todo lo que necesitan a bordo, sin organizar nada.",
@@ -486,6 +424,18 @@
       "Sea Safari de ballena azul (se puede añadir por 3,000 MXN por persona)"
     ]
   },
+  "crew": {
+    "title": "Su equipo",
+    "text": "En cada expedición ofrecemos un equipo de tres personas: un capitán que conoce bien estas aguas, un chef que cocina con producto local y lo que da el mar, y un Expedition Leader que se ocupa del grupo.\n\nLos elegimos por su pasión por el mar y por cómo lo comparten con otras personas. Vienen de la vela, el buceo y la hotelería (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
+    "sideBySide": true,
+    "explainTitle": "Qué es un Expedition Leader",
+    "explainText": "Un Expedition Leader no es un guía que sigue un guion ni un anfitrión que sirve la mesa. Es la persona de Eagle Ray Expeditions que va con ustedes todo el viaje y que responde de cómo sale.\n\nConoce al grupo, decide con el capitán cuándo nadar y cuándo navegar, cuida de cada persona en el agua y se ocupa de los detalles para que ustedes no tengan que pensar en nada.\n\nEsa es la diferencia con alquilar un barco con tripulación: aquí alguien está a cargo de su experiencia, no solo de la navegación.",
+    "members": [
+      "alexis",
+      "andrea-gutierrez"
+    ],
+    "note": "Uno de ellos los acompañará como Expedition Leader."
+  },
   "video": {
     "title": "Así es Eagle Ray Expeditions",
     "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
@@ -500,310 +450,5 @@
   "legal": "Los precios de esta propuesta están en dólares estadounidenses (USD) y son válidos hasta el 15 de diciembre de 2026. Eagle Ray Expeditions Inc. · Delaware corporation · 131 Continental Dr, Suite 305, Newark, DE 19713, United States",
   "footer": {
     "line1": "Eagle Ray Expeditions · Aventuras en el océano guiadas por gente apasionada del mar"
-  },
-  "trips": {
-    "title": "Dos destinos para su expedición",
-    "text": "Les recomendamos Loreto. La Paz es la alternativa. En los dos destinos se puede elegir entre 4 noches y 5 días, o 5 noches y 6 días.",
-    "items": [
-      {
-        "tag": "Eagle Ray Recommended",
-        "name": "Opción A · Loreto · Blue Whale Expedition",
-        "image": "",
-        "imageAlt": "Paisaje de Loreto",
-        "text": "El Parque Nacional Bahía de Loreto es una de las zonas más importantes del Mar de Cortés para la observación estacional de ballenas azules.\n\nEn febrero y marzo, las condiciones del mar y la abundancia de alimento favorecen su presencia en estas aguas. Febrero y principios de marzo son especialmente interesantes.\n\nLoreto también es un escenario para navegar entre islas como Danzante y del Carmen, con fondeaderos protegidos, playas y aguas claras.\n\nElegimos con cuidado el lugar y la época para tener más oportunidades de encuentro. Ningún avistamiento puede garantizarse."
-      },
-      {
-        "tag": "",
-        "name": "Opción B · La Paz · Sea of Cortez Expedition",
-        "image": "/assets/img/la-paz/espiritu-santo.webp",
-        "imageAlt": "Isla Espíritu Santo",
-        "text": "La Paz es una expedición de naturaleza, aventura y biodiversidad: la isla Espíritu Santo, los paisajes de Balandra y la posibilidad de explorar hacia Cerralvo y La Ventana.\n\nExploración de ecosistemas marinos, playas y fondeaderos, snorkel y actividades acuáticas, encuentros con fauna marina y navegación privada en familia.\n\nEn estas aguas hay posibilidades de ver distintos cetáceos. Si la prioridad absoluta es encontrar ballenas azules, nuestra primera recomendación es Loreto."
-      }
-    ],
-    "note": "4 noches y 5 días, o 5 noches y 6 días, en cualquiera de los dos destinos."
-  },
-  "regionMap": {
-    "title": "Loreto y La Paz en el Mar de Cortés",
-    "text": "Loreto, al norte, es nuestra recomendación para buscar la ballena azul. La Paz, al sur, es la alternativa de aventura marina.",
-    "pins": [
-      {
-        "name": "Loreto",
-        "tag": "Recomendado",
-        "lat": 26.0128,
-        "lon": -111.3453
-      },
-      {
-        "name": "La Paz",
-        "tag": "Alternativa",
-        "lat": 24.1426,
-        "lon": -110.3128
-      }
-    ],
-    "mapLabel": "Mapa de Baja California Sur con Loreto, al norte, y La Paz, al sur",
-    "credit": "Costa: Natural Earth (dominio público)."
-  },
-  "kite": {
-    "eyebrow": "Catamarán + Sea Safari",
-    "title": "Su hotel flotante, y una exploración especializada",
-    "text": "El catamarán es el hotel flotante: la familia duerme, come, descansa y disfruta del mar. Para buscar ballenas azules se puede añadir una exploración especializada en una embarcación local más ágil, con expertos que conocen la zona.\n\nSe combinan el confort a bordo del catamarán y la salida de exploración de unas seis horas.",
-    "items": [
-      "Catamarán: duermen, comen y descansan a bordo",
-      "Sea Safari: embarcación local, con expertos de la zona, de unas seis horas",
-      "Precio: no está incluido en el viaje. Se puede añadir por 3,000 MXN por persona",
-      "Fauna: ningún encuentro puede garantizarse"
-    ]
-  },
-  "itinerary": {
-    "eyebrow": "Día por día",
-    "title": "Cuatro o cinco noches, sin horarios rígidos",
-    "intro": "Elijan destino y duración. Cada día el capitán y el Expedition Leader ajustan el plan según el mar y lo que se ha visto en la zona.",
-    "tabs": [
-      {
-        "label": "Loreto · 4 noches",
-        "days": [
-          {
-            "label": "Día 1",
-            "title": "Welcome to Loreto",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Llegada a Loreto, donde los recogemos en el aeropuerto. Embarque en el catamarán, bienvenida del crew y navegación hacia las islas. Primera experiencia en el agua, cóctel al atardecer y cena del chef."
-              }
-            ]
-          },
-          {
-            "label": "Día 2",
-            "title": "In Search of the Blue Giant",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Día dedicado a la ballena azul. Sea Safari en una embarcación local durante unas seis horas, explorando las zonas donde se concentra la especie. Regreso al catamarán para disfrutar de la tarde y una cena especial. El Sea Safari no está incluido; se puede añadir por 3,000 MXN por persona."
-              }
-            ]
-          },
-          {
-            "label": "Día 3",
-            "title": "Exploring the Islands",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Navegación entre las islas Danzante y del Carmen. Playas, snorkel, paddleboard, kayak y tiempo para la vida a bordo."
-              }
-            ]
-          },
-          {
-            "label": "Día 4",
-            "title": "Wild Encounters",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Una segunda jornada flexible para explorar la vida marina y, cuando las condiciones lo permitan, buscar de nuevo ballenas azules con apoyo local. Hay alternativas de aventura y descanso para la familia."
-              }
-            ]
-          },
-          {
-            "label": "Día 5",
-            "title": "Farewell to the Sea",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Desayuno a bordo, última navegación, regreso a Loreto y desembarque."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Loreto · 5 noches",
-        "intro": "Las cinco noches son la experiencia más completa: más tiempo en el catamarán, más oportunidades de exploración y más flexibilidad para adaptarse a la naturaleza.",
-        "days": [
-          {
-            "label": "Día 1",
-            "title": "Welcome to Loreto",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Llegada a Loreto, recogida en el aeropuerto, embarque, bienvenida del crew y primera navegación."
-              }
-            ]
-          },
-          {
-            "label": "Día 2",
-            "title": "In Search of the Blue Giant",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Primera salida especializada en busca de ballenas azules, en una embarcación local durante unas seis horas. El Sea Safari no está incluido; se puede añadir por 3,000 MXN por persona."
-              }
-            ]
-          },
-          {
-            "label": "Día 3",
-            "title": "Exploring the Islands",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Exploración de las islas y actividades acuáticas: playas, snorkel, paddleboard y kayak."
-              }
-            ]
-          },
-          {
-            "label": "Día 4",
-            "title": "Wild Encounters",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Segunda oportunidad de Sea Safari para observar ballenas, con apoyo local y según las condiciones."
-              }
-            ]
-          },
-          {
-            "label": "Día 5",
-            "title": "Remote Beaches",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Navegación entre islas, playas remotas, descanso y cena especial de despedida."
-              }
-            ]
-          },
-          {
-            "label": "Día 6",
-            "title": "Farewell to the Sea",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Desayuno a bordo, regreso a Loreto y desembarque."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "La Paz · 4 noches",
-        "days": [
-          {
-            "label": "Día 1",
-            "title": "Embarque en La Paz",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Embarque en La Paz, bienvenida del crew y navegación de bienvenida."
-              }
-            ]
-          },
-          {
-            "label": "Día 2",
-            "title": "Isla Espíritu Santo",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Exploración de la isla Espíritu Santo y de sus playas."
-              }
-            ]
-          },
-          {
-            "label": "Día 3",
-            "title": "Sea Safari y fauna marina",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Una salida de Sea Safari y encuentros con fauna marina, snorkel y actividades acuáticas. El Sea Safari no está incluido; se puede añadir por 3,000 MXN por persona."
-              }
-            ]
-          },
-          {
-            "label": "Día 4",
-            "title": "Nuevas bahías",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Navegación y exploración de nuevas bahías, con posibilidad de ampliar hacia otras zonas según las condiciones."
-              }
-            ]
-          },
-          {
-            "label": "Día 5",
-            "title": "Regreso a La Paz",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Regreso a La Paz y desembarque."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "La Paz · 5 noches",
-        "intro": "Una jornada extra para navegar con más calma y explorar zonas adicionales del Mar de Cortés.",
-        "days": [
-          {
-            "label": "Día 1",
-            "title": "Embarque en La Paz",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Embarque en La Paz, bienvenida del crew y navegación de bienvenida."
-              }
-            ]
-          },
-          {
-            "label": "Día 2",
-            "title": "Isla Espíritu Santo",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Exploración de la isla Espíritu Santo y de sus playas."
-              }
-            ]
-          },
-          {
-            "label": "Día 3",
-            "title": "Sea Safari y fauna marina",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Una salida de Sea Safari y encuentros con fauna marina, snorkel y actividades acuáticas. El Sea Safari no está incluido; se puede añadir por 3,000 MXN por persona."
-              }
-            ]
-          },
-          {
-            "label": "Día 4",
-            "title": "Navegar con calma",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Una jornada extra para navegar con más calma y explorar zonas adicionales del Mar de Cortés."
-              }
-            ]
-          },
-          {
-            "label": "Día 5",
-            "title": "Nuevas bahías",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Exploración de nuevas bahías, con la posibilidad de Cerralvo o La Ventana cuando sea apropiado."
-              }
-            ]
-          },
-          {
-            "label": "Día 6",
-            "title": "Regreso a La Paz",
-            "moments": [
-              {
-                "time": "Plan",
-                "text": "Regreso a La Paz y desembarque."
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "season": {
-    "title": "La naturaleza tiene su propio ritmo",
-    "text": "Observar ballenas azules depende de factores naturales: el movimiento de los animales, la disponibilidad de alimento y las condiciones del mar.\n\nUna expedición de varios días permite adaptar las actividades y repartir las oportunidades de exploración.\n\nNo garantizamos encuentros. Diseñamos con cuidado las condiciones para buscarlos de manera responsable."
   }
 }
