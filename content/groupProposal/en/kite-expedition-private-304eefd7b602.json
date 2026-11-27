@@ -1,4 +1,6 @@
 {
+  "compact": true,
+  "slim": true,
   "airy": false,
   "order": [
     "brief",
@@ -18,9 +20,9 @@
   "title": "Kite expedition, private proposal (couple, with Lou)",
   "hero": {
     "video": "/assets/video/hero-loop.mp4",
-    "image": "/assets/proposals/christmas-at-sea-2026/dia3-laguna.webp",
-    "imageAlt": "Turquoise shallows and white sand seen from above, in the Sea of Cortez",
-    "note": "Private proposal prepared for [Name] and [Name]",
+    "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Activities/Kite_activity_g6snlt.jpg",
+    "imageAlt": "Kitesurf in the Sea of Cortez La Ventana with Eagle Ray Expeditions",
+    "note": "Private proposal",
     "title": "Built around the wind",
     "subtitle": "Two of you, a private boat and the kite season in Baja California Sur.",
     "button": {
@@ -34,8 +36,8 @@
   },
   "brief": {
     "title": "Your trip at a glance",
-    "sideFacts": true,
     "text": "A private expedition on the Sea of Cortez, built around the wind. Kite is the center of the trip: the best wind windows come first, and sailing, swimming, meals and rest fit around them.\n\nWhile she rides with Lou, he can head out on his wing. Eagle Ray Expeditions brings the boat, the crew, the kitchen and the logistics, so the only thing you plan is when to get in the water.",
+    "sideFacts": true,
     "facts": [
       {
         "icon": "calendar",
@@ -62,11 +64,11 @@
   "about": {
     "eyebrow": "Your Expedition Leader",
     "title": "La Ventana with Lou",
-    "quote": "",
     "text": "This is going to be a different way to kite. Instead of a session on the beach and the rest of the day somewhere else, we will live it on the water: kiting with the wind and, in between, good food, swimming, paddleboarding, and sunsets and sunrises from the boat.\n\nSay goodbye to the rush of everyday life. On board there is nothing to organize and nowhere to be: the Eagle Ray Expeditions crew takes care of the boat, the kitchen and the logistics, and you only have to be there, present, with the sea and the wind. While you ride, he can head out on his wing.\n\nI will be with you the whole time, like in your lessons, with a lot more water around us.",
+    "quote": "",
+    "photoBelowTitle": true,
     "image": "/assets/img/crew-lou.jpeg",
-    "imageAlt": "Lou, Expedition Leader and kite instructor with Eagle Ray Expeditions",
-    "photoBelowTitle": true
+    "imageAlt": "Lou, Expedition Leader and kite instructor with Eagle Ray Expeditions"
   },
   "trips": {
     "title": "Two ways to do it",
@@ -83,6 +85,138 @@
       }
     ],
     "note": "Want more or fewer nights? Ask us."
+  },
+  "kite": {
+    "eyebrow": "Kite and wing",
+    "title": "Kite and wing",
+    "text": "Kite gear for her is included.\n\nDepending on the day, you launch from the boat or from the beach, always depending on the wind.",
+    "items": [
+      "Her gear: kite, board, harness, wetsuit, helmet or impact vest [list to confirm with Lou]",
+      "Launch: from the boat or the beach, depending on the day",
+      "On the water: tender support [to confirm with Lou]",
+      "Spots: Espíritu Santo and La Ventana, depending on the wind"
+    ],
+    "photos": [
+      {
+        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
+        "alt": "She rides a kite on turquoise water, the kite high above",
+        "caption": ""
+      }
+    ]
+  },
+  "season": {
+    "eyebrow": "Season",
+    "title": "The wind in season",
+    "text": "The season runs from November to March. The wind comes from the north and northwest, and around La Ventana it tends to fill in around noon and last until late afternoon.\n\nSpot guides put the usual range at 10 to 25 knots, with stronger days when the north wind (El Norte) blows, in the 20 to 30 knot range. [Lou: confirm, and add the best months]",
+    "sideImage": {
+      "image": "",
+      "alt": ""
+    },
+    "chart": {
+      "title": "Typical wind at La Ventana",
+      "unit": "knots",
+      "emptyLabel": "[Lou: add range]",
+      "months": [
+        {
+          "month": "Season",
+          "low": 10,
+          "high": 25
+        },
+        {
+          "month": "El Norte days",
+          "low": 20,
+          "high": 30
+        }
+      ],
+      "note": "Ranges as published in public kite spot guides and wind forecasts. We found no month-by-month figures. [Lou: review, and add month by month if you have them]"
+    }
+  },
+  "itinerary": {
+    "eyebrow": "The wind decides",
+    "title": "Day by day",
+    "intro": "A sample of how six days can go. The captain and Lou choose each day's anchorage and riding spot from the wind and the sea state, so read this as a rhythm, not a fixed route.\n\nThe 3-night trip follows the same rhythm over four days.",
+    "days": [
+      {
+        "label": "Day 1",
+        "title": "La Paz → first anchorage at Espíritu Santo",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "Airport pickup and private transfer to the marina. Welcome on board, and a short talk with Lou about the wind forecast for the week."
+          },
+          {
+            "time": "On the water",
+            "text": "A short sail to the first anchorage. If the wind is up in the afternoon, her first session."
+          }
+        ]
+      },
+      {
+        "label": "Day 2",
+        "title": "Espíritu Santo, from anchorage to anchorage",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "Kite in the best wind window of the day, with the tender on the water. Snorkel, paddleboard and kayak off the boat in between."
+          },
+          {
+            "time": "If the wind is down",
+            "text": "A long lunch at anchor and a sail to the next bay."
+          }
+        ]
+      },
+      {
+        "label": "Day 3",
+        "title": "Toward La Ventana, if the wind points that way",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "La Ventana is one of the possible spots. The wind there tends to fill in during the afternoon, so we time the crossing for it."
+          },
+          {
+            "time": "If the wind is down",
+            "text": "We stay in the islands and ride another day."
+          }
+        ]
+      },
+      {
+        "label": "Day 4",
+        "title": "Around La Ventana or back in the islands",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "A second riding day. Lou coaches her on the water, and the two of you ride."
+          },
+          {
+            "time": "If the wind is down",
+            "text": "A rest day: snorkel, paddleboard, a slow lunch."
+          }
+        ]
+      },
+      {
+        "label": "Day 5",
+        "title": "A longer day out toward Isla Cerralvo",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "A possibility on the 5-night trip, only if conditions and Lou say yes. It is not a fixed activity."
+          },
+          {
+            "time": "If conditions say no",
+            "text": "One more day of riding in the best spot of the week."
+          }
+        ]
+      },
+      {
+        "label": "Day 6",
+        "title": "Back to La Paz",
+        "moments": [
+          {
+            "time": "Plan",
+            "text": "Breakfast at anchor, a last swim, and the sail back to La Paz. Disembark at the marina and private transfer to the airport."
+          }
+        ]
+      }
+    ]
   },
   "boats": {
     "title": "The boat",
@@ -255,24 +389,6 @@
       "Gift: if you book with a deposit before December 31, 2026, we add a wine selection worth 300 USD."
     ]
   },
-  "kite": {
-    "eyebrow": "Kite and wing",
-    "title": "Kite and wing",
-    "text": "Kite gear for her is included.\n\nDepending on the day, you launch from the boat or from the beach, always depending on the wind.",
-    "items": [
-      "Her gear: kite, board, harness, wetsuit, helmet or impact vest [list to confirm with Lou]",
-      "Launch: from the boat or the beach, depending on the day",
-      "On the water: tender support [to confirm with Lou]",
-      "Spots: Espíritu Santo and La Ventana, depending on the wind"
-    ],
-    "photos": [
-      {
-        "image": "https://res.cloudinary.com/bsvjo1mn/image/upload/f_auto,q_auto/eagleray-web/Kitesurf_prwle6.jpg",
-        "alt": "She rides a kite on turquoise water, the kite high above",
-        "caption": ""
-      }
-    ]
-  },
   "food": {
     "title": "What's cooked on board",
     "text": "Three meals a day, cooked on board by your chef: breakfast, lunch and dinner. Meals fit around the wind, so lunch can wait if the best wind is at noon.",
@@ -334,10 +450,37 @@
     "buttonLabel": "Personalize my menu",
     "buttonMessage": "Hi, we'd like to personalize the menu for our kite expedition."
   },
+  "aboard": {
+    "title": "What's aboard",
+    "text": "A private boat, a captain, a chef and Lou, your Expedition Leader and IKO-certified kite instructor.",
+    "onTitle": "On board",
+    "onBoard": [
+      "Private boat, with captain and chef",
+      "Lou as Expedition Leader and IKO-certified kite instructor",
+      "All meals on board: breakfast, lunch and dinner",
+      "Menus planned around you: vegetarian, vegan, gluten-free, allergies",
+      "Fish from the day's catch, when the line brings something in",
+      "Water, coffee, tea and soft drinks, all day",
+      "Fuel",
+      "Starlink on the Lagoon 450F",
+      "Kite gear for her",
+      "Snorkel gear, kayak, paddleboards and tender",
+      "National park permits",
+      "Airport pickup and private transfer"
+    ],
+    "offTitle": "Not on board",
+    "notOnBoard": [
+      "Flights",
+      "Alcohol (bring your own, or ask us about our wine selection)",
+      "Crew tips (10% is usual)",
+      "Personal travel insurance",
+      "Land transfers to La Ventana, if needed [to confirm]"
+    ]
+  },
   "crew": {
     "title": "Your crew",
-    "sideBySide": true,
     "text": "Every expedition has a crew of three: a captain who knows these waters well, a chef who cooks with local produce and what the sea gives that week, and an Expedition Leader who looks after the group.\n\nWe choose them for their love of the sea and for how they share it with other people. They come from sailing, diving and hospitality (Ritz-Carlton, Four Seasons, Mandarin Oriental).",
+    "sideBySide": true,
     "explainTitle": "What an Expedition Leader is",
     "explainText": "An Expedition Leader is not a guide who follows a script, and not a host who serves the table. It is the Eagle Ray Expeditions person who stays with you the whole trip and answers for how it goes.\n\nThey know the group, decide with the captain when to swim and when to sail, look after everyone in the water, and take care of the details so you don't have to think about them.\n\nThat is the difference from chartering a boat with a crew: here someone is in charge of your experience, not only of the navigation. On this trip, that person is also her kite coach.",
     "photos": [
@@ -383,60 +526,6 @@
       }
     ]
   },
-  "season": {
-    "eyebrow": "Season",
-    "title": "The wind in season",
-    "text": "The season runs from November to March. The wind comes from the north and northwest, and around La Ventana it tends to fill in around noon and last until late afternoon.\n\nSpot guides put the usual range at 10 to 25 knots, with stronger days when the north wind (El Norte) blows, in the 20 to 30 knot range. [Lou: confirm, and add the best months]",
-    "chart": {
-      "title": "Typical wind at La Ventana",
-      "unit": "knots",
-      "emptyLabel": "[Lou: add range]",
-      "months": [
-        {
-          "month": "Season",
-          "low": 10,
-          "high": 25
-        },
-        {
-          "month": "El Norte days",
-          "low": 20,
-          "high": 30
-        }
-      ],
-      "note": "Ranges as published in public kite spot guides and wind forecasts. We found no month-by-month figures. [Lou: review, and add month by month if you have them]"
-    },
-    "sideImage": {
-      "image": "",
-      "alt": ""
-    }
-  },
-  "aboard": {
-    "title": "What's aboard",
-    "text": "A private boat, a captain, a chef and Lou, your Expedition Leader and IKO-certified kite instructor.",
-    "onTitle": "On board",
-    "onBoard": [
-      "Private boat, with captain and chef",
-      "Lou as Expedition Leader and IKO-certified kite instructor",
-      "All meals on board: breakfast, lunch and dinner",
-      "Menus planned around you: vegetarian, vegan, gluten-free, allergies",
-      "Fish from the day's catch, when the line brings something in",
-      "Water, coffee, tea and soft drinks, all day",
-      "Fuel",
-      "Starlink on the Lagoon 450F",
-      "Kite gear for her",
-      "Snorkel gear, kayak, paddleboards and tender",
-      "National park permits",
-      "Airport pickup and private transfer"
-    ],
-    "offTitle": "Not on board",
-    "notOnBoard": [
-      "Flights",
-      "Alcohol (bring your own, or ask us about our wine selection)",
-      "Crew tips (10% is usual)",
-      "Personal travel insurance",
-      "Land transfers to La Ventana, if needed [to confirm]"
-    ]
-  },
   "video": {
     "title": "This is Eagle Ray Expeditions",
     "url": "https://www.youtube.com/watch?v=Zk1YfnQ9WE4",
@@ -466,94 +555,5 @@
   "footer": {
     "line1": "Eagle Ray Expeditions · Ocean adventures led by passionate sea people",
     "line2": "hello@eaglerayexpeditions.com · @eaglerayexpeditions"
-  },
-  "itinerary": {
-    "eyebrow": "The wind decides",
-    "title": "Day by day",
-    "intro": "A sample of how six days can go. The captain and Lou choose each day's anchorage and riding spot from the wind and the sea state, so read this as a rhythm, not a fixed route.\n\nThe 3-night trip follows the same rhythm over four days.",
-    "days": [
-      {
-        "label": "Day 1",
-        "title": "La Paz → first anchorage at Espíritu Santo",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "Airport pickup and private transfer to the marina. Welcome on board, and a short talk with Lou about the wind forecast for the week."
-          },
-          {
-            "time": "On the water",
-            "text": "A short sail to the first anchorage. If the wind is up in the afternoon, her first session."
-          }
-        ]
-      },
-      {
-        "label": "Day 2",
-        "title": "Espíritu Santo, from anchorage to anchorage",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "Kite in the best wind window of the day, with the tender on the water. Snorkel, paddleboard and kayak off the boat in between."
-          },
-          {
-            "time": "If the wind is down",
-            "text": "A long lunch at anchor and a sail to the next bay."
-          }
-        ]
-      },
-      {
-        "label": "Day 3",
-        "title": "Toward La Ventana, if the wind points that way",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "La Ventana is one of the possible spots. The wind there tends to fill in during the afternoon, so we time the crossing for it."
-          },
-          {
-            "time": "If the wind is down",
-            "text": "We stay in the islands and ride another day."
-          }
-        ]
-      },
-      {
-        "label": "Day 4",
-        "title": "Around La Ventana or back in the islands",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "A second riding day. Lou coaches her on the water, and the two of you ride."
-          },
-          {
-            "time": "If the wind is down",
-            "text": "A rest day: snorkel, paddleboard, a slow lunch."
-          }
-        ]
-      },
-      {
-        "label": "Day 5",
-        "title": "A longer day out toward Isla Cerralvo",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "A possibility on the 5-night trip, only if conditions and Lou say yes. It is not a fixed activity."
-          },
-          {
-            "time": "If conditions say no",
-            "text": "One more day of riding in the best spot of the week."
-          }
-        ]
-      },
-      {
-        "label": "Day 6",
-        "title": "Back to La Paz",
-        "moments": [
-          {
-            "time": "Plan",
-            "text": "Breakfast at anchor, a last swim, and the sail back to La Paz. Disembark at the marina and private transfer to the airport."
-          }
-        ]
-      }
-    ]
-  },
-  "compact": true,
-  "slim": true
+  }
 }
