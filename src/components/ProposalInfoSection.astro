@@ -93,11 +93,11 @@ const pct = (v: number) => `${(v / axisMax) * 100}%`;
     )}
     {data.note && <p class:list={["mt-10 max-w-[56ch] text-[.8rem] leading-relaxed", dark ? "text-white/64" : "text-ink/64", side && "md:col-start-1"]} data-tina-field={tinaField(data, "note")}>{data.note}</p>}
     {side && (
-      <div class="mt-16 md:col-start-2 md:row-span-4 md:row-start-1 md:mt-0">
+      <div class="mt-16 md:col-start-2 md:row-span-4 md:row-start-1 md:mt-0 md:h-full">
         {data.sideImage.image ? (
-          <img src={data.sideImage.image} alt={data.sideImage.alt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover" data-tina-field={tinaField(data.sideImage, "image")} />
+          <img src={data.sideImage.image} alt={data.sideImage.alt ?? ""} loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-lg object-cover md:aspect-auto md:h-full md:min-h-[24rem]" data-tina-field={tinaField(data.sideImage, "image")} />
         ) : (
-          <div class="aspect-[4/5] w-full rounded-lg bg-ink/8" data-tina-field={tinaField(data.sideImage, "image")}></div>
+          <div class="aspect-[4/5] w-full rounded-lg bg-current/10 md:aspect-auto md:h-full md:min-h-[24rem]" data-tina-field={tinaField(data.sideImage, "image")}></div>
         )}
       </div>
     )}
